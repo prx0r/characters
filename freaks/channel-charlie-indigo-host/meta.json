@@ -1,0 +1,21 @@
+{
+  "slug": "channel-charlie-indigo-host",
+  "status": "ready",
+  "created_at": "2026-10-10T17:10:00+00:00",
+  "updated_at": "2026-10-10T17:10:00+00:00",
+  "creator": "characters-foundry-v1",
+  "voice": "en-US-AriaNeural",
+  "word_count": 141,
+  "beat_count": 11,
+  "files": {
+    "character.json": "sha256:c243782dbe123cd5cf45fc18237de451edb8ec13b7aede669a86318e16c1601a",
+    "delivery.json": "sha256:cfdfc3c9b331421659bf91aee64dfa22726b5678c0deff8f32765d4d42fbaa5d",
+    "set.wav": "sha256:e5ea01a23fcb85fd8e608c5c672ea5c22dfab6b0e581d782242f478e4b1c5900"
+  },
+  "lineage": {
+    "relation": "original",
+    "parent": null,
+    "root": null,
+    "depth": 0
+  }
+}
