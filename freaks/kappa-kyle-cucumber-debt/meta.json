@@ -1,1 +1,21 @@
-{"beat_count": 11, "created_at": "2026-10-10T16:48:00+00:00", "creator": "characters-foundry-v1", "files": {"character.json": "sha256:f5da1bc51291f5656458a102ff6e50b2a5c7e54d1452d729d09cff26bcbd1ef3", "delivery.json": "sha256:529b1aad6625006c995d95a4ecf400e3aed4e9f2ca43f771faa45601e2db8a2d", "set.wav": "sha256:e5ea01a23fcb85fd8e608c5c672ea5c22dfab6b0e581d782242f478e4b1c5900"}, "lineage": {"depth": 0, "parent": null, "relation": "original", "root": null}, "slug": "kappa-kyle-cucumber-debt", "status": "ready", "updated_at": "2026-10-10T16:48:00+00:00", "voice": "en-US-GuyNeural", "word_count": 138}
+{
+  "beat_count": 11,
+  "created_at": "2026-10-10T16:48:00+00:00",
+  "creator": "characters-foundry-v1",
+  "files": {
+    "character.json": "sha256:f5da1bc51291f5656458a102ff6e50b2a5c7e54d1452d729d09cff26bcbd1ef3",
+    "delivery.json": "sha256:4b3efafbbd70473cf21d5d6cdde0491e1e2658bd7a5eaf81065d7031b473a54b",
+    "set.wav": "sha256:e5ea01a23fcb85fd8e608c5c672ea5c22dfab6b0e581d782242f478e4b1c5900"
+  },
+  "lineage": {
+    "depth": 0,
+    "parent": null,
+    "relation": "original",
+    "root": null
+  },
+  "slug": "kappa-kyle-cucumber-debt",
+  "status": "ready",
+  "updated_at": "2026-10-10T17:00:00+00:00",
+  "voice": "en-US-GuyNeural",
+  "word_count": 144
+}
