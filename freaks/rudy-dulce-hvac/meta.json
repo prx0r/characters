@@ -1,0 +1,21 @@
+{
+  "slug": "rudy-dulce-hvac",
+  "status": "ready",
+  "created_at": "2026-10-10T17:30:00+00:00",
+  "updated_at": "2026-10-10T17:30:00+00:00",
+  "creator": "characters-foundry-v1",
+  "voice": "en-US-GuyNeural",
+  "word_count": 116,
+  "beat_count": 11,
+  "files": {
+    "character.json": "sha256:7eefe5a5fb276458f29449818f2077279ea0b352e717d5bf95b6706dea26f4c1",
+    "delivery.json": "sha256:7c638f1edfbc905a2b932fe04ad85628896d0fbaf5e671d84ec1202d1097a2de",
+    "set.wav": "sha256:e5ea01a23fcb85fd8e608c5c672ea5c22dfab6b0e581d782242f478e4b1c5900"
+  },
+  "lineage": {
+    "relation": "interpretation",
+    "parent": null,
+    "root": "reptilian",
+    "depth": 1
+  }
+}

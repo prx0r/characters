@@ -1,0 +1,21 @@
+{
+  "slug": "britt-nordic-coach",
+  "status": "ready",
+  "created_at": "2026-10-10T17:30:00+00:00",
+  "updated_at": "2026-10-10T17:30:00+00:00",
+  "creator": "characters-foundry-v1",
+  "voice": "en-US-JennyNeural",
+  "word_count": 107,
+  "beat_count": 11,
+  "files": {
+    "character.json": "sha256:fa7464be6fad6feb6baa7a03e5b44ea13d39d7981f9c66140de3cef8e61d6b7e",
+    "delivery.json": "sha256:9d25ba29565912f1adb4c833c372e5055cc606a5562add456743e1c8222738fa",
+    "set.wav": "sha256:e5ea01a23fcb85fd8e608c5c672ea5c22dfab6b0e581d782242f478e4b1c5900"
+  },
+  "lineage": {
+    "relation": "interpretation",
+    "parent": null,
+    "root": "nordic",
+    "depth": 1
+  }
+}
