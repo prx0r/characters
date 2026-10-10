@@ -60,5 +60,6 @@
   "voice": {
     "provider": "edge-tts",
     "voice_id": "en-US-JennyNeural"
-  }
+  },
+  "canon": "fairy"
 }
