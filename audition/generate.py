@@ -146,6 +146,13 @@ def pick_scenario(used_ids: list[str], rng: random.Random) -> dict:
             "theories": b.get("theories", [])}
 
 
+def tts_base_rate(character: dict) -> str:
+    """Ralph speaks fast (deadpan rush); others normal. Modulator shifts from here."""
+    if character["id"].startswith("reptilian"):
+        return "fast"
+    return "normal"
+
+
 def _kt_prior_ops() -> dict:
     """Kill Tony operator lifts (hypotheses, not proof). Missing file = no bias."""
     try:
@@ -203,43 +210,49 @@ def _template_beats(character: dict, scenario: dict, operator: str,
     dodge_dogs = "dog" in (critique or "").lower() and "joke" in (critique or "").lower()
     push_misdirect = "predictab" in (critique or "").lower()
 
+    import random as _r
+    _rr = _r.Random(hash(scenario.get("id", "")) % (2**31))
+    ralph_closers = ["Warm rock. Now.", "Meeting adjourned. Basking resumes.",
+                     "HR has been notified. I have not.", "Denied. Next."]
+    rudy_closers = ["Stay warm. Hydrate.", "Ticket closed. Vent sings on.",
+                    "Back to the ducts."]
     if character["id"].startswith("rudy"):
         beats = [
-            ("setup", f"Dulce level four is seventy percent AI now. The AI does not sweat. I do. I do HVAC."),
-            ("setup", f"New work order came down. {model or claim} Filed under airflow."),
+            ("setup", f"New work order on level four, and it reads like this: {model or claim}"),
+            ("setup", f"I do HVAC down here, which means whatever head office breaks, I heat. Filed under airflow."),
             ("misdirect" if push_misdirect else "setup",
-             f"Ralph sends complaints. I fix them. He middle-manages. I middle-fan.{tell}"),
-            ("punchline", f"You think lizards love heat lamps. Try maintaining one for a whole base on a government budget."),
-            ("tag", f"Blind spot: {blind}. So when the vents started hissing back, I wrote myself up. {policy}".strip()),
-            ("closer", "Stay warm. Hydrate."),
+             f"Ralph sends complaints. I fix them. He middle-manages while I middle-fan.{tell}"),
+            ("punchline", f"You think lizards love heat lamps, but try maintaining one for a whole base on a government budget."),
+            ("tag", f"Blind spot: {blind}. So when the vents started hissing back, I wrote myself up and ordered new filters.".strip()),
+            ("closer", _rr.choice(rudy_closers)),
         ]
     elif character["id"].startswith("reptilian"):
         beats = [
-            ("setup", f"Good news. Nobody was fired today. You have all simply been moved to permanently available for other opportunities."),
-            ("setup", f"Head office sent down a new situation. {model or claim} I filed it under morale."),
+            ("setup", f"Staff announcement regarding {scenario.get('id', 'new business').replace('_', ' ')}: {model or claim}"),
+            ("setup", f"As your seven-foot middle manager, I have reviewed the situation and filed it under morale, where it belongs."),
             ("misdirect" if push_misdirect else "setup",
-             f"People expect menace. No. We do procedure. Warm rocks, cold office, eleven pages per warmth request.{tell}"),
-            ("punchline", f"And the best part: the layoffs improved morale. I know because I measured it. In the meeting. Where nobody came."),
-            ("tag", f"Blind spot: {blind}. So I asked HR if morale could be outsourced too. They said that is my job. {policy}".strip()),
-            ("closer", "Warm rock. Now."),
+             f"People expect menace from my kind, but there is no menace here, only procedure: warm rocks, a cold office, and eleven pages per warmth request.{tell}"),
+            ("punchline", f"And the best part is that the whole arrangement improved morale, which I know because I measured it in the meeting where nobody came."),
+            ("tag", f"Blind spot: {blind}. So I asked HR whether morale itself could be outsourced, and they said that is my job, so I scheduled a seminar about it.".strip()),
+            ("closer", _rr.choice(ralph_closers)),
         ]
     else:
         # Nolan: incompetence framed as expertise, evidence-free method
         work = "detective work" if "detect" in model.lower() or "job" in scenario.get("id", "") else "police work"
         beats = [
-            ("setup", f"I have been a police sniffer dog for six years. The problem is I cannot smell anything. Not drugs, not explosives, not even lunch.{tell}"),
-            ("setup", f"Then head office announced the new situation. {model or claim} Finally, someone at my level of evidence."),
+            ("setup", f"Six years on the force as a police sniffer dog, and here is my situation: I cannot smell anything, not drugs, not explosives, not even lunch.{tell}"),
+            ("setup", f"Then head office announced the new situation. {model or claim} Finally, someone operating at my level of evidence."),
             ("misdirect" if push_misdirect else "escalation",
-             f"They replaced the whole unit with AI-powered scent drones. I said: trust me, I have been doing evidence-free {work} for years."),
-            ("punchline", f"My new method is revolutionary. Step one: sniff the wrong locker. Step two: {policy}. Step three: promotion."),
+             f"They replaced the whole unit with AI-powered scent drones, and I said trust me, I have been doing evidence-free {work} for years."),
+            ("punchline", f"My new method is revolutionary: step one, sniff the wrong locker, step two, {policy}, step three, promotion."),
             ("callback" if not dodge_dogs else "tag",
-             f"My partner the bloodhound found three felonies before breakfast. I found the break room. Blind spot: {blind}, and frankly that is what makes me management material."),
+             f"My partner the bloodhound found three felonies before breakfast while I found the break room. Blind spot: {blind}, and frankly that is what makes me management material."),
             ("closer", "Smell that? Definitely a promotion."),
         ]
     out = []
     for i, (btype, text) in enumerate(beats, 1):
         out.append({"id": f"b{i}", "type": btype, "text": text,
-                    "pause_after_ms": 1500 if btype == "punchline" else (1000 if btype == "closer" else 400),
+                    "pause_after_ms": 1000 if btype == "punchline" else (700 if btype == "closer" else 300),
                     "emphasis": 0.9 if btype in ("punchline", "closer") else 0.6})
     return out
 
@@ -418,7 +431,7 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
     act = actor_decide(character, scenario, state, mems, tilt, explore)
     try:
         import prompt as _prompt
-        tts = _prompt.tts_params(modulator, mod)
+        tts = _prompt.tts_params(modulator, mod, base=tts_base_rate(character))
         set_no = len(used)
         aff = _prompt.affinity_segment(set_no + 1)
     except Exception:

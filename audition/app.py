@@ -86,11 +86,20 @@ def _run_generation(job_id: str, character_id: str):
         used = [r[0] for r in used_rows]
         recent_full = [{"scenario_id": u, "full_text": "", "comment": "", "operator_ids": "[]",
                         "rating": 0, "pog_count": 0} for u in []]  # placeholder merged below
-        # merge feedback text for avoid-list
+        # merge feedback text for avoid-list; include UNRATED minutes too
+        # (repetition happened because only rated rows fed _prior_text)
         fb = store.recent_feedback(conn, character_id, 5)
         for f in fb:
             f["pog_count"] = conn.execute("SELECT COUNT(*) FROM pogs WHERE audition_id=?",
                                           (f["id"],)).fetchone()[0]
+        seen_ids = {f["id"] for f in fb}
+        for r in conn.execute("SELECT id, scenario_id, full_text, operator_ids FROM auditions"
+                              " WHERE character_id=? ORDER BY created_at DESC LIMIT 8",
+                              (character_id,)).fetchall():
+            if r["id"] not in seen_ids:
+                fb.append({"id": r["id"], "scenario_id": r["scenario_id"],
+                           "full_text": r["full_text"], "comment": "",
+                           "operator_ids": r["operator_ids"], "rating": 0, "pog_count": 0})
         strat = store.get_strategy(conn, character_id)
         seed = random.randint(1, 10**9)
         gen = generate.generate_minute(character_id, fb, strat, seed, used_ids=used)
@@ -162,6 +171,14 @@ def _run_battle(job_id: str, character_id: str):
         for f in fb:
             f["pog_count"] = conn.execute("SELECT COUNT(*) FROM pogs WHERE audition_id=?",
                                           (f["id"],)).fetchone()[0]
+        _seen = {f["id"] for f in fb}
+        for r in conn.execute("SELECT id, scenario_id, full_text, operator_ids FROM auditions"
+                              " WHERE character_id=? ORDER BY created_at DESC LIMIT 8",
+                              (character_id,)).fetchall():
+            if r["id"] not in _seen:
+                fb.append({"id": r["id"], "scenario_id": r["scenario_id"],
+                           "full_text": r["full_text"], "comment": "",
+                           "operator_ids": r["operator_ids"], "rating": 0, "pog_count": 0})
         strat = store.get_strategy(conn, character_id)
         seed = random.randint(1, 10**9)
         res = _battle.battle(character_id, fb, strat, n=3, seed=seed)

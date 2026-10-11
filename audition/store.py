@@ -400,11 +400,18 @@ def add_memory_typed(conn: sqlite3.Connection, character_id: str, text: str,
 
 
 def retrieve_memories(conn: sqlite3.Connection, character_id: str, scenario_id: str = "",
-                      limit: int = 8) -> list[dict]:
-    """Ranked retrieval: canonical first, unused callbacks boosted, recent weighted."""
+                      limit: int = 8, query: str = "") -> list[dict]:
+    """Ranked retrieval: canonical + salience + recency + lexical overlap.
+
+    Score = type/status base + BM25-lite term overlap with (query+scenario)
+    + recency + unused-callback boost. No vectors, no new deps.
+    """
+    import re as _re
     rows = [dict(r) for r in conn.execute(
         "SELECT * FROM memories WHERE character_id=? AND status != 'rejected'",
         (character_id,)).fetchall()]
+    terms = [t.lower() for t in _re.findall(r"[a-z]{3,}", (query + " " + scenario_id).lower())]
+    now = __import__("time").time()
     scored = []
     for m in rows:
         s = 0.0
@@ -412,7 +419,11 @@ def retrieve_memories(conn: sqlite3.Connection, character_id: str, scenario_id: 
             s += 2.0
         if m["type"] == "callback_opportunity" and not m["callback_count"]:
             s += 2.0
-        s += min(1.0, (m["created_at"] or 0) / 1e12)
+        age_days = max(0.0, (now - (m["created_at"] or now)) / 86400.0)
+        s += 1.0 / (1.0 + age_days / 30.0)
+        text = ((m["text"] or "") + " " + (m.get("entities") or "")).lower()
+        hits = sum(1 for t in set(terms) if t in text)
+        s += min(2.0, hits * 0.5)
         try:
             ents = json.loads(m.get("entities") or "[]")
         except Exception:
@@ -453,8 +464,15 @@ def record_battle(conn: sqlite3.Connection, job_id: str, character_id: str,
 def get_energy(conn: sqlite3.Connection, character_id: str) -> float:
     conn.execute("CREATE TABLE IF NOT EXISTS energy_state (character_id TEXT PRIMARY KEY,"
                  " energy REAL NOT NULL, updated_at REAL NOT NULL)")
-    r = conn.execute("SELECT energy FROM energy_state WHERE character_id=?", (character_id,)).fetchone()
-    return float(r[0]) if r else 40.0
+    r = conn.execute("SELECT energy, updated_at FROM energy_state WHERE character_id=?",
+                     (character_id,)).fetchone()
+    if not r:
+        return 40.0
+    # time recovery toward 40 (Shikigami pattern: full recovery ~4h)
+    import time as _t
+    elapsed = max(0.0, _t.time() - (r[1] or _t.time()))
+    e = float(r[0])
+    return max(0.0, min(80.0, e + (40.0 - e) * min(1.0, elapsed / 14400.0)))
 
 
 def set_energy(conn: sqlite3.Connection, character_id: str, energy: float) -> None:

@@ -75,11 +75,15 @@ def affinity_segment(set_number: int, familiarity: str = "") -> str:
             f"they hold about you. {familiarity}".strip())
 
 
-def tts_params(modulator: str, mod: dict) -> dict:
+def tts_params(modulator: str, mod: dict, base: str = "normal") -> dict:
     """Modulator -> edge-tts params. Pace from performative, pitch by arousal."""
     perf, emo = (mod.get("performative", {}) or {}), (mod.get("emotional", {}) or {})
     pace = perf.get("pace_delta", 0)
-    rate = "slow" if pace <= -0.1 else ("fast" if pace >= 0.1 else "normal")
+    rate = base
+    if pace <= -0.1:
+        rate = "slow"
+    elif pace >= 0.1 or base == "fast":
+        rate = "fast"
     pitch = "+0Hz"
     if emo.get("arousal", 0.5) >= 0.75:
         pitch = "+40Hz"
