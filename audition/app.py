@@ -324,8 +324,7 @@ def history():
 
 
 @app.post("/api/auditions/<aud_id>/memory")
-def add_memory(aud_id: str):
-    """Character learning: record a fictional event. Explicit, versioned, never auto."""
+def add_memory(aud_id: str):    """Character learning: record a fictional event. Explicit, versioned, never auto."""
     data = request.get_json(force=True) or {}
     text = (data.get("text") or "").strip()
     if not text or len(text) > 300:
@@ -348,6 +347,17 @@ def add_memory(aud_id: str):
 @app.get("/shorts")
 def shorts_page():
     return send_file(HERE / "static" / "shorts.html")
+
+
+@app.post("/api/gtvh/classify")
+def gtvh_classify():
+    """Comedic classifier: GTVH 6-tuple for any minute. Analysis, not a gate."""
+    data = request.get_json(force=True) or {}
+    text = (data.get("text") or "").strip()
+    if len(text.split()) < 10:
+        return jsonify({"error": "need at least 10 words"}), 400
+    import gtvh
+    return jsonify(gtvh.classify(text))
 
 
 @app.get("/api/shorts/feed")
