@@ -192,6 +192,11 @@ def _template_beats(character: dict, scenario: dict, operator: str,
     claim = scenario.get("comic_claim", "")
     model = scenario.get("comic_model", "")
     blind = ", ".join(character.get("blind_spots", [])[:2])
+    spots = character.get("blind_spots", [])
+    if len(spots) > 1:
+        blind = "my " + spots[0] + " — and " + spots[1].replace("suit slips", "the suit slips")
+    elif spots:
+        blind = "my " + spots[0]
     policy = character.get("action_policy", "")
     tells = character.get("tells", [])
     tell = f" {tells[0]}." if tells else ""
@@ -205,7 +210,7 @@ def _template_beats(character: dict, scenario: dict, operator: str,
             ("misdirect" if push_misdirect else "setup",
              f"Ralph sends complaints. I fix them. He middle-manages. I middle-fan.{tell}"),
             ("punchline", f"You think lizards love heat lamps. Try maintaining one for a whole base on a government budget."),
-            ("tag", f"My blind spot is {blind}. So when the vents started hissing back, I wrote myself up. {policy}".strip()),
+            ("tag", f"Blind spot: {blind}. So when the vents started hissing back, I wrote myself up. {policy}".strip()),
             ("closer", "Stay warm. Hydrate."),
         ]
     elif character["id"].startswith("reptilian"):
@@ -215,7 +220,7 @@ def _template_beats(character: dict, scenario: dict, operator: str,
             ("misdirect" if push_misdirect else "setup",
              f"People expect menace. No. We do procedure. Warm rocks, cold office, eleven pages per warmth request.{tell}"),
             ("punchline", f"And the best part: the layoffs improved morale. I know because I measured it. In the meeting. Where nobody came."),
-            ("tag", f"My blind spot is {blind}. So I asked HR if morale could be outsourced too. They said that is my job. {policy}".strip()),
+            ("tag", f"Blind spot: {blind}. So I asked HR if morale could be outsourced too. They said that is my job. {policy}".strip()),
             ("closer", "Warm rock. Now."),
         ]
     else:
@@ -228,7 +233,7 @@ def _template_beats(character: dict, scenario: dict, operator: str,
              f"They replaced the whole unit with AI-powered scent drones. I said: trust me, I have been doing evidence-free {work} for years."),
             ("punchline", f"My new method is revolutionary. Step one: sniff the wrong locker. Step two: {policy}. Step three: promotion."),
             ("callback" if not dodge_dogs else "tag",
-             f"My partner the bloodhound found three felonies before breakfast. I found the break room. My blind spot is {blind}, and frankly that is what makes me management material."),
+             f"My partner the bloodhound found three felonies before breakfast. I found the break room. Blind spot: {blind}, and frankly that is what makes me management material."),
             ("closer", "Smell that? Definitely a promotion."),
         ]
     out = []
