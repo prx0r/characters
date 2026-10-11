@@ -142,6 +142,8 @@ def pick_scenario(used_ids: list[str], rng: random.Random) -> dict:
     return {"id": b["id"], "comic_claim": b.get("comic_claim", ""),
             "comic_model": b.get("comic_model", ""),
             "reality_model": b.get("reality_model", ""),
+            "central_question": b.get("central_question", ""),
+            "tensions": b.get("tensions", []) or [],
             "derivations": b.get("derivations", [])[:2],
             "theories": b.get("theories", [])}
 
@@ -212,36 +214,44 @@ def _template_beats(character: dict, scenario: dict, operator: str,
 
     import random as _r
     _rr = _r.Random(hash(scenario.get("id", "")) % (2**31))
+    # Scenario-first inputs: every beat derives from THESE, never a canned script.
+    claim = scenario.get("comic_claim", "") or scenario.get("comic_model", "")
+    how = scenario.get("comic_model", "") or scenario.get("comic_claim", "")
+    real = scenario.get("reality_model", "")
+    tens = list(scenario.get("tensions") or [])
+    tension = tens[0] if tens else ""
+    counter = tens[1] if len(tens) > 1 else ""
+    deriv = (scenario.get("derivations") or [{}])[0].get("premise", "") or how
     ralph_closers = ["Warm rock. Now.", "Meeting adjourned. Basking resumes.",
                      "HR has been notified. I have not.", "Denied. Next."]
     rudy_closers = ["Stay warm. Hydrate.", "Ticket closed. Vent sings on.",
                     "Back to the ducts."]
     if character["id"].startswith("rudy"):
         beats = [
-            ("setup", f"New work order on level four, and it reads like this: {model or claim}"),
-            ("setup", f"I do HVAC down here, which means whatever head office breaks, I heat. Filed under airflow."),
+            ("setup", f"New work order on level four, and it reads like this: {how}"),
+            ("setup", f"I do HVAC down here, which means when {real or 'head office acts up'}, the ducts hear about it first. Filed under airflow."),
             ("misdirect" if push_misdirect else "setup",
              f"Ralph sends complaints. I fix them. He middle-manages while I middle-fan.{tell}"),
-            ("punchline", f"You think lizards love heat lamps, but try maintaining one for a whole base on a government budget."),
+            ("punchline", f"Here is what actually happened: {deriv} And I am the one holding the work order."),
             ("tag", f"Blind spot: {blind}. So when the vents started hissing back, I wrote myself up and ordered new filters.".strip()),
             ("closer", _rr.choice(rudy_closers)),
         ]
     elif character["id"].startswith("reptilian"):
         beats = [
-            ("setup", f"Staff announcement regarding {scenario.get('id', 'new business').replace('_', ' ')}: {model or claim}"),
-            ("setup", f"As your seven-foot middle manager, I have reviewed the situation and filed it under morale, where it belongs."),
+            ("setup", f"Yes. I am the thing from the videos. Seven feet, cold-blooded, old bloodline. I run the planet. Middle management."),
+            ("setup", f"This human suit itches in places I cannot scratch in public, and the eyelids slip whenever I lie, which is constantly."),
             ("misdirect" if push_misdirect else "setup",
-             f"People expect menace from my kind, but there is no menace here, only procedure: warm rocks, a cold office, and eleven pages per warmth request.{tell}"),
-            ("punchline", f"And the best part is that the whole arrangement improved morale, which I know because I measured it in the meeting where nobody came."),
-            ("tag", f"Blind spot: {blind}. So I asked HR whether morale itself could be outsourced, and they said that is my job, so I scheduled a seminar about it.".strip()),
+             f"People imagine domination looks like thrones and fire. It looks like this: warm rocks confiscated, thermostat at sixty-eight, eleven pages per warmth request.{tell}"),
+            ("punchline", f"You think shape-shifting is glamorous. It is Spanx for your entire soul, with contacts that dry out by noon."),
+            ("tag", f"Blind spot: {blind}. I filed for transfer to Dulce twice. Denied twice. Reason: I laugh too hard and the suit drops.".strip()),
             ("closer", _rr.choice(ralph_closers)),
         ]
     else:
         # Nolan: incompetence framed as expertise, evidence-free method
-        work = "detective work" if "detect" in model.lower() or "job" in scenario.get("id", "") else "police work"
+        work = "detective work" if "detect" in how.lower() or "job" in scenario.get("id", "") else "police work"
         beats = [
             ("setup", f"Six years on the force as a police sniffer dog, and here is my situation: I cannot smell anything, not drugs, not explosives, not even lunch.{tell}"),
-            ("setup", f"Then head office announced the new situation. {model or claim} Finally, someone operating at my level of evidence."),
+            ("setup", f"Then head office announced the new situation. {how} Finally, someone operating at my level of evidence."),
             ("misdirect" if push_misdirect else "escalation",
              f"They replaced the whole unit with AI-powered scent drones, and I said trust me, I have been doing evidence-free {work} for years."),
             ("punchline", f"My new method is revolutionary: step one, sniff the wrong locker, step two, {policy}, step three, promotion."),
