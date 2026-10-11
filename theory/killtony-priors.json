@@ -1,0 +1,64 @@
+{
+ "base_crowd_mean": 2.406,
+ "annotator": "jev-1.13 (n=276 sets, yes-verdicts only, 0.4-0.6 routed out)",
+ "n_train": 207,
+ "n_heldout": 69,
+ "warning": "small-n lifts (rigidify n=12) are leads, not laws; POG remains ground truth",
+ "operator_priors": {
+  "rigidify": {
+   "train_lift": 0.9,
+   "heldout_mean": 3.2,
+   "train_mean": 2.479,
+   "n_train": 48,
+   "source": "jev-1.13-calibrated"
+  },
+  "repeat_variation": {
+   "train_lift": 0.62,
+   "heldout_mean": 2.821,
+   "train_mean": 2.444,
+   "n_train": 189,
+   "source": "jev-1.13-calibrated"
+  },
+  "status_invert": {
+   "train_lift": 0.61,
+   "heldout_mean": null,
+   "train_mean": 2.375,
+   "n_train": 8,
+   "source": "jev-1.13-calibrated"
+  },
+  "identity_contradict": {
+   "train_lift": 0.06,
+   "heldout_mean": 3.143,
+   "train_mean": 2.471,
+   "n_train": 34,
+   "source": "jev-1.13-calibrated"
+  },
+  "expose_self_blindness": {
+   "train_lift": 0.03,
+   "heldout_mean": 3.143,
+   "train_mean": 2.471,
+   "n_train": 34,
+   "source": "jev-1.13-calibrated"
+  },
+  "unmask": {
+   "train_lift": 0.194,
+   "heldout_mean": null,
+   "train_mean": 2.6,
+   "n_train": 5
+  },
+  "literalize": {
+   "train_lift": 0.02,
+   "heldout_mean": 2.8,
+   "train_mean": 2.413,
+   "n_train": 230,
+   "source": "jev-1.13-calibrated"
+  },
+  "double_interpret": {
+   "train_lift": -0.03,
+   "heldout_mean": 2.837,
+   "train_mean": 2.451,
+   "n_train": 406,
+   "source": "jev-1.13-calibrated"
+  }
+ }
+}

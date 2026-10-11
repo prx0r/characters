@@ -1,0 +1,146 @@
+{
+ "set_id": "Jeremiah Maltez-8-473c97ed6fb528cf",
+ "who": {
+  "persona_ref": "killtony-personas/jeremiah_maltez.json",
+  "comedian": "Jeremiah Maltez",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 22,
+    "turn": true
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 51,
+    "turn": true
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 25,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 21,
+    "turn": true
+   },
+   {
+    "beat": 4,
+    "type": "punchline",
+    "words": 26,
+    "turn": true
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "closer",
+    "words": 16,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Fat Joe"
+  ],
+  "arc": "opener->closer over 7 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "race",
+   "politics",
+   "shock_humor"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.47,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.26,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.16,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.63,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.83,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.31,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.68,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.88,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.29,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "identity_contradiction",
+  "confidence": 0.9,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 3
+ },
+ "provenance": {
+  "file": "reprocess_ep725_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

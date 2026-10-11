@@ -1,0 +1,109 @@
+{
+ "id": "kt_tommy_tickles",
+ "name": "Tommy Tickles",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 2,
+  "files": [
+   "reprocess_ep718_pass2.json",
+   "reprocess_ep752_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 3.5
+ },
+ "archetype": "literalise",
+ "traits": [
+  "plays shock_humor",
+  "plays relationships",
+  "plays sex"
+ ],
+ "humour": "observed lean: literalize, double_interpret, rigidify",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Instagram handle is @TommyTickles2025",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "shock_humor",
+   "relationships",
+   "sex"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "shock_humor",
+   "relationships"
+  ],
+  "ignores": [],
+  "watched": [
+   "shock_humor",
+   "relationships",
+   "sex",
+   "aging",
+   "race",
+   "self_deprecation"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via literalize"
+ },
+ "comedy": {
+  "operator_priors": {
+   "literalize": 1.0,
+   "double_interpret": 1.0,
+   "rigidify": 0.5
+  }
+ },
+ "preferred_theories": [
+  "literalise",
+  "bisociation",
+  "rigidity"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "shock_humor",
+  "relationships",
+  "sex",
+  "aging",
+  "race"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_age": [
+   "50"
+  ],
+  "disclosed_location": [
+   "Fredericksburg, TX",
+   "Texas"
+  ],
+  "disclosed_occupation": [
+   "Farmer and rancher",
+   "Ranch hand"
+  ],
+  "disclosed_relationship_status": [
+   "married"
+  ],
+  "disclosed_years_doing_comedy": [
+   "1"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

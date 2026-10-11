@@ -1,0 +1,179 @@
+{
+ "set_id": "Liz Splat-6-0f1ec74decda4278",
+ "who": {
+  "persona_ref": "killtony-personas/liz_splat.json",
+  "comedian": "Liz Splat",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 32,
+    "turn": true
+   },
+   {
+    "beat": 2,
+    "type": "punchline",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 23,
+    "turn": true
+   },
+   {
+    "beat": 8,
+    "type": "punchline",
+    "words": 43,
+    "turn": true
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "closer",
+    "words": 3,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "John Cena",
+   "Make",
+   "What"
+  ],
+  "arc": "opener->closer over 12 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "disability",
+   "sex",
+   "self_deprecation",
+   "relationships"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.27,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.1,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.3,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.81,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.88,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.37,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.76,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.95,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.21,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.79,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "roaring",
+  "crowd_ord": 4,
+  "tony_praise": 5
+ },
+ "provenance": {
+  "file": "reprocess_ep706_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

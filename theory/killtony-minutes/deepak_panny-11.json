@@ -1,0 +1,197 @@
+{
+ "set_id": "Deepak Panny-11-86fcf520a562393c",
+ "who": {
+  "persona_ref": "killtony-personas/deepak_panny.json",
+  "comedian": "Deepak Panny",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "punchline",
+    "words": 9,
+    "turn": true
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 16,
+    "turn": true
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "punchline",
+    "words": 27,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 19,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "closer",
+    "words": 9,
+    "turn": true
+   }
+  ],
+  "callbacks": [
+   "Jesus"
+  ],
+  "arc": "opener->closer over 15 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships",
+   "money_and_class"
+  ],
+  "topics": [
+   "race",
+   "religion",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.56,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.19,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.65,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.66,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.76,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.41,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.7,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.15,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.31,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "silence",
+  "crowd_ord": 0,
+  "tony_praise": 1
+ },
+ "provenance": {
+  "file": "reprocess_ep728_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

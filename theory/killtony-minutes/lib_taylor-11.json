@@ -1,0 +1,191 @@
+{
+ "set_id": "Lib Taylor-11-85ca284611e8fa04",
+ "who": {
+  "persona_ref": "killtony-personas/lib_taylor.json",
+  "comedian": "Lib Taylor",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 16,
+    "turn": true
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "punchline",
+    "words": 14,
+    "turn": true
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 21,
+    "turn": true
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 16,
+    "turn": true
+   },
+   {
+    "beat": 13,
+    "type": "closer",
+    "words": 4,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Jared Fogle",
+   "Subway"
+  ],
+  "arc": "opener->closer over 14 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai"
+  ],
+  "topics": [
+   "shock_humor",
+   "other",
+   "self_deprecation"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.23,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.32,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.1,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.69,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.75,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.92,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.41,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.86,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.92,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.21,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.54,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "test_flashlite_pass2_ep750.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

@@ -1,0 +1,233 @@
+{
+ "set_id": "Brian Holtzman-12-234b207429568133",
+ "who": {
+  "persona_ref": "killtony-personas/brian_holtzman.json",
+  "comedian": "Brian Holtzman",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "punchline",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "punchline",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 27,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "punchline",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "closer",
+    "words": 11,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Give",
+   "Kill",
+   "What"
+  ],
+  "arc": "opener->closer over 21 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "shock_humor",
+   "politics",
+   "observational",
+   "gender"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.21,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.08,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.55,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.62,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.75,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.37,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.47,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.83,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.14,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "displacement",
+  "confidence": 0.27,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "roaring",
+  "crowd_ord": 4,
+  "tony_praise": 5
+ },
+ "provenance": {
+  "file": "reprocess_ep706_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

@@ -1,0 +1,188 @@
+{
+ "set_id": "Ray Cheneby-10-13e3cd844c68261c",
+ "who": {
+  "persona_ref": "killtony-personas/ray_cheneby.json",
+  "comedian": "Ray Cheneby",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 20,
+    "turn": true
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 6,
+    "turn": true
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 19,
+    "turn": true
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 15,
+    "turn": true
+   },
+   {
+    "beat": 13,
+    "type": "closer",
+    "words": 18,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 14 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "institutions"
+  ],
+  "topics": [
+   "shock_humor",
+   "sex",
+   "crime"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.37,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.35,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.17,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.55,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.69,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.72,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.24,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.59,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.84,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.25,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.32,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "light",
+  "crowd_ord": 1,
+  "tony_praise": 3
+ },
+ "provenance": {
+  "file": "reprocess_ep716_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

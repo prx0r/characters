@@ -1,0 +1,353 @@
+{
+ "set_id": "Dedrick Flynn-9-48d37542d18f7526",
+ "who": {
+  "persona_ref": "killtony-personas/dedrick_flynn.json",
+  "comedian": "Dedrick Flynn",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 18,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 21,
+    "type": "setup",
+    "words": 29,
+    "turn": false
+   },
+   {
+    "beat": 22,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 23,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 24,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 25,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 26,
+    "type": "setup",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 27,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 28,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 29,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 30,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 31,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 32,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 33,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 34,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 35,
+    "type": "punchline",
+    "words": 5,
+    "turn": true
+   },
+   {
+    "beat": 36,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 37,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 38,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 39,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 40,
+    "type": "closer",
+    "words": 3,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "That",
+   "There",
+   "They"
+  ],
+  "arc": "opener->closer over 41 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "race",
+   "observational",
+   "animals",
+   "crime"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.47,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.44,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.09,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.46,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.79,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.78,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.61,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.7,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.91,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.3,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.25,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep758_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

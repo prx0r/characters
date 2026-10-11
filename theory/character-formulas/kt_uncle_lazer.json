@@ -1,0 +1,27 @@
+{
+ "character_id": "kt_uncle_lazer",
+ "n_instances": 3,
+ "n_scored": 3,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 2.33,
+  "n": 3
+ },
+ "hypotheses": [
+  {
+   "claim": "no single-factor gap found; outcomes consistent across factors",
+   "status": "proposed",
+   "evidence": [
+    "Uncle Lazer-1-b50fb4e92c2bff3c",
+    "Uncle Lazer-4-e540a4fb6b265eec",
+    "Uncle Lazer-1-39a48f2b85fa757a"
+   ]
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

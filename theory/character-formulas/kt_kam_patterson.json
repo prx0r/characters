@@ -1,0 +1,27 @@
+{
+ "character_id": "kt_kam_patterson",
+ "n_instances": 3,
+ "n_scored": 3,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.67,
+  "n": 3
+ },
+ "hypotheses": [
+  {
+   "claim": "no single-factor gap found; outcomes consistent across factors",
+   "status": "proposed",
+   "evidence": [
+    "Kam Patterson-2-b0c6035af10c61a6",
+    "Kam Patterson-3-771253f7bdf9ec57",
+    "Kam Patterson-12-1ec44531a509acad"
+   ]
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

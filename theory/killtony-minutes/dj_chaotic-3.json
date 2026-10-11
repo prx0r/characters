@@ -1,0 +1,187 @@
+{
+ "set_id": "DJ Chaotic-3-d327bca91a31dca7",
+ "who": {
+  "persona_ref": "killtony-personas/dj_chaotic.json",
+  "comedian": "DJ Chaotic",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 6,
+    "turn": true
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "closer",
+    "words": 10,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 14 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai"
+  ],
+  "topics": [
+   "self_deprecation",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.27,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.27,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.19,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.59,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.9,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.3,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.35,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.79,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.88,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.27,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "identity_contradiction",
+  "confidence": 0.34,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "light",
+  "crowd_ord": 1,
+  "tony_praise": 2
+ },
+ "provenance": {
+  "file": "reprocess_ep771_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

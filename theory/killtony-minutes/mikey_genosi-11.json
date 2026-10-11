@@ -1,0 +1,233 @@
+{
+ "set_id": "Mikey Genosi-11-0f48e78364b38f8f",
+ "who": {
+  "persona_ref": "killtony-personas/mikey_genosi.json",
+  "comedian": "Mikey Genosi",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 8,
+    "turn": true
+   },
+   {
+    "beat": 4,
+    "type": "punchline",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 37,
+    "turn": true
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 23,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 24,
+    "turn": true
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 14,
+    "turn": true
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "closer",
+    "words": 9,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Like"
+  ],
+  "arc": "opener->closer over 21 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "institutions",
+   "technology"
+  ],
+  "topics": [
+   "race",
+   "sex",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.48,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.26,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.08,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.52,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.47,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.84,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.66,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.61,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.91,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.23,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.53,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "roaring",
+  "crowd_ord": 4,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep774_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

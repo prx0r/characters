@@ -1,0 +1,249 @@
+{
+ "set_id": "Uncle Laser-1-91eac6d6e542140c",
+ "who": {
+  "persona_ref": "killtony-personas/uncle_laser.json",
+  "comedian": "Uncle Laser",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 17,
+    "turn": true
+   },
+   {
+    "beat": 8,
+    "type": "punchline",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 29,
+    "turn": true
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 26,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "punchline",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "punchline",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "punchline",
+    "words": 14,
+    "turn": true
+   },
+   {
+    "beat": 21,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 22,
+    "type": "punchline",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 23,
+    "type": "closer",
+    "words": 9,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Peter"
+  ],
+  "arc": "opener->closer over 24 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "lgbtq",
+   "storytelling",
+   "sex",
+   "religion"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.29,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.41,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.1,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.58,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.74,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.87,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.51,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.77,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.91,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.4,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.57,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "roaring",
+  "crowd_ord": 4,
+  "tony_praise": 5
+ },
+ "provenance": {
+  "file": "reprocess_ep732_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

@@ -1,0 +1,199 @@
+{
+ "set_id": "Joe Hansen-4-3c88e75d29d8b7ab",
+ "who": {
+  "persona_ref": "killtony-personas/joe_hansen.json",
+  "comedian": "Joe Hansen",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 26,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "punchline",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 13,
+    "turn": true
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 29,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "closer",
+    "words": 2,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Hamburger Helper",
+   "That",
+   "What"
+  ],
+  "arc": "opener->closer over 15 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships",
+   "money_and_class"
+  ],
+  "topics": [
+   "family",
+   "self_deprecation",
+   "other"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.64,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.4,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.15,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.38,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.62,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.91,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.39,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.74,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.92,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.68,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.53,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "test_flashlite_pass2_ep750.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

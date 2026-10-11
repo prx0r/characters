@@ -1,0 +1,95 @@
+{
+ "id": "kt_luis_cervantes",
+ "name": "Luis Cervantes",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 3.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays relationships",
+  "plays dating",
+  "plays self_deprecation"
+ ],
+ "humour": "observed lean: double_interpret, literalize, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Hearing damage from skydiving",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "relationships",
+   "dating",
+   "self_deprecation"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "relationships",
+   "dating"
+  ],
+  "ignores": [],
+  "watched": [
+   "relationships",
+   "dating",
+   "self_deprecation"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "literalize": 1.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "relationships",
+  "dating",
+  "self_deprecation"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_location": [
+   "Austin (via Bay Area)"
+  ],
+  "disclosed_occupation": [
+   "AV at Moody Center"
+  ],
+  "disclosed_relationship_status": [
+   "single"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

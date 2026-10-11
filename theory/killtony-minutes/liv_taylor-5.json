@@ -1,0 +1,199 @@
+{
+ "set_id": "Liv Taylor-5-b118915195fb106e",
+ "who": {
+  "persona_ref": "killtony-personas/liv_taylor.json",
+  "comedian": "Liv Taylor",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 18,
+    "turn": true
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 15,
+    "turn": true
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 20,
+    "turn": true
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 21,
+    "turn": true
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 14,
+    "turn": true
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "closer",
+    "words": 22,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Like",
+   "Puerto Rican"
+  ],
+  "arc": "opener->closer over 15 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships",
+   "institutions"
+  ],
+  "topics": [
+   "aging",
+   "race",
+   "family",
+   "self_deprecation"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.21,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.2,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.17,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.34,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.82,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.65,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.58,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.18,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "self_awareness",
+  "confidence": 0.51,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep732_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

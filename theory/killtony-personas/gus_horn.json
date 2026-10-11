@@ -1,0 +1,103 @@
+{
+ "id": "kt_gus_horn",
+ "name": "Gus Horn",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep708_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 3.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays self_deprecation",
+  "plays observational",
+  "plays storytelling"
+ ],
+ "humour": "observed lean: double_interpret, literalize, rigidify",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Former nuclear engineer who worked in Austria",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "self_deprecation",
+   "observational",
+   "storytelling"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "self_deprecation",
+   "observational"
+  ],
+  "ignores": [],
+  "watched": [
+   "self_deprecation",
+   "observational",
+   "storytelling",
+   "food"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "literalize": 1.0,
+   "rigidify": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "rigidity"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "self_deprecation",
+  "observational",
+  "storytelling",
+  "food"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_age": [
+   "32"
+  ],
+  "disclosed_location": [
+   "Atlanta"
+  ],
+  "disclosed_occupation": [
+   "nuclear engineer"
+  ],
+  "disclosed_relationship_status": [
+   "single"
+  ],
+  "disclosed_years_doing_comedy": [
+   "8"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

@@ -1,0 +1,179 @@
+{
+ "set_id": "Alex Hurtline-4-3e670b444984bdaa",
+ "who": {
+  "persona_ref": "killtony-personas/alex_hurtline.json",
+  "comedian": "Alex Hurtline",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 35,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 23,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 20,
+    "turn": true
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 26,
+    "turn": true
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 25,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "closer",
+    "words": 19,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Yeah"
+  ],
+  "arc": "opener->closer over 12 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships"
+  ],
+  "topics": [
+   "self_deprecation",
+   "disability",
+   "family",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.21,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.33,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.13,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.47,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.86,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.42,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.82,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.93,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.38,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.57,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep728_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

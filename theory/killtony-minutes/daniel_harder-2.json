@@ -1,0 +1,187 @@
+{
+ "set_id": "Daniel Harder-2-0129789fa3a6fe03",
+ "who": {
+  "persona_ref": "killtony-personas/daniel_harder.json",
+  "comedian": "Daniel Harder",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "closer",
+    "words": 8,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 14 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai"
+  ],
+  "topics": [
+   "drugs",
+   "other"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.34,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.48,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.06,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.65,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.69,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.87,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.59,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.74,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.34,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "escalation",
+  "confidence": 0.49,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "silence",
+  "crowd_ord": 0,
+  "tony_praise": 1
+ },
+ "provenance": {
+  "file": "reprocess_ep774_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

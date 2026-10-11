@@ -1,0 +1,275 @@
+{
+ "set_id": "Jay Legend-4-22f2305e1a5b2710",
+ "who": {
+  "persona_ref": "killtony-personas/jay_legend.json",
+  "comedian": "Jay Legend",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 32,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "punchline",
+    "words": 6,
+    "turn": true
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 20,
+    "turn": true
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 16,
+    "turn": true
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 19,
+    "turn": true
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 24,
+    "turn": true
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 34,
+    "turn": true
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "punchline",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "punchline",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 21,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 22,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 23,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 24,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 25,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 26,
+    "type": "punchline",
+    "words": 11,
+    "turn": true
+   },
+   {
+    "beat": 27,
+    "type": "closer",
+    "words": 8,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Because"
+  ],
+  "arc": "opener->closer over 28 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "money_and_class"
+  ],
+  "topics": [
+   "lgbtq",
+   "relationships",
+   "observational",
+   "race"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.5,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.32,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.18,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.82,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.66,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.69,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.59,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.8,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.87,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.68,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "identity_contradiction",
+  "confidence": 0.2,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep758_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

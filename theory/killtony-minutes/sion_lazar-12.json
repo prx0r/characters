@@ -1,0 +1,235 @@
+{
+ "set_id": "Sion Lazar-12-5365f4d654aafd1f",
+ "who": {
+  "persona_ref": "killtony-personas/sion_lazar.json",
+  "comedian": "Sion Lazar",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 20,
+    "turn": true
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 28,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "closer",
+    "words": 2,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Calm",
+   "Stand",
+   "They"
+  ],
+  "arc": "opener->closer over 21 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "institutions",
+   "technology"
+  ],
+  "topics": [
+   "regional",
+   "observational",
+   "sex"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.36,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.27,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.16,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.48,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.66,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.73,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.31,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.6,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.83,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.4,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.25,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 3
+ },
+ "provenance": {
+  "file": "reprocess_ep755_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

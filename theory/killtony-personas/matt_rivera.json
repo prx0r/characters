@@ -1,0 +1,92 @@
+{
+ "id": "kt_matt_rivera",
+ "name": "Matt Rivera",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep735_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 2.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays family",
+  "plays observational",
+  "plays shock_humor"
+ ],
+ "humour": "observed lean: double_interpret, literalize, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Diagnosed with diabetes at Disney World",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "family",
+   "observational",
+   "shock_humor"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "family",
+   "observational"
+  ],
+  "ignores": [],
+  "watched": [
+   "family",
+   "observational",
+   "shock_humor"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "literalize": 1.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "family",
+  "observational",
+  "shock_humor"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_location": [
+   "Austin"
+  ],
+  "disclosed_occupation": [
+   "Chef"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

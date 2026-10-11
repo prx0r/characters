@@ -1,0 +1,216 @@
+{
+ "set_id": "David Hall-11-6acb83dfe429f09d",
+ "who": {
+  "persona_ref": "killtony-personas/david_hall.json",
+  "comedian": "David Hall",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 27,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 6,
+    "turn": true
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 13,
+    "turn": true
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "punchline",
+    "words": 24,
+    "turn": true
+   },
+   {
+    "beat": 17,
+    "type": "closer",
+    "words": 21,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "African American"
+  ],
+  "arc": "opener->closer over 18 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai",
+   "family_and_relationships",
+   "money_and_class"
+  ],
+  "topics": [
+   "race",
+   "crime",
+   "other"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.35,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.47,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.11,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.84,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.92,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.87,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.55,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.88,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.92,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "identity_contradiction",
+  "confidence": 0.79,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "silence",
+  "crowd_ord": 0,
+  "tony_praise": 2
+ },
+ "provenance": {
+  "file": "reprocess_ep770_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

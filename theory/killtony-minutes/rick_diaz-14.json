@@ -1,0 +1,190 @@
+{
+ "set_id": "Rick Diaz-14-5b46691757eb5c75",
+ "who": {
+  "persona_ref": "killtony-personas/rick_diaz.json",
+  "comedian": "Rick Diaz",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 26,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 24,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "closer",
+    "words": 8,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Yeah"
+  ],
+  "arc": "opener->closer over 14 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "money_and_class"
+  ],
+  "topics": [
+   "self_deprecation",
+   "mental_health",
+   "relationships"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.25,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.36,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.75,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.8,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.62,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.26,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.66,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.3,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.24,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep725_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "id": "kt_timmy_no_breaks",
+ "name": "Timmy No Breaks",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 4.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays meta",
+  "plays shock_humor",
+  "plays lgbtq"
+ ],
+ "humour": "observed lean: double_interpret, literalize, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Has the number one comedy album on iTunes",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "meta",
+   "shock_humor",
+   "lgbtq"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "meta",
+   "shock_humor"
+  ],
+  "ignores": [],
+  "watched": [
+   "meta",
+   "shock_humor",
+   "lgbtq"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "literalize": 1.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "meta",
+  "shock_humor",
+  "lgbtq"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_occupation": [
+   "Comedian / Musician"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

@@ -1,0 +1,28 @@
+{
+ "character_id": "kt_ari_matti",
+ "n_instances": 4,
+ "n_scored": 4,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 4.0,
+  "n": 4
+ },
+ "hypotheses": [
+  {
+   "claim": "no single-factor gap found; outcomes consistent across factors",
+   "status": "proposed",
+   "evidence": [
+    "Ari Matti-1-b54017932cf53198",
+    "Ari Matti-13-d67e2bc3c0a152e3",
+    "Ari Matti-10-d33d0a272cb95498",
+    "Ari Matti-3-e10b12d060016af5"
+   ]
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

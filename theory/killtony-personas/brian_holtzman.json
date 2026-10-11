@@ -1,0 +1,87 @@
+{
+ "id": "kt_brian_holtzman",
+ "name": "Brian Holtzman",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep706_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 4.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays shock_humor",
+  "plays politics",
+  "plays observational"
+ ],
+ "humour": "observed lean: double_interpret, literalize, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Known as the 'favorite comedian's favorite comedian'",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "shock_humor",
+   "politics",
+   "observational"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "shock_humor",
+   "politics"
+  ],
+  "ignores": [],
+  "watched": [
+   "shock_humor",
+   "politics",
+   "observational",
+   "gender"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "literalize": 1.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "shock_humor",
+  "politics",
+  "observational",
+  "gender"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {},
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

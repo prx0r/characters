@@ -1,0 +1,215 @@
+{
+ "set_id": "Lorenzo Tyre-9-764edcd0c1b15589",
+ "who": {
+  "persona_ref": "killtony-personas/lorenzo_tyre.json",
+  "comedian": "Lorenzo Tyre",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "punchline",
+    "words": 13,
+    "turn": true
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 18,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 23,
+    "turn": true
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "punchline",
+    "words": 3,
+    "turn": true
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "closer",
+    "words": 8,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Courage",
+   "Fuck"
+  ],
+  "arc": "opener->closer over 18 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "money_and_class"
+  ],
+  "topics": [
+   "self_deprecation",
+   "other",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.17,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.22,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.12,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.45,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.62,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.72,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.37,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.66,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.72,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.15,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "self_awareness",
+  "confidence": 0.23,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "silence",
+  "crowd_ord": 0,
+  "tony_praise": 1
+ },
+ "provenance": {
+  "file": "test_flashlite_pass2_ep750.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

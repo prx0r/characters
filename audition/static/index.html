@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audition — make me laugh</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:760px;margin:24px auto;padding:0 16px;background:#111;color:#eee}
+select,button,textarea{font-size:16px;padding:10px;border-radius:10px;border:1px solid #444;background:#1c1c1c;color:#eee}
+button{cursor:pointer}button:disabled{opacity:.4;cursor:default}
+#pogBtn{font-size:28px;padding:18px 34px;background:#7c3aed;border:none;border-radius:16px}
+#timeline{position:relative;height:14px;background:#333;border-radius:8px;margin:12px 0}
+#progress{position:absolute;left:0;top:0;bottom:0;background:#7c3aed;border-radius:8px;width:0%}
+.marker{position:absolute;top:-4px;width:4px;height:22px;background:#facc15}
+.beat{padding:8px;border-left:3px solid #333;margin:6px 0}.beat.active{border-color:#facc15;background:#222}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.muted{color:#999}.card{border:1px solid #333;border-radius:12px;padding:12px;margin:12px 0}
+.rateBtn.sel{background:#166534}
+</style>
+</head>
+<body>
+<h1>Audition <span class="muted">P0 — listen · POG · feedback · next</span></h1>
+<div class="row">
+<img id="portrait" src="" alt="" style="width:96px;height:96px;border-radius:16px;object-fit:cover;display:none">
+<select id="charSel"></select>
+<button id="genBtn">Generate Minute</button>
+<span id="status" class="muted"></span>
+</div>
+<div class="card">
+<audio id="audio" controls preload="auto" style="width:100%"></audio>
+<div id="timeline"><div id="progress"></div></div>
+<div class="row"><button id="pogBtn">POG</button><span class="muted">or press <b>P</b> while playing · <span id="clock">0:00</span></span></div>
+<div id="beats"></div>
+</div>
+<div class="card">
+<h3>Feedback</h3>
+<div class="row" id="rates">
+<button data-r="0">Not funny</button><button data-r="1">Amusing</button><button data-r="2">Funny</button><button data-r="3">Excellent</button>
+</div>
+<textarea id="comment" rows="3" style="width:100%;margin-top:8px" placeholder="What worked? What failed?"></textarea>
+<div class="row" style="margin-top:8px"><label class="muted">Room read (KT-style):</label><select id="room"><option value="">—</option><option>silence</option><option>light</option><option>moderate</option><option>big_laughs</option><option>roaring</option></select></div>
+<div class="row" style="margin-top:8px"><button id="fbBtn" disabled>Submit Feedback</button><button id="nextBtn" disabled>Next Minute →</button></div>
+<div id="strategy" class="muted"></div>
+</div>
+<div class="card"><h3>History</h3><div id="history"></div></div>
+<div class="card"><h3>My delivery <span class="muted">P1 — you perform the approved script</span></h3>
+<div class="row"><button id="recBtn" disabled>● Record my take</button><button id="stopBtn" disabled>■ Stop &amp; upload</button><span id="recStatus" class="muted"></span></div>
+<div class="row" style="margin-top:8px"><label class="muted">Playback source:</label><button id="srcAI">AI voice</button><button id="srcHuman">My take</button><span id="srcStatus" class="muted"></span></div>
+<div id="takes" class="muted" style="margin-top:8px"></div>
+<div class="muted">Your original is preserved untouched. Character-voice conversion (ElevenLabs) needs a key — not configured.</div>
+</div>
+<script>
+let AUD=null, RATING=null, ITER=1, POLL=null;
+const $=id=>document.getElementById(id);
+async function api(m,u,b){const r=await fetch(u,{method:m,headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined});return r.json();}
+let CHARS=[];
+async function loadChars(){const d=await api('GET','/api/auditions/characters');CHARS=d.characters;$('charSel').innerHTML=d.characters.map(c=>`<option value="${c.id}">${c.name} — ${c.deal.slice(0,60)}…</option>`).join('');showPortrait();loadHistory();}
+function showPortrait(){const c=CHARS.find(x=>x.id===$('charSel').value);const p=$('portrait');if(c&&c.portrait_url){p.src=c.portrait_url;p.style.display='block';}else{p.style.display='none';}}
+async function loadHistory(){const c=$('charSel').value;const d=await api('GET','/api/auditions?character_id='+c);$('history').innerHTML=d.auditions.map(a=>`<div>🎙️ ${a.id.slice(-6)} · ${a.scenario_id} · ⭐${a.feedback?a.feedback.rating:'–'} · POGs:${a.pogs.length} <button onclick="replay('${a.id}')">replay</button></div>`).join('')||'<span class="muted">none yet</span>';}
+async function replay(id){const d=await api('GET','/api/auditions/'+id);setAud(d);$('audio').play();}
+function setAud(d){AUD=d;RATING=null;document.querySelectorAll('#rates button').forEach(b=>b.classList.remove('sel'));$('fbBtn').disabled=!d||d.status!=='ready';$('nextBtn').disabled=true;
+if(d&&d.status==='ready'){$('audio').src=d.audio_url;$('beats').innerHTML=d.beats.map(b=>`<div class="beat" id="beat-${b.id}"><b>${b.id} [${b.type}]</b> ${b.text}</div>`).join('');document.querySelectorAll('#timeline .marker').forEach(m=>m.remove());(d.pogs||[]).forEach(p=>mark(p.playback_ms));$('status').textContent='ready · '+d.scenario_id+' · '+(d.exploration?'exploring':'exploiting')+((d.decision&&d.decision.instance)?(' · '+d.decision.instance.modulator):'');} }
+function mark(ms){if(!AUD)return;const el=document.createElement('div');el.className='marker';el.style.left=(ms/AUD.audio_duration_ms*100)+'%';$('timeline').appendChild(el);}
+$('genBtn').onclick=async()=>{const c=$('charSel').value;$('status').textContent='generating…';const j=await api('POST','/api/auditions',{character_id:c});clearInterval(POLL);POLL=setInterval(async()=>{const d=await api('GET','/api/auditions/'+j.audition_id);$('status').textContent=d.status+(d.scenario_id?' · '+d.scenario_id:'');if(d.status==='ready'){clearInterval(POLL);setAud(d);$('audio').play();loadHistory();}if(d.status==='failed'){clearInterval(POLL);$('status').textContent='failed: '+(d.error||'unknown');}},1500);};
+function pog(){const a=$('audio');if(a.paused||!AUD||AUD.status!=='ready')return;const ms=Math.round(a.currentTime*1000);const eid='pog_'+Math.random().toString(36).slice(2,10);mark(ms);api('POST',`/api/auditions/${AUD.id}/pogs`,{event_id:eid,playback_ms:ms,iteration:ITER});api('POST',`/api/auditions/${AUD.id}/play_event`,{kind:'play',position_ms:ms});}
+$('pogBtn').onclick=pog;
+document.addEventListener('keydown',e=>{if((e.key==='p'||e.key==='P')&&document.activeElement.tagName!=='TEXTAREA'&&document.activeElement.tagName!=='INPUT')pog();});
+$('audio').addEventListener('timeupdate',()=>{const a=$('audio');$('clock').textContent=Math.floor(a.currentTime/60)+':'+String(Math.floor(a.currentTime%60)).padStart(2,'0');$('progress').style.width=(a.duration?a.currentTime/a.duration*100:0)+'%';if(AUD&&AUD.beats){const ms=a.currentTime*1000;AUD.beats.forEach(b=>{document.getElementById('beat-'+b.id)?.classList.toggle('active',ms>=b.start_ms&&ms<=b.end_ms);});}});
+$('audio').addEventListener('seeked',()=>api('POST',`/api/auditions/${AUD.id}/play_event`,{kind:'seek',position_ms:Math.round($('audio').currentTime*1000)}));
+$('audio').addEventListener('pause',()=>{if(AUD)api('POST',`/api/auditions/${AUD.id}/play_event`,{kind:'pause',position_ms:Math.round($('audio').currentTime*1000)});});
+$('audio').addEventListener('play',()=>{if($('audio').currentTime<0.5)ITER++;});
+document.querySelectorAll('#rates button').forEach(b=>b.onclick=()=>{RATING=+b.dataset.r;document.querySelectorAll('#rates button').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');});
+$('fbBtn').onclick=async()=>{if(RATING===null||!AUD)return;const d=await api('POST',`/api/auditions/${AUD.id}/feedback`,{rating:RATING,comment:$('comment').value,room_reaction:$('room').value});if(d.error){$('strategy').textContent=d.error;return;}$('strategy').textContent='Saved'+(d.room_reaction?(' · room: '+d.room_reaction):'')+'. Strategy: '+d.strategy;$('nextBtn').disabled=false;loadHistory();};
+$('nextBtn').onclick=()=>{$('comment').value='';$('genBtn').click();};
+$('charSel').onchange=()=>{showPortrait();loadHistory();};
+let REC=null,CHUNKS=[];
+async function loadTakes(){if(!AUD||AUD.status!=='ready'){$('takes').innerHTML='';$('recBtn').disabled=true;return;}$('recBtn').disabled=false;const d=await api('GET',`/api/auditions/${AUD.id}/takes`);$('takes').innerHTML=d.takes.map(t=>`<div>🎤 ${t.take_id.slice(-6)} · ${(t.duration_ms/1000).toFixed(1)}s <button onclick="playTake('${t.take_id}')">preview</button></div>`).join('')||'no takes yet — record one';$('srcStatus').textContent='source: '+(AUD.performance_source||'ai_tts');}
+async function playTake(tid){$('audio').src='/takes/'+tid;}
+$('recBtn').onclick=async()=>{try{const s=await navigator.mediaDevices.getUserMedia({audio:true});CHUNKS=[];REC=new MediaRecorder(s);REC.ondataavailable=e=>{if(e.data.size)CHUNKS.push(e.data);};REC.onstop=async()=>{const blob=new Blob(CHUNKS,{type:REC.mimeType||'audio/webm'});const fd=new FormData();fd.append('audio',blob,'take.webm');$('recStatus').textContent='uploading…';const r=await fetch(`/api/auditions/${AUD.id}/human_take`,{method:'POST',body:fd});const d=await r.json();$('recStatus').textContent=d.take_id?('saved '+(d.duration_ms/1000).toFixed(1)+'s · original preserved'):(d.error||'upload failed');loadTakes();};REC.start();$('recBtn').disabled=true;$('stopBtn').disabled=false;$('recStatus').textContent='recording… read the beats above';}catch(e){$('recStatus').textContent='mic blocked: '+e;}};
+$('stopBtn').onclick=()=>{if(REC&&REC.state!=='inactive'){REC.stop();REC.stream.getTracks().forEach(t=>t.stop());$('stopBtn').disabled=true;$('recBtn').disabled=false;}};
+$('srcAI').onclick=async()=>{await api('POST',`/api/auditions/${AUD.id}/source`,{source:'ai_tts'});$('audio').src=AUD.audio_url;$('srcStatus').textContent='source: ai_tts';};
+$('srcHuman').onclick=async()=>{const d=await api('GET',`/api/auditions/${AUD.id}/takes`);if(!d.takes.length){$('srcStatus').textContent='record a take first';return;}const t=d.takes[d.takes.length-1];await api('POST',`/api/auditions/${AUD.id}/source`,{source:'human_voice_performance',take_id:t.id});$('audio').src='/takes/'+t.id;$('srcStatus').textContent='source: human_voice_performance';};
+const _setAud=setAud;setAud=function(d){_setAud(d);loadTakes();};
+loadChars();
+</script>
+</body>
+</html>

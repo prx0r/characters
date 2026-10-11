@@ -1,0 +1,184 @@
+{
+ "set_id": "AJ Iglesius-5-49af73591f762185",
+ "who": {
+  "persona_ref": "killtony-personas/aj_iglesius.json",
+  "comedian": "AJ Iglesius",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "punchline",
+    "words": 20,
+    "turn": true
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 37,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 30,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "closer",
+    "words": 8,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Like"
+  ],
+  "arc": "opener->closer over 13 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai"
+  ],
+  "topics": [
+   "race",
+   "work",
+   "self_deprecation"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.29,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.15,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.86,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.93,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.84,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.26,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.87,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.42,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "identity_contradiction",
+  "confidence": 0.99,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 3
+ },
+ "provenance": {
+  "file": "reprocess_ep728_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

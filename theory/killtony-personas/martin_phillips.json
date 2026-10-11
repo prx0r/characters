@@ -1,0 +1,101 @@
+{
+ "id": "kt_martin_phillips",
+ "name": "Martin Phillips",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 2,
+  "files": [
+   "reprocess_ep706_pass2.json",
+   "reprocess_ep712_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 4.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays disability",
+  "plays politics",
+  "plays sex"
+ ],
+ "humour": "observed lean: double_interpret, literalize, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Wears a turtleneck and gold chain inspired by 90s Dwayne 'The Rock' Johnson",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "disability",
+   "politics",
+   "sex"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "disability",
+   "politics"
+  ],
+  "ignores": [],
+  "watched": [
+   "disability",
+   "politics",
+   "sex",
+   "celebrities",
+   "dark_humor",
+   "family"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "literalize": 1.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "disability",
+  "politics",
+  "sex",
+  "celebrities",
+  "dark_humor"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_location": [
+   "Washington D.C."
+  ],
+  "disclosed_occupation": [
+   "comedian (former substitute teacher)"
+  ],
+  "disclosed_relationship_status": [
+   "single"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

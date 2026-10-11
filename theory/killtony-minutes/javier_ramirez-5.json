@@ -1,0 +1,240 @@
+{
+ "set_id": "Javier Ramirez-5-2c7e5b062ad380cb",
+ "who": {
+  "persona_ref": "killtony-personas/javier_ramirez.json",
+  "comedian": "Javier Ramirez",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 13,
+    "turn": true
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "punchline",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "punchline",
+    "words": 12,
+    "turn": true
+   },
+   {
+    "beat": 20,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 21,
+    "type": "closer",
+    "words": 2,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Hello",
+   "That"
+  ],
+  "arc": "opener->closer over 22 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "technology"
+  ],
+  "topics": [
+   "politics",
+   "shock_humor",
+   "meta",
+   "self_deprecation"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.3,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.67,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.24,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.7,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.83,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.72,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.23,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.66,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.91,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.81,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep708_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

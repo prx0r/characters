@@ -1,0 +1,101 @@
+{
+ "id": "kt_ryan_sharp",
+ "name": "Ryan Sharp",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 2.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays relationships",
+  "plays observational",
+  "plays work"
+ ],
+ "humour": "observed lean: double_interpret, literalize, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Dropped out of school in 10th grade",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "relationships",
+   "observational",
+   "work"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "relationships",
+   "observational"
+  ],
+  "ignores": [],
+  "watched": [
+   "relationships",
+   "observational",
+   "work"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "literalize": 1.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "relationships",
+  "observational",
+  "work"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_age": [
+   "23"
+  ],
+  "disclosed_location": [
+   "Pittsburgh"
+  ],
+  "disclosed_occupation": [
+   "Chipotle manager"
+  ],
+  "disclosed_relationship_status": [
+   "single"
+  ],
+  "disclosed_years_doing_comedy": [
+   "1"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

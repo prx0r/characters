@@ -1,0 +1,254 @@
+{
+ "set_id": "Adam Mitchell-4-16c1aee813e3d90c",
+ "who": {
+  "persona_ref": "killtony-personas/adam_mitchell.json",
+  "comedian": "Adam Mitchell",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 26,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "punchline",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "setup",
+    "words": 19,
+    "turn": false
+   },
+   {
+    "beat": 21,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 22,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 23,
+    "type": "closer",
+    "words": 4,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Hello",
+   "Jesus",
+   "Lord",
+   "They"
+  ],
+  "arc": "opener->closer over 24 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai",
+   "family_and_relationships"
+  ],
+  "topics": [
+   "religion",
+   "family",
+   "storytelling"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.5,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.64,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.15,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.29,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.64,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.62,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.72,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.34,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.21,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 2
+ },
+ "provenance": {
+  "file": "reprocess_ep708_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

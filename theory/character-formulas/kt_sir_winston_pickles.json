@@ -1,0 +1,34 @@
+{
+ "character_id": "kt_sir_winston_pickles",
+ "n_instances": 4,
+ "n_scored": 4,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.5,
+  "n": 4
+ },
+ "hypotheses": [
+  {
+   "claim": "scenario '?' outperforms 'family_and_relationships' (gap +1.0)",
+   "factor": "scenario",
+   "winner": "?",
+   "loser": "family_and_relationships",
+   "gap": 1.0,
+   "predicts": "next scenario-'?' instance scores above 3.0",
+   "evidence_for": [
+    "Sir Winston Pickles-5-02f668cb6d763f23"
+   ],
+   "evidence_against": [
+    "Sir Winston Pickles-7-1a60bdeef8f05bb2"
+   ],
+   "status": "proposed",
+   "n": 4
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

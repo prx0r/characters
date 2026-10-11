@@ -1,0 +1,166 @@
+{
+ "set_id": "Enrique Chac\u00f3n-1-9e85abc11627f5d7",
+ "who": {
+  "persona_ref": "killtony-personas/enrique_chac_n.json",
+  "comedian": "Enrique Chac\u00f3n",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "punchline",
+    "words": 11,
+    "turn": true
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "closer",
+    "words": 16,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "That",
+   "Yeah"
+  ],
+  "arc": "opener->closer over 10 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "race",
+   "politics",
+   "lgbtq",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.48,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.42,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.7,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.86,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.58,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.24,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.7,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.33,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep708_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

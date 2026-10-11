@@ -1,0 +1,167 @@
+{
+ "set_id": "Hans Kim-6-d0ac286038c52380",
+ "who": {
+  "persona_ref": "killtony-personas/hans_kim.json",
+  "comedian": "Hans Kim",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "punchline",
+    "words": 28,
+    "turn": true
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 12,
+    "turn": true
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "punchline",
+    "words": 15,
+    "turn": true
+   },
+   {
+    "beat": 9,
+    "type": "closer",
+    "words": 3,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Jewish"
+  ],
+  "arc": "opener->closer over 10 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships",
+   "technology"
+  ],
+  "topics": [
+   "politics",
+   "dating",
+   "race"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.47,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.23,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.21,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.33,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.8,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.91,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.27,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.72,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.34,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.27,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep736_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

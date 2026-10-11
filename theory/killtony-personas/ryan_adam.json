@@ -1,0 +1,103 @@
+{
+ "id": "kt_ryan_adam",
+ "name": "Ryan Adam",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 3.0
+ },
+ "archetype": "literalise",
+ "traits": [
+  "plays sex",
+  "plays aging",
+  "plays family"
+ ],
+ "humour": "observed lean: literalize, double_interpret, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Works at a sex shop part-time",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "sex",
+   "aging",
+   "family"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "sex",
+   "aging"
+  ],
+  "ignores": [],
+  "watched": [
+   "sex",
+   "aging",
+   "family",
+   "observational"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via literalize"
+ },
+ "comedy": {
+  "operator_priors": {
+   "literalize": 3.0,
+   "double_interpret": 2.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "literalise",
+  "bisociation",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "sex",
+  "aging",
+  "family",
+  "observational"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_age": [
+   "30"
+  ],
+  "disclosed_location": [
+   "Atlanta"
+  ],
+  "disclosed_occupation": [
+   "Restaurant manager and sex shop employee"
+  ],
+  "disclosed_relationship_status": [
+   "fiancee"
+  ],
+  "disclosed_years_doing_comedy": [
+   "7"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

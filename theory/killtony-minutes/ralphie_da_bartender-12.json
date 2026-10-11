@@ -1,0 +1,231 @@
+{
+ "set_id": "Ralphie Da Bartender-12-ade0a566f368f14a",
+ "who": {
+  "persona_ref": "killtony-personas/ralphie_da_bartender.json",
+  "comedian": "Ralphie Da Bartender",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 15,
+    "turn": true
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 14,
+    "turn": true
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "punchline",
+    "words": 13,
+    "turn": true
+   },
+   {
+    "beat": 18,
+    "type": "punchline",
+    "words": 14,
+    "turn": true
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "closer",
+    "words": 2,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 21 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships"
+  ],
+  "topics": [
+   "religion",
+   "relationships",
+   "sex",
+   "shock_humor"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.37,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.41,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.12,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.48,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.81,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.56,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.87,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.46,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.54,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "light",
+  "crowd_ord": 1,
+  "tony_praise": 2
+ },
+ "provenance": {
+  "file": "reprocess_ep758_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

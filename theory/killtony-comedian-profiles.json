@@ -1,0 +1,4629 @@
+[
+ {
+  "comedian": "AJ Iglesius",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "race",
+   "work",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "AJ Jackson",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "shock_humor",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Aaron Belisle",
+  "n_sets": 3,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 4,
+   "literalize": 3,
+   "repeat_variation": 2,
+   "status_invert": 1,
+   "unmask": 1
+  },
+  "top_topics": [
+   "disability",
+   "self_deprecation",
+   "politics",
+   "sex",
+   "meta"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, status_invert",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json",
+   "reprocess_ep725_pass2.json",
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Aaron Heltz",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "sex",
+   "shock_humor",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Aaron Silverstein",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "literalize": 1
+  },
+  "top_topics": [
+   "absurdist",
+   "meta",
+   "drugs"
+  ],
+  "persona_hypothesis": "recurring: literalize",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep735_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Adam Luckey",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "race"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Adam Mitchell",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "religion",
+   "family",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep708_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Alex Hurtline",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "disability",
+   "family",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Alex O'Brien",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "status_invert": 1,
+   "unmask": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "childhood",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, status_invert",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Alex Tarchun",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "race",
+   "absurdist"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Alex Tarno",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "observational",
+   "dating",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Alex Tarshun",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "family",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Andrew Dice Clay",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "literalize": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "storytelling",
+   "sex",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Andrew Wolf",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "drugs",
+   "regional",
+   "observational",
+   "aging"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Angel Diaz",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ari Matti",
+  "n_sets": 4,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 9,
+   "literalize": 4,
+   "repeat_variation": 4,
+   "rigidify": 3,
+   "identity_contradict": 2
+  },
+  "top_topics": [
+   "observational",
+   "sex",
+   "relationships",
+   "regional",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, status_invert",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json",
+   "reprocess_ep706_pass2.json",
+   "reprocess_ep725_pass2.json",
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ari Matty",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "crime",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Asan Ahmad",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "race",
+   "religion"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Audrey Scott",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "race",
+   "pop_culture"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Auggie Lee",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "relationships",
+   "race",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Austin Gerstenschlager",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "family",
+   "dating"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "BC",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "observational",
+   "shock_humor",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "BHC Tommy",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "sex",
+   "crime"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ben Bankas",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "parenting",
+   "family",
+   "children",
+   "lgbtq"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Benny G",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "family",
+   "dark_humor",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Biddy O'Loughlin",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "parenting",
+   "mental_health",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Big Chuck",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "drugs",
+   "food",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Bill Rhodes",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "work",
+   "crime",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Blake Apateau",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "family",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Blix Hanson",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "crime",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Bobby Ludlam",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "lgbtq"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Brian Holtzman",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "politics",
+   "observational",
+   "gender"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Brock White Lions",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Buffy",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "dating",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Busco Jones",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "sex",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Caleb Leese",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "family",
+   "shock_humor",
+   "drugs"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Cam Patterson",
+  "n_sets": 3,
+  "mean_crowd": 3.67,
+  "theory_freq": {
+   "double_interpret": 7,
+   "literalize": 5,
+   "repeat_variation": 3,
+   "identity_contradict": 2,
+   "expose_self_blindness": 2
+  },
+  "top_topics": [
+   "race",
+   "politics",
+   "drugs",
+   "observational",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json",
+   "reprocess_ep712_pass2.json",
+   "reprocess_ep719_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Cameron Altmann",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "shock_humor",
+   "history",
+   "money"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Cameron Frisk",
+  "n_sets": 2,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 4,
+   "literalize": 2,
+   "repeat_variation": 2,
+   "rigidify": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "relationships",
+   "family",
+   "insult_humor",
+   "sex",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json",
+   "reprocess_ep718_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Cameron May",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "family",
+   "observational",
+   "sex",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep735_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Cassandra Hartford",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "race",
+   "family"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Cassandra Ramos",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "literalize": 1
+  },
+  "top_topics": [
+   "race",
+   "sex",
+   "relationships",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Chaddo",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "family",
+   "relationships",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Charlie G",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "lifestyle",
+   "dating",
+   "dark_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Chris Caruso",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Chris Dunn",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "relationships",
+   "work",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Chris Longoria",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "dating",
+   "race",
+   "crime"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Chuli Joy",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "politics",
+   "observational",
+   "lgbtq"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Clay McLaren",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "race"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Colin Sledge",
+  "n_sets": 2,
+  "mean_crowd": 2.5,
+  "theory_freq": {
+   "double_interpret": 4,
+   "literalize": 2,
+   "repeat_variation": 2,
+   "rigidify": 1
+  },
+  "top_topics": [
+   "dating",
+   "relationships",
+   "observational",
+   "crime",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json",
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Collin Sledge",
+  "n_sets": 2,
+  "mean_crowd": 2.5,
+  "theory_freq": {
+   "double_interpret": 4,
+   "literalize": 2,
+   "rigidify": 2,
+   "repeat_variation": 2,
+   "status_invert": 1
+  },
+  "top_topics": [
+   "work",
+   "sex",
+   "storytelling",
+   "disability",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep708_pass2.json",
+   "reprocess_ep712_pass2.json"
+  ]
+ },
+ {
+  "comedian": "DJ Chaotic",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Daisuke Muramoto",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "observational",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Daniel Harder",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "drugs",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Daniel Shepherd",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "sexual_orientation",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Daniel Velasquez",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "family",
+   "disability",
+   "dating"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Danny Martinello (Wilson White)",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "crime",
+   "observational",
+   "disability",
+   "family"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Darian Terry",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "lgbtq",
+   "absurdist"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Dave the Butcher",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "David Hall",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "race",
+   "crime",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "David Jolly",
+  "n_sets": 3,
+  "mean_crowd": 3.33,
+  "theory_freq": {
+   "double_interpret": 7,
+   "literalize": 3,
+   "repeat_variation": 3,
+   "identity_contradict": 3,
+   "expose_self_blindness": 3
+  },
+  "top_topics": [
+   "observational",
+   "family",
+   "self_deprecation",
+   "drugs",
+   "politics"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json",
+   "reprocess_ep725_pass2.json",
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "David Lucas",
+  "n_sets": 3,
+  "mean_crowd": 3.67,
+  "theory_freq": {
+   "double_interpret": 6,
+   "literalize": 3,
+   "repeat_variation": 3,
+   "identity_contradict": 3,
+   "expose_self_blindness": 3
+  },
+  "top_topics": [
+   "race",
+   "relationships",
+   "observational",
+   "shock_humor",
+   "politics"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json",
+   "reprocess_ep728_pass2.json",
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Dedrick Flynn",
+  "n_sets": 5,
+  "mean_crowd": 3.2,
+  "theory_freq": {
+   "double_interpret": 10,
+   "literalize": 9,
+   "repeat_variation": 5,
+   "identity_contradict": 3,
+   "expose_self_blindness": 3
+  },
+  "top_topics": [
+   "observational",
+   "race",
+   "storytelling",
+   "other",
+   "animals"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json",
+   "reprocess_ep758_pass2.json",
+   "reprocess_ep770_pass2.json",
+   "reprocess_ep774_pass2.json",
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Deepak Panny",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 2,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "religion",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Deepak Sahota",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1
+  },
+  "top_topics": [
+   "politics",
+   "crime",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Derek Larson",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "regional",
+   "sex",
+   "shock_humor",
+   "lgbtq"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Dex",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "disability",
+   "absurdist"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Dimitri King",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "drugs",
+   "music"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Doc Ferry",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "race",
+   "relationships"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep735_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Drew Nickens",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "disability",
+   "physical"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Dustin Callahan",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "storytelling",
+   "family",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Emmanuel Martinez",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "dating",
+   "education",
+   "health"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Enrique Chac\u00f3n",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "politics",
+   "lgbtq",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep708_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Eric Spicely",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "self_deprecation",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Evan Burkes",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "storytelling",
+   "shock_humor",
+   "drugs"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Fang Chao",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "race",
+   "politics",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Feminist Stacy",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "literalize": 1
+  },
+  "top_topics": [
+   "politics",
+   "shock_humor",
+   "meta"
+  ],
+  "persona_hypothesis": "recurring: literalize",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Finnegan Timothy O'Malley",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "family",
+   "meta"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Fiona Cali",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "storytelling",
+   "disability",
+   "drugs",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Fiona Colli",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "disability",
+   "relationships",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Fiona Collie",
+  "n_sets": 2,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 4,
+   "literalize": 2,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "disability",
+   "dating",
+   "sex",
+   "shock_humor",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json",
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Frank Kidd",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "politics",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Frankie McGough",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "G-Pow",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "relationships",
+   "food"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Gordon Dixon",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "sex",
+   "shock_humor",
+   "regional"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Greg McHowan",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "technology",
+   "dating",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Gus Horn",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "observational",
+   "storytelling",
+   "food"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep708_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Hans Kim",
+  "n_sets": 3,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 7,
+   "literalize": 3,
+   "repeat_variation": 3
+  },
+  "top_topics": [
+   "politics",
+   "race",
+   "meta",
+   "sex",
+   "current_events"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json",
+   "reprocess_ep716_pass2.json",
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ian Sharp",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "other",
+   "politics",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Ian Simon",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "religion",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Iaya",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "drugs",
+   "dating",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Isaac Kane Brown",
+  "n_sets": 2,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 4,
+   "literalize": 2,
+   "repeat_variation": 2
+  },
+  "top_topics": [
+   "shock_humor",
+   "race",
+   "lgbtq",
+   "relationships",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json",
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "JJ Alexander",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "observational",
+   "history",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jack Shaw",
+  "n_sets": 3,
+  "mean_crowd": 3.33,
+  "theory_freq": {
+   "double_interpret": 6,
+   "literalize": 3,
+   "repeat_variation": 3,
+   "rigidify": 1
+  },
+  "top_topics": [
+   "religion",
+   "relationships",
+   "politics",
+   "lgbtq",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json",
+   "reprocess_ep728_pass2.json",
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jackson Barr",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "aging",
+   "relationships",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jackson Namie",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "lgbtq",
+   "sex",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jacob Aclen",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "literalize": 3,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "work",
+   "sex",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, identity_contradict, expose_self_blindness",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jasper the Disappointing Mime",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "meta",
+   "physical",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep708_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Javi Ballon",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "sex",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Javier Ramirez",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "shock_humor",
+   "meta",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep708_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jay Legend",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "lgbtq",
+   "relationships",
+   "observational",
+   "race"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jenny Anne",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 2,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "observational",
+   "dating"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jeremiah Maltez",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 3,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "politics",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jerry Debo Smith",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "race",
+   "shock_humor",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jesse Saldana",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "drugs",
+   "race",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jim Tally",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "relationships",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jimmy Clifford",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "disability",
+   "family",
+   "politics",
+   "history"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jimmy Prescott",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "observational",
+   "race"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Joe Barnholt",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "dating",
+   "observational",
+   "race",
+   "crime"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Joe Biden (Adam Ray)",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "literalize": 1
+  },
+  "top_topics": [
+   "politics",
+   "race",
+   "meta"
+  ],
+  "persona_hypothesis": "recurring: literalize",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Joe Hansen",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "family",
+   "self_deprecation",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "John Bechdel",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 2,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "politics",
+   "food"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jonathan Rachel's",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "literalize": 1
+  },
+  "top_topics": [
+   "lgbtq",
+   "self_deprecation",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jordan Pablo",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "sex",
+   "relationships",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Joseph Paul Alampi",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "absurdist"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Josh Gideon",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "observational",
+   "politics"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Jovan Afzali",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "sex",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Juanita",
+  "n_sets": 2,
+  "mean_crowd": 2.5,
+  "theory_freq": {
+   "literalize": 4,
+   "double_interpret": 4,
+   "repeat_variation": 2,
+   "status_invert": 1
+  },
+  "top_topics": [
+   "lgbtq",
+   "work",
+   "observational",
+   "mental_health",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, status_invert",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json",
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Julian Casas",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "disability",
+   "observational",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Just Greg",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "relationships",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Kam Patterson",
+  "n_sets": 3,
+  "mean_crowd": 3.67,
+  "theory_freq": {
+   "double_interpret": 7,
+   "literalize": 5,
+   "repeat_variation": 3,
+   "rigidify": 2
+  },
+  "top_topics": [
+   "sex",
+   "family",
+   "drugs",
+   "storytelling",
+   "relationships"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json",
+   "reprocess_ep715_pass2.json",
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Kansai Yasuda",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "race",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Kanse Yasuda",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 2,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "relationships",
+   "race",
+   "absurdist"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Kelly Lusk",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "observational",
+   "medical"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Kenny Cabanau",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "regional",
+   "shock_humor",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Law Cogar",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "religion",
+   "sex",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Law Koger",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "race",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Layla",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "shock_humor",
+   "dark"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Layla Ingalls",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "dating",
+   "religion",
+   "mental_health",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Lib Taylor",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 2,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "other",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Lino Rodriguez",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "literalize": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "other",
+   "physical"
+  ],
+  "persona_hypothesis": "recurring: literalize",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Lisa Jane Spencer",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Lisa Smith",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "race",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Liv Taylor",
+  "n_sets": 2,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 5,
+   "literalize": 2,
+   "repeat_variation": 2,
+   "rigidify": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "family",
+   "sex",
+   "shock_humor",
+   "aging"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json",
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Liz Splat",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "disability",
+   "sex",
+   "self_deprecation",
+   "relationships"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Lorenzo Tyre",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "other",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Lorenzo Tyree",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "dating",
+   "sex",
+   "relationships"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Lucas Hinderlighter",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "politics",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Luis Cervantes",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "dating",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Luke Stam",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "regional",
+   "crime"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Maniac",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "sex",
+   "shock_humor",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Mario Z",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "crime",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Mario Zapata",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "politics",
+   "race",
+   "disability",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Martin Phillips",
+  "n_sets": 2,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 4,
+   "literalize": 2,
+   "repeat_variation": 2
+  },
+  "top_topics": [
+   "disability",
+   "politics",
+   "sex",
+   "celebrities",
+   "dark_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json",
+   "reprocess_ep712_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Mason Bird",
+  "n_sets": 2,
+  "mean_crowd": 2.5,
+  "theory_freq": {
+   "literalize": 4,
+   "double_interpret": 4,
+   "repeat_variation": 2
+  },
+  "top_topics": [
+   "self_deprecation",
+   "sex",
+   "sports",
+   "dating",
+   "relationships"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json",
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Matt Atkins",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "drugs",
+   "religion",
+   "sex",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Matt Rivas",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "sex",
+   "observational",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Matt Rivera",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "family",
+   "observational",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep735_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Matthew Coffin",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "politics",
+   "sex",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Max Imum",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "sex",
+   "relationships",
+   "drugs"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Medina",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "politics",
+   "disability",
+   "family"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Megan Knights",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "observational",
+   "dating"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Michael Kay",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "drugs",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Michael Moses",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "race",
+   "family",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Mike Aiobebe",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "literalize": 1,
+   "status_invert": 1
+  },
+  "top_topics": [
+   "race",
+   "storytelling",
+   "regional"
+  ],
+  "persona_hypothesis": "recurring: literalize, status_invert",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Mike Holder",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "meta",
+   "crime",
+   "work"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep735_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Mikey Genosi",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 3,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "sex",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Mitch Crawlenger",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "literalize": 1
+  },
+  "top_topics": [
+   "work",
+   "observational",
+   "science"
+  ],
+  "persona_hypothesis": "recurring: literalize",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Neil Rubinstein",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "observational",
+   "crime"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Nicholas Hartley",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "family",
+   "race"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Nick Cano",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "religion",
+   "shock_humor",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Nilo Mac",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "meta",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Offender",
+  "n_sets": 2,
+  "mean_crowd": 1.5,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 2,
+   "rigidify": 2,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "crime",
+   "storytelling",
+   "race",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json",
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Olivia Coughlin",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "status_invert": 1,
+   "unmask": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "observational",
+   "work"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, status_invert",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Otis Hicks",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "family"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Pat O'Neill",
+  "n_sets": 5,
+  "mean_crowd": 3.2,
+  "theory_freq": {
+   "double_interpret": 10,
+   "literalize": 5,
+   "repeat_variation": 4,
+   "rigidify": 2
+  },
+  "top_topics": [
+   "politics",
+   "race",
+   "observational",
+   "shock_humor",
+   "religion"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep736_pass2.json",
+   "reprocess_ep758_pass2.json",
+   "reprocess_ep770_pass2.json",
+   "reprocess_ep771_pass2.json",
+   "reprocess_ep774_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Patrick Cassaday",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "politics",
+   "family"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep739_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Patrick Christopher",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "sex",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Phil Smith",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "family",
+   "absurdist"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Phoenix Provocateur",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "lgbtq",
+   "race",
+   "family",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep708_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Poncho",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "literalize": 1,
+   "rigidify": 1
+  },
+  "top_topics": [
+   "relationships",
+   "sex",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Princess Rubber Ducky",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "religion",
+   "disability",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ralphie Da Bartender",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "religion",
+   "relationships",
+   "sex",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Randolph Davies",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "storytelling",
+   "sex",
+   "observational",
+   "musical"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ray Cheneby",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "sex",
+   "crime"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Remington Blake Windsor",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Remy Swice",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "regional",
+   "race",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Rick Diaz",
+  "n_sets": 2,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 4,
+   "literalize": 2,
+   "repeat_variation": 2
+  },
+  "top_topics": [
+   "self_deprecation",
+   "family",
+   "sex",
+   "mental_health",
+   "relationships"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json",
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Riley Gilmore",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "sex",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep716_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Rob White",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "work",
+   "family",
+   "crime",
+   "dark_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Robert Carroll",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "drugs",
+   "sex",
+   "aging"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ronaldo Mercado",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "self_deprecation",
+   "regional"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep735_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ronnie Fryer",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "sex",
+   "family"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ryan Adam",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 2,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "aging",
+   "family",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ryan Sharp",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "observational",
+   "work"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Sancho Pancho Villa",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "dating",
+   "sex",
+   "physical"
+  ],
+  "persona_hypothesis": "recurring: double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Saul Wilson",
+  "n_sets": 1,
+  "mean_crowd": 0.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "lgbtq",
+   "observational",
+   "meta"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Sean Glazer",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "drugs"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Seth Shepard",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "sex",
+   "drugs",
+   "self_deprecation"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Seth Tilly",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "drugs",
+   "work",
+   "shock_humor",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep708_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Sion Lazar",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 2,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "regional",
+   "observational",
+   "sex"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Sir Winston Pickles",
+  "n_sets": 4,
+  "mean_crowd": 3.5,
+  "theory_freq": {
+   "double_interpret": 9,
+   "literalize": 4,
+   "repeat_variation": 3,
+   "rigidify": 1,
+   "status_invert": 1
+  },
+  "top_topics": [
+   "absurdist",
+   "other",
+   "shock_humor",
+   "crime",
+   "dark_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep728_pass2.json",
+   "reprocess_ep732_pass2.json",
+   "reprocess_ep770_pass2.json",
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Spencer Esgridge",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "drugs",
+   "family",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep735_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Stefan Ramirez",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "religion",
+   "lgbtq",
+   "shock_humor",
+   "death"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Stephen Glenn",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "religion",
+   "meta",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Suede McCoy",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "crime",
+   "race"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep770_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Sunny Castillo",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "literalize": 1,
+   "rigidify": 1
+  },
+  "top_topics": [
+   "observational",
+   "relationships",
+   "family"
+  ],
+  "persona_hypothesis": "recurring: literalize, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep728_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Tariq Morales",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "shock_humor",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Tayja",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "race",
+   "sex",
+   "dating"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Taylor Ferrer",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "politics",
+   "sex",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Tim Hill",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "sex",
+   "drugs",
+   "storytelling",
+   "relationships"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Timely Rain",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "sex",
+   "race"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Timmy No Breaks",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "meta",
+   "shock_humor",
+   "lgbtq"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Tommy Tickles",
+  "n_sets": 2,
+  "mean_crowd": 3.5,
+  "theory_freq": {
+   "literalize": 2,
+   "double_interpret": 2,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "relationships",
+   "sex",
+   "aging",
+   "race"
+  ],
+  "persona_hypothesis": "recurring: literalize, rigidify, double_interpret",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json",
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Tony Scar",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "disability",
+   "musical",
+   "drugs",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Tony Star",
+  "n_sets": 1,
+  "mean_crowd": 4.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "musical",
+   "politics",
+   "celebrity",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ty Funny",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "status_invert": 1,
+   "unmask": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "observational",
+   "work"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, status_invert",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Ty Marion",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 3,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "observational",
+   "meta"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Uncle Laser",
+  "n_sets": 4,
+  "mean_crowd": 3.25,
+  "theory_freq": {
+   "double_interpret": 8,
+   "literalize": 4,
+   "repeat_variation": 4,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "sex",
+   "storytelling",
+   "dating",
+   "self_deprecation",
+   "shock_humor"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json",
+   "reprocess_ep708_pass2.json",
+   "reprocess_ep715_pass2.json",
+   "reprocess_ep732_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Uncle Lazer",
+  "n_sets": 3,
+  "mean_crowd": 2.33,
+  "theory_freq": {
+   "double_interpret": 6,
+   "literalize": 3,
+   "repeat_variation": 3,
+   "rigidify": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "sex",
+   "relationships",
+   "storytelling",
+   "meta"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json",
+   "reprocess_ep735_pass2.json",
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Vic Shivdasani",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1
+  },
+  "top_topics": [
+   "disability",
+   "observational",
+   "race",
+   "storytelling"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep706_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Vincenzo Maraschio",
+  "n_sets": 1,
+  "mean_crowd": 1.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "lgbtq",
+   "sex",
+   "food"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep758_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Will Hunsinger",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "observational",
+   "work",
+   "other"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep771_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Will Owens",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "family",
+   "shock_humor",
+   "drugs"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep712_pass2.json"
+  ]
+ },
+ {
+  "comedian": "William Montgomery",
+  "n_sets": 13,
+  "mean_crowd": 3.77,
+  "theory_freq": {
+   "double_interpret": 26,
+   "literalize": 14,
+   "repeat_variation": 12,
+   "rigidify": 4,
+   "status_invert": 1
+  },
+  "top_topics": [
+   "observational",
+   "absurdist",
+   "shock_humor",
+   "meta",
+   "politics"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep704_pass2.json",
+   "reprocess_ep706_pass2.json",
+   "reprocess_ep708_pass2.json",
+   "reprocess_ep712_pass2.json",
+   "reprocess_ep715_pass2.json",
+   "reprocess_ep718_pass2.json",
+   "reprocess_ep719_pass2.json",
+   "reprocess_ep725_pass2.json",
+   "reprocess_ep728_pass2.json",
+   "reprocess_ep736_pass2.json",
+   "reprocess_ep739_pass2.json",
+   "reprocess_ep755_pass2.json",
+   "test_flashlite_pass2_ep750.json"
+  ]
+ },
+ {
+  "comedian": "Yaehi",
+  "n_sets": 1,
+  "mean_crowd": 3.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1,
+   "identity_contradict": 1,
+   "expose_self_blindness": 1
+  },
+  "top_topics": [
+   "disability",
+   "dating",
+   "observational"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep752_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Yoanna Dixon",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "relationships",
+   "dating",
+   "work"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep715_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Zach Hollis",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "double_interpret": 2,
+   "literalize": 1,
+   "rigidify": 1,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "shock_humor",
+   "sex",
+   "absurdist"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, rigidify",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep718_pass2.json"
+  ]
+ },
+ {
+  "comedian": "Zeth Burton",
+  "n_sets": 1,
+  "mean_crowd": 2.0,
+  "theory_freq": {
+   "literalize": 3,
+   "double_interpret": 2,
+   "repeat_variation": 1
+  },
+  "top_topics": [
+   "self_deprecation",
+   "shock_humor",
+   "regional"
+  ],
+  "persona_hypothesis": "recurring: literalize, double_interpret, repeat_variation",
+  "persona_note": "stage-persona hypothesis from observed sets only, not a psychological fact",
+  "files": [
+   "reprocess_ep719_pass2.json"
+  ]
+ }
+]

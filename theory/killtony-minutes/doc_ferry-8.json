@@ -1,0 +1,243 @@
+{
+ "set_id": "Doc Ferry-8-c1e6e51943edae45",
+ "who": {
+  "persona_ref": "killtony-personas/doc_ferry.json",
+  "comedian": "Doc Ferry",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "punchline",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 6,
+    "turn": true
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "punchline",
+    "words": 5,
+    "turn": true
+   },
+   {
+    "beat": 20,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 21,
+    "type": "punchline",
+    "words": 24,
+    "turn": true
+   },
+   {
+    "beat": 22,
+    "type": "closer",
+    "words": 5,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 23 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai",
+   "family_and_relationships"
+  ],
+  "topics": [
+   "politics",
+   "race",
+   "relationships"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.27,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.45,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.13,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.62,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.79,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.86,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.4,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.81,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.4,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.43,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep735_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

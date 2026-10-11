@@ -1,0 +1,302 @@
+{
+ "set_id": "Cam Patterson-8-26ae0bcfd5d54bbc",
+ "who": {
+  "persona_ref": "killtony-personas/cam_patterson.json",
+  "comedian": "Cam Patterson",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 27,
+    "turn": true
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 24,
+    "turn": true
+   },
+   {
+    "beat": 15,
+    "type": "punchline",
+    "words": 51,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "setup",
+    "words": 18,
+    "turn": false
+   },
+   {
+    "beat": 21,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 22,
+    "type": "punchline",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 23,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 24,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 25,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 26,
+    "type": "setup",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 27,
+    "type": "punchline",
+    "words": 23,
+    "turn": true
+   },
+   {
+    "beat": 28,
+    "type": "punchline",
+    "words": 36,
+    "turn": true
+   },
+   {
+    "beat": 29,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 30,
+    "type": "punchline",
+    "words": 8,
+    "turn": true
+   },
+   {
+    "beat": 31,
+    "type": "closer",
+    "words": 6,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Grandma",
+   "Secret Service",
+   "That",
+   "Trump"
+  ],
+  "arc": "opener->closer over 32 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai",
+   "family_and_relationships"
+  ],
+  "topics": [
+   "politics",
+   "race",
+   "shock_humor"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.55,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.67,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.08,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.83,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.62,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.77,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.44,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.61,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.92,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.9,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.64,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "roaring",
+  "crowd_ord": 4,
+  "tony_praise": 5
+ },
+ "provenance": {
+  "file": "reprocess_ep712_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

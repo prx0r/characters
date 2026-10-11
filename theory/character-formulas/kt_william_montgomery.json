@@ -1,0 +1,64 @@
+{
+ "character_id": "kt_william_montgomery",
+ "n_instances": 13,
+ "n_scored": 13,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.83,
+  "n": 12
+ },
+ "hypotheses": [
+  {
+   "claim": "operator 'literalize' outperforms 'double_interpret' (gap +0.83)",
+   "factor": "operator",
+   "winner": "literalize",
+   "loser": "double_interpret",
+   "gap": 0.83,
+   "predicts": "next operator-'literalize' instance scores above 3.0",
+   "evidence_for": [
+    "William Montgomery-14-4cd73e55ee787535",
+    "William Montgomery-14-3913342d20807bd8",
+    "William Montgomery-10-efa9fae15dcdc2c2",
+    "William Montgomery-1-24204867a25886f5",
+    "William Montgomery-11-8c1cec63379d9449",
+    "William Montgomery-12-a3bc3548cdd2548e",
+    "William Montgomery-12-fab3082c8f17777d",
+    "William Montgomery-18-3b50fcb99989ce24",
+    "William Montgomery-13-26641e73510ff062",
+    "William Montgomery-13-e87b8dcd72f0a8b3",
+    "William Montgomery-12-02893d6a4ffb4d18",
+    "William Montgomery-13-9f3b98287be44762"
+   ],
+   "evidence_against": [
+    "William Montgomery-1-c6d6381742347dd4"
+   ],
+   "status": "testing",
+   "n": 13
+  },
+  {
+   "claim": "scenario 'family_and_relationships' outperforms 'institutions' (gap +0.5)",
+   "factor": "scenario",
+   "winner": "family_and_relationships",
+   "loser": "institutions",
+   "gap": 0.5,
+   "predicts": "next scenario-'family_and_relationships' instance scores above 3.5",
+   "evidence_for": [
+    "William Montgomery-14-3913342d20807bd8",
+    "William Montgomery-10-efa9fae15dcdc2c2",
+    "William Montgomery-13-9f3b98287be44762"
+   ],
+   "evidence_against": [
+    "William Montgomery-12-a3bc3548cdd2548e",
+    "William Montgomery-13-e87b8dcd72f0a8b3"
+   ],
+   "status": "testing",
+   "n": 13
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

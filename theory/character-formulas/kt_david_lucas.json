@@ -1,0 +1,35 @@
+{
+ "character_id": "kt_david_lucas",
+ "n_instances": 3,
+ "n_scored": 3,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.67,
+  "n": 3
+ },
+ "hypotheses": [
+  {
+   "claim": "scenario 'technology' outperforms 'family_and_relationships' (gap +0.5)",
+   "factor": "scenario",
+   "winner": "technology",
+   "loser": "family_and_relationships",
+   "gap": 0.5,
+   "predicts": "next scenario-'technology' instance scores above 3.5",
+   "evidence_for": [
+    "David Lucas-10-b55c27c4b25386e7"
+   ],
+   "evidence_against": [
+    "David Lucas-11-8545154583977ca4",
+    "David Lucas-10-32da15a02f31b910"
+   ],
+   "status": "proposed",
+   "n": 3
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

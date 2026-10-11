@@ -1,0 +1,92 @@
+{
+ "id": "kt_sancho_pancho_villa",
+ "name": "Sancho Pancho Villa",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep755_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 3.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays self_deprecation",
+  "plays dating",
+  "plays sex"
+ ],
+ "humour": "observed lean: double_interpret, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Was a Marine engineer who built and blew things up",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "self_deprecation",
+   "dating",
+   "sex"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "self_deprecation",
+   "dating"
+  ],
+  "ignores": [],
+  "watched": [
+   "self_deprecation",
+   "dating",
+   "sex",
+   "physical"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "self_deprecation",
+  "dating",
+  "sex",
+  "physical"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_occupation": [
+   "Marine engineer"
+  ],
+  "disclosed_relationship_status": [
+   "single"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

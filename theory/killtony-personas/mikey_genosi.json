@@ -1,0 +1,101 @@
+{
+ "id": "kt_mikey_genosi",
+ "name": "Mikey Genosi",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep774_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 4.0
+ },
+ "archetype": "literalise",
+ "traits": [
+  "plays race",
+  "plays sex",
+  "plays observational"
+ ],
+ "humour": "observed lean: literalize, double_interpret, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "From Akron/Cleveland",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "race",
+   "sex",
+   "observational"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "race",
+   "sex"
+  ],
+  "ignores": [],
+  "watched": [
+   "race",
+   "sex",
+   "observational"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via literalize"
+ },
+ "comedy": {
+  "operator_priors": {
+   "literalize": 3.0,
+   "double_interpret": 3.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "literalise",
+  "bisociation",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "race",
+  "sex",
+  "observational"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_age": [
+   "32"
+  ],
+  "disclosed_location": [
+   "Austin"
+  ],
+  "disclosed_occupation": [
+   "mortgage products"
+  ],
+  "disclosed_relationship_status": [
+   "single"
+  ],
+  "disclosed_years_doing_comedy": [
+   "9"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

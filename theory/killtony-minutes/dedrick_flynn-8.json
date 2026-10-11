@@ -1,0 +1,216 @@
+{
+ "set_id": "Dedrick Flynn-8-bc7d98b80cd29db8",
+ "who": {
+  "persona_ref": "killtony-personas/dedrick_flynn.json",
+  "comedian": "Dedrick Flynn",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 45,
+    "turn": true
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 25,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 24,
+    "turn": true
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 39,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 24,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "closer",
+    "words": 1,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Chris",
+   "Christmas",
+   "Santa"
+  ],
+  "arc": "opener->closer over 18 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships"
+  ],
+  "topics": [
+   "storytelling",
+   "family",
+   "other"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.27,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.7,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.06,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.29,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.54,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.88,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.73,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.71,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.5,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.34,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "roaring",
+  "crowd_ord": 4,
+  "tony_praise": 5
+ },
+ "provenance": {
+  "file": "test_flashlite_pass2_ep750.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "character_id": "kt_cam_patterson",
+ "n_instances": 3,
+ "n_scored": 3,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.67,
+  "n": 3
+ },
+ "hypotheses": [
+  {
+   "claim": "scenario 'employment_and_ai' outperforms 'institutions' (gap +1.0)",
+   "factor": "scenario",
+   "winner": "employment_and_ai",
+   "loser": "institutions",
+   "gap": 1.0,
+   "predicts": "next scenario-'employment_and_ai' instance scores above 3.0",
+   "evidence_for": [
+    "Cam Patterson-8-26ae0bcfd5d54bbc"
+   ],
+   "evidence_against": [
+    "Cam Patterson-5-bb95d7ffb7dd5a65"
+   ],
+   "status": "proposed",
+   "n": 3
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

@@ -1,0 +1,27 @@
+{
+ "character_id": "kt_aaron_belisle",
+ "n_instances": 3,
+ "n_scored": 3,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 4.0,
+  "n": 3
+ },
+ "hypotheses": [
+  {
+   "claim": "no single-factor gap found; outcomes consistent across factors",
+   "status": "proposed",
+   "evidence": [
+    "Aaron Belisle-8-c7525872649c0886",
+    "Aaron Belisle-7-756d032e17439e85",
+    "Aaron Belisle-15-92f2110b2a5fac8f"
+   ]
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

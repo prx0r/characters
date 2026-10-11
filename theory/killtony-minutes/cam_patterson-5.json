@@ -1,0 +1,210 @@
+{
+ "set_id": "Cam Patterson-5-bb95d7ffb7dd5a65",
+ "who": {
+  "persona_ref": "killtony-personas/cam_patterson.json",
+  "comedian": "Cam Patterson",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 32,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 14,
+    "turn": true
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "punchline",
+    "words": 26,
+    "turn": true
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "closer",
+    "words": 7,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Barack Obama",
+   "United States"
+  ],
+  "arc": "opener->closer over 17 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "institutions"
+  ],
+  "topics": [
+   "politics",
+   "race",
+   "drugs",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.38,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.64,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.09,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.54,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.75,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.39,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.79,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.88,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.2,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "garden_path",
+  "confidence": 0.3,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep706_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

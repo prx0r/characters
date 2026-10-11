@@ -1,0 +1,35 @@
+{
+ "character_id": "kt_jack_shaw",
+ "n_instances": 3,
+ "n_scored": 3,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.33,
+  "n": 3
+ },
+ "hypotheses": [
+  {
+   "claim": "scenario 'family_and_relationships' outperforms 'employment_and_ai' (gap +0.5)",
+   "factor": "scenario",
+   "winner": "family_and_relationships",
+   "loser": "employment_and_ai",
+   "gap": 0.5,
+   "predicts": "next scenario-'family_and_relationships' instance scores above 3.0",
+   "evidence_for": [
+    "Jack Shaw-17-0702773651845816",
+    "Jack Shaw-9-ec3fa756e35d7297"
+   ],
+   "evidence_against": [
+    "Jack Shaw-1-0a4ce82e61dc57cc"
+   ],
+   "status": "proposed",
+   "n": 3
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

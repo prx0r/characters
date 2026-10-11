@@ -1,0 +1,98 @@
+{
+ "id": "kt_fiona_collie",
+ "name": "Fiona Collie",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 2,
+  "files": [
+   "reprocess_ep704_pass2.json",
+   "reprocess_ep725_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 3.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays disability",
+  "plays dating",
+  "plays sex"
+ ],
+ "humour": "observed lean: double_interpret, literalize, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Is a Golden Ticket winner",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "disability",
+   "dating",
+   "sex"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "disability",
+   "dating"
+  ],
+  "ignores": [],
+  "watched": [
+   "disability",
+   "dating",
+   "sex",
+   "shock_humor",
+   "storytelling",
+   "regional"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 2.0,
+   "literalize": 1.0,
+   "repeat_variation": 0.5
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "disability",
+  "dating",
+  "sex",
+  "shock_humor",
+  "storytelling"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_location": [
+   "Nashville, Tennessee"
+  ],
+  "disclosed_relationship_status": [
+   "engaged"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

@@ -1,0 +1,132 @@
+{
+ "set_id": "Jonathan Rachel's-6-661eedc03229676a",
+ "who": {
+  "persona_ref": "killtony-personas/jonathan_rachel_s.json",
+  "comedian": "Jonathan Rachel's",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 65,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "closer",
+    "words": 3,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 5 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "lgbtq",
+   "self_deprecation",
+   "storytelling"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.18,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.53,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.07,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.44,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.81,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.8,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.42,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.83,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.86,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.29,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "identity_contradiction",
+  "confidence": 0.25,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 3
+ },
+ "provenance": {
+  "file": "reprocess_ep725_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

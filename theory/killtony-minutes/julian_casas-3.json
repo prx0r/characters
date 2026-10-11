@@ -1,0 +1,180 @@
+{
+ "set_id": "Julian Casas-3-6d7eaee1471ccc30",
+ "who": {
+  "persona_ref": "killtony-personas/julian_casas.json",
+  "comedian": "Julian Casas",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 2,
+    "turn": true
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "closer",
+    "words": 3,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 13 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "disability",
+   "observational",
+   "shock_humor"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.26,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.52,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.1,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.49,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.63,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.36,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.69,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.14,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.37,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 5
+ },
+ "provenance": {
+  "file": "reprocess_ep758_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "set_id": "Offender-8-56107c62026f7bf4",
+ "who": {
+  "persona_ref": "killtony-personas/offender.json",
+  "comedian": "Offender",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "closer",
+    "words": 28,
+    "turn": true
+   }
+  ],
+  "callbacks": [
+   "This"
+  ],
+  "arc": "opener->closer over 11 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "shock_humor",
+   "race",
+   "sex"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.36,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.15,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.81,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.75,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.31,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.42,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.88,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.52,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.42,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "silence",
+  "crowd_ord": 0,
+  "tony_praise": 1
+ },
+ "provenance": {
+  "file": "reprocess_ep728_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

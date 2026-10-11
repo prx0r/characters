@@ -1,0 +1,150 @@
+{
+ "set_id": "Saul Wilson-13-f7019dd0b1b3b4f5",
+ "who": {
+  "persona_ref": "killtony-personas/saul_wilson.json",
+  "comedian": "Saul Wilson",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 34,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "punchline",
+    "words": 16,
+    "turn": true
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 31,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "punchline",
+    "words": 41,
+    "turn": true
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 26,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "closer",
+    "words": 4,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 8 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "lgbtq",
+   "observational",
+   "meta"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.31,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.19,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.35,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.59,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.76,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.86,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.51,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.34,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "silence",
+  "crowd_ord": 0,
+  "tony_praise": 1
+ },
+ "provenance": {
+  "file": "reprocess_ep752_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

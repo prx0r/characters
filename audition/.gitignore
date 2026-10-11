@@ -1,0 +1,5 @@
+auditions.db
+audio/
+__pycache__/
+voices/*.onnx
+.env

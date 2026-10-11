@@ -1,0 +1,197 @@
+{
+ "set_id": "Greg McHowan-8-a8736a8c1ca66360",
+ "who": {
+  "persona_ref": "killtony-personas/greg_mchowan.json",
+  "comedian": "Greg McHowan",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 34,
+    "turn": true
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 19,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 45,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "closer",
+    "words": 2,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Android",
+   "Like"
+  ],
+  "arc": "opener->closer over 15 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "technology"
+  ],
+  "topics": [
+   "technology",
+   "dating",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.54,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.09,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.41,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.81,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.37,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.58,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.72,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.77,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.18,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.3,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "moderate",
+  "crowd_ord": 2,
+  "tony_praise": 3
+ },
+ "provenance": {
+  "file": "reprocess_ep755_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

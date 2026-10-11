@@ -1,0 +1,295 @@
+{
+ "set_id": "Will Hunsinger-13-069b4d7ba56348e6",
+ "who": {
+  "persona_ref": "killtony-personas/will_hunsinger.json",
+  "comedian": "Will Hunsinger",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 12,
+    "turn": true
+   },
+   {
+    "beat": 10,
+    "type": "punchline",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 9,
+    "turn": true
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 9,
+    "turn": true
+   },
+   {
+    "beat": 15,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "punchline",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 21,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 22,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 23,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 24,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 25,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 26,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 27,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 28,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 29,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 30,
+    "type": "closer",
+    "words": 3,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Because",
+   "Just",
+   "Like",
+   "Pokemon"
+  ],
+  "arc": "opener->closer over 31 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai"
+  ],
+  "topics": [
+   "observational",
+   "work",
+   "other"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.54,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.29,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.18,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.62,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.82,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.8,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.37,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.78,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.85,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.24,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "identity_contradiction",
+  "confidence": 0.37,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 3
+ },
+ "provenance": {
+  "file": "reprocess_ep771_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

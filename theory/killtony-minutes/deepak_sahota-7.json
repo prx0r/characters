@@ -1,0 +1,140 @@
+{
+ "set_id": "Deepak Sahota-7-8839a90bf4c0ed96",
+ "who": {
+  "persona_ref": "killtony-personas/deepak_sahota.json",
+  "comedian": "Deepak Sahota",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "closer",
+    "words": 18,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 6 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "institutions"
+  ],
+  "topics": [
+   "politics",
+   "crime",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.22,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.41,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.16,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.29,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.49,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.59,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.2,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.51,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.88,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.16,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "displacement",
+  "confidence": 0.46,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "light",
+  "crowd_ord": 1,
+  "tony_praise": 2
+ },
+ "provenance": {
+  "file": "reprocess_ep704_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

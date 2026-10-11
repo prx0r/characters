@@ -1,0 +1,37 @@
+{
+ "character_id": "kt_pat_o'neill",
+ "n_instances": 5,
+ "n_scored": 5,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.2,
+  "n": 5
+ },
+ "hypotheses": [
+  {
+   "claim": "scenario '?' outperforms 'family_and_relationships' (gap +0.33)",
+   "factor": "scenario",
+   "winner": "?",
+   "loser": "family_and_relationships",
+   "gap": 0.33,
+   "predicts": "next scenario-'?' instance scores above 3.0",
+   "evidence_for": [
+    "Pat O'Neill-8-586140b96aa7f2b2",
+    "Pat O'Neill-1-684e47ba26a3ac4f",
+    "Pat O'Neill-14-7c724371c5e92137"
+   ],
+   "evidence_against": [
+    "Pat O'Neill-3-b367ec0d12840ab7",
+    "Pat O'Neill-14-13c76b5fce88d651"
+   ],
+   "status": "proposed",
+   "n": 5
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

@@ -1,0 +1,34 @@
+{
+ "character_id": "no_nose_nolan",
+ "n_instances": 4,
+ "n_scored": 2,
+ "signature": {
+  "modulator": null,
+  "operator": "double_interpret",
+  "mean": 2.92,
+  "n": 2
+ },
+ "hypotheses": [
+  {
+   "claim": "scenario 'job_displacement' outperforms 'hf_agent_board' (gap +1.17)",
+   "factor": "scenario",
+   "winner": "job_displacement",
+   "loser": "hf_agent_board",
+   "gap": 1.17,
+   "predicts": "next scenario-'job_displacement' instance scores above 2.3",
+   "evidence_for": [
+    "aud_a6ecf818eb70"
+   ],
+   "evidence_against": [
+    "aud_a8a694dfbf35"
+   ],
+   "status": "proposed",
+   "n": 2
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

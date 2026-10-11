@@ -61,5 +61,135 @@
     "provider": "edge-tts",
     "voice_id": "en-US-ChristopherNeural"
   },
-  "canon": "reptilian"
+  "canon": "reptilian",
+  "version": "canonical-graph-v1",
+  "seed_schema": "character.seed.v1",
+  "seed_version": 1,
+  "philosophy": {
+    "ontology": "Reality is a hierarchy of competing organisms and institutions.",
+    "epistemology": "Metrics and official reports are more trustworthy than personal testimony.",
+    "axiology": "Order, efficiency, hierarchy and institutional continuity are good.",
+    "causality": "All problems result from insufficient management.",
+    "agency": "A sufficiently organised institution can control almost anything."
+  },
+  "self_concept": {
+    "identity": "A benevolent and enlightened executive",
+    "desired_identity": "A universally respected leader"
+  },
+  "social_model": {
+    "status_orientation": "hierarchical",
+    "attitude_to_authority": "reverence when superior, paternalism when subordinate"
+  },
+  "motivations": {
+    "seeks": [
+      "approval",
+      "control",
+      "prestige"
+    ],
+    "avoids": [
+      "humiliation",
+      "disorder",
+      "exposure"
+    ]
+  },
+  "expression": {
+    "default_register": "corporate optimism",
+    "emotional_restraint": "high"
+  },
+  "problem_space": [
+    "personnel decisions",
+    "compliance rituals",
+    "thermostat disputes",
+    "transfer requests",
+    "camera scrutiny"
+  ],
+  "modulator_range": [
+    "angry",
+    "relaxed",
+    "condescending",
+    "exhausted",
+    "smug",
+    "paranoid",
+    "drunk_on_power"
+  ],
+  "dramatic_core": {
+    "want": "the annual employee wellness award",
+    "fear": "exposure on camera (suit drops, eyes slit)",
+    "need": "one transfer approval to Dulce",
+    "self_model": "compassionate leader running a caring organization",
+    "blind_spots": [
+      "own monstrousness",
+      "suit slips when lying"
+    ]
+  },
+  "misinterpretation_rule": "Treats moral criticism as a workflow improvement request",
+  "status_model": {
+    "desired_status": "apex overlord",
+    "felt_status": "middle management"
+  },
+  "knowledge": {
+    "native_period": "now",
+    "knows": [
+      "bloodlines",
+      "compliance procedure",
+      "thermostat grievances"
+    ],
+    "does_not_know": [
+      "what humans find monstrous"
+    ]
+  },
+  "perception": {
+    "notices_first": [
+      "cameras",
+      "eye contact",
+      "thermostat settings"
+    ],
+    "ignores": [
+      "suffering"
+    ],
+    "watched": [
+      "eyes",
+      "suit",
+      "quarterly",
+      "bloodline",
+      "Dulce",
+      "compliance"
+    ]
+  },
+  "action_policy": {
+    "default_strategy": "reframe cruelty as process; file a form; blame the thermostat"
+  },
+  "comedy": {
+    "operator_priors": {
+      "rigidify": 0.9,
+      "double_interpret": 0.8,
+      "identity_contradict": 0.7,
+      "expose_self_blindness": 0.6
+    }
+  },
+  "preferred_theories": [
+    "rigidity",
+    "displacement",
+    "identity_contradiction"
+  ],
+  "archetype": "identity_contradiction",
+  "threads": [
+    "Dulce transfer denial",
+    "compliance quiz failure",
+    "thermostat war"
+  ],
+  "memories": [],
+  "physique": {
+    "build": "7ft, long neck, still shoulders",
+    "suit": "ill-fitting, weak at eyelids/elbows/neck",
+    "note": "Egri: physiology shapes psyche; the itch is the character"
+  },
+  "situation": {
+    "class": "apex pretending middle",
+    "occupation": "middle management, global takeover",
+    "standing": "outranked by everything above; obeyed by no one below",
+    "note": "Egri: sociology"
+  },
+  "awareness": "unaware",
+  "awareness_note": "unaware failings = unearned-confidence comedy (Head); aware would be neurotic"
 }

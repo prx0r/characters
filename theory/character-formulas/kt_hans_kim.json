@@ -1,0 +1,27 @@
+{
+ "character_id": "kt_hans_kim",
+ "n_instances": 3,
+ "n_scored": 3,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.0,
+  "n": 3
+ },
+ "hypotheses": [
+  {
+   "claim": "no single-factor gap found; outcomes consistent across factors",
+   "status": "proposed",
+   "evidence": [
+    "Hans Kim-10-39560c5481c2cf42",
+    "Hans Kim-1-40ed694cefca614e",
+    "Hans Kim-6-d0ac286038c52380"
+   ]
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

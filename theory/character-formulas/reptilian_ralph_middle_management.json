@@ -1,0 +1,23 @@
+{
+ "character_id": "reptilian_ralph_middle_management",
+ "n_instances": 4,
+ "n_scored": 0,
+ "signature": {},
+ "hypotheses": [
+  {
+   "claim": "insufficient evidence: need >=2 rated instances",
+   "status": "proposed",
+   "evidence": [
+    "aud_093a0815d2bd",
+    "aud_580e13546856",
+    "aud_f2a1a2c176cd",
+    "aud_ffddd550ee8f"
+   ]
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

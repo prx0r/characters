@@ -1,0 +1,196 @@
+{
+ "set_id": "Riley Gilmore-8-bcd1b16617ffb412",
+ "who": {
+  "persona_ref": "killtony-personas/riley_gilmore.json",
+  "comedian": "Riley Gilmore",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "punchline",
+    "words": 12,
+    "turn": true
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 9,
+    "turn": true
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 29,
+    "turn": true
+   },
+   {
+    "beat": 14,
+    "type": "closer",
+    "words": 4,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "That"
+  ],
+  "arc": "opener->closer over 15 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships"
+  ],
+  "topics": [
+   "observational",
+   "sex",
+   "self_deprecation"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.26,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.21,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.16,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.36,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.49,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.12,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.57,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.74,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.17,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "displacement",
+  "confidence": 0.52,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "light",
+  "crowd_ord": 1,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep716_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

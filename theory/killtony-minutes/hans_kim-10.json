@@ -1,0 +1,218 @@
+{
+ "set_id": "Hans Kim-10-39560c5481c2cf42",
+ "who": {
+  "persona_ref": "killtony-personas/hans_kim.json",
+  "comedian": "Hans Kim",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 14,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 18,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 18,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "punchline",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 2,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "closer",
+    "words": 7,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "What"
+  ],
+  "arc": "opener->closer over 19 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "politics",
+   "race",
+   "meta"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.32,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.23,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.11,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.56,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.43,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.84,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.23,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.41,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.93,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.22,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.36,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep704_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

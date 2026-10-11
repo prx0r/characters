@@ -1,0 +1,226 @@
+{
+ "set_id": "Busco Jones-4-c349e8660103be0d",
+ "who": {
+  "persona_ref": "killtony-personas/busco_jones.json",
+  "comedian": "Busco Jones",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 19,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 16,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "punchline",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 1,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "closer",
+    "words": 8,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Which"
+  ],
+  "arc": "opener->closer over 20 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships"
+  ],
+  "topics": [
+   "relationships",
+   "sex",
+   "observational"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.19,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.3,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.11,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.57,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.84,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.73,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.35,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.69,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.91,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.2,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.61,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "light",
+  "crowd_ord": 1,
+  "tony_praise": 2
+ },
+ "provenance": {
+  "file": "reprocess_ep739_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

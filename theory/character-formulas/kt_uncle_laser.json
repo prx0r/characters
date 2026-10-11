@@ -1,0 +1,34 @@
+{
+ "character_id": "kt_uncle_laser",
+ "n_instances": 4,
+ "n_scored": 4,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.25,
+  "n": 4
+ },
+ "hypotheses": [
+  {
+   "claim": "scenario '?' outperforms 'money_and_class' (gap +1.0)",
+   "factor": "scenario",
+   "winner": "?",
+   "loser": "money_and_class",
+   "gap": 1.0,
+   "predicts": "next scenario-'?' instance scores above 3.0",
+   "evidence_for": [
+    "Uncle Laser-1-91eac6d6e542140c"
+   ],
+   "evidence_against": [
+    "Uncle Laser-2-662d109ab85b6807"
+   ],
+   "status": "proposed",
+   "n": 4
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

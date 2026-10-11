@@ -1,0 +1,152 @@
+{
+ "set_id": "Mitch Crawlenger-9-1f23effde8959e74",
+ "who": {
+  "persona_ref": "killtony-personas/mitch_crawlenger.json",
+  "comedian": "Mitch Crawlenger",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 26,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 12,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 35,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 43,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "closer",
+    "words": 22,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 8 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "employment_and_ai"
+  ],
+  "topics": [
+   "work",
+   "observational",
+   "science"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.31,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.19,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.35,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.47,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.84,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.67,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.32,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.77,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.93,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.21,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.43,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "light",
+  "crowd_ord": 1,
+  "tony_praise": 2
+ },
+ "provenance": {
+  "file": "reprocess_ep715_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

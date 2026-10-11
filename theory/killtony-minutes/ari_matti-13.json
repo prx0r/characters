@@ -1,0 +1,205 @@
+{
+ "set_id": "Ari Matti-13-d67e2bc3c0a152e3",
+ "who": {
+  "persona_ref": "killtony-personas/ari_matti.json",
+  "comedian": "Ari Matti",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "punchline",
+    "words": 20,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 13,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 17,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "setup",
+    "words": 15,
+    "turn": false
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 9,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "punchline",
+    "words": 18,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "setup",
+    "words": 26,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "closer",
+    "words": 5,
+    "turn": false
+   }
+  ],
+  "callbacks": [],
+  "arc": "opener->closer over 17 beats"
+ },
+ "appraisal": {
+  "scenario_families": [],
+  "topics": [
+   "sex",
+   "observational",
+   "self_deprecation",
+   "meta"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.16,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.44,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.06,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.57,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.79,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.28,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.45,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.56,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.9,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.1,
+   "verdict": "no",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.58,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "roaring",
+  "crowd_ord": 4,
+  "tony_praise": 5
+ },
+ "provenance": {
+  "file": "reprocess_ep706_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

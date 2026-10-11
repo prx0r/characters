@@ -1,0 +1,95 @@
+{
+ "id": "kt_alex_tarchun",
+ "name": "Alex Tarchun",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep718_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 2.0
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays politics",
+  "plays race",
+  "plays absurdist"
+ ],
+ "humour": "observed lean: double_interpret, literalize, repeat_variation",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Has a tiny pinky finger",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "politics",
+   "race",
+   "absurdist"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "politics",
+   "race"
+  ],
+  "ignores": [],
+  "watched": [
+   "politics",
+   "race",
+   "absurdist"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 3.0,
+   "literalize": 1.0,
+   "repeat_variation": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "repetition_variation"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "politics",
+  "race",
+  "absurdist"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_location": [
+   "Austin (via New York)"
+  ],
+  "disclosed_occupation": [
+   "Pizza delivery"
+  ],
+  "disclosed_years_doing_comedy": [
+   "11"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

@@ -1,0 +1,35 @@
+{
+ "character_id": "kt_david_jolly",
+ "n_instances": 3,
+ "n_scored": 3,
+ "signature": {
+  "modulator": null,
+  "operator": "literalize",
+  "mean": 3.33,
+  "n": 3
+ },
+ "hypotheses": [
+  {
+   "claim": "scenario 'employment_and_ai' outperforms '?' (gap +0.5)",
+   "factor": "scenario",
+   "winner": "employment_and_ai",
+   "loser": "?",
+   "gap": 0.5,
+   "predicts": "next scenario-'employment_and_ai' instance scores above 3.0",
+   "evidence_for": [
+    "David Jolly-15-20f9cbe8aaca8b7c",
+    "David Jolly-15-fbd383281011db3b"
+   ],
+   "evidence_against": [
+    "David Jolly-1-186c3a72247c30c8"
+   ],
+   "status": "proposed",
+   "n": 3
+  }
+ ],
+ "falsifiers": [
+  "a losing instance with the signature combo",
+  "a winning instance contradicting the top hypothesis"
+ ],
+ "note": "Formula = ranked falsifiable claims, not a fixed joke template."
+}

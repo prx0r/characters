@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Shorts sim — swipe proxy for retention</title>
+<style>
+html,body{margin:0;height:100%;background:#000;color:#eee;font-family:system-ui,sans-serif;overscroll-behavior:none}
+#feed{height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory}
+.card{height:100vh;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.card img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.grad{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.85))}
+.meta{position:relative;padding:16px 56px 20px 16px}
+.beat{background:rgba(0,0,0,.55);padding:6px 8px;border-radius:8px;margin:4px 0;font-size:15px}
+.beat.active{background:#7c3aed}
+.rail{position:absolute;right:8px;bottom:90px;display:flex;flex-direction:column;gap:14px}
+.rail button{font-size:24px;background:rgba(0,0,0,.5);border:1px solid #555;color:#eee;border-radius:50%;width:52px;height:52px}
+.rail button.on{background:#166534}
+.hint{position:relative;text-align:center;color:#999;font-size:13px;padding:6px}
+#cbox{position:fixed;bottom:0;left:0;right:0;background:#111;padding:10px;display:none;gap:8px}
+#cbox input{flex:1;font-size:16px;padding:8px;border-radius:8px;border:1px solid #444;background:#222;color:#eee}
+</style>
+</head>
+<body>
+<div id="feed"></div>
+<div id="cbox"><input id="ctext" placeholder="comment as the room…"><button id="csend">send</button></div>
+<script>
+let CARDS=[],IDX=0,T0=0;
+const $=id=>document.getElementById(id);
+async function api(m,u,b){const r=await fetch(u,{method:m,headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined});return r.json();}
+function watchMs(){return Math.round(performance.now()-T0);}
+async function send(aud,decision,comment){return api('POST','/api/shorts/event',{audition_id:aud,watch_ms:watchMs(),decision,comment:comment||''});}
+async function load(){const d=await api('GET','/api/shorts/feed');CARDS=d.cards;const f=$('feed');
+f.innerHTML=CARDS.map((c,i)=>`<div class="card" data-i="${i}"><img class="bg" src="${c.portrait_url}"><div class="grad"></div><div class="meta"><div><b>${c.character_id}</b> · ${c.scenario_id}</div><audio src="${c.audio_url}" preload="metadata"></audio>${c.beats.map(b=>`<div class="beat" data-s="${b.start_ms}" data-e="${b.end_ms}">${b.text}</div>`).join('')}</div><div class="rail"><button data-a="like" title="like">♥</button><button data-a="replay" title="replay">↻</button><button data-a="comment" title="comment">✎</button><button data-a="skip" title="skip">⏭</button></div></div>`).join('')||'<div class="hint">no cards — generate minutes first</div>';
+f.querySelectorAll('.card').forEach(card=>{
+const aud=card.querySelector('audio');
+card.querySelectorAll('.rail button').forEach(b=>b.onclick=async e=>{e.stopPropagation();const a=b.dataset.a;const ms=aud?Math.round(aud.currentTime*1000):0;
+if(a==='comment'){$('cbox').style.display='flex';$('cbox').dataset.aud=CARDS[+card.dataset.i].audition_id;return;}
+if(a==='replay'&&aud){aud.currentTime=0;aud.play();}
+await send(CARDS[+card.dataset.i].audition_id,a);b.classList.add('on');
+if(a==='skip')next();});
+aud.onplay=()=>{T0=performance.now();};
+aud.ontimeupdate=()=>{const ms=aud.currentTime*1000;card.querySelectorAll('.beat').forEach(x=>x.classList.toggle('active',ms>=+x.dataset.s&&ms<=+x.dataset.e));};
+aud.onended=async()=>{await send(CARDS[+card.dataset.i].audition_id,'complete');next();};
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{const card=e.target;const aud=card.querySelector('audio');const i=+card.dataset.i;
+if(e.intersectionRatio>=0.75){IDX=i;T0=performance.now();if(aud&&aud.paused&&!aud.dataset.dead)aud.play().catch(()=>{});}
+else{if(aud&&!aud.paused){aud.pause();send(CARDS[i].audition_id,'skip');}}
+}),{root:f,threshold:[0.75]});
+f.querySelectorAll('.card').forEach(c=>io.observe(c));
+}
+function next(){const f=$('feed');const h=window.innerHeight;f.scrollTo({top:(IDX+1)*h,behavior:'smooth'});}
+$('csend').onclick=async()=>{const aud=$('cbox').dataset.aud;const t=$('ctext').value;$('ctext').value='';$('cbox').style.display='none';if(t)await send(aud,'comment',t);};
+document.addEventListener('keydown',e=>{if(e.key==='ArrowDown')next();if(e.key==='ArrowUp')$('feed').scrollTo({top:(IDX-1)*window.innerHeight,behavior:'smooth'});});
+load();
+</script>
+</body>
+</html>

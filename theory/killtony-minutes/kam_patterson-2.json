@@ -1,0 +1,239 @@
+{
+ "set_id": "Kam Patterson-2-b0c6035af10c61a6",
+ "who": {
+  "persona_ref": "killtony-personas/kam_patterson.json",
+  "comedian": "Kam Patterson",
+  "persona_note": "stage persona hypothesis; not the real person"
+ },
+ "trajectory": {
+  "beats": [
+   {
+    "beat": 0,
+    "type": "opener",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 1,
+    "type": "punchline",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 2,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 3,
+    "type": "setup",
+    "words": 3,
+    "turn": false
+   },
+   {
+    "beat": 4,
+    "type": "setup",
+    "words": 22,
+    "turn": false
+   },
+   {
+    "beat": 5,
+    "type": "punchline",
+    "words": 8,
+    "turn": true
+   },
+   {
+    "beat": 6,
+    "type": "setup",
+    "words": 33,
+    "turn": false
+   },
+   {
+    "beat": 7,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 8,
+    "type": "setup",
+    "words": 7,
+    "turn": false
+   },
+   {
+    "beat": 9,
+    "type": "punchline",
+    "words": 15,
+    "turn": true
+   },
+   {
+    "beat": 10,
+    "type": "setup",
+    "words": 5,
+    "turn": false
+   },
+   {
+    "beat": 11,
+    "type": "setup",
+    "words": 8,
+    "turn": false
+   },
+   {
+    "beat": 12,
+    "type": "punchline",
+    "words": 7,
+    "turn": true
+   },
+   {
+    "beat": 13,
+    "type": "setup",
+    "words": 6,
+    "turn": false
+   },
+   {
+    "beat": 14,
+    "type": "setup",
+    "words": 19,
+    "turn": false
+   },
+   {
+    "beat": 15,
+    "type": "punchline",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 16,
+    "type": "setup",
+    "words": 4,
+    "turn": false
+   },
+   {
+    "beat": 17,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 18,
+    "type": "setup",
+    "words": 11,
+    "turn": false
+   },
+   {
+    "beat": 19,
+    "type": "punchline",
+    "words": 21,
+    "turn": false
+   },
+   {
+    "beat": 20,
+    "type": "setup",
+    "words": 10,
+    "turn": false
+   },
+   {
+    "beat": 21,
+    "type": "closer",
+    "words": 3,
+    "turn": false
+   }
+  ],
+  "callbacks": [
+   "Christmas"
+  ],
+  "arc": "opener->closer over 22 beats"
+ },
+ "appraisal": {
+  "scenario_families": [
+   "family_and_relationships",
+   "money_and_class"
+  ],
+  "topics": [
+   "family",
+   "drugs",
+   "storytelling"
+  ],
+  "inferred": "performer treats this topic as winnable room material",
+  "inferred_flag": true
+ },
+ "mechanisms": [
+  {
+   "theory": "rigidity",
+   "p": 0.48,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "status_reversal",
+   "p": 0.44,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "displacement",
+   "p": 0.09,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "identity_contradiction",
+   "p": 0.34,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "self_awareness",
+   "p": 0.64,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "specificity",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "escalation",
+   "p": 0.31,
+   "verdict": "no",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "garden_path",
+   "p": 0.63,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "benign_violation",
+   "p": 0.89,
+   "verdict": "yes",
+   "source": "jev-1.13"
+  },
+  {
+   "theory": "audience_alliance",
+   "p": 0.53,
+   "verdict": "uncertain",
+   "source": "jev-1.13"
+  }
+ ],
+ "primary": {
+  "operator": null,
+  "theory": "benign_violation",
+  "confidence": 0.45,
+  "source": "jev-1.13"
+ },
+ "outcome": {
+  "crowd": "big_laughs",
+  "crowd_ord": 3,
+  "tony_praise": 4
+ },
+ "provenance": {
+  "file": "reprocess_ep704_pass2.json",
+  "annotator": "jev-1.13",
+  "license": "features only; transcript (c) its performers"
+ }
+}

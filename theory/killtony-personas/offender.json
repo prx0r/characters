@@ -1,0 +1,104 @@
+{
+ "id": "kt_offender",
+ "name": "Offender",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 2,
+  "files": [
+   "reprocess_ep712_pass2.json",
+   "reprocess_ep728_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 1.5
+ },
+ "archetype": "bisociation",
+ "traits": [
+  "plays shock_humor",
+  "plays crime",
+  "plays storytelling"
+ ],
+ "humour": "observed lean: double_interpret, literalize, rigidify",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "Has a Kill Tony Bingo Board tattooed on his thigh",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "shock_humor",
+   "crime",
+   "storytelling"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "shock_humor",
+   "crime"
+  ],
+  "ignores": [],
+  "watched": [
+   "shock_humor",
+   "crime",
+   "storytelling",
+   "race",
+   "sex"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via double_interpret"
+ },
+ "comedy": {
+  "operator_priors": {
+   "double_interpret": 1.5,
+   "literalize": 1.0,
+   "rigidify": 1.0
+  }
+ },
+ "preferred_theories": [
+  "bisociation",
+  "literalise",
+  "rigidity"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "shock_humor",
+  "crime",
+  "storytelling",
+  "race",
+  "sex"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_age": [
+   "36"
+  ],
+  "disclosed_location": [
+   "Alabama",
+   "Nashville"
+  ],
+  "disclosed_occupation": [
+   "illegal weed grower"
+  ],
+  "disclosed_relationship_status": [
+   "single"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}

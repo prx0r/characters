@@ -1,0 +1,96 @@
+{
+ "id": "kt_cassandra_ramos",
+ "name": "Cassandra Ramos",
+ "version": "canonical-graph-v1",
+ "hypothesis_note": "STAGE PERSONA inferred from observed Kill Tony sets only. Not a claim about the real person.",
+ "provenance": {
+  "sets": 1,
+  "files": [
+   "reprocess_ep725_pass2.json"
+  ],
+  "annotator": "rule-v0",
+  "mean_crowd_ord": 4.0
+ },
+ "archetype": "literalise",
+ "traits": [
+  "plays race",
+  "plays sex",
+  "plays relationships"
+ ],
+ "humour": "observed lean: literalize",
+ "dramatic_core": {
+  "want": "the minute to land",
+  "fear": "silence",
+  "need": "one reliable closer",
+  "self_model": "First time doing stand-up was in an arena",
+  "blind_spots": [
+   "unknown \u2014 single-minute evidence only"
+  ]
+ },
+ "status_model": {
+  "desired_status": "regular",
+  "felt_status": "bucket pull"
+ },
+ "knowledge": {
+  "native_period": "now",
+  "knows": [
+   "race",
+   "sex",
+   "relationships"
+  ],
+  "does_not_know": []
+ },
+ "perception": {
+  "notices_first": [
+   "race",
+   "sex"
+  ],
+  "ignores": [],
+  "watched": [
+   "race",
+   "sex",
+   "relationships",
+   "storytelling"
+  ]
+ },
+ "action_policy": {
+  "default_strategy": "opens, escalates via literalize"
+ },
+ "comedy": {
+  "operator_priors": {
+   "literalize": 1.0
+  }
+ },
+ "preferred_theories": [
+  "literalise"
+ ],
+ "voice": {
+  "cadence": "unknown from text alone",
+  "tells": []
+ },
+ "threads": [
+  "race",
+  "sex",
+  "relationships",
+  "storytelling"
+ ],
+ "memories": [],
+ "relationships": [],
+ "callbacks": [],
+ "disclosed": {
+  "disclosed_age": [
+   "28"
+  ],
+  "disclosed_location": [
+   "Columbia, Tennessee"
+  ],
+  "disclosed_occupation": [
+   "food truck owner"
+  ],
+  "disclosed_relationship_status": [
+   "married"
+  ]
+ },
+ "masks": "unassigned \u2014 needs human review",
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+}
