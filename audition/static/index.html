@@ -23,7 +23,7 @@ button{cursor:pointer}button:disabled{opacity:.4;cursor:default}
 <div class="row">
 <img id="portrait" src="" alt="" style="width:96px;height:96px;border-radius:16px;object-fit:cover;display:none">
 <select id="charSel"></select>
-<button id="genBtn">Generate Minute</button>
+<button id="genBtn">Generate Minute</button><button id="battleBtn" title="generate 3, classify, ship the winner">⚔️ Battle</button>
 <span id="status" class="muted"></span>
 </div>
 <div class="card">
@@ -61,7 +61,9 @@ async function replay(id){const d=await api('GET','/api/auditions/'+id);setAud(d
 function setAud(d){AUD=d;RATING=null;document.querySelectorAll('#rates button').forEach(b=>b.classList.remove('sel'));$('fbBtn').disabled=!d||d.status!=='ready';$('nextBtn').disabled=true;
 if(d&&d.status==='ready'){$('audio').src=d.audio_url;$('beats').innerHTML=d.beats.map(b=>`<div class="beat" id="beat-${b.id}"><b>${b.id} [${b.type}]</b> ${b.text}</div>`).join('');document.querySelectorAll('#timeline .marker').forEach(m=>m.remove());(d.pogs||[]).forEach(p=>mark(p.playback_ms));$('status').textContent='ready · '+d.scenario_id+' · '+(d.exploration?'exploring':'exploiting')+((d.decision&&d.decision.instance)?(' · '+d.decision.instance.modulator):'');} }
 function mark(ms){if(!AUD)return;const el=document.createElement('div');el.className='marker';el.style.left=(ms/AUD.audio_duration_ms*100)+'%';$('timeline').appendChild(el);}
-$('genBtn').onclick=async()=>{const c=$('charSel').value;$('status').textContent='generating…';const j=await api('POST','/api/auditions',{character_id:c});clearInterval(POLL);POLL=setInterval(async()=>{const d=await api('GET','/api/auditions/'+j.audition_id);$('status').textContent=d.status+(d.scenario_id?' · '+d.scenario_id:'');if(d.status==='ready'){clearInterval(POLL);setAud(d);$('audio').play();loadHistory();}if(d.status==='failed'){clearInterval(POLL);$('status').textContent='failed: '+(d.error||'unknown');}},1500);};
+$('genBtn').onclick=()=>startJob('/api/auditions');
+$('battleBtn').onclick=()=>startJob('/api/auditions/battle');
+async function startJob(url){const c=$('charSel').value;$('status').textContent='generating…';const j=await api('POST',url,{character_id:c});clearInterval(POLL);POLL=setInterval(async()=>{const d=await api('GET','/api/auditions/'+j.audition_id);$('status').textContent=d.status+(d.scenario_id?' · '+d.scenario_id:'');if(d.status==='ready'){clearInterval(POLL);setAud(d);$('audio').play();loadHistory();}if(d.status==='failed'){clearInterval(POLL);$('status').textContent='failed: '+(d.error||'unknown');}},1500);};
 function pog(){const a=$('audio');if(a.paused||!AUD||AUD.status!=='ready')return;const ms=Math.round(a.currentTime*1000);const eid='pog_'+Math.random().toString(36).slice(2,10);mark(ms);api('POST',`/api/auditions/${AUD.id}/pogs`,{event_id:eid,playback_ms:ms,iteration:ITER});api('POST',`/api/auditions/${AUD.id}/play_event`,{kind:'play',position_ms:ms});}
 $('pogBtn').onclick=pog;
 document.addEventListener('keydown',e=>{if((e.key==='p'||e.key==='P')&&document.activeElement.tagName!=='TEXTAREA'&&document.activeElement.tagName!=='INPUT')pog();});

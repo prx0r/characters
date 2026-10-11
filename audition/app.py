@@ -88,34 +88,61 @@ def _run_generation(job_id: str, character_id: str):
             alt = generate.pick_scenario(used, random.Random(seed + 1))
             if alt["id"] not in used:
                 gen["scenario"] = alt
-        JOBS[job_id].update({"status": "synthesising", "scenario_id": gen["scenario"]["id"]})
-        voice = tts_provider.VOICES.get(character_id, gen["character"].get("voice_id", "en-US-GuyNeural"))
-        audio = tts_provider.synthesize(job_id, gen["full_text"], voice)
-        pauses = sum(b.get("pause_after_ms", 0) for b in gen["beats"])
-        est_total = sum(b["end_ms"] - b["start_ms"] for b in gen["beats"])
-        # scale beat timings to real audio duration
-        scale = (audio["duration_ms"] / est_total) if est_total else 1.0
-        t = 0
-        for b in gen["beats"]:
-            dur = int((b["end_ms"] - b["start_ms"]) * scale)
-            b["start_ms"], b["end_ms"] = t, t + dur
-            t += dur
-        row = {"id": job_id, "character_id": character_id,
-               "character_version": generate.CHARACTER_VERSION,
-               "scenario_id": gen["scenario"]["id"],
-               "source_block_ids": [gen["scenario"]["id"]],
-               "theory_ids": gen["theory_ids"], "operator_ids": gen["operator_ids"],
-               "decision": gen["decision"], "strategy_version": strat["version"],
-               "exploration": gen["exploration"], "model_id": gen["model_id"],
-               "generation_seed": gen["seed"], "beats": gen["beats"],
-               "full_text": gen["full_text"], "audio_path": audio["path"],
-               "audio_duration_ms": audio["duration_ms"],
-               "timing_provenance": ("beats-scaled-to-" + audio["provenance"]),
-               "audio_hash": audio["sha256"], "status": "ready", "error": "",
-               "change_note": gen["decision"].get("change_from_last", "")}
-        store.insert_audition(conn, row)
+        _persist_ready(job_id, character_id, conn, gen, strat, seed)
         JOBS[job_id].update({"status": "ready"})
     except Exception as e:  # surfaced, retryable
+        JOBS[job_id].update({"status": "failed", "error": str(e)[:500]})
+    finally:
+        conn.close()
+
+
+def _persist_ready(job_id: str, character_id: str, conn, gen: dict, strat: dict, seed: int) -> None:
+    JOBS[job_id].update({"status": "synthesising", "scenario_id": gen["scenario"]["id"]})
+    voice = tts_provider.VOICES.get(character_id, gen["character"].get("voice_id", "en-US-GuyNeural"))
+    audio = tts_provider.synthesize(job_id, gen["full_text"], voice)
+    est_total = sum(b["end_ms"] - b["start_ms"] for b in gen["beats"])
+    # scale beat timings to real audio duration
+    scale = (audio["duration_ms"] / est_total) if est_total else 1.0
+    t = 0
+    for b in gen["beats"]:
+        dur = int((b["end_ms"] - b["start_ms"]) * scale)
+        b["start_ms"], b["end_ms"] = t, t + dur
+        t += dur
+    row = {"id": job_id, "character_id": character_id,
+           "character_version": generate.CHARACTER_VERSION,
+           "scenario_id": gen["scenario"]["id"],
+           "source_block_ids": [gen["scenario"]["id"]],
+           "theory_ids": gen["theory_ids"], "operator_ids": gen["operator_ids"],
+           "decision": gen["decision"], "strategy_version": strat["version"],
+           "exploration": gen["exploration"], "model_id": gen["model_id"],
+           "generation_seed": gen["seed"], "beats": gen["beats"],
+           "full_text": gen["full_text"], "audio_path": audio["path"],
+           "audio_duration_ms": audio["duration_ms"],
+           "timing_provenance": ("beats-scaled-to-" + audio["provenance"]),
+           "audio_hash": audio["sha256"], "status": "ready", "error": "",
+           "change_note": gen["decision"].get("change_from_last", "")}
+    store.insert_audition(conn, row)
+
+
+def _run_battle(job_id: str, character_id: str):
+    conn = _conn()
+    try:
+        JOBS[job_id]["status"] = "battling"
+        import battle as _battle
+        fb = store.recent_feedback(conn, character_id, 5)
+        for f in fb:
+            f["pog_count"] = conn.execute("SELECT COUNT(*) FROM pogs WHERE audition_id=?",
+                                          (f["id"],)).fetchone()[0]
+        strat = store.get_strategy(conn, character_id)
+        seed = random.randint(1, 10**9)
+        res = _battle.battle(character_id, fb, strat, n=3, seed=seed)
+        gen = res["winner"]
+        gen["decision"]["slop"] = {"battle": True}
+        gen["decision"]["battle_score"] = res["winner_score"]
+        gen["decision"]["battle_table"] = res["table"]
+        _persist_ready(job_id, character_id, conn, gen, strat, seed)
+        JOBS[job_id].update({"status": "ready"})
+    except Exception as e:
         JOBS[job_id].update({"status": "failed", "error": str(e)[:500]})
     finally:
         conn.close()
@@ -135,9 +162,55 @@ def create_audition():
     return jsonify({"audition_id": job_id, "status": "queued"})
 
 
+@app.post("/api/auditions/battle")
+def create_battle():
+    """Generate 3, classify, ship the winner. Slower, better."""
+    data = request.get_json(force=True) or {}
+    character_id = data.get("character_id", "no_nose_nolan")
+    ids = {c["id"] for c in generate.list_characters()}
+    if character_id not in ids:
+        return jsonify({"error": f"unknown character_id {character_id}"}), 400
+    job_id = store.new_id("aud")
+    JOBS[job_id] = {"status": "queued", "character_id": character_id, "created_at": time.time()}
+    threading.Thread(target=_run_battle, args=(job_id, character_id), daemon=True).start()
+    return jsonify({"audition_id": job_id, "status": "queued", "mode": "battle"})
+
+
+@app.get("/api/characters/<character_id>/progress")
+def progress(character_id: str):
+    """Quantitative track: battle scores, ratings, POGs, room, retention over time."""
+    conn = _conn()
+    try:
+        rows = conn.execute(
+            """SELECT a.id, a.created_at, a.scenario_id, a.operator_ids, a.decision,
+                      f.rating, f.comment, f.room_reaction,
+                      (SELECT COUNT(*) FROM pogs p WHERE p.audition_id=a.id) AS pogs,
+                      (SELECT AVG(CAST(watch_ms AS FLOAT)/MAX(duration_ms,1)) FROM short_views v
+                        WHERE v.audition_id=a.id) AS retention
+               FROM auditions a LEFT JOIN feedbacks f ON f.audition_id=a.id
+               WHERE a.character_id=? ORDER BY a.created_at""", (character_id,)).fetchall()
+        pts = []
+        for r in rows:
+            d = dict(r)
+            try:
+                dec = json.loads(d.get("decision") or "{}")
+            except Exception:
+                dec = {}
+            inst = dec.get("instance", {}) or {}
+            pts.append({"id": d["id"], "at": d["created_at"], "scenario": d["scenario_id"],
+                        "operator": (json.loads(d.get("operator_ids") or "[]") or [None])[0],
+                        "modulator": inst.get("modulator"), "chooser": inst.get("chooser"),
+                        "battle": (dec.get("battle_score") or {}).get("total"),
+                        "rating": d["rating"], "pogs": d["pogs"], "room": d["room_reaction"],
+                        "retention": round(d["retention"], 3) if d["retention"] is not None else None})
+        return jsonify({"character_id": character_id, "points": pts})
+    finally:
+        conn.close()
+
+
 @app.get("/api/auditions/<aud_id>")
 def get_audition(aud_id: str):
-    if aud_id in JOBS and JOBS[aud_id].get("status") in ("queued", "generating", "synthesising"):
+    if aud_id in JOBS and JOBS[aud_id].get("status") in ("queued", "generating", "synthesising", "battling"):
         return jsonify({"id": aud_id, "status": JOBS[aud_id]["status"],
                         "scenario_id": JOBS[aud_id].get("scenario_id", "")})
     conn = _conn()
