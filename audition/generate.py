@@ -233,7 +233,7 @@ def _template_beats(character: dict, scenario: dict, operator: str,
             ("misdirect" if push_misdirect else "setup",
              f"Ralph sends complaints. I fix them. He middle-manages while I middle-fan.{tell}"),
             ("punchline", f"Here is what actually happened: {deriv} And I am the one holding the work order."),
-            ("tag", f"Blind spot: {blind}. So when the vents started hissing back, I wrote myself up and ordered new filters.".strip()),
+            ("tag", f"I am blind to {blind}. So when the vents started hissing back, I wrote myself up and ordered new filters.".strip()),
             ("closer", _rr.choice(rudy_closers)),
         ]
     elif character["id"].startswith("reptilian"):
@@ -243,7 +243,7 @@ def _template_beats(character: dict, scenario: dict, operator: str,
             ("misdirect" if push_misdirect else "setup",
              f"People imagine domination looks like thrones and fire. It looks like this: warm rocks confiscated, thermostat at sixty-eight, eleven pages per warmth request.{tell}"),
             ("punchline", f"You think shape-shifting is glamorous. It is Spanx for your entire soul, with contacts that dry out by noon."),
-            ("tag", f"Blind spot: {blind}. I filed for transfer to Dulce twice. Denied twice. Reason: I laugh too hard and the suit drops.".strip()),
+            ("tag", f"I am blind to {blind}. I filed for transfer to Dulce twice. Denied twice. Reason: I laugh too hard and the suit drops.".strip()),
             ("closer", _rr.choice(ralph_closers)),
         ]
     else:
@@ -256,7 +256,7 @@ def _template_beats(character: dict, scenario: dict, operator: str,
              f"They replaced the whole unit with AI-powered scent drones, and I said trust me, I have been doing evidence-free {work} for years."),
             ("punchline", f"My new method is revolutionary: step one, sniff the wrong locker, step two, {policy}, step three, promotion."),
             ("callback" if not dodge_dogs else "tag",
-             f"My partner the bloodhound found three felonies before breakfast while I found the break room. Blind spot: {blind}, and frankly that is what makes me management material."),
+             f"My partner the bloodhound found three felonies before breakfast while I found the break room. I am blind to {blind}, and frankly that is what makes me management material."),
             ("closer", "Smell that? Definitely a promotion."),
         ]
     out = []
@@ -553,6 +553,13 @@ def validate_minute(gen: dict, character_id: str) -> list[str]:
             errs.append(f"missing decision.{f}")
     if not gen.get("theory_ids") or not gen.get("operator_ids"):
         errs.append("missing theory/operator refs")
+    try:
+        import gates
+        others = ["partner", "rex", "bloodhound"] if "nolan" in character_id else []
+        g = gates.check(beats, others_present=others)
+        errs.extend("GATE: " + v for v in g["vetoes"])
+    except Exception:
+        pass
     return errs
 
 

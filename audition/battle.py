@@ -55,9 +55,20 @@ def score_candidate(full_text: str, beats: list[dict], decision: dict,
         parts["shape"] = 1.0 if ws and ws[-1] <= min(ws[:-1] or [ws[-1]]) and ws[0] <= 22 else 0.4
     except Exception:
         parts["shape"] = 0.5
-    total = round(0.25 * parts["slop"] + 0.2 * parts["not_swappable"] + 0.15 * parts["not_generic"]
+    # 5. gates: hard veto tanks the candidate; flags cost a little
+    try:
+        import gates
+        g = gates.check(beats)
+        parts["gates"] = 1.0 if g["passed"] else 0.0
+        parts["gate_flags"] = len(g["flags"])
+    except Exception:
+        parts["gates"] = 0.5
+        parts["gate_flags"] = 0
+    total = round(0.2 * parts["slop"] + 0.2 * parts["not_swappable"] + 0.1 * parts["not_generic"]
                   + 0.15 * parts["reframe"] + 0.1 * parts["play_ready"]
-                  + 0.1 * parts["novelty"] + 0.05 * parts["shape"], 3)
+                  + 0.1 * parts["novelty"] + 0.05 * parts["shape"] + 0.1 * parts["gates"], 3)
+    if parts.get("gates") == 0.0:
+        total = min(total, 0.3)
     return {"parts": parts, "total": total}
 
 
