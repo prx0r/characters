@@ -35,6 +35,33 @@ def _conn():
     return store.connect()
 
 
+def _job(job_id: str, character_id: str, mode: str, status: str, error: str = "") -> None:
+    """Write-through: memory cache + durable jobs table."""
+    JOBS[job_id] = {"status": status, "character_id": character_id,
+                    "created_at": JOBS.get(job_id, {}).get("created_at", time.time())}
+    try:
+        conn = _conn()
+        try:
+            store.upsert_job(conn, job_id, character_id, mode, status, error)
+        finally:
+            conn.close()
+    except Exception:
+        pass
+
+
+def _startup_sweep() -> None:
+    try:
+        conn = _conn()
+        try:
+            n = store.sweep_stale_jobs(conn)
+            if n:
+                print(f"jobs: {n} stale marked failed-retryable")
+        finally:
+            conn.close()
+    except Exception as e:
+        print(f"jobs sweep skipped: {e}")
+
+
 @app.get("/")
 def index():
     return send_file(HERE / "static" / "index.html")
@@ -51,7 +78,7 @@ def characters():
 def _run_generation(job_id: str, character_id: str):
     conn = _conn()
     try:
-        JOBS[job_id]["status"] = "generating"
+        _job(job_id, character_id, "single", "generating")
         recent = store.recent_feedback(conn, character_id, 5)
         # used scenario ids (avoid repeats)
         used_rows = conn.execute("SELECT scenario_id FROM auditions WHERE character_id=? ORDER BY created_at DESC LIMIT 12",
@@ -66,38 +93,36 @@ def _run_generation(job_id: str, character_id: str):
                                           (f["id"],)).fetchone()[0]
         strat = store.get_strategy(conn, character_id)
         seed = random.randint(1, 10**9)
-        gen = generate.generate_minute(character_id, fb, strat, seed)
+        gen = generate.generate_minute(character_id, fb, strat, seed, used_ids=used)
         # noslop filter: veto AI-slop minutes, one regeneration with a new seed
         slop = generate.slop_check(gen["full_text"])
         if slop.get("is_ai"):
-            gen = generate.generate_minute(character_id, fb, strat, seed + 1)
+            gen = generate.generate_minute(character_id, fb, strat, seed + 1, used_ids=used)
             slop = {**generate.slop_check(gen["full_text"]), "vetoed_first": True}
         try:
             import slop_jev
             fused = slop_jev.jev_slop(gen["full_text"])
             slop["jev"] = {k: fused[k] for k in ("jev_mean", "fused", "verdict", "chooser") if k in fused}
             if fused.get("verdict") == "slop" and not slop.get("is_ai"):
-                gen = generate.generate_minute(character_id, fb, strat, seed + 2)
+                gen = generate.generate_minute(character_id, fb, strat, seed + 2, used_ids=used)
                 slop = {**generate.slop_check(gen["full_text"]), "vetoed_first": True,
                         "vetoed_by": "jev-fused"}
         except Exception:
             pass
         gen["decision"]["slop"] = slop
-        # next-minute must be fresh: if scenario repeats and alternatives exist, repick once
-        if gen["scenario"]["id"] in used:
-            alt = generate.pick_scenario(used, random.Random(seed + 1))
-            if alt["id"] not in used:
-                gen["scenario"] = alt
+        problems = generate.validate_minute(gen, character_id)
+        if problems:
+            raise RuntimeError("invalid minute (" + "; ".join(problems[:4]) + ")")
         _persist_ready(job_id, character_id, conn, gen, strat, seed)
-        JOBS[job_id].update({"status": "ready"})
+        JOBS[job_id].update({"status": "ready"}); _job(job_id, JOBS[job_id].get("character_id", ""), JOBS[job_id].get("mode", "single"), "ready")
     except Exception as e:  # surfaced, retryable
-        JOBS[job_id].update({"status": "failed", "error": str(e)[:500]})
+        JOBS[job_id].update({"status": "failed", "error": str(e)[:500]}); _job(job_id, JOBS[job_id].get("character_id", ""), JOBS[job_id].get("mode", "single"), "failed", str(e)[:500])
     finally:
         conn.close()
 
 
 def _persist_ready(job_id: str, character_id: str, conn, gen: dict, strat: dict, seed: int) -> None:
-    JOBS[job_id].update({"status": "synthesising", "scenario_id": gen["scenario"]["id"]})
+    JOBS[job_id].update({"status": "synthesising", "scenario_id": gen["scenario"]["id"]}); _job(job_id, character_id, JOBS[job_id].get("mode", "single"), "synthesising")
     voice = tts_provider.VOICES.get(character_id, gen["character"].get("voice_id", "en-US-GuyNeural"))
     audio = tts_provider.synthesize(job_id, gen["full_text"], voice)
     est_total = sum(b["end_ms"] - b["start_ms"] for b in gen["beats"])
@@ -127,7 +152,7 @@ def _persist_ready(job_id: str, character_id: str, conn, gen: dict, strat: dict,
 def _run_battle(job_id: str, character_id: str):
     conn = _conn()
     try:
-        JOBS[job_id]["status"] = "battling"
+        _job(job_id, character_id, "battle", "battling")
         import battle as _battle
         fb = store.recent_feedback(conn, character_id, 5)
         for f in fb:
@@ -139,11 +164,13 @@ def _run_battle(job_id: str, character_id: str):
         gen = res["winner"]
         gen["decision"]["slop"] = {"battle": True}
         gen["decision"]["battle_score"] = res["winner_score"]
-        gen["decision"]["battle_table"] = res["table"]
+        gen["decision"]["battle_table"] = [{k: v for k, v in c.items() if k != "text"}
+                                           for c in res["table"]]
+        store.record_battle(conn, job_id, character_id, res["table"], winner_idx=0)
         _persist_ready(job_id, character_id, conn, gen, strat, seed)
-        JOBS[job_id].update({"status": "ready"})
+        JOBS[job_id].update({"status": "ready"}); _job(job_id, JOBS[job_id].get("character_id", ""), JOBS[job_id].get("mode", "single"), "ready")
     except Exception as e:
-        JOBS[job_id].update({"status": "failed", "error": str(e)[:500]})
+        JOBS[job_id].update({"status": "failed", "error": str(e)[:500]}); _job(job_id, JOBS[job_id].get("character_id", ""), JOBS[job_id].get("mode", "single"), "failed", str(e)[:500])
     finally:
         conn.close()
 
@@ -157,7 +184,8 @@ def create_audition():
     if character_id not in ids:
         return jsonify({"error": f"unknown character_id {character_id}"}), 400
     job_id = store.new_id("aud")
-    JOBS[job_id] = {"status": "queued", "character_id": character_id, "created_at": time.time()}
+    JOBS[job_id] = {"status": "queued", "mode": "single", "character_id": character_id, "created_at": time.time()}
+    _job(job_id, character_id, "single", "queued")
     threading.Thread(target=_run_generation, args=(job_id, character_id), daemon=True).start()
     return jsonify({"audition_id": job_id, "status": "queued"})
 
@@ -171,7 +199,8 @@ def create_battle():
     if character_id not in ids:
         return jsonify({"error": f"unknown character_id {character_id}"}), 400
     job_id = store.new_id("aud")
-    JOBS[job_id] = {"status": "queued", "character_id": character_id, "created_at": time.time()}
+    JOBS[job_id] = {"status": "queued", "mode": "battle", "character_id": character_id, "created_at": time.time()}
+    _job(job_id, character_id, "battle", "queued")
     threading.Thread(target=_run_battle, args=(job_id, character_id), daemon=True).start()
     return jsonify({"audition_id": job_id, "status": "queued", "mode": "battle"})
 
@@ -216,8 +245,12 @@ def get_audition(aud_id: str):
     conn = _conn()
     try:
         row = store.get_audition(conn, aud_id)
+        job = None if row else conn.execute("SELECT * FROM jobs WHERE job_id=?", (aud_id,)).fetchone()
     finally:
         conn.close()
+    if not row and job:
+        return jsonify({"id": aud_id, "status": dict(job)["status"],
+                        "error": dict(job)["error"] or None}), 200
     if not row:
         st = JOBS.get(aud_id, {})
         if st.get("status") == "failed":
@@ -361,8 +394,11 @@ def feedback(aud_id: str):
         summ = generate.summarize_strategy(aud["character_id"], [dict(r) for r in rows])
         old = store.get_strategy(conn, aud["character_id"])
         ver = f"strategy_{int(old['version'].split('_')[-1]) + 1:02d}" if old["version"].startswith("strategy_") else "strategy_02"
-        store.save_strategy(conn, aud["character_id"], ver, summ["success"], summ["failed"], summ["instructions"])
-        return jsonify({**fb, "strategy": summ["instructions"]})
+        ev_ids = [r["id"] for r in rows]
+        store.save_strategy(conn, aud["character_id"], ver, summ["success"], summ["failed"],
+                            summ["instructions"], evidence=ev_ids,
+                            changes=f"after {aud_id}: rating {rating}")
+        return jsonify({**fb, "strategy": summ["instructions"], "strategy_version": ver})
     finally:
         conn.close()
 
@@ -381,9 +417,154 @@ def next_audition(aud_id: str):
 
 def _next(row: dict):
     job_id = store.new_id("aud")
-    JOBS[job_id] = {"status": "queued", "character_id": row["character_id"], "created_at": time.time()}
+    JOBS[job_id] = {"status": "queued", "mode": "single", "character_id": row["character_id"], "created_at": time.time()}
+    _job(job_id, row["character_id"], "single", "queued")
     threading.Thread(target=_run_generation, args=(job_id, row["character_id"]), daemon=True).start()
     return jsonify({"audition_id": job_id, "status": "queued"})
+
+
+@app.get("/api/auditions/<aud_id>/observations")
+def observations(aud_id: str):
+    """S8: evidence-linked observations. Set-level, beat-level, delivery, engagement kept separate."""
+    conn = _conn()
+    try:
+        row = store.get_audition(conn, aud_id)
+        if not row:
+            return jsonify({"error": "unknown audition id"}), 404
+        pogs = [dict(p) for p in conn.execute(
+            "SELECT * FROM pogs WHERE audition_id=? ORDER BY playback_ms", (aud_id,)).fetchall()]
+        fb = conn.execute("SELECT * FROM feedbacks WHERE audition_id=?", (aud_id,)).fetchone()
+        ops = row["operator_ids"]
+        beats = []
+        for b in row["beats"]:
+            bp = [p for p in pogs if p.get("beat_id") == b["id"]]
+            beats.append({"beat_id": b["id"], "type": b["type"], "words": len(b["text"].split()),
+                          "operator": (ops or [None])[0],
+                          "operator_note": "minute-level operator; beat shares it (credit uncertainty)",
+                          "pogs": [{"playback_ms": p["playback_ms"], "uncertain": bool(p["uncertain"])}
+                                   for p in bp]})
+        return jsonify({"audition_id": aud_id, "operator_ids": ops,
+                        "set": {"rating": dict(fb)["rating"] if fb else None,
+                                "room": (dict(fb).get("room_reaction") or None) if fb else None,
+                                "comment": (dict(fb)["comment"] if fb else "") or None},
+                        "beats": beats,
+                        "engagement": {"pog_count": len(pogs),
+                                       "sessions": len({p["iteration"] for p in pogs})},
+                        "causal_note": "POG near a beat is correlation; mechanism claims stay hypotheses"})
+    finally:
+        conn.close()
+
+
+@app.get("/api/characters/<character_id>/callbacks")
+def callbacks(character_id: str):
+    scenario_id = request.args.get("scenario_id", "")
+    conn = _conn()
+    try:
+        return jsonify({"callbacks": store.propose_callbacks(conn, character_id, scenario_id)})
+    finally:
+        conn.close()
+
+
+@app.post("/api/characters/<character_id>/reflect")
+def reflect(character_id: str):
+    """S9: evidence-linked strategy proposal. Proposes; never auto-accepts."""
+    conn = _conn()
+    try:
+        rows = conn.execute(
+            """SELECT a.id, a.scenario_id, a.operator_ids, a.decision, f.rating, f.comment,
+                      (SELECT COUNT(*) FROM pogs p WHERE p.audition_id=a.id) AS pog_count
+               FROM auditions a JOIN feedbacks f ON f.audition_id=a.id
+               WHERE a.character_id=? ORDER BY f.submitted_at DESC LIMIT 10""",
+            (character_id,)).fetchall()
+        obs = [dict(r) for r in rows]
+        if not obs:
+            return jsonify({"error": "no rated auditions to reflect on"}), 400
+        good = [o for o in obs if (o["rating"] or 0) >= 2 or (o.get("pog_count") or 0) >= 2]
+        weak = [o for o in obs if o not in good]
+        proposal = {
+            "holds": sorted({(o.get("scenario_id"), (o.get("operator_ids") or "[]")) for o in good})[:5],
+            "retire": sorted({(o.get("scenario_id"), (o.get("operator_ids") or "[]")) for o in weak})[:5],
+            "experiment": "next minute: best held operator on a fresh scenario; predict rating>=2",
+            "uncertainty": f"n={len(obs)} rated; correlation only",
+        }
+        return jsonify({"character_id": character_id, "proposal": proposal, "status": "proposed"})
+    finally:
+        conn.close()
+
+
+@app.get("/api/characters/<character_id>/strategies")
+def strategy_history(character_id: str):
+    conn = _conn()
+    try:
+        rows = conn.execute("SELECT version, parent, instructions, evidence, hypotheses, changes,"
+                            " uncertainties, status, created_at, hash FROM strategy_versions"
+                            " WHERE character_id=? ORDER BY created_at", (character_id,)).fetchall()
+        cur = store.current_strategy_version(conn, character_id)
+        return jsonify({"current": cur, "versions": [dict(r) for r in rows]})
+    finally:
+        conn.close()
+
+
+@app.post("/api/characters/<character_id>/strategies/<version>/status")
+def strategy_status(character_id: str, version: str):
+    data = request.get_json(force=True) or {}
+    status = data.get("status", "")
+    if status not in ("accepted", "rejected", "reverted"):
+        return jsonify({"error": "status must be accepted/rejected/reverted"}), 400
+    conn = _conn()
+    try:
+        if not store.get_strategy_at(conn, character_id, version):
+            return jsonify({"error": "unknown strategy version"}), 404
+        store.set_strategy_status(conn, character_id, version, status)
+        return jsonify({"character_id": character_id, "version": version, "status": status})
+    finally:
+        conn.close()
+
+
+@app.get("/api/battles/<job_id>/blind")
+def battle_blind(job_id: str):
+    """S10: blind A/B of winner vs best loser. Texts only; winner hidden until vote."""
+    conn = _conn()
+    try:
+        r = conn.execute("SELECT * FROM battle_runs WHERE job_id=?", (job_id,)).fetchone()
+        if not r:
+            return jsonify({"error": "unknown battle"}), 404
+        import json as _j
+        table = _j.loads(r["table_json"])
+        if len(table) < 2:
+            return jsonify({"error": "battle had fewer than 2 candidates"}), 400
+        pair = [{"label": "A", "idx": 0, "text": table[0]["text"]},
+                {"label": "B", "idx": 1, "text": table[1]["text"]}]
+        import random as _r
+        _r.shuffle(pair)
+        return jsonify({"job_id": job_id, "options": pair,
+                        "note": "winner hidden; vote, then reveal"})
+    finally:
+        conn.close()
+
+
+@app.post("/api/battles/<job_id>/blind_vote")
+def battle_blind_vote(job_id: str):
+    data = request.get_json(force=True) or {}
+    pick = data.get("pick", "")
+    if pick not in ("A", "B"):
+        return jsonify({"error": "pick A or B"}), 400
+    conn = _conn()
+    try:
+        r = conn.execute("SELECT * FROM battle_runs WHERE job_id=?", (job_id,)).fetchone()
+        if not r:
+            return jsonify({"error": "unknown battle"}), 404
+        import json as _j, time as _t
+        votes = _j.loads(r["blind_votes"] or "[]")
+        votes.append({"pick": pick, "at": _t.time()})
+        conn.execute("UPDATE battle_runs SET blind_votes=? WHERE job_id=?",
+                     (_j.dumps(votes), job_id))
+        conn.commit()
+        return jsonify({"job_id": job_id, "model_winner_idx": r["winner_idx"],
+                        "votes": len(votes),
+                        "note": "human pick recorded against model winner"})
+    finally:
+        conn.close()
 
 
 @app.get("/api/auditions")
@@ -610,5 +791,6 @@ def set_source(aud_id: str):
 
 
 if __name__ == "__main__":
+    _startup_sweep()
     print("Audition app on http://127.0.0.1:8807/")
     app.run(host="127.0.0.1", port=8807, threaded=True)

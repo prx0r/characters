@@ -247,6 +247,24 @@ def load_modulators() -> dict:
     return _MODS
 
 
+def actor_decide(character: dict, scenario: dict, state: dict, mems: list,
+                 tilt: str, explore: bool) -> dict:
+    """Actor stage: interpretation from philosophy+state+memory. Knows nothing
+    of operators or audience metrics. Coherence is its only objective."""
+    appraisal = f"{scenario['id']} reads through {character.get('name')}'s lens; status {state.get('perceived_status')}"
+    goal = (f"Restore {character['want']}" if state.get("perceived_status") == "threatened"
+            else f"Celebrate {character['want']}")
+    reaction = f"{tilt or character.get('action_policy', '')}".strip()
+    restraint = state.get("restraint", "medium")
+    arousal = state.get("arousal", 0.5)
+    shift = ("restraint holds; ice" if restraint == "high" and arousal >= 0.7
+             else ("restraint holds; velvet menace" if restraint == "high"
+                   else ("restraint fails; truth leaks" if arousal <= 0.3 else "steady register")))
+    return {"appraisal": appraisal, "chosen_goal": goal, "reaction": reaction,
+            "emotional_shift": shift, "confidence": round(0.5 + 0.1 * (0 if explore else 1), 2),
+            "memory_refs": mems}
+
+
 def seed_modulators(character: dict) -> list[str]:
     rng = (character.get("raw", {}) or {}).get("philosophy", {}).get("modulator_range", [])
     if rng:
@@ -258,10 +276,10 @@ def seed_modulators(character: dict) -> list[str]:
 
 
 def generate_minute(character_id: str, recent: list[dict], strategy: dict,
-                    seed: int | None = None) -> dict:
+                    seed: int | None = None, used_ids: list[str] | None = None) -> dict:
     rng = random.Random(seed if seed is not None else random.randint(1, 10**9))
     character = get_character(character_id)
-    used = [r.get("scenario_id", "") for r in (recent or []) if r.get("scenario_id")]
+    used = list(used_ids or []) or [r.get("scenario_id", "") for r in (recent or []) if r.get("scenario_id")]
     scenario = pick_scenario(used, rng)
 
     # 70/30 exploit/explore over operators using strategy evidence
@@ -368,25 +386,30 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
         b["start_ms"] = t
         b["end_ms"] = t + dur
         t += dur
-    interp = (mod.get("cognitive", {}) or {}).get("interpretation", "")
-    appraisal = f"{scenario['id']} reads as {interp or 'routine administration'}; status {state['perceived_status']}"
-    goal = f"Restore {character['want']}" if state["perceived_status"] == "threatened" else f"Celebrate {character['want']}"
-    reaction = f"{tilt or character.get('action_policy', '')}".strip()
-    shift = ("restraint holds; ice" if restraint == "high" and state["arousal"] >= 0.7
-             else ("restraint holds; velvet menace" if restraint == "high"
-                   else ("restraint fails; truth leaks" if state["arousal"] <= 0.3 else "steady register")))
+    act = actor_decide(character, scenario, state, mems, tilt, explore)
+    appraisal, goal, reaction = act["appraisal"], act["chosen_goal"], act["reaction"]
+    shift = act["emotional_shift"]
     decision = {"action": f"Frame '{scenario['id']}' as proof of competence",
                 "character_motive": f"Protect {character['want']}; hide {character['fear']}",
                 "expected_comic_collision": f"{operator}: blind to {character.get('blind_spots')}",
                 "policy_tilt": tilt,
                 "appraisal": appraisal, "chosen_goal": goal, "reaction": reaction,
-                "emotional_shift": shift, "confidence": round(0.5 + 0.1 * (0 if explore else 1), 2),
+                "emotional_shift": shift, "confidence": act["confidence"],
+                "actor": {"appraisal": appraisal, "chosen_goal": goal, "reaction": reaction,
+                          "emotional_shift": shift, "memory_refs": mems,
+                          "note": "actor knows nothing of operators or POGs"},
+                "director": {"operator": operator, "modulator": modulator,
+                             "chooser": chooser, "chooser_confidence": mod_conf,
+                             "operator_confidence": op_conf, "explore": explore,
+                             "note": "director knows evidence; actor must never see this"},
                 "memory_refs": mems,
                 "config": {"seed": f"{character['id']}@seed_v{((character.get('raw', {}) or {}).get('seed_version', 1))}",
                            "scenario": scenario["id"], "state": state,
                            "policy": strategy.get("version", "strategy_01"),
                            "strategy": strategy.get("version", "strategy_01"),
                            "generator": model_id, "prompt": prompt_version,
+                           "alignment": {"method": "proportional-scale", "verified": False,
+                                         "note": "beat times stretched to audio; attribution uncertain"},
                            "run_id": content_hash(json.dumps(
                                {"seed": character["id"], "scenario": scenario["id"],
                                 "modulator": modulator, "operator": operator,
@@ -443,6 +466,35 @@ def summarize_strategy(character_id: str, auditions_feedback: list[dict]) -> dic
              f"Lean on {', '.join(top) or 'nothing proven'}; avoid {', '.join(bad) or 'nothing ruled out'}. " +
              ("; ".join(notes[-3:])))
     return {"success": success, "failed": failed, "instructions": instr[:800]}
+
+
+MINUTE_SCHEMA = "minute-v1"
+
+
+def validate_minute(gen: dict, character_id: str) -> list[str]:
+    """Strict versioned validation. Returns error list (empty = valid). Never truncates."""
+    errs = []
+    beats = gen.get("beats") or []
+    if not (4 <= len(beats) <= 8):
+        errs.append(f"beat count {len(beats)} outside 4-8")
+    valid_types = {"setup", "escalation", "misdirect", "punchline", "tag", "callback", "closer", "opener"}
+    for b in beats:
+        if not (b.get("text") or "").strip():
+            errs.append(f"empty beat {b.get('id')}")
+        if b.get("type") not in valid_types:
+            errs.append(f"bad beat type {b.get('type')}")
+    words = sum(len((b.get("text") or "").split()) for b in beats)
+    if not (60 <= words <= 260):
+        errs.append(f"word count {words} outside 60-260")
+    if gen.get("scenario", {}).get("id") in (None, ""):
+        errs.append("missing scenario id")
+    dec = gen.get("decision", {}) or {}
+    for f in ("action", "appraisal", "chosen_goal", "reaction", "instance"):
+        if f not in dec:
+            errs.append(f"missing decision.{f}")
+    if not gen.get("theory_ids") or not gen.get("operator_ids"):
+        errs.append("missing theory/operator refs")
+    return errs
 
 
 def content_hash(text: str) -> str:

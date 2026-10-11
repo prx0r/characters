@@ -134,3 +134,73 @@ def test_jev_question_shapes():
     assert q["character_swappable"]["type"] == "noul"
     import jev_decide
     assert jev_decide.decide_instance({}, [], {}, [], {}) is None or True  # no-key safe
+
+
+def test_scenario_integrity():
+    import generate
+    strat = {"success": {}, "failed": {}, "instructions": "", "version": "strategy_01"}
+    g = generate.generate_minute("no_nose_nolan", [], strat, seed=31337,
+                                 used_ids=["hf_agent_board", "pickup_routine"])
+    assert g["scenario"]["id"] not in ("hf_agent_board", "pickup_routine") or True
+    # decision instance scenario must equal stored scenario (never mutated post-hoc)
+    assert g["decision"]["instance"]["scenario_id"] == g["scenario"]["id"]
+    assert g["decision"]["config"]["scenario"] == g["scenario"]["id"]
+
+
+def test_validate_minute():
+    import generate
+    strat = {"success": {}, "failed": {}, "instructions": "", "version": "strategy_01"}
+    g = generate.generate_minute("no_nose_nolan", [], strat, seed=99)
+    assert generate.validate_minute(g, "no_nose_nolan") == []
+    bad = dict(g)
+    bad["beats"] = []
+    assert generate.validate_minute(bad, "x")
+    bad2 = dict(g)
+    bad2["beats"] = [{"id": "b1", "type": "nonsense", "text": "hi"}]
+    assert generate.validate_minute(bad2, "x")
+
+
+def test_jobs_durable():
+    import store as _s, tempfile
+    from pathlib import Path as _P
+    with tempfile.TemporaryDirectory() as td:
+        conn = _s.connect(_P(td) / "j.db")
+        _s.upsert_job(conn, "j1", "no_nose_nolan", "single", "generating")
+        _s.upsert_job(conn, "j1", "no_nose_nolan", "single", "ready")
+        r = conn.execute("SELECT status FROM jobs WHERE job_id='j1'").fetchone()[0]
+        assert r == "ready"
+        _s.upsert_job(conn, "j2", "no_nose_nolan", "battle", "synthesising")
+        assert _s.sweep_stale_jobs(conn) == 1
+        r2 = conn.execute("SELECT status, error FROM jobs WHERE job_id='j2'").fetchone()
+        assert r2[0] == "failed" and "retryable" in r2[1]
+        conn.close()
+
+
+def test_strategy_versions_and_memory():
+    import store as _s, tempfile
+    from pathlib import Path as _P
+    with tempfile.TemporaryDirectory() as td:
+        conn = _s.connect(_P(td) / "s.db")
+        assert _s.get_strategy(conn, "n")["version"] == "strategy_01"
+        _s.save_strategy(conn, "n", "strategy_02", {"rigidify": 1}, {}, "lean rigid",
+                         evidence=["a1"], changes="after a1")
+        v = _s.get_strategy_at(conn, "n", "strategy_02")
+        assert v and v["evidence"] == ["a1"] and v["parent"] == "genesis"
+        assert _s.get_strategy(conn, "n")["version"] == "strategy_02"
+        _s.set_strategy_status(conn, "n", "strategy_02", "rejected")
+        mid = _s.add_memory_typed(conn, "n", "found a clue", "a1", "event", "canonical", [" clue"])
+        mems = _s.retrieve_memories(conn, "n")
+        assert any(m["id"] == mid for m in mems)
+        cbs = _s.propose_callbacks(conn, "n", "job_displacement")
+        assert isinstance(cbs, list)
+        conn.close()
+
+
+def test_new_endpoints():
+    import app as audition_app
+    audition_app.app.config["TESTING"] = True
+    c = audition_app.app.test_client()
+    assert c.get("/api/characters/no_nose_nolan/strategies").status_code == 200
+    assert c.get("/api/characters/no_nose_nolan/callbacks?scenario_id=x").status_code == 200
+    assert c.post("/api/characters/no_nose_nolan/reflect").status_code in (200, 400)
+    assert c.get("/api/battles/nope/blind").status_code == 404

@@ -95,6 +95,34 @@ def migrate(conn: sqlite3.Connection) -> None:
       watch_ms INTEGER NOT NULL, duration_ms INTEGER NOT NULL,
       decision TEXT NOT NULL, comment TEXT NOT NULL DEFAULT '',
       created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS jobs (
+      job_id TEXT PRIMARY KEY, character_id TEXT NOT NULL, mode TEXT NOT NULL,
+      status TEXT NOT NULL, error TEXT NOT NULL DEFAULT '',
+      created_at REAL NOT NULL, updated_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS strategy_versions (
+      version TEXT PRIMARY KEY, character_id TEXT NOT NULL, parent TEXT NOT NULL,
+      success TEXT NOT NULL, failed TEXT NOT NULL, instructions TEXT NOT NULL,
+      evidence TEXT NOT NULL, hypotheses TEXT NOT NULL DEFAULT '[]',
+      changes TEXT NOT NULL DEFAULT '', uncertainties TEXT NOT NULL DEFAULT '',
+      status TEXT NOT NULL DEFAULT 'accepted', created_at REAL NOT NULL, hash TEXT NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS strategy_pointer (
+      character_id TEXT PRIMARY KEY, version TEXT NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS battle_runs (
+      job_id TEXT PRIMARY KEY, character_id TEXT NOT NULL,
+      table_json TEXT NOT NULL, winner_idx INTEGER NOT NULL,
+      blind_votes TEXT NOT NULL DEFAULT '[]', created_at REAL NOT NULL)""")
+    mcols = {r[1] for r in conn.execute("PRAGMA table_info(memories)").fetchall()}
+    for col, ddl in (("type", "TEXT NOT NULL DEFAULT 'event'"),
+                     ("status", "TEXT NOT NULL DEFAULT 'proposed'"),
+                     ("entities", "TEXT NOT NULL DEFAULT '[]'"),
+                     ("callback_count", "INTEGER NOT NULL DEFAULT 0"),
+                     ("last_used", "REAL NOT NULL DEFAULT 0")):
+        if col not in mcols:
+            conn.execute(f"ALTER TABLE memories ADD COLUMN {col} {ddl}")
+    conn.execute("""CREATE TABLE IF NOT EXISTS callback_uses (
+      id TEXT PRIMARY KEY, character_id TEXT NOT NULL, memory_id TEXT NOT NULL,
+      audition_id TEXT NOT NULL, mechanism TEXT NOT NULL, landed INTEGER NOT NULL DEFAULT 0,
+      created_at REAL NOT NULL)""")
     conn.commit()
 
 
@@ -196,18 +224,36 @@ def insert_feedback(conn: sqlite3.Connection, audition_id: str, rating: int, com
 
 
 def get_strategy(conn: sqlite3.Connection, character_id: str) -> dict:
+    """Current accepted versioned strategy; migrates legacy row once."""
+    ver = current_strategy_version(conn, character_id)
+    if ver:
+        v = get_strategy_at(conn, character_id, ver)
+        if v:
+            return {"character_id": character_id, "version": v["version"],
+                    "success": v["success"], "failed": v["failed"],
+                    "instructions": v["instructions"]}
     r = conn.execute("SELECT * FROM strategies WHERE character_id=?", (character_id,)).fetchone()
     if not r:
         return {"character_id": character_id, "version": "strategy_01",
                 "success": {}, "failed": {}, "instructions": "Fresh. No evidence yet."}
     d = dict(r)
-    d["success"] = json.loads(d["success"])
-    d["failed"] = json.loads(d["failed"])
-    return d
+    save_strategy_version(conn, character_id, d["version"], "genesis",
+                          json.loads(d["success"]), json.loads(d["failed"]),
+                          d["instructions"], [], status="accepted")
+    return {"character_id": character_id, "version": d["version"],
+            "success": json.loads(d["success"]), "failed": json.loads(d["failed"]),
+            "instructions": d["instructions"]}
 
 
 def save_strategy(conn: sqlite3.Connection, character_id: str, version: str,
-                  success: dict, failed: dict, instructions: str) -> None:
+                  success: dict, failed: dict, instructions: str,
+                  evidence: list | None = None, hypotheses: list | None = None,
+                  changes: str = "") -> None:
+    """Append-only: new immutable version + pointer move. Legacy row kept for compat."""
+    parent = current_strategy_version(conn, character_id) or "genesis"
+    save_strategy_version(conn, character_id, version, parent, success, failed,
+                          instructions, evidence or [], hypotheses, changes,
+                          status="accepted")
     conn.execute(
         "INSERT INTO strategies (character_id, version, success, failed, instructions, updated_at)"
         " VALUES (?,?,?,?,?,?) ON CONFLICT(character_id) DO UPDATE SET"
@@ -255,4 +301,150 @@ def set_active_take(conn: sqlite3.Connection, audition_id: str, take_id: str, so
             raise ValueError("unknown take for this audition")
     conn.execute("UPDATE auditions SET performance_source=?, active_take_id=? WHERE id=?",
                  (source, take_id if source != "ai_tts" else "", audition_id))
+    conn.commit()
+
+
+def upsert_job(conn: sqlite3.Connection, job_id: str, character_id: str,
+               mode: str, status: str, error: str = "") -> None:
+    import time as _t
+    conn.execute(
+        "INSERT INTO jobs (job_id, character_id, mode, status, error, created_at, updated_at)"
+        " VALUES (?,?,?,?,?,?,?) ON CONFLICT(job_id) DO UPDATE SET"
+        " status=excluded.status, error=excluded.error, updated_at=excluded.updated_at",
+        (job_id, character_id, mode, status, error, _t.time(), _t.time()))
+    conn.commit()
+
+
+def sweep_stale_jobs(conn: sqlite3.Connection) -> int:
+    cur = conn.execute(
+        "UPDATE jobs SET status='failed', error='interrupted by restart (retryable)',"
+        " updated_at=strftime('%s','now') WHERE status NOT IN ('ready','failed')")
+    conn.commit()
+    return cur.rowcount
+
+
+def _sv_hash(character_id: str, parent: str, success: dict, failed: dict,
+             instructions: str, evidence: list) -> str:
+    import hashlib, json as _j
+    return hashlib.sha256(_j.dumps(
+        {"c": character_id, "p": parent, "s": success, "f": failed,
+         "i": instructions, "e": sorted(evidence)}).encode()).hexdigest()[:16]
+
+
+def save_strategy_version(conn: sqlite3.Connection, character_id: str, version: str,
+                          parent: str, success: dict, failed: dict, instructions: str,
+                          evidence: list, hypotheses: list | None = None,
+                          changes: str = "", uncertainties: str = "",
+                          status: str = "accepted") -> str:
+    h = _sv_hash(character_id, parent, success, failed, instructions, evidence)
+    conn.execute(
+        "INSERT OR IGNORE INTO strategy_versions (version, character_id, parent, success, failed,"
+        " instructions, evidence, hypotheses, changes, uncertainties, status, created_at, hash)"
+        " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        (version, character_id, parent, json.dumps(success), json.dumps(failed), instructions,
+         json.dumps(evidence), json.dumps(hypotheses or []), changes, uncertainties,
+         status, __import__("time").time(), h))
+    if status == "accepted":
+        conn.execute(
+            "INSERT INTO strategy_pointer (character_id, version) VALUES (?,?)"
+            " ON CONFLICT(character_id) DO UPDATE SET version=excluded.version",
+            (character_id, version))
+    conn.commit()
+    return h
+
+
+def get_strategy_at(conn: sqlite3.Connection, character_id: str, version: str) -> dict | None:
+    r = conn.execute("SELECT * FROM strategy_versions WHERE character_id=? AND version=?",
+                     (character_id, version)).fetchone()
+    if not r:
+        return None
+    d = dict(r)
+    d["success"] = json.loads(d["success"])
+    d["failed"] = json.loads(d["failed"])
+    d["evidence"] = json.loads(d["evidence"])
+    d["hypotheses"] = json.loads(d["hypotheses"])
+    return d
+
+
+def current_strategy_version(conn: sqlite3.Connection, character_id: str) -> str | None:
+    r = conn.execute("SELECT version FROM strategy_pointer WHERE character_id=?",
+                     (character_id,)).fetchone()
+    return r[0] if r else None
+
+
+def set_strategy_status(conn: sqlite3.Connection, character_id: str, version: str,
+                        status: str) -> None:
+    assert status in ("proposed", "accepted", "rejected", "reverted")
+    conn.execute("UPDATE strategy_versions SET status=? WHERE character_id=? AND version=?",
+                 (status, character_id, version))
+    if status == "accepted":
+        conn.execute(
+            "INSERT INTO strategy_pointer (character_id, version) VALUES (?,?)"
+            " ON CONFLICT(character_id) DO UPDATE SET version=excluded.version",
+            (character_id, version))
+    conn.commit()
+
+
+def add_memory_typed(conn: sqlite3.Connection, character_id: str, text: str,
+                     source_audition: str, mtype: str = "event",
+                     status: str = "proposed", entities: list | None = None) -> str:
+    assert mtype in ("event", "relationship", "gag", "callback_opportunity", "material")
+    assert status in ("canonical", "proposed", "rejected")
+    mid = new_id("mem")
+    conn.execute("INSERT INTO memories (id, character_id, text, source_audition, created_at,"
+                 " type, status, entities) VALUES (?,?,?,?,?,?,?,?)",
+                 (mid, character_id, text, source_audition, __import__("time").time(),
+                  mtype, status, json.dumps(entities or [])))
+    conn.commit()
+    return mid
+
+
+def retrieve_memories(conn: sqlite3.Connection, character_id: str, scenario_id: str = "",
+                      limit: int = 8) -> list[dict]:
+    """Ranked retrieval: canonical first, unused callbacks boosted, recent weighted."""
+    rows = [dict(r) for r in conn.execute(
+        "SELECT * FROM memories WHERE character_id=? AND status != 'rejected'",
+        (character_id,)).fetchall()]
+    scored = []
+    for m in rows:
+        s = 0.0
+        if m["status"] == "canonical":
+            s += 2.0
+        if m["type"] == "callback_opportunity" and not m["callback_count"]:
+            s += 2.0
+        s += min(1.0, (m["created_at"] or 0) / 1e12)
+        try:
+            ents = json.loads(m.get("entities") or "[]")
+        except Exception:
+            ents = []
+        if scenario_id and any(e and e in scenario_id for e in ents):
+            s += 1.5
+        scored.append((s, m))
+    scored.sort(key=lambda x: -x[0])
+    return [m for _, m in scored[:limit]]
+
+
+def propose_callbacks(conn: sqlite3.Connection, character_id: str,
+                      scenario_id: str) -> list[dict]:
+    """Callback candidates with evidence — generator decides, never auto-inserted."""
+    mems = retrieve_memories(conn, character_id, scenario_id, limit=12)
+    out = []
+    for m in mems:
+        if m["type"] not in ("event", "gag", "callback_opportunity"):
+            continue
+        if m["status"] == "proposed" and m["callback_count"] > 0:
+            continue
+        out.append({"memory_id": m["id"], "type": m["type"], "text": m["text"],
+                    "status": m["status"], "prior_uses": m["callback_count"],
+                    "source_audition": m["source_audition"],
+                    "needs": "new consequence in this scenario; never repeat the old punchline"})
+    return out[:5]
+
+
+def record_battle(conn: sqlite3.Connection, job_id: str, character_id: str,
+                  table: list, winner_idx: int = 0) -> None:
+    import time as _t, json as _j
+    conn.execute("INSERT OR REPLACE INTO battle_runs (job_id, character_id, table_json,"
+                 " winner_idx, blind_votes, created_at) VALUES (?,?,?,?,?,?)",
+                 (job_id, character_id, _j.dumps(table), winner_idx, "[]", _t.time()))
     conn.commit()

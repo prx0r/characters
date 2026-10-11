@@ -79,5 +79,7 @@ def battle(character_id: str, recent: list[dict], strategy: dict, n: int = 3,
     cands.sort(key=lambda c: -c["score"]["total"])
     table = [{"modulator": c["gen"]["decision"]["instance"]["modulator"],
               "operator": c["gen"]["decision"]["instance"]["operator"],
+              "scenario": c["gen"]["scenario"]["id"],
+              "text": c["gen"]["full_text"],
               "total": c["score"]["total"], "parts": c["score"]["parts"]} for c in cands]
     return {"winner": cands[0]["gen"], "winner_score": cands[0]["score"], "table": table}
