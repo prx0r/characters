@@ -95,11 +95,18 @@ def list_characters() -> list[dict]:
     portraits = {"no_nose_nolan": "/static/portraits/nolan.jpg",
                  "reptilian_ralph_middle_management": "/static/portraits/ralph.jpg",
                  "rudy_dulce_hvac": "/static/portraits/rudy.jpg"}
+    vibes = {"no_nose_nolan": {"url": "/static/vibes/nolan.jpg",
+                               "credit": "Bloodhound photo, Wikimedia Commons (CC BY-SA 3.0)"},
+             "reptilian_ralph_middle_management": {"url": "/static/vibes/ralph.jpg",
+                                                  "credit": "Basilisk, Aldrovandi 1642 (public domain)"},
+             "rudy_dulce_hvac": {"url": "/static/vibes/ralph.jpg",
+                                 "credit": "Basilisk, Aldrovandi 1642 (public domain)"}}
     cards = []
     for c in chars:
         cards.append({"id": c["id"], "name": c["name"], "deal": c["deal"][:160],
                       "voice_id": c["voice_id"],
-                      "portrait_url": portraits.get(c["id"], "")})
+                      "portrait_url": portraits.get(c["id"], ""),
+                      "vibe": vibes.get(c["id"], {})})
     return cards
 
 

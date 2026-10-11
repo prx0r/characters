@@ -22,6 +22,7 @@ button{cursor:pointer}button:disabled{opacity:.4;cursor:default}
 <h1>Audition <span class="muted">P0 — listen · POG · feedback · next</span></h1>
 <div class="row">
 <img id="portrait" src="" alt="" style="width:96px;height:96px;border-radius:16px;object-fit:cover;display:none">
+<div><img id="vibe" src="" alt="" style="width:96px;height:96px;border-radius:16px;object-fit:cover;display:none;filter:sepia(.4)"><div id="vibecredit" class="muted" style="font-size:11px;max-width:120px"></div></div>
 <select id="charSel"></select>
 <button id="genBtn">Generate Minute</button><button id="battleBtn" title="generate 3, classify, ship the winner">⚔️ Battle</button>
 <span id="status" class="muted"></span>
@@ -55,7 +56,7 @@ const $=id=>document.getElementById(id);
 async function api(m,u,b){const r=await fetch(u,{method:m,headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined});return r.json();}
 let CHARS=[];
 async function loadChars(){const d=await api('GET','/api/auditions/characters');CHARS=d.characters;$('charSel').innerHTML=d.characters.map(c=>`<option value="${c.id}">${c.name} — ${c.deal.slice(0,60)}…</option>`).join('');showPortrait();loadHistory();}
-function showPortrait(){const c=CHARS.find(x=>x.id===$('charSel').value);const p=$('portrait');if(c&&c.portrait_url){p.src=c.portrait_url;p.style.display='block';}else{p.style.display='none';}}
+function showPortrait(){const c=CHARS.find(x=>x.id===$('charSel').value);const p=$('portrait');if(c&&c.portrait_url){p.src=c.portrait_url;p.style.display='block';}else{p.style.display='none';}const v=$('vibe');if(c&&c.vibe&&c.vibe.url){v.src=c.vibe.url;v.style.display='block';$('vibecredit').textContent=c.vibe.credit||'';}else{v.style.display='none';$('vibecredit').textContent='';}}
 async function loadHistory(){const c=$('charSel').value;const d=await api('GET','/api/auditions?character_id='+c);$('history').innerHTML=d.auditions.map(a=>`<div>🎙️ ${a.id.slice(-6)} · ${a.scenario_id} · ⭐${a.feedback?a.feedback.rating:'–'} · POGs:${a.pogs.length} <button onclick="replay('${a.id}')">replay</button></div>`).join('')||'<span class="muted">none yet</span>';}
 async function replay(id){const d=await api('GET','/api/auditions/'+id);setAud(d);$('audio').play();}
 function setAud(d){AUD=d;RATING=null;document.querySelectorAll('#rates button').forEach(b=>b.classList.remove('sel'));$('fbBtn').disabled=!d||d.status!=='ready';$('nextBtn').disabled=true;
