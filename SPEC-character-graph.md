@@ -103,3 +103,16 @@ scenario + memories into one JSON state. One parallel call per instance
 (`jev_decide.decide_instance`); conf>=0.6 adopts, else bandit; all
 confidences stored on the instance. No key = same questions, heuristic
 answers, comparable behavior. Jev never writes text.
+
+## v1.4 — Git-backed evolution (CG/MW lessons, 2026-10-11)
+- Git owns identity/strategy/memories-as-ledger; SQLite owns append-only
+  evidence (auditions, POGs, takes, views, retention). Never the reverse.
+- Every instance carries content-addressed `run_id` (seed+scenario+
+  modulator+operator+strategy+model+seed+beats). Same config, same id.
+  Receipts identify; they don't reproduce LLM/TTS calls.
+- Strategy revisions are commits citing audition IDs + uncertainty; seed
+  changes are separately gated and rare. No auto-commit per set.
+- Evidence stays split by source (POG vs room vs retention vs YouTube);
+  preference derives late, with uncertainty, never by copying MW weights.
+- Briefing beats injection: future agents get `get_performance_brief`,
+  not raw analytics in the system prompt. Deferred until an agent exists.
