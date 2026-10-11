@@ -67,6 +67,8 @@ def load_freak_character(slug: str) -> dict | None:
     if not d:
         return None
     persona = d.get("persona", {}) or {}
+    dc = d.get("dramatic_core", {}) or {}
+    mot = d.get("motivations", {}) or {}
     return {
         "id": slug.replace("-", "_"),
         "name": d.get("name", slug),
@@ -74,12 +76,12 @@ def load_freak_character(slug: str) -> dict | None:
         "voice_id": ((d.get("voice") or {}).get("voice_id")) or "en-US-ChristopherNeural",
         "traits": persona.get("facts", []),
         "tells": [],
-        "want": "respect",
-        "fear": "exposure",
-        "blind_spots": ["own nature"],
-        "action_policy": persona.get("interview_style", ""),
-        "preferred_theories": ["rigidity", "displacement"],
-        "threads": [],
+        "want": dc.get("want", (mot.get("seeks") or ["respect"])[0]),
+        "fear": dc.get("fear", (mot.get("avoids") or ["exposure"])[0]),
+        "blind_spots": dc.get("blind_spots") or ["unknown — seed has no blind spots recorded"],
+        "action_policy": (d.get("action_policy") or {}).get("default_strategy") or persona.get("interview_style", ""),
+        "preferred_theories": d.get("preferred_theories") or ["rigidity", "displacement"],
+        "threads": d.get("threads", []),
         "raw": d,
     }
 
@@ -326,10 +328,32 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
     perf = mod.get("performative", {}) or mod.get("delivery", {})
     demph = perf.get("emphasis_delta", 0)
     ppause = perf.get("pause_mult", 1.0)
+    # Stateful energy (Shikigami pattern): prior energy decays toward 40,
+    # modulator arousal nudges it; capped, no feedback spiral.
+    try:
+        import store as _estore
+        _ec = _estore.connect()
+        try:
+            prior_e = _estore.get_energy(_ec, character["id"])
+        finally:
+            _ec.close()
+    except Exception:
+        prior_e = 40.0
+    arousal = (mod.get("emotional", {}) or {}).get("arousal", 0.5)
+    energy = max(0.0, min(80.0, prior_e + (40.0 - prior_e) * 0.3 + (arousal - 0.5) * 20.0))
+    try:
+        _ec2 = _estore.connect()
+        try:
+            _estore.set_energy(_ec2, character["id"], energy)
+        finally:
+            _ec2.close()
+    except Exception:
+        pass
     # Situated mind: emotion + arousal + status + restraint interaction.
     restraint = ((character.get("raw", {}) or {}).get("expression", {}) or {}).get("emotional_restraint", "medium")
     emo = (mod.get("emotional", {}) or {})
     state = {"emotion": modulator, "arousal": emo.get("arousal", 0.5),
+             "energy": round(energy, 1), "prior_energy": round(prior_e, 1),
              "defensiveness": emo.get("defensiveness", 0.5),
              "perceived_status": "threatened" if emo.get("defensiveness", 0.5) >= 0.7 else "secure",
              "restraint": restraint,

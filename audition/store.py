@@ -448,3 +448,18 @@ def record_battle(conn: sqlite3.Connection, job_id: str, character_id: str,
                  " winner_idx, blind_votes, created_at) VALUES (?,?,?,?,?,?)",
                  (job_id, character_id, _j.dumps(table), winner_idx, "[]", _t.time()))
     conn.commit()
+
+
+def get_energy(conn: sqlite3.Connection, character_id: str) -> float:
+    conn.execute("CREATE TABLE IF NOT EXISTS energy_state (character_id TEXT PRIMARY KEY,"
+                 " energy REAL NOT NULL, updated_at REAL NOT NULL)")
+    r = conn.execute("SELECT energy FROM energy_state WHERE character_id=?", (character_id,)).fetchone()
+    return float(r[0]) if r else 40.0
+
+
+def set_energy(conn: sqlite3.Connection, character_id: str, energy: float) -> None:
+    import time as _t
+    conn.execute("INSERT INTO energy_state (character_id, energy, updated_at) VALUES (?,?,?)"
+                 " ON CONFLICT(character_id) DO UPDATE SET energy=excluded.energy,"
+                 " updated_at=excluded.updated_at", (character_id, max(0.0, min(80.0, energy)), _t.time()))
+    conn.commit()
