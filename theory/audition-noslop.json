@@ -1,0 +1,66 @@
+[
+ {
+  "id": "aud_take1",
+  "character": "no_nose_nolan",
+  "scenario": "s",
+  "is_ai": false,
+  "conf": 0.4519,
+  "words": 1
+ },
+ {
+  "id": "aud_a8a694dfbf35",
+  "character": "no_nose_nolan",
+  "scenario": "hf_agent_board",
+  "is_ai": false,
+  "conf": 0.1336,
+  "words": 124
+ },
+ {
+  "id": "aud_2d9a1a3b6c69",
+  "character": "no_nose_nolan",
+  "scenario": "pickup_routine",
+  "is_ai": false,
+  "conf": 0.0977,
+  "words": 127
+ },
+ {
+  "id": "aud_093a0815d2bd",
+  "character": "reptilian_ralph_middle_management",
+  "scenario": "ubi_royalties",
+  "is_ai": false,
+  "conf": 0.0694,
+  "words": 114
+ },
+ {
+  "id": "aud_580e13546856",
+  "character": "reptilian_ralph_middle_management",
+  "scenario": "safety_demon",
+  "is_ai": false,
+  "conf": 0.0425,
+  "words": 113
+ },
+ {
+  "id": "aud_f2a1a2c176cd",
+  "character": "reptilian_ralph_middle_management",
+  "scenario": "plague_lab",
+  "is_ai": false,
+  "conf": 0.0283,
+  "words": 116
+ },
+ {
+  "id": "aud_ffddd550ee8f",
+  "character": "reptilian_ralph_middle_management",
+  "scenario": "buddha_first_truth",
+  "is_ai": false,
+  "conf": 0.111,
+  "words": 106
+ },
+ {
+  "id": "aud_a6ecf818eb70",
+  "character": "no_nose_nolan",
+  "scenario": "job_displacement",
+  "is_ai": false,
+  "conf": 0.1242,
+  "words": 125
+ }
+]

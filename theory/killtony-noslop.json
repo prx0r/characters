@@ -1,0 +1,1658 @@
+[
+ {
+  "comedian": "Ari Matti",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0008
+ },
+ {
+  "comedian": "Kam Patterson",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.2021
+ },
+ {
+  "comedian": "Bill Rhodes",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.1066
+ },
+ {
+  "comedian": "Rick Diaz",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.7183
+ },
+ {
+  "comedian": "Jacob Aclen",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.3568
+ },
+ {
+  "comedian": "Law Cogar",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0108
+ },
+ {
+  "comedian": "Deepak Sahota",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0271
+ },
+ {
+  "comedian": "Fiona Collie",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0011
+ },
+ {
+  "comedian": "Chuli Joy",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0055
+ },
+ {
+  "comedian": "Hans Kim",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0317
+ },
+ {
+  "comedian": "Andrew Dice Clay",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0412
+ },
+ {
+  "comedian": "Luke Stam",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0039
+ },
+ {
+  "comedian": "Joe Biden (Adam Ray)",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0423
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0036
+ },
+ {
+  "comedian": "Uncle Laser",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0424
+ },
+ {
+  "comedian": "Martin Phillips",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.3527
+ },
+ {
+  "comedian": "Joe Barnholt",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0536
+ },
+ {
+  "comedian": "Cameron Altmann",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.013
+ },
+ {
+  "comedian": "Cam Patterson",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0195
+ },
+ {
+  "comedian": "Liz Splat",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0324
+ },
+ {
+  "comedian": "Jackson Barr",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0293
+ },
+ {
+  "comedian": "Aaron Belisle",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.2595
+ },
+ {
+  "comedian": "Vic Shivdasani",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0169
+ },
+ {
+  "comedian": "Tim Hill",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.6169
+ },
+ {
+  "comedian": "David Lucas",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0118
+ },
+ {
+  "comedian": "Brian Holtzman",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0136
+ },
+ {
+  "comedian": "Ari Matti",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0086
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0061
+ },
+ {
+  "comedian": "Enrique Chac\u00f3n",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0051
+ },
+ {
+  "comedian": "Uncle Laser",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0019
+ },
+ {
+  "comedian": "Phoenix Provocateur",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0097
+ },
+ {
+  "comedian": "Adam Mitchell",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.4104
+ },
+ {
+  "comedian": "Javier Ramirez",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0134
+ },
+ {
+  "comedian": "Collin Sledge",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.1268
+ },
+ {
+  "comedian": "Gus Horn",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.3158
+ },
+ {
+  "comedian": "Jasper the Disappointing Mime",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0014
+ },
+ {
+  "comedian": "Seth Tilly",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.6532
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0015
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0157
+ },
+ {
+  "comedian": "Cameron Frisk",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.014
+ },
+ {
+  "comedian": "Charlie G",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0002
+ },
+ {
+  "comedian": "Daniel Velasquez",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.8996
+ },
+ {
+  "comedian": "Collin Sledge",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0235
+ },
+ {
+  "comedian": "Kanse Yasuda",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.3945
+ },
+ {
+  "comedian": "Jim Tally",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0651
+ },
+ {
+  "comedian": "Cam Patterson",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0134
+ },
+ {
+  "comedian": "Juanita",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0017
+ },
+ {
+  "comedian": "Lisa Smith",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0262
+ },
+ {
+  "comedian": "Will Owens",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0447
+ },
+ {
+  "comedian": "Martin Phillips",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0848
+ },
+ {
+  "comedian": "Offender",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0937
+ },
+ {
+  "comedian": "Ryan Adam",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.1589
+ },
+ {
+  "comedian": "Ari Matty",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0816
+ },
+ {
+  "comedian": "Kam Patterson",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0059
+ },
+ {
+  "comedian": "Ryan Sharp",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.1119
+ },
+ {
+  "comedian": "Chris Dunn",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0005
+ },
+ {
+  "comedian": "Fiona Colli",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1295
+ },
+ {
+  "comedian": "Matt Atkins",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0123
+ },
+ {
+  "comedian": "Maniac",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0596
+ },
+ {
+  "comedian": "Mitch Crawlenger",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.2301
+ },
+ {
+  "comedian": "Yoanna Dixon",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.1849
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1697
+ },
+ {
+  "comedian": "Uncle Laser",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0003
+ },
+ {
+  "comedian": "AJ Jackson",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0007
+ },
+ {
+  "comedian": "Feminist Stacy",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0168
+ },
+ {
+  "comedian": "Hans Kim",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0043
+ },
+ {
+  "comedian": "Poncho",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0062
+ },
+ {
+  "comedian": "Josh Gideon",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0088
+ },
+ {
+  "comedian": "Jordan Pablo",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.6049
+ },
+ {
+  "comedian": "Audrey Scott",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0087
+ },
+ {
+  "comedian": "Gordon Dixon",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0089
+ },
+ {
+  "comedian": "Neil Rubinstein",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0727
+ },
+ {
+  "comedian": "Riley Gilmore",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0644
+ },
+ {
+  "comedian": "Patrick Christopher",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0017
+ },
+ {
+  "comedian": "Ray Cheneby",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.4419
+ },
+ {
+  "comedian": "Mike Aiobebe",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.337
+ },
+ {
+  "comedian": "Kam Patterson",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0072
+ },
+ {
+  "comedian": "David Jolly",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.002
+ },
+ {
+  "comedian": "Joseph Paul Alampi",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.1357
+ },
+ {
+  "comedian": "Isaac Kane Brown",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0538
+ },
+ {
+  "comedian": "Chaddo",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0337
+ },
+ {
+  "comedian": "Zach Hollis",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0065
+ },
+ {
+  "comedian": "Tommy Tickles",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0137
+ },
+ {
+  "comedian": "Kansai Yasuda",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1305
+ },
+ {
+  "comedian": "Alex Tarchun",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0042
+ },
+ {
+  "comedian": "Cameron Frisk",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0167
+ },
+ {
+  "comedian": "Alex O'Brien",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0001
+ },
+ {
+  "comedian": "Lisa Jane Spencer",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.5053
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0708
+ },
+ {
+  "comedian": "Uncle Lazer",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0763
+ },
+ {
+  "comedian": "Zeth Burton",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.6042
+ },
+ {
+  "comedian": "Ian Simon",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0035
+ },
+ {
+  "comedian": "Lucas Hinderlighter",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0063
+ },
+ {
+  "comedian": "Phil Smith",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0009
+ },
+ {
+  "comedian": "Cam Patterson",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0017
+ },
+ {
+  "comedian": "Liv Taylor",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0109
+ },
+ {
+  "comedian": "Alex Tarshun",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.5793
+ },
+ {
+  "comedian": "Nicholas Hartley",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0083
+ },
+ {
+  "comedian": "Cassandra Hartford",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0372
+ },
+ {
+  "comedian": "Jovan Afzali",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0301
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0295
+ },
+ {
+  "comedian": "Fiona Collie",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.7717
+ },
+ {
+  "comedian": "Kenny Cabanau",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0046
+ },
+ {
+  "comedian": "Dustin Callahan",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0742
+ },
+ {
+  "comedian": "Cassandra Ramos",
+  "crowd": "roaring",
+  "is_ai": true,
+  "conf": 0.9655
+ },
+ {
+  "comedian": "BC",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0005
+ },
+ {
+  "comedian": "Jonathan Rachel's",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.8406
+ },
+ {
+  "comedian": "Aaron Belisle",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0238
+ },
+ {
+  "comedian": "Jeremiah Maltez",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0683
+ },
+ {
+  "comedian": "Stefan Ramirez",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0359
+ },
+ {
+  "comedian": "Ari Matti",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.542
+ },
+ {
+  "comedian": "Caleb Leese",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0229
+ },
+ {
+  "comedian": "Evan Burkes",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0018
+ },
+ {
+  "comedian": "Finnegan Timothy O'Malley",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1791
+ },
+ {
+  "comedian": "Rick Diaz",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.067
+ },
+ {
+  "comedian": "David Jolly",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0028
+ },
+ {
+  "comedian": "Drew Nickens",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.674
+ },
+ {
+  "comedian": "Jack Shaw",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.5868
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0034
+ },
+ {
+  "comedian": "Jack Shaw",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.568
+ },
+ {
+  "comedian": "Jesse Saldana",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.2884
+ },
+ {
+  "comedian": "Ari Matti",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.009
+ },
+ {
+  "comedian": "Alex Hurtline",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0917
+ },
+ {
+  "comedian": "AJ Iglesius",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0002
+ },
+ {
+  "comedian": "Fiona Cali",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.5331
+ },
+ {
+  "comedian": "Sir Winston Pickles",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1923
+ },
+ {
+  "comedian": "Offender",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0258
+ },
+ {
+  "comedian": "Sunny Castillo",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0364
+ },
+ {
+  "comedian": "David Lucas",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.143
+ },
+ {
+  "comedian": "Deepak Panny",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0025
+ },
+ {
+  "comedian": "Kelly Lusk",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0004
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1783
+ },
+ {
+  "comedian": "Uncle Laser",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0
+ },
+ {
+  "comedian": "Sir Winston Pickles",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.3018
+ },
+ {
+  "comedian": "Jenny Anne",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0105
+ },
+ {
+  "comedian": "Jimmy Clifford",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.4232
+ },
+ {
+  "comedian": "Liv Taylor",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0487
+ },
+ {
+  "comedian": "Benny G",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.1115
+ },
+ {
+  "comedian": "Ty Marion",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0537
+ },
+ {
+  "comedian": "Ben Bankas",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0264
+ },
+ {
+  "comedian": "Dave the Butcher",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0262
+ },
+ {
+  "comedian": "Rob White",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0338
+ },
+ {
+  "comedian": "Just Greg",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0105
+ },
+ {
+  "comedian": "Dimitri King",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0014
+ },
+ {
+  "comedian": "Mason Bird",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0029
+ },
+ {
+  "comedian": "Mike Holder",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.3613
+ },
+ {
+  "comedian": "Matt Rivera",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0049
+ },
+ {
+  "comedian": "Spencer Esgridge",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0566
+ },
+ {
+  "comedian": "Uncle Lazer",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0013
+ },
+ {
+  "comedian": "Ronaldo Mercado",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.2308
+ },
+ {
+  "comedian": "Aaron Silverstein",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0224
+ },
+ {
+  "comedian": "Cameron May",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.027
+ },
+ {
+  "comedian": "Doc Ferry",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.226
+ },
+ {
+  "comedian": "Colin Sledge",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0031
+ },
+ {
+  "comedian": "Juanita",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0263
+ },
+ {
+  "comedian": "Pat O'Neill",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0034
+ },
+ {
+  "comedian": "Olivia Coughlin",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.1614
+ },
+ {
+  "comedian": "Mario Z",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.2876
+ },
+ {
+  "comedian": "Hans Kim",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0261
+ },
+ {
+  "comedian": "Isaac Kane Brown",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0056
+ },
+ {
+  "comedian": "Auggie Lee",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.029
+ },
+ {
+  "comedian": "John Bechdel",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0004
+ },
+ {
+  "comedian": "Alex Tarno",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.012
+ },
+ {
+  "comedian": "Jackson Namie",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.3625
+ },
+ {
+  "comedian": "Frank Kidd",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0061
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0018
+ },
+ {
+  "comedian": "Danny Martinello (Wilson White)",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0566
+ },
+ {
+  "comedian": "Medina",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.035
+ },
+ {
+  "comedian": "Dex",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.009
+ },
+ {
+  "comedian": "Busco Jones",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0066
+ },
+ {
+  "comedian": "Andrew Wolf",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0
+ },
+ {
+  "comedian": "Frankie McGough",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.7757
+ },
+ {
+  "comedian": "Fang Chao",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0233
+ },
+ {
+  "comedian": "Patrick Cassaday",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0021
+ },
+ {
+  "comedian": "Big Chuck",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.5176
+ },
+ {
+  "comedian": "Matthew Coffin",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0283
+ },
+ {
+  "comedian": "Law Koger",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0005
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0006
+ },
+ {
+  "comedian": "JJ Alexander",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0002
+ },
+ {
+  "comedian": "Yaehi",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0035
+ },
+ {
+  "comedian": "Blake Apateau",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0027
+ },
+ {
+  "comedian": "Tommy Tickles",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0015
+ },
+ {
+  "comedian": "Asan Ahmad",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0101
+ },
+ {
+  "comedian": "Tony Scar",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.5936
+ },
+ {
+  "comedian": "Colin Sledge",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0033
+ },
+ {
+  "comedian": "Timely Rain",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1522
+ },
+ {
+  "comedian": "Biddy O'Loughlin",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0304
+ },
+ {
+  "comedian": "Jimmy Prescott",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0219
+ },
+ {
+  "comedian": "Matt Rivas",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0276
+ },
+ {
+  "comedian": "Emmanuel Martinez",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.8145
+ },
+ {
+  "comedian": "Saul Wilson",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.1838
+ },
+ {
+  "comedian": "Daniel Shepherd",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0029
+ },
+ {
+  "comedian": "Aaron Belisle",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0112
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0
+ },
+ {
+  "comedian": "Sancho Pancho Villa",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0001
+ },
+ {
+  "comedian": "Mario Zapata",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0114
+ },
+ {
+  "comedian": "Robert Carroll",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0011
+ },
+ {
+  "comedian": "Tariq Morales",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0564
+ },
+ {
+  "comedian": "Dedrick Flynn",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0506
+ },
+ {
+  "comedian": "Tayja",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.8788
+ },
+ {
+  "comedian": "Greg McHowan",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0037
+ },
+ {
+  "comedian": "Jack Shaw",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.6933
+ },
+ {
+  "comedian": "BHC Tommy",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.102
+ },
+ {
+  "comedian": "Lorenzo Tyree",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.4822
+ },
+ {
+  "comedian": "Sion Lazar",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.1723
+ },
+ {
+  "comedian": "Layla Ingalls",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.2311
+ },
+ {
+  "comedian": "Timmy No Breaks",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.3544
+ },
+ {
+  "comedian": "Uncle Lazer",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0003
+ },
+ {
+  "comedian": "Seth Shepard",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.1543
+ },
+ {
+  "comedian": "Julian Casas",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0103
+ },
+ {
+  "comedian": "Jay Legend",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0277
+ },
+ {
+  "comedian": "Derek Larson",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.036
+ },
+ {
+  "comedian": "Nick Cano",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0004
+ },
+ {
+  "comedian": "Randolph Davies",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.6435
+ },
+ {
+  "comedian": "Pat O'Neill",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0013
+ },
+ {
+  "comedian": "Dedrick Flynn",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.6156
+ },
+ {
+  "comedian": "Vincenzo Maraschio",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.04
+ },
+ {
+  "comedian": "Jerry Debo Smith",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.2479
+ },
+ {
+  "comedian": "Ralphie Da Bartender",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.0348
+ },
+ {
+  "comedian": "Tony Star",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0216
+ },
+ {
+  "comedian": "Dedrick Flynn",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0056
+ },
+ {
+  "comedian": "Princess Rubber Ducky",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.2886
+ },
+ {
+  "comedian": "Max Imum",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0344
+ },
+ {
+  "comedian": "Nilo Mac",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.1878
+ },
+ {
+  "comedian": "Blix Hanson",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0076
+ },
+ {
+  "comedian": "Chris Longoria",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0486
+ },
+ {
+  "comedian": "Sir Winston Pickles",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0079
+ },
+ {
+  "comedian": "Ronnie Fryer",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0073
+ },
+ {
+  "comedian": "G-Pow",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0408
+ },
+ {
+  "comedian": "David Lucas",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0408
+ },
+ {
+  "comedian": "David Hall",
+  "crowd": "silence",
+  "is_ai": true,
+  "conf": 0.9516
+ },
+ {
+  "comedian": "Stephen Glenn",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.1256
+ },
+ {
+  "comedian": "Suede McCoy",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0663
+ },
+ {
+  "comedian": "Pat O'Neill",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.003
+ },
+ {
+  "comedian": "Pat O'Neill",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0001
+ },
+ {
+  "comedian": "Darian Terry",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.5814
+ },
+ {
+  "comedian": "DJ Chaotic",
+  "crowd": "light",
+  "is_ai": false,
+  "conf": 0.105
+ },
+ {
+  "comedian": "Chris Caruso",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.001
+ },
+ {
+  "comedian": "Eric Spicely",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0017
+ },
+ {
+  "comedian": "Luis Cervantes",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0421
+ },
+ {
+  "comedian": "Michael Kay",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0381
+ },
+ {
+  "comedian": "Daisuke Muramoto",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0013
+ },
+ {
+  "comedian": "Remington Blake Windsor",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.9108
+ },
+ {
+  "comedian": "Angel Diaz",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.4317
+ },
+ {
+  "comedian": "Ty Funny",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.2315
+ },
+ {
+  "comedian": "Bobby Ludlam",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0176
+ },
+ {
+  "comedian": "Will Hunsinger",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0263
+ },
+ {
+  "comedian": "Sean Glazer",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0031
+ },
+ {
+  "comedian": "David Jolly",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0004
+ },
+ {
+  "comedian": "Mason Bird",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.9196
+ },
+ {
+  "comedian": "Daniel Harder",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0179
+ },
+ {
+  "comedian": "Otis Hicks",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.1229
+ },
+ {
+  "comedian": "Adam Luckey",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0083
+ },
+ {
+  "comedian": "Clay McLaren",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0886
+ },
+ {
+  "comedian": "Javi Ballon",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.9088
+ },
+ {
+  "comedian": "Dedrick Flynn",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0255
+ },
+ {
+  "comedian": "Brock White Lions",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.1235
+ },
+ {
+  "comedian": "Megan Knights",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0647
+ },
+ {
+  "comedian": "Layla",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.1864
+ },
+ {
+  "comedian": "Mikey Genosi",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0003
+ },
+ {
+  "comedian": "Austin Gerstenschlager",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0222
+ },
+ {
+  "comedian": "Aaron Heltz",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0125
+ },
+ {
+  "comedian": "Pat O'Neill",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1388
+ },
+ {
+  "comedian": "Iaya",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0214
+ },
+ {
+  "comedian": "Remy Swice",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0003
+ },
+ {
+  "comedian": "Lino Rodriguez",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.4315
+ },
+ {
+  "comedian": "Joe Hansen",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0005
+ },
+ {
+  "comedian": "Sir Winston Pickles",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0642
+ },
+ {
+  "comedian": "Taylor Ferrer",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0021
+ },
+ {
+  "comedian": "Michael Moses",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0095
+ },
+ {
+  "comedian": "Dedrick Flynn",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.1865
+ },
+ {
+  "comedian": "Lorenzo Tyre",
+  "crowd": "silence",
+  "is_ai": false,
+  "conf": 0.0016
+ },
+ {
+  "comedian": "Buffy",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.4669
+ },
+ {
+  "comedian": "Lib Taylor",
+  "crowd": "big_laughs",
+  "is_ai": false,
+  "conf": 0.0154
+ },
+ {
+  "comedian": "Ian Sharp",
+  "crowd": "moderate",
+  "is_ai": false,
+  "conf": 0.0035
+ },
+ {
+  "comedian": "William Montgomery",
+  "crowd": "roaring",
+  "is_ai": false,
+  "conf": 0.0006
+ }
+]
