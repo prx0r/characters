@@ -324,7 +324,8 @@ def history():
 
 
 @app.post("/api/auditions/<aud_id>/memory")
-def add_memory(aud_id: str):    """Character learning: record a fictional event. Explicit, versioned, never auto."""
+def add_memory(aud_id: str):
+    """Character learning: record a fictional event. Explicit, versioned, never auto."""
     data = request.get_json(force=True) or {}
     text = (data.get("text") or "").strip()
     if not text or len(text) > 300:
