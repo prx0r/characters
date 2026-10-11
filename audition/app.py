@@ -72,6 +72,16 @@ def _run_generation(job_id: str, character_id: str):
         if slop.get("is_ai"):
             gen = generate.generate_minute(character_id, fb, strat, seed + 1)
             slop = {**generate.slop_check(gen["full_text"]), "vetoed_first": True}
+        try:
+            import slop_jev
+            fused = slop_jev.jev_slop(gen["full_text"])
+            slop["jev"] = {k: fused[k] for k in ("jev_mean", "fused", "verdict", "chooser") if k in fused}
+            if fused.get("verdict") == "slop" and not slop.get("is_ai"):
+                gen = generate.generate_minute(character_id, fb, strat, seed + 2)
+                slop = {**generate.slop_check(gen["full_text"]), "vetoed_first": True,
+                        "vetoed_by": "jev-fused"}
+        except Exception:
+            pass
         gen["decision"]["slop"] = slop
         # next-minute must be fresh: if scenario repeats and alternatives exist, repick once
         if gen["scenario"]["id"] in used:
