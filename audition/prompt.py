@@ -51,12 +51,41 @@ def build_style(modulator: str, mod: dict) -> str:
     perf = (mod.get("performative", {}) or {})
     emo = (mod.get("emotional", {}) or {})
     cog = (mod.get("cognitive", {}) or {})
-    return (f"Current state: {modulator}. {mod.get('tilt', '')} "
+    energy = int(emo.get("arousal", 0.5) * 80)
+    return (f"Current state: {modulator} (energy {energy}/80). {mod.get('tilt', '')} "
             f"Attention on {cog.get('attention', 'the situation')}. "
             f"Arousal {emo.get('arousal', 0.5)}. "
             f"Pace {'up' if perf.get('pace_delta', 0) > 0 else 'down'}, "
             f"pauses x{perf.get('pause_mult', 1.0)}. "
             f"Restraint interaction: {mod.get('restraint_interaction', '')}".strip())
+
+
+def affinity_segment(set_number: int, familiarity: str = "") -> str:
+    """Shikigami pattern: relationship depth modulates address.
+
+    Set 3 Nolan talks different than set 30 Nolan — shared history exists.
+    """
+    n = max(1, int(set_number or 1))
+    if n <= 2:
+        return "No shared history yet: introduce yourself through the joke, earn every laugh."
+    if n <= 10:
+        return (f"Set {n}: the room half-knows you. Lean on one running thread; "
+                f"do not explain old jokes. {familiarity}".strip())
+    return (f"Set {n}: regulars present. Callback freely; subvert one expectation "
+            f"they hold about you. {familiarity}".strip())
+
+
+def tts_params(modulator: str, mod: dict) -> dict:
+    """Modulator -> edge-tts params. Pace from performative, pitch by arousal."""
+    perf, emo = (mod.get("performative", {}) or {}), (mod.get("emotional", {}) or {})
+    pace = perf.get("pace_delta", 0)
+    rate = "slow" if pace <= -0.1 else ("fast" if pace >= 0.1 else "normal")
+    pitch = "+0Hz"
+    if emo.get("arousal", 0.5) >= 0.75:
+        pitch = "+40Hz"
+    elif emo.get("arousal", 0.5) <= 0.3:
+        pitch = "-30Hz"
+    return {"rate": rate, "pitch": pitch, "modulator": modulator}
 
 
 def build_context(scenario: dict, state: dict, memories: list[str],

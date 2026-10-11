@@ -387,6 +387,13 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
         b["end_ms"] = t + dur
         t += dur
     act = actor_decide(character, scenario, state, mems, tilt, explore)
+    try:
+        import prompt as _prompt
+        tts = _prompt.tts_params(modulator, mod)
+        set_no = len(used)
+        aff = _prompt.affinity_segment(set_no + 1)
+    except Exception:
+        tts, aff = {"rate": "normal", "pitch": "+0Hz"}, ""
     appraisal, goal, reaction = act["appraisal"], act["chosen_goal"], act["reaction"]
     shift = act["emotional_shift"]
     decision = {"action": f"Frame '{scenario['id']}' as proof of competence",
@@ -402,7 +409,7 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
                              "chooser": chooser, "chooser_confidence": mod_conf,
                              "operator_confidence": op_conf, "explore": explore,
                              "note": "director knows evidence; actor must never see this"},
-                "memory_refs": mems,
+                "memory_refs": mems, "tts_params": tts, "affinity": aff,
                 "config": {"seed": f"{character['id']}@seed_v{((character.get('raw', {}) or {}).get('seed_version', 1))}",
                            "scenario": scenario["id"], "state": state,
                            "policy": strategy.get("version", "strategy_01"),

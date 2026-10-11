@@ -122,9 +122,13 @@ def _run_generation(job_id: str, character_id: str):
 
 
 def _persist_ready(job_id: str, character_id: str, conn, gen: dict, strat: dict, seed: int) -> None:
-    JOBS[job_id].update({"status": "synthesising", "scenario_id": gen["scenario"]["id"]}); _job(job_id, character_id, JOBS[job_id].get("mode", "single"), "synthesising")
+    JOBS[job_id].update({"status": "synthesising", "scenario_id": gen["scenario"]["id"]})
     voice = tts_provider.VOICES.get(character_id, gen["character"].get("voice_id", "en-US-GuyNeural"))
-    audio = tts_provider.synthesize(job_id, gen["full_text"], voice)
+    tp = (gen.get("decision") or {}).get("tts_params") or {}
+    # edge-tts wants +NN% rate; map our named rates
+    rate = {"slow": "-15%", "normal": "+0%", "fast": "+12%"}.get(tp.get("rate", "normal"), "+0%")
+    audio = tts_provider.synthesize(job_id, gen["full_text"], voice,
+                                    rate=rate, pitch=tp.get("pitch", "+0Hz"))
     est_total = sum(b["end_ms"] - b["start_ms"] for b in gen["beats"])
     # scale beat timings to real audio duration
     scale = (audio["duration_ms"] / est_total) if est_total else 1.0

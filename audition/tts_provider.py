@@ -30,12 +30,13 @@ def estimate_ms(text: str, pauses_ms: int) -> int:
     return int(len(text.split()) / 2.6 * 1000) + pauses_ms
 
 
-async def _edge_save(text: str, voice: str, out: Path) -> None:
+async def _edge_save(text: str, voice: str, out: Path, rate: str = "+0%",
+                     pitch: str = "+0Hz") -> None:
     import edge_tts
     last: Exception | None = None
     for attempt in range(3):
         try:
-            await edge_tts.Communicate(text, voice).save(str(out))
+            await edge_tts.Communicate(text, voice, rate=rate, pitch=pitch).save(str(out))
             return
         except Exception as e:  # retry (transient net)
             last = e
@@ -60,7 +61,8 @@ def _espeak_save(text: str, out_wav: Path) -> None:
         raise RuntimeError("espeak failed")
 
 
-def synthesize(audition_id: str, text: str, voice: str) -> dict:
+def synthesize(audition_id: str, text: str, voice: str, rate: str = "+0%",
+               pitch: str = "+0Hz") -> dict:
     """Tries edge-tts, then piper-local, then espeak. Raises if all fail (no fake audio)."""
     errors = []
     # 1. edge-tts (best voices, needs Bing network)
@@ -68,7 +70,15 @@ def synthesize(audition_id: str, text: str, voice: str) -> dict:
         out = AUDIO_DIR / f"{audition_id}.mp3"
         if out.exists():
             out.unlink()
-        asyncio.run(_edge_save(text, voice, out))
+        asyncio.run(_edge_save(text, voice, out, rate=rate, pitch=pitch))
+        if out.exists() and out.stat().st_size >= 2000:
+            dur = _ffprobe_ms(out) or estimate_ms(text, 0)
+            return {"path": str(out), "duration_ms": dur,
+                    "provenance": ("edge-tts" + ("+ffprobe" if _ffprobe_ms(out) else "+estimated")
+                                   + f"|rate={rate}|pitch={pitch}"),
+                    "sha256": hashlib.sha256(out.read_bytes()).hexdigest()}
+    except Exception as e:
+        errors.append(f"edge: {e}")
         if out.exists() and out.stat().st_size >= 2000:
             dur = _ffprobe_ms(out) or estimate_ms(text, 0)
             return {"path": str(out), "duration_ms": dur,

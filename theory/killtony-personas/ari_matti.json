@@ -96,5 +96,42 @@
   ]
  },
  "masks": "unassigned \u2014 needs human review",
- "misinterpretation_rule": "unknown \u2014 needs multi-set observation"
+ "misinterpretation_rule": "unknown \u2014 needs multi-set observation",
+ "emotional_range": {
+  "emotions_observed": {
+   "defiant": 1,
+   "manic": 1,
+   "angry": 1,
+   "gleeful": 1
+  },
+  "energy_band": [
+   3,
+   3.64
+  ],
+  "self_directed_rate": 0.5,
+  "n_states": 4
+ },
+ "signature_devices": [
+  {
+   "mechanism": "benign_violation",
+   "sets": 4
+  },
+  {
+   "mechanism": "self_awareness",
+   "sets": 3
+  },
+  {
+   "mechanism": "specificity",
+   "sets": 3
+  },
+  {
+   "mechanism": "garden_path",
+   "sets": 2
+  },
+  {
+   "mechanism": "status_reversal",
+   "sets": 1
+  }
+ ],
+ "would_say_notes": "Say YES when: defiant energy with benign_violation, self_awareness, specificity. Say NO when: flat apology, earnest explainer, off-turf topics outside (observational, sex, relationships are home turf)."
 }
