@@ -22,28 +22,26 @@ def _first(cid: str, char: dict) -> str:
 
 
 def react(target_audition: dict, reactor_ids: list[str]) -> dict:
-    """Agents watch a set, react per beat. Returns manifest + audio + transcript."""
-    import generate as _gen
+    """Agents watch a set, react per beat. Graphs react, format stages."""
+    from graph_ops import CharacterGraph
     beats = target_audition.get("beats") or []
     order, transcript, parts = [], [], []
     tag = f"react_{int(time.time())}"
     for rid in reactor_ids:
-        ch = _char(rid)
-        first = _first(rid, ch)
-        style = ((ch.get("raw") or {}).get("persona") or {}).get("interview_style", "") or "deadpan"
+        g = CharacterGraph(rid)
         order.append({"reactor": rid, "lines": []})
         for b in beats:
             t = b.get("type", "setup")
             short = " ".join(b.get("text", "").split()[:7])
             if t == "punchline":
-                line = f"{first} here, {style}. HA! {short} — writing that one down."
+                line = f"{g.first} here. HA! {short} — writing that one down."
             elif t == "closer":
-                line = f"{first} verdict: {short}. mine was better."
+                line = f"{g.first} verdict: {short}. mine was better."
             elif t == "tag":
-                line = f"{first} again? {short}. noted in the ledger."
+                line = f"{g.first} again? {short}. noted."
             else:
-                line = f"{first} watching. {short}. go on."
-            a = F.speak_line(rid, line, f"{tag}_{rid}_{b.get('id')}")
+                line = f"{g.first} watching. {short}. go on."
+            a = g.say(line, f"{tag}_{rid}_{b.get('id')}")
             parts.append(a["path"])
             order[-1]["lines"].append({"at_ms": b.get("start_ms", 0), "text": line,
                                        "audio": a["path"], "dur": a["duration_ms"]})
@@ -56,28 +54,40 @@ def react(target_audition: dict, reactor_ids: list[str]) -> dict:
     return rec
 
 
-def podcast(topic: str, cast_ids: list[str], rounds: int = 2) -> dict:
-    """Clique roundtable: host opens, guests answer from worldview, host tags."""
+def podcast(topic: str, cast_ids: list[str], rounds: int = 2,
+            world_id: str = "") -> dict:
+    """Clique roundtable: any graphs, optional world fuel.
+
+    Distinct operations: graphs speak (graph_ops), world supplies news/lore
+    context (world_ops), this function only stages the format (formats).
+    """
+    from graph_ops import CharacterGraph
+    cast = [CharacterGraph(cid) for cid in cast_ids]
+    fuel = ""
+    if world_id:
+        from world_ops import World
+        w = World(world_id)
+        news = w.news(2)
+        if news:
+            fuel = " Fresh in: " + "; ".join(n["claim"][:100] for n in news)
     tag = f"pod_{int(time.time())}"
-    host = cast_ids[0]
-    guests = cast_ids[1:] or cast_ids[:1]
-    hc = _char(host)
-    script = [(host, f"Welcome back. Tonight: {topic}. {_first(host, hc)} presiding.")]
+    host = cast[0]
+    guests = cast[1:] or cast[:1]
+    script = [(host, f"Welcome back. Tonight: {topic}.{fuel} {host.first} presiding.")]
     for r in range(rounds):
-        for gid in guests:
-            g = _char(gid)
-            deal = (g.get("deal") or "")[:120]
-            blind = ", ".join(g.get("blind_spots", [])[:1])
-            script.append((gid, f"{_first(gid, g)} responding. {deal} Frankly I am blind to {blind}, but on {topic}: absolutely."))
-    script.append((host, f"{_first(host, hc)} closing. We solved nothing. Same time next week."))
+        for g in guests:
+            script.append((g, f"{g.first} responding. {g.deal[:120]} Frankly I am blind to "
+                              f"{', '.join(g.blind_spots[:1])}, but on {topic}: absolutely."))
+    script.append((host, f"{host.first} closing. We solved nothing. Same time next week."))
     parts, transcript = [], []
-    for i, (cid, line) in enumerate(script):
-        a = F.speak_line(cid, line, f"{tag}_{i}")
+    for i, (g, line) in enumerate(script):
+        a = g.say(line, f"{tag}_{i}")
         parts.append(a["path"])
-        transcript.append({"speaker": cid, "text": line, "audio": a["path"]})
+        transcript.append({"speaker": g.id, "text": line, "audio": a["path"]})
     out = F.AUDIO / f"{tag}.mp3"
     m = F.concat_mp3(parts, out)
-    rec = {"format": "podcast", "topic": topic, "cast": cast_ids, "audio": m, "transcript": transcript}
+    rec = {"format": "podcast", "topic": topic, "cast": cast_ids,
+           "world": world_id, "audio": m, "transcript": transcript}
     F.save_record("podcast", rec)
     return rec
 
@@ -126,16 +136,15 @@ def shanty(world_id: str, lines_per_verse: int = 4) -> dict:
 
 
 def surrounded(human_prompt: str, mob_ids: list[str]) -> dict:
-    """Text-first Surrounded: the mob answers the human. Scored by got_me."""
+    """Text-first Surrounded: mob graphs answer the human. Scored by got_me."""
+    from graph_ops import CharacterGraph
     tag = f"sur_{int(time.time())}"
     rounds = []
     for mid in mob_ids:
-        ch = _char(mid)
-        rule = ((ch.get("raw") or {}).get("misinterpretation_rule") or "I hear you")
-        want = ch.get("want", "victory")
+        g = CharacterGraph(mid)
         rounds.append({"mob": mid,
-                       "text": f"{_first(mid, ch)} stepping up. You said: {human_prompt[:140]}. "
-                               f"{rule}. All I want is {want} — and your laugh.",
+                       "text": f"{g.first} stepping up. You said: {human_prompt[:140]}. "
+                               f"{g.misrule or 'I hear you'}. All I want is {g.want or 'victory'} — and your laugh.",
                        "got_me": 0})
     rec = {"format": "surrounded", "prompt": human_prompt, "mob": mob_ids, "rounds": rounds}
     p = F.save_record("surrounded", rec)
