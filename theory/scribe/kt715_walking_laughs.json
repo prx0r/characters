@@ -1,0 +1,36 @@
+{
+  "laughs": [
+    {
+      "t": 10.94,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 28.02,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 35.54,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 44.58,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 50.0,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 56.58,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    }
+  ],
+  "claps": [],
+  "censored": []
+}

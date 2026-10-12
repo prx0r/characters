@@ -1,0 +1,81 @@
+{
+  "laughs": [
+    {
+      "t": 14.64,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 24.64,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 26.78,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 32.32,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 35.94,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 40.6,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 47.26,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 53.04,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 56.78,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 62.94,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 79.06,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 85.46,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 95.64,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 100.84,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    }
+  ],
+  "claps": [
+    {
+      "t": 1.22,
+      "type": "[audience cheering]"
+    }
+  ],
+  "censored": []
+}
