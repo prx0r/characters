@@ -84,10 +84,29 @@ def direct(audition: dict, rig: dict, stage: dict) -> dict:
     gest_budget = max(2, int(len(beats) * (0.5 if move_cap < 0.4 else 0.75)))
     actions = rig.get("gestures") or {}
 
+    def _pick(cands: list[str]) -> str | None:
+        for c in cands:
+            if c in actions:
+                return c
+        return None
+
+    opener = _pick(["suit_adjust", "scroll_check", "lantern_dim", "button_count",
+                    "ledger_tap", "head_tilt"]) or "look_audience"
+    reveal = _pick(["eye_glitch", "thunder_adjust", "lantern_dim", "peacock_pose",
+                    "statue_dodge", "tub_knock", "pamphlet_offer", "skirting_bow",
+                    "laurel_throw", "windscreen_demo", "mortar_mime", "eagle_summon",
+                    "thunder_adjust", "clipboard_tap", "snow_still"])
+    groan = _pick(["suit_adjust", "ledger_tap", "scroll_check", "button_count",
+                   "lantern_dim", "head_tilt"])
+    closer_g = _pick(["warm_rock_lean", "peacock_pose", "tub_knock", "statue_dodge",
+                      "skirting_bow", "laurel_throw", "windscreen_demo", "pamphlet_offer",
+                      "snow_still", "mortar_mime"])
+
     events: list[dict] = [
         {"t": 0, "kind": "lights", "id": "house_up"},
         {"t": 400, "kind": "enter", "from": "stage_left"},
-        {"t": 1300, "kind": "gesture", "id": "suit_adjust", "intensity": 0.4},
+        {"t": 1300, "kind": "gesture" if opener in actions else "look",
+         "id": opener, "intensity": 0.4},
         {"t": 2000, "kind": "camera", "id": "medium"},
         {"t": 2000, "kind": "speak_start"},
     ]
@@ -98,21 +117,21 @@ def direct(audition: dict, rig: dict, stage: dict) -> dict:
         if btype == "punchline":
             events.append({"t": t1, "kind": "hold", "ms": int(rig.get("punchline_hold_ms", 1200)),
                            "note": "stillness lets the laugh land"})
-            if "eye_glitch" in actions and used < gest_budget + 2:
-                events.append({"t": t1 + 400, "kind": "gesture", "id": "eye_glitch",
+            if reveal and used < gest_budget + 2:
+                events.append({"t": t1 + 400, "kind": "gesture", "id": reveal,
                                "intensity": 1.0, "beat": b.get("id")})
                 used += 1
             events.append({"t": t1 + 900, "kind": "camera", "id": "closeup"})
             events.append({"t": t1 + 2200, "kind": "camera", "id": "medium"})
         elif btype in ("tag", "misdirect") and used < gest_budget:
-            if "suit_adjust" in actions:
-                events.append({"t": t0 + 300, "kind": "gesture", "id": "suit_adjust",
+            if groan:
+                events.append({"t": t0 + 300, "kind": "gesture", "id": groan,
                                "intensity": 0.6, "beat": b.get("id")})
                 used += 1
             events.append({"t": t0, "kind": "expression", "id": "annoyed", "beat": b.get("id")})
         elif btype == "closer":
-            if "warm_rock_lean" in actions:
-                events.append({"t": max(0, t0 - 800), "kind": "gesture", "id": "warm_rock_lean",
+            if closer_g:
+                events.append({"t": max(0, t0 - 800), "kind": "gesture", "id": closer_g,
                                "intensity": 0.8, "beat": b.get("id")})
             events.append({"t": t0, "kind": "camera", "id": "pushin"})
             events.append({"t": t0, "kind": "expression", "id": "self_satisfied"})
