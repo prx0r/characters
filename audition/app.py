@@ -956,8 +956,29 @@ def arena_add():
         if not aud:
             return jsonify({"error": "unknown audition id"}), 404
         title = title or f"{aud['character_id']} · {aud['scenario_id']}"
+    elif kind == "bluesky":
+        # Import direction: any Bluesky post (video-friendly) can duel.
+        # Official embeds only; handle->DID via public API, no auth needed.
+        m = _re.search(r"bsky\.app/profile/([^/]+)/post/([A-Za-z0-9]+)", ref)
+        if not m:
+            return jsonify({"error": "need a Bluesky post URL (bsky.app/profile/…/post/…)"}), 400
+        handle, rkey = m.group(1), m.group(2)
+        try:
+            dh = _url.urlopen(
+                f"https://public.api.bsky.app/xrpc/com.atproto.identity.resolveHandle?handle={handle}",
+                timeout=15)
+            did = json.loads(dh.read().decode())["did"]
+            ph = _url.urlopen(
+                "https://public.api.bsky.app/xrpc/app.bsky.feed.getPosts?uris=" +
+                f"at%3A%2F%2F{did}%2Fapp.bsky.feed.post%2F{rkey}", timeout=15)
+            post = json.loads(ph.read().decode())["posts"][0]
+            txt = (post.get("record", {}) or {}).get("text", "")
+            title = title or (f"@{handle}: {txt[:90]}" if txt else f"@{handle} on Bluesky")
+        except Exception:
+            return jsonify({"error": "couldn't resolve that Bluesky post (deleted? private? typo?)"}), 400
+        ref = f"{did}/app.bsky.feed.post/{rkey}"
     else:
-        return jsonify({"error": "kind must be youtube|audition"}), 400
+        return jsonify({"error": "kind must be youtube|audition|bluesky"}), 400
     conn = _conn()
     try:
         if conn.execute("SELECT 1 FROM arena_contenders WHERE kind=? AND ref=?", (kind, ref)).fetchone():
