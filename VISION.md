@@ -79,3 +79,34 @@ Staging path: web prototype first (characters arrayed around the human's input
 box, text/voice in, each answers from its worldview + memory of past rounds) —
 VR when embodied real-time rigs exist. The format, the memory writes and the
 laugh data are renderer-independent and start now.
+
+### The seat auction (2026-10-12, owner's design)
+
+Surrounded runs as a live optimisation loop, one objective per session
+(make them laugh / prove them wrong):
+
+1. **Perceive.** Every character reads the human's live reactions — laughs,
+   weak spots, concessions — as timestamped events (POG discipline).
+2. **Hypothesise.** Each agent pairs the opening with a theory mechanism
+   (bisociation for the logician, unmask for the guarded, ...), citing its
+   worldview + memory of this human.
+3. **Bid.** Backend scores each bid into a confidence metric: posterior that
+   *this* mechanism lands on *this* human *now*, plus an exploration bonus so
+   newcomers get turns (Thompson sampling, not greedy argmax — otherwise one
+   bully holds the seat forever).
+4. **Seat.** Highest confidence performs; the puppet is animated arriving
+   first — the auction result IS the stage direction.
+5. **Score + update.** Laugh/concession detected → winner's mechanism posterior
+   rises, losers' falls, memories written. Next round re-bids from the new
+   posteriors.
+
+### Specialists, fact-checked live (2026-10-12)
+
+Put actual human specialists in the middle (a sleep researcher, a historian,
+a magician) and let the mob come at them — with every factual claim
+fact-checked in real time beside the stage. Characters supply the worldview
+collisions; retrieval supplies verdicts; the human supplies ground truth on
+both fronts (did it land? was it right?). A character that is funny AND right
+outranks one that is merely funny — and the ledger proves which is which.
+Consent + sourcing discipline from the theory-block spec applies doubled here:
+every checked claim carries source + search term, no exceptions.
