@@ -111,9 +111,34 @@ outranks one that is merely funny — and the ledger proves which is which.
 Consent + sourcing discipline from the theory-block spec applies doubled here:
 every checked claim carries source + search term, no exceptions.
 
-## Owner's last 5 messages — word for word (2026-10-12)
+## Worlds as graphs, seeded from DeityDB (2026-10-12)
 
-Saved verbatim on request. Typos intact.
+Each world IS a graph: residents as nodes, charged relationships as edges,
+lore claims as sourced annotations. Seeding is a query, not research —
+`/root/deitydb` holds 4,130 entities, 7,161 sourced relationships, 137
+traditions (Greek 599 deep; Egyptian/Norse/Mesopotamian canonical; Gnostic +
+Islamic incl. jinn). Query a tradition subgraph, paraphrase into
+`world_residents` + `world_relationships` (never verbatim). Borrowed lenses:
+D&D alignment+domains as personality axes; Historical/Devotional/Esoteric
+lenses as the respect guardrail (Devotional never comedy material);
+Prolog-style path queries as sketch-premise engines.
+
+Core mechanic: **edge + mechanism + lore = set premise.** The edge supplies
+tension, theory supplies the WHAT, lore supplies material; the character's
+`misinterpretation_rule` fires on the edge.
+
+Transfer science: `killtony-priors.json` is the human-world baseline.
+New worlds inherit mechanism priors only (never lines), then earn their own
+Wilson evidence in arena duels → a mechanism × world transfer matrix.
+
+Formats are subgraph shapes: sketch = 1 edge, roast = star, podcast = clique,
+movie = path, consciousness talk = ontology set, Surrounded = edges at the
+human, league = repeated edges over time. One engine, seven shows.
+
+Next horizon: an evolutionary loop over the graph (see research below) —
+selection by laugh-fitness, niches by mechanism × world.
+
+## Owner's last 5 messages — word for word (2026-10-12)
 
 **1.**
 yeah this is sick tehn eventually you can have worlds like galactic world - reptilians all teh sapce people  you can have greek god world u can have folk world and these can all be ecosystems of characters and then winners prototed to pogtown this is essentially what we are doing on teh backend anyway right then each world obviously we can map relationships within it to eachotehr like reptilians vs humans within there etc each world gets its own lore etc then the top 3 like league from the world get promotoed to pogtown then that brings a new dynamic because now instead of speaking to their world with shared worldview tehy can now present to 'humans' on virtual medium which adds another dimension to their already winning sets ! save exactly this as the vision its gold
