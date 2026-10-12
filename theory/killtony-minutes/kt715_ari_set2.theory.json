@@ -1,0 +1,156 @@
+{
+  "id": "kt715_ari_set2",
+  "model": "qwen-flash-character",
+  "episode": 715,
+  "set_number": 2,
+  "source_transcript_chars": 819,
+  "theory": {
+    "overall": {
+      "archetype": "incongruity",
+      "primary_operators": [
+        "literalize",
+        "double_interpret"
+      ],
+      "energy_arc": "flat_build",
+      "dominant_emotion": "deadpan",
+      "dominant_emotion_intensity": 0.3
+    },
+    "beats": [
+      {
+        "text_excerpt": "I was walking home last night. And guys will notice feeling",
+        "beat_type": "setup",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Stoic, hands in pockets, eyes forward.",
+        "vocal_hypothesis": "Monotone, measured pacing."
+      },
+      {
+        "text_excerpt": "You know when you're walking late at night and you're like behind a woman you don't know. And you're walking the same direction. And there's that tension.",
+        "beat_type": "escalation",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Leans slightly into the audience, mimicking a predator's posture.",
+        "vocal_hypothesis": "Drops voice low, whispers conspiratorially."
+      },
+      {
+        "text_excerpt": "She turns right, you turn right. And you're kind of in a rush, but you also don't want to seem like an assailant.",
+        "beat_type": "escalation",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Quickly pivots left and right, acting out the awkward synchronization.",
+        "vocal_hypothesis": "Speeds up rhythm, sounding flustered."
+      },
+      {
+        "text_excerpt": "It gets really strange, you know when you notice that she knows you're there as well.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Freezes mid-step, staring intensely at an invisible target.",
+        "vocal_hypothesis": "Pauses dramatically before delivering the next line."
+      },
+      {
+        "text_excerpt": "The body language changes a little bit, they start clutching the bag, warming up the hamstrings.",
+        "beat_type": "tag",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Clutches an imaginary purse and subtly sprints on the spot.",
+        "vocal_hypothesis": "Speaks in a breathless, panicked whisper."
+      },
+      {
+        "text_excerpt": "And then there's a really tense moment. You know like when they finally look.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Freezes, then slowly turns head back, eyes wide and unblinking.",
+        "vocal_hypothesis": "Dead silence before a quiet, nervous chuckle."
+      },
+      {
+        "text_excerpt": "Now you like got to try really hard to not walk like a rapist.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Walks stiffly, arms rigid, trying to project innocence through exaggerated awkwardness.",
+        "vocal_hypothesis": "Delivers the line with forced sincerity, almost pleading."
+      },
+      {
+        "text_excerpt": "Would a rapist do this? Then you take an alternate route. And then you reappear from another street.",
+        "beat_type": "tag",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Makes a dramatic U-turn, then pops back around the corner like a cartoon character.",
+        "vocal_hypothesis": "Speaks in a rapid, breathy cadence, mimicking panic."
+      },
+      {
+        "text_excerpt": "You got to be like, don't worry. I just live where you live.",
+        "beat_type": "closer",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Raises hands in a placating gesture, looking genuinely bewildered.",
+        "vocal_hypothesis": "Delivers the punchline with a flat, defeated tone, shrugging off the absurdity."
+      }
+    ],
+    "anger_manual": {
+      "present": false,
+      "if_present": {}
+    },
+    "notes": "The humor relies entirely on the absurd, literal interpretation of male anxiety and the physical escalation of the scenario. The energy stays mostly deadpan, but the status moves upward on each punchline reveal, highlighting the comedian's self-awareness of the ridiculousness of his own paranoia."
+  },
+  "anger_body_correlation": {
+    "note": "no granular yet"
+  },
+  "short": "/home/box/ari_matti_sets/shorts/kt715_walking_short.mp4"
+}

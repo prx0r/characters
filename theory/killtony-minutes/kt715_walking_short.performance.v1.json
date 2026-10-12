@@ -1,0 +1,785 @@
+{
+  "version": "performance.v1",
+  "source": "kt715_walking_short",
+  "duration_s": 58.58,
+  "method": "mediapipe_heuristic_v1",
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 2.93
+    },
+    {
+      "t": 0.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 2.93
+      }
+    },
+    {
+      "t": 1.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 4.612
+    },
+    {
+      "t": 1.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 1.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 4.612
+      }
+    },
+    {
+      "t": 2.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 2.067
+    },
+    {
+      "t": 2.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 2.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 2.067
+      }
+    },
+    {
+      "t": 3.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 1.193
+    },
+    {
+      "t": 3.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 1.193
+      }
+    },
+    {
+      "t": 4.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.578
+    },
+    {
+      "t": 4.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.578
+      }
+    },
+    {
+      "t": 5.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -1.059
+    },
+    {
+      "t": 5.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -1.059
+      }
+    },
+    {
+      "t": 6.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.018
+    },
+    {
+      "t": 6.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.018
+      }
+    },
+    {
+      "t": 7.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.124
+    },
+    {
+      "t": 7.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.124
+      }
+    },
+    {
+      "t": 8.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.276
+    },
+    {
+      "t": 8.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.276
+      }
+    },
+    {
+      "t": 9.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.376
+    },
+    {
+      "t": 9.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.376
+      }
+    },
+    {
+      "t": 10.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.812
+    },
+    {
+      "t": 10.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.812
+      }
+    },
+    {
+      "t": 11.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.18
+    },
+    {
+      "t": 11.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.18
+      }
+    },
+    {
+      "t": 12.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.691
+    },
+    {
+      "t": 12.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.691
+      }
+    },
+    {
+      "t": 13.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.54
+    },
+    {
+      "t": 13.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.54
+      }
+    },
+    {
+      "t": 14.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.02
+    },
+    {
+      "t": 14.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.02
+      }
+    },
+    {
+      "t": 15.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.87
+    },
+    {
+      "t": 15.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.87
+      }
+    },
+    {
+      "t": 16.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.834
+    },
+    {
+      "t": 16.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.834
+      }
+    },
+    {
+      "t": 17.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.998
+    },
+    {
+      "t": 17.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.998
+      }
+    },
+    {
+      "t": 18.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 2.932
+    },
+    {
+      "t": 18.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 18.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 2.932
+      }
+    },
+    {
+      "t": 19.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -1.139
+    },
+    {
+      "t": 19.0,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 19.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -1.139
+      }
+    },
+    {
+      "t": 20.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 1.541
+    },
+    {
+      "t": 20.0,
+      "kind": "gesture",
+      "value": "hand to face"
+    },
+    {
+      "t": 20.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 1.541
+      }
+    },
+    {
+      "t": 21.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -2.634
+    },
+    {
+      "t": 21.0,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 22.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.397
+    },
+    {
+      "t": 23.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.082
+    },
+    {
+      "t": 23.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 23.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.082
+      }
+    },
+    {
+      "t": 24.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 1.947
+    },
+    {
+      "t": 24.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 24.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 1.947
+      }
+    },
+    {
+      "t": 25.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 1.643
+    },
+    {
+      "t": 25.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 1.643
+      }
+    },
+    {
+      "t": 26.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 3.536
+    },
+    {
+      "t": 26.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 26.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 3.536
+      }
+    },
+    {
+      "t": 27.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.178
+    },
+    {
+      "t": 27.0,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 28.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -0.38
+    },
+    {
+      "t": 28.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 29.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -1.962
+    },
+    {
+      "t": 30.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -1.678
+    },
+    {
+      "t": 30.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 31.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -2.564
+    },
+    {
+      "t": 32.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.308
+    },
+    {
+      "t": 33.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.33
+    },
+    {
+      "t": 33.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 34.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.36
+    },
+    {
+      "t": 35.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.265
+    },
+    {
+      "t": 36.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.502
+    },
+    {
+      "t": 36.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 36.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.502
+      }
+    },
+    {
+      "t": 37.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.003
+    },
+    {
+      "t": 37.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 37.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.003
+      }
+    },
+    {
+      "t": 38.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 1.416
+    },
+    {
+      "t": 38.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 1.416
+      }
+    },
+    {
+      "t": 39.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 3.871
+    },
+    {
+      "t": 39.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 39.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 3.871
+      }
+    },
+    {
+      "t": 40.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.929
+    },
+    {
+      "t": 40.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.929
+      }
+    },
+    {
+      "t": 41.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.947
+    },
+    {
+      "t": 41.0,
+      "kind": "gesture",
+      "value": "hand to face"
+    },
+    {
+      "t": 41.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.947
+      }
+    },
+    {
+      "t": 42.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 1.842
+    },
+    {
+      "t": 42.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 42.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 1.842
+      }
+    },
+    {
+      "t": 43.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 3.059
+    },
+    {
+      "t": 43.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 43.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 3.059
+      }
+    },
+    {
+      "t": 44.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 4.45
+    },
+    {
+      "t": 44.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 44.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 4.45
+      }
+    },
+    {
+      "t": 45.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 5.187
+    },
+    {
+      "t": 45.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 45.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 5.187
+      }
+    },
+    {
+      "t": 46.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -2.152
+    },
+    {
+      "t": 46.0,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 47.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 1.765
+    },
+    {
+      "t": 47.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 47.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 1.765
+      }
+    },
+    {
+      "t": 48.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 3.875
+    },
+    {
+      "t": 48.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 48.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 3.875
+      }
+    },
+    {
+      "t": 49.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 2.781
+    },
+    {
+      "t": 49.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 49.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 2.781
+      }
+    },
+    {
+      "t": 50.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 1.447
+    },
+    {
+      "t": 50.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 1.447
+      }
+    },
+    {
+      "t": 51.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": -0.852
+    },
+    {
+      "t": 51.0,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 51.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": -0.852
+      }
+    },
+    {
+      "t": 52.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.315
+    },
+    {
+      "t": 53.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.528
+    },
+    {
+      "t": 54.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.452
+    },
+    {
+      "t": 55.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.421
+    },
+    {
+      "t": 56.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -3.124
+    },
+    {
+      "t": 57.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.038
+    },
+    {
+      "t": 57.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 57.0,
+      "kind": "speak_start",
+      "value": {
+        "energy": 0.038
+      }
+    },
+    {
+      "t": 58.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": -2.999
+    }
+  ],
+  "n_events": 127
+}

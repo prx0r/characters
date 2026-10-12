@@ -1,0 +1,544 @@
+{
+  "id": "kt704_ari_set1",
+  "model": "qwen-flash-character",
+  "episode": 704,
+  "set_number": 1,
+  "source_transcript_chars": 738,
+  "theory": {
+    "overall": {
+      "archetype": "incongruity",
+      "primary_operators": [
+        "double_interpret",
+        "literalize",
+        "garden_path",
+        "status_reversal"
+      ],
+      "energy_arc": "cold_then_hot",
+      "dominant_emotion": "gleeful",
+      "dominant_emotion_intensity": 0.8
+    },
+    "beats": [
+      {
+        "text_excerpt": "Which one of you bitches do I got to marry",
+        "beat_type": "setup",
+        "operators": [
+          "double_interpret",
+          "literalize"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "down",
+        "body_hypothesis": "Deadpan stare at the audience, hands on hips.",
+        "vocal_hypothesis": "Flat, matter-of-fact monotone."
+      },
+      {
+        "text_excerpt": "to get this fucking passport?",
+        "beat_type": "escalation",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.8,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Leans forward slightly, eyebrows raised.",
+        "vocal_hypothesis": "Rises in pitch and tempo."
+      },
+      {
+        "text_excerpt": "Can be a guy, too. I don't give a fuck.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Throws hands up in mock surrender, grinning wide.",
+        "vocal_hypothesis": "Squeals with exaggerated, breathless energy."
+      },
+      {
+        "text_excerpt": "I'll easily suck dick for freedom.",
+        "beat_type": "escalation",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.8,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Makes a dramatic, open-mouthed sucking gesture.",
+        "vocal_hypothesis": "Speaks in a breathy, shameless whisper."
+      },
+      {
+        "text_excerpt": "And I'm listening, I'm like a pro immigrant.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Points finger at self, nodding vigorously.",
+        "vocal_hypothesis": "Speaks in a rapid, deadpan cadence."
+      },
+      {
+        "text_excerpt": "I know everything about visas. I watch 90-day fianc\u00e9",
+        "beat_type": "setup",
+        "operators": [
+          "garden_path"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.7,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Makes a 'studying' motion with fingers near head.",
+        "vocal_hypothesis": "Speaks in a falsely academic, analytical tone."
+      },
+      {
+        "text_excerpt": "like it's game tape, dude.",
+        "beat_type": "punchline",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Clasps hands together like a sports coach.",
+        "vocal_hypothesis": "Speaks in a loud, excited, sports-commentator voice."
+      },
+      {
+        "text_excerpt": "The key that I've learned, the key is pregnancy.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.8,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Makes a hand-over-heart, serious conspiratorial face.",
+        "vocal_hypothesis": "Speaks in a low, secretive, villainous whisper."
+      },
+      {
+        "text_excerpt": "That's why Texas is perfect. No abortion.",
+        "beat_type": "punchline",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Spreads arms wide, pointing at imaginary map.",
+        "vocal_hypothesis": "Speaks in a triumphant, booming announcer voice."
+      },
+      {
+        "text_excerpt": "Sounds like a guarantee.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Nods slowly, eyes half-closed in satisfaction.",
+        "vocal_hypothesis": "Draws out the last word with a sly smirk."
+      },
+      {
+        "text_excerpt": "Who's trapping who, bitch?",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Jabs a finger into the air, eyes narrowed.",
+        "vocal_hypothesis": "Speaks in a sharp, aggressive, mocking tone."
+      },
+      {
+        "text_excerpt": "But to be fair, knowing my luck...",
+        "beat_type": "setup",
+        "operators": [
+          "self_deprecation"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.7,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Scratches cheek awkwardly, looking away.",
+        "vocal_hypothesis": "Speaks in a slow, defeated, self-deprecating drawl."
+      },
+      {
+        "text_excerpt": "it would be very me that I do get someone pregnant here...",
+        "beat_type": "punchline",
+        "operators": [
+          "garden_path"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Grabs own chest dramatically, gasping.",
+        "vocal_hypothesis": "Speaks in a panicked, high-pitched, theatrical gasp."
+      },
+      {
+        "text_excerpt": "but then it turns out she's also an illegal immigrant.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Slaps forehead with palm, rolling eyes.",
+        "vocal_hypothesis": "Speaks in a sarcastic, exasperated, deadpan tone."
+      },
+      {
+        "text_excerpt": "Now we give birth to a Mexican-Estonian...",
+        "beat_type": "punchline",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Makes a confused, puzzled expression, tilting head.",
+        "vocal_hypothesis": "Speaks in a bewildered, incredulous, stuttering voice."
+      },
+      {
+        "text_excerpt": "the most useless passport in the world.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.9,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Spreads arms wide in despair, dropping shoulders.",
+        "vocal_hypothesis": "Speaks in a long, drawn-out, defeated groan."
+      },
+      {
+        "text_excerpt": "Thank you very much.",
+        "beat_type": "closer",
+        "operators": [
+          "self_deprecation"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.8,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Bows deeply, hands clasped behind back.",
+        "vocal_hypothesis": "Speaks in a polite, formal, sarcastic tone."
+      }
+    ],
+    "anger_manual": {
+      "present": false,
+      "if_present": {}
+    },
+    "notes": "The bit uses 'literalize' to build absurd garden-path scenarios, then delivers punchlines with 'double_interpret' to reverse status and mock indignation. It starts cold and flat, then builds to a manic, gleeful peak before ending with a sarcastic bow. The dominant emotion is gleefulness, driven by the absurd immigration logic."
+  },
+  "anger_body_correlation": {
+    "aligned_beats": [
+      {
+        "t_guess": 1.6,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "setup",
+        "numeric": {
+          "brow_mean": 0.29585,
+          "mouth_open_max": 0.23659999999999998,
+          "mouth_wide_max": 0.49145000000000005,
+          "lean_x_range": 0.07476666666666666,
+          "arm_open_mean": 0.6014333333333334,
+          "hand_face_right_min": 0.5921
+        },
+        "body_hypothesis": "Deadpan stare at the audience, hands on hips.",
+        "vocal_hypothesis": "Flat, matter-of-fact monotone."
+      },
+      {
+        "t_guess": 4.79,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "escalation",
+        "numeric": {
+          "brow_mean": 0.1341,
+          "mouth_open_max": 0.06726666666666667,
+          "mouth_wide_max": 0.36723333333333336,
+          "lean_x_range": 0.07866666666666666,
+          "arm_open_mean": 0.5827666666666667,
+          "hand_face_right_min": 0.7351
+        },
+        "body_hypothesis": "Leans forward slightly, eyebrows raised.",
+        "vocal_hypothesis": "Rises in pitch and tempo."
+      },
+      {
+        "t_guess": 7.99,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.16679999999999998,
+          "mouth_open_max": 0.05676666666666667,
+          "mouth_wide_max": 0.4054333333333333,
+          "lean_x_range": 0.07246666666666667,
+          "arm_open_mean": 0.5324666666666666,
+          "hand_face_right_min": 0.9205
+        },
+        "body_hypothesis": "Throws hands up in mock surrender, grinning wide.",
+        "vocal_hypothesis": "Squeals with exaggerated, breathless energy."
+      },
+      {
+        "t_guess": 11.19,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "escalation",
+        "numeric": {
+          "brow_mean": 0.17616666666666667,
+          "mouth_open_max": 0.10183333333333333,
+          "mouth_wide_max": 0.35840000000000005,
+          "lean_x_range": 0.0638,
+          "arm_open_mean": 0.5245666666666667,
+          "hand_face_right_min": 0.9869333333333333
+        },
+        "body_hypothesis": "Makes a dramatic, open-mouthed sucking gesture.",
+        "vocal_hypothesis": "Speaks in a breathy, shameless whisper."
+      },
+      {
+        "t_guess": 14.38,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.2026,
+          "mouth_open_max": 0.16823333333333335,
+          "mouth_wide_max": 0.34403333333333336,
+          "lean_x_range": 0.09366666666666668,
+          "arm_open_mean": 0.3735,
+          "hand_face_right_min": 0.6429666666666667
+        },
+        "body_hypothesis": "Points finger at self, nodding vigorously.",
+        "vocal_hypothesis": "Speaks in a rapid, deadpan cadence."
+      },
+      {
+        "t_guess": 17.58,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "setup",
+        "numeric": {
+          "brow_mean": 0.17526666666666668,
+          "mouth_open_max": 0.14733333333333334,
+          "mouth_wide_max": 0.35483333333333333,
+          "lean_x_range": 0.06113333333333334,
+          "arm_open_mean": 0.5803666666666666,
+          "hand_face_right_min": 0.7562666666666668
+        },
+        "body_hypothesis": "Makes a 'studying' motion with fingers near head.",
+        "vocal_hypothesis": "Speaks in a falsely academic, analytical tone."
+      },
+      {
+        "t_guess": 20.77,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.18223333333333333,
+          "mouth_open_max": 0.17726666666666668,
+          "mouth_wide_max": 0.34380000000000005,
+          "lean_x_range": 0.16613333333333333,
+          "arm_open_mean": 0.5782666666666666,
+          "hand_face_right_min": 0.7808999999999999
+        },
+        "body_hypothesis": "Clasps hands together like a sports coach.",
+        "vocal_hypothesis": "Speaks in a loud, excited, sports-commentator voice."
+      },
+      {
+        "t_guess": 23.97,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.1346,
+          "mouth_open_max": 0.10733333333333334,
+          "mouth_wide_max": 0.3503,
+          "lean_x_range": 0.06913333333333334,
+          "arm_open_mean": 0.6458666666666667,
+          "hand_face_right_min": 0.8665666666666666
+        },
+        "body_hypothesis": "Makes a hand-over-heart, serious conspiratorial face.",
+        "vocal_hypothesis": "Speaks in a low, secretive, villainous whisper."
+      },
+      {
+        "t_guess": 27.16,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.15103333333333332,
+          "mouth_open_max": 0.08346666666666668,
+          "mouth_wide_max": 0.3481,
+          "lean_x_range": 0.1522,
+          "arm_open_mean": 0.6005333333333334,
+          "hand_face_right_min": 0.7431
+        },
+        "body_hypothesis": "Spreads arms wide, pointing at imaginary map.",
+        "vocal_hypothesis": "Speaks in a triumphant, booming announcer voice."
+      },
+      {
+        "t_guess": 30.36,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.20343333333333335,
+          "mouth_open_max": 0.09566666666666666,
+          "mouth_wide_max": 0.3388333333333333,
+          "lean_x_range": 0.12966666666666668,
+          "arm_open_mean": 0.7006666666666667,
+          "hand_face_right_min": 0.8934333333333333
+        },
+        "body_hypothesis": "Nods slowly, eyes half-closed in satisfaction.",
+        "vocal_hypothesis": "Draws out the last word with a sly smirk."
+      },
+      {
+        "t_guess": 33.56,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.16790000000000002,
+          "mouth_open_max": 0.05616666666666667,
+          "mouth_wide_max": 0.3164,
+          "lean_x_range": 0.053366666666666666,
+          "arm_open_mean": 0.5841333333333333,
+          "hand_face_right_min": 0.6313666666666666
+        },
+        "body_hypothesis": "Jabs a finger into the air, eyes narrowed.",
+        "vocal_hypothesis": "Speaks in a sharp, aggressive, mocking tone."
+      },
+      {
+        "t_guess": 36.75,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "setup",
+        "numeric": {
+          "brow_mean": 0.15353333333333333,
+          "mouth_open_max": 0.08416666666666667,
+          "mouth_wide_max": 0.323,
+          "lean_x_range": 0.0796,
+          "arm_open_mean": 0.5873666666666667,
+          "hand_face_right_min": 0.6497666666666667
+        },
+        "body_hypothesis": "Scratches cheek awkwardly, looking away.",
+        "vocal_hypothesis": "Speaks in a slow, defeated, self-deprecating drawl."
+      },
+      {
+        "t_guess": 39.95,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.12463333333333333,
+          "mouth_open_max": 0.028999999999999998,
+          "mouth_wide_max": 0.3345666666666667,
+          "lean_x_range": 0.07726666666666666,
+          "arm_open_mean": 0.5804333333333332,
+          "hand_face_right_min": 0.7995333333333333
+        },
+        "body_hypothesis": "Grabs own chest dramatically, gasping.",
+        "vocal_hypothesis": "Speaks in a panicked, high-pitched, theatrical gasp."
+      },
+      {
+        "t_guess": 43.14,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.17286666666666664,
+          "mouth_open_max": 0.09143333333333332,
+          "mouth_wide_max": 0.3618333333333334,
+          "lean_x_range": 0.14786666666666667,
+          "arm_open_mean": 0.5648666666666666,
+          "hand_face_right_min": 0.8991333333333333
+        },
+        "body_hypothesis": "Slaps forehead with palm, rolling eyes.",
+        "vocal_hypothesis": "Speaks in a sarcastic, exasperated, deadpan tone."
+      },
+      {
+        "t_guess": 46.34,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.1473,
+          "mouth_open_max": 0.06033333333333333,
+          "mouth_wide_max": 0.3501666666666667,
+          "lean_x_range": 0.10943333333333333,
+          "arm_open_mean": 0.5057333333333333,
+          "hand_face_right_min": 0.36726666666666663
+        },
+        "body_hypothesis": "Makes a confused, puzzled expression, tilting head.",
+        "vocal_hypothesis": "Speaks in a bewildered, incredulous, stuttering voice."
+      },
+      {
+        "t_guess": 49.54,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "punchline",
+        "numeric": {
+          "brow_mean": 0.16993333333333335,
+          "mouth_open_max": 0.1113,
+          "mouth_wide_max": 0.36850000000000005,
+          "lean_x_range": 0.0745,
+          "arm_open_mean": 0.4737,
+          "hand_face_right_min": 0.4710666666666667
+        },
+        "body_hypothesis": "Spreads arms wide in despair, dropping shoulders.",
+        "vocal_hypothesis": "Speaks in a long, drawn-out, defeated groan."
+      },
+      {
+        "t_guess": 52.73,
+        "emotion": "gleeful",
+        "anger_flavor": null,
+        "beat_type": "closer",
+        "numeric": {
+          "brow_mean": 0.18876666666666667,
+          "mouth_open_max": 0.11416666666666668,
+          "mouth_wide_max": 0.35519999999999996,
+          "lean_x_range": 0.13943333333333333,
+          "arm_open_mean": 0.6929333333333334,
+          "hand_face_right_min": 0.9980333333333333
+        },
+        "body_hypothesis": "Bows deeply, hands clasped behind back.",
+        "vocal_hypothesis": "Speaks in a polite, formal, sarcastic tone."
+      }
+    ]
+  },
+  "short": "/home/box/ari_matti_sets/shorts/kt704_passport_short.mp4"
+}
