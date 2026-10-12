@@ -129,17 +129,45 @@ def direct(audition: dict, rig: dict, stage: dict) -> dict:
     events.append({"t": dur, "kind": "exit", "to": "stage_left"})
     events.sort(key=lambda e: e["t"])
     mouth = _load_visemes(audition.get("id", ""))
+    show = _load_show(audition.get("character_id", ""))
+    if show:
+        for e in events:
+            if e.get("kind") == "enter":
+                e["walkout_audio"] = (show.get("audio") or {}).get("walkout", {}).get("audio_path", "")
+                break
     return {"schema": TIMELINE_SCHEMA, "audition_id": audition.get("id"),
             "character_id": audition.get("character_id"),
             "rig_id": rig.get("rig_id"), "rig_version": rig.get("version"),
             "stage_id": stage.get("stage_id"),
             "audio_duration_ms": dur,
             "delivery_hash": _hash_beats(beats),
+            "show": {"has_pack": bool(show),
+                     "walkout_ms": ((show.get("audio") or {}).get("walkout", {}) or {}).get("duration_ms", 0) if show else 0},
             "mouth": mouth or {"source": "sine-fallback", "events": []},
             "events": [e for e in events if 0 <= e["t"] <= dur + 1000]}
 
 
 def _load_visemes(aud_id: str) -> dict | None:
+    """Vosk word->viseme track precomputed beside the audio (gitignored).
+    Absent -> caller falls back. Never blocks directing."""
+    try:
+        p = HERE / "audio" / f"{aud_id}.visemes.json"
+        if p.exists() and p.stat().st_size > 100:
+            return {"source": "vosk", "events": json.loads(p.read_text())}
+    except Exception:
+        pass
+    return None
+
+
+def _load_show(character_id: str) -> dict | None:
+    """Show pack (walkout/stings/entrance) if the performer has one."""
+    try:
+        p = HERE.parent / "freaks" / character_id.replace("_", "-") / "show.json"
+        if p.exists():
+            return json.loads(p.read_text())
+    except Exception:
+        pass
+    return None
     """Vosk word->viseme track precomputed beside the audio (gitignored).
     Absent -> caller falls back. Never blocks directing."""
     try:
