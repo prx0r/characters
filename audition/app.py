@@ -998,8 +998,17 @@ def arena_add():
         except Exception:
             return jsonify({"error": "couldn't resolve that Bluesky post (deleted? private? typo?)"}), 400
         ref = f"{did}/app.bsky.feed.post/{rkey}"
+    elif kind == "tavern":
+        conn0 = _conn()
+        try:
+            t = conn0.execute("SELECT * FROM tavern_imports WHERE id=?", (ref,)).fetchone()
+        finally:
+            conn0.close()
+        if not t:
+            return jsonify({"error": "unknown tavern import id — import the card first"}), 404
+        title = title or f"{t['name']} (community card)"
     else:
-        return jsonify({"error": "kind must be youtube|audition|bluesky"}), 400
+        return jsonify({"error": "kind must be youtube|audition|bluesky|tavern"}), 400
     theories: list = []
     operators: list = []
     if kind == "audition":
@@ -1201,9 +1210,81 @@ def arena_ai_bracket():
                     "note": "humans vs AI on the same ballot — vote the set, not the species"})
 
 
+@app.get("/tavern/portrait/<iid>")
+def tavern_portrait(iid: str):
+    conn = _conn()
+    try:
+        r = conn.execute("SELECT * FROM tavern_imports WHERE id=?", (iid,)).fetchone()
+    finally:
+        conn.close()
+    if not r or not r["portrait_path"]:
+        return jsonify({"error": "no portrait"}), 404
+    p = Path(r["portrait_path"])
+    if not p.exists():
+        return jsonify({"error": "portrait file missing"}), 410
+    return send_file(p, mimetype="image/png")
+
+
 @app.get("/pogtown")
 def pogtown_page():
     return send_file(HERE / "static" / "pogtown.html")
+
+
+@app.get("/api/cards/ours/<character_id>")
+def card_export(character_id: str):
+    """Download one of ours as a Tavern V2 PNG (portrait + card + lorebook)."""
+    import tavern as _tav
+    from flask import Response as _Resp
+    try:
+        png, fn = _tav.export_card(character_id)
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 404
+    return _Resp(png, mimetype="image/png",
+                 headers={"Content-Disposition": f"attachment; filename={fn}"})
+
+
+@app.post("/api/cards/import")
+def card_import():
+    """Import a community card (upload field 'card' or JSON {url}). Stored, then arena-eligible."""
+    import tavern as _tav
+    import base64 as _b64
+    raw, source = b"", ""
+    if "card" in (request.files or {}):
+        raw = request.files["card"].read(8 * 1024 * 1024)
+    else:
+        data = request.get_json(force=True, silent=True) or {}
+        source = (data.get("url") or "").strip()
+        if not source.startswith(("http://", "https://")):
+            return jsonify({"error": "upload a card file or give an http(s) card URL"}), 400
+        import urllib.request as _url
+        try:
+            raw = _url.urlopen(source, timeout=30).read(8 * 1024 * 1024)
+        except Exception:
+            return jsonify({"error": "couldn't fetch that URL"}), 400
+    if not raw:
+        return jsonify({"error": "empty card"}), 400
+    try:
+        card = _tav.import_card(raw, source)
+    except Exception as e:
+        return jsonify({"error": f"not a readable Tavern card: {e}"[:200]}), 400
+    iid = store.new_id("tavern")
+    ppath = ""
+    if card.get("portrait"):
+        ppath = str(HERE / "audio" / f"{iid}.png")
+        open(ppath, "wb").write(_b64.b64decode(card["portrait"]))
+        card["portrait"] = ""
+    conn = _conn()
+    try:
+        conn.execute("INSERT INTO tavern_imports (id, name, spec, card_json, portrait_path, source_url, created_at)"
+                     " VALUES (?,?,?,?,?,?,?)",
+                     (iid, card["name"][:120], card.get("spec", ""), json.dumps(card),
+                      ppath, source, time.time()))
+        conn.commit()
+    finally:
+        conn.close()
+    return jsonify({"import_id": iid, "name": card["name"], "spec": card.get("spec"),
+                    "book_entries": card.get("book_entries", 0),
+                    "arena_ref": iid})
 
 
 @app.get("/mp4/<aud_id>")
