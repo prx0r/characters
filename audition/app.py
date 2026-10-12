@@ -1448,6 +1448,19 @@ def mp4_serve(aud_id: str):
                      download_name=f"{aud_id}.mp4")
 
 
+@app.after_request
+def _no_store_dynamic(resp):
+    """HTML + API JSON must never cache (we ship fixes hourly). MP4/audio
+    keep implicit ETags for efficient revalidation."""
+    try:
+        ct = resp.headers.get("Content-Type", "")
+        if ct.startswith("text/html") or "application/json" in ct:
+            resp.headers["Cache-Control"] = "no-store, max-age=0"
+    except Exception:
+        pass
+    return resp
+
+
 if __name__ == "__main__":
     _startup_sweep()
     print("Audition app on http://127.0.0.1:8807/")
