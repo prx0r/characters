@@ -19,8 +19,14 @@ button{cursor:pointer}button:disabled{opacity:.4;cursor:default}
 </style>
 </head>
 <body>
-<h1>Audition <span class="muted">P0 — listen · POG · feedback · next</span></h1>
-<div class="row" style="margin-bottom:8px"><a href="/watch" style="color:#facc15">📺 Watch — big stage screen</a><a href="/shorts" style="color:#facc15">📱 Shorts sim</a><a href="/arena" style="color:#facc15">🎤 Funnier arena</a><a href="/pogtown" style="color:#facc15">🌃 Pogtown</a></div>
+<h1 style="margin-bottom:4px">🎤 Funnier <span class="muted">which set wins?</span></h1>
+<div class="card" id="duel">
+<div class="row" id="cages" style="gap:12px"></div>
+<textarea id="notes" rows="2" style="width:100%;margin-top:8px" placeholder="Your notes — what landed, what died…"></textarea>
+<div class="row" style="margin-top:8px"><button id="voteA" style="background:#7c3aed;border:none;font-size:18px">A was funnier</button><button id="voteB" style="background:#7c3aed;border:none;font-size:18px">B was funnier</button><button id="skipBtn">skip</button><span id="duelStatus" class="muted"></span></div>
+</div>
+<details class="card"><summary style="cursor:pointer;font-size:17px"><b>Audition lab</b> <span class="muted">generate · POG · feedback · stage</span></summary>
+<div class="row" style="margin:8px 0"><a href="/watch" style="color:#facc15">📺 Watch</a><a href="/shorts" style="color:#facc15">📱 Shorts</a><a href="/arena" style="color:#facc15">🎤 Arena</a><a href="/pogtown" style="color:#facc15">🌃 Pogtown</a></div>
 <div class="row">
 <img id="portrait" src="" alt="" style="width:96px;height:96px;border-radius:16px;object-fit:cover;display:none">
 <div><img id="vibe" src="" alt="" style="width:96px;height:96px;border-radius:16px;object-fit:cover;display:none;filter:sepia(.4)"><div id="vibecredit" class="muted" style="font-size:11px;max-width:120px"></div></div>
@@ -64,7 +70,26 @@ button{cursor:pointer}button:disabled{opacity:.4;cursor:default}
 </div>
 <div class="muted" style="font-size:12px">Rive-ready rig (<span id="rigVer"></span>): gestures drive named inputs when the .riv lands; today the SVG fallback performs them. Punchlines hold still — that stillness is the joke.</div>
 </div>
+</details>
 <script>
+let DM=null;
+function voter(){try{let v=localStorage.getItem('arena_voter');if(!v){v='v_'+Math.random().toString(36).slice(2,10);localStorage.setItem('arena_voter',v);}return v;}catch(e){return 'anon';}}
+function cageHTML(c,tag){const inner=c.kind==='youtube'
+?`<iframe src="https://www.youtube.com/embed/${c.ref}?rel=0" width="100%" height="220" frameborder="0" allowfullscreen></iframe>`
+:c.kind==='bluesky'
+?`<iframe src="https://embed.bsky.app/embed/${c.ref}" width="100%" height="220" frameborder="0" style="background:#fff"></iframe>`
+:c.kind==='tavern'
+?`<img src="/tavern/portrait/${c.ref}" style="width:100%;height:220px;object-fit:cover;border-radius:8px">`
+:`<audio src="/audio/${c.ref}" controls style="width:100%"></audio><div class="muted">${c.title||''}</div>`;
+return `<div style="flex:1;min-width:220px"><div class="tag" style="font-size:22px"><b>${tag}</b> <span class="muted" style="font-size:13px">${c.title||''}</span></div>${inner}</div>`;}
+async function duel(){const d=await api('GET','/api/arena/matchup');if(d.error){$('cages').innerHTML=`<span class="muted">${d.error}</span>`;DM=null;return;}
+DM=d;$('cages').innerHTML=cageHTML(d.a,'A')+cageHTML(d.b,'B');$('duelStatus').textContent='';}
+async function duelv(w){if(!DM)return;const notes=$('notes').value;
+const d=await api('POST','/api/arena/vote',{match_id:DM.match_id,a_id:DM.a.id,b_id:DM.b.id,winner_id:w==='A'?DM.a.id:DM.b.id,voter_id:voter(),context:{notes:notes.slice(0,500),via:'front'}});
+if(d.error){$('duelStatus').textContent=d.error;return;}
+$('duelStatus').textContent=`saved · Elo A ${d.a_elo} / B ${d.b_elo}`;$('notes').value='';duel();}
+$('voteA').onclick=()=>duelv('A');$('voteB').onclick=()=>duelv('B');$('skipBtn').onclick=duel;
+duel();
 let AUD=null, RATING=null, ITER=1, POLL=null;
 const $=id=>document.getElementById(id);
 async function api(m,u,b){const r=await fetch(u,{method:m,headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined});return r.json();}
