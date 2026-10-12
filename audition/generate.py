@@ -245,20 +245,25 @@ def _llm_generate(messages: list[dict]) -> dict | None:
         client = OpenAI(api_key=oc_key,
                         base_url=os.getenv("OPENCODE_BASE_URL",
                                            "https://opencode.ai/zen/go/v1"))
-        for _ in range(2):  # flaky gateway: fast tries, then template
-            try:
-                resp = client.chat.completions.create(
-                    model=os.getenv("OPENCODE_MODEL", "mimo-v2.6-flash"),
-                    temperature=0.9, max_tokens=900,
-                    messages=messages, timeout=15,
-                    extra_headers={"x-opencode-session": str(_uuid.uuid4())})
-                txt = resp.choices[0].message.content or ""
-                start, end = txt.find("{"), txt.rfind("}")
-                if start >= 0 and end > start:
-                    return json.loads(txt[start:end + 1])
-                return None
-            except Exception:
-                _time.sleep(2)
+        models = [os.getenv("OPENCODE_MODEL", "mimo-v2.6-flash")]
+        if "mimo-v2.5" not in models:
+            models.append("mimo-v2.5")
+        for _model in models:  # flash, then v2.5 fallback
+            for _ in range(2):  # flaky gateway: fast tries, then next model
+                try:
+                    resp = client.chat.completions.create(
+                        model=_model, temperature=0.9, max_tokens=900,
+                        messages=messages, timeout=15,
+                        extra_headers={"x-opencode-session": str(_uuid.uuid4())})
+                    txt = resp.choices[0].message.content or ""
+                    start, end = txt.find("{"), txt.rfind("}")
+                    if start >= 0 and end > start:
+                        out = json.loads(txt[start:end + 1])
+                        out["_model_used"] = _model
+                        return out
+                    break
+                except Exception:
+                    _time.sleep(2)
         return None
     except Exception:
         return None
@@ -574,7 +579,8 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
                     em = 0.6
                 beats.append({"id": b.get("id", f"b{i+1}"), "type": t, "text": txt,
                               "pause_after_ms": pa, "emphasis": em})
-            model_id = os.getenv("OPENCODE_MODEL", "mimo-v2.6-flash")
+            model_id = (llm.pop("_model_used", None)
+                        if isinstance(llm, dict) else None) or os.getenv("OPENCODE_MODEL", "mimo-v2.6-flash")
     if beats is None:
         beats = _template_beats(character, scenario, operator, critique, avoid)
     # modulator delivery deltas: emphasis shift + pause scaling (the HOW)

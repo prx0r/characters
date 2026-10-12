@@ -48,6 +48,27 @@ def clean_excerpt(collection: str, chars: int) -> str:
     e = up.find("*** END OF")
     if e >= 0:
         txt = txt[:e]
+    lines = txt.splitlines()
+    # drop Gutenberg metadata header (Title/Author/Release/Language/Credits/Produced-by/Updated)
+    meta = re.compile(r"^(title|author|contributor|release date|language|original publication|other information|credits|produced by|updated|transcriber|illustrator|editor)\s*:", re.I)
+    while lines and (not lines[0].strip() or meta.match(lines[0].strip()) or
+                     lines[0].strip().lower().startswith("the project gutenberg") or
+                     "gutenberg" in lines[0].lower() and len(lines[0]) < 120):
+        lines.pop(0)
+    # front matter (title pages, TOCs, prefaces, license leftovers) is short
+    # lines; narrative prose runs long. Scan wide for the first long,
+    # non-metadata line, keeping one heading line above it.
+    skip_pat = re.compile(r"^(title|author|contributor|release date|language|original publication|other information|credits|produced by|updated|transcriber|illustrator|editor)\s*:", re.I)
+    start = 0
+    for i, ln in enumerate(lines[:400]):
+        s = ln.strip()
+        if len(s) > 140 and not skip_pat.match(s) and "gutenberg" not in s.lower():
+            start = i
+            break
+    if start:
+        head = start - 1 if start >= 1 and lines[start - 1].strip() else start
+        lines = lines[head:]
+    txt = "\n".join(lines)
     txt = re.sub(r"\[\d+\]", "", txt)  # footnote markers v4 would read aloud
     txt = re.sub(r"[ \t]+", " ", txt)
     return txt.strip()[:chars]
