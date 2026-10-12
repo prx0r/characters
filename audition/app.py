@@ -970,6 +970,74 @@ def stage_timeline(tid: str):
     return jsonify(d)
 
 
+# ── Gemini performance sets (Ari engine) ──────────────────────────────
+GEMINI_DIR = Path(__file__).parent.parent / "theory" / "killtony-minutes"
+
+
+@app.get("/api/stage/gemini")
+def stage_gemini_list():
+    """List all Gemini-analyzed performance sets."""
+    sets = []
+    for p in sorted(GEMINI_DIR.glob("*_gemini.gemini.json")):
+        stem = p.name.replace(".gemini.json", "")
+        tl_path = GEMINI_DIR / f"{stem}.stage_timeline.json"
+        player_path = GEMINI_DIR / f"{stem}_player.html"
+        try:
+            gem = json.loads(p.read_text())
+        except Exception:
+            continue
+        segs = gem.get("segments") or []
+        ang = gem.get("anger_analysis") or {}
+        sets.append({
+            "stem": stem,
+            "title": stem.replace("_gemini", "").replace("_", " ").title(),
+            "duration_s": segs[-1].get("t1") if segs else None,
+            "n_segments": len(segs),
+            "dominant_emotion": (gem.get("overall") or {}).get("dominant_emotion"),
+            "anger_present": ang.get("present"),
+            "anger_type": ang.get("type"),
+            "has_timeline": tl_path.exists(),
+            "has_player": player_path.exists(),
+            "player_url": f"/stage/gemini/{stem}/player" if player_path.exists() else None,
+            "timeline_url": f"/api/stage/gemini/{stem}/timeline" if tl_path.exists() else None,
+        })
+    return jsonify({"sets": sets, "count": len(sets)})
+
+
+@app.get("/api/stage/gemini/<stem>/timeline")
+def stage_gemini_timeline(stem: str):
+    """Serve a Gemini→Stage Lab performance.v1 timeline."""
+    tl_path = GEMINI_DIR / f"{stem}.stage_timeline.json"
+    if not tl_path.exists():
+        return jsonify({"error": "unknown gemini set"}), 404
+    return jsonify(json.loads(tl_path.read_text()))
+
+
+@app.get("/api/stage/gemini/<stem>/raw")
+def stage_gemini_raw(stem: str):
+    """Serve the raw Gemini analysis JSON."""
+    p = GEMINI_DIR / f"{stem}.gemini.json"
+    if not p.exists():
+        return jsonify({"error": "unknown gemini set"}), 404
+    return jsonify(json.loads(p.read_text()))
+
+
+@app.get("/stage/gemini/<stem>/player")
+def stage_gemini_player(stem: str):
+    """Serve the standalone Ralph player HTML for a Gemini set."""
+    p = GEMINI_DIR / f"{stem}_player.html"
+    if not p.exists():
+        return jsonify({"error": "no player"}), 404
+    return send_file(p, mimetype="text/html")
+
+
+@app.get("/stage/gemini")
+def stage_gemini_gallery():
+    """Gallery page listing all Gemini performance sets."""
+    return send_file(GEMINI_DIR.parent.parent / "audition" / "static" / "gemini_stage.html",
+                     mimetype="text/html")
+
+
 def _wilson(wins: int, n: int, z: float = 1.96) -> tuple[float, float]:
     """Wilson score interval on a proportion. Significant iff CI excludes 0.5."""
     if n <= 0:
