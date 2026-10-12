@@ -625,6 +625,11 @@ def shorts_page():
     return send_file(HERE / "static" / "shorts.html")
 
 
+@app.get("/watch")
+def watch_page():
+    return send_file(HERE / "static" / "watch.html")
+
+
 @app.post("/api/gtvh/classify")
 def gtvh_classify():
     """Comedic classifier: GTVH 6-tuple for any minute. Analysis, not a gate."""
