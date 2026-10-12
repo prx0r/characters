@@ -2,6 +2,1217 @@
   "version": "performance.v1",
   "source": "kt728_diversifying_short",
   "duration_s": 77.67,
-  "events": [],
-  "n_events": 0
+  "method": "mediapipe+asr_aligned_v1",
+  "n_asr_words": 260,
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.71
+    },
+    {
+      "t": 0.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 0.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "You know how they ' re You know how they ' re",
+        "energy": 0.71,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 1.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.737
+    },
+    {
+      "t": 1.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 1.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "like like",
+        "energy": 0.737,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 2.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.665
+    },
+    {
+      "t": 2.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "like divers ifying like divers ifying",
+        "energy": 0.665,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 3.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.707
+    },
+    {
+      "t": 3.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 3.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "ifying all the movie ifying all the movie",
+        "energy": 0.707,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 4.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.776
+    },
+    {
+      "t": 4.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 4.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "movie franchises now movie franchises now",
+        "energy": 0.776,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 5.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.762
+    },
+    {
+      "t": 5.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 5.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "now They ' re doing now They ' re doing",
+        "energy": 0.762,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 6.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.714
+    },
+    {
+      "t": 6.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 6.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "doing Taken you know doing Taken you know",
+        "energy": 0.714,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 7.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.392
+    },
+    {
+      "t": 7.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "know Taken with Liam Ne eson know Taken with Liam Ne eson",
+        "energy": 0.392,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 8.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.436
+    },
+    {
+      "t": 8.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "eson eson",
+        "energy": 0.436,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 9.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.643
+    },
+    {
+      "t": 9.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 9.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "eson They ' re doing eson They ' re doing",
+        "energy": 0.643,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 10.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.521
+    },
+    {
+      "t": 10.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "one with a black dad one with a black dad",
+        "energy": 0.521,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 11.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.768
+    },
+    {
+      "t": 11.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 11.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "dad dad",
+        "energy": 0.768,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 12.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.543
+    },
+    {
+      "t": 12.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "dad dad",
+        "energy": 0.543,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 12.04,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 12.04,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 13.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.564
+    },
+    {
+      "t": 13.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 14.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.541
+    },
+    {
+      "t": 15.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.555
+    },
+    {
+      "t": 16.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.543
+    },
+    {
+      "t": 17.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.519
+    },
+    {
+      "t": 17.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "The phone just keeps The phone just keeps",
+        "energy": 0.519,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 18.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.514
+    },
+    {
+      "t": 18.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "keeps ringing keeps ringing",
+        "energy": 0.514,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 19.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.591
+    },
+    {
+      "t": 19.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "ringing ringing",
+        "energy": 0.591,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 19.16,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 19.16,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 20.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.593
+    },
+    {
+      "t": 21.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.495
+    },
+    {
+      "t": 22.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.494
+    },
+    {
+      "t": 23.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.542
+    },
+    {
+      "t": 24.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.529
+    },
+    {
+      "t": 25.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.67
+    },
+    {
+      "t": 26.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.055
+    },
+    {
+      "t": 26.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Sorry Sorry",
+        "energy": 0.055,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 27.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.088
+    },
+    {
+      "t": 27.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Sorry baby Sorry baby",
+        "energy": 0.088,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 28.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.097
+    },
+    {
+      "t": 28.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "baby baby",
+        "energy": 0.097,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 28.16,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 28.16,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 29.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.105
+    },
+    {
+      "t": 29.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Had to make a Had to make a",
+        "energy": 0.105,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 30.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.108
+    },
+    {
+      "t": 30.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 30.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "a stop a stop",
+        "energy": 0.108,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 31.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.178
+    },
+    {
+      "t": 31.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 31.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "stop stop",
+        "energy": 0.178,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 31.04,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 31.04,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 32.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.723
+    },
+    {
+      "t": 32.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 33.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.616
+    },
+    {
+      "t": 33.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 34.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.665
+    },
+    {
+      "t": 34.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 34.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Femin ists are Femin ists are",
+        "energy": 0.665,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 35.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.579
+    },
+    {
+      "t": 35.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "are upset are upset",
+        "energy": 0.579,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 36.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.592
+    },
+    {
+      "t": 36.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 36.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "upset upset",
+        "energy": 0.592,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 36.84,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 36.84,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 37.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.505
+    },
+    {
+      "t": 37.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "They ' re They ' re",
+        "energy": 0.505,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 38.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.593
+    },
+    {
+      "t": 38.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "re trying to cancel the new re trying to cancel the new",
+        "energy": 0.593,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 39.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.657
+    },
+    {
+      "t": 39.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 39.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "new Cat woman movie that new Cat woman movie that",
+        "energy": 0.657,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 40.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.722
+    },
+    {
+      "t": 40.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 40.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "that ' s coming out that ' s coming out",
+        "energy": 0.722,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 41.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.645
+    },
+    {
+      "t": 41.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 41.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "out because the new Cat out because the new Cat",
+        "energy": 0.645,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 42.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.494
+    },
+    {
+      "t": 42.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 42.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Cat woman is Cat woman is",
+        "energy": 0.494,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 43.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.561
+    },
+    {
+      "t": 43.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "is Zoe Kr av itz is Zoe Kr av itz",
+        "energy": 0.561,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 44.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.586
+    },
+    {
+      "t": 44.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "itz itz",
+        "energy": 0.586,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 45.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.546
+    },
+    {
+      "t": 45.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "A banging A banging",
+        "energy": 0.546,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 46.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.535
+    },
+    {
+      "t": 46.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "banging banging",
+        "energy": 0.535,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 46.84,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 46.84,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 47.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.426
+    },
+    {
+      "t": 48.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.549
+    },
+    {
+      "t": 48.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "And And",
+        "energy": 0.549,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 49.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.538
+    },
+    {
+      "t": 49.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 49.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "And the feminists are saying And the feminists are saying",
+        "energy": 0.538,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 50.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.039
+    },
+    {
+      "t": 50.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 50.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "saying why does Cat woman saying why does Cat woman",
+        "energy": 0.039,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 51.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.039
+    },
+    {
+      "t": 51.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 51.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "woman always have to be some woman always have to be some",
+        "energy": 0.039,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 52.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.172
+    },
+    {
+      "t": 52.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 52.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "some super model some super model",
+        "energy": 0.172,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 53.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.052
+    },
+    {
+      "t": 53.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "model Why couldn ' t Cat model Why couldn ' t Cat",
+        "energy": 0.052,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 54.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.1
+    },
+    {
+      "t": 54.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Cat woman Cat woman",
+        "energy": 0.1,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 55.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.071
+    },
+    {
+      "t": 55.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "woman be like a plus - woman be like a plus -",
+        "energy": 0.071,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 56.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.082
+    },
+    {
+      "t": 56.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "- size model - size model",
+        "energy": 0.082,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 57.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.121
+    },
+    {
+      "t": 57.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "model model",
+        "energy": 0.121,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 57.48,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 57.48,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 58.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.647
+    },
+    {
+      "t": 58.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 59.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.541
+    },
+    {
+      "t": 60.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.561
+    },
+    {
+      "t": 61.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.522
+    },
+    {
+      "t": 61.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "She She",
+        "energy": 0.522,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 62.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.63
+    },
+    {
+      "t": 62.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "She needs to climb She needs to climb",
+        "energy": 0.63,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 63.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.123
+    },
+    {
+      "t": 63.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "climb climb",
+        "energy": 0.123,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 63.72,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 63.72,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 64.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.078
+    },
+    {
+      "t": 64.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 65.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.635
+    },
+    {
+      "t": 65.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 65.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "You You",
+        "energy": 0.635,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 66.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.561
+    },
+    {
+      "t": 66.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 66.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "You ever see a fat cat You ever see a fat cat",
+        "energy": 0.561,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 67.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.636
+    },
+    {
+      "t": 67.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 67.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "cat cat",
+        "energy": 0.636,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 67.88,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 67.88,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 68.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.52
+    },
+    {
+      "t": 69.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.564
+    },
+    {
+      "t": 70.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.552
+    },
+    {
+      "t": 71.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.677
+    },
+    {
+      "t": 72.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.654
+    },
+    {
+      "t": 72.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "You can ' t be You can ' t be",
+        "energy": 0.654,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 73.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.568
+    },
+    {
+      "t": 73.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "be Cat woman You be Cat woman You",
+        "energy": 0.568,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 74.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.601
+    },
+    {
+      "t": 74.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "can be Gar field can be Gar field",
+        "energy": 0.601,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 75.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.776
+    },
+    {
+      "t": 75.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 75.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "field field",
+        "energy": 0.776,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 76.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 1.205
+    },
+    {
+      "t": 76.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 77.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.075
+    },
+    {
+      "t": 77.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    }
+  ],
+  "n_events": 182
 }
