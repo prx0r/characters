@@ -1,0 +1,112 @@
+{
+ "query": "shop store",
+ "at": 1791805319.4659324,
+ "n": 6,
+ "channels": [
+  {
+   "slug": "alejandrolifehack",
+   "name": "Alejandro Life Hack",
+   "persona": "male, senior, homemaker",
+   "topics": [
+    "frugal_money"
+   ],
+   "niche": "Frugal Puerto Rican home hacks: pantry staples, dollar-store buys, DIY fixes",
+   "lang": "en",
+   "country": "US",
+   "uploads_wk": 1.4,
+   "started": "2026-09-22",
+   "last_upload": "2026-10-07",
+   "sells": "none found",
+   "youtube": "https://www.youtube.com/@alejandrolifehack",
+   "library_url": "https://avatarchannels.com/c/alejandrolifehack"
+  },
+  {
+   "slug": "amishhometricks",
+   "name": "Amish Home Tricks",
+   "persona": "Elias, male, middle_aged, homesteader",
+   "topics": [
+    "home_cleaning"
+   ],
+   "niche": "Amish-style household cleaning, saving and winter-stocking tips",
+   "lang": "en",
+   "country": "US",
+   "uploads_wk": 2.6,
+   "started": "2026-08-27",
+   "last_upload": "2026-10-11",
+   "sells": "ebook $27 x2, guide $27, ebook $39, +1 more",
+   "youtube": "https://www.youtube.com/@amishhometricks",
+   "library_url": "https://avatarchannels.com/c/amishhometricks"
+  },
+  {
+   "slug": "hackthemexicanway",
+   "name": "Bertha's House Hacks",
+   "persona": "female, middle_aged, homemaker",
+   "topics": [
+    "frugal_money",
+    "home_cleaning"
+   ],
+   "niche": "Budget household hacks and US store buy-lists through a Mexican-mother lens",
+   "lang": "en",
+   "uploads_wk": 5.8,
+   "started": "2026-08-20",
+   "last_upload": "2026-10-12",
+   "sells": "ebook $39.99",
+   "youtube": "https://www.youtube.com/@hackthemexicanway",
+   "library_url": "https://avatarchannels.com/c/hackthemexicanway"
+  },
+  {
+   "slug": "craftpena2545",
+   "name": "Hank Dockery",
+   "persona": "male, senior, homesteader",
+   "topics": [
+    "prepping_survival"
+   ],
+   "niche": "Prepper shopping lists for winter blackouts and power outages",
+   "lang": "en",
+   "uploads_wk": 3.5,
+   "started": "2026-07-21",
+   "last_upload": "2026-10-10",
+   "sells": "bundle $37",
+   "youtube": "https://www.youtube.com/@craftpena2545",
+   "library_url": "https://avatarchannels.com/c/craftpena2545"
+  },
+  {
+   "slug": "nateknows-official",
+   "name": "Nate Knows",
+   "persona": "male, adult, retired_professional",
+   "topics": [
+    "frugal_money"
+   ],
+   "niche": "Grocery-store insider tips for saving money: freezer, pantry, bulk buying",
+   "lang": "en",
+   "uploads_wk": 2.6,
+   "started": "2026-09-10",
+   "last_upload": "2026-10-07",
+   "sells": "none found",
+   "youtube": "https://www.youtube.com/@nateknows_official",
+   "library_url": "https://avatarchannels.com/c/nateknows-official"
+  },
+  {
+   "slug": "certifiedcheapskate",
+   "name": "Thaddeus Penrow | The Certified Cheapskate",
+   "persona": "male, senior, expert",
+   "topics": [
+    "frugal_money"
+   ],
+   "niche": "Frugal shopping for over-50s: Costco, grocery store tricks and senior discounts",
+   "lang": "en",
+   "country": "US",
+   "uploads_wk": 2.5,
+   "started": "2026-09-17",
+   "last_upload": "2026-10-07",
+   "sells": "ebook $39",
+   "youtube": "https://www.youtube.com/@certifiedcheapskate",
+   "library_url": "https://avatarchannels.com/c/certifiedcheapskate"
+  }
+ ],
+ "hypotheses": [
+  "4/6 sell products: characters can pitch without breaking show \u2014 test Oddy-style gift plugs.",
+  "upload cadence median 2.6/wk: match-or-exceed for absurd-comedy lane.",
+  "crowded niches: Frugal Puerto Rican home hacks: pantry staples, dollar-store buys, DIY fixes x1; Amish-style household cleaning, saving and winter-stocking tips x1; Budget household hacks and US store buy-lists through a Mexican-mother lens x1"
+ ]
+}

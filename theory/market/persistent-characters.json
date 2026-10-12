@@ -1,0 +1,30 @@
+{
+ "query": "animated couple recurring",
+ "at": 1791805318.2357416,
+ "n": 1,
+ "channels": [
+  {
+   "slug": "earlandethel",
+   "name": "Earl and Ethel",
+   "persona": "male, senior, grandfather",
+   "topics": [
+    "history_culture",
+    "home_cleaning"
+   ],
+   "niche": "Clean scripted comedy, trivia and nostalgia from an animated old couple",
+   "lang": "en",
+   "country": "US",
+   "uploads_wk": 2.8,
+   "started": "2026-08-08",
+   "last_upload": "2026-10-10",
+   "sells": "product $2.99, product $11.99, product $12.99 x3, +2 more",
+   "youtube": "https://www.youtube.com/@earlandethel",
+   "library_url": "https://avatarchannels.com/c/earlandethel"
+  }
+ ],
+ "hypotheses": [
+  "1/1 sell products: characters can pitch without breaking show \u2014 test Oddy-style gift plugs.",
+  "upload cadence median 2.8/wk: match-or-exceed for absurd-comedy lane.",
+  "crowded niches: Clean scripted comedy, trivia and nostalgia from an animated old couple x1"
+ ]
+}
