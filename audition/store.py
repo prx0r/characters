@@ -132,6 +132,13 @@ def migrate(conn: sqlite3.Connection) -> None:
       design_prompt TEXT NOT NULL, reference_audio_path TEXT NOT NULL DEFAULT '',
       reference_audio_sha256 TEXT NOT NULL DEFAULT '', status TEXT NOT NULL DEFAULT 'candidate',
       created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS arena_contenders (
+      id TEXT PRIMARY KEY, kind TEXT NOT NULL, ref TEXT NOT NULL,
+      title TEXT NOT NULL DEFAULT '', elo REAL NOT NULL DEFAULT 1500,
+      created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS arena_votes (
+      id TEXT PRIMARY KEY, a_id TEXT NOT NULL, b_id TEXT NOT NULL,
+      winner_id TEXT NOT NULL, created_at REAL NOT NULL)""")
     conn.commit()
 
 

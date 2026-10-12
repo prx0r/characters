@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funnier — stand-up arena</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:1060px;margin:20px auto;padding:0 14px;background:#0c0c0c;color:#eee}
+a{color:#facc15}.muted{color:#999}.card{border:1px solid #333;border-radius:12px;padding:14px;margin:14px 0}
+.duel{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.duel{grid-template-columns:1fr}}
+.cage{position:relative;aspect-ratio:9/16;background:#000;border-radius:12px;overflow:hidden;max-height:64vh}
+.cage iframe,.cage audio{position:absolute;inset:0;width:100%;height:100%}
+.tag{position:absolute;top:8px;left:8px;background:#7c3aed;border-radius:8px;padding:4px 12px;font-size:20px}
+button{font-size:17px;padding:12px 20px;border-radius:10px;border:1px solid #444;background:#1c1c1c;color:#eee;cursor:pointer}
+button.big{background:#7c3aed;border:none;font-size:20px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+input,select{font-size:15px;padding:10px;border-radius:8px;border:1px solid #444;background:#1c1c1c;color:#eee}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid #2a2a2a;padding:6px 8px;text-align:left}
+</style>
+</head>
+<body>
+<h1>🎤 Funnier <span class="muted">stand-up arena — crowd-ranked, with uncertainty</span></h1>
+<div class="row"><a href="/">Audition</a><a href="/watch">Watch</a><a href="/shorts">Shorts sim</a></div>
+<div class="card">
+<div id="duel" class="duel"></div>
+<div class="row"><button class="big" id="voteA">A was funnier</button><button class="big" id="voteB">B was funnier</button>
+<button id="skip">skip pair</button><span id="mstatus" class="muted"></span></div>
+<div class="muted" style="margin-top:6px">Two sets. Pick the funnier. Ratings stay hidden till you vote — judge the set, not the reputation. YouTube sets play in YouTube's own player (their ads, their credit).</div>
+</div>
+<div class="card"><h3>Leaderboard <span class="muted">Elo + Wilson CI — nobody is "objectively funniest" under n=30</span></h3>
+<div id="board" class="muted">no votes yet</div></div>
+<div class="card"><h3>Enter the arena</h3>
+<div class="row"><input id="yturl" size="42" placeholder="YouTube Shorts URL (embedding must be enabled by owner)">
+<button id="addyt">Add short</button></div>
+<div class="row"><input id="audid" size="30" placeholder="our audition id (e.g. aud_…)"><button id="addaud">Add our set</button>
+<span id="addstatus" class="muted"></span></div>
+<div class="muted">Our sets join as audio+puppet episodes; Shorts join as embeds. Same vote, same Elo.</div>
+</div>
+<script>
+let M=null;
+const $=id=>document.getElementById(id);
+async function api(m,u,b){const r=await fetch(u,{method:m,headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined});return r.json();}
+function cage(c,tag){const inner=c.kind==='youtube'
+?`<iframe src="https://www.youtube.com/embed/${c.ref}?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+:`<audio src="/audio/${c.ref}" controls style="position:absolute;bottom:10px"></audio><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:18px;padding:20px;text-align:center">🎙️ ${c.title}<br><span class="muted">our set — press play, then vote</span></div>`;
+return `<div><div class="cage">${inner}<div class="tag">${tag}</div></div><div class="muted">${c.title||''}</div></div>`;}
+async function matchup(){const d=await api('GET','/api/arena/matchup');if(d.error){$('duel').innerHTML=`<div class="muted">${d.error}</div>`;M=null;return;}
+M=d;$('duel').innerHTML=cage(d.a,'A')+cage(d.b,'B');$('mstatus').textContent='';}
+async function vote(w){if(!M)return;const d=await api('POST','/api/arena/vote',{a_id:M.a.id,b_id:M.b.id,winner_id:w==='A'?M.a.id:M.b.id});
+$('mstatus').textContent=`Elo → A ${d.a_elo} · B ${d.b_elo}`;board();matchup();}
+$('voteA').onclick=()=>vote('A');$('voteB').onclick=()=>vote('B');$('skip').onclick=matchup;
+async function board(){const d=await api('GET','/api/arena/board');if(!d.board.length){$('board').textContent='empty arena — add contenders below';return;}
+$('board').innerHTML=`<div class="muted">${d.votes} votes · ${d.note}</div><table><tr><th>#</th><th>set</th><th>Elo</th><th>W–B</th><th>Wilson95</th></tr>`+
+d.board.map((r,i)=>`<tr><td>${i+1}</td><td>${r.kind==='youtube'?`<a href="https://youtu.be/${r.ref}" target="_blank">▶</a> `:''}${r.title||r.ref}</td><td>${r.elo}</td><td>${r.wins}–${r.bouts}</td><td>${r.wilson_lo}–${r.wilson_hi}${r.significant?' ✓':''}</td></tr>`).join('')+'</table>';}
+$('addyt').onclick=async()=>{const d=await api('POST','/api/arena/contenders',{kind:'youtube',ref:$('yturl').value});$('addstatus').textContent=d.error||('added: '+d.title);$('yturl').value='';board();matchup();};
+$('addaud').onclick=async()=>{const d=await api('POST','/api/arena/contenders',{kind:'audition',ref:$('audid').value});$('addstatus').textContent=d.error||('added: '+d.title);$('audid').value='';board();matchup();};
+board();matchup();
+</script>
+</body>
+</html>

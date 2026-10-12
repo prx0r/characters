@@ -910,6 +910,142 @@ def stage_timeline(tid: str):
     return jsonify(d)
 
 
+def _wilson(wins: int, n: int, z: float = 1.96) -> tuple[float, float]:
+    """Wilson score interval on a proportion. Significant iff CI excludes 0.5."""
+    if n <= 0:
+        return (0.0, 1.0)
+    p = wins / n
+    d = 1 + z * z / n
+    c = p + z * z / (2 * n)
+    m = z * ((p * (1 - p) + z * z / (4 * n)) / n) ** 0.5
+    return (max(0.0, (c - m) / d), min(1.0, (c + m) / d))
+
+
+@app.get("/arena")
+def arena_page():
+    return send_file(HERE / "static" / "arena.html")
+
+
+@app.post("/api/arena/contenders")
+def arena_add():
+    import re as _re
+    import urllib.request as _url
+    data = request.get_json(force=True) or {}
+    kind = data.get("kind", "")
+    ref = (data.get("ref") or "").strip()
+    title = (data.get("title") or "").strip()[:120]
+    if kind == "youtube":
+        m = _re.search(r"(?:v=|youtu\.be/|shorts/)([\w-]{11})", ref) or _re.fullmatch(r"[\w-]{11}", ref)
+        vid = (m.group(1) if m and m.groups() else ref) if m else ""
+        if not _re.fullmatch(r"[\w-]{11}", vid or ""):
+            return jsonify({"error": "need a YouTube Shorts URL or 11-char video id"}), 400
+        try:  # oEmbed: verifies existence + embeddability without API quota
+            o = _url.urlopen(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={vid}&format=json",
+                             timeout=15)
+            meta = json.loads(o.read().decode())
+            title = title or (meta.get("title", "") + f" — {meta.get('author_name','')}")[:120]
+        except Exception:
+            return jsonify({"error": "video not found or embedding disabled (respect owner's setting)"}), 400
+        ref = vid
+    elif kind == "audition":
+        conn = _conn()
+        try:
+            aud = store.get_audition(conn, ref)
+        finally:
+            conn.close()
+        if not aud:
+            return jsonify({"error": "unknown audition id"}), 404
+        title = title or f"{aud['character_id']} · {aud['scenario_id']}"
+    else:
+        return jsonify({"error": "kind must be youtube|audition"}), 400
+    conn = _conn()
+    try:
+        if conn.execute("SELECT 1 FROM arena_contenders WHERE kind=? AND ref=?", (kind, ref)).fetchone():
+            return jsonify({"error": "already in the arena"}), 409
+        cid = store.new_id("arena")
+        conn.execute("INSERT INTO arena_contenders (id, kind, ref, title, elo, created_at)"
+                     " VALUES (?,?,?,?,1500,?)", (cid, kind, ref, title, time.time()))
+        conn.commit()
+    finally:
+        conn.close()
+    return jsonify({"contender_id": cid, "kind": kind, "ref": ref, "title": title})
+
+
+@app.get("/api/arena/matchup")
+def arena_matchup():
+    conn = _conn()
+    try:
+        rows = [dict(r) for r in conn.execute(
+            """SELECT c.*, (SELECT COUNT(*) FROM arena_votes v
+                 WHERE v.a_id=c.id OR v.b_id=c.id) AS bouts
+              FROM arena_contenders c ORDER BY bouts, RANDOM() LIMIT 6""").fetchall()]
+    finally:
+        conn.close()
+    if len(rows) < 2:
+        return jsonify({"error": "need at least 2 contenders — add Shorts URLs or auditions"}), 400
+    import random as _r
+    a, b = _r.sample(rows, 2)
+    if _r.random() < 0.5:
+        a, b = b, a
+    hide = lambda c: {"id": c["id"], "kind": c["kind"], "ref": c["ref"], "title": c["title"]}
+    return jsonify({"a": hide(a), "b": hide(b),
+                    "note": "titles shown, ratings hidden — vote the set, not the reputation"})
+
+
+@app.post("/api/arena/vote")
+def arena_vote():
+    data = request.get_json(force=True) or {}
+    a_id, b_id, w_id = data.get("a_id", ""), data.get("b_id", ""), data.get("winner_id", "")
+    if not a_id or not b_id or w_id not in (a_id, b_id):
+        return jsonify({"error": "need a_id, b_id and winner_id of one of them"}), 400
+    conn = _conn()
+    try:
+        ra = conn.execute("SELECT * FROM arena_contenders WHERE id=?", (a_id,)).fetchone()
+        rb = conn.execute("SELECT * FROM arena_contenders WHERE id=?", (b_id,)).fetchone()
+        if not ra or not rb:
+            return jsonify({"error": "unknown contender"}), 404
+        ea, eb = float(ra["elo"]), float(rb["elo"])
+        sa = 1.0 if w_id == a_id else 0.0
+        xa = 1 / (1 + 10 ** ((eb - ea) / 400))
+        K = 32
+        ea2, eb2 = ea + K * (sa - xa), eb + K * ((1 - sa) - (1 - xa))
+        conn.execute("UPDATE arena_contenders SET elo=? WHERE id=?", (round(ea2, 1), a_id))
+        conn.execute("UPDATE arena_contenders SET elo=? WHERE id=?", (round(eb2, 1), b_id))
+        conn.execute("INSERT INTO arena_votes (id, a_id, b_id, winner_id, created_at)"
+                     " VALUES (?,?,?,?,?)", (store.new_id("vote"), a_id, b_id, w_id, time.time()))
+        conn.commit()
+    finally:
+        conn.close()
+    return jsonify({"a_elo": round(ea2, 1), "b_elo": round(eb2, 1)})
+
+
+@app.get("/api/arena/leaderboard")
+def arena_board():
+    conn = _conn()
+    try:
+        rows = [dict(r) for r in conn.execute("SELECT * FROM arena_contenders").fetchall()]
+        votes = [dict(r) for r in conn.execute("SELECT * FROM arena_votes").fetchall()]
+    finally:
+        conn.close()
+    wins: dict[str, int] = {}
+    bouts: dict[str, int] = {}
+    for v in votes:
+        bouts[v["a_id"]] = bouts.get(v["a_id"], 0) + 1
+        bouts[v["b_id"]] = bouts.get(v["b_id"], 0) + 1
+        wins[v["winner_id"]] = wins.get(v["winner_id"], 0) + 1
+    board = []
+    for c in rows:
+        n, w = bouts.get(c["id"], 0), wins.get(c["id"], 0)
+        lo, hi = _wilson(w, n)
+        board.append({"id": c["id"], "kind": c["kind"], "ref": c["ref"], "title": c["title"],
+                      "elo": c["elo"], "wins": w, "bouts": n,
+                      "wilson_lo": round(lo, 3), "wilson_hi": round(hi, 3),
+                      "significant": bool(n >= 30 and (hi < 0.5 or lo > 0.5))})
+    board.sort(key=lambda r: -r["elo"])
+    return jsonify({"board": board, "votes": len(votes),
+                    "note": "crowd-ranked with uncertainty — Wilson CI; 'funniest' needs n≥30 and CI excluding 0.5"})
+
+
 if __name__ == "__main__":
     _startup_sweep()
     print("Audition app on http://127.0.0.1:8807/")
