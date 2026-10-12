@@ -135,3 +135,46 @@ def list_worlds() -> list[dict]:
         return [dict(r) for r in conn.execute("SELECT * FROM worlds").fetchall()]
     finally:
         conn.close()
+
+
+def premise(world_id: str, character_id: str, mechanism: str,
+            seed: int | None = None) -> dict:
+    """World-grounded scenario: relationship edge x mechanism x worldview.
+
+    Returns a scenario dict compatible with generate_minute. No generic AI
+    topics: every premise grows out of a charged edge in the world graph
+    (or world lore/news when edges run dry). One situation that can evolve
+    across a whole minute — never a grab-bag of claims.
+    """
+    import random as _r
+    rng = _r.Random(seed)
+    w = World(world_id)
+    rels = w.relationships()
+    rel = rng.choice(rels) if rels else {}
+    charge = rel.get("charge", "") if rel else ""
+    lore = w.lore(3)
+    news = w.news(1)
+    lore_bit = (lore[0]["claim"][:140] if lore else "")
+    news_bit = (news[0]["claim"][:140] if news else "")
+    mech_fuel = {
+        "status_invert": "the low outrank the high, on paper, tonight",
+        "identity_contradict": "the mask and the face swap jobs mid-scene",
+        "rigidify": "procedure worshipped until it backfires",
+        "double_interpret": "one order, two readings, both obeyed",
+        "literalize": "a figure of speech comes true on stage",
+        "repeat_variation": "the same demand returns bigger each time",
+        "unmask": "a disguise fails at the worst line",
+        "expose_self_blindness": "self-incrimination filed as testimony",
+        "false_analogy": "a metaphor with teeth bites back",
+    }.get(mechanism, mechanism.replace("_", " "))
+    comic_model = (f"{charge}. Tonight, {mech_fuel}. "
+                   f"{character_id.replace('_', ' ')} must act, in one continuous scene.").strip()
+    return {"id": f"{world_id}_{mechanism}_{rng.randint(100, 999)}",
+            "comic_claim": comic_model,
+            "comic_model": comic_model,
+            "reality_model": lore_bit or w.meta.get("shared_worldview", ""),
+            "central_question": f"what breaks first: the rule or the ruler?",
+            "tensions": [charge] if charge else [],
+            "derivations": [{"premise": news_bit or lore_bit or comic_model}],
+            "theories": [mechanism],
+            "world_id": world_id, "edge": {k: rel.get(k, "") for k in ("a", "b", "charge")}}

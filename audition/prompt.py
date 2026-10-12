@@ -107,8 +107,43 @@ def build_task() -> str:
     return ("Return strict JSON: {scenario_summary, character_decision "
             "{appraisal, chosen_goal, reaction, emotional_shift}, "
             "change_from_last, beats:[{id,type,text,pause_after_ms,emphasis}]}. "
-            "6 beats (setup/setup/misdirect-or-escalation/punchline/tag-or-callback/closer), "
-            "130-150 words total, opener IS a joke (no throat-clearing), closer under 8 words.")
+            "Write ONE continuous 60-second scene, not separate jokes: a beginning "
+            "(who/where/want in the first 2 beats), a middle where the situation "
+            "escalates through the licensed mechanism, and a button closer under "
+            "8 words that callbacks something from beats 1-3. Entities, names and "
+            "props introduced early MUST reappear later — a beat that shares no "
+            "nouns with the rest is a rejected beat. 6-7 beats, 130-170 words total, "
+            "opener IS a joke (no throat-clearing). Beat types still labeled "
+            "(setup/misdirect/punchline/tag/closer) for timing only.")
+
+
+def continuity_score(beats: list[dict]) -> dict:
+    """Do later beats reuse earlier beats' entities? 0..1 + detail.
+
+    Advisory (battle scoring, reflection) — not a validity gate, so human
+    oddballs aren't rejected by a nouns heuristic.
+    """
+    import re as _re
+    stops = {"the", "a", "an", "and", "or", "but", "with", "from", "that",
+             "this", "they", "them", "his", "her", "its", "you", "your",
+             "for", "was", "were", "are", "have", "has", "had", "will",
+             "would", "could", "there", "their", "what", "when", "then",
+             "than", "into", "about", "after", "here", "there"}
+    bag = []
+    for b in beats:
+        bag.append({w.lower().strip(",.?!;:") for w in (b.get("text") or "").split()
+                    if len(w) > 3} - stops)
+    if len(bag) < 2:
+        return {"score": 0.0, "shared": []}
+    early = set().union(*bag[:-1])
+    shared = sorted((bag[-1] & early))[:12]
+    mid = set().union(*bag[: max(1, len(bag) - 1)])
+    links = sum(1 for i in range(1, len(bag)) if bag[i] & set().union(*bag[:i]))
+    score = round((len(shared) / max(1, len(bag[-1]))) * 0.5 +
+                  (links / max(1, len(bag) - 1)) * 0.5, 3)
+    void = [b.get("id") for i, b in enumerate(beats)
+            if i > 0 and not (bag[i] & set().union(*bag[:i]))]
+    return {"score": score, "shared": shared, "void_beats": void}
 
 
 def compile(character: dict, scenario: dict, state: dict, memories: list[str],

@@ -64,9 +64,19 @@ def score_candidate(full_text: str, beats: list[dict], decision: dict,
     except Exception:
         parts["gates"] = 0.5
         parts["gate_flags"] = 0
-    total = round(0.2 * parts["slop"] + 0.2 * parts["not_swappable"] + 0.1 * parts["not_generic"]
+    # 6. continuity: later beats reuse earlier entities (one story, not postcards)
+    try:
+        import prompt as _prompt
+        cont = _prompt.continuity_score(beats)
+        parts["continuity"] = cont["score"]
+        parts["void_beats"] = cont["void_beats"]
+    except Exception:
+        parts["continuity"] = 0.5
+        parts["void_beats"] = []
+    total = round(min(1.0, 0.2 * parts["slop"] + 0.2 * parts["not_swappable"] + 0.1 * parts["not_generic"]
                   + 0.15 * parts["reframe"] + 0.1 * parts["play_ready"]
-                  + 0.1 * parts["novelty"] + 0.05 * parts["shape"] + 0.1 * parts["gates"], 3)
+                  + 0.1 * parts["novelty"] + 0.05 * parts["shape"] + 0.1 * parts["gates"]
+                  + 0.05 * parts["continuity"]), 3)
     if parts.get("gates") == 0.0:
         total = min(total, 0.3)
     return {"parts": parts, "total": total}
