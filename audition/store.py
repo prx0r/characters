@@ -148,6 +148,20 @@ def migrate(conn: sqlite3.Connection) -> None:
                 conn.execute(f"ALTER TABLE arena_contenders ADD COLUMN {col} {ddl}")
         except Exception:
             pass
+    conn.execute("""CREATE TABLE IF NOT EXISTS worlds (
+      world_id TEXT PRIMARY KEY, name TEXT NOT NULL, lore TEXT NOT NULL DEFAULT '',
+      shared_worldview TEXT NOT NULL DEFAULT '', home_crowd TEXT NOT NULL DEFAULT '',
+      stage_id TEXT NOT NULL DEFAULT 'comedy_club', status TEXT NOT NULL DEFAULT 'active',
+      created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS world_residents (
+      world_id TEXT NOT NULL, canon_id TEXT NOT NULL, character_id TEXT NOT NULL DEFAULT '',
+      role TEXT NOT NULL DEFAULT 'resident', PRIMARY KEY (world_id, canon_id))""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS world_relationships (
+      id TEXT PRIMARY KEY, world_id TEXT NOT NULL, a TEXT NOT NULL, b TEXT NOT NULL,
+      charge TEXT NOT NULL, created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS world_lore (
+      id TEXT PRIMARY KEY, world_id TEXT NOT NULL, claim TEXT NOT NULL,
+      source TEXT NOT NULL DEFAULT '', created_at REAL NOT NULL)""")
     conn.commit()
 
 

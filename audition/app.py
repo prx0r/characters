@@ -1153,6 +1153,34 @@ def pogtown_page():
     return send_file(HERE / "static" / "pogtown.html")
 
 
+@app.get("/mp4/<aud_id>")
+def mp4_serve(aud_id: str):
+    """Real Shorts file: render-on-demand (cached), 1080x1920 + real audio."""
+    import render as _render
+    from pathlib import Path as _P
+    out = _P(f"/tmp/opencode/{aud_id}.mp4")
+    if not (out.exists() and out.stat().st_size > 100000):
+        conn = _conn()
+        try:
+            aud = store.get_audition(conn, aud_id)
+        finally:
+            conn.close()
+        if not aud:
+            return jsonify({"error": "unknown audition id"}), 404
+        import generate as _gen
+        chars = {c["id"]: c for c in _gen.list_characters()}
+        _ = chars  # portraits resolve inside render via character_id seed
+        style = {"reptilian_ralph_middle_management": "adventurer",
+                 "no_nose_nolan": "personas",
+                 "rudy_dulce_hvac": "bottts"}.get(aud["character_id"], "adventurer")
+        try:
+            _render.render_mp4(aud, out, style=style)
+        except Exception as e:
+            return jsonify({"error": f"render failed: {e}"[:300]}), 500
+    return send_file(out, mimetype="video/mp4", as_attachment=False,
+                     download_name=f"{aud_id}.mp4")
+
+
 if __name__ == "__main__":
     _startup_sweep()
     print("Audition app on http://127.0.0.1:8807/")

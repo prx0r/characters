@@ -76,11 +76,12 @@ ${c.portrait_url?`<img class="bg" src="${c.portrait_url}">`:''}
 <div class="topmeta"><b>${c.character_id}</b> · ${c.scenario_id}</div>
 <div class="sub"></div><div class="prog"><div></div></div>
 <audio src="${c.audio_url}" preload="auto"></audio>
-<div class="rail"><button data-a="like">♥</button><button data-a="replay">↻</button><button data-a="skip">⏭</button></div></div></div>`).join('')
+<div class="rail"><button data-a="like">♥</button><button data-a="replay">↻</button><button data-a="skip">⏭</button><button data-a="mp4" title="download MP4">⬇</button></div></div></div>`).join('')
 ||'<div class="hint">no episodes — generate minutes first</div>';
 f.querySelectorAll('.card').forEach(card=>{const i=+card.dataset.i,c=CARDS[i],aud=card.querySelector('audio');
 card.querySelectorAll('.rail button').forEach(b=>b.onclick=async e=>{e.stopPropagation();const a=b.dataset.a;
 if(a==='replay'&&aud){aud.currentTime=0;aud.play();return;}
+if(a==='mp4'){b.textContent='…';const l=document.createElement('a');l.href='/mp4/'+c.audition_id;l.download=c.audition_id+'.mp4';document.body.appendChild(l);l.click();l.remove();b.textContent='⬇';return;}
 await send(c.audition_id,a);b.classList.add('on');if(a==='skip')next();});
 aud.onplay=()=>{T0=performance.now();};
 aud.ontimeupdate=()=>{const ms=aud.currentTime*1000;
