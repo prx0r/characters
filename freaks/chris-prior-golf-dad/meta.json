@@ -1,13 +1,14 @@
 {
   "slug": "chris-prior-golf-dad",
   "created_at": "Mon 2026-10-12 06:34 PM (UTC+07:00)",
-  "updated_at": "Mon 2026-10-12 06:43 PM (UTC+07:00)",
+  "updated_at": "Mon 2026-10-12 07:03 PM (UTC+07:00)",
   "creator": "characters-foundry-v1",
   "status": "ready",
   "files": {
     "character.json": "sha256:a2d3d590e4284004694ef25dfb06b2935508f1b462fa593926a097ff304919c5",
     "delivery.json": "sha256:0e3b11112e4b4b51d1b37c20c9560ce1751d8fac990c5b84a6e92127ddb683b6",
-    "scenarios.json": "sha256:6d37dee17dd6e67260da3a4fd0e0daddd7a05e0e83682aae4793bc843c030dbb"
+    "scenarios.json": "sha256:6d37dee17dd6e67260da3a4fd0e0daddd7a05e0e83682aae4793bc843c030dbb",
+    "set.wav": "sha256:80e52a966e82876a06b0174a2c298e3afe8491a7534dc02b3d694bb9c7a493d4"
   },
   "beat_count": 11,
   "word_count": 110,
@@ -20,5 +21,6 @@
     "parent": null,
     "root": "human-dad",
     "depth": 1
-  }
+  },
+  "set_wav": "Kokoro-82M (bm_george:0.7+bm_lewis:0.3) render of sets/chris_tesla_howitworks.json via char lab (14.56 s); AI stand-in voice, not Chris's voice"
 }
