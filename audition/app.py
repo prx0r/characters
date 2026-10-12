@@ -160,6 +160,45 @@ def _persist_ready(job_id: str, character_id: str, conn, gen: dict, strat: dict,
            "audio_hash": audio["sha256"], "status": "ready", "error": "",
            "change_note": gen["decision"].get("change_from_last", "")}
     store.insert_audition(conn, row)
+    _record_graph_instance(job_id, character_id, gen, strat)
+
+
+def _record_graph_instance(job_id: str, character_id: str,
+                           gen: dict, strat: dict) -> None:
+    """Bridge: audition persist → character graph instance.
+
+    Writes to bgraph2 via SDK record_instance. Fail-open (logs, never
+    crashes the audition). This closes the performer→manager loop:
+    battle winners land in the graph, seed_state picks them up next round,
+    influence2 direction reads them via fuse_character.
+    """
+    try:
+        import sys as _sys
+        import os as _os
+        _sdk_dir = "/root/characters/sdk"
+        if _sdk_dir not in _sys.path:
+            _sys.path.insert(0, _sdk_dir)
+        import character_sdk as _sdk
+        decision = gen.get("decision") or {}
+        inst = decision.get("instance") or {}
+        instance = {
+            "instance_id": job_id,
+            "seed_id": gen.get("character", {}).get(
+                "seed_version", "seed-overlay-v1"),
+            "scenario_id": gen.get("scenario", {}).get("id", "unknown"),
+            "modulator": inst.get("modulator") or decision.get("modulator"),
+            "operator": inst.get("operator") or decision.get("operator"),
+            "chooser": inst.get("chooser") or decision.get("chooser"),
+            "battle_score": (decision.get("battle_score") or {}).get("total")
+            if isinstance(decision.get("battle_score"), dict)
+            else decision.get("battle_score"),
+        }
+        # drop Nones — SDK requires instance_id/seed_id/scenario_id only
+        instance = {k: v for k, v in instance.items() if v is not None}
+        _sdk.record_instance(character_id, instance)
+    except Exception as e:
+        # fail-open: graph write never blocks audition persistence
+        print(f"[bridge] record_instance failed for {job_id}: {e}"[:200])
 
 
 def _run_battle(job_id: str, character_id: str, matched: bool = False):
