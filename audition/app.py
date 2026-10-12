@@ -1187,7 +1187,7 @@ def mp4_serve(aud_id: str):
     rver = (_stage.load_rig(char_rig) or {}).get("version", "?")
     dh = _stage._hash_beats(aud.get("beats") or [])
     key = {"rig": char_rig, "rig_version": rver, "delivery": dh,
-           "renderer": "render_mp4_pil_v1"}
+           "renderer": "render_mp4_pil_v3"}
     out = _P(f"/tmp/opencode/{aud_id}.mp4")
     man = _P(f"/tmp/opencode/{aud_id}.mp4.json")
     fresh = False
