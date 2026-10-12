@@ -73,15 +73,26 @@ def score_candidate(full_text: str, beats: list[dict], decision: dict,
 
 
 def battle(character_id: str, recent: list[dict], strategy: dict, n: int = 3,
-           seed: int | None = None) -> dict:
-    """Generate n variants, return winner + ranked table. Deterministic seeds."""
+           seed: int | None = None, matched: bool = False) -> dict:
+    """Generate n variants, return winner + ranked table. Deterministic seeds.
+
+    matched=True holds ONE scenario across candidates (vary operator/modulator
+    only) so a win teaches which approach works, not which premise was better.
+    """
     import generate as _gen
     rng = random.Random(seed if seed is not None else random.randint(1, 10**9))
     priors = [r.get("full_text", "") for r in (recent or [])]
+    fixed = None
+    mode = "open"
+    if matched:
+        used = [r.get("scenario_id", "") for r in (recent or []) if r.get("scenario_id")]
+        fixed = _gen.pick_scenario(used, rng)
+        mode = "matched:" + fixed["id"]
     cands = []
     running = list(recent or [])
     for i in range(n):
-        g = _gen.generate_minute(character_id, running, strategy, seed=rng.randint(1, 10**9))
+        g = _gen.generate_minute(character_id, running, strategy, seed=rng.randint(1, 10**9),
+                                 scenario=fixed)
         sc = score_candidate(g["full_text"], g["beats"], g["decision"], priors)
         priors = priors + [g["full_text"]]
         running = running + [{"scenario_id": g["scenario"]["id"], "full_text": g["full_text"],
@@ -93,4 +104,5 @@ def battle(character_id: str, recent: list[dict], strategy: dict, n: int = 3,
               "scenario": c["gen"]["scenario"]["id"],
               "text": c["gen"]["full_text"],
               "total": c["score"]["total"], "parts": c["score"]["parts"]} for c in cands]
-    return {"winner": cands[0]["gen"], "winner_score": cands[0]["score"], "table": table}
+    return {"winner": cands[0]["gen"], "winner_score": cands[0]["score"], "table": table,
+            "mode": mode}

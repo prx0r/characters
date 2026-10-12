@@ -162,7 +162,7 @@ def _persist_ready(job_id: str, character_id: str, conn, gen: dict, strat: dict,
     store.insert_audition(conn, row)
 
 
-def _run_battle(job_id: str, character_id: str):
+def _run_battle(job_id: str, character_id: str, matched: bool = False):
     conn = _conn()
     try:
         _job(job_id, character_id, "battle", "battling")
@@ -181,9 +181,9 @@ def _run_battle(job_id: str, character_id: str):
                            "operator_ids": r["operator_ids"], "rating": 0, "pog_count": 0})
         strat = store.get_strategy(conn, character_id)
         seed = random.randint(1, 10**9)
-        res = _battle.battle(character_id, fb, strat, n=3, seed=seed)
+        res = _battle.battle(character_id, fb, strat, n=3, seed=seed, matched=matched)
         gen = res["winner"]
-        gen["decision"]["slop"] = {"battle": True}
+        gen["decision"]["slop"] = {"battle": True, "mode": res.get("mode", "open")}
         gen["decision"]["battle_score"] = res["winner_score"]
         gen["decision"]["battle_table"] = [{k: v for k, v in c.items() if k != "text"}
                                            for c in res["table"]]
@@ -213,17 +213,20 @@ def create_audition():
 
 @app.post("/api/auditions/battle")
 def create_battle():
-    """Generate 3, classify, ship the winner. Slower, better."""
+    """Generate 3, classify, ship the winner. mode=matched holds one scenario
+    across candidates so wins teach approach, not premise."""
     data = request.get_json(force=True) or {}
     character_id = data.get("character_id", "no_nose_nolan")
+    matched = data.get("mode", "open") == "matched"
     ids = {c["id"] for c in generate.list_characters()}
     if character_id not in ids:
         return jsonify({"error": f"unknown character_id {character_id}"}), 400
     job_id = store.new_id("aud")
     JOBS[job_id] = {"status": "queued", "mode": "battle", "character_id": character_id, "created_at": time.time()}
     _job(job_id, character_id, "battle", "queued")
-    threading.Thread(target=_run_battle, args=(job_id, character_id), daemon=True).start()
-    return jsonify({"audition_id": job_id, "status": "queued", "mode": "battle"})
+    threading.Thread(target=_run_battle, args=(job_id, character_id, matched), daemon=True).start()
+    return jsonify({"audition_id": job_id, "status": "queued",
+                    "mode": "battle-matched" if matched else "battle"})
 
 
 @app.get("/api/characters/<character_id>/progress")
@@ -558,6 +561,9 @@ def battle_blind(job_id: str):
                 {"label": "B", "idx": 1, "text": table[1]["text"]}]
         import random as _r
         _r.shuffle(pair)
+        conn.execute("UPDATE battle_runs SET blind_map=? WHERE job_id=?",
+                     (_j.dumps({p["label"]: p["idx"] for p in pair}), job_id))
+        conn.commit()
         return jsonify({"job_id": job_id, "options": pair,
                         "note": "winner hidden; vote, then reveal"})
     finally:
@@ -570,20 +576,35 @@ def battle_blind_vote(job_id: str):
     pick = data.get("pick", "")
     if pick not in ("A", "B"):
         return jsonify({"error": "pick A or B"}), 400
+    voter = str(data.get("voter_id", "anon"))[:64]
     conn = _conn()
     try:
         r = conn.execute("SELECT * FROM battle_runs WHERE job_id=?", (job_id,)).fetchone()
         if not r:
             return jsonify({"error": "unknown battle"}), 404
         import json as _j, time as _t
+        try:
+            mapping = _j.loads(r["blind_map"] or "{}")
+        except Exception:
+            mapping = {}
+        if pick not in mapping:
+            return jsonify({"error": "stale matchup — reload the blind pair and vote again"}), 409
+        picked_idx = mapping[pick]
         votes = _j.loads(r["blind_votes"] or "[]")
-        votes.append({"pick": pick, "at": _t.time()})
+        if any(v.get("voter_id") == voter for v in votes):
+            return jsonify({"error": "already voted on this battle"}), 409
+        votes.append({"pick": pick, "picked_idx": picked_idx,
+                      "model_winner_idx": r["winner_idx"],
+                      "agrees_with_model": picked_idx == r["winner_idx"],
+                      "voter_id": voter, "at": _t.time()})
         conn.execute("UPDATE battle_runs SET blind_votes=? WHERE job_id=?",
                      (_j.dumps(votes), job_id))
         conn.commit()
         return jsonify({"job_id": job_id, "model_winner_idx": r["winner_idx"],
+                        "you_picked_idx": picked_idx,
+                        "agree": picked_idx == r["winner_idx"],
                         "votes": len(votes),
-                        "note": "human pick recorded against model winner"})
+                        "note": "human pick resolved against stored shuffle map"})
     finally:
         conn.close()
 
@@ -1027,7 +1048,15 @@ def arena_matchup():
     if _r.random() < 0.5:
         a, b = b, a
     hide = lambda c: {"id": c["id"], "kind": c["kind"], "ref": c["ref"], "title": c["title"]}
-    return jsonify({"a": hide(a), "b": hide(b),
+    mid = store.new_id("match")
+    conn2 = _conn()
+    try:
+        conn2.execute("INSERT INTO arena_matches (id, a_id, b_id, created_at) VALUES (?,?,?,?)",
+                      (mid, a["id"], b["id"], time.time()))
+        conn2.commit()
+    finally:
+        conn2.close()
+    return jsonify({"match_id": mid, "a": hide(a), "b": hide(b),
                     "note": "titles shown, ratings hidden — vote the set, not the reputation"})
 
 
@@ -1037,12 +1066,26 @@ def arena_vote():
     a_id, b_id, w_id = data.get("a_id", ""), data.get("b_id", ""), data.get("winner_id", "")
     if not a_id or not b_id or w_id not in (a_id, b_id):
         return jsonify({"error": "need a_id, b_id and winner_id of one of them"}), 400
+    voter = str(data.get("voter_id", "anon"))[:64]
+    world = str(data.get("world_id", ""))[:64]
+    try:
+        context = json.dumps(data.get("context", {}) or {})[:500]
+    except Exception:
+        context = "{}"
     conn = _conn()
     try:
+        m = None
+        if data.get("match_id"):
+            m = conn.execute("SELECT * FROM arena_matches WHERE id=?", (data["match_id"],)).fetchone()
+            if not m or {m["a_id"], m["b_id"]} != {a_id, b_id}:
+                return jsonify({"error": "stale matchup — fetch a fresh pair and vote again"}), 409
         ra = conn.execute("SELECT * FROM arena_contenders WHERE id=?", (a_id,)).fetchone()
         rb = conn.execute("SELECT * FROM arena_contenders WHERE id=?", (b_id,)).fetchone()
         if not ra or not rb:
             return jsonify({"error": "unknown contender"}), 404
+        if conn.execute("SELECT 1 FROM arena_votes WHERE voter_id=? AND ((a_id=? AND b_id=?) OR (a_id=? AND b_id=?))",
+                        (voter, a_id, b_id, b_id, a_id)).fetchone():
+            return jsonify({"error": "already voted on this pair"}), 409
         ea, eb = float(ra["elo"]), float(rb["elo"])
         sa = 1.0 if w_id == a_id else 0.0
         xa = 1 / (1 + 10 ** ((eb - ea) / 400))
@@ -1050,8 +1093,9 @@ def arena_vote():
         ea2, eb2 = ea + K * (sa - xa), eb + K * ((1 - sa) - (1 - xa))
         conn.execute("UPDATE arena_contenders SET elo=? WHERE id=?", (round(ea2, 1), a_id))
         conn.execute("UPDATE arena_contenders SET elo=? WHERE id=?", (round(eb2, 1), b_id))
-        conn.execute("INSERT INTO arena_votes (id, a_id, b_id, winner_id, created_at)"
-                     " VALUES (?,?,?,?,?)", (store.new_id("vote"), a_id, b_id, w_id, time.time()))
+        conn.execute("INSERT INTO arena_votes (id, a_id, b_id, winner_id, voter_id, context, world_id, created_at)"
+                     " VALUES (?,?,?,?,?,?,?,?)",
+                     (store.new_id("vote"), a_id, b_id, w_id, voter, context, world, time.time()))
         conn.commit()
     finally:
         conn.close()

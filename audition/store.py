@@ -111,6 +111,20 @@ def migrate(conn: sqlite3.Connection) -> None:
       job_id TEXT PRIMARY KEY, character_id TEXT NOT NULL,
       table_json TEXT NOT NULL, winner_idx INTEGER NOT NULL,
       blind_votes TEXT NOT NULL DEFAULT '[]', created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS arena_matches (
+      id TEXT PRIMARY KEY, a_id TEXT NOT NULL, b_id TEXT NOT NULL,
+      created_at REAL NOT NULL)""")
+    for _tbl, _cols in (("battle_runs", (("blind_map", "TEXT NOT NULL DEFAULT ''"),)),
+                        ("arena_votes", (("voter_id", "TEXT NOT NULL DEFAULT ''"),
+                                         ("context", "TEXT NOT NULL DEFAULT '{}'"),
+                                         ("world_id", "TEXT NOT NULL DEFAULT ''")))):
+        try:
+            _have = {r[1] for r in conn.execute(f"PRAGMA table_info({_tbl})").fetchall()}
+            for _col, _ddl in _cols:
+                if _col not in _have:
+                    conn.execute(f"ALTER TABLE {_tbl} ADD COLUMN {_col} {_ddl}")
+        except Exception:
+            pass
     mcols = {r[1] for r in conn.execute("PRAGMA table_info(memories)").fetchall()}
     for col, ddl in (("type", "TEXT NOT NULL DEFAULT 'event'"),
                      ("status", "TEXT NOT NULL DEFAULT 'proposed'"),

@@ -403,11 +403,12 @@ def seed_modulators(character: dict) -> list[str]:
 
 
 def generate_minute(character_id: str, recent: list[dict], strategy: dict,
-                    seed: int | None = None, used_ids: list[str] | None = None) -> dict:
+                    seed: int | None = None, used_ids: list[str] | None = None,
+                    scenario: dict | None = None) -> dict:
     rng = random.Random(seed if seed is not None else random.randint(1, 10**9))
     character = get_character(character_id)
     used = list(used_ids or []) or [r.get("scenario_id", "") for r in (recent or []) if r.get("scenario_id")]
-    scenario = pick_scenario(used, rng)
+    scenario = scenario or pick_scenario(used, rng)
 
     # 70/30 exploit/explore over operators using strategy evidence
     success = (strategy or {}).get("success", {})
