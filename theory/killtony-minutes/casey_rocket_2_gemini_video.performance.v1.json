@@ -1,0 +1,229 @@
+{
+  "version": "performance.v1",
+  "source": "casey_rocket_2_gemini_video",
+  "method": "gemini-3.8-flash_video",
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.75
+    },
+    {
+      "t": 0.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 0.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 0.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "gleeful",
+        "energy": 0.8,
+        "pitch_shift": "rise",
+        "pace": "slow",
+        "beat_type": "setup"
+      }
+    },
+    {
+      "t": 3.8,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.8
+    },
+    {
+      "t": 3.8,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 3.8,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 3.8,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "manic",
+        "energy": 0.75,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "beat_type": "tag"
+      }
+    },
+    {
+      "t": 8.5,
+      "kind": "expression",
+      "value": "deadpan",
+      "intensity": 0.7
+    },
+    {
+      "t": 8.5,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 8.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 8.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.65,
+        "pitch_shift": "drop",
+        "pace": "normal",
+        "beat_type": "punchline"
+      }
+    },
+    {
+      "t": 8.55,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 15.0,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.75
+    },
+    {
+      "t": 15.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 15.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 15.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "gleeful",
+        "energy": 0.7,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "beat_type": "escalation"
+      }
+    },
+    {
+      "t": 22.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "intensity": 0.8
+    },
+    {
+      "t": 22.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 22.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 22.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.6,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "beat_type": "premise"
+      }
+    },
+    {
+      "t": 31.0,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.85
+    },
+    {
+      "t": 31.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 31.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 31.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.7,
+        "pitch_shift": "drop",
+        "pace": "normal",
+        "beat_type": "punchline"
+      }
+    },
+    {
+      "t": 31.05,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 40.0,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.9
+    },
+    {
+      "t": 40.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 40.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 40.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "manic",
+        "energy": 0.75,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "beat_type": "button"
+      }
+    }
+  ],
+  "n_events": 30,
+  "meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 29.3,
+    "clip_mb": 4.8,
+    "usage": {
+      "promptTokenCount": 4632,
+      "candidatesTokenCount": 2485,
+      "totalTokenCount": 7616,
+      "promptTokensDetails": [
+        {
+          "modality": "VIDEO",
+          "tokenCount": 4004
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 499,
+      "serviceTier": "standard"
+    }
+  }
+}

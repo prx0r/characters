@@ -1,0 +1,209 @@
+{
+  "schema": "performance.v1",
+  "source": "casey_rocket_2_gemini_video",
+  "method": "gemini\u2192ralph_rig",
+  "audio_duration_ms": 44500,
+  "events": [
+    {
+      "t": 0,
+      "kind": "expression",
+      "id": "self_satisfied",
+      "source_emotion": "gleeful",
+      "intensity": 0.75
+    },
+    {
+      "t": 0,
+      "kind": "lights",
+      "id": "house_up"
+    },
+    {
+      "t": 200,
+      "kind": "gesture",
+      "id": "lean_forward",
+      "intensity": 0.5
+    },
+    {
+      "t": 300,
+      "kind": "gesture",
+      "id": "head_tilt",
+      "intensity": 0.6
+    },
+    {
+      "t": 400,
+      "kind": "enter",
+      "from": "stage_left"
+    },
+    {
+      "t": 1200,
+      "kind": "camera",
+      "id": "medium"
+    },
+    {
+      "t": 1200,
+      "kind": "speak_start"
+    },
+    {
+      "t": 3800,
+      "kind": "expression",
+      "id": "surprised",
+      "source_emotion": "manic",
+      "intensity": 0.8
+    },
+    {
+      "t": 4000,
+      "kind": "gesture",
+      "id": "suit_adjust",
+      "intensity": 0.5
+    },
+    {
+      "t": 4200,
+      "kind": "gesture",
+      "id": "small_shrug",
+      "intensity": 0.5
+    },
+    {
+      "t": 8500,
+      "kind": "expression",
+      "id": "deadpan",
+      "source_emotion": "deadpan",
+      "intensity": 0.7
+    },
+    {
+      "t": 8700,
+      "kind": "gesture",
+      "id": "lean_forward",
+      "intensity": 0.7
+    },
+    {
+      "t": 8800,
+      "kind": "gesture",
+      "id": "head_tilt",
+      "intensity": 0.6
+    },
+    {
+      "t": 8900,
+      "kind": "gesture",
+      "id": "small_shrug",
+      "intensity": 0.5
+    },
+    {
+      "t": 15000,
+      "kind": "expression",
+      "id": "self_satisfied",
+      "source_emotion": "gleeful",
+      "intensity": 0.75
+    },
+    {
+      "t": 15000,
+      "kind": "hold",
+      "ms": 1200,
+      "note": "punchline stillness"
+    },
+    {
+      "t": 15400,
+      "kind": "gesture",
+      "id": "eye_glitch",
+      "intensity": 1.0
+    },
+    {
+      "t": 15400,
+      "kind": "gesture",
+      "id": "small_shrug",
+      "intensity": 0.5
+    },
+    {
+      "t": 15800,
+      "kind": "camera",
+      "id": "closeup"
+    },
+    {
+      "t": 16800,
+      "kind": "camera",
+      "id": "medium"
+    },
+    {
+      "t": 22000,
+      "kind": "expression",
+      "id": "deadpan",
+      "source_emotion": "deadpan",
+      "intensity": 0.8
+    },
+    {
+      "t": 22200,
+      "kind": "gesture",
+      "id": "lean_forward",
+      "intensity": 0.4
+    },
+    {
+      "t": 31000,
+      "kind": "expression",
+      "id": "deadpan",
+      "source_emotion": "deadpan",
+      "intensity": 0.85
+    },
+    {
+      "t": 31300,
+      "kind": "gesture",
+      "id": "head_tilt",
+      "intensity": 0.6
+    },
+    {
+      "t": 31400,
+      "kind": "gesture",
+      "id": "small_shrug",
+      "intensity": 0.5
+    },
+    {
+      "t": 40000,
+      "kind": "expression",
+      "id": "surprised",
+      "source_emotion": "manic",
+      "intensity": 0.9
+    },
+    {
+      "t": 40000,
+      "kind": "hold",
+      "ms": 1200,
+      "note": "punchline stillness"
+    },
+    {
+      "t": 40200,
+      "kind": "gesture",
+      "id": "lean_forward",
+      "intensity": 1.0
+    },
+    {
+      "t": 40300,
+      "kind": "gesture",
+      "id": "head_tilt",
+      "intensity": 0.6
+    },
+    {
+      "t": 40400,
+      "kind": "gesture",
+      "id": "eye_glitch",
+      "intensity": 1.0
+    },
+    {
+      "t": 40800,
+      "kind": "camera",
+      "id": "closeup"
+    },
+    {
+      "t": 41800,
+      "kind": "camera",
+      "id": "medium"
+    },
+    {
+      "t": 44100,
+      "kind": "camera",
+      "id": "wide"
+    },
+    {
+      "t": 44500,
+      "kind": "exit",
+      "to": "stage_left"
+    }
+  ],
+  "n_events": 34
+}

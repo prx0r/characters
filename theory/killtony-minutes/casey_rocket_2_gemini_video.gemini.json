@@ -1,0 +1,324 @@
+{
+  "speaker_guess": "Casey Rocket",
+  "overall": {
+    "energy_arc": "Consistently manic and kinetic, shifting rapidly between vocal musical riffs, agitated stage pacing, deadpan non-sequiturs, and a quick punchy button.",
+    "dominant_emotion": "manic",
+    "dominant_emotion_intensity": 0.85,
+    "stage_presence": "Chaotic physical pacing, crouches, sudden direction changes, pacing behind and in front of the band, eccentric prop-free physical comedy."
+  },
+  "segments": [
+    {
+      "t0": 0.0,
+      "t1": 3.8,
+      "emotion": "gleeful",
+      "emotion_intensity": 0.75,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.25,
+        "head": "tilt_right",
+        "arms": "mic_point",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Exaggerated country crooner vibrato head wobble while clutching mic"
+      },
+      "comedy": {
+        "beat_type": "setup",
+        "gtvh_operators": [
+          "Playful imitation",
+          "Contextual incongruity"
+        ],
+        "status_move": "down",
+        "note": "Opens with an ironic country ballad vocal burst to hook the crowd"
+      },
+      "vocal": {
+        "energy": 0.8,
+        "pitch_shift": "rise",
+        "pace": "slow",
+        "emphasis_words": [
+          "good",
+          "voice",
+          "name"
+        ],
+        "note": "Melodic, exaggerated country singing vibrato"
+      }
+    },
+    {
+      "t0": 3.8,
+      "t1": 8.5,
+      "emotion": "manic",
+      "emotion_intensity": 0.8,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.1,
+        "head": "nod",
+        "arms": "gesture_out",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Sudden 180-degree turn and kinetic strut across the stage"
+      },
+      "comedy": {
+        "beat_type": "tag",
+        "gtvh_operators": [
+          "Absurd reference"
+        ],
+        "status_move": "flat",
+        "note": "Shouting out satellite radio as an energetic bridge tag"
+      },
+      "vocal": {
+        "energy": 0.75,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "emphasis_words": [
+          "Sirius XM",
+          "radio",
+          "very cool"
+        ],
+        "note": "Hyped broadcaster cadence combined with rapid breathy chuckles"
+      }
+    },
+    {
+      "t0": 8.5,
+      "t1": 15.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.7,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.35,
+        "head": "tilt_left",
+        "arms": "gesture_out",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "Fiddles with mic stand momentarily before snapping back to face audience"
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "Exaggeration",
+          "Taboo / Dark absurdity"
+        ],
+        "status_move": "down",
+        "note": "Subverts casual beer league softball trope into a fentanyl league"
+      },
+      "vocal": {
+        "energy": 0.65,
+        "pitch_shift": "drop",
+        "pace": "normal",
+        "emphasis_words": [
+          "softball",
+          "beer league",
+          "fentanyl league"
+        ],
+        "note": "Casual conversational pivot into extreme dark premise"
+      }
+    },
+    {
+      "t0": 15.0,
+      "t1": 22.0,
+      "emotion": "gleeful",
+      "emotion_intensity": 0.75,
+      "body": {
+        "lean": "back",
+        "lean_amount": 0.2,
+        "head": "nod",
+        "arms": "gesture_out",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Pumping arm in the air mimicking sleeping on a battlefield"
+      },
+      "comedy": {
+        "beat_type": "escalation",
+        "gtvh_operators": [
+          "Visual imagery",
+          "Bizarre juxtaposition"
+        ],
+        "status_move": "down",
+        "note": "Elaborates on fentanyl league absurdity with vivid war/slumber imagery"
+      },
+      "vocal": {
+        "energy": 0.7,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "emphasis_words": [
+          "shooting up",
+          "sleeping",
+          "battlefield"
+        ],
+        "note": "Sing-song cadence ending in self-amused chuckle"
+      }
+    },
+    {
+      "t0": 22.0,
+      "t1": 31.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.8,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.2,
+        "head": "neutral",
+        "arms": "sides",
+        "face": "deadpan",
+        "brow": "raised",
+        "micro_gesture": "Restless pacing while rattling off absurd false credentials"
+      },
+      "comedy": {
+        "beat_type": "premise",
+        "gtvh_operators": [
+          "False premise",
+          "Absurd boast"
+        ],
+        "status_move": "up",
+        "note": "Claims invention of smartwatch and philanthropic career with straight face"
+      },
+      "vocal": {
+        "energy": 0.6,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "emphasis_words": [
+          "creator",
+          "smartwatch",
+          "donate",
+          "charities"
+        ],
+        "note": "Matter-of-fact deadpan delivery"
+      }
+    },
+    {
+      "t0": 31.0,
+      "t1": 40.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.85,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.15,
+        "head": "tilt_right",
+        "arms": "gesture_out",
+        "face": "smirk",
+        "brow": "one_raised",
+        "micro_gesture": "Subtle one-handed tipping motion illustrating dumping hot water"
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "Inversion",
+          "Dark shock"
+        ],
+        "status_move": "reversal",
+        "note": "Reverses ALS Ice Bucket Challenge into scalding hot water"
+      },
+      "vocal": {
+        "energy": 0.7,
+        "pitch_shift": "drop",
+        "pace": "normal",
+        "emphasis_words": [
+          "reverse",
+          "hot water",
+          "ALS"
+        ],
+        "note": "Direct, crisp punchline drop followed by silence for audience reaction"
+      }
+    },
+    {
+      "t0": 40.0,
+      "t1": 44.5,
+      "emotion": "manic",
+      "emotion_intensity": 0.9,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.55,
+        "head": "jut",
+        "arms": "mic_point",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Deep crouch lean toward audience/judges desk for catchphrase delivery"
+      },
+      "comedy": {
+        "beat_type": "button",
+        "gtvh_operators": [
+          "Catchphrase button"
+        ],
+        "status_move": "up",
+        "note": "Delivers signature 'Easy money' closer directly to the panel"
+      },
+      "vocal": {
+        "energy": 0.75,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "emphasis_words": [
+          "Easy",
+          "money"
+        ],
+        "note": "Throaty, raspy, confident payoff utterance"
+      }
+    }
+  ],
+  "gesture_library": [
+    {
+      "name": "Kinetic Stage Pacing",
+      "t_guess": 5.0,
+      "duration_est_s": 3.5,
+      "body_params": {
+        "lean": 0.1,
+        "head_deg": 10.0,
+        "arm_open": 0.4,
+        "brow": 0.2
+      },
+      "emotion_tag": "manic"
+    },
+    {
+      "name": "Hot Water Pour Mimic",
+      "t_guess": 37.0,
+      "duration_est_s": 2.0,
+      "body_params": {
+        "lean": 0.2,
+        "head_deg": 5.0,
+        "arm_open": 0.5,
+        "brow": 0.3
+      },
+      "emotion_tag": "deadpan"
+    },
+    {
+      "name": "Easy Money Lean",
+      "t_guess": 42.5,
+      "duration_est_s": 2.0,
+      "body_params": {
+        "lean": 0.55,
+        "head_deg": -15.0,
+        "arm_open": 0.2,
+        "brow": 0.5
+      },
+      "emotion_tag": "gleeful"
+    }
+  ],
+  "anger_analysis": {
+    "present": false,
+    "type": "none",
+    "body_signature": [],
+    "face_signature": [],
+    "vocal_signature": [],
+    "target": "none",
+    "release_or_withhold": "none",
+    "contrast_before_after": "N/A"
+  },
+  "_meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 29.3,
+    "clip_mb": 4.8,
+    "usage": {
+      "promptTokenCount": 4632,
+      "candidatesTokenCount": 2485,
+      "totalTokenCount": 7616,
+      "promptTokensDetails": [
+        {
+          "modality": "VIDEO",
+          "tokenCount": 4004
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 499,
+      "serviceTier": "standard"
+    }
+  }
+}
