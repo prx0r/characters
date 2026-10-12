@@ -979,13 +979,27 @@ def arena_add():
         ref = f"{did}/app.bsky.feed.post/{rkey}"
     else:
         return jsonify({"error": "kind must be youtube|audition|bluesky"}), 400
+    theories: list = []
+    operators: list = []
+    if kind == "audition":
+        # Link the vote to humour theory: copy the set's mechanism tags so
+        # every duel is also evidence for/against the theories behind it.
+        conn0 = _conn()
+        try:
+            aud0 = store.get_audition(conn0, ref)
+        finally:
+            conn0.close()
+        if aud0:
+            theories = list(aud0.get("theory_ids") or [])
+            operators = list(aud0.get("operator_ids") or [])
     conn = _conn()
     try:
         if conn.execute("SELECT 1 FROM arena_contenders WHERE kind=? AND ref=?", (kind, ref)).fetchone():
             return jsonify({"error": "already in the arena"}), 409
         cid = store.new_id("arena")
-        conn.execute("INSERT INTO arena_contenders (id, kind, ref, title, elo, created_at)"
-                     " VALUES (?,?,?,?,1500,?)", (cid, kind, ref, title, time.time()))
+        conn.execute("INSERT INTO arena_contenders (id, kind, ref, title, elo, theories, operators, created_at)"
+                     " VALUES (?,?,?,?,1500,?,?,?)",
+                     (cid, kind, ref, title, json.dumps(theories), json.dumps(operators), time.time()))
         conn.commit()
     finally:
         conn.close()
@@ -1065,6 +1079,78 @@ def arena_board():
     board.sort(key=lambda r: -r["elo"])
     return jsonify({"board": board, "votes": len(votes),
                     "note": "crowd-ranked with uncertainty — Wilson CI; 'funniest' needs n≥30 and CI excluding 0.5"})
+
+
+@app.get("/api/arena/theories")
+def arena_theories():
+    """Which humour mechanisms are winning duels? Votes as theory evidence."""
+    conn = _conn()
+    try:
+        conts = [dict(r) for r in conn.execute("SELECT * FROM arena_contenders").fetchall()]
+        votes = [dict(r) for r in conn.execute("SELECT * FROM arena_votes").fetchall()]
+    finally:
+        conn.close()
+    by_id = {c["id"]: c for c in conts}
+    tw: dict[str, int] = {}
+    tb: dict[str, int] = {}
+    for v in votes:
+        for cid, won in ((v["a_id"], v["winner_id"] == v["a_id"]),
+                         (v["b_id"], v["winner_id"] == v["b_id"])):
+            c = by_id.get(cid)
+            if not c:
+                continue
+            try:
+                tags = json.loads(c.get("theories") or "[]") + json.loads(c.get("operators") or "[]")
+            except Exception:
+                tags = []
+            for t in set(tags):
+                tb[t] = tb.get(t, 0) + 1
+                if won:
+                    tw[t] = tw.get(t, 0) + 1
+    rows = []
+    for t, n in sorted(tb.items(), key=lambda kv: -kv[1]):
+        lo, hi = _wilson(tw.get(t, 0), n)
+        rows.append({"theory": t, "wins": tw.get(t, 0), "bouts": n,
+                     "wilson_lo": round(lo, 3), "wilson_hi": round(hi, 3)})
+    return jsonify({"theories": rows,
+                    "note": "duel votes double as mechanism evidence; KT priors were the seed, this is the harvest"})
+
+
+@app.post("/api/arena/ai_bracket")
+def arena_ai_bracket():
+    """One-click AI bracket: each character's latest ready set enters the arena."""
+    conn = _conn()
+    try:
+        chars = [c["id"] for c in generate.list_characters()]
+        entered = []
+        for ch in chars:
+            r = conn.execute("SELECT id FROM auditions WHERE character_id=? AND status='ready'"
+                             " ORDER BY created_at DESC LIMIT 1", (ch,)).fetchone()
+            if not r:
+                continue
+            aud = store.get_audition(conn, r["id"])
+            if conn.execute("SELECT 1 FROM arena_contenders WHERE kind='audition' AND ref=?",
+                            (aud["id"],)).fetchone():
+                entered.append({"audition_id": aud["id"], "status": "already in"})
+                continue
+            cid = store.new_id("arena")
+            conn.execute("INSERT INTO arena_contenders (id, kind, ref, title, elo, theories, operators, created_at)"
+                         " VALUES (?,?,?,?,1500,?,?,?)",
+                         (cid, "audition", aud["id"],
+                          f"{aud['character_id']} · {aud['scenario_id']}",
+                          json.dumps(aud.get("theory_ids") or []),
+                          json.dumps(aud.get("operator_ids") or []), time.time()))
+            entered.append({"audition_id": aud["id"], "contender_id": cid, "status": "entered"})
+        conn.commit()
+    finally:
+        conn.close()
+    return jsonify({"entered": entered,
+                    "note": "humans vs AI on the same ballot — vote the set, not the species"})
+
+
+@app.get("/pogtown")
+def pogtown_page():
+    return send_file(HERE / "static" / "pogtown.html")
 
 
 if __name__ == "__main__":

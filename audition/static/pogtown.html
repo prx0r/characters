@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pogtown — living comedy universe</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:20px auto;padding:0 14px;background:#0c0c0c;color:#eee}
+a{color:#facc15}.muted{color:#999}.card{border:1px solid #333;border-radius:12px;padding:14px;margin:14px 0}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+button{font-size:16px;padding:10px 18px;border-radius:10px;border:1px solid #444;background:#1c1c1c;color:#eee;cursor:pointer}
+button.big{background:#7c3aed;border:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
+.performer{border:1px solid #444;border-radius:10px;padding:10px}
+.performer img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid #2a2a2a;padding:6px 8px;text-align:left}
+.show{border-left:4px solid #7c3aed;padding:8px 12px;margin:8px 0}
+.show.soon{border-color:#444;opacity:.75}
+</style>
+</head>
+<body>
+<h1>🌃 Pogtown <span class="muted">living comedy universe — free collection, crowd-ranked</span></h1>
+<div class="row"><a href="/arena">🎤 Funnier arena</a><a href="/watch">📺 Watch</a><a href="/">Audition</a></div>
+<div class="card"><h3>📜 Program</h3>
+<div class="show"><b>Galactic Comedy Night — Ep 001</b> <span class="muted">Ralph · Rudy · one gray alien · one stage</span><br>
+Three short sets, one coherent fictional setting. <a href="/arena">Vote the sets</a>, then <a href="/watch">watch them performed</a>.</div>
+<div class="show soon"><b>The Athenian Roast</b> <span class="muted">coming soon — Diogenes misunderstands productivity podcasts</span></div>
+<div class="show soon"><b>The Alchemists' Cabaret</b> <span class="muted">coming soon — the homunculus was promised perfection</span></div>
+<div class="show soon"><b>1940s Wartime Comedy Club</b> <span class="muted">coming soon — period satire, handled with care</span></div>
+</div>
+<div class="card"><h3>🎭 Residents <span class="muted">persistent characters — same philosophy every night</span></h3>
+<div id="roster" class="grid"><span class="muted">loading…</span></div>
+<div class="row" style="margin-top:10px"><button class="big" id="bracket">⚔️ Enter tonight's AI bracket</button><span id="bstatus" class="muted"></span></div>
+<div class="muted">One click: every resident's latest set joins the arena against human Shorts. Humans vs AI, same ballot.</div>
+</div>
+<div class="card"><h3>🧪 Which mechanisms are winning? <span class="muted">arena votes as theory evidence</span></h3>
+<div id="theories" class="muted">no theory-tagged duels yet — vote in the arena</div></div>
+<script>
+async function api(m,u,b){const r=await fetch(u,{method:m,headers:{'Content-Type':'application/json'},body:b?JSON.stringify(b):undefined});return r.json();}
+(async()=>{const d=await api('GET','/api/auditions/characters');
+document.getElementById('roster').innerHTML=d.characters.map(c=>`<div class="performer">${c.portrait_url?`<img src="${c.portrait_url}">`:''}<b>${c.name}</b><div class="muted">${(c.deal||'').slice(0,110)}…</div></div>`).join('');})();
+(async()=>{const d=await api('GET','/api/arena/theories');if(!d.theories.length)return;
+document.getElementById('theories').innerHTML=`<div class="muted">${d.note}</div><table><tr><th>mechanism</th><th>W–B</th><th>Wilson95</th></tr>`+
+d.theories.map(r=>`<tr><td>${r.theory}</td><td>${r.wins}–${r.bouts}</td><td>${r.wilson_lo}–${r.wilson_hi}</td></tr>`).join('')+'</table>';})();
+document.getElementById('bracket').onclick=async()=>{const d=await api('POST','/api/arena/ai_bracket');
+document.getElementById('bstatus').textContent=d.entered.map(e=>e.audition_id.slice(-6)+': '+e.status).join(' · ')||'no ready sets — generate minutes first';};
+</script>
+</body>
+</html>
