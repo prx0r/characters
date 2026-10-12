@@ -86,6 +86,20 @@ def load_freak_character(slug: str) -> dict | None:
     }
 
 
+# DiceBear portraits: deterministic SVG per character id (free HTTP API,
+# MIT, no account). Placeholders until real character art lands — same seed
+# always returns the same face, so store the string, never the image.
+DICEBEAR_BASE = "https://api.dicebear.com/10.x"
+DICEBEAR_STYLES = {"no_nose_nolan": "personas",
+                   "reptilian_ralph_middle_management": "adventurer",
+                   "rudy_dulce_hvac": "bottts"}
+
+
+def avatar_url(character_id: str) -> str:
+    style = DICEBEAR_STYLES.get(character_id, "adventurer")
+    return f"{DICEBEAR_BASE}/{style}/svg?seed={character_id}"
+
+
 def list_characters() -> list[dict]:
     chars = [load_nolan()]
     for slug, label in [("reptilian-ralph-middle-management", "Reptilian Ralph"),
@@ -107,7 +121,8 @@ def list_characters() -> list[dict]:
     for c in chars:
         cards.append({"id": c["id"], "name": c["name"], "deal": c["deal"][:160],
                       "voice_id": c["voice_id"],
-                      "portrait_url": portraits.get(c["id"], ""),
+                      "portrait_url": avatar_url(c["id"]),
+                      "avatar_seed": c["id"],
                       "vibe": vibes.get(c["id"], {})})
     return cards
 
