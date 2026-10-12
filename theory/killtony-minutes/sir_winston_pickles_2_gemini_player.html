@@ -1,0 +1,193 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sir Winston Pickles 2 Gemini — Ralph Stage Lab</title>
+<style>
+html,body{margin:0;height:100%;background:#000;color:#eee;font-family:system-ui,sans-serif}
+#wrap{display:flex;flex-direction:column;height:100vh}
+#stagebox{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+background:radial-gradient(circle at 50% 30%,#2b2010,#000 72%)}
+#stagebox svg{width:min(70vh,90vw);max-height:90vh}
+#hud{position:absolute;top:10px;left:12px;font-size:12px;color:#aaa;z-index:2}
+#seg{position:absolute;top:10px;right:12px;font-size:12px;color:#facc15;text-align:right;max-width:45%}
+#emotion{position:absolute;bottom:12px;left:12px;font-size:14px;color:#facc15}
+#beat{position:absolute;bottom:12px;right:12px;font-size:12px;color:#888}
+#bar{height:4px;background:#333;position:relative}
+#barfill{height:100%;background:#facc15;width:0%}
+#ctrl{padding:8px 12px;display:flex;gap:10px;align-items:center;background:#111}
+#ctrl button{background:#222;color:#eee;border:1px solid #555;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:14px}
+#ctrl button:hover{background:#333}
+#ctrl input[type=range]{flex:1}
+#meta{font-size:11px;color:#666;padding:0 12px 8px}
+#anger{color:#f87171;font-size:12px;padding:4px 12px;display:none}
+</style></head><body>
+<div id="wrap">
+<div id="stagebox">
+<div id="hud">Stage Lab · Ralph</div>
+<div id="seg"></div>
+<svg viewBox="0 0 220 300" style="background:transparent">
+<defs><linearGradient id="spot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffdf9e" stop-opacity=".28"/><stop offset="1" stop-color="#ffdf9e" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="0" width="26" height="300" fill="#5b1414"/><rect x="194" y="0" width="26" height="300" fill="#5b1414"/>
+<rect x="22" y="0" width="6" height="300" fill="#3d0d0d"/><rect x="192" y="0" width="6" height="300" fill="#3d0d0d"/>
+<polygon points="70,0 150,0 190,300 30,300" fill="url(#spot)"/>
+<rect x="0" y="252" width="220" height="48" fill="#151020"/>
+<ellipse cx="110" cy="278" rx="60" ry="10" fill="#000" opacity=".5"/>
+<text class="CAMT" x="30" y="18" fill="#999" font-size="12">medium</text>
+<g class="PB"><rect class="SUIT" x="60" y="170" width="100" height="100" rx="14" fill="#2b3440"/><rect x="100" y="170" width="20" height="100" fill="#e8e4d8"/><polygon points="110,185 118,205 110,235 102,205" fill="#7c1f1f"/></g>
+<g class="PH"><ellipse class="SKIN" cx="110" cy="120" rx="52" ry="58" fill="#6b8f5e"/><ellipse cx="110" cy="120" rx="52" ry="58" fill="none" stroke="#2c3a26" stroke-width="3"/>
+<rect class="BL" x="70" y="82" width="30" height="7" rx="3" fill="#2c3a26"/><rect class="BR" x="120" y="82" width="30" height="7" rx="3" fill="#2c3a26"/>
+<ellipse cx="85" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PL" cx="85" cy="113" rx="5" ry="9" fill="#111"/>
+<ellipse cx="135" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PR" cx="135" cy="113" rx="5" ry="9" fill="#111"/>
+<ellipse class="MO" cx="110" cy="160" rx="16" ry="5" fill="#1a0f0f"/></g>
+<g class="MIC"><rect x="107" y="205" width="6" height="75" rx="3" fill="#0c0c0c"/><ellipse cx="110" cy="282" rx="16" ry="4" fill="#0c0c0c"/><circle cx="110" cy="196" r="13" fill="#1f2937"/><circle cx="110" cy="196" r="13" fill="none" stroke="#4b5563" stroke-width="2"/></g>
+<text class="EX" x="110" y="294" text-anchor="middle" fill="#facc15" font-size="14">deadpan</text></svg>
+<div id="emotion">—</div>
+<div id="beat">—</div>
+</div>
+<div id="bar"><div id="barfill"></div></div>
+<div id="ctrl">
+<button id="play">▶ Play</button>
+<input type="range" id="scrub" min="0" max="30000" value="0">
+<span id="clock" style="font-size:12px;color:#aaa;min-width:70px">0:00 / 0:30</span>
+</div>
+<div id="anger"></div>
+<div id="meta">Sir Winston Pickles 2 Gemini · 19 events · 4 segments</div>
+</div>
+<script>
+const EVENTS=[{"t": 0, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.9}, {"t": 0, "kind": "lights", "id": "house_up"}, {"t": 200, "kind": "gesture", "id": "lean_forward", "intensity": 0.4}, {"t": 300, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 400, "kind": "enter", "from": "stage_left"}, {"t": 400, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 1200, "kind": "camera", "id": "medium"}, {"t": 1200, "kind": "speak_start"}, {"t": 7500, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.85}, {"t": 7900, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 16500, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 1.0}, {"t": 16700, "kind": "gesture", "id": "lean_forward", "intensity": 0.3}, {"t": 23500, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.95}, {"t": 23500, "kind": "hold", "ms": 1200, "note": "punchline stillness"}, {"t": 23900, "kind": "gesture", "id": "eye_glitch", "intensity": 1.0}, {"t": 24300, "kind": "camera", "id": "closeup"}, {"t": 25300, "kind": "camera", "id": "medium"}, {"t": 29600, "kind": "camera", "id": "wide"}, {"t": 30000, "kind": "exit", "to": "stage_left"}];
+const GEM={"segments": [{"t0": 0.0, "t1": 7.5, "emotion": "deadpan", "beat_type": "setup", "text_hint": "Subdued, melancholic, low-timbered clown voice"}, {"t0": 7.5, "t1": 16.5, "emotion": "deadpan", "beat_type": "escalation", "text_hint": "Evenly paced, matter-of-fact recital"}, {"t0": 16.5, "t1": 23.5, "emotion": "deadpan", "beat_type": "punchline", "text_hint": "Cold, definitive cadence on 'He's dead'"}, {"t0": 23.5, "t1": 30.0, "emotion": "deadpan", "beat_type": "button", "text_hint": "Complete silence, allowing audience laughter to peak"}], "anger": {"present": false, "type": "none", "body_signature": [], "face_signature": [], "vocal_signature": [], "target": "none", "release_or_withhold": "withhold", "contrast_before_after": "No anger present; effect relies purely on hyper-calm, unflinching dark deadpan delivery."}, "overall": {"energy_arc": "Consistently low, somber, and ultra-deadpan build-up exploding into massive audience and panel laughter upon punchline delivery", "dominant_emotion": "deadpan", "dominant_emotion_intensity": 0.95, "stage_presence": "Morose theatrical stillness, precise robotic/melodramatic posture contrasting with pitch-black comedic misdirection"}};
+const VISEMES=[{"t": 0, "shape": "closed", "word": ""}, {"t": 183, "shape": "E", "word": ""}, {"t": 300, "shape": "closed", "word": ""}, {"t": 400, "shape": "E", "word": ""}, {"t": 750, "shape": "MBP", "word": ""}, {"t": 816, "shape": "E", "word": ""}, {"t": 866, "shape": "AI", "word": ""}, {"t": 900, "shape": "MBP", "word": ""}, {"t": 1150, "shape": "AI", "word": ""}, {"t": 1400, "shape": "E", "word": ""}, {"t": 1433, "shape": "AI", "word": ""}, {"t": 1466, "shape": "E", "word": ""}, {"t": 1583, "shape": "AI", "word": ""}, {"t": 1600, "shape": "E", "word": ""}, {"t": 1783, "shape": "AI", "word": ""}, {"t": 2350, "shape": "E", "word": ""}, {"t": 2466, "shape": "AI", "word": ""}, {"t": 2566, "shape": "E", "word": ""}, {"t": 3716, "shape": "AI", "word": ""}, {"t": 3833, "shape": "E", "word": ""}, {"t": 3850, "shape": "O", "word": ""}, {"t": 3883, "shape": "U", "word": ""}, {"t": 3933, "shape": "O", "word": ""}, {"t": 3983, "shape": "E", "word": ""}, {"t": 4016, "shape": "O", "word": ""}, {"t": 4100, "shape": "AI", "word": ""}, {"t": 4216, "shape": "E", "word": ""}, {"t": 4250, "shape": "AI", "word": ""}, {"t": 4316, "shape": "U", "word": ""}, {"t": 4350, "shape": "AI", "word": ""}, {"t": 4450, "shape": "MBP", "word": ""}, {"t": 4850, "shape": "AI", "word": ""}, {"t": 5050, "shape": "E", "word": ""}, {"t": 5150, "shape": "FV", "word": ""}, {"t": 5466, "shape": "E", "word": ""}, {"t": 5633, "shape": "MBP", "word": ""}, {"t": 5650, "shape": "E", "word": ""}, {"t": 5733, "shape": "MBP", "word": ""}, {"t": 5833, "shape": "E", "word": ""}, {"t": 5866, "shape": "MBP", "word": ""}, {"t": 5900, "shape": "E", "word": ""}, {"t": 5916, "shape": "AI", "word": ""}, {"t": 6133, "shape": "E", "word": ""}, {"t": 6300, "shape": "AI", "word": ""}, {"t": 6333, "shape": "E", "word": ""}, {"t": 6366, "shape": "AI", "word": ""}, {"t": 6466, "shape": "MBP", "word": ""}, {"t": 6516, "shape": "AI", "word": ""}, {"t": 6550, "shape": "E", "word": ""}, {"t": 6616, "shape": "MBP", "word": ""}, {"t": 6716, "shape": "AI", "word": ""}, {"t": 6750, "shape": "MBP", "word": ""}, {"t": 6883, "shape": "AI", "word": ""}, {"t": 7050, "shape": "E", "word": ""}, {"t": 7250, "shape": "AI", "word": ""}, {"t": 7266, "shape": "E", "word": ""}, {"t": 7300, "shape": "AI", "word": ""}, {"t": 7383, "shape": "E", "word": ""}, {"t": 7450, "shape": "AI", "word": ""}, {"t": 7483, "shape": "E", "word": ""}, {"t": 7500, "shape": "AI", "word": ""}, {"t": 7833, "shape": "U", "word": ""}, {"t": 8033, "shape": "AI", "word": ""}, {"t": 8066, "shape": "U", "word": ""}, {"t": 8183, "shape": "AI", "word": ""}, {"t": 8250, "shape": "E", "word": ""}, {"t": 8300, "shape": "AI", "word": ""}, {"t": 8316, "shape": "E", "word": ""}, {"t": 9883, "shape": "AI", "word": ""}, {"t": 9900, "shape": "E", "word": ""}, {"t": 10200, "shape": "AI", "word": ""}, {"t": 10300, "shape": "E", "word": ""}, {"t": 10333, "shape": "AI", "word": ""}, {"t": 10416, "shape": "O", "word": ""}, {"t": 10450, "shape": "E", "word": ""}, {"t": 10483, "shape": "O", "word": ""}, {"t": 10500, "shape": "AI", "word": ""}, {"t": 10850, "shape": "E", "word": ""}, {"t": 10866, "shape": "AI", "word": ""}, {"t": 11250, "shape": "E", "word": ""}, {"t": 11466, "shape": "AI", "word": ""}, {"t": 11666, "shape": "FV", "word": ""}, {"t": 11716, "shape": "AI", "word": ""}, {"t": 11733, "shape": "FV", "word": ""}, {"t": 12000, "shape": "U", "word": ""}, {"t": 12033, "shape": "E", "word": ""}, {"t": 12083, "shape": "FV", "word": ""}, {"t": 12100, "shape": "U", "word": ""}, {"t": 12150, "shape": "AI", "word": ""}, {"t": 12183, "shape": "U", "word": ""}, {"t": 12266, "shape": "E", "word": ""}, {"t": 12333, "shape": "AI", "word": ""}, {"t": 12416, "shape": "O", "word": ""}, {"t": 12450, "shape": "AI", "word": ""}, {"t": 12566, "shape": "E", "word": ""}, {"t": 12633, "shape": "AI", "word": ""}, {"t": 12800, "shape": "FV", "word": ""}, {"t": 12883, "shape": "AI", "word": ""}, {"t": 12933, "shape": "FV", "word": ""}, {"t": 13250, "shape": "AI", "word": ""}, {"t": 13483, "shape": "U", "word": ""}, {"t": 13533, "shape": "AI", "word": ""}, {"t": 13600, "shape": "U", "word": ""}, {"t": 13666, "shape": "AI", "word": ""}, {"t": 13683, "shape": "E", "word": ""}, {"t": 13716, "shape": "AI", "word": ""}, {"t": 13800, "shape": "E", "word": ""}, {"t": 13933, "shape": "AI", "word": ""}, {"t": 14100, "shape": "E", "word": ""}, {"t": 14316, "shape": "AI", "word": ""}, {"t": 14616, "shape": "E", "word": ""}, {"t": 14666, "shape": "AI", "word": ""}, {"t": 14683, "shape": "E", "word": ""}, {"t": 14800, "shape": "AI", "word": ""}, {"t": 14833, "shape": "E", "word": ""}, {"t": 14866, "shape": "AI", "word": ""}, {"t": 14883, "shape": "E", "word": ""}, {"t": 15000, "shape": "AI", "word": ""}, {"t": 15033, "shape": "E", "word": ""}, {"t": 15100, "shape": "AI", "word": ""}, {"t": 15183, "shape": "U", "word": ""}, {"t": 15216, "shape": "AI", "word": ""}, {"t": 15333, "shape": "U", "word": ""}, {"t": 15400, "shape": "AI", "word": ""}, {"t": 15433, "shape": "U", "word": ""}, {"t": 15483, "shape": "AI", "word": ""}, {"t": 16366, "shape": "U", "word": ""}, {"t": 16383, "shape": "AI", "word": ""}, {"t": 16466, "shape": "U", "word": ""}, {"t": 16516, "shape": "AI", "word": ""}, {"t": 16566, "shape": "U", "word": ""}, {"t": 16600, "shape": "AI", "word": ""}, {"t": 16683, "shape": "E", "word": ""}, {"t": 16766, "shape": "AI", "word": ""}, {"t": 16783, "shape": "E", "word": ""}, {"t": 16816, "shape": "AI", "word": ""}, {"t": 16983, "shape": "E", "word": ""}, {"t": 17033, "shape": "AI", "word": ""}, {"t": 17133, "shape": "E", "word": ""}, {"t": 17233, "shape": "O", "word": ""}, {"t": 17266, "shape": "E", "word": ""}, {"t": 17350, "shape": "O", "word": ""}, {"t": 17416, "shape": "AI", "word": ""}, {"t": 17433, "shape": "O", "word": ""}, {"t": 17566, "shape": "AI", "word": ""}, {"t": 17650, "shape": "E", "word": ""}, {"t": 18100, "shape": "AI", "word": ""}, {"t": 18150, "shape": "E", "word": ""}, {"t": 18300, "shape": "AI", "word": ""}, {"t": 18783, "shape": "U", "word": ""}, {"t": 18816, "shape": "AI", "word": ""}, {"t": 18850, "shape": "U", "word": ""}, {"t": 18933, "shape": "AI", "word": ""}, {"t": 18966, "shape": "O", "word": ""}, {"t": 19183, "shape": "AI", "word": ""}, {"t": 19450, "shape": "E", "word": ""}, {"t": 19600, "shape": "AI", "word": ""}, {"t": 19633, "shape": "E", "word": ""}, {"t": 19816, "shape": "AI", "word": ""}, {"t": 20066, "shape": "O", "word": ""}, {"t": 20216, "shape": "AI", "word": ""}, {"t": 20250, "shape": "E", "word": ""}, {"t": 20283, "shape": "AI", "word": ""}, {"t": 20383, "shape": "E", "word": ""}, {"t": 20466, "shape": "MBP", "word": ""}, {"t": 20533, "shape": "E", "word": ""}, {"t": 20583, "shape": "MBP", "word": ""}, {"t": 20733, "shape": "AI", "word": ""}, {"t": 20766, "shape": "MBP", "word": ""}, {"t": 20833, "shape": "AI", "word": ""}, {"t": 20900, "shape": "E", "word": ""}, {"t": 20950, "shape": "O", "word": ""}, {"t": 20983, "shape": "AI", "word": ""}, {"t": 21050, "shape": "O", "word": ""}, {"t": 21116, "shape": "E", "word": ""}, {"t": 21133, "shape": "O", "word": ""}, {"t": 21166, "shape": "AI", "word": ""}, {"t": 21266, "shape": "E", "word": ""}, {"t": 21350, "shape": "AI", "word": ""}, {"t": 21600, "shape": "U", "word": ""}, {"t": 21750, "shape": "AI", "word": ""}, {"t": 21850, "shape": "E", "word": ""}, {"t": 22000, "shape": "U", "word": ""}, {"t": 22033, "shape": "E", "word": ""}, {"t": 22200, "shape": "AI", "word": ""}, {"t": 22566, "shape": "MBP", "word": ""}, {"t": 22750, "shape": "AI", "word": ""}, {"t": 22783, "shape": "E", "word": ""}, {"t": 22816, "shape": "MBP", "word": ""}, {"t": 22866, "shape": "AI", "word": ""}, {"t": 22983, "shape": "E", "word": ""}, {"t": 23066, "shape": "AI", "word": ""}, {"t": 23100, "shape": "E", "word": ""}, {"t": 23250, "shape": "AI", "word": ""}, {"t": 23650, "shape": "E", "word": ""}, {"t": 23833, "shape": "MBP", "word": ""}, {"t": 23883, "shape": "AI", "word": ""}, {"t": 23933, "shape": "MBP", "word": ""}, {"t": 24200, "shape": "AI", "word": ""}, {"t": 24400, "shape": "U", "word": ""}, {"t": 24433, "shape": "AI", "word": ""}, {"t": 24533, "shape": "U", "word": ""}, {"t": 24583, "shape": "AI", "word": ""}, {"t": 24600, "shape": "O", "word": ""}, {"t": 24633, "shape": "U", "word": ""}, {"t": 24666, "shape": "O", "word": ""}, {"t": 24816, "shape": "AI", "word": ""}, {"t": 24850, "shape": "O", "word": ""}, {"t": 24883, "shape": "AI", "word": ""}, {"t": 24916, "shape": "MBP", "word": ""}, {"t": 25233, "shape": "E", "word": ""}, {"t": 25300, "shape": "AI", "word": ""}, {"t": 25416, "shape": "E", "word": ""}, {"t": 25450, "shape": "O", "word": ""}, {"t": 25516, "shape": "AI", "word": ""}, {"t": 25533, "shape": "O", "word": ""}, {"t": 25566, "shape": "E", "word": ""}, {"t": 25633, "shape": "U", "word": ""}, {"t": 25716, "shape": "AI", "word": ""}, {"t": 25766, "shape": "E", "word": ""}, {"t": 25883, "shape": "AI", "word": ""}, {"t": 25900, "shape": "E", "word": ""}, {"t": 26283, "shape": "AI", "word": ""}, {"t": 26383, "shape": "E", "word": ""}, {"t": 26550, "shape": "AI", "word": ""}, {"t": 26616, "shape": "O", "word": ""}, {"t": 26716, "shape": "AI", "word": ""}, {"t": 27033, "shape": "E", "word": ""}, {"t": 27116, "shape": "U", "word": ""}, {"t": 27200, "shape": "AI", "word": ""}, {"t": 27216, "shape": "E", "word": ""}, {"t": 27366, "shape": "AI", "word": ""}, {"t": 27400, "shape": "E", "word": ""}, {"t": 27616, "shape": "O", "word": ""}, {"t": 27633, "shape": "AI", "word": ""}, {"t": 27716, "shape": "O", "word": ""}, {"t": 27766, "shape": "E", "word": ""}, {"t": 27816, "shape": "O", "word": ""}, {"t": 27850, "shape": "E", "word": ""}, {"t": 27916, "shape": "MBP", "word": ""}, {"t": 28000, "shape": "E", "word": ""}, {"t": 28083, "shape": "MBP", "word": ""}, {"t": 28233, "shape": "E", "word": ""}, {"t": 28383, "shape": "U", "word": ""}, {"t": 28416, "shape": "E", "word": ""}, {"t": 28516, "shape": "U", "word": ""}, {"t": 28633, "shape": "AI", "word": ""}, {"t": 28683, "shape": "E", "word": ""}, {"t": 28766, "shape": "AI", "word": ""}, {"t": 28783, "shape": "E", "word": ""}, {"t": 29083, "shape": "AI", "word": ""}, {"t": 29166, "shape": "E", "word": ""}, {"t": 29283, "shape": "AI", "word": ""}, {"t": 29450, "shape": "E", "word": ""}, {"t": 29466, "shape": "AI", "word": ""}, {"t": 29850, "shape": "O", "word": ""}, {"t": 30116, "shape": "AI", "word": ""}, {"t": 30150, "shape": "O", "word": ""}, {"t": 30300, "shape": "AI", "word": ""}, {"t": 30366, "shape": "E", "word": ""}, {"t": 30433, "shape": "AI", "word": ""}, {"t": 30450, "shape": "E", "word": ""}, {"t": 30666, "shape": "AI", "word": ""}, {"t": 30750, "shape": "E", "word": ""}, {"t": 30883, "shape": "AI", "word": ""}, {"t": 30966, "shape": "E", "word": ""}, {"t": 31033, "shape": "AI", "word": ""}, {"t": 31083, "shape": "E", "word": ""}, {"t": 31116, "shape": "closed", "word": ""}, {"t": 31233, "shape": "E", "word": ""}, {"t": 31266, "shape": "AI", "word": ""}, {"t": 31350, "shape": "closed", "word": ""}];
+const DUR=30000;
+let playing=false, t0=0, tpos=0, raf=null, visIdx=0;
+
+const q=s=>document.querySelector(s);
+function apply(ev){
+  const kind=ev.kind, id=ev.id||'';
+  if(kind==='expression'){
+    q('.EX').textContent=id;
+    const mad=id==='annoyed';
+    q('.BL').setAttribute('transform',mad?'rotate(-12 85 85)':'');
+    q('.BR').setAttribute('transform',mad?'rotate(12 135 85)':'');
+    const mo=q('.MO');
+    if(id==='surprised'){mo.setAttribute('ry','10');mo.setAttribute('cy','158');}
+    else if(id==='deadpan'){mo.setAttribute('ry','4');mo.setAttribute('cy','160');}
+    else{mo.setAttribute('ry','5');mo.setAttribute('cy','160');}
+  }
+  else if(kind==='camera'){
+    const t=q('.CAMT'); if(t)t.textContent=id;
+    const sc={wide:.85,medium:1,closeup:1.35,pushin:1.2}[id]||1;
+    q('.PH').setAttribute('transform',`translate(110 120) scale(${sc}) translate(-110 -120)`);
+  }
+  else if(kind==='gesture'){
+    if(id==='eye_glitch'){
+      ['.PL','.PR'].forEach(s=>{q(s).setAttribute('rx','2');q(s).setAttribute('fill','#b91c1c');});
+      q('.EX').textContent='SLIT.';
+      setTimeout(()=>['.PL','.PR'].forEach(s=>{q(s).setAttribute('rx','5');q(s).setAttribute('fill','#111');}),900);
+    }
+    if(id==='suit_adjust'){
+      q('.PB').setAttribute('transform','translate(-6 0)');
+      setTimeout(()=>q('.PB').setAttribute('transform','translate(6 0)'),250);
+      setTimeout(()=>q('.PB').setAttribute('transform',''),600);
+    }
+    if(id==='warm_rock_lean'){
+      q('.PH').setAttribute('transform','translate(0 20)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),1400);
+    }
+    if(id==='head_tilt'){
+      q('.PH').setAttribute('transform','rotate(8 110 120)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),700);
+    }
+    if(id==='lean_forward'){
+      q('.PH').setAttribute('transform','translate(0 14)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),900);
+    }
+    if(id==='small_shrug'){
+      q('.PB').setAttribute('transform','translate(0 -8)');
+      setTimeout(()=>q('.PB').setAttribute('transform',''),650);
+    }
+  }
+  else if(kind==='hold'){
+    q('.EX').textContent='…';
+  }
+  else if(kind==='speak_start'){
+    /* vocal info from segment */
+  }
+}
+
+function segAt(ms){
+  return (GEM.segments||[]).find(s=>ms>=s.t0*1000 && ms<s.t1*1000);
+}
+
+// Ralph mouth shape → SVG ellipse params (ry, rx, cy)
+const MOUTH={closed:[3,14,160],rest:[5,16,160],AI:[12,18,158],E:[8,17,159],
+  O:[10,12,159],U:[7,10,160],FV:[4,15,160],L:[7,15,159],MBP:[2,13,160],open:[14,20,157]};
+function applyViseme(ms){
+  if(!VISEMES.length)return;
+  // binary search for current viseme
+  let lo=0,hi=VISEMES.length-1,cur=VISEMES[0];
+  while(lo<=hi){
+    const mid=(lo+hi)>>1;
+    if(VISEMES[mid].t<=ms){cur=VISEMES[mid];lo=mid+1;}
+    else hi=mid-1;
+  }
+  const p=MOUTH[cur.shape]||MOUTH.rest;
+  const mo=q('.MO');
+  if(mo){
+    mo.setAttribute('ry',p[0]);
+    mo.setAttribute('rx',p[1]);
+    mo.setAttribute('cy',p[2]);
+  }
+}
+
+function tick(){
+  if(!playing)return;
+  tpos = performance.now()-t0;
+  if(tpos>=DUR){tpos=DUR;stop();}
+  q('#barfill').style.width=(tpos/DUR*100)+'%';
+  q('#scrub').value=tpos;
+  const secs=Math.floor(tpos/1000);
+  q('#clock').textContent=`${Math.floor(secs/60)}:${String(secs%60).padStart(2,'0')} / ${Math.floor(DUR/60000)}:${String(Math.floor(DUR/1000)%60).padStart(2,'0')}`;
+  // fire events whose t <= tpos
+  for(const ev of EVENTS){
+    if(ev._f)continue;
+    if(ev.t<=tpos){ev._f=1;apply(ev);}
+  }
+  // viseme mouth animation
+  applyViseme(tpos);
+  // current segment HUD
+  const seg=segAt(tpos);
+  if(seg){
+    q('#emotion').textContent=seg.emotion||'—';
+    q('#beat').textContent=seg.beat_type||'—';
+    q('#seg').textContent=(seg.text_hint||'').slice(0,80);
+  }
+  raf=requestAnimationFrame(tick);
+}
+function play(){
+  playing=true;
+  // reset one-shots
+  EVENTS.forEach(e=>e._f=0);
+  t0=performance.now()-tpos;
+  q('#play').textContent='⏸ Pause';
+  raf=requestAnimationFrame(tick);
+}
+function stop(){
+  playing=false;cancelAnimationFrame(raf);
+  q('#play').textContent='▶ Play';
+}
+q('#play').onclick=()=>playing?stop():play();
+q('#scrub').oninput=e=>{
+  tpos=+e.target.value;
+  EVENTS.forEach(e=>e._f=0);
+  for(const ev of EVENTS){if(ev.t<=tpos){ev._f=1;apply(ev);}}
+  applyViseme(tpos);
+  q('#barfill').style.width=(tpos/DUR*100)+'%';
+};
+// anger banner
+const ang=GEM.anger||{};
+if(ang.present){
+  const el=q('#anger');
+  el.style.display='block';
+  el.textContent=`anger: ${ang.type} — ${(ang.body_signature||[]).join('; ')}`;
+}
+</script></body></html>

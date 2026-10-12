@@ -1,0 +1,9215 @@
+{
+  "schema_version": "0.5",
+  "generated_at": "2026-10-12T15:17:40.232319+00:00",
+  "source_audio": "casey_rocket_2.mp4",
+  "input_audio": "casey_rocket_2.mp4",
+  "outputs_dir": "casey_rocket_2",
+  "session": {
+    "session_id": "154e1b934461",
+    "recorded_at": "2026-10-12T15:17:40.232319+00:00",
+    "speaker_id": "comedian",
+    "operator": "agent",
+    "goal": "delivery",
+    "memo_type": "voice_memo",
+    "take_label": null,
+    "pattern_label": null,
+    "transcript_source": "none"
+  },
+  "comparability": {
+    "duration_bucket": "short",
+    "same_script": null,
+    "audio_quality_flag": "ok",
+    "pitch_method": "praat-parselmouth",
+    "pause_threshold_seconds": 0.25
+  },
+  "analyzer": {
+    "name": "prosody-lens-basic",
+    "pitch_method": "praat-parselmouth",
+    "intensity_method": "praat-parselmouth",
+    "praat_parselmouth_version": "0.4.7",
+    "praat_requested": true,
+    "praat_used": true,
+    "pitch_floor_hz": 75.0,
+    "pitch_ceiling_hz": 400.0,
+    "library_match_method": "hybrid",
+    "sample_rate": 16000,
+    "min_pause_seconds": 0.25
+  },
+  "active_audio": {
+    "status": "unchanged",
+    "original_duration_seconds": 44.118,
+    "analysis_duration_seconds": 44.118,
+    "active_start_seconds": 0.0,
+    "active_end_seconds": 44.118,
+    "trimmed_leading_seconds": 0.0,
+    "trimmed_trailing_seconds": 0.0,
+    "padding_seconds": 0.75,
+    "threshold_db": -33.815,
+    "method": "frame-energy edge focus",
+    "noise_floor_db": -39.815,
+    "speech_level_db": -24.842,
+    "peak_level_db": -23.666,
+    "dynamic_range_db": 14.973,
+    "peak_range_db": 16.149
+  },
+  "metrics": {
+    "duration_seconds": 44.118,
+    "speech_duration_seconds": 43.088,
+    "pause_count": 2,
+    "pause_total_seconds": 1.03,
+    "longest_pause_seconds": 0.52,
+    "pause_ratio": 0.0233,
+    "pitch_hz": {
+      "min": 81.471,
+      "p10": 130.563,
+      "median": 175.772,
+      "p90": 241.829,
+      "max": 390.91,
+      "mean": 181.96,
+      "std": 44.752
+    },
+    "pitch_variability_semitones": 4.122,
+    "intensity_db": {
+      "min": 30.457,
+      "p10": 53.562,
+      "median": 67.211,
+      "p90": 69.208,
+      "max": 70.962,
+      "mean": 64.155,
+      "std": 6.748
+    },
+    "word_count": null,
+    "speaking_rate_wpm": null
+  },
+  "trend_metrics": {
+    "duration_seconds": 44.118,
+    "pause_ratio": 0.0233,
+    "pause_count_per_minute": 2.72,
+    "long_pause_count_per_minute": 0.0,
+    "median_pause_seconds": 0.515,
+    "pitch_variability_semitones": 4.122,
+    "pitch_iqr_semitones": 5.916,
+    "median_pitch_hz": 175.772,
+    "pitch_boundary_hit": false,
+    "pitch_coverage_ratio": 0.9971,
+    "intensity_std_db": 6.748,
+    "intensity_range_db": 40.505,
+    "acoustic_peaks_per_minute": 21.76,
+    "speaking_rate_wpm": null,
+    "coverage_flags": {
+      "transcript_available": false,
+      "word_alignment_available": false,
+      "pitch_fallback": true
+    }
+  },
+  "progression": {
+    "segments": [
+      {
+        "label": "opening",
+        "start": 0.0,
+        "end": 14.706,
+        "duration_seconds": 14.706,
+        "pause_ratio": 0.0,
+        "pause_seconds": 0.0,
+        "median_pitch_hz": 190.821,
+        "pitch_variability_semitones": 3.713,
+        "median_intensity_db": 68.085,
+        "acoustic_peak_count": 5
+      },
+      {
+        "label": "middle",
+        "start": 14.706,
+        "end": 29.412,
+        "duration_seconds": 14.706,
+        "pause_ratio": 0.0354,
+        "pause_seconds": 0.52,
+        "median_pitch_hz": 176.943,
+        "pitch_variability_semitones": 4.597,
+        "median_intensity_db": 66.314,
+        "acoustic_peak_count": 5
+      },
+      {
+        "label": "closing",
+        "start": 29.412,
+        "end": 44.118,
+        "duration_seconds": 14.706,
+        "pause_ratio": 0.0347,
+        "pause_seconds": 0.51,
+        "median_pitch_hz": 161.924,
+        "pitch_variability_semitones": 3.733,
+        "median_intensity_db": 66.736,
+        "acoustic_peak_count": 6
+      }
+    ],
+    "arc_summary": "Closing third is more pause-heavy; similar intensity versus the opening third.",
+    "opening_to_closing_delta": {
+      "pause_ratio": 0.0347,
+      "median_intensity_db": -1.349,
+      "pitch_variability_semitones": 0.02
+    }
+  },
+  "pattern_analysis": {
+    "mode": "discovery",
+    "summary": "Top candidate is a rising contour at 20.4s-22.8s. 5 contour family/families repeat within this clip.",
+    "candidates": [
+      {
+        "start": 20.4,
+        "end": 22.8,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rising contour",
+        "score": 0.596,
+        "pitch_start_st": -8.0,
+        "pitch_mid_st": 0.418,
+        "pitch_end_st": 2.612,
+        "pitch_range_st": 12.336,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -2.95,
+        "energy_range_db": 28.906,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -8.0,
+          -8.0,
+          -8.0,
+          -8.0,
+          -8.0,
+          -7.212,
+          -5.654,
+          -4.418,
+          -3.613,
+          -2.209,
+          -0.696,
+          0.188,
+          0.647,
+          2.229,
+          2.231,
+          1.521,
+          1.308,
+          1.827,
+          1.641,
+          2.297,
+          2.928,
+          3.527,
+          3.995,
+          4.336
+        ],
+        "energy_points_z": [
+          -0.171,
+          -0.27,
+          -0.362,
+          -0.668,
+          -1.05,
+          -0.709,
+          0.06,
+          0.995,
+          1.146,
+          1.111,
+          0.673,
+          1.42,
+          0.642,
+          1.454,
+          0.658,
+          0.943,
+          -0.011,
+          -1.093,
+          -0.072,
+          -0.593,
+          -1.812,
+          -1.171,
+          -2.144,
+          1.025
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 1,
+        "family_id": "P1"
+      },
+      {
+        "start": 40.53,
+        "end": 42.93,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rise-fall arc",
+        "score": 0.541,
+        "pitch_start_st": -2.178,
+        "pitch_mid_st": 0.737,
+        "pitch_end_st": -1.408,
+        "pitch_range_st": 11.252,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -13.682,
+        "energy_range_db": 20.783,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -5.859,
+          -5.952,
+          -5.707,
+          -3.795,
+          -0.561,
+          1.446,
+          3.427,
+          4.905,
+          4.542,
+          2.842,
+          2.108,
+          0.96,
+          0.514,
+          -0.194,
+          -0.778,
+          -0.093,
+          0.473,
+          0.506,
+          -0.218,
+          -0.922,
+          -1.893,
+          -3.772,
+          -5.655,
+          -6.347
+        ],
+        "energy_points_z": [
+          1.346,
+          1.39,
+          1.36,
+          0.207,
+          0.246,
+          0.178,
+          -0.3,
+          -0.632,
+          -0.088,
+          -0.703,
+          -0.997,
+          1.128,
+          0.86,
+          1.01,
+          1.023,
+          0.097,
+          0.09,
+          1.237,
+          -0.264,
+          -1.465,
+          -1.842,
+          -1.43,
+          -1.221,
+          -1.232
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 2,
+        "family_id": "P2"
+      },
+      {
+        "start": 15.6,
+        "end": 18.0,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "wavy contour",
+        "score": 0.536,
+        "pitch_start_st": 0.843,
+        "pitch_mid_st": 1.659,
+        "pitch_end_st": -0.209,
+        "pitch_range_st": 11.0,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 3.575,
+        "energy_range_db": 21.426,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -2.934,
+          -2.551,
+          -1.688,
+          -0.404,
+          2.091,
+          4.261,
+          6.149,
+          7.639,
+          8.0,
+          8.0,
+          5.995,
+          2.824,
+          0.494,
+          -1.571,
+          -3.0,
+          -1.769,
+          -0.405,
+          -0.076,
+          -0.232,
+          -0.525,
+          -0.34,
+          -0.186,
+          0.08,
+          0.49
+        ],
+        "energy_points_z": [
+          0.852,
+          0.476,
+          0.43,
+          0.666,
+          0.285,
+          -1.564,
+          -1.228,
+          -1.549,
+          -0.632,
+          -1.755,
+          -1.372,
+          -1.25,
+          -1.108,
+          -0.752,
+          0.779,
+          0.789,
+          0.794,
+          0.86,
+          0.895,
+          0.954,
+          0.796,
+          0.915,
+          0.921,
+          0.799
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 3,
+        "family_id": "P3"
+      },
+      {
+        "start": 18.0,
+        "end": 20.4,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "falling contour",
+        "score": 0.535,
+        "pitch_start_st": 4.756,
+        "pitch_mid_st": 1.414,
+        "pitch_end_st": -3.355,
+        "pitch_range_st": 13.003,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 0.036,
+        "energy_range_db": 13.649,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          6.934,
+          6.914,
+          6.665,
+          5.535,
+          3.978,
+          3.27,
+          2.419,
+          2.509,
+          3.753,
+          3.974,
+          3.063,
+          2.35,
+          0.479,
+          -1.977,
+          -3.059,
+          -3.887,
+          -3.485,
+          -3.226,
+          -2.771,
+          -2.946,
+          -3.214,
+          -4.597,
+          -5.391,
+          -6.068
+        ],
+        "energy_points_z": [
+          0.176,
+          1.023,
+          1.245,
+          -2.347,
+          0.312,
+          0.188,
+          -0.604,
+          0.566,
+          0.529,
+          0.788,
+          0.453,
+          0.386,
+          0.024,
+          -0.57,
+          0.62,
+          0.225,
+          -0.036,
+          -2.151,
+          0.826,
+          0.788,
+          0.648,
+          -0.128,
+          -0.41,
+          -2.548
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 4,
+        "family_id": "P4"
+      },
+      {
+        "start": 14.4,
+        "end": 16.8,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rising contour",
+        "score": 0.531,
+        "pitch_start_st": -1.818,
+        "pitch_mid_st": -0.162,
+        "pitch_end_st": 7.869,
+        "pitch_range_st": 10.66,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -17.275,
+        "energy_range_db": 22.679,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -2.388,
+          -2.66,
+          -2.345,
+          -1.989,
+          -1.648,
+          -0.61,
+          -0.145,
+          0.007,
+          0.036,
+          0.042,
+          -0.709,
+          -1.012,
+          -0.984,
+          -0.36,
+          0.768,
+          2.574,
+          4.895,
+          6.934,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          7.739,
+          5.859
+        ],
+        "energy_points_z": [
+          0.761,
+          0.863,
+          0.917,
+          0.079,
+          0.72,
+          0.732,
+          -0.218,
+          0.964,
+          0.298,
+          1.083,
+          1.029,
+          0.894,
+          0.818,
+          0.383,
+          0.559,
+          0.61,
+          -0.463,
+          -1.623,
+          -1.401,
+          -1.689,
+          -1.29,
+          -1.758,
+          -0.836,
+          -1.435
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 5,
+        "family_id": "P1"
+      },
+      {
+        "start": 41.73,
+        "end": 44.118,
+        "duration": 2.388,
+        "source": "sliding phrase window",
+        "label": "fall-rise arc",
+        "score": 0.531,
+        "pitch_start_st": 0.923,
+        "pitch_mid_st": -4.704,
+        "pitch_end_st": -0.883,
+        "pitch_range_st": 9.997,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 4.678,
+        "energy_range_db": 28.002,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          1.462,
+          0.843,
+          1.003,
+          0.736,
+          0.726,
+          1.997,
+          1.969,
+          0.031,
+          -0.439,
+          -1.521,
+          -4.54,
+          -5.897,
+          -5.527,
+          -5.406,
+          -4.868,
+          -3.11,
+          -1.086,
+          0.602,
+          -0.681,
+          -0.058,
+          0.108,
+          -3.439,
+          -7.246,
+          -8.0
+        ],
+        "energy_points_z": [
+          0.288,
+          0.812,
+          -0.268,
+          0.092,
+          0.75,
+          -0.653,
+          0.578,
+          -0.564,
+          -1.552,
+          -1.278,
+          -1.348,
+          -0.729,
+          -2.407,
+          -1.711,
+          0.829,
+          0.855,
+          0.916,
+          0.851,
+          0.737,
+          0.803,
+          0.738,
+          0.772,
+          0.743,
+          0.748
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 6,
+        "family_id": "P5"
+      },
+      {
+        "start": 25.2,
+        "end": 27.53,
+        "duration": 2.33,
+        "source": "sliding phrase window",
+        "label": "rise-fall arc",
+        "score": 0.518,
+        "pitch_start_st": 0.98,
+        "pitch_mid_st": 2.696,
+        "pitch_end_st": -3.568,
+        "pitch_range_st": 8.316,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -0.114,
+        "energy_range_db": 22.517,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.52,
+        "pitch_points_st": [
+          2.232,
+          1.9,
+          0.644,
+          -0.19,
+          -0.039,
+          0.52,
+          1.317,
+          3.011,
+          4.329,
+          4.439,
+          3.945,
+          3.2,
+          2.192,
+          0.934,
+          -0.244,
+          -1.247,
+          -2.054,
+          -2.716,
+          -3.592,
+          -3.552,
+          -3.585,
+          -3.802,
+          -3.876,
+          -3.533
+        ],
+        "energy_points_z": [
+          0.558,
+          0.673,
+          0.623,
+          0.301,
+          -0.756,
+          -0.634,
+          0.573,
+          0.685,
+          0.762,
+          0.735,
+          -0.038,
+          0.145,
+          -0.081,
+          -2.114,
+          0.243,
+          0.644,
+          0.425,
+          0.479,
+          0.408,
+          0.411,
+          -1.983,
+          0.581,
+          0.466,
+          -3.108
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 7,
+        "family_id": "P2"
+      },
+      {
+        "start": 6.0,
+        "end": 8.4,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rise-fall arc",
+        "score": 0.504,
+        "pitch_start_st": -3.512,
+        "pitch_mid_st": 2.758,
+        "pitch_end_st": -0.079,
+        "pitch_range_st": 11.208,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 0.315,
+        "energy_range_db": 11.899,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -3.163,
+          -2.985,
+          -3.265,
+          -3.758,
+          -5.234,
+          -5.578,
+          -4.475,
+          -3.032,
+          -1.338,
+          -0.532,
+          1.214,
+          2.254,
+          3.262,
+          4.145,
+          5.63,
+          5.08,
+          2.787,
+          1.882,
+          1.318,
+          0.492,
+          -1.467,
+          -0.65,
+          -1.07,
+          -1.744
+        ],
+        "energy_points_z": [
+          0.435,
+          0.576,
+          0.56,
+          0.546,
+          0.488,
+          0.394,
+          0.125,
+          0.769,
+          0.663,
+          0.783,
+          0.856,
+          0.796,
+          -0.738,
+          -0.774,
+          -0.59,
+          -0.798,
+          -1.352,
+          -3.032,
+          -0.1,
+          0.63,
+          0.613,
+          0.681,
+          -2.158,
+          0.627
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 8,
+        "family_id": "P2"
+      },
+      {
+        "start": 39.33,
+        "end": 41.73,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "fall-rise arc",
+        "score": 0.493,
+        "pitch_start_st": -0.485,
+        "pitch_mid_st": -4.21,
+        "pitch_end_st": 3.039,
+        "pitch_range_st": 10.202,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -10.775,
+        "energy_range_db": 16.826,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -2.067,
+          -0.773,
+          -0.016,
+          0.767,
+          1.245,
+          -0.198,
+          -1.379,
+          -2.131,
+          -2.998,
+          -4.116,
+          -4.304,
+          -4.637,
+          -5.276,
+          -4.949,
+          -3.369,
+          -0.563,
+          1.453,
+          3.709,
+          4.926,
+          4.803,
+          3.431,
+          2.647,
+          2.037,
+          1.588
+        ],
+        "energy_points_z": [
+          0.771,
+          0.91,
+          1.185,
+          1.247,
+          0.693,
+          -0.282,
+          0.415,
+          -0.179,
+          0.937,
+          0.808,
+          0.797,
+          0.744,
+          0.802,
+          0.747,
+          0.526,
+          -0.83,
+          -0.913,
+          -1.141,
+          -0.733,
+          -1.169,
+          -1.672,
+          -2.18,
+          -1.54,
+          0.055
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 9,
+        "family_id": "P5"
+      },
+      {
+        "start": 30.45,
+        "end": 32.85,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "falling contour",
+        "score": 0.492,
+        "pitch_start_st": 4.062,
+        "pitch_mid_st": -0.777,
+        "pitch_end_st": -2.484,
+        "pitch_range_st": 10.367,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -0.625,
+        "energy_range_db": 15.217,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          0.168,
+          1.64,
+          3.486,
+          5.251,
+          6.014,
+          5.653,
+          4.637,
+          2.67,
+          0.466,
+          -1.439,
+          -2.007,
+          -2.063,
+          -1.16,
+          -0.394,
+          0.574,
+          0.445,
+          0.142,
+          -1.029,
+          -1.532,
+          -2.082,
+          -2.886,
+          -3.629,
+          -3.885,
+          -4.353
+        ],
+        "energy_points_z": [
+          0.087,
+          0.008,
+          0.815,
+          0.997,
+          0.789,
+          0.237,
+          -1.172,
+          -1.81,
+          0.752,
+          0.869,
+          0.524,
+          -0.446,
+          0.127,
+          0.36,
+          -2.742,
+          0.768,
+          0.45,
+          0.661,
+          0.387,
+          -1.482,
+          0.665,
+          0.581,
+          0.331,
+          -1.756
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 10,
+        "family_id": "P4"
+      },
+      {
+        "start": 10.8,
+        "end": 13.2,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rising contour",
+        "score": 0.487,
+        "pitch_start_st": -1.384,
+        "pitch_mid_st": -1.394,
+        "pitch_end_st": 5.799,
+        "pitch_range_st": 9.002,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -9.45,
+        "energy_range_db": 24.177,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          0.97,
+          0.181,
+          -0.39,
+          -1.181,
+          -1.586,
+          -2.383,
+          -1.916,
+          -2.053,
+          -2.115,
+          -2.148,
+          -1.645,
+          -1.59,
+          -1.197,
+          0.921,
+          2.828,
+          3.962,
+          4.975,
+          6.076,
+          5.637,
+          5.381,
+          5.574,
+          5.961,
+          6.309,
+          6.619
+        ],
+        "energy_points_z": [
+          0.629,
+          -0.248,
+          0.526,
+          0.471,
+          0.528,
+          0.319,
+          0.429,
+          -0.204,
+          0.591,
+          0.655,
+          0.517,
+          -0.226,
+          0.832,
+          0.791,
+          -0.023,
+          0.81,
+          0.512,
+          0.649,
+          -1.815,
+          -0.997,
+          -1.058,
+          -3.328,
+          -1.214,
+          0.854
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 11,
+        "family_id": "P1"
+      },
+      {
+        "start": 29.25,
+        "end": 31.65,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "wavy contour",
+        "score": 0.478,
+        "pitch_start_st": -0.304,
+        "pitch_mid_st": 1.822,
+        "pitch_end_st": 1.326,
+        "pitch_range_st": 9.848,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -0.058,
+        "energy_range_db": 15.752,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -0.426,
+          0.24,
+          0.496,
+          0.705,
+          -0.181,
+          -0.486,
+          -1.069,
+          -0.427,
+          -0.443,
+          0.369,
+          0.38,
+          1.508,
+          2.135,
+          3.443,
+          4.928,
+          6.523,
+          6.517,
+          5.919,
+          4.451,
+          2.32,
+          0.331,
+          -1.37,
+          -2.795,
+          -3.325
+        ],
+        "energy_points_z": [
+          -2.661,
+          0.554,
+          0.518,
+          0.677,
+          -0.572,
+          0.573,
+          -0.411,
+          -1.352,
+          -0.961,
+          0.41,
+          0.035,
+          0.649,
+          -0.963,
+          0.997,
+          1.235,
+          0.544,
+          1.029,
+          -0.435,
+          -1.109,
+          0.387,
+          1.061,
+          0.878,
+          0.657,
+          -1.739
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 12,
+        "family_id": "P3"
+      },
+      {
+        "start": 42.93,
+        "end": 44.118,
+        "duration": 1.188,
+        "source": "sliding phrase window",
+        "label": "rising contour",
+        "score": 0.477,
+        "pitch_start_st": -6.302,
+        "pitch_mid_st": 0.989,
+        "pitch_end_st": 1.103,
+        "pitch_range_st": 10.134,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 19.626,
+        "energy_range_db": 28.305,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -7.197,
+          -7.278,
+          -7.319,
+          -6.771,
+          -5.834,
+          -4.445,
+          -2.854,
+          -1.169,
+          -0.022,
+          0.804,
+          0.629,
+          1.113,
+          1.62,
+          2.134,
+          1.999,
+          0.866,
+          1.183,
+          1.284,
+          1.024,
+          1.322,
+          1.31,
+          -2.602,
+          -6.454,
+          -8.0
+        ],
+        "energy_points_z": [
+          -1.877,
+          -2.652,
+          -2.505,
+          -1.752,
+          0.165,
+          0.516,
+          0.457,
+          0.537,
+          0.559,
+          0.595,
+          0.552,
+          0.523,
+          0.194,
+          0.415,
+          0.284,
+          0.502,
+          0.439,
+          0.419,
+          0.454,
+          0.452,
+          0.424,
+          0.425,
+          0.445,
+          0.429
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 13,
+        "family_id": "P1"
+      },
+      {
+        "start": 19.2,
+        "end": 21.6,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rising contour",
+        "score": 0.476,
+        "pitch_start_st": -0.822,
+        "pitch_mid_st": -1.709,
+        "pitch_end_st": 5.727,
+        "pitch_range_st": 8.866,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 0.507,
+        "energy_range_db": 22.481,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          0.129,
+          -0.386,
+          -0.879,
+          -1.692,
+          -1.41,
+          -1.225,
+          -0.765,
+          -0.643,
+          -0.175,
+          -1.05,
+          -1.869,
+          -2.373,
+          -2.408,
+          -2.323,
+          -1.549,
+          -0.809,
+          0.984,
+          2.553,
+          3.81,
+          5.302,
+          6.153,
+          6.154,
+          6.224,
+          6.458
+        ],
+        "energy_points_z": [
+          0.624,
+          -0.48,
+          0.766,
+          0.748,
+          0.652,
+          -0.114,
+          0.525,
+          0.821,
+          1.024,
+          0.786,
+          0.164,
+          -0.236,
+          -1.244,
+          -1.265,
+          -1.4,
+          -1.869,
+          -2.382,
+          -1.036,
+          1.167,
+          0.546,
+          0.397,
+          0.89,
+          -0.142,
+          1.059
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 14,
+        "family_id": "P1"
+      },
+      {
+        "start": 26.4,
+        "end": 27.53,
+        "duration": 1.13,
+        "source": "sliding phrase window",
+        "label": "falling contour",
+        "score": 0.454,
+        "pitch_start_st": 2.251,
+        "pitch_mid_st": -0.838,
+        "pitch_end_st": -1.123,
+        "pitch_range_st": 6.524,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 6.403,
+        "energy_range_db": 34.914,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.52,
+        "pitch_points_st": [
+          4.37,
+          3.93,
+          3.331,
+          2.603,
+          1.899,
+          1.287,
+          0.79,
+          0.409,
+          0.103,
+          -0.135,
+          -0.471,
+          -0.71,
+          -0.966,
+          -1.253,
+          -1.567,
+          -2.154,
+          -1.918,
+          -1.571,
+          -1.128,
+          -0.819,
+          -0.209,
+          -0.639,
+          -1.118,
+          -1.61
+        ],
+        "energy_points_z": [
+          0.257,
+          -0.118,
+          -0.666,
+          -3.657,
+          -0.433,
+          0.622,
+          0.657,
+          0.608,
+          0.511,
+          0.476,
+          0.521,
+          0.489,
+          0.482,
+          0.455,
+          0.476,
+          0.471,
+          -0.229,
+          -1.163,
+          0.535,
+          0.579,
+          0.531,
+          0.501,
+          0.161,
+          -2.063
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 15,
+        "family_id": "P4"
+      },
+      {
+        "start": 7.2,
+        "end": 9.6,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "falling contour",
+        "score": 0.451,
+        "pitch_start_st": 3.993,
+        "pitch_mid_st": -0.309,
+        "pitch_end_st": -0.736,
+        "pitch_range_st": 8.639,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -1.522,
+        "energy_range_db": 18.044,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -0.101,
+          2.426,
+          4.866,
+          7.031,
+          6.238,
+          4.434,
+          3.553,
+          2.648,
+          1.825,
+          0.619,
+          0.711,
+          -0.113,
+          -0.676,
+          -1.363,
+          -1.212,
+          -0.505,
+          -0.714,
+          -0.48,
+          -0.597,
+          -0.601,
+          -0.759,
+          -0.869,
+          -1.572,
+          -1.608
+        ],
+        "energy_points_z": [
+          0.609,
+          -0.864,
+          -0.469,
+          0.393,
+          -0.188,
+          -1.856,
+          -0.565,
+          0.678,
+          0.834,
+          0.716,
+          0.694,
+          0.519,
+          0.979,
+          0.792,
+          0.897,
+          0.743,
+          0.817,
+          -1.311,
+          0.845,
+          0.944,
+          -2.514,
+          -0.34,
+          -1.449,
+          -0.906
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 16,
+        "family_id": "P4"
+      },
+      {
+        "start": 32.85,
+        "end": 35.22,
+        "duration": 2.37,
+        "source": "sliding phrase window",
+        "label": "rise-fall arc",
+        "score": 0.448,
+        "pitch_start_st": -0.362,
+        "pitch_mid_st": 1.998,
+        "pitch_end_st": -2.364,
+        "pitch_range_st": 6.315,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 2.613,
+        "energy_range_db": 19.766,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.51,
+        "pitch_points_st": [
+          -2.49,
+          -1.568,
+          -0.786,
+          -0.236,
+          -0.104,
+          0.197,
+          -0.487,
+          -0.139,
+          0.665,
+          1.108,
+          1.425,
+          2.543,
+          2.429,
+          2.295,
+          2.304,
+          1.702,
+          0.751,
+          -0.019,
+          -1.301,
+          -2.641,
+          -3.773,
+          -3.42,
+          -2.909,
+          -2.088
+        ],
+        "energy_points_z": [
+          -0.657,
+          0.889,
+          -0.154,
+          0.584,
+          0.888,
+          -1.158,
+          0.982,
+          -1.304,
+          -1.84,
+          0.671,
+          0.743,
+          0.816,
+          0.95,
+          0.517,
+          -0.033,
+          0.621,
+          -0.861,
+          -1.511,
+          0.814,
+          0.795,
+          0.576,
+          0.721,
+          -0.754,
+          -2.295
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 17,
+        "family_id": "P2"
+      },
+      {
+        "start": 1.2,
+        "end": 3.6,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "fall-rise arc",
+        "score": 0.423,
+        "pitch_start_st": -0.349,
+        "pitch_mid_st": -1.879,
+        "pitch_end_st": 2.609,
+        "pitch_range_st": 7.088,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 0.607,
+        "energy_range_db": 22.56,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -3.791,
+          -2.857,
+          -1.964,
+          -0.67,
+          0.502,
+          -0.029,
+          0.232,
+          0.263,
+          -0.338,
+          -0.939,
+          -1.505,
+          -2.252,
+          -2.692,
+          -2.864,
+          -2.355,
+          -0.924,
+          0.396,
+          1.81,
+          3.035,
+          3.297,
+          2.946,
+          2.765,
+          2.452,
+          2.293
+        ],
+        "energy_points_z": [
+          0.444,
+          0.533,
+          0.547,
+          0.272,
+          0.205,
+          0.29,
+          0.348,
+          0.144,
+          0.394,
+          0.308,
+          0.324,
+          0.137,
+          -0.948,
+          -2.957,
+          -3.354,
+          -0.179,
+          0.311,
+          0.53,
+          0.372,
+          0.511,
+          0.493,
+          0.329,
+          0.456,
+          0.488
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 18,
+        "family_id": "P5"
+      },
+      {
+        "start": 12.0,
+        "end": 14.4,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "wavy contour",
+        "score": 0.417,
+        "pitch_start_st": -0.044,
+        "pitch_mid_st": 0.474,
+        "pitch_end_st": -1.198,
+        "pitch_range_st": 7.275,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 0.232,
+        "energy_range_db": 19.704,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -5.843,
+          -3.893,
+          -2.253,
+          -0.455,
+          0.367,
+          1.433,
+          0.9,
+          0.714,
+          0.409,
+          0.861,
+          1.1,
+          0.663,
+          0.538,
+          0.24,
+          -0.426,
+          -1.016,
+          -0.794,
+          -0.72,
+          -0.562,
+          -1.043,
+          -1.352,
+          -2.026,
+          -2.905,
+          -3.731
+        ],
+        "energy_points_z": [
+          0.255,
+          0.723,
+          -0.208,
+          0.814,
+          -0.303,
+          0.872,
+          -0.595,
+          -2.214,
+          -0.782,
+          -2.068,
+          -2.475,
+          0.748,
+          0.524,
+          0.349,
+          0.74,
+          0.672,
+          0.589,
+          0.498,
+          0.447,
+          0.737,
+          -1.101,
+          0.722,
+          0.567,
+          0.489
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 19,
+        "family_id": "P3"
+      },
+      {
+        "start": 35.73,
+        "end": 38.13,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rising contour",
+        "score": 0.417,
+        "pitch_start_st": -0.511,
+        "pitch_mid_st": -0.239,
+        "pitch_end_st": 1.964,
+        "pitch_range_st": 4.822,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 5.064,
+        "energy_range_db": 22.902,
+        "pause_before_seconds": 0.51,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -0.274,
+          -0.088,
+          -0.338,
+          -0.503,
+          -0.518,
+          -1.275,
+          -1.704,
+          -1.304,
+          -0.965,
+          -0.73,
+          -0.064,
+          0.625,
+          0.405,
+          0.11,
+          -0.413,
+          -1.094,
+          -1.342,
+          -0.747,
+          0.26,
+          1.46,
+          2.468,
+          2.956,
+          3.118,
+          2.919
+        ],
+        "energy_points_z": [
+          -0.965,
+          -1.032,
+          -1.558,
+          0.656,
+          0.513,
+          0.54,
+          0.748,
+          0.641,
+          0.408,
+          -0.353,
+          -0.362,
+          -0.307,
+          0.939,
+          -3.404,
+          -0.333,
+          0.455,
+          0.311,
+          -0.021,
+          -0.921,
+          0.8,
+          0.71,
+          1.032,
+          0.622,
+          0.881
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 20,
+        "family_id": "P1"
+      },
+      {
+        "start": 34.05,
+        "end": 35.22,
+        "duration": 1.17,
+        "source": "sliding phrase window",
+        "label": "falling contour",
+        "score": 0.416,
+        "pitch_start_st": 2.419,
+        "pitch_mid_st": -0.056,
+        "pitch_end_st": -3.432,
+        "pitch_range_st": 7.269,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -5.351,
+        "energy_range_db": 19.634,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.51,
+        "pitch_points_st": [
+          2.882,
+          2.873,
+          2.816,
+          2.445,
+          2.322,
+          2.389,
+          2.321,
+          2.393,
+          2.869,
+          2.141,
+          1.444,
+          0.513,
+          -0.625,
+          -1.902,
+          -2.14,
+          -2.775,
+          -3.327,
+          -3.544,
+          -3.8,
+          -4.387,
+          -3.537,
+          -2.629,
+          -1.944,
+          -1.169
+        ],
+        "energy_points_z": [
+          0.875,
+          0.897,
+          0.746,
+          0.41,
+          0.286,
+          0.066,
+          0.452,
+          0.485,
+          0.226,
+          -1.491,
+          -1.616,
+          -1.163,
+          0.689,
+          0.723,
+          0.731,
+          0.702,
+          0.721,
+          0.428,
+          0.288,
+          0.621,
+          0.356,
+          -1.2,
+          -1.335,
+          -2.898
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 21,
+        "family_id": "P4"
+      },
+      {
+        "start": 2.4,
+        "end": 4.8,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "wavy contour",
+        "score": 0.396,
+        "pitch_start_st": -1.234,
+        "pitch_mid_st": -0.195,
+        "pitch_end_st": -1.323,
+        "pitch_range_st": 6.426,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 7.498,
+        "energy_range_db": 20.767,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -4.115,
+          -4.004,
+          -3.15,
+          -1.858,
+          -0.61,
+          0.801,
+          2.153,
+          2.311,
+          2.096,
+          1.925,
+          -0.516,
+          -0.586,
+          -0.371,
+          -0.018,
+          -0.391,
+          1.402,
+          0.524,
+          0.399,
+          -0.448,
+          -1.216,
+          -1.431,
+          -1.627,
+          -2.412,
+          -2.677
+        ],
+        "energy_points_z": [
+          -0.873,
+          -2.982,
+          -3.148,
+          -1.01,
+          0.405,
+          0.501,
+          0.358,
+          0.533,
+          0.421,
+          0.307,
+          0.319,
+          0.295,
+          0.329,
+          0.501,
+          0.289,
+          0.448,
+          0.243,
+          0.466,
+          0.338,
+          0.489,
+          0.53,
+          0.291,
+          0.609,
+          0.34
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 22,
+        "family_id": "P3"
+      },
+      {
+        "start": 28.05,
+        "end": 30.45,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rise-fall arc",
+        "score": 0.375,
+        "pitch_start_st": -0.62,
+        "pitch_mid_st": 0.634,
+        "pitch_end_st": -0.958,
+        "pitch_range_st": 4.42,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": -4.77,
+        "energy_range_db": 14.88,
+        "pause_before_seconds": 0.52,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -2.183,
+          -2.087,
+          -2.006,
+          -0.996,
+          -0.243,
+          0.613,
+          1.192,
+          2.237,
+          2.205,
+          1.798,
+          0.887,
+          0.815,
+          0.453,
+          0.216,
+          0.171,
+          0.307,
+          -0.618,
+          -0.926,
+          -1.18,
+          -0.989,
+          -1.277,
+          -0.679,
+          -0.86,
+          -1.071
+        ],
+        "energy_points_z": [
+          -1.755,
+          0.484,
+          0.437,
+          0.408,
+          0.585,
+          1.088,
+          -1.147,
+          1.169,
+          -1.7,
+          1.077,
+          0.789,
+          0.455,
+          -2.184,
+          0.692,
+          0.6,
+          0.177,
+          0.608,
+          0.6,
+          -1.334,
+          -0.291,
+          -0.938,
+          0.936,
+          -1.073,
+          0.315
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 23,
+        "family_id": "P2"
+      },
+      {
+        "start": 38.13,
+        "end": 40.53,
+        "duration": 2.4,
+        "source": "sliding phrase window",
+        "label": "rising contour",
+        "score": 0.37,
+        "pitch_start_st": -0.666,
+        "pitch_mid_st": 0.966,
+        "pitch_end_st": 1.454,
+        "pitch_range_st": 6.601,
+        "pitch_trace_quality": "usable",
+        "energy_delta_db": 1.183,
+        "energy_range_db": 12.922,
+        "pause_before_seconds": 0.0,
+        "pause_after_seconds": 0.0,
+        "pitch_points_st": [
+          -0.233,
+          -0.806,
+          -1.24,
+          -1.722,
+          -1.152,
+          -0.525,
+          -0.237,
+          0.165,
+          0.316,
+          -0.183,
+          -0.561,
+          0.383,
+          1.549,
+          2.924,
+          3.617,
+          4.473,
+          4.787,
+          3.728,
+          2.651,
+          1.999,
+          0.91,
+          -0.632,
+          -1.278,
+          -1.814
+        ],
+        "energy_points_z": [
+          0.545,
+          0.265,
+          0.145,
+          0.077,
+          -0.136,
+          -2.755,
+          -2.932,
+          -0.19,
+          0.215,
+          0.385,
+          0.475,
+          0.3,
+          0.419,
+          0.522,
+          1.078,
+          1.019,
+          -1.269,
+          -0.922,
+          -0.059,
+          0.793,
+          0.729,
+          0.55,
+          0.407,
+          0.337
+        ],
+        "method_note": "candidate contour from local pitch/energy/pause signals; not a confirmed phonological label",
+        "rank": 24,
+        "family_id": "P1"
+      }
+    ],
+    "families": [
+      {
+        "family_id": "P1",
+        "label": "rising contour",
+        "count": 7,
+        "members": [
+          1,
+          5,
+          11,
+          13,
+          14,
+          20,
+          24
+        ],
+        "best_similarity": 1.0
+      },
+      {
+        "family_id": "P2",
+        "label": "rise-fall arc",
+        "count": 5,
+        "members": [
+          2,
+          7,
+          8,
+          17,
+          23
+        ],
+        "best_similarity": 1.0
+      },
+      {
+        "family_id": "P3",
+        "label": "wavy contour",
+        "count": 4,
+        "members": [
+          3,
+          12,
+          19,
+          22
+        ],
+        "best_similarity": 1.0
+      },
+      {
+        "family_id": "P4",
+        "label": "falling contour",
+        "count": 5,
+        "members": [
+          4,
+          10,
+          15,
+          16,
+          21
+        ],
+        "best_similarity": 1.0
+      },
+      {
+        "family_id": "P5",
+        "label": "fall-rise arc",
+        "count": 3,
+        "members": [
+          6,
+          9,
+          18
+        ],
+        "best_similarity": 1.0
+      }
+    ],
+    "visualization_options": [
+      "contour map: normalized pitch and energy mini-shapes per candidate",
+      "motif table: ranked candidate patterns with family IDs",
+      "timeline overlay: pause-bounded candidate spans over audio"
+    ],
+    "limitations": [
+      "Pattern labels are descriptive contour sketches, not phonological diagnoses.",
+      "Accent interpretation needs expert review and usually word/phoneme alignment.",
+      "Pitch tracking can miss noisy, creaky, very high, or multi-speaker regions."
+    ],
+    "library": {
+      "status": "not_supplied",
+      "pattern_count": 0,
+      "example_count": 0,
+      "match_threshold": 0.62,
+      "match_method": "hybrid"
+    },
+    "library_matches": []
+  },
+  "synthesis": {
+    "overall_pattern": "44.12s recording with mostly continuous pacing with limited low-energy pause time.",
+    "strongest_delivery_signal": "steady pacing",
+    "pacing_and_pauses": "2 low-energy regions totaling 1.03s (2.33% of the recording).",
+    "vocal_variety": "moderate rough pitch movement; extracted with Praat/Parselmouth, but still treat numbers as acoustic estimates.",
+    "progression_note": "Closing third is more pause-heavy; similar intensity versus the opening third.",
+    "listen_first": [
+      {
+        "start": 6.85,
+        "end": 7.85,
+        "label": "Possible acoustic peak",
+        "why": "rank 1 by rough loudness/pitch score"
+      },
+      {
+        "start": 4.36,
+        "end": 4.51,
+        "label": "Possible acoustic peak",
+        "why": "rank 2 by rough loudness/pitch score"
+      },
+      {
+        "start": 2.91,
+        "end": 4.02,
+        "label": "Possible acoustic peak",
+        "why": "rank 3 by rough loudness/pitch score"
+      },
+      {
+        "start": 30.67,
+        "end": 30.99,
+        "label": "Possible acoustic peak",
+        "why": "rank 4 by rough loudness/pitch score"
+      },
+      {
+        "start": 39.5,
+        "end": 39.74,
+        "label": "Possible acoustic peak",
+        "why": "rank 5 by rough loudness/pitch score"
+      }
+    ],
+    "recommended_experiment": "Record one comparable retake with the same goal, then compare pause ratio, rough pitch variety, and top acoustic peaks.",
+    "unavailable_without_alignment": [
+      "speaking rate",
+      "word-level emphasis",
+      "phrase-level transcript alignment"
+    ],
+    "method_note": "Praat/Parselmouth pitch extraction with local descriptive analysis; not clinical or diagnostic."
+  },
+  "pauses": [
+    {
+      "start": 27.53,
+      "end": 28.05,
+      "duration": 0.52
+    },
+    {
+      "start": 35.22,
+      "end": 35.73,
+      "duration": 0.51
+    }
+  ],
+  "acoustic_peak_candidates": [
+    {
+      "start": 6.85,
+      "end": 7.85,
+      "duration": 1.0,
+      "score": 2.051,
+      "energy_db_p95": 69.801,
+      "pitch_hz_p95": 318.444,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 1
+    },
+    {
+      "start": 4.36,
+      "end": 4.51,
+      "duration": 0.15,
+      "score": 1.706,
+      "energy_db_p95": 69.886,
+      "pitch_hz_p95": 259.428,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 2
+    },
+    {
+      "start": 2.91,
+      "end": 4.02,
+      "duration": 1.11,
+      "score": 1.699,
+      "energy_db_p95": 69.503,
+      "pitch_hz_p95": 275.682,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 3
+    },
+    {
+      "start": 30.67,
+      "end": 30.99,
+      "duration": 0.32,
+      "score": 1.547,
+      "energy_db_p95": 69.981,
+      "pitch_hz_p95": 251.87,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 4
+    },
+    {
+      "start": 39.5,
+      "end": 39.74,
+      "duration": 0.24,
+      "score": 1.543,
+      "energy_db_p95": 70.94,
+      "pitch_hz_p95": 250.798,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 5
+    },
+    {
+      "start": 22.72,
+      "end": 22.99,
+      "duration": 0.27,
+      "score": 1.321,
+      "energy_db_p95": 69.366,
+      "pitch_hz_p95": 272.839,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 6
+    },
+    {
+      "start": 41.0,
+      "end": 41.57,
+      "duration": 0.57,
+      "score": 1.285,
+      "energy_db_p95": 60.972,
+      "pitch_hz_p95": 381.012,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 7
+    },
+    {
+      "start": 23.42,
+      "end": 23.54,
+      "duration": 0.12,
+      "score": 1.279,
+      "energy_db_p95": 69.548,
+      "pitch_hz_p95": 259.158,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 8
+    },
+    {
+      "start": 5.78,
+      "end": 5.94,
+      "duration": 0.16,
+      "score": 1.1,
+      "energy_db_p95": 70.394,
+      "pitch_hz_p95": 242.261,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 9
+    },
+    {
+      "start": 23.85,
+      "end": 24.01,
+      "duration": 0.16,
+      "score": 1.08,
+      "energy_db_p95": 70.275,
+      "pitch_hz_p95": 234.726,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 10
+    },
+    {
+      "start": 4.65,
+      "end": 4.8,
+      "duration": 0.15,
+      "score": 1.075,
+      "energy_db_p95": 70.098,
+      "pitch_hz_p95": 224.723,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 11
+    },
+    {
+      "start": 26.0,
+      "end": 26.15,
+      "duration": 0.15,
+      "score": 1.075,
+      "energy_db_p95": 70.255,
+      "pitch_hz_p95": 215.292,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 12
+    },
+    {
+      "start": 37.86,
+      "end": 38.01,
+      "duration": 0.15,
+      "score": 1.075,
+      "energy_db_p95": 70.115,
+      "pitch_hz_p95": 185.836,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 13
+    },
+    {
+      "start": 16.4,
+      "end": 16.53,
+      "duration": 0.13,
+      "score": 1.065,
+      "energy_db_p95": 56.127,
+      "pitch_hz_p95": 340.633,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 14
+    },
+    {
+      "start": 43.28,
+      "end": 43.52,
+      "duration": 0.24,
+      "score": 0.888,
+      "energy_db_p95": 69.858,
+      "pitch_hz_p95": 213.125,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 15
+    },
+    {
+      "start": 40.1,
+      "end": 40.26,
+      "duration": 0.16,
+      "score": 0.735,
+      "energy_db_p95": 69.762,
+      "pitch_hz_p95": 183.222,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 16
+    }
+  ],
+  "emphasis_candidates": [
+    {
+      "start": 6.85,
+      "end": 7.85,
+      "duration": 1.0,
+      "score": 2.051,
+      "energy_db_p95": 69.801,
+      "pitch_hz_p95": 318.444,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 1
+    },
+    {
+      "start": 4.36,
+      "end": 4.51,
+      "duration": 0.15,
+      "score": 1.706,
+      "energy_db_p95": 69.886,
+      "pitch_hz_p95": 259.428,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 2
+    },
+    {
+      "start": 2.91,
+      "end": 4.02,
+      "duration": 1.11,
+      "score": 1.699,
+      "energy_db_p95": 69.503,
+      "pitch_hz_p95": 275.682,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 3
+    },
+    {
+      "start": 30.67,
+      "end": 30.99,
+      "duration": 0.32,
+      "score": 1.547,
+      "energy_db_p95": 69.981,
+      "pitch_hz_p95": 251.87,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 4
+    },
+    {
+      "start": 39.5,
+      "end": 39.74,
+      "duration": 0.24,
+      "score": 1.543,
+      "energy_db_p95": 70.94,
+      "pitch_hz_p95": 250.798,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 5
+    },
+    {
+      "start": 22.72,
+      "end": 22.99,
+      "duration": 0.27,
+      "score": 1.321,
+      "energy_db_p95": 69.366,
+      "pitch_hz_p95": 272.839,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 6
+    },
+    {
+      "start": 41.0,
+      "end": 41.57,
+      "duration": 0.57,
+      "score": 1.285,
+      "energy_db_p95": 60.972,
+      "pitch_hz_p95": 381.012,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 7
+    },
+    {
+      "start": 23.42,
+      "end": 23.54,
+      "duration": 0.12,
+      "score": 1.279,
+      "energy_db_p95": 69.548,
+      "pitch_hz_p95": 259.158,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 8
+    },
+    {
+      "start": 5.78,
+      "end": 5.94,
+      "duration": 0.16,
+      "score": 1.1,
+      "energy_db_p95": 70.394,
+      "pitch_hz_p95": 242.261,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 9
+    },
+    {
+      "start": 23.85,
+      "end": 24.01,
+      "duration": 0.16,
+      "score": 1.08,
+      "energy_db_p95": 70.275,
+      "pitch_hz_p95": 234.726,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 10
+    },
+    {
+      "start": 4.65,
+      "end": 4.8,
+      "duration": 0.15,
+      "score": 1.075,
+      "energy_db_p95": 70.098,
+      "pitch_hz_p95": 224.723,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 11
+    },
+    {
+      "start": 26.0,
+      "end": 26.15,
+      "duration": 0.15,
+      "score": 1.075,
+      "energy_db_p95": 70.255,
+      "pitch_hz_p95": 215.292,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 12
+    },
+    {
+      "start": 37.86,
+      "end": 38.01,
+      "duration": 0.15,
+      "score": 1.075,
+      "energy_db_p95": 70.115,
+      "pitch_hz_p95": 185.836,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 13
+    },
+    {
+      "start": 16.4,
+      "end": 16.53,
+      "duration": 0.13,
+      "score": 1.065,
+      "energy_db_p95": 56.127,
+      "pitch_hz_p95": 340.633,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 14
+    },
+    {
+      "start": 43.28,
+      "end": 43.52,
+      "duration": 0.24,
+      "score": 0.888,
+      "energy_db_p95": 69.858,
+      "pitch_hz_p95": 213.125,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 15
+    },
+    {
+      "start": 40.1,
+      "end": 40.26,
+      "duration": 0.16,
+      "score": 0.735,
+      "energy_db_p95": 69.762,
+      "pitch_hz_p95": 183.222,
+      "reason": "possible acoustic peak; rough pitch and/or loudness signal",
+      "rank": 16
+    }
+  ],
+  "raw_acoustic_peak_count": 21,
+  "series": {
+    "waveform": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.098,
+        0.004
+      ],
+      [
+        0.196,
+        0.033
+      ],
+      [
+        0.294,
+        0.066
+      ],
+      [
+        0.393,
+        -0.036
+      ],
+      [
+        0.491,
+        -0.047
+      ],
+      [
+        0.589,
+        -0.043
+      ],
+      [
+        0.687,
+        0.02
+      ],
+      [
+        0.785,
+        0.083
+      ],
+      [
+        0.883,
+        -0.068
+      ],
+      [
+        0.981,
+        -0.034
+      ],
+      [
+        1.079,
+        0.054
+      ],
+      [
+        1.177,
+        0.058
+      ],
+      [
+        1.276,
+        0.028
+      ],
+      [
+        1.374,
+        0.027
+      ],
+      [
+        1.472,
+        0.059
+      ],
+      [
+        1.57,
+        0.046
+      ],
+      [
+        1.668,
+        0.071
+      ],
+      [
+        1.766,
+        -0.058
+      ],
+      [
+        1.864,
+        -0.015
+      ],
+      [
+        1.962,
+        -0.048
+      ],
+      [
+        2.061,
+        -0.047
+      ],
+      [
+        2.159,
+        -0.131
+      ],
+      [
+        2.257,
+        -0.05
+      ],
+      [
+        2.355,
+        0.002
+      ],
+      [
+        2.453,
+        0.007
+      ],
+      [
+        2.551,
+        -0.005
+      ],
+      [
+        2.649,
+        -0.009
+      ],
+      [
+        2.748,
+        -0.047
+      ],
+      [
+        2.846,
+        -0.047
+      ],
+      [
+        2.944,
+        0.01
+      ],
+      [
+        3.042,
+        -0.05
+      ],
+      [
+        3.14,
+        -0.071
+      ],
+      [
+        3.238,
+        -0.016
+      ],
+      [
+        3.336,
+        0.016
+      ],
+      [
+        3.434,
+        0.016
+      ],
+      [
+        3.533,
+        0.004
+      ],
+      [
+        3.631,
+        -0.067
+      ],
+      [
+        3.729,
+        -0.108
+      ],
+      [
+        3.827,
+        0.01
+      ],
+      [
+        3.925,
+        -0.038
+      ],
+      [
+        4.023,
+        0.07
+      ],
+      [
+        4.121,
+        0.024
+      ],
+      [
+        4.219,
+        -0.022
+      ],
+      [
+        4.317,
+        -0.046
+      ],
+      [
+        4.416,
+        0.06
+      ],
+      [
+        4.514,
+        0.053
+      ],
+      [
+        4.612,
+        0.081
+      ],
+      [
+        4.71,
+        0.117
+      ],
+      [
+        4.808,
+        -0.099
+      ],
+      [
+        4.906,
+        -0.111
+      ],
+      [
+        5.004,
+        -0.073
+      ],
+      [
+        5.103,
+        -0.021
+      ],
+      [
+        5.201,
+        -0.002
+      ],
+      [
+        5.299,
+        0.017
+      ],
+      [
+        5.397,
+        -0.099
+      ],
+      [
+        5.495,
+        -0.004
+      ],
+      [
+        5.593,
+        0.123
+      ],
+      [
+        5.691,
+        0.043
+      ],
+      [
+        5.789,
+        0.059
+      ],
+      [
+        5.888,
+        0.005
+      ],
+      [
+        5.986,
+        0.09
+      ],
+      [
+        6.084,
+        0.046
+      ],
+      [
+        6.182,
+        0.039
+      ],
+      [
+        6.28,
+        -0.092
+      ],
+      [
+        6.378,
+        0.044
+      ],
+      [
+        6.476,
+        -0.064
+      ],
+      [
+        6.574,
+        0.03
+      ],
+      [
+        6.673,
+        -0.024
+      ],
+      [
+        6.771,
+        -0.058
+      ],
+      [
+        6.869,
+        -0.042
+      ],
+      [
+        6.967,
+        0.046
+      ],
+      [
+        7.065,
+        -0.124
+      ],
+      [
+        7.163,
+        0.102
+      ],
+      [
+        7.261,
+        -0.023
+      ],
+      [
+        7.359,
+        -0.027
+      ],
+      [
+        7.457,
+        -0.02
+      ],
+      [
+        7.556,
+        -0.016
+      ],
+      [
+        7.654,
+        -0.016
+      ],
+      [
+        7.752,
+        0.011
+      ],
+      [
+        7.85,
+        0.002
+      ],
+      [
+        7.948,
+        0.002
+      ],
+      [
+        8.046,
+        -0.028
+      ],
+      [
+        8.144,
+        0.014
+      ],
+      [
+        8.242,
+        0.086
+      ],
+      [
+        8.341,
+        -0.08
+      ],
+      [
+        8.439,
+        0.031
+      ],
+      [
+        8.537,
+        -0.103
+      ],
+      [
+        8.635,
+        -0.058
+      ],
+      [
+        8.733,
+        -0.051
+      ],
+      [
+        8.831,
+        -0.015
+      ],
+      [
+        8.929,
+        0.027
+      ],
+      [
+        9.027,
+        0.093
+      ],
+      [
+        9.126,
+        -0.011
+      ],
+      [
+        9.224,
+        -0.042
+      ],
+      [
+        9.322,
+        -0.014
+      ],
+      [
+        9.42,
+        -0.014
+      ],
+      [
+        9.518,
+        -0.006
+      ],
+      [
+        9.616,
+        0.061
+      ],
+      [
+        9.714,
+        0.022
+      ],
+      [
+        9.812,
+        0.029
+      ],
+      [
+        9.911,
+        -0.001
+      ],
+      [
+        10.009,
+        0.066
+      ],
+      [
+        10.107,
+        0.061
+      ],
+      [
+        10.205,
+        0.042
+      ],
+      [
+        10.303,
+        0.021
+      ],
+      [
+        10.401,
+        -0.095
+      ],
+      [
+        10.499,
+        0.05
+      ],
+      [
+        10.598,
+        0.004
+      ],
+      [
+        10.696,
+        -0.059
+      ],
+      [
+        10.794,
+        0.023
+      ],
+      [
+        10.892,
+        0.005
+      ],
+      [
+        10.99,
+        -0.002
+      ],
+      [
+        11.088,
+        0.009
+      ],
+      [
+        11.186,
+        0.014
+      ],
+      [
+        11.284,
+        -0.016
+      ],
+      [
+        11.383,
+        0.023
+      ],
+      [
+        11.481,
+        -0.174
+      ],
+      [
+        11.579,
+        -0.001
+      ],
+      [
+        11.677,
+        -0.044
+      ],
+      [
+        11.775,
+        -0.041
+      ],
+      [
+        11.873,
+        0.102
+      ],
+      [
+        11.971,
+        0.014
+      ],
+      [
+        12.069,
+        0.015
+      ],
+      [
+        12.168,
+        0.081
+      ],
+      [
+        12.266,
+        -0.015
+      ],
+      [
+        12.364,
+        -0.0
+      ],
+      [
+        12.462,
+        -0.035
+      ],
+      [
+        12.56,
+        0.01
+      ],
+      [
+        12.658,
+        0.038
+      ],
+      [
+        12.756,
+        -0.01
+      ],
+      [
+        12.854,
+        0.034
+      ],
+      [
+        12.953,
+        0.004
+      ],
+      [
+        13.051,
+        -0.002
+      ],
+      [
+        13.149,
+        0.053
+      ],
+      [
+        13.247,
+        -0.059
+      ],
+      [
+        13.345,
+        -0.067
+      ],
+      [
+        13.443,
+        0.095
+      ],
+      [
+        13.541,
+        0.069
+      ],
+      [
+        13.639,
+        0.052
+      ],
+      [
+        13.738,
+        -0.075
+      ],
+      [
+        13.836,
+        0.064
+      ],
+      [
+        13.934,
+        0.018
+      ],
+      [
+        14.032,
+        0.021
+      ],
+      [
+        14.13,
+        0.038
+      ],
+      [
+        14.228,
+        0.042
+      ],
+      [
+        14.326,
+        -0.036
+      ],
+      [
+        14.424,
+        0.034
+      ],
+      [
+        14.523,
+        0.04
+      ],
+      [
+        14.621,
+        -0.09
+      ],
+      [
+        14.719,
+        -0.013
+      ],
+      [
+        14.817,
+        0.063
+      ],
+      [
+        14.915,
+        -0.015
+      ],
+      [
+        15.013,
+        0.014
+      ],
+      [
+        15.111,
+        -0.091
+      ],
+      [
+        15.209,
+        0.025
+      ],
+      [
+        15.307,
+        -0.019
+      ],
+      [
+        15.406,
+        0.017
+      ],
+      [
+        15.504,
+        -0.003
+      ],
+      [
+        15.602,
+        0.073
+      ],
+      [
+        15.7,
+        -0.062
+      ],
+      [
+        15.798,
+        0.018
+      ],
+      [
+        15.896,
+        0.04
+      ],
+      [
+        15.994,
+        0.017
+      ],
+      [
+        16.093,
+        0.006
+      ],
+      [
+        16.191,
+        0.001
+      ],
+      [
+        16.289,
+        -0.005
+      ],
+      [
+        16.387,
+        -0.011
+      ],
+      [
+        16.485,
+        -0.006
+      ],
+      [
+        16.583,
+        -0.002
+      ],
+      [
+        16.681,
+        -0.014
+      ],
+      [
+        16.779,
+        0.003
+      ],
+      [
+        16.878,
+        -0.019
+      ],
+      [
+        16.976,
+        -0.006
+      ],
+      [
+        17.074,
+        -0.034
+      ],
+      [
+        17.172,
+        0.017
+      ],
+      [
+        17.27,
+        -0.015
+      ],
+      [
+        17.368,
+        -0.003
+      ],
+      [
+        17.466,
+        -0.017
+      ],
+      [
+        17.564,
+        0.059
+      ],
+      [
+        17.663,
+        0.004
+      ],
+      [
+        17.761,
+        0.003
+      ],
+      [
+        17.859,
+        -0.03
+      ],
+      [
+        17.957,
+        0.103
+      ],
+      [
+        18.055,
+        -0.065
+      ],
+      [
+        18.153,
+        0.073
+      ],
+      [
+        18.251,
+        0.042
+      ],
+      [
+        18.349,
+        0.002
+      ],
+      [
+        18.448,
+        0.016
+      ],
+      [
+        18.546,
+        -0.004
+      ],
+      [
+        18.644,
+        -0.003
+      ],
+      [
+        18.742,
+        0.018
+      ],
+      [
+        18.84,
+        -0.016
+      ],
+      [
+        18.938,
+        0.015
+      ],
+      [
+        19.036,
+        0.05
+      ],
+      [
+        19.134,
+        -0.012
+      ],
+      [
+        19.233,
+        -0.021
+      ],
+      [
+        19.331,
+        -0.003
+      ],
+      [
+        19.429,
+        0.043
+      ],
+      [
+        19.527,
+        -0.049
+      ],
+      [
+        19.625,
+        0.023
+      ],
+      [
+        19.723,
+        -0.027
+      ],
+      [
+        19.821,
+        0.017
+      ],
+      [
+        19.919,
+        -0.0
+      ],
+      [
+        20.017,
+        0.04
+      ],
+      [
+        20.116,
+        0.001
+      ],
+      [
+        20.214,
+        -0.043
+      ],
+      [
+        20.312,
+        -0.011
+      ],
+      [
+        20.41,
+        -0.003
+      ],
+      [
+        20.508,
+        0.032
+      ],
+      [
+        20.606,
+        -0.019
+      ],
+      [
+        20.704,
+        0.005
+      ],
+      [
+        20.802,
+        -0.004
+      ],
+      [
+        20.901,
+        0.0
+      ],
+      [
+        20.999,
+        0.007
+      ],
+      [
+        21.097,
+        0.001
+      ],
+      [
+        21.195,
+        0.004
+      ],
+      [
+        21.293,
+        0.021
+      ],
+      [
+        21.391,
+        -0.096
+      ],
+      [
+        21.489,
+        -0.003
+      ],
+      [
+        21.587,
+        -0.062
+      ],
+      [
+        21.686,
+        -0.022
+      ],
+      [
+        21.784,
+        0.007
+      ],
+      [
+        21.882,
+        -0.021
+      ],
+      [
+        21.98,
+        0.08
+      ],
+      [
+        22.078,
+        0.006
+      ],
+      [
+        22.176,
+        0.003
+      ],
+      [
+        22.274,
+        -0.005
+      ],
+      [
+        22.372,
+        0.001
+      ],
+      [
+        22.471,
+        0.002
+      ],
+      [
+        22.569,
+        -0.0
+      ],
+      [
+        22.667,
+        0.003
+      ],
+      [
+        22.765,
+        -0.039
+      ],
+      [
+        22.863,
+        -0.017
+      ],
+      [
+        22.961,
+        0.1
+      ],
+      [
+        23.059,
+        -0.07
+      ],
+      [
+        23.157,
+        -0.021
+      ],
+      [
+        23.256,
+        0.001
+      ],
+      [
+        23.354,
+        0.096
+      ],
+      [
+        23.452,
+        -0.019
+      ],
+      [
+        23.55,
+        -0.006
+      ],
+      [
+        23.648,
+        -0.038
+      ],
+      [
+        23.746,
+        -0.047
+      ],
+      [
+        23.844,
+        0.034
+      ],
+      [
+        23.942,
+        0.015
+      ],
+      [
+        24.041,
+        0.014
+      ],
+      [
+        24.139,
+        0.031
+      ],
+      [
+        24.237,
+        -0.121
+      ],
+      [
+        24.335,
+        0.04
+      ],
+      [
+        24.433,
+        0.039
+      ],
+      [
+        24.531,
+        -0.003
+      ],
+      [
+        24.629,
+        0.028
+      ],
+      [
+        24.727,
+        -0.007
+      ],
+      [
+        24.826,
+        -0.005
+      ],
+      [
+        24.924,
+        0.054
+      ],
+      [
+        25.022,
+        -0.028
+      ],
+      [
+        25.12,
+        0.024
+      ],
+      [
+        25.218,
+        0.048
+      ],
+      [
+        25.316,
+        -0.003
+      ],
+      [
+        25.414,
+        -0.045
+      ],
+      [
+        25.512,
+        -0.014
+      ],
+      [
+        25.611,
+        -0.005
+      ],
+      [
+        25.709,
+        0.065
+      ],
+      [
+        25.807,
+        0.009
+      ],
+      [
+        25.905,
+        0.086
+      ],
+      [
+        26.003,
+        -0.04
+      ],
+      [
+        26.101,
+        -0.022
+      ],
+      [
+        26.199,
+        0.074
+      ],
+      [
+        26.297,
+        0.028
+      ],
+      [
+        26.396,
+        -0.017
+      ],
+      [
+        26.494,
+        0.035
+      ],
+      [
+        26.592,
+        -0.0
+      ],
+      [
+        26.69,
+        -0.033
+      ],
+      [
+        26.788,
+        -0.017
+      ],
+      [
+        26.886,
+        0.085
+      ],
+      [
+        26.984,
+        0.011
+      ],
+      [
+        27.082,
+        -0.051
+      ],
+      [
+        27.181,
+        -0.021
+      ],
+      [
+        27.279,
+        -0.016
+      ],
+      [
+        27.377,
+        0.057
+      ],
+      [
+        27.475,
+        -0.068
+      ],
+      [
+        27.573,
+        0.001
+      ],
+      [
+        27.671,
+        -0.008
+      ],
+      [
+        27.769,
+        -0.009
+      ],
+      [
+        27.867,
+        -0.001
+      ],
+      [
+        27.966,
+        -0.001
+      ],
+      [
+        28.064,
+        -0.01
+      ],
+      [
+        28.162,
+        -0.028
+      ],
+      [
+        28.26,
+        -0.001
+      ],
+      [
+        28.358,
+        0.015
+      ],
+      [
+        28.456,
+        -0.016
+      ],
+      [
+        28.554,
+        0.012
+      ],
+      [
+        28.652,
+        -0.009
+      ],
+      [
+        28.751,
+        -0.055
+      ],
+      [
+        28.849,
+        -0.006
+      ],
+      [
+        28.947,
+        0.02
+      ],
+      [
+        29.045,
+        -0.025
+      ],
+      [
+        29.143,
+        -0.085
+      ],
+      [
+        29.241,
+        -0.015
+      ],
+      [
+        29.339,
+        0.027
+      ],
+      [
+        29.438,
+        -0.052
+      ],
+      [
+        29.536,
+        -0.003
+      ],
+      [
+        29.634,
+        0.025
+      ],
+      [
+        29.732,
+        0.031
+      ],
+      [
+        29.83,
+        -0.013
+      ],
+      [
+        29.928,
+        0.009
+      ],
+      [
+        30.026,
+        -0.008
+      ],
+      [
+        30.124,
+        0.018
+      ],
+      [
+        30.223,
+        -0.063
+      ],
+      [
+        30.321,
+        -0.012
+      ],
+      [
+        30.419,
+        -0.03
+      ],
+      [
+        30.517,
+        -0.04
+      ],
+      [
+        30.615,
+        0.026
+      ],
+      [
+        30.713,
+        0.061
+      ],
+      [
+        30.811,
+        0.033
+      ],
+      [
+        30.909,
+        -0.025
+      ],
+      [
+        31.008,
+        -0.017
+      ],
+      [
+        31.106,
+        0.005
+      ],
+      [
+        31.204,
+        -0.027
+      ],
+      [
+        31.302,
+        0.008
+      ],
+      [
+        31.4,
+        0.107
+      ],
+      [
+        31.498,
+        0.062
+      ],
+      [
+        31.596,
+        0.005
+      ],
+      [
+        31.694,
+        -0.04
+      ],
+      [
+        31.793,
+        -0.017
+      ],
+      [
+        31.891,
+        0.001
+      ],
+      [
+        31.989,
+        -0.032
+      ],
+      [
+        32.087,
+        -0.018
+      ],
+      [
+        32.185,
+        0.013
+      ],
+      [
+        32.283,
+        0.094
+      ],
+      [
+        32.381,
+        0.003
+      ],
+      [
+        32.479,
+        -0.046
+      ],
+      [
+        32.578,
+        -0.01
+      ],
+      [
+        32.676,
+        -0.031
+      ],
+      [
+        32.774,
+        0.056
+      ],
+      [
+        32.872,
+        -0.003
+      ],
+      [
+        32.97,
+        -0.018
+      ],
+      [
+        33.068,
+        -0.011
+      ],
+      [
+        33.166,
+        0.003
+      ],
+      [
+        33.264,
+        -0.041
+      ],
+      [
+        33.362,
+        0.004
+      ],
+      [
+        33.461,
+        -0.032
+      ],
+      [
+        33.559,
+        -0.001
+      ],
+      [
+        33.657,
+        0.012
+      ],
+      [
+        33.755,
+        -0.079
+      ],
+      [
+        33.853,
+        -0.037
+      ],
+      [
+        33.951,
+        0.034
+      ],
+      [
+        34.049,
+        -0.0
+      ],
+      [
+        34.148,
+        0.036
+      ],
+      [
+        34.246,
+        -0.007
+      ],
+      [
+        34.344,
+        0.001
+      ],
+      [
+        34.442,
+        -0.016
+      ],
+      [
+        34.54,
+        0.039
+      ],
+      [
+        34.638,
+        -0.039
+      ],
+      [
+        34.736,
+        -0.044
+      ],
+      [
+        34.834,
+        -0.039
+      ],
+      [
+        34.932,
+        -0.021
+      ],
+      [
+        35.031,
+        0.051
+      ],
+      [
+        35.129,
+        0.003
+      ],
+      [
+        35.227,
+        -0.005
+      ],
+      [
+        35.325,
+        -0.001
+      ],
+      [
+        35.423,
+        -0.001
+      ],
+      [
+        35.521,
+        0.002
+      ],
+      [
+        35.619,
+        -0.001
+      ],
+      [
+        35.718,
+        0.001
+      ],
+      [
+        35.816,
+        0.013
+      ],
+      [
+        35.914,
+        -0.023
+      ],
+      [
+        36.012,
+        -0.02
+      ],
+      [
+        36.11,
+        0.014
+      ],
+      [
+        36.208,
+        -0.044
+      ],
+      [
+        36.306,
+        0.063
+      ],
+      [
+        36.404,
+        -0.025
+      ],
+      [
+        36.502,
+        -0.066
+      ],
+      [
+        36.601,
+        0.017
+      ],
+      [
+        36.699,
+        0.05
+      ],
+      [
+        36.797,
+        -0.02
+      ],
+      [
+        36.895,
+        -0.004
+      ],
+      [
+        36.993,
+        -0.024
+      ],
+      [
+        37.091,
+        -0.005
+      ],
+      [
+        37.189,
+        -0.023
+      ],
+      [
+        37.288,
+        -0.04
+      ],
+      [
+        37.386,
+        0.027
+      ],
+      [
+        37.484,
+        -0.018
+      ],
+      [
+        37.582,
+        0.017
+      ],
+      [
+        37.68,
+        -0.025
+      ],
+      [
+        37.778,
+        0.018
+      ],
+      [
+        37.876,
+        -0.035
+      ],
+      [
+        37.974,
+        -0.035
+      ],
+      [
+        38.072,
+        -0.058
+      ],
+      [
+        38.171,
+        0.006
+      ],
+      [
+        38.269,
+        0.007
+      ],
+      [
+        38.367,
+        -0.047
+      ],
+      [
+        38.465,
+        -0.035
+      ],
+      [
+        38.563,
+        0.075
+      ],
+      [
+        38.661,
+        -0.041
+      ],
+      [
+        38.759,
+        0.003
+      ],
+      [
+        38.858,
+        -0.036
+      ],
+      [
+        38.956,
+        0.011
+      ],
+      [
+        39.054,
+        -0.0
+      ],
+      [
+        39.152,
+        -0.038
+      ],
+      [
+        39.25,
+        0.01
+      ],
+      [
+        39.348,
+        0.038
+      ],
+      [
+        39.446,
+        0.006
+      ],
+      [
+        39.544,
+        0.081
+      ],
+      [
+        39.642,
+        0.09
+      ],
+      [
+        39.741,
+        -0.083
+      ],
+      [
+        39.839,
+        -0.007
+      ],
+      [
+        39.937,
+        0.005
+      ],
+      [
+        40.035,
+        -0.001
+      ],
+      [
+        40.133,
+        0.038
+      ],
+      [
+        40.231,
+        -0.02
+      ],
+      [
+        40.329,
+        0.05
+      ],
+      [
+        40.428,
+        -0.016
+      ],
+      [
+        40.526,
+        -0.018
+      ],
+      [
+        40.624,
+        0.078
+      ],
+      [
+        40.722,
+        0.107
+      ],
+      [
+        40.82,
+        -0.045
+      ],
+      [
+        40.918,
+        0.02
+      ],
+      [
+        41.016,
+        -0.002
+      ],
+      [
+        41.114,
+        -0.016
+      ],
+      [
+        41.212,
+        0.008
+      ],
+      [
+        41.311,
+        -0.013
+      ],
+      [
+        41.409,
+        0.011
+      ],
+      [
+        41.507,
+        0.007
+      ],
+      [
+        41.605,
+        -0.005
+      ],
+      [
+        41.703,
+        -0.021
+      ],
+      [
+        41.801,
+        -0.002
+      ],
+      [
+        41.899,
+        -0.006
+      ],
+      [
+        41.998,
+        -0.042
+      ],
+      [
+        42.096,
+        0.019
+      ],
+      [
+        42.194,
+        0.039
+      ],
+      [
+        42.292,
+        0.069
+      ],
+      [
+        42.39,
+        0.012
+      ],
+      [
+        42.488,
+        0.0
+      ],
+      [
+        42.586,
+        0.005
+      ],
+      [
+        42.684,
+        0.004
+      ],
+      [
+        42.782,
+        -0.001
+      ],
+      [
+        42.881,
+        0.02
+      ],
+      [
+        42.979,
+        0.002
+      ],
+      [
+        43.077,
+        0.005
+      ],
+      [
+        43.175,
+        0.028
+      ],
+      [
+        43.273,
+        -0.038
+      ],
+      [
+        43.371,
+        -0.047
+      ],
+      [
+        43.469,
+        0.057
+      ],
+      [
+        43.568,
+        -0.023
+      ],
+      [
+        43.666,
+        0.008
+      ],
+      [
+        43.764,
+        0.018
+      ],
+      [
+        43.862,
+        -0.011
+      ],
+      [
+        43.96,
+        -0.029
+      ],
+      [
+        44.058,
+        -0.023
+      ]
+    ],
+    "energy_db": [
+      [
+        0.0,
+        null
+      ],
+      [
+        0.07,
+        49.387
+      ],
+      [
+        0.14,
+        68.523
+      ],
+      [
+        0.21,
+        61.146
+      ],
+      [
+        0.28,
+        67.669
+      ],
+      [
+        0.35,
+        68.747
+      ],
+      [
+        0.42,
+        68.322
+      ],
+      [
+        0.49,
+        66.972
+      ],
+      [
+        0.56,
+        67.632
+      ],
+      [
+        0.63,
+        67.044
+      ],
+      [
+        0.7,
+        67.541
+      ],
+      [
+        0.77,
+        67.872
+      ],
+      [
+        0.84,
+        61.105
+      ],
+      [
+        0.91,
+        68.202
+      ],
+      [
+        0.98,
+        68.164
+      ],
+      [
+        1.05,
+        66.862
+      ],
+      [
+        1.12,
+        69.234
+      ],
+      [
+        1.19,
+        68.699
+      ],
+      [
+        1.26,
+        69.348
+      ],
+      [
+        1.33,
+        69.07
+      ],
+      [
+        1.4,
+        69.192
+      ],
+      [
+        1.47,
+        67.688
+      ],
+      [
+        1.54,
+        68.42
+      ],
+      [
+        1.61,
+        67.485
+      ],
+      [
+        1.68,
+        67.456
+      ],
+      [
+        1.75,
+        67.958
+      ],
+      [
+        1.82,
+        68.154
+      ],
+      [
+        1.89,
+        63.808
+      ],
+      [
+        1.96,
+        68.318
+      ],
+      [
+        2.03,
+        68.377
+      ],
+      [
+        2.1,
+        68.042
+      ],
+      [
+        2.17,
+        68.394
+      ],
+      [
+        2.24,
+        68.0
+      ],
+      [
+        2.31,
+        67.795
+      ],
+      [
+        2.38,
+        62.98
+      ],
+      [
+        2.45,
+        61.148
+      ],
+      [
+        2.52,
+        50.003
+      ],
+      [
+        2.59,
+        48.475
+      ],
+      [
+        2.66,
+        46.804
+      ],
+      [
+        2.73,
+        65.325
+      ],
+      [
+        2.8,
+        68.571
+      ],
+      [
+        2.87,
+        67.927
+      ],
+      [
+        2.94,
+        69.509
+      ],
+      [
+        3.01,
+        68.61
+      ],
+      [
+        3.08,
+        68.357
+      ],
+      [
+        3.15,
+        69.188
+      ],
+      [
+        3.22,
+        68.952
+      ],
+      [
+        3.29,
+        68.992
+      ],
+      [
+        3.36,
+        67.723
+      ],
+      [
+        3.43,
+        68.267
+      ],
+      [
+        3.5,
+        68.839
+      ],
+      [
+        3.57,
+        68.792
+      ],
+      [
+        3.64,
+        68.341
+      ],
+      [
+        3.71,
+        68.82
+      ],
+      [
+        3.78,
+        69.529
+      ],
+      [
+        3.85,
+        68.108
+      ],
+      [
+        3.92,
+        68.523
+      ],
+      [
+        3.99,
+        68.746
+      ],
+      [
+        4.06,
+        67.947
+      ],
+      [
+        4.13,
+        69.095
+      ],
+      [
+        4.2,
+        68.855
+      ],
+      [
+        4.27,
+        68.319
+      ],
+      [
+        4.34,
+        69.191
+      ],
+      [
+        4.41,
+        69.298
+      ],
+      [
+        4.48,
+        69.67
+      ],
+      [
+        4.55,
+        68.297
+      ],
+      [
+        4.62,
+        68.786
+      ],
+      [
+        4.69,
+        69.953
+      ],
+      [
+        4.76,
+        70.031
+      ],
+      [
+        4.83,
+        68.274
+      ],
+      [
+        4.9,
+        69.468
+      ],
+      [
+        4.97,
+        68.491
+      ],
+      [
+        5.04,
+        64.765
+      ],
+      [
+        5.11,
+        64.417
+      ],
+      [
+        5.18,
+        68.546
+      ],
+      [
+        5.25,
+        69.318
+      ],
+      [
+        5.32,
+        68.798
+      ],
+      [
+        5.39,
+        68.496
+      ],
+      [
+        5.46,
+        65.131
+      ],
+      [
+        5.53,
+        68.026
+      ],
+      [
+        5.6,
+        69.863
+      ],
+      [
+        5.67,
+        58.059
+      ],
+      [
+        5.74,
+        65.672
+      ],
+      [
+        5.81,
+        70.272
+      ],
+      [
+        5.88,
+        69.44
+      ],
+      [
+        5.95,
+        67.814
+      ],
+      [
+        6.02,
+        68.537
+      ],
+      [
+        6.09,
+        68.248
+      ],
+      [
+        6.16,
+        69.838
+      ],
+      [
+        6.23,
+        65.734
+      ],
+      [
+        6.3,
+        68.971
+      ],
+      [
+        6.37,
+        67.697
+      ],
+      [
+        6.44,
+        68.566
+      ],
+      [
+        6.51,
+        68.167
+      ],
+      [
+        6.58,
+        68.032
+      ],
+      [
+        6.65,
+        67.665
+      ],
+      [
+        6.72,
+        69.348
+      ],
+      [
+        6.79,
+        68.175
+      ],
+      [
+        6.86,
+        69.266
+      ],
+      [
+        6.93,
+        69.243
+      ],
+      [
+        7.0,
+        69.505
+      ],
+      [
+        7.07,
+        69.65
+      ],
+      [
+        7.14,
+        69.651
+      ],
+      [
+        7.21,
+        66.803
+      ],
+      [
+        7.28,
+        63.303
+      ],
+      [
+        7.35,
+        64.356
+      ],
+      [
+        7.42,
+        62.285
+      ],
+      [
+        7.49,
+        67.085
+      ],
+      [
+        7.56,
+        64.546
+      ],
+      [
+        7.63,
+        62.651
+      ],
+      [
+        7.7,
+        58.63
+      ],
+      [
+        7.77,
+        57.814
+      ],
+      [
+        7.84,
+        61.029
+      ],
+      [
+        7.91,
+        66.864
+      ],
+      [
+        7.98,
+        68.83
+      ],
+      [
+        8.05,
+        68.818
+      ],
+      [
+        8.12,
+        68.051
+      ],
+      [
+        8.19,
+        69.046
+      ],
+      [
+        8.26,
+        65.067
+      ],
+      [
+        8.33,
+        64.697
+      ],
+      [
+        8.4,
+        68.935
+      ],
+      [
+        8.47,
+        69.169
+      ],
+      [
+        8.54,
+        68.355
+      ],
+      [
+        8.61,
+        67.354
+      ],
+      [
+        8.68,
+        68.295
+      ],
+      [
+        8.75,
+        68.492
+      ],
+      [
+        8.82,
+        68.356
+      ],
+      [
+        8.89,
+        69.201
+      ],
+      [
+        8.96,
+        54.557
+      ],
+      [
+        9.03,
+        68.797
+      ],
+      [
+        9.1,
+        69.298
+      ],
+      [
+        9.17,
+        69.381
+      ],
+      [
+        9.24,
+        68.444
+      ],
+      [
+        9.31,
+        51.888
+      ],
+      [
+        9.38,
+        62.523
+      ],
+      [
+        9.45,
+        62.317
+      ],
+      [
+        9.52,
+        52.873
+      ],
+      [
+        9.59,
+        52.189
+      ],
+      [
+        9.66,
+        68.643
+      ],
+      [
+        9.73,
+        63.317
+      ],
+      [
+        9.8,
+        69.399
+      ],
+      [
+        9.87,
+        68.222
+      ],
+      [
+        9.94,
+        67.114
+      ],
+      [
+        10.01,
+        68.482
+      ],
+      [
+        10.08,
+        68.247
+      ],
+      [
+        10.15,
+        68.522
+      ],
+      [
+        10.22,
+        67.334
+      ],
+      [
+        10.29,
+        67.819
+      ],
+      [
+        10.36,
+        68.672
+      ],
+      [
+        10.43,
+        68.037
+      ],
+      [
+        10.5,
+        67.399
+      ],
+      [
+        10.57,
+        67.757
+      ],
+      [
+        10.64,
+        64.343
+      ],
+      [
+        10.71,
+        64.316
+      ],
+      [
+        10.78,
+        68.336
+      ],
+      [
+        10.85,
+        68.097
+      ],
+      [
+        10.92,
+        58.555
+      ],
+      [
+        10.99,
+        58.705
+      ],
+      [
+        11.06,
+        67.2
+      ],
+      [
+        11.13,
+        66.736
+      ],
+      [
+        11.2,
+        63.919
+      ],
+      [
+        11.27,
+        67.097
+      ],
+      [
+        11.34,
+        65.964
+      ],
+      [
+        11.41,
+        67.516
+      ],
+      [
+        11.48,
+        67.168
+      ],
+      [
+        11.55,
+        55.233
+      ],
+      [
+        11.62,
+        66.593
+      ],
+      [
+        11.69,
+        66.103
+      ],
+      [
+        11.76,
+        68.145
+      ],
+      [
+        11.83,
+        67.536
+      ],
+      [
+        11.9,
+        64.753
+      ],
+      [
+        11.97,
+        64.265
+      ],
+      [
+        12.04,
+        67.347
+      ],
+      [
+        12.11,
+        68.615
+      ],
+      [
+        12.18,
+        67.48
+      ],
+      [
+        12.25,
+        63.043
+      ],
+      [
+        12.32,
+        69.161
+      ],
+      [
+        12.39,
+        65.558
+      ],
+      [
+        12.46,
+        65.074
+      ],
+      [
+        12.53,
+        69.428
+      ],
+      [
+        12.6,
+        62.521
+      ],
+      [
+        12.67,
+        54.798
+      ],
+      [
+        12.74,
+        52.521
+      ],
+      [
+        12.81,
+        58.409
+      ],
+      [
+        12.88,
+        58.363
+      ],
+      [
+        12.95,
+        50.617
+      ],
+      [
+        13.02,
+        44.917
+      ],
+      [
+        13.09,
+        56.742
+      ],
+      [
+        13.16,
+        68.94
+      ],
+      [
+        13.23,
+        68.861
+      ],
+      [
+        13.3,
+        68.041
+      ],
+      [
+        13.37,
+        66.97
+      ],
+      [
+        13.44,
+        69.123
+      ],
+      [
+        13.51,
+        69.708
+      ],
+      [
+        13.58,
+        67.881
+      ],
+      [
+        13.65,
+        67.668
+      ],
+      [
+        13.72,
+        68.681
+      ],
+      [
+        13.79,
+        64.244
+      ],
+      [
+        13.86,
+        69.306
+      ],
+      [
+        13.93,
+        58.076
+      ],
+      [
+        14.0,
+        66.814
+      ],
+      [
+        14.07,
+        55.718
+      ],
+      [
+        14.14,
+        68.931
+      ],
+      [
+        14.21,
+        67.547
+      ],
+      [
+        14.28,
+        66.389
+      ],
+      [
+        14.35,
+        68.257
+      ],
+      [
+        14.42,
+        66.785
+      ],
+      [
+        14.49,
+        67.389
+      ],
+      [
+        14.56,
+        68.173
+      ],
+      [
+        14.63,
+        68.251
+      ],
+      [
+        14.7,
+        65.507
+      ],
+      [
+        14.77,
+        62.423
+      ],
+      [
+        14.84,
+        66.873
+      ],
+      [
+        14.91,
+        63.674
+      ],
+      [
+        14.98,
+        69.614
+      ],
+      [
+        15.05,
+        64.106
+      ],
+      [
+        15.12,
+        68.692
+      ],
+      [
+        15.19,
+        68.882
+      ],
+      [
+        15.26,
+        55.977
+      ],
+      [
+        15.33,
+        69.349
+      ],
+      [
+        15.4,
+        69.234
+      ],
+      [
+        15.47,
+        68.62
+      ],
+      [
+        15.54,
+        68.211
+      ],
+      [
+        15.61,
+        68.024
+      ],
+      [
+        15.68,
+        65.597
+      ],
+      [
+        15.75,
+        64.213
+      ],
+      [
+        15.82,
+        65.032
+      ],
+      [
+        15.89,
+        65.368
+      ],
+      [
+        15.96,
+        66.128
+      ],
+      [
+        16.03,
+        62.829
+      ],
+      [
+        16.1,
+        52.611
+      ],
+      [
+        16.17,
+        47.621
+      ],
+      [
+        16.24,
+        51.088
+      ],
+      [
+        16.31,
+        49.31
+      ],
+      [
+        16.38,
+        47.252
+      ],
+      [
+        16.45,
+        54.17
+      ],
+      [
+        16.52,
+        49.033
+      ],
+      [
+        16.59,
+        46.796
+      ],
+      [
+        16.66,
+        49.101
+      ],
+      [
+        16.73,
+        53.795
+      ],
+      [
+        16.8,
+        51.109
+      ],
+      [
+        16.87,
+        53.607
+      ],
+      [
+        16.94,
+        55.102
+      ],
+      [
+        17.01,
+        63.764
+      ],
+      [
+        17.08,
+        67.681
+      ],
+      [
+        17.15,
+        67.427
+      ],
+      [
+        17.22,
+        67.467
+      ],
+      [
+        17.29,
+        66.202
+      ],
+      [
+        17.36,
+        68.125
+      ],
+      [
+        17.43,
+        68.275
+      ],
+      [
+        17.5,
+        67.971
+      ],
+      [
+        17.57,
+        68.686
+      ],
+      [
+        17.64,
+        68.689
+      ],
+      [
+        17.71,
+        67.413
+      ],
+      [
+        17.78,
+        68.277
+      ],
+      [
+        17.85,
+        68.787
+      ],
+      [
+        17.92,
+        68.765
+      ],
+      [
+        17.99,
+        67.57
+      ],
+      [
+        18.06,
+        67.368
+      ],
+      [
+        18.13,
+        68.218
+      ],
+      [
+        18.2,
+        69.43
+      ],
+      [
+        18.27,
+        66.583
+      ],
+      [
+        18.34,
+        52.189
+      ],
+      [
+        18.41,
+        65.148
+      ],
+      [
+        18.48,
+        61.965
+      ],
+      [
+        18.55,
+        68.49
+      ],
+      [
+        18.62,
+        62.839
+      ],
+      [
+        18.69,
+        65.133
+      ],
+      [
+        18.76,
+        65.193
+      ],
+      [
+        18.83,
+        65.768
+      ],
+      [
+        18.9,
+        66.652
+      ],
+      [
+        18.97,
+        67.03
+      ],
+      [
+        19.04,
+        66.875
+      ],
+      [
+        19.11,
+        65.077
+      ],
+      [
+        19.18,
+        65.339
+      ],
+      [
+        19.25,
+        65.206
+      ],
+      [
+        19.32,
+        60.73
+      ],
+      [
+        19.39,
+        65.899
+      ],
+      [
+        19.46,
+        67.277
+      ],
+      [
+        19.53,
+        66.096
+      ],
+      [
+        19.6,
+        66.084
+      ],
+      [
+        19.67,
+        64.896
+      ],
+      [
+        19.74,
+        55.8
+      ],
+      [
+        19.81,
+        63.425
+      ],
+      [
+        19.88,
+        67.915
+      ],
+      [
+        19.95,
+        67.176
+      ],
+      [
+        20.02,
+        68.43
+      ],
+      [
+        20.09,
+        67.326
+      ],
+      [
+        20.16,
+        65.048
+      ],
+      [
+        20.23,
+        61.458
+      ],
+      [
+        20.3,
+        63.689
+      ],
+      [
+        20.37,
+        57.993
+      ],
+      [
+        20.44,
+        54.167
+      ],
+      [
+        20.51,
+        54.775
+      ],
+      [
+        20.58,
+        53.82
+      ],
+      [
+        20.65,
+        52.659
+      ],
+      [
+        20.72,
+        51.063
+      ],
+      [
+        20.79,
+        50.018
+      ],
+      [
+        20.86,
+        47.213
+      ],
+      [
+        20.93,
+        52.441
+      ],
+      [
+        21.0,
+        54.47
+      ],
+      [
+        21.07,
+        68.752
+      ],
+      [
+        21.14,
+        64.242
+      ],
+      [
+        21.21,
+        64.8
+      ],
+      [
+        21.28,
+        66.532
+      ],
+      [
+        21.35,
+        67.953
+      ],
+      [
+        21.42,
+        62.447
+      ],
+      [
+        21.49,
+        62.325
+      ],
+      [
+        21.56,
+        68.364
+      ],
+      [
+        21.63,
+        66.04
+      ],
+      [
+        21.7,
+        63.44
+      ],
+      [
+        21.77,
+        68.316
+      ],
+      [
+        21.84,
+        65.683
+      ],
+      [
+        21.91,
+        59.245
+      ],
+      [
+        21.98,
+        67.596
+      ],
+      [
+        22.05,
+        59.067
+      ],
+      [
+        22.12,
+        44.669
+      ],
+      [
+        22.19,
+        50.69
+      ],
+      [
+        22.26,
+        56.054
+      ],
+      [
+        22.33,
+        53.56
+      ],
+      [
+        22.4,
+        50.692
+      ],
+      [
+        22.47,
+        45.294
+      ],
+      [
+        22.54,
+        34.322
+      ],
+      [
+        22.61,
+        54.082
+      ],
+      [
+        22.68,
+        40.043
+      ],
+      [
+        22.75,
+        65.876
+      ],
+      [
+        22.82,
+        64.115
+      ],
+      [
+        22.89,
+        60.014
+      ],
+      [
+        22.96,
+        69.377
+      ],
+      [
+        23.03,
+        60.499
+      ],
+      [
+        23.1,
+        62.056
+      ],
+      [
+        23.17,
+        65.695
+      ],
+      [
+        23.24,
+        68.497
+      ],
+      [
+        23.31,
+        70.705
+      ],
+      [
+        23.38,
+        64.904
+      ],
+      [
+        23.45,
+        58.555
+      ],
+      [
+        23.52,
+        68.132
+      ],
+      [
+        23.59,
+        69.212
+      ],
+      [
+        23.66,
+        68.882
+      ],
+      [
+        23.73,
+        68.978
+      ],
+      [
+        23.8,
+        60.401
+      ],
+      [
+        23.87,
+        69.772
+      ],
+      [
+        23.94,
+        70.018
+      ],
+      [
+        24.01,
+        67.483
+      ],
+      [
+        24.08,
+        69.128
+      ],
+      [
+        24.15,
+        68.387
+      ],
+      [
+        24.22,
+        69.095
+      ],
+      [
+        24.29,
+        70.337
+      ],
+      [
+        24.36,
+        66.495
+      ],
+      [
+        24.43,
+        67.832
+      ],
+      [
+        24.5,
+        67.971
+      ],
+      [
+        24.57,
+        68.117
+      ],
+      [
+        24.64,
+        69.626
+      ],
+      [
+        24.71,
+        64.224
+      ],
+      [
+        24.78,
+        60.731
+      ],
+      [
+        24.85,
+        69.223
+      ],
+      [
+        24.92,
+        69.287
+      ],
+      [
+        24.99,
+        69.082
+      ],
+      [
+        25.06,
+        49.588
+      ],
+      [
+        25.13,
+        63.824
+      ],
+      [
+        25.2,
+        68.497
+      ],
+      [
+        25.27,
+        68.92
+      ],
+      [
+        25.34,
+        67.245
+      ],
+      [
+        25.41,
+        68.721
+      ],
+      [
+        25.48,
+        68.45
+      ],
+      [
+        25.55,
+        59.784
+      ],
+      [
+        25.62,
+        65.168
+      ],
+      [
+        25.69,
+        62.86
+      ],
+      [
+        25.76,
+        57.951
+      ],
+      [
+        25.83,
+        69.22
+      ],
+      [
+        25.9,
+        69.328
+      ],
+      [
+        25.97,
+        66.778
+      ],
+      [
+        26.04,
+        70.191
+      ],
+      [
+        26.11,
+        69.536
+      ],
+      [
+        26.18,
+        68.989
+      ],
+      [
+        26.25,
+        51.202
+      ],
+      [
+        26.32,
+        66.892
+      ],
+      [
+        26.39,
+        66.392
+      ],
+      [
+        26.46,
+        62.302
+      ],
+      [
+        26.53,
+        45.726
+      ],
+      [
+        26.6,
+        62.292
+      ],
+      [
+        26.67,
+        69.087
+      ],
+      [
+        26.74,
+        68.834
+      ],
+      [
+        26.81,
+        67.83
+      ],
+      [
+        26.88,
+        68.03
+      ],
+      [
+        26.95,
+        67.686
+      ],
+      [
+        27.02,
+        67.656
+      ],
+      [
+        27.09,
+        67.735
+      ],
+      [
+        27.16,
+        67.591
+      ],
+      [
+        27.23,
+        53.324
+      ],
+      [
+        27.3,
+        68.621
+      ],
+      [
+        27.37,
+        68.258
+      ],
+      [
+        27.44,
+        67.786
+      ],
+      [
+        27.51,
+        52.713
+      ],
+      [
+        27.58,
+        42.798
+      ],
+      [
+        27.65,
+        47.138
+      ],
+      [
+        27.72,
+        47.526
+      ],
+      [
+        27.79,
+        45.21
+      ],
+      [
+        27.86,
+        42.834
+      ],
+      [
+        27.93,
+        39.768
+      ],
+      [
+        28.0,
+        38.135
+      ],
+      [
+        28.07,
+        63.104
+      ],
+      [
+        28.14,
+        67.033
+      ],
+      [
+        28.21,
+        66.387
+      ],
+      [
+        28.28,
+        66.768
+      ],
+      [
+        28.35,
+        66.329
+      ],
+      [
+        28.42,
+        67.319
+      ],
+      [
+        28.49,
+        67.926
+      ],
+      [
+        28.56,
+        69.536
+      ],
+      [
+        28.63,
+        67.955
+      ],
+      [
+        28.7,
+        60.911
+      ],
+      [
+        28.77,
+        69.702
+      ],
+      [
+        28.84,
+        68.275
+      ],
+      [
+        28.91,
+        59.682
+      ],
+      [
+        28.98,
+        69.607
+      ],
+      [
+        29.05,
+        68.274
+      ],
+      [
+        29.12,
+        68.037
+      ],
+      [
+        29.19,
+        66.837
+      ],
+      [
+        29.26,
+        50.016
+      ],
+      [
+        29.33,
+        60.68
+      ],
+      [
+        29.4,
+        67.869
+      ],
+      [
+        29.47,
+        66.998
+      ],
+      [
+        29.54,
+        67.867
+      ],
+      [
+        29.61,
+        65.641
+      ],
+      [
+        29.68,
+        64.091
+      ],
+      [
+        29.75,
+        67.206
+      ],
+      [
+        29.82,
+        67.479
+      ],
+      [
+        29.89,
+        62.783
+      ],
+      [
+        29.96,
+        58.002
+      ],
+      [
+        30.03,
+        63.02
+      ],
+      [
+        30.1,
+        55.035
+      ],
+      [
+        30.17,
+        62.296
+      ],
+      [
+        30.24,
+        68.918
+      ],
+      [
+        30.31,
+        61.667
+      ],
+      [
+        30.38,
+        66.905
+      ],
+      [
+        30.45,
+        66.127
+      ],
+      [
+        30.52,
+        62.673
+      ],
+      [
+        30.59,
+        69.26
+      ],
+      [
+        30.66,
+        69.1
+      ],
+      [
+        30.73,
+        69.982
+      ],
+      [
+        30.8,
+        67.298
+      ],
+      [
+        30.87,
+        68.946
+      ],
+      [
+        30.94,
+        69.451
+      ],
+      [
+        31.01,
+        62.601
+      ],
+      [
+        31.08,
+        60.818
+      ],
+      [
+        31.15,
+        61.37
+      ],
+      [
+        31.22,
+        65.584
+      ],
+      [
+        31.29,
+        68.919
+      ],
+      [
+        31.36,
+        69.231
+      ],
+      [
+        31.43,
+        68.686
+      ],
+      [
+        31.5,
+        67.803
+      ],
+      [
+        31.57,
+        67.443
+      ],
+      [
+        31.64,
+        54.479
+      ],
+      [
+        31.71,
+        66.951
+      ],
+      [
+        31.78,
+        69.253
+      ],
+      [
+        31.85,
+        60.287
+      ],
+      [
+        31.92,
+        60.279
+      ],
+      [
+        31.99,
+        68.794
+      ],
+      [
+        32.06,
+        64.871
+      ],
+      [
+        32.13,
+        66.645
+      ],
+      [
+        32.2,
+        68.818
+      ],
+      [
+        32.27,
+        68.274
+      ],
+      [
+        32.34,
+        67.303
+      ],
+      [
+        32.41,
+        56.984
+      ],
+      [
+        32.48,
+        68.314
+      ],
+      [
+        32.55,
+        68.482
+      ],
+      [
+        32.62,
+        68.208
+      ],
+      [
+        32.69,
+        66.941
+      ],
+      [
+        32.76,
+        67.495
+      ],
+      [
+        32.83,
+        64.71
+      ],
+      [
+        32.9,
+        67.038
+      ],
+      [
+        32.97,
+        68.063
+      ],
+      [
+        33.04,
+        63.169
+      ],
+      [
+        33.11,
+        64.817
+      ],
+      [
+        33.18,
+        67.111
+      ],
+      [
+        33.25,
+        68.194
+      ],
+      [
+        33.32,
+        59.602
+      ],
+      [
+        33.39,
+        43.282
+      ],
+      [
+        33.46,
+        68.374
+      ],
+      [
+        33.53,
+        57.694
+      ],
+      [
+        33.6,
+        65.999
+      ],
+      [
+        33.67,
+        53.271
+      ],
+      [
+        33.74,
+        64.151
+      ],
+      [
+        33.81,
+        67.997
+      ],
+      [
+        33.88,
+        67.084
+      ],
+      [
+        33.95,
+        66.845
+      ],
+      [
+        34.02,
+        68.407
+      ],
+      [
+        34.09,
+        68.348
+      ],
+      [
+        34.16,
+        66.917
+      ],
+      [
+        34.23,
+        65.915
+      ],
+      [
+        34.3,
+        63.311
+      ],
+      [
+        34.37,
+        66.13
+      ],
+      [
+        34.44,
+        66.057
+      ],
+      [
+        34.51,
+        55.73
+      ],
+      [
+        34.58,
+        46.351
+      ],
+      [
+        34.65,
+        66.758
+      ],
+      [
+        34.72,
+        67.465
+      ],
+      [
+        34.79,
+        67.396
+      ],
+      [
+        34.86,
+        67.556
+      ],
+      [
+        34.93,
+        65.61
+      ],
+      [
+        35.0,
+        66.723
+      ],
+      [
+        35.07,
+        65.503
+      ],
+      [
+        35.14,
+        50.486
+      ],
+      [
+        35.21,
+        50.089
+      ],
+      [
+        35.28,
+        45.821
+      ],
+      [
+        35.35,
+        45.366
+      ],
+      [
+        35.42,
+        46.492
+      ],
+      [
+        35.49,
+        44.192
+      ],
+      [
+        35.56,
+        41.677
+      ],
+      [
+        35.63,
+        37.071
+      ],
+      [
+        35.7,
+        37.476
+      ],
+      [
+        35.77,
+        67.308
+      ],
+      [
+        35.84,
+        56.001
+      ],
+      [
+        35.91,
+        60.484
+      ],
+      [
+        35.98,
+        65.21
+      ],
+      [
+        36.05,
+        67.714
+      ],
+      [
+        36.12,
+        67.249
+      ],
+      [
+        36.19,
+        67.24
+      ],
+      [
+        36.26,
+        67.217
+      ],
+      [
+        36.33,
+        68.611
+      ],
+      [
+        36.4,
+        68.207
+      ],
+      [
+        36.47,
+        67.443
+      ],
+      [
+        36.54,
+        66.671
+      ],
+      [
+        36.61,
+        56.717
+      ],
+      [
+        36.68,
+        67.245
+      ],
+      [
+        36.75,
+        65.66
+      ],
+      [
+        36.82,
+        52.665
+      ],
+      [
+        36.89,
+        58.566
+      ],
+      [
+        36.96,
+        67.33
+      ],
+      [
+        37.03,
+        67.681
+      ],
+      [
+        37.1,
+        50.198
+      ],
+      [
+        37.17,
+        64.722
+      ],
+      [
+        37.24,
+        67.645
+      ],
+      [
+        37.31,
+        66.51
+      ],
+      [
+        37.38,
+        66.022
+      ],
+      [
+        37.45,
+        65.58
+      ],
+      [
+        37.52,
+        64.142
+      ],
+      [
+        37.59,
+        58.309
+      ],
+      [
+        37.66,
+        67.14
+      ],
+      [
+        37.73,
+        67.865
+      ],
+      [
+        37.8,
+        66.461
+      ],
+      [
+        37.87,
+        69.951
+      ],
+      [
+        37.94,
+        69.709
+      ],
+      [
+        38.01,
+        68.004
+      ],
+      [
+        38.08,
+        69.204
+      ],
+      [
+        38.15,
+        68.957
+      ],
+      [
+        38.22,
+        67.918
+      ],
+      [
+        38.29,
+        68.107
+      ],
+      [
+        38.36,
+        67.599
+      ],
+      [
+        38.43,
+        67.466
+      ],
+      [
+        38.5,
+        67.494
+      ],
+      [
+        38.57,
+        66.174
+      ],
+      [
+        38.64,
+        59.549
+      ],
+      [
+        38.71,
+        57.299
+      ],
+      [
+        38.78,
+        66.53
+      ],
+      [
+        38.85,
+        66.507
+      ],
+      [
+        38.92,
+        63.889
+      ],
+      [
+        38.99,
+        68.68
+      ],
+      [
+        39.06,
+        68.398
+      ],
+      [
+        39.13,
+        69.3
+      ],
+      [
+        39.2,
+        66.457
+      ],
+      [
+        39.27,
+        67.147
+      ],
+      [
+        39.34,
+        68.615
+      ],
+      [
+        39.41,
+        69.323
+      ],
+      [
+        39.48,
+        68.678
+      ],
+      [
+        39.55,
+        70.754
+      ],
+      [
+        39.62,
+        70.841
+      ],
+      [
+        39.69,
+        70.616
+      ],
+      [
+        39.76,
+        67.61
+      ],
+      [
+        39.83,
+        61.535
+      ],
+      [
+        39.9,
+        64.049
+      ],
+      [
+        39.97,
+        66.891
+      ],
+      [
+        40.04,
+        64.615
+      ],
+      [
+        40.11,
+        69.759
+      ],
+      [
+        40.18,
+        69.335
+      ],
+      [
+        40.25,
+        69.001
+      ],
+      [
+        40.32,
+        68.956
+      ],
+      [
+        40.39,
+        68.689
+      ],
+      [
+        40.46,
+        68.271
+      ],
+      [
+        40.53,
+        68.293
+      ],
+      [
+        40.6,
+        68.64
+      ],
+      [
+        40.67,
+        67.977
+      ],
+      [
+        40.74,
+        68.42
+      ],
+      [
+        40.81,
+        66.288
+      ],
+      [
+        40.88,
+        59.167
+      ],
+      [
+        40.95,
+        60.926
+      ],
+      [
+        41.02,
+        61.092
+      ],
+      [
+        41.09,
+        60.389
+      ],
+      [
+        41.16,
+        57.689
+      ],
+      [
+        41.23,
+        59.716
+      ],
+      [
+        41.3,
+        58.156
+      ],
+      [
+        41.37,
+        59.699
+      ],
+      [
+        41.44,
+        53.451
+      ],
+      [
+        41.51,
+        55.575
+      ],
+      [
+        41.58,
+        53.618
+      ],
+      [
+        41.65,
+        65.806
+      ],
+      [
+        41.72,
+        64.973
+      ],
+      [
+        41.79,
+        65.342
+      ],
+      [
+        41.86,
+        68.734
+      ],
+      [
+        41.93,
+        60.494
+      ],
+      [
+        42.0,
+        67.178
+      ],
+      [
+        42.07,
+        62.161
+      ],
+      [
+        42.14,
+        68.482
+      ],
+      [
+        42.21,
+        59.382
+      ],
+      [
+        42.28,
+        63.427
+      ],
+      [
+        42.35,
+        67.27
+      ],
+      [
+        42.42,
+        59.245
+      ],
+      [
+        42.49,
+        49.936
+      ],
+      [
+        42.56,
+        49.129
+      ],
+      [
+        42.63,
+        48.38
+      ],
+      [
+        42.7,
+        50.452
+      ],
+      [
+        42.77,
+        50.818
+      ],
+      [
+        42.84,
+        52.63
+      ],
+      [
+        42.91,
+        55.926
+      ],
+      [
+        42.98,
+        41.665
+      ],
+      [
+        43.05,
+        43.125
+      ],
+      [
+        43.12,
+        63.224
+      ],
+      [
+        43.19,
+        69.237
+      ],
+      [
+        43.26,
+        68.852
+      ],
+      [
+        43.33,
+        69.581
+      ],
+      [
+        43.4,
+        69.941
+      ],
+      [
+        43.47,
+        69.36
+      ],
+      [
+        43.54,
+        66.73
+      ],
+      [
+        43.61,
+        68.217
+      ],
+      [
+        43.68,
+        66.477
+      ],
+      [
+        43.75,
+        68.805
+      ],
+      [
+        43.82,
+        68.454
+      ],
+      [
+        43.89,
+        69.042
+      ],
+      [
+        43.96,
+        68.369
+      ],
+      [
+        44.03,
+        68.738
+      ]
+    ],
+    "pitch_hz": [
+      [
+        0.0,
+        null
+      ],
+      [
+        0.07,
+        null
+      ],
+      [
+        0.14,
+        207.622
+      ],
+      [
+        0.21,
+        189.328
+      ],
+      [
+        0.28,
+        191.365
+      ],
+      [
+        0.35,
+        221.779
+      ],
+      [
+        0.42,
+        220.38
+      ],
+      [
+        0.49,
+        211.512
+      ],
+      [
+        0.56,
+        217.692
+      ],
+      [
+        0.63,
+        222.409
+      ],
+      [
+        0.7,
+        218.835
+      ],
+      [
+        0.77,
+        220.976
+      ],
+      [
+        0.84,
+        197.953
+      ],
+      [
+        0.91,
+        225.266
+      ],
+      [
+        0.98,
+        212.483
+      ],
+      [
+        1.05,
+        186.883
+      ],
+      [
+        1.12,
+        152.691
+      ],
+      [
+        1.19,
+        156.228
+      ],
+      [
+        1.26,
+        169.162
+      ],
+      [
+        1.33,
+        162.58
+      ],
+      [
+        1.4,
+        162.641
+      ],
+      [
+        1.47,
+        238.994
+      ],
+      [
+        1.54,
+        215.643
+      ],
+      [
+        1.61,
+        204.623
+      ],
+      [
+        1.68,
+        234.658
+      ],
+      [
+        1.75,
+        229.028
+      ],
+      [
+        1.82,
+        230.653
+      ],
+      [
+        1.89,
+        199.462
+      ],
+      [
+        1.96,
+        220.24
+      ],
+      [
+        2.03,
+        225.237
+      ],
+      [
+        2.1,
+        221.627
+      ],
+      [
+        2.17,
+        193.845
+      ],
+      [
+        2.24,
+        194.615
+      ],
+      [
+        2.31,
+        195.475
+      ],
+      [
+        2.38,
+        178.377
+      ],
+      [
+        2.45,
+        179.676
+      ],
+      [
+        2.52,
+        180.975
+      ],
+      [
+        2.59,
+        182.275
+      ],
+      [
+        2.66,
+        183.574
+      ],
+      [
+        2.73,
+        184.873
+      ],
+      [
+        2.8,
+        193.001
+      ],
+      [
+        2.87,
+        224.241
+      ],
+      [
+        2.94,
+        270.926
+      ],
+      [
+        3.01,
+        260.677
+      ],
+      [
+        3.08,
+        266.303
+      ],
+      [
+        3.15,
+        275.95
+      ],
+      [
+        3.22,
+        273.893
+      ],
+      [
+        3.29,
+        263.494
+      ],
+      [
+        3.36,
+        234.134
+      ],
+      [
+        3.43,
+        245.023
+      ],
+      [
+        3.5,
+        245.547
+      ],
+      [
+        3.57,
+        248.912
+      ],
+      [
+        3.64,
+        135.33
+      ],
+      [
+        3.71,
+        257.361
+      ],
+      [
+        3.78,
+        273.457
+      ],
+      [
+        3.85,
+        255.61
+      ],
+      [
+        3.92,
+        269.273
+      ],
+      [
+        3.99,
+        253.231
+      ],
+      [
+        4.06,
+        219.877
+      ],
+      [
+        4.13,
+        208.855
+      ],
+      [
+        4.2,
+        228.989
+      ],
+      [
+        4.27,
+        207.999
+      ],
+      [
+        4.34,
+        222.556
+      ],
+      [
+        4.41,
+        259.27
+      ],
+      [
+        4.48,
+        218.731
+      ],
+      [
+        4.55,
+        190.106
+      ],
+      [
+        4.62,
+        185.598
+      ],
+      [
+        4.69,
+        210.486
+      ],
+      [
+        4.76,
+        213.08
+      ],
+      [
+        4.83,
+        176.793
+      ],
+      [
+        4.9,
+        162.323
+      ],
+      [
+        4.97,
+        162.058
+      ],
+      [
+        5.04,
+        136.512
+      ],
+      [
+        5.11,
+        178.833
+      ],
+      [
+        5.18,
+        227.589
+      ],
+      [
+        5.25,
+        238.196
+      ],
+      [
+        5.32,
+        197.09
+      ],
+      [
+        5.39,
+        170.515
+      ],
+      [
+        5.46,
+        148.617
+      ],
+      [
+        5.53,
+        200.557
+      ],
+      [
+        5.6,
+        221.589
+      ],
+      [
+        5.67,
+        207.022
+      ],
+      [
+        5.74,
+        222.868
+      ],
+      [
+        5.81,
+        239.45
+      ],
+      [
+        5.88,
+        203.863
+      ],
+      [
+        5.95,
+        159.159
+      ],
+      [
+        6.02,
+        154.856
+      ],
+      [
+        6.09,
+        191.899
+      ],
+      [
+        6.16,
+        243.235
+      ],
+      [
+        6.23,
+        201.12
+      ],
+      [
+        6.3,
+        164.766
+      ],
+      [
+        6.37,
+        148.711
+      ],
+      [
+        6.44,
+        141.735
+      ],
+      [
+        6.51,
+        134.894
+      ],
+      [
+        6.58,
+        128.538
+      ],
+      [
+        6.65,
+        132.245
+      ],
+      [
+        6.72,
+        190.533
+      ],
+      [
+        6.79,
+        221.282
+      ],
+      [
+        6.86,
+        213.879
+      ],
+      [
+        6.93,
+        213.886
+      ],
+      [
+        7.0,
+        225.902
+      ],
+      [
+        7.07,
+        208.584
+      ],
+      [
+        7.14,
+        174.72
+      ],
+      [
+        7.21,
+        130.624
+      ],
+      [
+        7.28,
+        326.504
+      ],
+      [
+        7.35,
+        303.182
+      ],
+      [
+        7.42,
+        292.555
+      ],
+      [
+        7.49,
+        287.732
+      ],
+      [
+        7.56,
+        282.91
+      ],
+      [
+        7.63,
+        277.032
+      ],
+      [
+        7.7,
+        258.287
+      ],
+      [
+        7.77,
+        271.356
+      ],
+      [
+        7.84,
+        224.143
+      ],
+      [
+        7.91,
+        166.837
+      ],
+      [
+        7.98,
+        221.801
+      ],
+      [
+        8.05,
+        244.151
+      ],
+      [
+        8.12,
+        225.085
+      ],
+      [
+        8.19,
+        204.496
+      ],
+      [
+        8.26,
+        183.147
+      ],
+      [
+        8.33,
+        170.087
+      ],
+      [
+        8.4,
+        197.599
+      ],
+      [
+        8.47,
+        172.175
+      ],
+      [
+        8.54,
+        180.341
+      ],
+      [
+        8.61,
+        165.452
+      ],
+      [
+        8.68,
+        173.752
+      ],
+      [
+        8.75,
+        174.71
+      ],
+      [
+        8.82,
+        176.645
+      ],
+      [
+        8.89,
+        213.66
+      ],
+      [
+        8.96,
+        212.494
+      ],
+      [
+        9.03,
+        215.683
+      ],
+      [
+        9.1,
+        169.475
+      ],
+      [
+        9.17,
+        194.466
+      ],
+      [
+        9.24,
+        161.99
+      ],
+      [
+        9.31,
+        166.503
+      ],
+      [
+        9.38,
+        182.787
+      ],
+      [
+        9.45,
+        199.072
+      ],
+      [
+        9.52,
+        215.356
+      ],
+      [
+        9.59,
+        162.179
+      ],
+      [
+        9.66,
+        170.059
+      ],
+      [
+        9.73,
+        179.008
+      ],
+      [
+        9.8,
+        177.365
+      ],
+      [
+        9.87,
+        169.469
+      ],
+      [
+        9.94,
+        159.457
+      ],
+      [
+        10.01,
+        157.725
+      ],
+      [
+        10.08,
+        154.263
+      ],
+      [
+        10.15,
+        154.198
+      ],
+      [
+        10.22,
+        157.098
+      ],
+      [
+        10.29,
+        167.092
+      ],
+      [
+        10.36,
+        160.684
+      ],
+      [
+        10.43,
+        166.356
+      ],
+      [
+        10.5,
+        168.099
+      ],
+      [
+        10.57,
+        143.257
+      ],
+      [
+        10.64,
+        142.351
+      ],
+      [
+        10.71,
+        172.247
+      ],
+      [
+        10.78,
+        166.17
+      ],
+      [
+        10.85,
+        155.204
+      ],
+      [
+        10.92,
+        145.656
+      ],
+      [
+        10.99,
+        151.094
+      ],
+      [
+        11.06,
+        133.066
+      ],
+      [
+        11.13,
+        126.007
+      ],
+      [
+        11.2,
+        124.174
+      ],
+      [
+        11.27,
+        131.282
+      ],
+      [
+        11.34,
+        122.95
+      ],
+      [
+        11.41,
+        126.998
+      ],
+      [
+        11.48,
+        123.076
+      ],
+      [
+        11.55,
+        120.765
+      ],
+      [
+        11.62,
+        142.911
+      ],
+      [
+        11.69,
+        121.509
+      ],
+      [
+        11.76,
+        128.114
+      ],
+      [
+        11.83,
+        126.129
+      ],
+      [
+        11.9,
+        119.35
+      ],
+      [
+        11.97,
+        128.209
+      ],
+      [
+        12.04,
+        137.067
+      ],
+      [
+        12.11,
+        150.013
+      ],
+      [
+        12.18,
+        144.8
+      ],
+      [
+        12.25,
+        143.972
+      ],
+      [
+        12.32,
+        240.04
+      ],
+      [
+        12.39,
+        209.135
+      ],
+      [
+        12.46,
+        216.537
+      ],
+      [
+        12.53,
+        206.446
+      ],
+      [
+        12.6,
+        193.745
+      ],
+      [
+        12.67,
+        195.232
+      ],
+      [
+        12.74,
+        196.719
+      ],
+      [
+        12.81,
+        198.206
+      ],
+      [
+        12.88,
+        199.693
+      ],
+      [
+        12.95,
+        201.18
+      ],
+      [
+        13.02,
+        202.667
+      ],
+      [
+        13.09,
+        204.154
+      ],
+      [
+        13.16,
+        225.708
+      ],
+      [
+        13.23,
+        215.828
+      ],
+      [
+        13.3,
+        198.82
+      ],
+      [
+        13.37,
+        172.214
+      ],
+      [
+        13.44,
+        198.584
+      ],
+      [
+        13.51,
+        190.636
+      ],
+      [
+        13.58,
+        182.749
+      ],
+      [
+        13.65,
+        182.573
+      ],
+      [
+        13.72,
+        177.226
+      ],
+      [
+        13.79,
+        173.17
+      ],
+      [
+        13.86,
+        189.759
+      ],
+      [
+        13.93,
+        187.555
+      ],
+      [
+        14.0,
+        189.014
+      ],
+      [
+        14.07,
+        188.291
+      ],
+      [
+        14.14,
+        176.946
+      ],
+      [
+        14.21,
+        157.612
+      ],
+      [
+        14.28,
+        159.993
+      ],
+      [
+        14.35,
+        157.788
+      ],
+      [
+        14.42,
+        157.697
+      ],
+      [
+        14.49,
+        153.648
+      ],
+      [
+        14.56,
+        147.884
+      ],
+      [
+        14.63,
+        147.227
+      ],
+      [
+        14.7,
+        146.506
+      ],
+      [
+        14.77,
+        146.584
+      ],
+      [
+        14.84,
+        181.286
+      ],
+      [
+        14.91,
+        170.456
+      ],
+      [
+        14.98,
+        201.729
+      ],
+      [
+        15.05,
+        196.46
+      ],
+      [
+        15.12,
+        194.314
+      ],
+      [
+        15.19,
+        169.032
+      ],
+      [
+        15.26,
+        166.624
+      ],
+      [
+        15.33,
+        175.447
+      ],
+      [
+        15.4,
+        178.44
+      ],
+      [
+        15.47,
+        171.333
+      ],
+      [
+        15.54,
+        170.858
+      ],
+      [
+        15.61,
+        172.265
+      ],
+      [
+        15.68,
+        129.986
+      ],
+      [
+        15.75,
+        148.634
+      ],
+      [
+        15.82,
+        167.906
+      ],
+      [
+        15.89,
+        187.178
+      ],
+      [
+        15.96,
+        206.45
+      ],
+      [
+        16.03,
+        225.723
+      ],
+      [
+        16.1,
+        244.995
+      ],
+      [
+        16.17,
+        264.267
+      ],
+      [
+        16.24,
+        283.539
+      ],
+      [
+        16.31,
+        302.812
+      ],
+      [
+        16.38,
+        322.084
+      ],
+      [
+        16.45,
+        335.204
+      ],
+      [
+        16.52,
+        340.375
+      ],
+      [
+        16.59,
+        345.546
+      ],
+      [
+        16.66,
+        350.717
+      ],
+      [
+        16.73,
+        320.883
+      ],
+      [
+        16.8,
+        175.58
+      ],
+      [
+        16.87,
+        133.008
+      ],
+      [
+        16.94,
+        135.112
+      ],
+      [
+        17.01,
+        157.119
+      ],
+      [
+        17.08,
+        183.615
+      ],
+      [
+        17.15,
+        195.106
+      ],
+      [
+        17.22,
+        183.961
+      ],
+      [
+        17.29,
+        186.771
+      ],
+      [
+        17.36,
+        188.801
+      ],
+      [
+        17.43,
+        195.915
+      ],
+      [
+        17.5,
+        197.678
+      ],
+      [
+        17.57,
+        192.331
+      ],
+      [
+        17.64,
+        192.235
+      ],
+      [
+        17.71,
+        157.38
+      ],
+      [
+        17.78,
+        169.255
+      ],
+      [
+        17.85,
+        190.341
+      ],
+      [
+        17.92,
+        207.897
+      ],
+      [
+        17.99,
+        207.101
+      ],
+      [
+        18.06,
+        200.615
+      ],
+      [
+        18.13,
+        208.713
+      ],
+      [
+        18.2,
+        205.768
+      ],
+      [
+        18.27,
+        203.938
+      ],
+      [
+        18.34,
+        205.442
+      ],
+      [
+        18.41,
+        194.904
+      ],
+      [
+        18.48,
+        165.959
+      ],
+      [
+        18.55,
+        137.014
+      ],
+      [
+        18.62,
+        134.907
+      ],
+      [
+        18.69,
+        147.703
+      ],
+      [
+        18.76,
+        171.474
+      ],
+      [
+        18.83,
+        151.588
+      ],
+      [
+        18.9,
+        199.77
+      ],
+      [
+        18.97,
+        196.771
+      ],
+      [
+        19.04,
+        212.956
+      ],
+      [
+        19.11,
+        182.091
+      ],
+      [
+        19.18,
+        127.241
+      ],
+      [
+        19.25,
+        129.185
+      ],
+      [
+        19.32,
+        118.707
+      ],
+      [
+        19.39,
+        123.975
+      ],
+      [
+        19.46,
+        114.77
+      ],
+      [
+        19.53,
+        102.83
+      ],
+      [
+        19.6,
+        105.504
+      ],
+      [
+        19.67,
+        104.527
+      ],
+      [
+        19.74,
+        91.646
+      ],
+      [
+        19.81,
+        117.059
+      ],
+      [
+        19.88,
+        147.053
+      ],
+      [
+        19.95,
+        124.804
+      ],
+      [
+        20.02,
+        123.482
+      ],
+      [
+        20.09,
+        118.79
+      ],
+      [
+        20.16,
+        111.638
+      ],
+      [
+        20.23,
+        119.168
+      ],
+      [
+        20.3,
+        94.096
+      ],
+      [
+        20.37,
+        97.331
+      ],
+      [
+        20.44,
+        100.566
+      ],
+      [
+        20.51,
+        103.802
+      ],
+      [
+        20.58,
+        107.037
+      ],
+      [
+        20.65,
+        110.272
+      ],
+      [
+        20.72,
+        113.507
+      ],
+      [
+        20.79,
+        116.742
+      ],
+      [
+        20.86,
+        119.977
+      ],
+      [
+        20.93,
+        123.212
+      ],
+      [
+        21.0,
+        126.448
+      ],
+      [
+        21.07,
+        178.301
+      ],
+      [
+        21.14,
+        164.047
+      ],
+      [
+        21.21,
+        175.962
+      ],
+      [
+        21.28,
+        167.173
+      ],
+      [
+        21.35,
+        182.844
+      ],
+      [
+        21.42,
+        153.591
+      ],
+      [
+        21.49,
+        159.565
+      ],
+      [
+        21.56,
+        195.896
+      ],
+      [
+        21.63,
+        199.17
+      ],
+      [
+        21.7,
+        286.435
+      ],
+      [
+        21.77,
+        222.959
+      ],
+      [
+        21.84,
+        178.749
+      ],
+      [
+        21.91,
+        224.958
+      ],
+      [
+        21.98,
+        241.458
+      ],
+      [
+        22.05,
+        197.264
+      ],
+      [
+        22.12,
+        202.824
+      ],
+      [
+        22.19,
+        208.384
+      ],
+      [
+        22.26,
+        213.944
+      ],
+      [
+        22.33,
+        219.504
+      ],
+      [
+        22.4,
+        225.064
+      ],
+      [
+        22.47,
+        230.624
+      ],
+      [
+        22.54,
+        236.184
+      ],
+      [
+        22.61,
+        241.744
+      ],
+      [
+        22.68,
+        247.304
+      ],
+      [
+        22.75,
+        252.864
+      ],
+      [
+        22.82,
+        258.425
+      ],
+      [
+        22.89,
+        263.985
+      ],
+      [
+        22.96,
+        259.561
+      ],
+      [
+        23.03,
+        170.048
+      ],
+      [
+        23.1,
+        199.995
+      ],
+      [
+        23.17,
+        159.236
+      ],
+      [
+        23.24,
+        183.949
+      ],
+      [
+        23.31,
+        239.262
+      ],
+      [
+        23.38,
+        233.227
+      ],
+      [
+        23.45,
+        251.496
+      ],
+      [
+        23.52,
+        247.108
+      ],
+      [
+        23.59,
+        233.046
+      ],
+      [
+        23.66,
+        230.622
+      ],
+      [
+        23.73,
+        224.604
+      ],
+      [
+        23.8,
+        189.651
+      ],
+      [
+        23.87,
+        232.228
+      ],
+      [
+        23.94,
+        218.321
+      ],
+      [
+        24.01,
+        214.604
+      ],
+      [
+        24.08,
+        218.929
+      ],
+      [
+        24.15,
+        210.938
+      ],
+      [
+        24.22,
+        212.724
+      ],
+      [
+        24.29,
+        207.733
+      ],
+      [
+        24.36,
+        203.637
+      ],
+      [
+        24.43,
+        205.804
+      ],
+      [
+        24.5,
+        205.0
+      ],
+      [
+        24.57,
+        194.947
+      ],
+      [
+        24.64,
+        186.207
+      ],
+      [
+        24.71,
+        161.911
+      ],
+      [
+        24.78,
+        147.08
+      ],
+      [
+        24.85,
+        173.905
+      ],
+      [
+        24.92,
+        168.576
+      ],
+      [
+        24.99,
+        164.91
+      ],
+      [
+        25.06,
+        165.959
+      ],
+      [
+        25.13,
+        180.203
+      ],
+      [
+        25.2,
+        186.383
+      ],
+      [
+        25.27,
+        192.118
+      ],
+      [
+        25.34,
+        181.951
+      ],
+      [
+        25.41,
+        183.942
+      ],
+      [
+        25.48,
+        176.777
+      ],
+      [
+        25.55,
+        143.481
+      ],
+      [
+        25.62,
+        140.785
+      ],
+      [
+        25.69,
+        143.536
+      ],
+      [
+        25.76,
+        154.05
+      ],
+      [
+        25.83,
+        195.027
+      ],
+      [
+        25.9,
+        213.286
+      ],
+      [
+        25.97,
+        196.081
+      ],
+      [
+        26.04,
+        215.225
+      ],
+      [
+        26.11,
+        211.533
+      ],
+      [
+        26.18,
+        211.442
+      ],
+      [
+        26.25,
+        212.067
+      ],
+      [
+        26.32,
+        202.096
+      ],
+      [
+        26.39,
+        191.347
+      ],
+      [
+        26.46,
+        180.599
+      ],
+      [
+        26.53,
+        169.85
+      ],
+      [
+        26.6,
+        159.101
+      ],
+      [
+        26.67,
+        148.894
+      ],
+      [
+        26.74,
+        147.06
+      ],
+      [
+        26.81,
+        144.752
+      ],
+      [
+        26.88,
+        140.507
+      ],
+      [
+        26.95,
+        137.427
+      ],
+      [
+        27.02,
+        136.245
+      ],
+      [
+        27.09,
+        132.649
+      ],
+      [
+        27.16,
+        129.621
+      ],
+      [
+        27.23,
+        113.894
+      ],
+      [
+        27.3,
+        145.427
+      ],
+      [
+        27.37,
+        148.263
+      ],
+      [
+        27.44,
+        138.096
+      ],
+      [
+        27.51,
+        127.576
+      ],
+      [
+        27.58,
+        128.427
+      ],
+      [
+        27.65,
+        129.279
+      ],
+      [
+        27.72,
+        130.13
+      ],
+      [
+        27.79,
+        130.981
+      ],
+      [
+        27.86,
+        131.833
+      ],
+      [
+        27.93,
+        132.684
+      ],
+      [
+        28.0,
+        133.536
+      ],
+      [
+        28.07,
+        135.325
+      ],
+      [
+        28.14,
+        148.017
+      ],
+      [
+        28.21,
+        140.155
+      ],
+      [
+        28.28,
+        143.889
+      ],
+      [
+        28.35,
+        139.214
+      ],
+      [
+        28.42,
+        132.599
+      ],
+      [
+        28.49,
+        150.964
+      ],
+      [
+        28.56,
+        177.14
+      ],
+      [
+        28.63,
+        190.234
+      ],
+      [
+        28.7,
+        191.832
+      ],
+      [
+        28.77,
+        188.241
+      ],
+      [
+        28.84,
+        168.053
+      ],
+      [
+        28.91,
+        144.002
+      ],
+      [
+        28.98,
+        185.76
+      ],
+      [
+        29.05,
+        183.569
+      ],
+      [
+        29.12,
+        172.866
+      ],
+      [
+        29.19,
+        162.073
+      ],
+      [
+        29.26,
+        126.14
+      ],
+      [
+        29.33,
+        158.856
+      ],
+      [
+        29.4,
+        160.154
+      ],
+      [
+        29.47,
+        152.17
+      ],
+      [
+        29.54,
+        170.277
+      ],
+      [
+        29.61,
+        165.666
+      ],
+      [
+        29.68,
+        156.369
+      ],
+      [
+        29.75,
+        153.736
+      ],
+      [
+        29.82,
+        147.462
+      ],
+      [
+        29.89,
+        126.016
+      ],
+      [
+        29.96,
+        131.358
+      ],
+      [
+        30.03,
+        152.279
+      ],
+      [
+        30.1,
+        139.071
+      ],
+      [
+        30.17,
+        172.557
+      ],
+      [
+        30.24,
+        169.235
+      ],
+      [
+        30.31,
+        142.943
+      ],
+      [
+        30.38,
+        156.66
+      ],
+      [
+        30.45,
+        145.239
+      ],
+      [
+        30.52,
+        148.15
+      ],
+      [
+        30.59,
+        193.141
+      ],
+      [
+        30.66,
+        211.941
+      ],
+      [
+        30.73,
+        220.14
+      ],
+      [
+        30.8,
+        219.023
+      ],
+      [
+        30.87,
+        247.56
+      ],
+      [
+        30.94,
+        251.51
+      ],
+      [
+        31.01,
+        221.084
+      ],
+      [
+        31.08,
+        208.621
+      ],
+      [
+        31.15,
+        196.157
+      ],
+      [
+        31.22,
+        183.781
+      ],
+      [
+        31.29,
+        159.332
+      ],
+      [
+        31.36,
+        142.946
+      ],
+      [
+        31.43,
+        136.793
+      ],
+      [
+        31.5,
+        128.394
+      ],
+      [
+        31.57,
+        123.176
+      ],
+      [
+        31.64,
+        113.924
+      ],
+      [
+        31.71,
+        166.258
+      ],
+      [
+        31.78,
+        166.736
+      ],
+      [
+        31.85,
+        161.943
+      ],
+      [
+        31.92,
+        185.047
+      ],
+      [
+        31.99,
+        163.51
+      ],
+      [
+        32.06,
+        154.932
+      ],
+      [
+        32.13,
+        156.042
+      ],
+      [
+        32.2,
+        153.062
+      ],
+      [
+        32.27,
+        149.623
+      ],
+      [
+        32.34,
+        150.268
+      ],
+      [
+        32.41,
+        128.222
+      ],
+      [
+        32.48,
+        147.7
+      ],
+      [
+        32.55,
+        136.554
+      ],
+      [
+        32.62,
+        134.787
+      ],
+      [
+        32.69,
+        129.445
+      ],
+      [
+        32.76,
+        130.314
+      ],
+      [
+        32.83,
+        130.916
+      ],
+      [
+        32.9,
+        151.884
+      ],
+      [
+        32.97,
+        153.381
+      ],
+      [
+        33.04,
+        144.874
+      ],
+      [
+        33.11,
+        157.016
+      ],
+      [
+        33.18,
+        146.495
+      ],
+      [
+        33.25,
+        150.106
+      ],
+      [
+        33.32,
+        142.507
+      ],
+      [
+        33.39,
+        140.596
+      ],
+      [
+        33.46,
+        162.215
+      ],
+      [
+        33.53,
+        145.403
+      ],
+      [
+        33.6,
+        160.371
+      ],
+      [
+        33.67,
+        128.465
+      ],
+      [
+        33.74,
+        149.672
+      ],
+      [
+        33.81,
+        180.987
+      ],
+      [
+        33.88,
+        178.273
+      ],
+      [
+        33.95,
+        172.894
+      ],
+      [
+        34.02,
+        185.61
+      ],
+      [
+        34.09,
+        175.965
+      ],
+      [
+        34.16,
+        169.062
+      ],
+      [
+        34.23,
+        182.671
+      ],
+      [
+        34.3,
+        162.36
+      ],
+      [
+        34.37,
+        168.971
+      ],
+      [
+        34.44,
+        175.582
+      ],
+      [
+        34.51,
+        182.193
+      ],
+      [
+        34.58,
+        183.246
+      ],
+      [
+        34.65,
+        141.112
+      ],
+      [
+        34.72,
+        135.6
+      ],
+      [
+        34.79,
+        129.841
+      ],
+      [
+        34.86,
+        127.154
+      ],
+      [
+        34.93,
+        114.315
+      ],
+      [
+        35.0,
+        121.779
+      ],
+      [
+        35.07,
+        119.918
+      ],
+      [
+        35.14,
+        126.57
+      ],
+      [
+        35.21,
+        150.082
+      ],
+      [
+        35.28,
+        149.692
+      ],
+      [
+        35.35,
+        149.302
+      ],
+      [
+        35.42,
+        148.912
+      ],
+      [
+        35.49,
+        148.522
+      ],
+      [
+        35.56,
+        148.132
+      ],
+      [
+        35.63,
+        147.742
+      ],
+      [
+        35.7,
+        147.352
+      ],
+      [
+        35.77,
+        141.944
+      ],
+      [
+        35.84,
+        144.435
+      ],
+      [
+        35.91,
+        163.305
+      ],
+      [
+        35.98,
+        165.202
+      ],
+      [
+        36.05,
+        154.371
+      ],
+      [
+        36.12,
+        145.169
+      ],
+      [
+        36.19,
+        135.276
+      ],
+      [
+        36.26,
+        140.915
+      ],
+      [
+        36.33,
+        143.482
+      ],
+      [
+        36.4,
+        140.476
+      ],
+      [
+        36.47,
+        136.665
+      ],
+      [
+        36.54,
+        137.868
+      ],
+      [
+        36.61,
+        129.934
+      ],
+      [
+        36.68,
+        159.287
+      ],
+      [
+        36.75,
+        150.313
+      ],
+      [
+        36.82,
+        135.217
+      ],
+      [
+        36.89,
+        145.144
+      ],
+      [
+        36.96,
+        160.765
+      ],
+      [
+        37.03,
+        163.972
+      ],
+      [
+        37.1,
+        171.447
+      ],
+      [
+        37.17,
+        158.911
+      ],
+      [
+        37.24,
+        146.454
+      ],
+      [
+        37.31,
+        138.578
+      ],
+      [
+        37.38,
+        130.643
+      ],
+      [
+        37.45,
+        129.522
+      ],
+      [
+        37.52,
+        138.375
+      ],
+      [
+        37.59,
+        123.483
+      ],
+      [
+        37.66,
+        192.812
+      ],
+      [
+        37.73,
+        159.095
+      ],
+      [
+        37.8,
+        177.731
+      ],
+      [
+        37.87,
+        183.926
+      ],
+      [
+        37.94,
+        184.411
+      ],
+      [
+        38.01,
+        184.976
+      ],
+      [
+        38.08,
+        184.568
+      ],
+      [
+        38.15,
+        177.747
+      ],
+      [
+        38.22,
+        167.364
+      ],
+      [
+        38.29,
+        164.761
+      ],
+      [
+        38.36,
+        155.69
+      ],
+      [
+        38.43,
+        151.564
+      ],
+      [
+        38.5,
+        154.012
+      ],
+      [
+        38.57,
+        154.099
+      ],
+      [
+        38.64,
+        151.103
+      ],
+      [
+        38.71,
+        177.734
+      ],
+      [
+        38.78,
+        196.522
+      ],
+      [
+        38.85,
+        190.464
+      ],
+      [
+        38.92,
+        163.886
+      ],
+      [
+        38.99,
+        169.06
+      ],
+      [
+        39.06,
+        175.552
+      ],
+      [
+        39.13,
+        172.384
+      ],
+      [
+        39.2,
+        153.725
+      ],
+      [
+        39.27,
+        164.038
+      ],
+      [
+        39.34,
+        168.912
+      ],
+      [
+        39.41,
+        181.315
+      ],
+      [
+        39.48,
+        212.728
+      ],
+      [
+        39.55,
+        250.025
+      ],
+      [
+        39.62,
+        247.195
+      ],
+      [
+        39.69,
+        242.18
+      ],
+      [
+        39.76,
+        202.429
+      ],
+      [
+        39.83,
+        209.567
+      ],
+      [
+        39.9,
+        216.705
+      ],
+      [
+        39.97,
+        223.843
+      ],
+      [
+        40.04,
+        167.913
+      ],
+      [
+        40.11,
+        183.209
+      ],
+      [
+        40.18,
+        174.224
+      ],
+      [
+        40.25,
+        170.585
+      ],
+      [
+        40.32,
+        171.058
+      ],
+      [
+        40.39,
+        160.536
+      ],
+      [
+        40.46,
+        159.199
+      ],
+      [
+        40.53,
+        151.668
+      ],
+      [
+        40.6,
+        151.742
+      ],
+      [
+        40.67,
+        152.91
+      ],
+      [
+        40.74,
+        154.3
+      ],
+      [
+        40.81,
+        127.031
+      ],
+      [
+        40.88,
+        184.154
+      ],
+      [
+        40.95,
+        168.537
+      ],
+      [
+        41.02,
+        267.739
+      ],
+      [
+        41.09,
+        316.771
+      ],
+      [
+        41.16,
+        367.804
+      ],
+      [
+        41.23,
+        279.489
+      ],
+      [
+        41.3,
+        271.26
+      ],
+      [
+        41.37,
+        263.031
+      ],
+      [
+        41.44,
+        254.802
+      ],
+      [
+        41.51,
+        246.573
+      ],
+      [
+        41.58,
+        238.343
+      ],
+      [
+        41.65,
+        230.114
+      ],
+      [
+        41.72,
+        226.808
+      ],
+      [
+        41.79,
+        222.596
+      ],
+      [
+        41.86,
+        227.768
+      ],
+      [
+        41.93,
+        214.435
+      ],
+      [
+        42.0,
+        221.18
+      ],
+      [
+        42.07,
+        159.131
+      ],
+      [
+        42.14,
+        237.266
+      ],
+      [
+        42.21,
+        200.212
+      ],
+      [
+        42.28,
+        234.094
+      ],
+      [
+        42.35,
+        246.262
+      ],
+      [
+        42.42,
+        223.963
+      ],
+      [
+        42.49,
+        257.764
+      ],
+      [
+        42.56,
+        187.426
+      ],
+      [
+        42.63,
+        151.429
+      ],
+      [
+        42.7,
+        147.087
+      ],
+      [
+        42.77,
+        183.249
+      ],
+      [
+        42.84,
+        201.013
+      ],
+      [
+        42.91,
+        145.376
+      ],
+      [
+        42.98,
+        128.519
+      ],
+      [
+        43.05,
+        127.077
+      ],
+      [
+        43.12,
+        125.635
+      ],
+      [
+        43.19,
+        152.019
+      ],
+      [
+        43.26,
+        175.386
+      ],
+      [
+        43.33,
+        197.327
+      ],
+      [
+        43.4,
+        208.876
+      ],
+      [
+        43.47,
+        210.165
+      ],
+      [
+        43.54,
+        188.313
+      ],
+      [
+        43.61,
+        235.816
+      ],
+      [
+        43.68,
+        242.611
+      ],
+      [
+        43.75,
+        256.082
+      ],
+      [
+        43.82,
+        130.326
+      ],
+      [
+        43.89,
+        251.24
+      ],
+      [
+        43.96,
+        227.173
+      ],
+      [
+        44.03,
+        221.785
+      ]
+    ]
+  },
+  "transcript_word_timeline": [],
+  "share": {
+    "html_embeds_audio": true,
+    "raw_audio_file": "audio.wav",
+    "playback_audio_file": "audio.mp3",
+    "local_paths_included": false
+  },
+  "transcript": null,
+  "limitations": [
+    "Praat/Parselmouth pitch extraction is used only when installed and selected; otherwise the fallback uses autocorrelation.",
+    "Acoustic peaks are not confirmed emphasized words without alignment.",
+    "No speaking-rate or word-level emphasis without transcript/alignment.",
+    "Multiple speakers, music, noise, or echo can distort results.",
+    "Descriptive only; not clinical or diagnostic."
+  ]
+}

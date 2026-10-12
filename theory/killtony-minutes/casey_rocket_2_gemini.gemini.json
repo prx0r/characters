@@ -1,0 +1,323 @@
+{
+  "speaker_guess": "Casey Rocket",
+  "overall": {
+    "energy_arc": "Erratic and manic, cycling rapidly between physical restlessness, faux-country singing, absurd non-sequiturs, and a quick leaned-in button.",
+    "dominant_emotion": "manic",
+    "dominant_emotion_intensity": 0.85,
+    "stage_presence": "Chaotic kinetic roaming, using pacing, sudden directional turns, and frantic prop-free pantomime."
+  },
+  "segments": [
+    {
+      "t0": 0.0,
+      "t1": 3.5,
+      "emotion": "gleeful",
+      "emotion_intensity": 0.7,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.2,
+        "head": "tilt_right",
+        "arms": "mic_point",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Exaggerated melodic crooning into mic while locked into audience view"
+      },
+      "comedy": {
+        "beat_type": "premise",
+        "gtvh_operators": [
+          "Absurdity",
+          "Parody"
+        ],
+        "status_move": "down",
+        "note": "Opens with an earnest, parody country-rock vocal riff to establish manic unpredictability."
+      },
+      "vocal": {
+        "energy": 0.75,
+        "pitch_shift": "rise",
+        "pace": "slow",
+        "emphasis_words": [
+          "hear",
+          "voice",
+          "name"
+        ],
+        "note": "Vibrato singing delivery transitioning abruptly into spoken rhythm."
+      }
+    },
+    {
+      "t0": 3.5,
+      "t1": 8.5,
+      "emotion": "manic",
+      "emotion_intensity": 0.8,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.0,
+        "head": "neutral",
+        "arms": "gesture_out",
+        "face": "wide_eyes",
+        "brow": "raised",
+        "micro_gesture": "Abrupt 180-degree turn and prowling walk toward the band"
+      },
+      "comedy": {
+        "beat_type": "tag",
+        "gtvh_operators": [
+          "Juxtaposition"
+        ],
+        "status_move": "flat",
+        "note": "Pivots instantly to a canned radio-jingle acknowledgment to keep pace high."
+      },
+      "vocal": {
+        "energy": 0.8,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "emphasis_words": [
+          "Alright",
+          "Sirius XM",
+          "cool"
+        ],
+        "note": "Raspy, excited bark followed by nervous self-chuckle."
+      }
+    },
+    {
+      "t0": 8.5,
+      "t1": 13.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.6,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.25,
+        "head": "nod",
+        "arms": "sides",
+        "face": "smirk",
+        "brow": "neutral",
+        "micro_gesture": "Fidgeting hands while inspecting the drum kit/stage edge"
+      },
+      "comedy": {
+        "beat_type": "setup",
+        "gtvh_operators": [
+          "Plausibility"
+        ],
+        "status_move": "down",
+        "note": "Mundane fake excuse about having somewhere else to be."
+      },
+      "vocal": {
+        "energy": 0.6,
+        "pitch_shift": "drop",
+        "pace": "normal",
+        "emphasis_words": [
+          "softball",
+          "after"
+        ],
+        "note": "Conversational, faux-apologetic throwaway tone."
+      }
+    },
+    {
+      "t0": 13.0,
+      "t1": 22.0,
+      "emotion": "manic",
+      "emotion_intensity": 0.85,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.35,
+        "head": "shake",
+        "arms": "gesture_out",
+        "face": "grimace",
+        "brow": "furrowed",
+        "micro_gesture": "Rapid arm flick miming an injection and passing out on a battlefield"
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "Exaggeration",
+          "Taboo Violation"
+        ],
+        "status_move": "down",
+        "note": "Dark subversion escalating casual rec league softball into extreme drug use."
+      },
+      "vocal": {
+        "energy": 0.85,
+        "pitch_shift": "rise",
+        "pace": "fast",
+        "emphasis_words": [
+          "fentanyl",
+          "shooting",
+          "battlefield"
+        ],
+        "note": "Fast staccato syllables with an airy trail-off on 'good time'."
+      }
+    },
+    {
+      "t0": 22.0,
+      "t1": 30.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.7,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.0,
+        "head": "tilt_left",
+        "arms": "sides",
+        "face": "neutral",
+        "brow": "raised",
+        "micro_gesture": "Pacing sideways across the stage while presenting absurd false credentials"
+      },
+      "comedy": {
+        "beat_type": "setup",
+        "gtvh_operators": [
+          "Absurdity",
+          "False Premise"
+        ],
+        "status_move": "up",
+        "note": "Deadpan claim of having invented the smartwatch."
+      },
+      "vocal": {
+        "energy": 0.65,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "emphasis_words": [
+          "creator",
+          "smartwatch",
+          "charities"
+        ],
+        "note": "Matter-of-fact resume recitation tone."
+      }
+    },
+    {
+      "t0": 30.0,
+      "t1": 40.0,
+      "emotion": "sarcastic",
+      "emotion_intensity": 0.8,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.3,
+        "head": "nod",
+        "arms": "gesture_out",
+        "face": "wide_eyes",
+        "brow": "raised",
+        "micro_gesture": "Mimicking dumping a bucket overhead while turning away"
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "Literalism",
+          "Taboo Violation",
+          "Reversal"
+        ],
+        "status_move": "down",
+        "note": "Literal horrific inversion of a wholesome viral charity stunt."
+      },
+      "vocal": {
+        "energy": 0.75,
+        "pitch_shift": "fall",
+        "pace": "normal",
+        "emphasis_words": [
+          "reverse",
+          "hot",
+          "ALS"
+        ],
+        "note": "Flat, casual explanation contrasting the monstrous mental image."
+      }
+    },
+    {
+      "t0": 40.0,
+      "t1": 44.0,
+      "emotion": "gleeful",
+      "emotion_intensity": 0.9,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.6,
+        "head": "jut",
+        "arms": "mic_point",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Deep crouch right into the front panel/table with a sly grin"
+      },
+      "comedy": {
+        "beat_type": "button",
+        "gtvh_operators": [
+          "Absurdity",
+          "Punchline Closure"
+        ],
+        "status_move": "up",
+        "note": "Signature Casey Rocket catchphrase muttered directly in close proximity to the judges/audience."
+      },
+      "vocal": {
+        "energy": 0.7,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "emphasis_words": [
+          "Easy",
+          "money"
+        ],
+        "note": "Hushed, gravelly triumphant punctuation."
+      }
+    }
+  ],
+  "gesture_library": [
+    {
+      "name": "Chaotic Stage Prowl",
+      "t_guess": 5.0,
+      "duration_est_s": 2.5,
+      "body_params": {
+        "lean": -0.1,
+        "head_deg": 15.0,
+        "arm_open": 0.4,
+        "brow": 0.3
+      },
+      "emotion_tag": "manic"
+    },
+    {
+      "name": "Battlefield Slump Mime",
+      "t_guess": 18.0,
+      "duration_est_s": 2.0,
+      "body_params": {
+        "lean": 0.4,
+        "head_deg": -10.0,
+        "arm_open": 0.6,
+        "brow": -0.4
+      },
+      "emotion_tag": "manic"
+    },
+    {
+      "name": "Front-Row Crouch Button",
+      "t_guess": 42.0,
+      "duration_est_s": 2.0,
+      "body_params": {
+        "lean": 0.65,
+        "head_deg": 5.0,
+        "arm_open": 0.2,
+        "brow": 0.5
+      },
+      "emotion_tag": "gleeful"
+    }
+  ],
+  "anger_analysis": {
+    "present": false,
+    "type": "none",
+    "body_signature": [],
+    "face_signature": [],
+    "vocal_signature": [],
+    "target": "none",
+    "release_or_withhold": "none",
+    "contrast_before_after": "N/A - the set relies strictly on manic absurdity and mischievous energy rather than anger or confrontation."
+  },
+  "_meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 30.9,
+    "clip_mb": 3.7,
+    "usage": {
+      "promptTokenCount": 4632,
+      "candidatesTokenCount": 2497,
+      "totalTokenCount": 7608,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        },
+        {
+          "modality": "VIDEO",
+          "tokenCount": 4004
+        }
+      ],
+      "thoughtsTokenCount": 479,
+      "serviceTier": "standard"
+    }
+  }
+}

@@ -1,0 +1,193 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casey Rocket 2 Gemini — Ralph Stage Lab</title>
+<style>
+html,body{margin:0;height:100%;background:#000;color:#eee;font-family:system-ui,sans-serif}
+#wrap{display:flex;flex-direction:column;height:100vh}
+#stagebox{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+background:radial-gradient(circle at 50% 30%,#2b2010,#000 72%)}
+#stagebox svg{width:min(70vh,90vw);max-height:90vh}
+#hud{position:absolute;top:10px;left:12px;font-size:12px;color:#aaa;z-index:2}
+#seg{position:absolute;top:10px;right:12px;font-size:12px;color:#facc15;text-align:right;max-width:45%}
+#emotion{position:absolute;bottom:12px;left:12px;font-size:14px;color:#facc15}
+#beat{position:absolute;bottom:12px;right:12px;font-size:12px;color:#888}
+#bar{height:4px;background:#333;position:relative}
+#barfill{height:100%;background:#facc15;width:0%}
+#ctrl{padding:8px 12px;display:flex;gap:10px;align-items:center;background:#111}
+#ctrl button{background:#222;color:#eee;border:1px solid #555;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:14px}
+#ctrl button:hover{background:#333}
+#ctrl input[type=range]{flex:1}
+#meta{font-size:11px;color:#666;padding:0 12px 8px}
+#anger{color:#f87171;font-size:12px;padding:4px 12px;display:none}
+</style></head><body>
+<div id="wrap">
+<div id="stagebox">
+<div id="hud">Stage Lab · Ralph</div>
+<div id="seg"></div>
+<svg viewBox="0 0 220 300" style="background:transparent">
+<defs><linearGradient id="spot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffdf9e" stop-opacity=".28"/><stop offset="1" stop-color="#ffdf9e" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="0" width="26" height="300" fill="#5b1414"/><rect x="194" y="0" width="26" height="300" fill="#5b1414"/>
+<rect x="22" y="0" width="6" height="300" fill="#3d0d0d"/><rect x="192" y="0" width="6" height="300" fill="#3d0d0d"/>
+<polygon points="70,0 150,0 190,300 30,300" fill="url(#spot)"/>
+<rect x="0" y="252" width="220" height="48" fill="#151020"/>
+<ellipse cx="110" cy="278" rx="60" ry="10" fill="#000" opacity=".5"/>
+<text class="CAMT" x="30" y="18" fill="#999" font-size="12">medium</text>
+<g class="PB"><rect class="SUIT" x="60" y="170" width="100" height="100" rx="14" fill="#2b3440"/><rect x="100" y="170" width="20" height="100" fill="#e8e4d8"/><polygon points="110,185 118,205 110,235 102,205" fill="#7c1f1f"/></g>
+<g class="PH"><ellipse class="SKIN" cx="110" cy="120" rx="52" ry="58" fill="#6b8f5e"/><ellipse cx="110" cy="120" rx="52" ry="58" fill="none" stroke="#2c3a26" stroke-width="3"/>
+<rect class="BL" x="70" y="82" width="30" height="7" rx="3" fill="#2c3a26"/><rect class="BR" x="120" y="82" width="30" height="7" rx="3" fill="#2c3a26"/>
+<ellipse cx="85" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PL" cx="85" cy="113" rx="5" ry="9" fill="#111"/>
+<ellipse cx="135" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PR" cx="135" cy="113" rx="5" ry="9" fill="#111"/>
+<ellipse class="MO" cx="110" cy="160" rx="16" ry="5" fill="#1a0f0f"/></g>
+<g class="MIC"><rect x="107" y="205" width="6" height="75" rx="3" fill="#0c0c0c"/><ellipse cx="110" cy="282" rx="16" ry="4" fill="#0c0c0c"/><circle cx="110" cy="196" r="13" fill="#1f2937"/><circle cx="110" cy="196" r="13" fill="none" stroke="#4b5563" stroke-width="2"/></g>
+<text class="EX" x="110" y="294" text-anchor="middle" fill="#facc15" font-size="14">deadpan</text></svg>
+<div id="emotion">—</div>
+<div id="beat">—</div>
+</div>
+<div id="bar"><div id="barfill"></div></div>
+<div id="ctrl">
+<button id="play">▶ Play</button>
+<input type="range" id="scrub" min="0" max="44000" value="0">
+<span id="clock" style="font-size:12px;color:#aaa;min-width:70px">0:00 / 0:44</span>
+</div>
+<div id="anger"></div>
+<div id="meta">Casey Rocket 2 Gemini · 33 events · 7 segments</div>
+</div>
+<script>
+const EVENTS=[{"t": 0, "kind": "expression", "id": "self_satisfied", "source_emotion": "gleeful", "intensity": 0.7}, {"t": 0, "kind": "lights", "id": "house_up"}, {"t": 200, "kind": "gesture", "id": "lean_forward", "intensity": 0.4}, {"t": 300, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 400, "kind": "enter", "from": "stage_left"}, {"t": 1200, "kind": "camera", "id": "medium"}, {"t": 1200, "kind": "speak_start"}, {"t": 3500, "kind": "expression", "id": "surprised", "source_emotion": "manic", "intensity": 0.8}, {"t": 3700, "kind": "gesture", "id": "suit_adjust", "intensity": 0.5}, {"t": 3900, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 8500, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.6}, {"t": 8700, "kind": "gesture", "id": "lean_forward", "intensity": 0.5}, {"t": 13000, "kind": "expression", "id": "surprised", "source_emotion": "manic", "intensity": 0.85}, {"t": 13200, "kind": "gesture", "id": "lean_forward", "intensity": 0.7}, {"t": 13400, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 22000, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.7}, {"t": 22000, "kind": "hold", "ms": 1200, "note": "punchline stillness"}, {"t": 22300, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 22400, "kind": "gesture", "id": "eye_glitch", "intensity": 1.0}, {"t": 22800, "kind": "camera", "id": "closeup"}, {"t": 23800, "kind": "camera", "id": "medium"}, {"t": 30000, "kind": "expression", "id": "suspicious", "source_emotion": "sarcastic", "intensity": 0.8}, {"t": 30200, "kind": "gesture", "id": "lean_forward", "intensity": 0.6}, {"t": 30400, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 40000, "kind": "expression", "id": "self_satisfied", "source_emotion": "gleeful", "intensity": 0.9}, {"t": 40000, "kind": "hold", "ms": 1200, "note": "punchline stillness"}, {"t": 40200, "kind": "gesture", "id": "lean_forward", "intensity": 1.0}, {"t": 40300, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 40400, "kind": "gesture", "id": "eye_glitch", "intensity": 1.0}, {"t": 40800, "kind": "camera", "id": "closeup"}, {"t": 41800, "kind": "camera", "id": "medium"}, {"t": 43600, "kind": "camera", "id": "wide"}, {"t": 44000, "kind": "exit", "to": "stage_left"}];
+const GEM={"segments": [{"t0": 0.0, "t1": 3.5, "emotion": "gleeful", "beat_type": "premise", "text_hint": "Vibrato singing delivery transitioning abruptly into spoken rhythm."}, {"t0": 3.5, "t1": 8.5, "emotion": "manic", "beat_type": "tag", "text_hint": "Raspy, excited bark followed by nervous self-chuckle."}, {"t0": 8.5, "t1": 13.0, "emotion": "deadpan", "beat_type": "setup", "text_hint": "Conversational, faux-apologetic throwaway tone."}, {"t0": 13.0, "t1": 22.0, "emotion": "manic", "beat_type": "punchline", "text_hint": "Fast staccato syllables with an airy trail-off on 'good time'."}, {"t0": 22.0, "t1": 30.0, "emotion": "deadpan", "beat_type": "setup", "text_hint": "Matter-of-fact resume recitation tone."}, {"t0": 30.0, "t1": 40.0, "emotion": "sarcastic", "beat_type": "punchline", "text_hint": "Flat, casual explanation contrasting the monstrous mental image."}, {"t0": 40.0, "t1": 44.0, "emotion": "gleeful", "beat_type": "button", "text_hint": "Hushed, gravelly triumphant punctuation."}], "anger": {"present": false, "type": "none", "body_signature": [], "face_signature": [], "vocal_signature": [], "target": "none", "release_or_withhold": "none", "contrast_before_after": "N/A - the set relies strictly on manic absurdity and mischievous energy rather than anger or confrontation."}, "overall": {"energy_arc": "Erratic and manic, cycling rapidly between physical restlessness, faux-country singing, absurd non-sequiturs, and a quick leaned-in button.", "dominant_emotion": "manic", "dominant_emotion_intensity": 0.85, "stage_presence": "Chaotic kinetic roaming, using pacing, sudden directional turns, and frantic prop-free pantomime."}};
+const VISEMES=[{"t": 0, "shape": "closed", "word": ""}, {"t": 133, "shape": "E", "word": ""}, {"t": 150, "shape": "closed", "word": ""}, {"t": 200, "shape": "AI", "word": ""}, {"t": 233, "shape": "E", "word": ""}, {"t": 250, "shape": "closed", "word": ""}, {"t": 283, "shape": "E", "word": ""}, {"t": 383, "shape": "U", "word": ""}, {"t": 400, "shape": "AI", "word": ""}, {"t": 433, "shape": "U", "word": ""}, {"t": 483, "shape": "E", "word": ""}, {"t": 516, "shape": "U", "word": ""}, {"t": 550, "shape": "AI", "word": ""}, {"t": 616, "shape": "E", "word": ""}, {"t": 850, "shape": "AI", "word": ""}, {"t": 933, "shape": "O", "word": ""}, {"t": 1033, "shape": "AI", "word": ""}, {"t": 1050, "shape": "U", "word": ""}, {"t": 1100, "shape": "AI", "word": ""}, {"t": 1200, "shape": "E", "word": ""}, {"t": 1300, "shape": "AI", "word": ""}, {"t": 1450, "shape": "O", "word": ""}, {"t": 1500, "shape": "AI", "word": ""}, {"t": 1666, "shape": "U", "word": ""}, {"t": 1766, "shape": "AI", "word": ""}, {"t": 1783, "shape": "U", "word": ""}, {"t": 1833, "shape": "AI", "word": ""}, {"t": 2100, "shape": "U", "word": ""}, {"t": 2133, "shape": "AI", "word": ""}, {"t": 2183, "shape": "U", "word": ""}, {"t": 2216, "shape": "FV", "word": ""}, {"t": 2366, "shape": "AI", "word": ""}, {"t": 2533, "shape": "O", "word": ""}, {"t": 2550, "shape": "E", "word": ""}, {"t": 2600, "shape": "O", "word": ""}, {"t": 2650, "shape": "AI", "word": ""}, {"t": 2700, "shape": "E", "word": ""}, {"t": 3150, "shape": "AI", "word": ""}, {"t": 3183, "shape": "MBP", "word": ""}, {"t": 3450, "shape": "E", "word": ""}, {"t": 3566, "shape": "AI", "word": ""}, {"t": 3633, "shape": "MBP", "word": ""}, {"t": 3866, "shape": "AI", "word": ""}, {"t": 3883, "shape": "MBP", "word": ""}, {"t": 4016, "shape": "AI", "word": ""}, {"t": 4066, "shape": "E", "word": ""}, {"t": 4083, "shape": "AI", "word": ""}, {"t": 4133, "shape": "E", "word": ""}, {"t": 4250, "shape": "U", "word": ""}, {"t": 4266, "shape": "AI", "word": ""}, {"t": 4316, "shape": "U", "word": ""}, {"t": 4416, "shape": "AI", "word": ""}, {"t": 4550, "shape": "E", "word": ""}, {"t": 4600, "shape": "AI", "word": ""}, {"t": 4650, "shape": "O", "word": ""}, {"t": 4750, "shape": "E", "word": ""}, {"t": 5100, "shape": "AI", "word": ""}, {"t": 5200, "shape": "E", "word": ""}, {"t": 5250, "shape": "O", "word": ""}, {"t": 5283, "shape": "E", "word": ""}, {"t": 5316, "shape": "O", "word": ""}, {"t": 5400, "shape": "E", "word": ""}, {"t": 5566, "shape": "U", "word": ""}, {"t": 5733, "shape": "AI", "word": ""}, {"t": 5866, "shape": "E", "word": ""}, {"t": 5883, "shape": "AI", "word": ""}, {"t": 5950, "shape": "E", "word": ""}, {"t": 6000, "shape": "AI", "word": ""}, {"t": 6033, "shape": "O", "word": ""}, {"t": 6066, "shape": "AI", "word": ""}, {"t": 6116, "shape": "E", "word": ""}, {"t": 6133, "shape": "MBP", "word": ""}, {"t": 6166, "shape": "AI", "word": ""}, {"t": 6183, "shape": "E", "word": ""}, {"t": 6216, "shape": "MBP", "word": ""}, {"t": 6283, "shape": "AI", "word": ""}, {"t": 6316, "shape": "MBP", "word": ""}, {"t": 6366, "shape": "AI", "word": ""}, {"t": 6550, "shape": "E", "word": ""}, {"t": 6783, "shape": "AI", "word": ""}, {"t": 6983, "shape": "E", "word": ""}, {"t": 7000, "shape": "AI", "word": ""}, {"t": 7050, "shape": "E", "word": ""}, {"t": 7183, "shape": "U", "word": ""}, {"t": 7200, "shape": "E", "word": ""}, {"t": 7233, "shape": "U", "word": ""}, {"t": 7300, "shape": "AI", "word": ""}, {"t": 7500, "shape": "FV", "word": ""}, {"t": 7733, "shape": "E", "word": ""}, {"t": 7750, "shape": "U", "word": ""}, {"t": 7866, "shape": "E", "word": ""}, {"t": 7933, "shape": "AI", "word": ""}, {"t": 7983, "shape": "O", "word": ""}, {"t": 8100, "shape": "U", "word": ""}, {"t": 8216, "shape": "E", "word": ""}, {"t": 8383, "shape": "AI", "word": ""}, {"t": 8466, "shape": "O", "word": ""}, {"t": 8583, "shape": "E", "word": ""}, {"t": 8683, "shape": "AI", "word": ""}, {"t": 8816, "shape": "O", "word": ""}, {"t": 8900, "shape": "E", "word": ""}, {"t": 8966, "shape": "AI", "word": ""}, {"t": 9033, "shape": "E", "word": ""}, {"t": 9183, "shape": "AI", "word": ""}, {"t": 9300, "shape": "O", "word": ""}, {"t": 9466, "shape": "AI", "word": ""}, {"t": 9550, "shape": "E", "word": ""}, {"t": 9633, "shape": "AI", "word": ""}, {"t": 9716, "shape": "E", "word": ""}, {"t": 9733, "shape": "U", "word": ""}, {"t": 9766, "shape": "E", "word": ""}, {"t": 9883, "shape": "FV", "word": ""}, {"t": 10050, "shape": "O", "word": ""}, {"t": 10150, "shape": "E", "word": ""}, {"t": 10200, "shape": "U", "word": ""}, {"t": 10266, "shape": "AI", "word": ""}, {"t": 10333, "shape": "U", "word": ""}, {"t": 10400, "shape": "AI", "word": ""}, {"t": 10550, "shape": "O", "word": ""}, {"t": 10566, "shape": "AI", "word": ""}, {"t": 10600, "shape": "O", "word": ""}, {"t": 10733, "shape": "AI", "word": ""}, {"t": 10783, "shape": "E", "word": ""}, {"t": 10916, "shape": "AI", "word": ""}, {"t": 10950, "shape": "E", "word": ""}, {"t": 11066, "shape": "AI", "word": ""}, {"t": 11083, "shape": "E", "word": ""}, {"t": 11133, "shape": "AI", "word": ""}, {"t": 11250, "shape": "FV", "word": ""}, {"t": 11366, "shape": "MBP", "word": ""}, {"t": 11500, "shape": "AI", "word": ""}, {"t": 11533, "shape": "MBP", "word": ""}, {"t": 11550, "shape": "AI", "word": ""}, {"t": 11616, "shape": "E", "word": ""}, {"t": 11766, "shape": "O", "word": ""}, {"t": 11883, "shape": "AI", "word": ""}, {"t": 11950, "shape": "MBP", "word": ""}, {"t": 12033, "shape": "AI", "word": ""}, {"t": 12083, "shape": "MBP", "word": ""}, {"t": 12183, "shape": "E", "word": ""}, {"t": 12300, "shape": "AI", "word": ""}, {"t": 12400, "shape": "FV", "word": ""}, {"t": 12500, "shape": "E", "word": ""}, {"t": 12516, "shape": "FV", "word": ""}, {"t": 12566, "shape": "E", "word": ""}, {"t": 12650, "shape": "U", "word": ""}, {"t": 12683, "shape": "AI", "word": ""}, {"t": 12733, "shape": "U", "word": ""}, {"t": 12783, "shape": "AI", "word": ""}, {"t": 12816, "shape": "E", "word": ""}, {"t": 13283, "shape": "AI", "word": ""}, {"t": 13450, "shape": "E", "word": ""}, {"t": 13633, "shape": "AI", "word": ""}, {"t": 13683, "shape": "E", "word": ""}, {"t": 13816, "shape": "AI", "word": ""}, {"t": 13933, "shape": "E", "word": ""}, {"t": 14000, "shape": "AI", "word": ""}, {"t": 14016, "shape": "MBP", "word": ""}, {"t": 14200, "shape": "AI", "word": ""}, {"t": 14250, "shape": "U", "word": ""}, {"t": 14350, "shape": "E", "word": ""}, {"t": 14516, "shape": "AI", "word": ""}, {"t": 14566, "shape": "O", "word": ""}, {"t": 14583, "shape": "AI", "word": ""}, {"t": 14633, "shape": "O", "word": ""}, {"t": 14666, "shape": "AI", "word": ""}, {"t": 14683, "shape": "O", "word": ""}, {"t": 14716, "shape": "AI", "word": ""}, {"t": 14950, "shape": "E", "word": ""}, {"t": 15083, "shape": "AI", "word": ""}, {"t": 15116, "shape": "E", "word": ""}, {"t": 15183, "shape": "AI", "word": ""}, {"t": 15233, "shape": "FV", "word": ""}, {"t": 15500, "shape": "E", "word": ""}, {"t": 15516, "shape": "AI", "word": ""}, {"t": 15566, "shape": "E", "word": ""}, {"t": 15600, "shape": "AI", "word": ""}, {"t": 15633, "shape": "E", "word": ""}, {"t": 15733, "shape": "AI", "word": ""}, {"t": 15866, "shape": "E", "word": ""}, {"t": 15983, "shape": "AI", "word": ""}, {"t": 16033, "shape": "E", "word": ""}, {"t": 16233, "shape": "AI", "word": ""}, {"t": 16350, "shape": "O", "word": ""}, {"t": 16450, "shape": "AI", "word": ""}, {"t": 16733, "shape": "O", "word": ""}, {"t": 16833, "shape": "AI", "word": ""}, {"t": 16933, "shape": "E", "word": ""}, {"t": 17100, "shape": "MBP", "word": ""}, {"t": 17383, "shape": "E", "word": ""}, {"t": 17400, "shape": "MBP", "word": ""}, {"t": 17483, "shape": "E", "word": ""}, {"t": 17500, "shape": "U", "word": ""}, {"t": 17533, "shape": "E", "word": ""}, {"t": 17800, "shape": "FV", "word": ""}, {"t": 17950, "shape": "AI", "word": ""}, {"t": 18116, "shape": "E", "word": ""}, {"t": 18166, "shape": "AI", "word": ""}, {"t": 18183, "shape": "E", "word": ""}, {"t": 18216, "shape": "O", "word": ""}, {"t": 18266, "shape": "AI", "word": ""}, {"t": 18283, "shape": "O", "word": ""}, {"t": 18316, "shape": "AI", "word": ""}, {"t": 18350, "shape": "E", "word": ""}, {"t": 18366, "shape": "AI", "word": ""}, {"t": 18416, "shape": "E", "word": ""}, {"t": 18516, "shape": "MBP", "word": ""}, {"t": 18700, "shape": "AI", "word": ""}, {"t": 18900, "shape": "E", "word": ""}, {"t": 19000, "shape": "AI", "word": ""}, {"t": 19033, "shape": "E", "word": ""}, {"t": 19066, "shape": "AI", "word": ""}, {"t": 19083, "shape": "E", "word": ""}, {"t": 19150, "shape": "AI", "word": ""}, {"t": 19216, "shape": "MBP", "word": ""}, {"t": 19333, "shape": "AI", "word": ""}, {"t": 19350, "shape": "MBP", "word": ""}, {"t": 19383, "shape": "AI", "word": ""}, {"t": 19600, "shape": "E", "word": ""}, {"t": 19700, "shape": "O", "word": ""}, {"t": 19716, "shape": "E", "word": ""}, {"t": 19783, "shape": "O", "word": ""}, {"t": 19833, "shape": "AI", "word": ""}, {"t": 19900, "shape": "U", "word": ""}, {"t": 20016, "shape": "E", "word": ""}, {"t": 20300, "shape": "MBP", "word": ""}, {"t": 20533, "shape": "E", "word": ""}, {"t": 20616, "shape": "AI", "word": ""}, {"t": 20683, "shape": "E", "word": ""}, {"t": 20716, "shape": "AI", "word": ""}, {"t": 20766, "shape": "E", "word": ""}, {"t": 20833, "shape": "AI", "word": ""}, {"t": 20866, "shape": "E", "word": ""}, {"t": 20916, "shape": "AI", "word": ""}, {"t": 21000, "shape": "MBP", "word": ""}, {"t": 21183, "shape": "E", "word": ""}, {"t": 21400, "shape": "AI", "word": ""}, {"t": 21466, "shape": "E", "word": ""}, {"t": 21566, "shape": "AI", "word": ""}, {"t": 21616, "shape": "E", "word": ""}, {"t": 21650, "shape": "AI", "word": ""}, {"t": 21666, "shape": "E", "word": ""}, {"t": 21700, "shape": "AI", "word": ""}, {"t": 21766, "shape": "MBP", "word": ""}, {"t": 21900, "shape": "AI", "word": ""}, {"t": 21950, "shape": "E", "word": ""}, {"t": 22100, "shape": "FV", "word": ""}, {"t": 22133, "shape": "AI", "word": ""}, {"t": 22166, "shape": "FV", "word": ""}, {"t": 22416, "shape": "AI", "word": ""}, {"t": 22483, "shape": "E", "word": ""}, {"t": 22500, "shape": "AI", "word": ""}, {"t": 22533, "shape": "E", "word": ""}, {"t": 22650, "shape": "AI", "word": ""}, {"t": 22700, "shape": "E", "word": ""}, {"t": 22833, "shape": "AI", "word": ""}, {"t": 22900, "shape": "O", "word": ""}, {"t": 22983, "shape": "E", "word": ""}, {"t": 23033, "shape": "AI", "word": ""}, {"t": 23216, "shape": "E", "word": ""}, {"t": 23333, "shape": "MBP", "word": ""}, {"t": 23500, "shape": "AI", "word": ""}, {"t": 23683, "shape": "U", "word": ""}, {"t": 23700, "shape": "O", "word": ""}, {"t": 23733, "shape": "AI", "word": ""}, {"t": 23800, "shape": "E", "word": ""}, {"t": 23850, "shape": "U", "word": ""}, {"t": 23900, "shape": "E", "word": ""}, {"t": 24066, "shape": "MBP", "word": ""}, {"t": 24533, "shape": "AI", "word": ""}, {"t": 24566, "shape": "E", "word": ""}, {"t": 24583, "shape": "AI", "word": ""}, {"t": 24633, "shape": "E", "word": ""}, {"t": 24800, "shape": "FV", "word": ""}, {"t": 24816, "shape": "AI", "word": ""}, {"t": 24883, "shape": "FV", "word": ""}, {"t": 25133, "shape": "U", "word": ""}, {"t": 25150, "shape": "AI", "word": ""}, {"t": 25233, "shape": "MBP", "word": ""}, {"t": 25366, "shape": "AI", "word": ""}, {"t": 25383, "shape": "MBP", "word": ""}, {"t": 25433, "shape": "U", "word": ""}, {"t": 25516, "shape": "AI", "word": ""}, {"t": 25533, "shape": "MBP", "word": ""}, {"t": 25683, "shape": "AI", "word": ""}, {"t": 25716, "shape": "MBP", "word": ""}, {"t": 25950, "shape": "AI", "word": ""}, {"t": 25983, "shape": "E", "word": ""}, {"t": 26033, "shape": "AI", "word": ""}, {"t": 26133, "shape": "O", "word": ""}, {"t": 26216, "shape": "E", "word": ""}, {"t": 26266, "shape": "AI", "word": ""}, {"t": 26283, "shape": "E", "word": ""}, {"t": 26333, "shape": "AI", "word": ""}, {"t": 26433, "shape": "MBP", "word": ""}, {"t": 26466, "shape": "AI", "word": ""}, {"t": 26516, "shape": "MBP", "word": ""}, {"t": 26666, "shape": "AI", "word": ""}, {"t": 26800, "shape": "E", "word": ""}, {"t": 26883, "shape": "AI", "word": ""}, {"t": 26933, "shape": "E", "word": ""}, {"t": 26983, "shape": "AI", "word": ""}, {"t": 27000, "shape": "E", "word": ""}, {"t": 27083, "shape": "AI", "word": ""}, {"t": 27100, "shape": "E", "word": ""}, {"t": 27133, "shape": "AI", "word": ""}, {"t": 27150, "shape": "O", "word": ""}, {"t": 27250, "shape": "AI", "word": ""}, {"t": 27300, "shape": "U", "word": ""}, {"t": 27350, "shape": "AI", "word": ""}, {"t": 27366, "shape": "U", "word": ""}, {"t": 27416, "shape": "AI", "word": ""}, {"t": 27466, "shape": "E", "word": ""}, {"t": 27483, "shape": "AI", "word": ""}, {"t": 27516, "shape": "E", "word": ""}, {"t": 27633, "shape": "AI", "word": ""}, {"t": 27683, "shape": "U", "word": ""}, {"t": 27700, "shape": "AI", "word": ""}, {"t": 27766, "shape": "U", "word": ""}, {"t": 27800, "shape": "AI", "word": ""}, {"t": 27816, "shape": "U", "word": ""}, {"t": 27850, "shape": "AI", "word": ""}, {"t": 27900, "shape": "FV", "word": ""}, {"t": 28083, "shape": "AI", "word": ""}, {"t": 28166, "shape": "E", "word": ""}, {"t": 28183, "shape": "AI", "word": ""}, {"t": 28250, "shape": "MBP", "word": ""}, {"t": 28283, "shape": "AI", "word": ""}, {"t": 28316, "shape": "MBP", "word": ""}, {"t": 28500, "shape": "AI", "word": ""}, {"t": 28583, "shape": "U", "word": ""}, {"t": 28633, "shape": "AI", "word": ""}, {"t": 28666, "shape": "E", "word": ""}, {"t": 28750, "shape": "AI", "word": ""}, {"t": 28833, "shape": "U", "word": ""}, {"t": 28866, "shape": "AI", "word": ""}, {"t": 28983, "shape": "O", "word": ""}, {"t": 29050, "shape": "AI", "word": ""}, {"t": 29133, "shape": "O", "word": ""}, {"t": 29183, "shape": "MBP", "word": ""}, {"t": 29216, "shape": "AI", "word": ""}, {"t": 29233, "shape": "MBP", "word": ""}, {"t": 29366, "shape": "E", "word": ""}, {"t": 29450, "shape": "AI", "word": ""}, {"t": 29683, "shape": "E", "word": ""}, {"t": 29716, "shape": "AI", "word": ""}, {"t": 29750, "shape": "E", "word": ""}, {"t": 29800, "shape": "AI", "word": ""}, {"t": 29850, "shape": "E", "word": ""}, {"t": 29983, "shape": "AI", "word": ""}, {"t": 30100, "shape": "E", "word": ""}, {"t": 30133, "shape": "AI", "word": ""}, {"t": 30150, "shape": "E", "word": ""}, {"t": 30183, "shape": "AI", "word": ""}, {"t": 30266, "shape": "E", "word": ""}, {"t": 30383, "shape": "AI", "word": ""}, {"t": 30400, "shape": "E", "word": ""}, {"t": 30450, "shape": "AI", "word": ""}, {"t": 30566, "shape": "E", "word": ""}, {"t": 30666, "shape": "AI", "word": ""}, {"t": 30700, "shape": "E", "word": ""}, {"t": 30816, "shape": "AI", "word": ""}, {"t": 31000, "shape": "E", "word": ""}, {"t": 31133, "shape": "AI", "word": ""}, {"t": 31166, "shape": "MBP", "word": ""}, {"t": 31183, "shape": "AI", "word": ""}, {"t": 31250, "shape": "MBP", "word": ""}, {"t": 31500, "shape": "U", "word": ""}, {"t": 31566, "shape": "AI", "word": ""}, {"t": 31616, "shape": "E", "word": ""}, {"t": 31633, "shape": "U", "word": ""}, {"t": 31683, "shape": "AI", "word": ""}, {"t": 31750, "shape": "FV", "word": ""}, {"t": 31833, "shape": "AI", "word": ""}, {"t": 31866, "shape": "FV", "word": ""}, {"t": 31933, "shape": "AI", "word": ""}, {"t": 32033, "shape": "E", "word": ""}, {"t": 32066, "shape": "O", "word": ""}, {"t": 32183, "shape": "AI", "word": ""}, {"t": 32266, "shape": "E", "word": ""}, {"t": 32516, "shape": "AI", "word": ""}, {"t": 32533, "shape": "E", "word": ""}, {"t": 32549, "shape": "FV", "word": ""}, {"t": 32700, "shape": "E", "word": ""}, {"t": 32733, "shape": "AI", "word": ""}, {"t": 32766, "shape": "E", "word": ""}, {"t": 32816, "shape": "AI", "word": ""}, {"t": 32833, "shape": "E", "word": ""}, {"t": 32866, "shape": "AI", "word": ""}, {"t": 32883, "shape": "O", "word": ""}, {"t": 32933, "shape": "AI", "word": ""}, {"t": 32950, "shape": "O", "word": ""}, {"t": 33000, "shape": "AI", "word": ""}, {"t": 33066, "shape": "U", "word": ""}, {"t": 33183, "shape": "AI", "word": ""}, {"t": 33233, "shape": "E", "word": ""}, {"t": 33533, "shape": "AI", "word": ""}, {"t": 33600, "shape": "E", "word": ""}, {"t": 33766, "shape": "AI", "word": ""}, {"t": 33783, "shape": "O", "word": ""}, {"t": 33850, "shape": "MBP", "word": ""}, {"t": 33883, "shape": "O", "word": ""}, {"t": 33900, "shape": "MBP", "word": ""}, {"t": 34066, "shape": "AI", "word": ""}, {"t": 34116, "shape": "E", "word": ""}, {"t": 34150, "shape": "AI", "word": ""}, {"t": 34183, "shape": "E", "word": ""}, {"t": 34233, "shape": "AI", "word": ""}, {"t": 34283, "shape": "E", "word": ""}, {"t": 34316, "shape": "AI", "word": ""}, {"t": 34333, "shape": "E", "word": ""}, {"t": 34400, "shape": "AI", "word": ""}, {"t": 34416, "shape": "E", "word": ""}, {"t": 34466, "shape": "AI", "word": ""}, {"t": 34583, "shape": "E", "word": ""}, {"t": 34650, "shape": "AI", "word": ""}, {"t": 34783, "shape": "MBP", "word": ""}, {"t": 34933, "shape": "E", "word": ""}, {"t": 34950, "shape": "AI", "word": ""}, {"t": 35050, "shape": "E", "word": ""}, {"t": 35150, "shape": "AI", "word": ""}, {"t": 35166, "shape": "E", "word": ""}, {"t": 35200, "shape": "AI", "word": ""}, {"t": 35233, "shape": "U", "word": ""}, {"t": 35250, "shape": "E", "word": ""}, {"t": 35300, "shape": "U", "word": ""}, {"t": 35350, "shape": "AI", "word": ""}, {"t": 35416, "shape": "FV", "word": ""}, {"t": 35616, "shape": "E", "word": ""}, {"t": 35750, "shape": "U", "word": ""}, {"t": 35783, "shape": "E", "word": ""}, {"t": 36133, "shape": "O", "word": ""}, {"t": 36183, "shape": "AI", "word": ""}, {"t": 36233, "shape": "E", "word": ""}, {"t": 36283, "shape": "MBP", "word": ""}, {"t": 36300, "shape": "E", "word": ""}, {"t": 36366, "shape": "MBP", "word": ""}, {"t": 36500, "shape": "O", "word": ""}, {"t": 36516, "shape": "E", "word": ""}, {"t": 36550, "shape": "O", "word": ""}, {"t": 36600, "shape": "AI", "word": ""}, {"t": 36650, "shape": "E", "word": ""}, {"t": 36666, "shape": "AI", "word": ""}, {"t": 36700, "shape": "E", "word": ""}, {"t": 36833, "shape": "O", "word": ""}, {"t": 36850, "shape": "AI", "word": ""}, {"t": 37050, "shape": "E", "word": ""}, {"t": 37233, "shape": "AI", "word": ""}, {"t": 37333, "shape": "E", "word": ""}, {"t": 37516, "shape": "AI", "word": ""}, {"t": 37716, "shape": "O", "word": ""}, {"t": 37766, "shape": "AI", "word": ""}, {"t": 37800, "shape": "E", "word": ""}, {"t": 37866, "shape": "AI", "word": ""}, {"t": 37983, "shape": "E", "word": ""}, {"t": 38083, "shape": "AI", "word": ""}, {"t": 38116, "shape": "E", "word": ""}, {"t": 38133, "shape": "AI", "word": ""}, {"t": 38200, "shape": "E", "word": ""}, {"t": 38233, "shape": "O", "word": ""}, {"t": 38266, "shape": "E", "word": ""}, {"t": 38300, "shape": "O", "word": ""}, {"t": 38400, "shape": "E", "word": ""}, {"t": 38516, "shape": "U", "word": ""}, {"t": 38566, "shape": "E", "word": ""}, {"t": 38583, "shape": "U", "word": ""}, {"t": 38633, "shape": "AI", "word": ""}, {"t": 38800, "shape": "E", "word": ""}, {"t": 38916, "shape": "MBP", "word": ""}, {"t": 38983, "shape": "AI", "word": ""}, {"t": 39000, "shape": "MBP", "word": ""}, {"t": 39133, "shape": "E", "word": ""}, {"t": 39166, "shape": "MBP", "word": ""}, {"t": 39183, "shape": "AI", "word": ""}, {"t": 39233, "shape": "MBP", "word": ""}, {"t": 39316, "shape": "AI", "word": ""}, {"t": 39333, "shape": "MBP", "word": ""}, {"t": 39366, "shape": "O", "word": ""}, {"t": 39516, "shape": "AI", "word": ""}, {"t": 39566, "shape": "E", "word": ""}, {"t": 39650, "shape": "AI", "word": ""}, {"t": 39666, "shape": "E", "word": ""}, {"t": 39700, "shape": "FV", "word": ""}, {"t": 39866, "shape": "O", "word": ""}, {"t": 39883, "shape": "FV", "word": ""}, {"t": 39933, "shape": "O", "word": ""}, {"t": 39983, "shape": "AI", "word": ""}, {"t": 40100, "shape": "E", "word": ""}, {"t": 40133, "shape": "AI", "word": ""}, {"t": 40150, "shape": "E", "word": ""}, {"t": 40183, "shape": "AI", "word": ""}, {"t": 40300, "shape": "U", "word": ""}, {"t": 40333, "shape": "AI", "word": ""}, {"t": 40350, "shape": "E", "word": ""}, {"t": 40450, "shape": "AI", "word": ""}, {"t": 40533, "shape": "U", "word": ""}, {"t": 40566, "shape": "AI", "word": ""}, {"t": 40600, "shape": "U", "word": ""}, {"t": 40666, "shape": "AI", "word": ""}, {"t": 40800, "shape": "E", "word": ""}, {"t": 40916, "shape": "AI", "word": ""}, {"t": 40933, "shape": "E", "word": ""}, {"t": 41016, "shape": "AI", "word": ""}, {"t": 41083, "shape": "MBP", "word": ""}, {"t": 41100, "shape": "AI", "word": ""}, {"t": 41183, "shape": "MBP", "word": ""}, {"t": 41200, "shape": "AI", "word": ""}, {"t": 41250, "shape": "MBP", "word": ""}, {"t": 41283, "shape": "AI", "word": ""}, {"t": 41316, "shape": "MBP", "word": ""}, {"t": 41550, "shape": "AI", "word": ""}, {"t": 41666, "shape": "E", "word": ""}, {"t": 41766, "shape": "AI", "word": ""}, {"t": 41900, "shape": "O", "word": ""}, {"t": 41916, "shape": "AI", "word": ""}, {"t": 41950, "shape": "O", "word": ""}, {"t": 42066, "shape": "AI", "word": ""}, {"t": 42133, "shape": "O", "word": ""}, {"t": 42300, "shape": "AI", "word": ""}, {"t": 42366, "shape": "E", "word": ""}, {"t": 42483, "shape": "AI", "word": ""}, {"t": 42600, "shape": "E", "word": ""}, {"t": 42883, "shape": "AI", "word": ""}, {"t": 42916, "shape": "O", "word": ""}, {"t": 42933, "shape": "AI", "word": ""}, {"t": 42966, "shape": "O", "word": ""}, {"t": 43033, "shape": "AI", "word": ""}, {"t": 43200, "shape": "E", "word": ""}, {"t": 43266, "shape": "AI", "word": ""}, {"t": 43333, "shape": "MBP", "word": ""}, {"t": 43566, "shape": "AI", "word": ""}, {"t": 43633, "shape": "E", "word": ""}, {"t": 43750, "shape": "AI", "word": ""}, {"t": 43866, "shape": "closed", "word": ""}, {"t": 43950, "shape": "AI", "word": ""}, {"t": 44066, "shape": "closed", "word": ""}];
+const DUR=44000;
+let playing=false, t0=0, tpos=0, raf=null, visIdx=0;
+
+const q=s=>document.querySelector(s);
+function apply(ev){
+  const kind=ev.kind, id=ev.id||'';
+  if(kind==='expression'){
+    q('.EX').textContent=id;
+    const mad=id==='annoyed';
+    q('.BL').setAttribute('transform',mad?'rotate(-12 85 85)':'');
+    q('.BR').setAttribute('transform',mad?'rotate(12 135 85)':'');
+    const mo=q('.MO');
+    if(id==='surprised'){mo.setAttribute('ry','10');mo.setAttribute('cy','158');}
+    else if(id==='deadpan'){mo.setAttribute('ry','4');mo.setAttribute('cy','160');}
+    else{mo.setAttribute('ry','5');mo.setAttribute('cy','160');}
+  }
+  else if(kind==='camera'){
+    const t=q('.CAMT'); if(t)t.textContent=id;
+    const sc={wide:.85,medium:1,closeup:1.35,pushin:1.2}[id]||1;
+    q('.PH').setAttribute('transform',`translate(110 120) scale(${sc}) translate(-110 -120)`);
+  }
+  else if(kind==='gesture'){
+    if(id==='eye_glitch'){
+      ['.PL','.PR'].forEach(s=>{q(s).setAttribute('rx','2');q(s).setAttribute('fill','#b91c1c');});
+      q('.EX').textContent='SLIT.';
+      setTimeout(()=>['.PL','.PR'].forEach(s=>{q(s).setAttribute('rx','5');q(s).setAttribute('fill','#111');}),900);
+    }
+    if(id==='suit_adjust'){
+      q('.PB').setAttribute('transform','translate(-6 0)');
+      setTimeout(()=>q('.PB').setAttribute('transform','translate(6 0)'),250);
+      setTimeout(()=>q('.PB').setAttribute('transform',''),600);
+    }
+    if(id==='warm_rock_lean'){
+      q('.PH').setAttribute('transform','translate(0 20)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),1400);
+    }
+    if(id==='head_tilt'){
+      q('.PH').setAttribute('transform','rotate(8 110 120)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),700);
+    }
+    if(id==='lean_forward'){
+      q('.PH').setAttribute('transform','translate(0 14)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),900);
+    }
+    if(id==='small_shrug'){
+      q('.PB').setAttribute('transform','translate(0 -8)');
+      setTimeout(()=>q('.PB').setAttribute('transform',''),650);
+    }
+  }
+  else if(kind==='hold'){
+    q('.EX').textContent='…';
+  }
+  else if(kind==='speak_start'){
+    /* vocal info from segment */
+  }
+}
+
+function segAt(ms){
+  return (GEM.segments||[]).find(s=>ms>=s.t0*1000 && ms<s.t1*1000);
+}
+
+// Ralph mouth shape → SVG ellipse params (ry, rx, cy)
+const MOUTH={closed:[3,14,160],rest:[5,16,160],AI:[12,18,158],E:[8,17,159],
+  O:[10,12,159],U:[7,10,160],FV:[4,15,160],L:[7,15,159],MBP:[2,13,160],open:[14,20,157]};
+function applyViseme(ms){
+  if(!VISEMES.length)return;
+  // binary search for current viseme
+  let lo=0,hi=VISEMES.length-1,cur=VISEMES[0];
+  while(lo<=hi){
+    const mid=(lo+hi)>>1;
+    if(VISEMES[mid].t<=ms){cur=VISEMES[mid];lo=mid+1;}
+    else hi=mid-1;
+  }
+  const p=MOUTH[cur.shape]||MOUTH.rest;
+  const mo=q('.MO');
+  if(mo){
+    mo.setAttribute('ry',p[0]);
+    mo.setAttribute('rx',p[1]);
+    mo.setAttribute('cy',p[2]);
+  }
+}
+
+function tick(){
+  if(!playing)return;
+  tpos = performance.now()-t0;
+  if(tpos>=DUR){tpos=DUR;stop();}
+  q('#barfill').style.width=(tpos/DUR*100)+'%';
+  q('#scrub').value=tpos;
+  const secs=Math.floor(tpos/1000);
+  q('#clock').textContent=`${Math.floor(secs/60)}:${String(secs%60).padStart(2,'0')} / ${Math.floor(DUR/60000)}:${String(Math.floor(DUR/1000)%60).padStart(2,'0')}`;
+  // fire events whose t <= tpos
+  for(const ev of EVENTS){
+    if(ev._f)continue;
+    if(ev.t<=tpos){ev._f=1;apply(ev);}
+  }
+  // viseme mouth animation
+  applyViseme(tpos);
+  // current segment HUD
+  const seg=segAt(tpos);
+  if(seg){
+    q('#emotion').textContent=seg.emotion||'—';
+    q('#beat').textContent=seg.beat_type||'—';
+    q('#seg').textContent=(seg.text_hint||'').slice(0,80);
+  }
+  raf=requestAnimationFrame(tick);
+}
+function play(){
+  playing=true;
+  // reset one-shots
+  EVENTS.forEach(e=>e._f=0);
+  t0=performance.now()-tpos;
+  q('#play').textContent='⏸ Pause';
+  raf=requestAnimationFrame(tick);
+}
+function stop(){
+  playing=false;cancelAnimationFrame(raf);
+  q('#play').textContent='▶ Play';
+}
+q('#play').onclick=()=>playing?stop():play();
+q('#scrub').oninput=e=>{
+  tpos=+e.target.value;
+  EVENTS.forEach(e=>e._f=0);
+  for(const ev of EVENTS){if(ev.t<=tpos){ev._f=1;apply(ev);}}
+  applyViseme(tpos);
+  q('#barfill').style.width=(tpos/DUR*100)+'%';
+};
+// anger banner
+const ang=GEM.anger||{};
+if(ang.present){
+  const el=q('#anger');
+  el.style.display='block';
+  el.textContent=`anger: ${ang.type} — ${(ang.body_signature||[]).join('; ')}`;
+}
+</script></body></html>

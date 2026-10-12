@@ -1,0 +1,235 @@
+{
+  "speaker_guess": "Clown Comedian",
+  "overall": {
+    "energy_arc": "Steady, melancholic, low-energy deadpan delivery contrasting with shocking dark humor punchline.",
+    "dominant_emotion": "deadpan",
+    "dominant_emotion_intensity": 0.85,
+    "stage_presence": "Morbid clown persona with solemn physical stillness and restrained phrasing."
+  },
+  "segments": [
+    {
+      "t0": 0.0,
+      "t1": 2.8,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.7,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.05,
+        "head": "neutral",
+        "arms": "gesture_out",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "Holds up a small framed photo of a child to show the audience"
+      },
+      "comedy": {
+        "beat_type": "premise",
+        "gtvh_operators": [
+          "actualization",
+          "characterization"
+        ],
+        "status_move": "flat",
+        "note": "Introduces visual prop and establishes earnest-seeming setup"
+      },
+      "vocal": {
+        "energy": 0.5,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "emphasis_words": [
+          "This",
+          "Kwame"
+        ],
+        "note": "Calm, conversational Northern English tone"
+      }
+    },
+    {
+      "t0": 2.8,
+      "t1": 8.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.75,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.05,
+        "head": "tilt_right",
+        "arms": "mic_point",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "Holds mic steadily with white gloved hand, framing picture in other hand"
+      },
+      "comedy": {
+        "beat_type": "setup",
+        "gtvh_operators": [
+          "narrative_strategy"
+        ],
+        "status_move": "up",
+        "note": "Frames himself as a benevolent charitable sponsor"
+      },
+      "vocal": {
+        "energy": 0.55,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "emphasis_words": [
+          "sponsoring",
+          "three years",
+          "99 cents"
+        ],
+        "note": "Measured, serious tone mimicking charity appeal commercials"
+      }
+    },
+    {
+      "t0": 8.0,
+      "t1": 11.2,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.8,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.05,
+        "head": "nod",
+        "arms": "sides",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "Glances down slightly toward the frame before delivering the turn"
+      },
+      "comedy": {
+        "beat_type": "escalation",
+        "gtvh_operators": [
+          "false_logic",
+          "coincidence"
+        ],
+        "status_move": "down",
+        "note": "Introduces mundane bureaucratic hiccup (expired credit card)"
+      },
+      "vocal": {
+        "energy": 0.5,
+        "pitch_shift": "fall",
+        "pace": "normal",
+        "emphasis_words": [
+          "unbeknown",
+          "expired"
+        ],
+        "note": "Conversational casualness contrasting with impending consequence"
+      }
+    },
+    {
+      "t0": 11.2,
+      "t1": 13.8,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.95,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.0,
+        "head": "tilt_left",
+        "arms": "mic_point",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "Maintains blank, emotionless expression immediately after blunt drop"
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "exaggeration",
+          "reversal",
+          "dark_humor"
+        ],
+        "status_move": "down",
+        "note": "Extreme abrupt conclusion creates massive shock and laughter"
+      },
+      "vocal": {
+        "energy": 0.45,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "emphasis_words": [
+          "dead"
+        ],
+        "note": "Understated, cold, matter-of-fact tone"
+      }
+    },
+    {
+      "t0": 13.8,
+      "t1": 17.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.9,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.0,
+        "head": "tilt_right",
+        "arms": "mic_point",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "Holds stone-faced stillness as panel collapses in uncontrollable laughter"
+      },
+      "comedy": {
+        "beat_type": "button",
+        "gtvh_operators": [
+          "parody"
+        ],
+        "status_move": "flat",
+        "note": "Commitment to clown character's sad deadpan aesthetic anchors the laugh"
+      },
+      "vocal": {
+        "energy": 0.0,
+        "pitch_shift": "flat",
+        "pace": "slow",
+        "emphasis_words": [],
+        "note": "Silence during roaring audience laughter"
+      }
+    }
+  ],
+  "gesture_library": [
+    {
+      "name": "photo_presentation",
+      "t_guess": 0.8,
+      "duration_est_s": 1.8,
+      "body_params": {
+        "lean": 0.05,
+        "head_deg": 0.0,
+        "arm_open": 0.4,
+        "brow": 0.0
+      },
+      "emotion_tag": "deadpan"
+    },
+    {
+      "name": "stone_faced_pause",
+      "t_guess": 14.5,
+      "duration_est_s": 2.2,
+      "body_params": {
+        "lean": 0.0,
+        "head_deg": 4.0,
+        "arm_open": 0.1,
+        "brow": 0.0
+      },
+      "emotion_tag": "deadpan"
+    }
+  ],
+  "anger_analysis": {
+    "present": false,
+    "type": "none",
+    "body_signature": [],
+    "face_signature": [],
+    "vocal_signature": [],
+    "target": "none",
+    "release_or_withhold": "withhold",
+    "contrast_before_after": "No anger present; joke relies on clinical, unflinching lack of emotion in the face of tragic loss."
+  },
+  "_meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 26.9,
+    "clip_mb": 1.13,
+    "usage": {
+      "promptTokenCount": 2167,
+      "candidatesTokenCount": 1773,
+      "totalTokenCount": 4450,
+      "promptTokensDetails": [
+        {
+          "modality": "VIDEO",
+          "tokenCount": 1539
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 510,
+      "serviceTier": "standard"
+    }
+  }
+}
