@@ -108,12 +108,17 @@ def build_task() -> str:
             "{appraisal, chosen_goal, reaction, emotional_shift}, "
             "change_from_last, beats:[{id,type,text,pause_after_ms,emphasis}]}. "
             "Write ONE continuous 60-second scene, not separate jokes: a beginning "
-            "(who/where/want in the first 2 beats), a middle where the situation "
-            "escalates through the licensed mechanism, and a button closer under "
-            "8 words that callbacks something from beats 1-3. Entities, names and "
+            "(who/where/want in the first 2 beats), a middle where their sincere "
+            "reading of events collides with what the audience can see is actually "
+            "happening, and a short closing under 8 words that restates their "
+            "position, unchanged. NEVER wink, never address the audience as an "
+            "audience, never announce a punchline, never explain the joke, never "
+            "use showbiz framing (no hellos, thank-yous, or goodnights). The humor "
+            "belongs entirely to the gap between their certainty and reality — "
+            "they must remain unaware of it. Entities, names and "
             "props introduced early MUST reappear later — a beat that shares no "
-            "nouns with the rest is a rejected beat. 6-7 beats, 130-170 words total, "
-            "opener IS a joke (no throat-clearing). Beat types still labeled "
+            "nouns with the rest is a rejected beat. 6-7 beats, 130-170 words total. "
+            "Beat types still labeled "
             "(setup/misdirect/punchline/tag/closer) for timing only.")
 
 

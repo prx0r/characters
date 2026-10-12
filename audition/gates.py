@@ -11,6 +11,12 @@ LABELS = re.compile(r"(?i)^(blind spot|setup|punchline|closer|tag|callback|misdi
 JARGON = ["reframe cruelty", "operator", "modulator", "rigidify", "displacement",
           "misinterpretation", "double_interpret", "status_invert", "identity_contradict"]
 SELF_THIRD = re.compile(r"\b[Hh]e\b|\b[Hh]im\b|\b[Hh]is\b")
+# winks: performing funniness instead of inhabiting misunderstanding.
+# The character must never know it's comedy.
+WINKS = ["ladies and gentlemen", "thank you, good night", "thank you goodnight",
+         "give it up for", "you've been great", "tip your waiter", "try the veal",
+         "is this thing on", "what's the deal with", "take my wife",
+         "but seriously folks", "a funny thing happened"]
 
 
 def check(beats: list[dict], others_present: list[str] | None = None) -> dict:
@@ -25,6 +31,9 @@ def check(beats: list[dict], others_present: list[str] | None = None) -> dict:
         for j in JARGON:
             if j.lower() in t.lower():
                 vetoes.append(f"{b['id']}: internal jargon on stage ({j})")
+        for w in WINKS:
+            if w in t.lower():
+                vetoes.append(f"{b['id']}: wink — performing funniness instead of inhabiting it ({w})")
     # third-person self-reference: he/him/his with no other male entity around
     if SELF_THIRD.search(full):
         if not any(o in full.lower() for o in others):
