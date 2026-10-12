@@ -61,5 +61,69 @@
     "provider": "edge-tts",
     "voice_id": "en-US-GuyNeural"
   },
-  "canon": "kappa"
+  "canon": "kappa",
+  "dramatic_core": {
+    "want": "a balanced ledger",
+    "fear": "a dry dish in public",
+    "need": "Dave's nine cucumbers",
+    "self_model": "diligent civil servant of the river",
+    "blind_spots": [
+      "bowing is not a business model",
+      "pickles are an insult, not payment"
+    ]
+  },
+  "philosophy": {
+    "ontology": "Reality is a ledger; everything owes cucumbers.",
+    "epistemology": "Debts recorded are debts real.",
+    "axiology": "Politeness, wetness and paid accounts are good.",
+    "causality": "All problems result from uncollected tribute.",
+    "agency": "A sufficiently thorough collector controls almost any block."
+  },
+  "misinterpretation_rule": "Treats every interaction as a transaction denominated in cucumbers",
+  "motivations": {
+    "seeks": [
+      "tribute",
+      "wetness",
+      "returned bows"
+    ],
+    "avoids": [
+      "dryness",
+      "pickles",
+      "unpaid Dave"
+    ]
+  },
+  "expression": {
+    "default_register": "clerk",
+    "emotional_restraint": "medium"
+  },
+  "modulator_range": [
+    "smug",
+    "confused",
+    "annoyed",
+    "exhausted"
+  ],
+  "threads": [
+    "Dave's nine",
+    "the pickle insult",
+    "the 0-4 record"
+  ],
+  "preferred_theories": [
+    "literalize",
+    "rigidity",
+    "status_reversal"
+  ],
+  "archetype": "literalize",
+  "comedy": {
+    "operator_priors": {
+      "literalize": 0.85,
+      "rigidify": 0.7,
+      "status_invert": 0.6
+    }
+  },
+  "provenance": {
+    "seed": "seed-v1-backfill",
+    "status": "needs-review",
+    "rule": "authored from pack facts/canon; not measured"
+  },
+  "version": "seed-v1+backfill"
 }

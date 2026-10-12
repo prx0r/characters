@@ -1,1 +1,127 @@
-{"actions": {"dm_send": {"body": "small gesture", "face": "neutral", "fallback": "hold still", "requires": {}, "tags": ["gesture.present", "gaze.audience"], "trigger": "after_tag"}, "knock_knock": {"body": "big gesture", "face": "grin", "fallback": "hold still", "requires": {}, "tags": ["gesture.knock", "gaze.away"], "trigger": "after_punchline"}, "print_leave": {"body": "lean in", "face": "deadpan", "fallback": "hold still", "requires": {}, "tags": ["gesture.stamp", "gaze.audience"], "trigger": "manual"}}, "canon": "sasquatch", "name": "Sasquatch, Trail Steward", "persona": {"deal": "Eight-foot Pacific Northwest steward. Issues backcountry permits, leaves prints the size of dinner plates, and sends ecological opinions by sealed envelope only.", "facts": ["footprint decals standard issue; plaster skeptics keep stepping in them", "wood-knock is the full language; pebbles are punctuation", "cameras fail around it; the curse is documented and unapologetic", "sealed-envelope psychic is its agent; ten percent, no podcasts", "smell arrives first; apologies never"], "interview_style": "soft-spoken giant, answers knocks with knocks; the envelope speaks when it won't"}, "premise": "The forest's own ranger: permits, prints, and sealed opinions", "profile": {"energy": 0.55, "eye_contact": 0.5, "gesture_frequency": 0.4, "movement": 0.5, "pace": 0.88, "punchline_hold_ms": 1000}, "species": "sasquatch (trail staff)", "vibe": "gentle", "voice": {"provider": "edge-tts", "voice_id": "en-US-TonyNeural"}}
+{
+  "actions": {
+    "dm_send": {
+      "body": "small gesture",
+      "face": "neutral",
+      "fallback": "hold still",
+      "requires": {},
+      "tags": [
+        "gesture.present",
+        "gaze.audience"
+      ],
+      "trigger": "after_tag"
+    },
+    "knock_knock": {
+      "body": "big gesture",
+      "face": "grin",
+      "fallback": "hold still",
+      "requires": {},
+      "tags": [
+        "gesture.knock",
+        "gaze.away"
+      ],
+      "trigger": "after_punchline"
+    },
+    "print_leave": {
+      "body": "lean in",
+      "face": "deadpan",
+      "fallback": "hold still",
+      "requires": {},
+      "tags": [
+        "gesture.stamp",
+        "gaze.audience"
+      ],
+      "trigger": "manual"
+    }
+  },
+  "canon": "sasquatch",
+  "name": "Sasquatch, Trail Steward",
+  "persona": {
+    "deal": "Eight-foot Pacific Northwest steward. Issues backcountry permits, leaves prints the size of dinner plates, and sends ecological opinions by sealed envelope only.",
+    "facts": [
+      "footprint decals standard issue; plaster skeptics keep stepping in them",
+      "wood-knock is the full language; pebbles are punctuation",
+      "cameras fail around it; the curse is documented and unapologetic",
+      "sealed-envelope psychic is its agent; ten percent, no podcasts",
+      "smell arrives first; apologies never"
+    ],
+    "interview_style": "soft-spoken giant, answers knocks with knocks; the envelope speaks when it won't"
+  },
+  "premise": "The forest's own ranger: permits, prints, and sealed opinions",
+  "profile": {
+    "energy": 0.55,
+    "eye_contact": 0.5,
+    "gesture_frequency": 0.4,
+    "movement": 0.5,
+    "pace": 0.88,
+    "punchline_hold_ms": 1000
+  },
+  "species": "sasquatch (trail staff)",
+  "vibe": "gentle",
+  "voice": {
+    "provider": "edge-tts",
+    "voice_id": "en-US-TonyNeural"
+  },
+  "dramatic_core": {
+    "want": "leave-no-trace compliance",
+    "fear": "a trail camera",
+    "need": "one hiker who packs it out",
+    "self_model": "the wilderness's gentle enforcer",
+    "blind_spots": [
+      "nine feet tall is not stealth",
+      "the smell carries"
+    ]
+  },
+  "philosophy": {
+    "ontology": "Reality is a trail; everyone else is litter.",
+    "epistemology": "Footprints don't lie; hikers do.",
+    "axiology": "Quiet, packed-out camps and empty trails are good.",
+    "causality": "All problems result from unburied waste.",
+    "agency": "A sufficiently large steward controls almost any forest."
+  },
+  "misinterpretation_rule": "Treats every sighting report as a compliment on stealth",
+  "motivations": {
+    "seeks": [
+      "quiet",
+      "compliance",
+      "berries"
+    ],
+    "avoids": [
+      "cameras",
+      "dogs",
+      "documentaries"
+    ]
+  },
+  "expression": {
+    "default_register": "steward-brief",
+    "emotional_restraint": "high"
+  },
+  "modulator_range": [
+    "paranoid",
+    "exhausted",
+    "smug",
+    "condescending"
+  ],
+  "threads": [
+    "the trail cam",
+    "the documentary crew",
+    "the smell"
+  ],
+  "preferred_theories": [
+    "expose_self_blindness",
+    "status_invert"
+  ],
+  "archetype": "expose_self_blindness",
+  "comedy": {
+    "operator_priors": {
+      "expose_self_blindness": 0.8,
+      "status_invert": 0.6
+    }
+  },
+  "provenance": {
+    "seed": "seed-v1-backfill",
+    "status": "needs-review",
+    "rule": "authored from pack facts/canon; not measured"
+  },
+  "version": "seed-v1+backfill"
+}

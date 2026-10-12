@@ -122,9 +122,7 @@ def synthesize(audition_id: str, text: str, voice: str, rate: str = "+0%",
             return {"path": str(out), "duration_ms": dur,
                     "provenance": "edge-tts" + ("+ffprobe" if _ffprobe_ms(out) else "+estimated"),
                     "sha256": hashlib.sha256(out.read_bytes()).hexdigest()}
-    except Exception as e:
-        errors.append(f"edge: {e}")
-    # 2. piper local neural voice
+        # 2. piper local neural voice (dedupe note: single edge handler above)
     try:
         out = AUDIO_DIR / f"{audition_id}.wav"
         if out.exists():

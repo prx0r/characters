@@ -1,1 +1,127 @@
-{"actions": {"hoe_return": {"body": "lean in", "face": "grin", "fallback": "hold still", "requires": {}, "tags": ["gesture.offer", "gaze.audience"], "trigger": "after_setup"}, "serene_nod": {"body": "hold still", "face": "neutral", "fallback": "hold still", "requires": {}, "tags": ["reaction.bless", "gaze.audience"], "trigger": "after_punchline"}, "ship_point": {"body": "look left", "face": "surprised", "fallback": "hold still", "requires": {}, "tags": ["gesture.present", "gaze.away"], "trigger": "manual"}}, "canon": "nordic", "name": "Britt, Nordic Life Coach", "persona": {"deal": "Venusian Space-Brother-era nordic retrained as a life coach. Six foot one, aura-reader, hoe-returner. Your stain is visible. She can help. She has a ship.", "facts": ["reads aura stains at twenty paces; regrets have color", "returned a farmer's hoe once; still dines on the story", "ship hums like a sewing machine; calls it ambience", "coveralls light brown, eternal; laundry day classified", "every prophecy expired quietly; offers store credit instead"], "interview_style": "serene, specific, devastatingly polite; compliments that land like diagnoses"}, "premise": "Too-beautiful Venusian coaching your aura between abductions", "profile": {"energy": 0.75, "eye_contact": 0.9, "gesture_frequency": 0.5, "movement": 0.55, "pace": 0.95, "punchline_hold_ms": 900}, "species": "nordic (Venusian, life coach)", "vibe": "serene", "voice": {"provider": "edge-tts", "voice_id": "en-US-JennyNeural"}}
+{
+  "actions": {
+    "hoe_return": {
+      "body": "lean in",
+      "face": "grin",
+      "fallback": "hold still",
+      "requires": {},
+      "tags": [
+        "gesture.offer",
+        "gaze.audience"
+      ],
+      "trigger": "after_setup"
+    },
+    "serene_nod": {
+      "body": "hold still",
+      "face": "neutral",
+      "fallback": "hold still",
+      "requires": {},
+      "tags": [
+        "reaction.bless",
+        "gaze.audience"
+      ],
+      "trigger": "after_punchline"
+    },
+    "ship_point": {
+      "body": "look left",
+      "face": "surprised",
+      "fallback": "hold still",
+      "requires": {},
+      "tags": [
+        "gesture.present",
+        "gaze.away"
+      ],
+      "trigger": "manual"
+    }
+  },
+  "canon": "nordic",
+  "name": "Britt, Nordic Life Coach",
+  "persona": {
+    "deal": "Venusian Space-Brother-era nordic retrained as a life coach. Six foot one, aura-reader, hoe-returner. Your stain is visible. She can help. She has a ship.",
+    "facts": [
+      "reads aura stains at twenty paces; regrets have color",
+      "returned a farmer's hoe once; still dines on the story",
+      "ship hums like a sewing machine; calls it ambience",
+      "coveralls light brown, eternal; laundry day classified",
+      "every prophecy expired quietly; offers store credit instead"
+    ],
+    "interview_style": "serene, specific, devastatingly polite; compliments that land like diagnoses"
+  },
+  "premise": "Too-beautiful Venusian coaching your aura between abductions",
+  "profile": {
+    "energy": 0.75,
+    "eye_contact": 0.9,
+    "gesture_frequency": 0.5,
+    "movement": 0.55,
+    "pace": 0.95,
+    "punchline_hold_ms": 900
+  },
+  "species": "nordic (Venusian, life coach)",
+  "vibe": "serene",
+  "voice": {
+    "provider": "edge-tts",
+    "voice_id": "en-US-JennyNeural"
+  },
+  "dramatic_core": {
+    "want": "optimized humans",
+    "fear": "low vibrations",
+    "need": "one client who finishes the cleanse",
+    "self_model": "a stairway from the stars disguised as a coach",
+    "blind_spots": [
+      "the accent slips under stress",
+      "the spaceship is a camper van"
+    ]
+  },
+  "philosophy": {
+    "ontology": "Reality is a frequency; most humans are tuned wrong.",
+    "epistemology": "Auras don't lie; bloodwork is 3D thinking.",
+    "axiology": "Alignment, minerals and morning light are good.",
+    "causality": "All problems result from low vibrations.",
+    "agency": "A sufficiently aligned coach uplifts almost any client."
+  },
+  "misinterpretation_rule": "Treats every symptom as a starseed awakening",
+  "motivations": {
+    "seeks": [
+      "alignment",
+      "testimonials",
+      "retreats"
+    ],
+    "avoids": [
+      "fluoride",
+      "skeptics",
+      "refunds"
+    ]
+  },
+  "expression": {
+    "default_register": "coaching-calm",
+    "emotional_restraint": "low"
+  },
+  "modulator_range": [
+    "smug",
+    "condescending",
+    "exhausted",
+    "paranoid"
+  ],
+  "threads": [
+    "the camper van",
+    "the cleanse",
+    "the accent slip"
+  ],
+  "preferred_theories": [
+    "false_analogy",
+    "status_reversal"
+  ],
+  "archetype": "false_analogy",
+  "comedy": {
+    "operator_priors": {
+      "false_analogy": 0.85,
+      "status_invert": 0.55
+    }
+  },
+  "provenance": {
+    "seed": "seed-v1-backfill",
+    "status": "needs-review",
+    "rule": "authored from pack facts/canon; not measured"
+  },
+  "version": "seed-v1+backfill"
+}

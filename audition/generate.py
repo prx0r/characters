@@ -117,10 +117,7 @@ def list_characters() -> list[dict]:
         c = load_freak_character(slug)
         if c:
             chars.append(c)
-    # short cards for the picker
-    portraits = {"no_nose_nolan": "/static/portraits/nolan.jpg",
-                 "reptilian_ralph_middle_management": "/static/portraits/ralph.jpg",
-                 "rudy_dulce_hvac": "/static/portraits/rudy.jpg"}
+    # short cards for the picker (portraits via avatar_url/DiceBear; vibes local)
     try:  # world residents with performer packs join the roster automatically
         import store as _store
         _c = _store.connect()
@@ -172,6 +169,12 @@ def get_character(character_id: str) -> dict:
         return load_freak_character("baba-yaga-crone") or load_nolan()
     if character_id in ("yuki_snow_narrator", "yuki", "yuki-snow-narrator"):
         return load_freak_character("yuki-snow-narrator") or load_nolan()
+    # generic: any freak pack loads by slug (underscores or dashes); only
+    # unknown ids fall back to Nolan. No performer silently becomes a dog.
+    for cand in (character_id, character_id.replace("_", "-")):
+        loaded = load_freak_character(cand)
+        if loaded:
+            return loaded
     return load_nolan()
 
 

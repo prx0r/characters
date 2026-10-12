@@ -717,9 +717,14 @@ def shorts_feed():
         rows = [dict(r) for r in conn.execute(q, args).fetchall()]
     finally:
         conn.close()
-    portraits = {"no_nose_nolan": "/static/portraits/nolan.jpg",
-                 "reptilian_ralph_middle_management": "/static/portraits/ralph.jpg",
-                 "rudy_dulce_hvac": "/static/portraits/rudy.jpg"}
+    portraits = {}
+    try:
+        for _c in generate.list_characters():
+            portraits[_c["id"]] = _c.get("portrait_url", "") or generate.avatar_url(_c["id"])
+    except Exception:
+        portraits = {"no_nose_nolan": "/static/portraits/nolan.jpg",
+                     "reptilian_ralph_middle_management": "/static/portraits/ralph.jpg",
+                     "rudy_dulce_hvac": "/static/portraits/rudy.jpg"}
     cards = []
     for r in rows:
         beats = json.loads(r["beats"])
