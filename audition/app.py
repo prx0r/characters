@@ -1054,6 +1054,11 @@ def arena_page():
     return send_file(HERE / "static" / "arena.html")
 
 
+@app.get("/duel")
+def duel_page():
+    return send_file(HERE / "static" / "duel.html")
+
+
 @app.post("/api/arena/contenders")
 def arena_add():
     import re as _re

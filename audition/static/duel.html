@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funnier — duel</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:760px;margin:24px auto;padding:0 16px;background:#111;color:#eee}
+button,textarea{font-size:16px;padding:10px;border-radius:10px;border:1px solid #444;background:#1c1c1c;color:#eee}
+button{cursor:pointer}.muted{color:#999}.card{border:1px solid #333;border-radius:12px;padding:12px;margin:12px 0}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.big{background:#7c3aed;border:none;font-size:18px}
+.tag{font-size:22px;margin-bottom:6px}
+</style>
+</head>
+<body>
+<h1 style="margin-bottom:4px">🎤 Funnier <span class="muted">which set wins?</span></h1>
+<div class="card"><div class="row" id="cages" style="gap:12px"><span class="muted">loading duel…</span></div>
+<textarea id="notes" rows="2" style="width:100%;margin-top:8px" placeholder="Your notes — what landed, what died…"></textarea>
+<div class="row" style="margin-top:8px"><button class="big" id="voteA">A was funnier</button><button class="big" id="voteB">B was funnier</button><button id="skipBtn">skip</button><span id="duelStatus" class="muted"></span></div></div>
+<div class="muted"><a href="/arena" style="color:#facc15">arena</a> · <a href="/watch" style="color:#facc15">watch</a> · <a href="/pogtown" style="color:#facc15">pogtown</a></div>
+<script>
+window.onerror=function(m){var e=document.getElementById('duelStatus');if(e)e.textContent='page error: '+m;};
+const $=id=>document.getElementById(id);
+async function api(m,u,b){const r=await fetch(u,{method:m,headers:{'Content-Type':'application/json','Cache-Control':'no-store'},body:b?JSON.stringify(b):undefined});return r.json();}
+function voter(){try{let v=localStorage.getItem('arena_voter');if(!v){v='v_'+Math.random().toString(36).slice(2,10);localStorage.setItem('arena_voter',v);}return v;}catch(e){return 'anon';}}
+function cageHTML(c,tag){const inner=c.kind==='youtube'
+?`<iframe src="https://www.youtube.com/embed/${c.ref}?rel=0" width="100%" height="300" frameborder="0" allowfullscreen></iframe>`
+:c.kind==='bluesky'
+?`<iframe src="https://embed.bsky.app/embed/${c.ref}" width="100%" height="300" frameborder="0" style="background:#fff"></iframe>`
+:c.kind==='tavern'
+?`<img src="/tavern/portrait/${c.ref}" style="width:100%;border-radius:8px">`
+:`<video src="/mp4/${c.ref}" controls playsinline preload="metadata" style="width:100%;border-radius:8px;background:#000"></video><div class="muted">${c.title||''}</div>`;
+return `<div style="flex:1;min-width:240px"><div class="tag"><b>${tag}</b> <span class="muted" style="font-size:13px">${c.title||''}</span></div>${inner}</div>`;}
+let DM=null;
+async function duel(){let d;try{d=await api('GET','/api/arena/matchup');}catch(e){$('cages').innerHTML=`<span class="muted">matchup failed (${e}). Reload.</span>`;return;}
+if(d.error){$('cages').innerHTML=`<span class="muted">${d.error}</span>`;DM=null;return;}
+DM=d;$('cages').innerHTML=cageHTML(d.a,'A')+cageHTML(d.b,'B');$('duelStatus').textContent='';}
+async function duelv(w){if(!DM)return;
+const d=await api('POST','/api/arena/vote',{match_id:DM.match_id,a_id:DM.a.id,b_id:DM.b.id,winner_id:w==='A'?DM.a.id:DM.b.id,voter_id:voter(),context:{notes:$('notes').value.slice(0,500),via:'duel'}});
+if(d.error){$('duelStatus').textContent=d.error;return;}
+$('duelStatus').textContent=`saved · Elo A ${d.a_elo} / B ${d.b_elo}`;$('notes').value='';duel();}
+$('voteA').onclick=()=>duelv('A');$('voteB').onclick=()=>duelv('B');$('skipBtn').onclick=duel;
+duel();
+</script>
+</body>
+</html>

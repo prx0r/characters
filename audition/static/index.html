@@ -72,6 +72,8 @@ button{cursor:pointer}button:disabled{opacity:.4;cursor:default}
 </div>
 </details>
 <script>
+window.__errs=[];
+window.onerror=function(m,s,l){window.__errs.push(m+' @'+l);var e=document.getElementById('duelStatus');if(e)e.textContent='page error: '+m;};
 let DM=null;
 function voter(){try{let v=localStorage.getItem('arena_voter');if(!v){v='v_'+Math.random().toString(36).slice(2,10);localStorage.setItem('arena_voter',v);}return v;}catch(e){return 'anon';}}
 function cageHTML(c,tag){const inner=c.kind==='youtube'
@@ -82,7 +84,8 @@ function cageHTML(c,tag){const inner=c.kind==='youtube'
 ?`<img src="/tavern/portrait/${c.ref}" style="width:100%;height:220px;object-fit:cover;border-radius:8px">`
 :`<video src="/mp4/${c.ref}" controls playsinline preload="metadata" style="width:100%;border-radius:8px;background:#000"></video><div class="muted">${c.title||''}</div>`;
 return `<div style="flex:1;min-width:220px"><div class="tag" style="font-size:22px"><b>${tag}</b> <span class="muted" style="font-size:13px">${c.title||''}</span></div>${inner}</div>`;}
-async function duel(){const d=await api('GET','/api/arena/matchup');if(d.error){$('cages').innerHTML=`<span class="muted">${d.error}</span>`;DM=null;return;}
+async function duel(){let d;try{d=await api('GET','/api/arena/matchup');}catch(e){$('cages').innerHTML=`<span class="muted">matchup failed to load (${e}). Check connection, then reload.</span>`;return;}
+if(d.error){$('cages').innerHTML=`<span class="muted">${d.error}</span>`;DM=null;return;}
 DM=d;$('cages').innerHTML=cageHTML(d.a,'A')+cageHTML(d.b,'B');$('duelStatus').textContent='';}
 async function duelv(w){if(!DM)return;const notes=$('notes').value;
 const d=await api('POST','/api/arena/vote',{match_id:DM.match_id,a_id:DM.a.id,b_id:DM.b.id,winner_id:w==='A'?DM.a.id:DM.b.id,voter_id:voter(),context:{notes:notes.slice(0,500),via:'front'}});
