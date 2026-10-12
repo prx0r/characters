@@ -508,18 +508,25 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
     beats = None
     model_id = "template-v0-offline"
     prompt_version = "prompt-v1-template"
-    if os.getenv("OPENAI_API_KEY", ""):
+    _want_qwen = os.getenv("AUDITION_LLM_MODEL", "").startswith("qwen")
+    if os.getenv("OPENAI_API_KEY", "") or _want_qwen:
         import prompt as _prompt
         messages, prompt_version = _prompt.compile(
             character, scenario, state, mems, modulator, mod,
             [operator], avoid, critique)
         llm = _llm_generate(messages)
         if isinstance(llm, dict) and isinstance(llm.get("beats"), list) and len(llm["beats"]) >= 4:
-            beats = [{"id": b.get("id", f"b{i+1}"), "type": b.get("type", "setup"),
-                      "text": str(b.get("text", ""))[:280],
-                      "pause_after_ms": int(b.get("pause_after_ms", 400)),
-                      "emphasis": float(b.get("emphasis", 0.6))}
-                     for i, b in enumerate(llm["beats"][:7])]
+            # Normalize chatty model output: compound types -> base, no markdown.
+            _tmap = {"misdirect-or-escalation": "misdirect", "tag-or-callback": "tag",
+                     "opener": "setup", "joke": "setup", "punch": "punchline"}
+            beats = []
+            for i, b in enumerate(llm["beats"][:7]):
+                t = str(b.get("type", "setup")).strip().lower()
+                t = _tmap.get(t, t)
+                txt = str(b.get("text", "")).replace("*", "").replace("#", "").strip()[:280]
+                beats.append({"id": b.get("id", f"b{i+1}"), "type": t, "text": txt,
+                              "pause_after_ms": int(b.get("pause_after_ms", 400)),
+                              "emphasis": float(b.get("emphasis", 0.6))})
             model_id = os.getenv("AUDITION_LLM_MODEL", "gpt-4o-mini")
     if beats is None:
         beats = _template_beats(character, scenario, operator, critique, avoid)
