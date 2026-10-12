@@ -1397,7 +1397,10 @@ def card_import():
 @app.get("/mp4/<aud_id>")
 def mp4_serve(aud_id: str):
     """Real Shorts file: render-on-demand, cache keyed by content versions."""
-    import render as _render
+    import importlib.util as _ilu
+    _spec = _ilu.spec_from_file_location("aud_render", HERE / "render.py")
+    _render = _ilu.module_from_spec(_spec)
+    _spec.loader.exec_module(_render)
     import stage as _stage
     from pathlib import Path as _P
     conn = _conn()

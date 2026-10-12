@@ -80,7 +80,7 @@ function cageHTML(c,tag){const inner=c.kind==='youtube'
 ?`<iframe src="https://embed.bsky.app/embed/${c.ref}" width="100%" height="220" frameborder="0" style="background:#fff"></iframe>`
 :c.kind==='tavern'
 ?`<img src="/tavern/portrait/${c.ref}" style="width:100%;height:220px;object-fit:cover;border-radius:8px">`
-:`<audio src="/audio/${c.ref}" controls style="width:100%"></audio><div class="muted">${c.title||''}</div>`;
+:`<video src="/mp4/${c.ref}" controls playsinline preload="metadata" style="width:100%;border-radius:8px;background:#000"></video><div class="muted">${c.title||''}</div>`;
 return `<div style="flex:1;min-width:220px"><div class="tag" style="font-size:22px"><b>${tag}</b> <span class="muted" style="font-size:13px">${c.title||''}</span></div>${inner}</div>`;}
 async function duel(){const d=await api('GET','/api/arena/matchup');if(d.error){$('cages').innerHTML=`<span class="muted">${d.error}</span>`;DM=null;return;}
 DM=d;$('cages').innerHTML=cageHTML(d.a,'A')+cageHTML(d.b,'B');$('duelStatus').textContent='';}
