@@ -30,6 +30,7 @@ color:#fff;text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 
 <div id="top"><a href="/">Audition</a><a href="/shorts">Shorts sim</a><a href="/arena">Arena</a><span id="count"></span></div>
 <div id="tap">Tap to watch ▶<br><span style="font-size:14px;color:#aaa">unlocks sound + puppet</span></div>
 <div id="feed"></div>
+<script src="https://cdn.jsdelivr.net/npm/motion@11.13.1/dist/motion.js"></script>
 <script>
 let CARDS=[],IDX=-1,T0=0,TLS={},STARTED=false;
 const $=id=>document.getElementById(id);
@@ -97,7 +98,9 @@ aud.ontimeupdate=()=>{const ms=aud.currentTime*1000;
 const beat=c.beats.find(b=>ms>=b.start_ms&&ms<=b.end_ms);
 if(beat){const frac=(ms-beat.start_ms)/Math.max(1,beat.end_ms-beat.start_ms);
 const ch=beat._ch[Math.min(beat._ch.length-1,Math.floor(frac*beat._ch.length))];
-const sub=card.querySelector('.sub');if(sub.textContent!==ch)sub.textContent=ch;}
+const sub=card.querySelector('.sub');
+if(sub.textContent!==ch){sub.textContent=ch;
+try{if(window.Motion&&window.Motion.animate)window.Motion.animate(sub,{scale:[0.7,1],opacity:[0.2,1]},{duration:0.22});}catch(e){}}}
 card.querySelector('.prog>div').style.width=(aud.duration?ms/(aud.duration*1000)*100:0)+'%';
 const T=TLS[c.audition_id];if(T){T.tl.events.forEach((e,ei)=>{const k=c.audition_id+ei;
 if(ms>=e.t&&!T.fired.has(k)){T.fired.add(k);try{applyEv(card,e);}catch(err){}}});}

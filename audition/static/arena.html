@@ -40,6 +40,8 @@ table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px
 <div class="row"><input id="audid" size="30" placeholder="our audition id (e.g. aud_…)"><button id="addaud">Add our set</button>
 <span id="addstatus" class="muted"></span></div>
 <div class="row"><input id="bskyurl" size="42" placeholder="Bluesky post URL (bsky.app/…/post/… — video posts play too)"><button id="addbsky">Add Bluesky post</button></div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>function cheer(){try{if(window.confetti)window.confetti({particleCount:60,spread:70,origin:{y:0.3},disableForReducedMotion:true});}catch(e){}}</script>
 <div class="row"><form id="tavform"><input id="tavurl" size="42" placeholder="Community card PNG URL (Tavern V2/V3)"><button type="submit">Import card</button></form></div>
 <div class="card"><h3>Export ours <span class="muted">take Ralph anywhere Tavern-compatible</span></h3>
 <div class="row" id="exports"></div></div>
@@ -59,7 +61,7 @@ async function matchup(){const d=await api('GET','/api/arena/matchup');if(d.erro
 M=d;$('duel').innerHTML=cage(d.a,'A')+cage(d.b,'B');$('mstatus').textContent='';}
 async function vote(w){if(!M)return;const d=await api('POST','/api/arena/vote',{match_id:M.match_id,a_id:M.a.id,b_id:M.b.id,winner_id:w==='A'?M.a.id:M.b.id,voter_id:voter()});
 if(d.error){$('mstatus').textContent=d.error;return;}
-$('mstatus').textContent=`Elo → A ${d.a_elo} · B ${d.b_elo}`;board();theories();matchup();}
+$('mstatus').textContent=`Elo → A ${d.a_elo} · B ${d.b_elo}`;cheer();board();theories();matchup();}
 $('voteA').onclick=()=>vote('A');$('voteB').onclick=()=>vote('B');$('skip').onclick=matchup;
 let GF='all';
 function voter(){let v=null;try{v=localStorage.getItem('arena_voter');if(!v){v='v_'+Math.random().toString(36).slice(2,10);localStorage.setItem('arena_voter',v);}}catch(e){v='anon';}return v||'anon';}
