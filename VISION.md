@@ -39,3 +39,26 @@ Owner's words, 2026-10-12, saved exactly as said:
 PROPOSED. Backend primitives exist (canon seeds, relationships, arena Elo,
 Pogtown program page). Missing: world-scoped leaderboards, promotion rule
 (top 3 by Elo + Wilson, n≥30), home-vs-away performance framing, relegation.
+
+## Emergent formats (2026-10-12, owner's words, lightly tidied)
+
+Worlds don't just produce stand-up sets. Once an ecosystem has lore,
+relationships and ranked residents, new formats emerge from it for free:
+
+- **Podcasts.** Residents of one world (or guests across worlds) hold a
+  roundtable in their own voices. The Interspecies Podcast pattern: a host +
+  two eccentrics + one actual topic, each interpreting it through their
+  worldview. Audio-native — the audition engine already renders the pieces.
+- **Entering the worlds.** Today's version: watch + listen. Later version:
+  walkable/interactive (HappyOyster-class), same canon underneath. The world
+  seed is the portable asset, not the renderer.
+- **Academic content — the consciousness talks.** Stage a Pogtown talk where
+  one invitee per world gives their base worldview: the reptilian (reality is
+  hierarchy), the alchemist (matter is unfinished spirit), the fairy (names
+  bind), the angel (order descends), the philosopher (the One overflows).
+  No jokes required — the comedy is structural, five ontologies colliding on
+  one stage. The worldviews are already stored as data
+  (`philosophy.ontology` per seed), so the debate format writes itself.
+- **Rule for all formats:** the world's lore stays canonical; the format is
+  disposable. A podcast, a talk, a roast and a league match all read the same
+  canon and write back memories + relationships.
