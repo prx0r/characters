@@ -1,0 +1,193 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sir Winston Pickles 1 Gemini — Ralph Stage Lab</title>
+<style>
+html,body{margin:0;height:100%;background:#000;color:#eee;font-family:system-ui,sans-serif}
+#wrap{display:flex;flex-direction:column;height:100vh}
+#stagebox{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+background:radial-gradient(circle at 50% 30%,#2b2010,#000 72%)}
+#stagebox svg{width:min(70vh,90vw);max-height:90vh}
+#hud{position:absolute;top:10px;left:12px;font-size:12px;color:#aaa;z-index:2}
+#seg{position:absolute;top:10px;right:12px;font-size:12px;color:#facc15;text-align:right;max-width:45%}
+#emotion{position:absolute;bottom:12px;left:12px;font-size:14px;color:#facc15}
+#beat{position:absolute;bottom:12px;right:12px;font-size:12px;color:#888}
+#bar{height:4px;background:#333;position:relative}
+#barfill{height:100%;background:#facc15;width:0%}
+#ctrl{padding:8px 12px;display:flex;gap:10px;align-items:center;background:#111}
+#ctrl button{background:#222;color:#eee;border:1px solid #555;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:14px}
+#ctrl button:hover{background:#333}
+#ctrl input[type=range]{flex:1}
+#meta{font-size:11px;color:#666;padding:0 12px 8px}
+#anger{color:#f87171;font-size:12px;padding:4px 12px;display:none}
+</style></head><body>
+<div id="wrap">
+<div id="stagebox">
+<div id="hud">Stage Lab · Ralph</div>
+<div id="seg"></div>
+<svg viewBox="0 0 220 300" style="background:transparent">
+<defs><linearGradient id="spot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffdf9e" stop-opacity=".28"/><stop offset="1" stop-color="#ffdf9e" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="0" width="26" height="300" fill="#5b1414"/><rect x="194" y="0" width="26" height="300" fill="#5b1414"/>
+<rect x="22" y="0" width="6" height="300" fill="#3d0d0d"/><rect x="192" y="0" width="6" height="300" fill="#3d0d0d"/>
+<polygon points="70,0 150,0 190,300 30,300" fill="url(#spot)"/>
+<rect x="0" y="252" width="220" height="48" fill="#151020"/>
+<ellipse cx="110" cy="278" rx="60" ry="10" fill="#000" opacity=".5"/>
+<text class="CAMT" x="30" y="18" fill="#999" font-size="12">medium</text>
+<g class="PB"><rect class="SUIT" x="60" y="170" width="100" height="100" rx="14" fill="#2b3440"/><rect x="100" y="170" width="20" height="100" fill="#e8e4d8"/><polygon points="110,185 118,205 110,235 102,205" fill="#7c1f1f"/></g>
+<g class="PH"><ellipse class="SKIN" cx="110" cy="120" rx="52" ry="58" fill="#6b8f5e"/><ellipse cx="110" cy="120" rx="52" ry="58" fill="none" stroke="#2c3a26" stroke-width="3"/>
+<rect class="BL" x="70" y="82" width="30" height="7" rx="3" fill="#2c3a26"/><rect class="BR" x="120" y="82" width="30" height="7" rx="3" fill="#2c3a26"/>
+<ellipse cx="85" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PL" cx="85" cy="113" rx="5" ry="9" fill="#111"/>
+<ellipse cx="135" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PR" cx="135" cy="113" rx="5" ry="9" fill="#111"/>
+<ellipse class="MO" cx="110" cy="160" rx="16" ry="5" fill="#1a0f0f"/></g>
+<g class="MIC"><rect x="107" y="205" width="6" height="75" rx="3" fill="#0c0c0c"/><ellipse cx="110" cy="282" rx="16" ry="4" fill="#0c0c0c"/><circle cx="110" cy="196" r="13" fill="#1f2937"/><circle cx="110" cy="196" r="13" fill="none" stroke="#4b5563" stroke-width="2"/></g>
+<text class="EX" x="110" y="294" text-anchor="middle" fill="#facc15" font-size="14">deadpan</text></svg>
+<div id="emotion">—</div>
+<div id="beat">—</div>
+</div>
+<div id="bar"><div id="barfill"></div></div>
+<div id="ctrl">
+<button id="play">▶ Play</button>
+<input type="range" id="scrub" min="0" max="17000" value="0">
+<span id="clock" style="font-size:12px;color:#aaa;min-width:70px">0:00 / 0:17</span>
+</div>
+<div id="anger"></div>
+<div id="meta">Sir Winston Pickles 1 Gemini · 19 events · 5 segments</div>
+</div>
+<script>
+const EVENTS=[{"t": 0, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.7}, {"t": 0, "kind": "lights", "id": "house_up"}, {"t": 400, "kind": "enter", "from": "stage_left"}, {"t": 400, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 1200, "kind": "camera", "id": "medium"}, {"t": 1200, "kind": "speak_start"}, {"t": 2800, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.75}, {"t": 3100, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 8000, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.8}, {"t": 11200, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.95}, {"t": 11500, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 13800, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.9}, {"t": 13800, "kind": "hold", "ms": 1200, "note": "punchline stillness"}, {"t": 14100, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 14200, "kind": "gesture", "id": "eye_glitch", "intensity": 1.0}, {"t": 14600, "kind": "camera", "id": "closeup"}, {"t": 15600, "kind": "camera", "id": "medium"}, {"t": 16600, "kind": "camera", "id": "wide"}, {"t": 17000, "kind": "exit", "to": "stage_left"}];
+const GEM={"segments": [{"t0": 0.0, "t1": 2.8, "emotion": "deadpan", "beat_type": "premise", "text_hint": "Calm, conversational Northern English tone"}, {"t0": 2.8, "t1": 8.0, "emotion": "deadpan", "beat_type": "setup", "text_hint": "Measured, serious tone mimicking charity appeal commercials"}, {"t0": 8.0, "t1": 11.2, "emotion": "deadpan", "beat_type": "escalation", "text_hint": "Conversational casualness contrasting with impending consequence"}, {"t0": 11.2, "t1": 13.8, "emotion": "deadpan", "beat_type": "punchline", "text_hint": "Understated, cold, matter-of-fact tone"}, {"t0": 13.8, "t1": 17.0, "emotion": "deadpan", "beat_type": "button", "text_hint": "Silence during roaring audience laughter"}], "anger": {"present": false, "type": "none", "body_signature": [], "face_signature": [], "vocal_signature": [], "target": "none", "release_or_withhold": "withhold", "contrast_before_after": "No anger present; joke relies on clinical, unflinching lack of emotion in the face of tragic loss."}, "overall": {"energy_arc": "Steady, melancholic, low-energy deadpan delivery contrasting with shocking dark humor punchline.", "dominant_emotion": "deadpan", "dominant_emotion_intensity": 0.85, "stage_presence": "Morbid clown persona with solemn physical stillness and restrained phrasing."}};
+const VISEMES=[{"t": 0, "shape": "closed", "word": ""}, {"t": 83, "shape": "E", "word": ""}, {"t": 150, "shape": "closed", "word": ""}, {"t": 216, "shape": "E", "word": ""}, {"t": 250, "shape": "closed", "word": ""}, {"t": 300, "shape": "E", "word": ""}, {"t": 366, "shape": "MBP", "word": ""}, {"t": 400, "shape": "E", "word": ""}, {"t": 433, "shape": "MBP", "word": ""}, {"t": 483, "shape": "AI", "word": ""}, {"t": 566, "shape": "MBP", "word": ""}, {"t": 616, "shape": "AI", "word": ""}, {"t": 683, "shape": "E", "word": ""}, {"t": 733, "shape": "AI", "word": ""}, {"t": 966, "shape": "E", "word": ""}, {"t": 1050, "shape": "AI", "word": ""}, {"t": 1166, "shape": "E", "word": ""}, {"t": 1833, "shape": "U", "word": ""}, {"t": 1866, "shape": "E", "word": ""}, {"t": 1933, "shape": "O", "word": ""}, {"t": 1983, "shape": "E", "word": ""}, {"t": 2016, "shape": "U", "word": ""}, {"t": 2183, "shape": "MBP", "word": ""}, {"t": 2400, "shape": "AI", "word": ""}, {"t": 2500, "shape": "E", "word": ""}, {"t": 2533, "shape": "FV", "word": ""}, {"t": 2733, "shape": "E", "word": ""}, {"t": 2800, "shape": "AI", "word": ""}, {"t": 2833, "shape": "MBP", "word": ""}, {"t": 3016, "shape": "E", "word": ""}, {"t": 3033, "shape": "AI", "word": ""}, {"t": 3083, "shape": "E", "word": ""}, {"t": 3133, "shape": "AI", "word": ""}, {"t": 3183, "shape": "MBP", "word": ""}, {"t": 3366, "shape": "AI", "word": ""}, {"t": 3533, "shape": "E", "word": ""}, {"t": 3583, "shape": "AI", "word": ""}, {"t": 3600, "shape": "E", "word": ""}, {"t": 3700, "shape": "AI", "word": ""}, {"t": 3850, "shape": "U", "word": ""}, {"t": 3983, "shape": "AI", "word": ""}, {"t": 4000, "shape": "U", "word": ""}, {"t": 4050, "shape": "E", "word": ""}, {"t": 4183, "shape": "AI", "word": ""}, {"t": 4200, "shape": "E", "word": ""}, {"t": 5083, "shape": "O", "word": ""}, {"t": 5233, "shape": "AI", "word": ""}, {"t": 5500, "shape": "E", "word": ""}, {"t": 5733, "shape": "FV", "word": ""}, {"t": 5966, "shape": "U", "word": ""}, {"t": 5983, "shape": "FV", "word": ""}, {"t": 6016, "shape": "AI", "word": ""}, {"t": 6033, "shape": "U", "word": ""}, {"t": 6083, "shape": "AI", "word": ""}, {"t": 6116, "shape": "O", "word": ""}, {"t": 6133, "shape": "AI", "word": ""}, {"t": 6183, "shape": "O", "word": ""}, {"t": 6300, "shape": "FV", "word": ""}, {"t": 6350, "shape": "AI", "word": ""}, {"t": 6400, "shape": "FV", "word": ""}, {"t": 6533, "shape": "AI", "word": ""}, {"t": 6566, "shape": "FV", "word": ""}, {"t": 6583, "shape": "AI", "word": ""}, {"t": 6633, "shape": "U", "word": ""}, {"t": 6816, "shape": "E", "word": ""}, {"t": 6900, "shape": "AI", "word": ""}, {"t": 6933, "shape": "E", "word": ""}, {"t": 7066, "shape": "AI", "word": ""}, {"t": 7083, "shape": "E", "word": ""}, {"t": 7150, "shape": "AI", "word": ""}, {"t": 7200, "shape": "E", "word": ""}, {"t": 7233, "shape": "AI", "word": ""}, {"t": 7283, "shape": "E", "word": ""}, {"t": 7333, "shape": "AI", "word": ""}, {"t": 7350, "shape": "E", "word": ""}, {"t": 7416, "shape": "AI", "word": ""}, {"t": 7450, "shape": "E", "word": ""}, {"t": 7483, "shape": "U", "word": ""}, {"t": 7500, "shape": "AI", "word": ""}, {"t": 7533, "shape": "E", "word": ""}, {"t": 7566, "shape": "U", "word": ""}, {"t": 7616, "shape": "AI", "word": ""}, {"t": 7633, "shape": "U", "word": ""}, {"t": 7666, "shape": "AI", "word": ""}, {"t": 8066, "shape": "U", "word": ""}, {"t": 8183, "shape": "E", "word": ""}, {"t": 8200, "shape": "U", "word": ""}, {"t": 8233, "shape": "E", "word": ""}, {"t": 8283, "shape": "AI", "word": ""}, {"t": 8316, "shape": "E", "word": ""}, {"t": 8383, "shape": "AI", "word": ""}, {"t": 8433, "shape": "E", "word": ""}, {"t": 8533, "shape": "AI", "word": ""}, {"t": 8566, "shape": "E", "word": ""}, {"t": 9283, "shape": "AI", "word": ""}, {"t": 9300, "shape": "E", "word": ""}, {"t": 9683, "shape": "O", "word": ""}, {"t": 9766, "shape": "E", "word": ""}, {"t": 10183, "shape": "AI", "word": ""}, {"t": 10200, "shape": "U", "word": ""}, {"t": 10283, "shape": "AI", "word": ""}, {"t": 10466, "shape": "O", "word": ""}, {"t": 10483, "shape": "AI", "word": ""}, {"t": 10516, "shape": "O", "word": ""}, {"t": 10650, "shape": "AI", "word": ""}, {"t": 10700, "shape": "E", "word": ""}, {"t": 10716, "shape": "AI", "word": ""}, {"t": 10766, "shape": "E", "word": ""}, {"t": 10933, "shape": "AI", "word": ""}, {"t": 10983, "shape": "O", "word": ""}, {"t": 11083, "shape": "AI", "word": ""}, {"t": 11166, "shape": "E", "word": ""}, {"t": 11216, "shape": "MBP", "word": ""}, {"t": 11350, "shape": "AI", "word": ""}, {"t": 11383, "shape": "MBP", "word": ""}, {"t": 11400, "shape": "AI", "word": ""}, {"t": 11516, "shape": "O", "word": ""}, {"t": 11550, "shape": "AI", "word": ""}, {"t": 11600, "shape": "E", "word": ""}, {"t": 11716, "shape": "U", "word": ""}, {"t": 11733, "shape": "AI", "word": ""}, {"t": 11883, "shape": "E", "word": ""}, {"t": 11916, "shape": "AI", "word": ""}, {"t": 11950, "shape": "E", "word": ""}, {"t": 12000, "shape": "AI", "word": ""}, {"t": 12033, "shape": "E", "word": ""}, {"t": 12116, "shape": "AI", "word": ""}, {"t": 12150, "shape": "MBP", "word": ""}, {"t": 12450, "shape": "E", "word": ""}, {"t": 12583, "shape": "AI", "word": ""}, {"t": 12700, "shape": "E", "word": ""}, {"t": 12883, "shape": "MBP", "word": ""}, {"t": 12916, "shape": "E", "word": ""}, {"t": 12933, "shape": "MBP", "word": ""}, {"t": 13050, "shape": "AI", "word": ""}, {"t": 13083, "shape": "MBP", "word": ""}, {"t": 13133, "shape": "U", "word": ""}, {"t": 13166, "shape": "AI", "word": ""}, {"t": 13233, "shape": "U", "word": ""}, {"t": 13266, "shape": "AI", "word": ""}, {"t": 13300, "shape": "U", "word": ""}, {"t": 13333, "shape": "MBP", "word": ""}, {"t": 13566, "shape": "AI", "word": ""}, {"t": 13600, "shape": "MBP", "word": ""}, {"t": 13633, "shape": "E", "word": ""}, {"t": 13683, "shape": "O", "word": ""}, {"t": 13716, "shape": "AI", "word": ""}, {"t": 13766, "shape": "U", "word": ""}, {"t": 13783, "shape": "AI", "word": ""}, {"t": 13833, "shape": "U", "word": ""}, {"t": 13900, "shape": "E", "word": ""}, {"t": 14133, "shape": "AI", "word": ""}, {"t": 14183, "shape": "E", "word": ""}, {"t": 14216, "shape": "AI", "word": ""}, {"t": 14233, "shape": "E", "word": ""}, {"t": 14250, "shape": "O", "word": ""}, {"t": 14316, "shape": "AI", "word": ""}, {"t": 14416, "shape": "U", "word": ""}, {"t": 14433, "shape": "AI", "word": ""}, {"t": 14500, "shape": "U", "word": ""}, {"t": 14550, "shape": "AI", "word": ""}, {"t": 14583, "shape": "E", "word": ""}, {"t": 14750, "shape": "O", "word": ""}, {"t": 14900, "shape": "MBP", "word": ""}, {"t": 15133, "shape": "U", "word": ""}, {"t": 15283, "shape": "E", "word": ""}, {"t": 15616, "shape": "AI", "word": ""}, {"t": 15666, "shape": "E", "word": ""}, {"t": 15700, "shape": "AI", "word": ""}, {"t": 15833, "shape": "O", "word": ""}, {"t": 15850, "shape": "E", "word": ""}, {"t": 15883, "shape": "O", "word": ""}, {"t": 16033, "shape": "E", "word": ""}, {"t": 16149, "shape": "AI", "word": ""}, {"t": 16200, "shape": "E", "word": ""}, {"t": 16350, "shape": "AI", "word": ""}, {"t": 16400, "shape": "closed", "word": ""}, {"t": 16450, "shape": "AI", "word": ""}, {"t": 16500, "shape": "E", "word": ""}, {"t": 16550, "shape": "AI", "word": ""}, {"t": 16566, "shape": "E", "word": ""}, {"t": 16600, "shape": "closed", "word": ""}];
+const DUR=17000;
+let playing=false, t0=0, tpos=0, raf=null, visIdx=0;
+
+const q=s=>document.querySelector(s);
+function apply(ev){
+  const kind=ev.kind, id=ev.id||'';
+  if(kind==='expression'){
+    q('.EX').textContent=id;
+    const mad=id==='annoyed';
+    q('.BL').setAttribute('transform',mad?'rotate(-12 85 85)':'');
+    q('.BR').setAttribute('transform',mad?'rotate(12 135 85)':'');
+    const mo=q('.MO');
+    if(id==='surprised'){mo.setAttribute('ry','10');mo.setAttribute('cy','158');}
+    else if(id==='deadpan'){mo.setAttribute('ry','4');mo.setAttribute('cy','160');}
+    else{mo.setAttribute('ry','5');mo.setAttribute('cy','160');}
+  }
+  else if(kind==='camera'){
+    const t=q('.CAMT'); if(t)t.textContent=id;
+    const sc={wide:.85,medium:1,closeup:1.35,pushin:1.2}[id]||1;
+    q('.PH').setAttribute('transform',`translate(110 120) scale(${sc}) translate(-110 -120)`);
+  }
+  else if(kind==='gesture'){
+    if(id==='eye_glitch'){
+      ['.PL','.PR'].forEach(s=>{q(s).setAttribute('rx','2');q(s).setAttribute('fill','#b91c1c');});
+      q('.EX').textContent='SLIT.';
+      setTimeout(()=>['.PL','.PR'].forEach(s=>{q(s).setAttribute('rx','5');q(s).setAttribute('fill','#111');}),900);
+    }
+    if(id==='suit_adjust'){
+      q('.PB').setAttribute('transform','translate(-6 0)');
+      setTimeout(()=>q('.PB').setAttribute('transform','translate(6 0)'),250);
+      setTimeout(()=>q('.PB').setAttribute('transform',''),600);
+    }
+    if(id==='warm_rock_lean'){
+      q('.PH').setAttribute('transform','translate(0 20)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),1400);
+    }
+    if(id==='head_tilt'){
+      q('.PH').setAttribute('transform','rotate(8 110 120)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),700);
+    }
+    if(id==='lean_forward'){
+      q('.PH').setAttribute('transform','translate(0 14)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),900);
+    }
+    if(id==='small_shrug'){
+      q('.PB').setAttribute('transform','translate(0 -8)');
+      setTimeout(()=>q('.PB').setAttribute('transform',''),650);
+    }
+  }
+  else if(kind==='hold'){
+    q('.EX').textContent='…';
+  }
+  else if(kind==='speak_start'){
+    /* vocal info from segment */
+  }
+}
+
+function segAt(ms){
+  return (GEM.segments||[]).find(s=>ms>=s.t0*1000 && ms<s.t1*1000);
+}
+
+// Ralph mouth shape → SVG ellipse params (ry, rx, cy)
+const MOUTH={closed:[3,14,160],rest:[5,16,160],AI:[12,18,158],E:[8,17,159],
+  O:[10,12,159],U:[7,10,160],FV:[4,15,160],L:[7,15,159],MBP:[2,13,160],open:[14,20,157]};
+function applyViseme(ms){
+  if(!VISEMES.length)return;
+  // binary search for current viseme
+  let lo=0,hi=VISEMES.length-1,cur=VISEMES[0];
+  while(lo<=hi){
+    const mid=(lo+hi)>>1;
+    if(VISEMES[mid].t<=ms){cur=VISEMES[mid];lo=mid+1;}
+    else hi=mid-1;
+  }
+  const p=MOUTH[cur.shape]||MOUTH.rest;
+  const mo=q('.MO');
+  if(mo){
+    mo.setAttribute('ry',p[0]);
+    mo.setAttribute('rx',p[1]);
+    mo.setAttribute('cy',p[2]);
+  }
+}
+
+function tick(){
+  if(!playing)return;
+  tpos = performance.now()-t0;
+  if(tpos>=DUR){tpos=DUR;stop();}
+  q('#barfill').style.width=(tpos/DUR*100)+'%';
+  q('#scrub').value=tpos;
+  const secs=Math.floor(tpos/1000);
+  q('#clock').textContent=`${Math.floor(secs/60)}:${String(secs%60).padStart(2,'0')} / ${Math.floor(DUR/60000)}:${String(Math.floor(DUR/1000)%60).padStart(2,'0')}`;
+  // fire events whose t <= tpos
+  for(const ev of EVENTS){
+    if(ev._f)continue;
+    if(ev.t<=tpos){ev._f=1;apply(ev);}
+  }
+  // viseme mouth animation
+  applyViseme(tpos);
+  // current segment HUD
+  const seg=segAt(tpos);
+  if(seg){
+    q('#emotion').textContent=seg.emotion||'—';
+    q('#beat').textContent=seg.beat_type||'—';
+    q('#seg').textContent=(seg.text_hint||'').slice(0,80);
+  }
+  raf=requestAnimationFrame(tick);
+}
+function play(){
+  playing=true;
+  // reset one-shots
+  EVENTS.forEach(e=>e._f=0);
+  t0=performance.now()-tpos;
+  q('#play').textContent='⏸ Pause';
+  raf=requestAnimationFrame(tick);
+}
+function stop(){
+  playing=false;cancelAnimationFrame(raf);
+  q('#play').textContent='▶ Play';
+}
+q('#play').onclick=()=>playing?stop():play();
+q('#scrub').oninput=e=>{
+  tpos=+e.target.value;
+  EVENTS.forEach(e=>e._f=0);
+  for(const ev of EVENTS){if(ev.t<=tpos){ev._f=1;apply(ev);}}
+  applyViseme(tpos);
+  q('#barfill').style.width=(tpos/DUR*100)+'%';
+};
+// anger banner
+const ang=GEM.anger||{};
+if(ang.present){
+  const el=q('#anger');
+  el.style.display='block';
+  el.textContent=`anger: ${ang.type} — ${(ang.body_signature||[]).join('; ')}`;
+}
+</script></body></html>

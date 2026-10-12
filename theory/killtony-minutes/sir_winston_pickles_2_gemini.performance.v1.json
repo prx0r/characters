@@ -1,0 +1,143 @@
+{
+  "version": "performance.v1",
+  "source": "sir_winston_pickles_2_gemini",
+  "method": "gemini-3.8-flash_video",
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "intensity": 0.9
+    },
+    {
+      "t": 0.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 0.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 0.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.4,
+        "pitch_shift": "flat",
+        "pace": "slow",
+        "beat_type": "setup"
+      }
+    },
+    {
+      "t": 7.5,
+      "kind": "expression",
+      "value": "deadpan",
+      "intensity": 0.85
+    },
+    {
+      "t": 7.5,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 7.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 7.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.45,
+        "pitch_shift": "flat",
+        "pace": "slow",
+        "beat_type": "escalation"
+      }
+    },
+    {
+      "t": 16.5,
+      "kind": "expression",
+      "value": "deadpan",
+      "intensity": 1.0
+    },
+    {
+      "t": 16.5,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 16.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 16.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.5,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "beat_type": "punchline"
+      }
+    },
+    {
+      "t": 16.55,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 23.5,
+      "kind": "expression",
+      "value": "deadpan",
+      "intensity": 0.95
+    },
+    {
+      "t": 23.5,
+      "kind": "gesture",
+      "value": "hold still"
+    },
+    {
+      "t": 23.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 23.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.0,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "beat_type": "button"
+      }
+    }
+  ],
+  "n_events": 17,
+  "meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 33.8,
+    "clip_mb": 1.7,
+    "usage": {
+      "promptTokenCount": 3449,
+      "candidatesTokenCount": 1533,
+      "totalTokenCount": 5194,
+      "promptTokensDetails": [
+        {
+          "modality": "VIDEO",
+          "tokenCount": 2821
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 212,
+      "serviceTier": "standard"
+    }
+  }
+}

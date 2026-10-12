@@ -1,0 +1,67 @@
+{
+  "id": "sir_winston_pickles_1",
+  "video": "/home/box/comedy_sets/shorts/sir_winston_pickles_1.mp4",
+  "extracted_at": "2026-10-12T22:10:47+0700",
+  "mediapipe": {
+    "fps_sampled": 12.0,
+    "source_fps": 24.0,
+    "n_frames": 0,
+    "duration_s": 0
+  },
+  "numeric_windows": [],
+  "audio_pass": {},
+  "frames_pass": {},
+  "anger_focus": {
+    "n_anger_windows": 0,
+    "n_baseline_windows": 0,
+    "anger_segments": [],
+    "anger_vs_baseline": {
+      "brow_mean": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      },
+      "brow_range": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      },
+      "mouth_open_max": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      },
+      "mouth_wide_max": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      },
+      "lean_x_mean": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      },
+      "lean_x_range": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      },
+      "arm_open_mean": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      },
+      "shoulder_tilt_abs": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      },
+      "hand_face_right_min": {
+        "anger": null,
+        "baseline": null,
+        "delta": null
+      }
+    },
+    "visual_signature": null
+  }
+}

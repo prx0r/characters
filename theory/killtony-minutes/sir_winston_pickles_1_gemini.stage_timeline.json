@@ -1,0 +1,119 @@
+{
+  "schema": "performance.v1",
+  "source": "sir_winston_pickles_1_gemini",
+  "method": "gemini\u2192ralph_rig",
+  "audio_duration_ms": 17000,
+  "events": [
+    {
+      "t": 0,
+      "kind": "expression",
+      "id": "deadpan",
+      "source_emotion": "deadpan",
+      "intensity": 0.7
+    },
+    {
+      "t": 0,
+      "kind": "lights",
+      "id": "house_up"
+    },
+    {
+      "t": 400,
+      "kind": "enter",
+      "from": "stage_left"
+    },
+    {
+      "t": 400,
+      "kind": "gesture",
+      "id": "small_shrug",
+      "intensity": 0.5
+    },
+    {
+      "t": 1200,
+      "kind": "camera",
+      "id": "medium"
+    },
+    {
+      "t": 1200,
+      "kind": "speak_start"
+    },
+    {
+      "t": 2800,
+      "kind": "expression",
+      "id": "deadpan",
+      "source_emotion": "deadpan",
+      "intensity": 0.75
+    },
+    {
+      "t": 3100,
+      "kind": "gesture",
+      "id": "head_tilt",
+      "intensity": 0.6
+    },
+    {
+      "t": 8000,
+      "kind": "expression",
+      "id": "deadpan",
+      "source_emotion": "deadpan",
+      "intensity": 0.8
+    },
+    {
+      "t": 11200,
+      "kind": "expression",
+      "id": "deadpan",
+      "source_emotion": "deadpan",
+      "intensity": 0.95
+    },
+    {
+      "t": 11500,
+      "kind": "gesture",
+      "id": "head_tilt",
+      "intensity": 0.6
+    },
+    {
+      "t": 13800,
+      "kind": "expression",
+      "id": "deadpan",
+      "source_emotion": "deadpan",
+      "intensity": 0.9
+    },
+    {
+      "t": 13800,
+      "kind": "hold",
+      "ms": 1200,
+      "note": "punchline stillness"
+    },
+    {
+      "t": 14100,
+      "kind": "gesture",
+      "id": "head_tilt",
+      "intensity": 0.6
+    },
+    {
+      "t": 14200,
+      "kind": "gesture",
+      "id": "eye_glitch",
+      "intensity": 1.0
+    },
+    {
+      "t": 14600,
+      "kind": "camera",
+      "id": "closeup"
+    },
+    {
+      "t": 15600,
+      "kind": "camera",
+      "id": "medium"
+    },
+    {
+      "t": 16600,
+      "kind": "camera",
+      "id": "wide"
+    },
+    {
+      "t": 17000,
+      "kind": "exit",
+      "to": "stage_left"
+    }
+  ],
+  "n_events": 19
+}

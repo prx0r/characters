@@ -1,0 +1,202 @@
+{
+  "speaker_guess": "Deadpan Clown / Kill Tony Comedian",
+  "overall": {
+    "energy_arc": "Consistently low, somber, and ultra-deadpan build-up exploding into massive audience and panel laughter upon punchline delivery",
+    "dominant_emotion": "deadpan",
+    "dominant_emotion_intensity": 0.95,
+    "stage_presence": "Morose theatrical stillness, precise robotic/melodramatic posture contrasting with pitch-black comedic misdirection"
+  },
+  "segments": [
+    {
+      "t0": 0.0,
+      "t1": 7.5,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.9,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.2,
+        "head": "tilt_right",
+        "arms": "gesture_out",
+        "face": "deadpan",
+        "brow": "furrowed",
+        "micro_gesture": "holding framed photo upright for the audience to inspect"
+      },
+      "comedy": {
+        "beat_type": "setup",
+        "gtvh_operators": [
+          "Target",
+          "Situation"
+        ],
+        "status_move": "flat",
+        "note": "Establishes a sentimental, charitable context with sincere and somber tone"
+      },
+      "vocal": {
+        "energy": 0.4,
+        "pitch_shift": "flat",
+        "pace": "slow",
+        "emphasis_words": [
+          "Kwame",
+          "little"
+        ],
+        "note": "Subdued, melancholic, low-timbered clown voice"
+      }
+    },
+    {
+      "t0": 7.5,
+      "t1": 16.5,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.85,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.0,
+        "head": "nod",
+        "arms": "gesture_out",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "slight wrist twist while gesturing with gloved hand"
+      },
+      "comedy": {
+        "beat_type": "escalation",
+        "gtvh_operators": [
+          "Exaggeration",
+          "Situation"
+        ],
+        "status_move": "up",
+        "note": "Lays down specifics of sponsorship to reinforce moral virtue"
+      },
+      "vocal": {
+        "energy": 0.45,
+        "pitch_shift": "flat",
+        "pace": "slow",
+        "emphasis_words": [
+          "three years",
+          "99 cents"
+        ],
+        "note": "Evenly paced, matter-of-fact recital"
+      }
+    },
+    {
+      "t0": 16.5,
+      "t1": 23.5,
+      "emotion": "deadpan",
+      "emotion_intensity": 1.0,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.15,
+        "head": "neutral",
+        "arms": "mic_point",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "abrupt flat gaze right into audience without blinking"
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "Opposites",
+          "Sudden Disruption",
+          "Dark Humor"
+        ],
+        "status_move": "reversal",
+        "note": "Brutal, blunt twist attributing child's death directly to an expired credit card"
+      },
+      "vocal": {
+        "energy": 0.5,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "emphasis_words": [
+          "expired",
+          "dead"
+        ],
+        "note": "Cold, definitive cadence on 'He's dead'"
+      }
+    },
+    {
+      "t0": 23.5,
+      "t1": 30.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.95,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.0,
+        "head": "neutral",
+        "arms": "sides",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "maintaining stoic frozen expression while room falls apart laughing"
+      },
+      "comedy": {
+        "beat_type": "button",
+        "gtvh_operators": [
+          "Situation"
+        ],
+        "status_move": "flat",
+        "note": "Holds deadpan clown character through roaring laughter and applause"
+      },
+      "vocal": {
+        "energy": 0.0,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "emphasis_words": [],
+        "note": "Complete silence, allowing audience laughter to peak"
+      }
+    }
+  ],
+  "gesture_library": [
+    {
+      "name": "photo_presentation",
+      "t_guess": 3.0,
+      "duration_est_s": 4.0,
+      "body_params": {
+        "lean": 0.2,
+        "head_deg": 10.0,
+        "arm_open": 0.5,
+        "brow": 0.3
+      },
+      "emotion_tag": "deadpan"
+    },
+    {
+      "name": "stone_still_punchline_hold",
+      "t_guess": 22.0,
+      "duration_est_s": 5.0,
+      "body_params": {
+        "lean": 0.1,
+        "head_deg": 0.0,
+        "arm_open": 0.2,
+        "brow": 0.0
+      },
+      "emotion_tag": "deadpan"
+    }
+  ],
+  "anger_analysis": {
+    "present": false,
+    "type": "none",
+    "body_signature": [],
+    "face_signature": [],
+    "vocal_signature": [],
+    "target": "none",
+    "release_or_withhold": "withhold",
+    "contrast_before_after": "No anger present; effect relies purely on hyper-calm, unflinching dark deadpan delivery."
+  },
+  "_meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 33.8,
+    "clip_mb": 1.7,
+    "usage": {
+      "promptTokenCount": 3449,
+      "candidatesTokenCount": 1533,
+      "totalTokenCount": 5194,
+      "promptTokensDetails": [
+        {
+          "modality": "VIDEO",
+          "tokenCount": 2821
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 212,
+      "serviceTier": "standard"
+    }
+  }
+}
