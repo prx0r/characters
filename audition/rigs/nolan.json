@@ -1,0 +1,66 @@
+{
+ "character_id": "no_nose_nolan",
+ "expressions": [
+  "confident",
+  "confused",
+  "defensive",
+  "smug",
+  "surprised"
+ ],
+ "gestures": [
+  "blink",
+  "head_tilt",
+  "lean_forward",
+  "look_audience",
+  "look_away",
+  "small_shrug"
+ ],
+ "mouth_shapes": [
+  "closed",
+  "rest",
+  "AI",
+  "E",
+  "O",
+  "U",
+  "FV",
+  "L",
+  "MBP",
+  "open"
+ ],
+ "movement_rules": [
+  "moves MORE than Ralph (movement 0.75)",
+  "big committed gestures to wrong conclusions",
+  "excessive eye contact"
+ ],
+ "name": "No-Nose Nolan (puppet v1)",
+ "profile": {
+  "energy": 0.7,
+  "eye_contact": 0.9,
+  "gesture_frequency": 0.7,
+  "movement": 0.75,
+  "pace": 0.95,
+  "punchline_hold_ms": 700
+ },
+ "rig_id": "nolan",
+ "rive": {
+  "artboard": "Ralph",
+  "note": "Each gesture/expression maps to a state-machine input of the same name when the .riv exists. Until then the svg block drives the Stage Lab fallback. No .riv required for timeline validity.",
+  "state_machine": "Acting",
+  "targets": [
+   "eye_glitch",
+   "suit_adjust",
+   "warm_rock_lean",
+   "head_tilt",
+   "lean_forward",
+   "small_shrug",
+   "blink"
+  ]
+ },
+ "version": "rig-v1-svg",
+ "svg": {
+  "skin": "#8a5a3b",
+  "suit": "#1f3a5f",
+  "trim": "#d4a017",
+  "accessory": "cap"
+ }
+}

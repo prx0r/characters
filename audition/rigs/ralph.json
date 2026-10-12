@@ -1,1 +1,168 @@
-{"character_id": "reptilian_ralph_middle_management", "expressions": {"annoyed": {"brow": "flat", "mouth": "thin", "note": "thermostat dispute face"}, "confident": {"brow": "high", "mouth": "smirk"}, "deadpan": {"brow": "neutral", "eyes": "half", "mouth": "flat", "note": "default register: corporate optimism"}, "embarrassed": {"brow": "raised", "eyes": "dart"}, "self_satisfied": {"brow": "high", "mouth": "smirk"}, "surprised": {"brow": "high", "eyes": "wide", "mouth": "open"}, "suspicious": {"brow": "low", "eyes": "narrow"}}, "gestures": {"blink": {"body": "hold still", "face": "neutral", "fallback": "hold still", "loop": true, "period_ms": 4200, "trigger": "idle"}, "eye_glitch": {"body": "hold still", "face": "deadpan", "fallback": "hold still", "svg": {"fx": "slit", "ms": 900}, "trigger": "after_punchline"}, "head_tilt": {"body": "head tilt", "face": "neutral", "fallback": "hold still", "svg": {"deg": 8, "ms": 700}, "trigger": "on_setup"}, "lean_forward": {"body": "lean in", "face": "neutral", "fallback": "hold still", "svg": {"dy": 14, "ms": 800}, "trigger": "on_emphasis"}, "look_audience": {"body": "hold still", "face": "deadpan", "fallback": "hold still", "trigger": "on_beat"}, "look_away": {"body": "hold still", "face": "annoyed", "fallback": "hold still", "trigger": "on_groan"}, "small_shrug": {"body": "shrug", "face": "neutral", "fallback": "hold still", "svg": {"dy": -8, "ms": 600}, "trigger": "on_tag"}, "suit_adjust": {"body": "small gesture", "face": "annoyed", "fallback": "hold still", "svg": {"fx": "tug", "ms": 700}, "trigger": "on_groan"}, "warm_rock_lean": {"body": "lean in", "face": "neutral", "fallback": "hold still", "svg": {"dy": 20, "ms": 1200}, "trigger": "before_closer"}}, "mouth_shapes": ["closed", "rest", "AI", "E", "O", "U", "FV", "L", "MBP", "open"], "movement_rules": ["moves less than Nolan (movement 0.3)", "eyes move before head turns", "hold still 1200ms after punchline", "three idle states: breathe, sway, still"], "name": "Reptilian Ralph (Rive puppet v1)", "profile": {"energy": 0.55, "eye_contact": 0.9, "gesture_frequency": 0.25, "movement": 0.3, "pace": 0.88, "punchline_hold_ms": 1200}, "rig_id": "ralph", "rive": {"artboard": "Ralph", "note": "Each gesture/expression maps to a state-machine input of the same name when the .riv exists. Until then the svg block drives the Stage Lab fallback. No .riv required for timeline validity.", "state_machine": "Acting", "targets": ["eye_glitch", "suit_adjust", "warm_rock_lean", "head_tilt", "lean_forward", "small_shrug", "blink"]}, "version": "rig-v1-svg"}
+{
+ "character_id": "reptilian_ralph_middle_management",
+ "expressions": {
+  "annoyed": {
+   "brow": "flat",
+   "mouth": "thin",
+   "note": "thermostat dispute face"
+  },
+  "confident": {
+   "brow": "high",
+   "mouth": "smirk"
+  },
+  "deadpan": {
+   "brow": "neutral",
+   "eyes": "half",
+   "mouth": "flat",
+   "note": "default register: corporate optimism"
+  },
+  "embarrassed": {
+   "brow": "raised",
+   "eyes": "dart"
+  },
+  "self_satisfied": {
+   "brow": "high",
+   "mouth": "smirk"
+  },
+  "surprised": {
+   "brow": "high",
+   "eyes": "wide",
+   "mouth": "open"
+  },
+  "suspicious": {
+   "brow": "low",
+   "eyes": "narrow"
+  }
+ },
+ "gestures": {
+  "blink": {
+   "body": "hold still",
+   "face": "neutral",
+   "fallback": "hold still",
+   "loop": true,
+   "period_ms": 4200,
+   "trigger": "idle"
+  },
+  "eye_glitch": {
+   "body": "hold still",
+   "face": "deadpan",
+   "fallback": "hold still",
+   "svg": {
+    "fx": "slit",
+    "ms": 900
+   },
+   "trigger": "after_punchline"
+  },
+  "head_tilt": {
+   "body": "head tilt",
+   "face": "neutral",
+   "fallback": "hold still",
+   "svg": {
+    "deg": 8,
+    "ms": 700
+   },
+   "trigger": "on_setup"
+  },
+  "lean_forward": {
+   "body": "lean in",
+   "face": "neutral",
+   "fallback": "hold still",
+   "svg": {
+    "dy": 14,
+    "ms": 800
+   },
+   "trigger": "on_emphasis"
+  },
+  "look_audience": {
+   "body": "hold still",
+   "face": "deadpan",
+   "fallback": "hold still",
+   "trigger": "on_beat"
+  },
+  "look_away": {
+   "body": "hold still",
+   "face": "annoyed",
+   "fallback": "hold still",
+   "trigger": "on_groan"
+  },
+  "small_shrug": {
+   "body": "shrug",
+   "face": "neutral",
+   "fallback": "hold still",
+   "svg": {
+    "dy": -8,
+    "ms": 600
+   },
+   "trigger": "on_tag"
+  },
+  "suit_adjust": {
+   "body": "small gesture",
+   "face": "annoyed",
+   "fallback": "hold still",
+   "svg": {
+    "fx": "tug",
+    "ms": 700
+   },
+   "trigger": "on_groan"
+  },
+  "warm_rock_lean": {
+   "body": "lean in",
+   "face": "neutral",
+   "fallback": "hold still",
+   "svg": {
+    "dy": 20,
+    "ms": 1200
+   },
+   "trigger": "before_closer"
+  }
+ },
+ "mouth_shapes": [
+  "closed",
+  "rest",
+  "AI",
+  "E",
+  "O",
+  "U",
+  "FV",
+  "L",
+  "MBP",
+  "open"
+ ],
+ "movement_rules": [
+  "moves less than Nolan (movement 0.3)",
+  "eyes move before head turns",
+  "hold still 1200ms after punchline",
+  "three idle states: breathe, sway, still"
+ ],
+ "name": "Reptilian Ralph (Rive puppet v1)",
+ "profile": {
+  "energy": 0.55,
+  "eye_contact": 0.9,
+  "gesture_frequency": 0.25,
+  "movement": 0.3,
+  "pace": 0.88,
+  "punchline_hold_ms": 1200
+ },
+ "rig_id": "ralph",
+ "rive": {
+  "artboard": "Ralph",
+  "note": "Each gesture/expression maps to a state-machine input of the same name when the .riv exists. Until then the svg block drives the Stage Lab fallback. No .riv required for timeline validity.",
+  "state_machine": "Acting",
+  "targets": [
+   "eye_glitch",
+   "suit_adjust",
+   "warm_rock_lean",
+   "head_tilt",
+   "lean_forward",
+   "small_shrug",
+   "blink"
+  ]
+ },
+ "version": "rig-v1-svg",
+ "svg": {
+  "skin": "#6b8f5e",
+  "suit": "#2b3440",
+  "trim": "#e8e4d8",
+  "accessory": "none"
+ }
+}

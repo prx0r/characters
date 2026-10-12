@@ -854,7 +854,7 @@ def stage_character(character_id: str):
         "rig": ({"rig_id": rig.get("rig_id"), "version": rig.get("version"),
                  "gestures": rig.get("gestures"), "expressions": rig.get("expressions"),
                  "mouth_shapes": rig.get("mouth_shapes"),
-                 "movement_rules": rig.get("movement_rules"),
+                 "movement_rules": rig.get("movement_rules"), "svg": rig.get("svg"),
                  "rive": rig.get("rive")} if rig else None),
     })
 
@@ -997,13 +997,17 @@ def arena_add():
         if conn.execute("SELECT 1 FROM arena_contenders WHERE kind=? AND ref=?", (kind, ref)).fetchone():
             return jsonify({"error": "already in the arena"}), 409
         cid = store.new_id("arena")
-        conn.execute("INSERT INTO arena_contenders (id, kind, ref, title, elo, theories, operators, created_at)"
-                     " VALUES (?,?,?,?,1500,?,?,?)",
-                     (cid, kind, ref, title, json.dumps(theories), json.dumps(operators), time.time()))
+        author = (data.get("author") or "").strip()[:40]
+        if not author:
+            # human funnier vs agent benchmarks vs characters: who made this?
+            author = "character" if kind == "audition" else "human"
+        conn.execute("INSERT INTO arena_contenders (id, kind, ref, title, elo, theories, operators, author_type, created_at)"
+                     " VALUES (?,?,?,?,1500,?,?,?,?)",
+                     (cid, kind, ref, title, json.dumps(theories), json.dumps(operators), author, time.time()))
         conn.commit()
     finally:
         conn.close()
-    return jsonify({"contender_id": cid, "kind": kind, "ref": ref, "title": title})
+    return jsonify({"contender_id": cid, "kind": kind, "ref": ref, "title": title, "author_type": author})
 
 
 @app.get("/api/arena/matchup")
@@ -1073,12 +1077,17 @@ def arena_board():
         n, w = bouts.get(c["id"], 0), wins.get(c["id"], 0)
         lo, hi = _wilson(w, n)
         board.append({"id": c["id"], "kind": c["kind"], "ref": c["ref"], "title": c["title"],
+                      "author_type": c.get("author_type") or ("character" if c["kind"] == "audition" else "human"),
                       "elo": c["elo"], "wins": w, "bouts": n,
                       "wilson_lo": round(lo, 3), "wilson_hi": round(hi, 3),
                       "significant": bool(n >= 30 and (hi < 0.5 or lo > 0.5))})
     board.sort(key=lambda r: -r["elo"])
-    return jsonify({"board": board, "votes": len(votes),
-                    "note": "crowd-ranked with uncertainty — Wilson CI; 'funniest' needs n≥30 and CI excluding 0.5"})
+    groups: dict[str, list] = {}
+    for r in board:
+        groups.setdefault(r["author_type"], []).append(r["id"])
+    return jsonify({"board": board, "votes": len(votes), "groups": groups,
+                    "note": "crowd-ranked with uncertainty — Wilson CI; 'funniest' needs n≥30 and CI excluding 0.5;"
+                            " humans, agents and characters share one ballot but keep separate tables"})
 
 
 @app.get("/api/arena/theories")
@@ -1134,12 +1143,12 @@ def arena_ai_bracket():
                 entered.append({"audition_id": aud["id"], "status": "already in"})
                 continue
             cid = store.new_id("arena")
-            conn.execute("INSERT INTO arena_contenders (id, kind, ref, title, elo, theories, operators, created_at)"
-                         " VALUES (?,?,?,?,1500,?,?,?)",
+            conn.execute("INSERT INTO arena_contenders (id, kind, ref, title, elo, theories, operators, author_type, created_at)"
+                         " VALUES (?,?,?,?,1500,?,?,?,?)",
                          (cid, "audition", aud["id"],
                           f"{aud['character_id']} · {aud['scenario_id']}",
                           json.dumps(aud.get("theory_ids") or []),
-                          json.dumps(aud.get("operator_ids") or []), time.time()))
+                          json.dumps(aud.get("operator_ids") or []), "character", time.time()))
             entered.append({"audition_id": aud["id"], "contender_id": cid, "status": "entered"})
         conn.commit()
     finally:
@@ -1155,26 +1164,49 @@ def pogtown_page():
 
 @app.get("/mp4/<aud_id>")
 def mp4_serve(aud_id: str):
-    """Real Shorts file: render-on-demand (cached), 1080x1920 + real audio."""
+    """Real Shorts file: render-on-demand, cache keyed by content versions."""
     import render as _render
+    import stage as _stage
     from pathlib import Path as _P
-    out = _P(f"/tmp/opencode/{aud_id}.mp4")
-    if not (out.exists() and out.stat().st_size > 100000):
-        conn = _conn()
-        try:
-            aud = store.get_audition(conn, aud_id)
-        finally:
-            conn.close()
-        if not aud:
-            return jsonify({"error": "unknown audition id"}), 404
+    conn = _conn()
+    try:
+        aud = store.get_audition(conn, aud_id)
+    finally:
+        conn.close()
+    if not aud:
+        return jsonify({"error": "unknown audition id"}), 404
+    rig = _stage.load_rig("ralph")  # version probe; per-character rigs resolve in render
+    try:
         import generate as _gen
-        chars = {c["id"]: c for c in _gen.list_characters()}
-        _ = chars  # portraits resolve inside render via character_id seed
+        rigs = {r["character_id"]: r["rig_id"] for r in _stage.list_rigs()}
+        chars = {c["id"]: c["id"] for c in _gen.list_characters()}
+        _ = (rig, chars)
+    except Exception:
+        rigs = {}
+    char_rig = rigs.get(aud["character_id"], "ralph")
+    rver = (_stage.load_rig(char_rig) or {}).get("version", "?")
+    dh = _stage._hash_beats(aud.get("beats") or [])
+    key = {"rig": char_rig, "rig_version": rver, "delivery": dh,
+           "renderer": "render_mp4_pil_v1"}
+    out = _P(f"/tmp/opencode/{aud_id}.mp4")
+    man = _P(f"/tmp/opencode/{aud_id}.mp4.json")
+    fresh = False
+    try:
+        fresh = (out.exists() and out.stat().st_size > 100000 and man.exists()
+                 and json.loads(man.read_text()).get("key") == key)
+    except Exception:
+        fresh = False
+    if not fresh:
+        import generate as _gen2
+        _ = _gen2
         style = {"reptilian_ralph_middle_management": "adventurer",
                  "no_nose_nolan": "personas",
-                 "rudy_dulce_hvac": "bottts"}.get(aud["character_id"], "adventurer")
+                 "rudy_dulce_hvac": "bottts",
+                 "zeus_sky_sovereign": "adventurer",
+                 "hera_queen_ledger": "lorelei"}.get(aud["character_id"], "adventurer")
         try:
             _render.render_mp4(aud, out, style=style)
+            man.write_text(json.dumps({"key": key}))
         except Exception as e:
             return jsonify({"error": f"render failed: {e}"[:300]}), 500
     return send_file(out, mimetype="video/mp4", as_attachment=False,

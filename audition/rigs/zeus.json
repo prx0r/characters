@@ -1,0 +1,65 @@
+{
+ "character_id": "zeus_sky_sovereign",
+ "expressions": [
+  "confident",
+  "annoyed",
+  "surprised",
+  "smug",
+  "deadpan"
+ ],
+ "gestures": [
+  "blink",
+  "head_tilt",
+  "lean_forward",
+  "look_audience",
+  "thunder_adjust",
+  "look_away"
+ ],
+ "mouth_shapes": [
+  "closed",
+  "rest",
+  "AI",
+  "E",
+  "O",
+  "U",
+  "FV",
+  "L",
+  "MBP",
+  "open"
+ ],
+ "movement_rules": [
+  "expansive decree gestures",
+  "deflates on audit questions"
+ ],
+ "name": "Zeus Sky Sovereign (puppet v1)",
+ "profile": {
+  "energy": 0.7,
+  "eye_contact": 0.8,
+  "gesture_frequency": 0.6,
+  "movement": 0.6,
+  "pace": 0.9,
+  "punchline_hold_ms": 1000
+ },
+ "rig_id": "zeus",
+ "rive": {
+  "artboard": "Ralph",
+  "note": "Each gesture/expression maps to a state-machine input of the same name when the .riv exists. Until then the svg block drives the Stage Lab fallback. No .riv required for timeline validity.",
+  "state_machine": "Acting",
+  "targets": [
+   "eye_glitch",
+   "suit_adjust",
+   "warm_rock_lean",
+   "head_tilt",
+   "lean_forward",
+   "small_shrug",
+   "blink"
+  ]
+ },
+ "version": "rig-v1-svg",
+ "svg": {
+  "skin": "#d9a066",
+  "suit": "#27436b",
+  "trim": "#ffd700",
+  "accessory": "bolt"
+ }
+}

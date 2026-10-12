@@ -1,0 +1,64 @@
+{
+ "character_id": "rudy_dulce_hvac",
+ "expressions": [
+  "deadpan",
+  "confused",
+  "annoyed",
+  "self_satisfied"
+ ],
+ "gestures": [
+  "blink",
+  "head_tilt",
+  "lean_forward",
+  "look_audience",
+  "look_away",
+  "small_shrug"
+ ],
+ "mouth_shapes": [
+  "closed",
+  "rest",
+  "AI",
+  "E",
+  "O",
+  "U",
+  "FV",
+  "L",
+  "MBP",
+  "open"
+ ],
+ "movement_rules": [
+  "duct-worker economy of motion",
+  "listens like a vent"
+ ],
+ "name": "Rudy Dulce HVAC (puppet v1)",
+ "profile": {
+  "energy": 0.5,
+  "eye_contact": 0.6,
+  "gesture_frequency": 0.5,
+  "movement": 0.5,
+  "pace": 0.85,
+  "punchline_hold_ms": 900
+ },
+ "rig_id": "rudy",
+ "rive": {
+  "artboard": "Ralph",
+  "note": "Each gesture/expression maps to a state-machine input of the same name when the .riv exists. Until then the svg block drives the Stage Lab fallback. No .riv required for timeline validity.",
+  "state_machine": "Acting",
+  "targets": [
+   "eye_glitch",
+   "suit_adjust",
+   "warm_rock_lean",
+   "head_tilt",
+   "lean_forward",
+   "small_shrug",
+   "blink"
+  ]
+ },
+ "version": "rig-v1-svg",
+ "svg": {
+  "skin": "#c98d5e",
+  "suit": "#3f4a3a",
+  "trim": "#9aa39a",
+  "accessory": "none"
+ }
+}
