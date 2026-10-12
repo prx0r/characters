@@ -178,6 +178,16 @@ def migrate(conn: sqlite3.Connection) -> None:
     conn.execute("""CREATE TABLE IF NOT EXISTS world_lore (
       id TEXT PRIMARY KEY, world_id TEXT NOT NULL, claim TEXT NOT NULL,
       source TEXT NOT NULL DEFAULT '', created_at REAL NOT NULL)""")
+    for _tbl, _cols in (("world_lore", (("confidence", "TEXT NOT NULL DEFAULT 'C'"),
+                                        ("status", "TEXT NOT NULL DEFAULT 'raw'"),
+                                        ("kind", "TEXT NOT NULL DEFAULT 'claim'"))),):
+        try:
+            _have = {r[1] for r in conn.execute(f"PRAGMA table_info({_tbl})").fetchall()}
+            for _col, _ddl in _cols:
+                if _col not in _have:
+                    conn.execute(f"ALTER TABLE {_tbl} ADD COLUMN {_col} {_ddl}")
+        except Exception:
+            pass
     conn.execute("""CREATE TABLE IF NOT EXISTS bands (
       band_id TEXT PRIMARY KEY, world_id TEXT NOT NULL, name TEXT NOT NULL,
       formed_at REAL NOT NULL)""")

@@ -191,5 +191,37 @@
     "note": "Egri: sociology"
   },
   "awareness": "unaware",
-  "awareness_note": "unaware failings = unearned-confidence comedy (Head); aware would be neurotic"
+  "awareness_note": "unaware failings = unearned-confidence comedy (Head); aware would be neurotic",
+  "contradictions": [
+    "apex predator who files expense reports",
+    "terrifying presence, terrified of HR",
+    "cold-blooded yet desperate for warm rocks and warmer reviews"
+  ],
+  "attention": {
+    "notices_first": [
+      "thermostat settings",
+      "cameras",
+      "who laughed"
+    ],
+    "ignores": [
+      "suffering",
+      "the break-room smell"
+    ],
+    "watched": [
+      "eyelids",
+      "elbows"
+    ]
+  },
+  "energy": {
+    "baseline": 40,
+    "floor": 15,
+    "scale": "0-80 shared with shikigami export"
+  },
+  "fired_examples": [],
+  "provenance": {
+    "seed": "seed-v1-authored",
+    "v2_added": "2026-10-12",
+    "status": "needs-review",
+    "rule": "contradictions/attention authored from pack; fired_examples measured-only, empty by design"
+  }
 }
