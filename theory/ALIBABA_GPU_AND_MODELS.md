@@ -103,3 +103,20 @@ Console: https://ecs.console.aliyun.com/ · PAI: https://pai.console.aliyun.com/
 | mock indignation | `annoyed` + `suit_adjust` | anger_flavor: mock |
 
 See `theory/killtony-minutes/ari_ANGER_body_voice_model.md`.
+
+
+## Gemini (working multimodal alternative)
+
+Key in `audition/.env` `GEMINI_API_KEY`. Model: `gemini-3.8-flash`.
+Video + audio + frames. ~$0.10/M tokens (input), ~$0.40/M output. Free tier generous for experiments.
+
+```bash
+.venv/bin/python theory/gemini_performance.py <video.mp4> <stem>
+```
+
+Outputs: `*.gemini.json` (full granular analysis) + `*.performance.v1.json`.
+~75s for a 60s clip, ~8.5k tokens (5.5k video + 0.6k text + 0.4k thinking).
+Inline base64 under ~15MB (compress_clip handles this).
+
+Schema: segments with body/face/vocal/comedy_theory + gesture_library + anger_analysis.
+Replaces blocked qwen3.8-omni-flash for AV performance analysis.
