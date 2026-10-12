@@ -1,10 +1,11 @@
-"""Minute generation — character-first, offline-safe template + optional LLM.
+"""Minute generation — character-first, offline-safe template + house LLM.
 
 Loads Nolan graph + theories + blocks from pogpet (vendored paths with
-fallbacks), Ralph/Rudy from characters/freaks. Prefers a real LLM when
-OPENAI_API_KEY is set; otherwise uses the deterministic template so P0
-works today with zero keys. Template output is real character writing
-from scenario + blind spots, not generic jokes with a name inserted.
+fallbacks), Ralph/Rudy from characters/freaks. Prefers the house backend
+(OpenCode Go, mimo-v2.6-flash, key in audition/.env); otherwise uses the
+deterministic template so P0 works today with zero keys. Template output
+is real character writing from scenario + blind spots, not generic jokes
+with a name inserted. No OpenAI models, no expensive models, ever.
 """
 from __future__ import annotations
 
@@ -211,40 +212,36 @@ def _prior_text(recent: list[dict]) -> str:
 
 
 def _llm_generate(messages: list[dict]) -> dict | None:
-    """Optional OpenAI path with compiled seed/system messages."""
-    model = os.getenv("AUDITION_LLM_MODEL", "gpt-4o-mini")
-    # Alibaba path: AUDITION_LLM_MODEL=qwen-* + DASHSCOPE_API_KEY in .env.
-    # Uses `bl text chat` (OpenAI-compatible DashScope). Falls back to None.
-    if model.startswith("qwen"):
-        try:
-            import alibaba as _ali
-            if not _ali.get_key():
-                return None
-            sys_msg = next((m["content"] for m in messages if m.get("role") == "system"), "")
-            usr_msg = next((m["content"] for m in reversed(messages) if m.get("role") == "user"), "")
-            r = _ali._run_bl(_ali.chat_argv(model, usr_msg, sys_msg), timeout=60)
-            if not r["ok"]:
-                return None
-            txt = r["out"]
-            start, end = txt.find("{"), txt.rfind("}")
-            if start >= 0 and end > start:
-                return json.loads(txt[start:end + 1])
-            return None
-        except Exception:
-            return None
-    key = os.getenv("OPENAI_API_KEY", "")
-    if not key:
+    """House LLM backend: OpenCode Go, mimo-v2.6-flash, hardcoded.
+
+    No OpenAI models, no expensive models, no alpha. Any failure -> None
+    -> offline template. Key + endpoint live in audition/.env only.
+    """
+    import uuid as _uuid
+    import time as _time
+    oc_key = os.getenv("OPENCODE_API_KEY", "")
+    if not oc_key:
         return None
     try:
         from openai import OpenAI
-        client = OpenAI(api_key=key)
-        resp = client.chat.completions.create(
-            model=model, temperature=0.9, max_tokens=900,
-            response_format={"type": "json_object"},
-            messages=messages,
-            timeout=40,
-        )
-        return json.loads(resp.choices[0].message.content or "{}")
+        client = OpenAI(api_key=oc_key,
+                        base_url=os.getenv("OPENCODE_BASE_URL",
+                                           "https://opencode.ai/zen/go/v1"))
+        for _ in range(2):  # flaky gateway: fast tries, then template
+            try:
+                resp = client.chat.completions.create(
+                    model=os.getenv("OPENCODE_MODEL", "mimo-v2.6-flash"),
+                    temperature=0.9, max_tokens=900,
+                    messages=messages, timeout=15,
+                    extra_headers={"x-opencode-session": str(_uuid.uuid4())})
+                txt = resp.choices[0].message.content or ""
+                start, end = txt.find("{"), txt.rfind("}")
+                if start >= 0 and end > start:
+                    return json.loads(txt[start:end + 1])
+                return None
+            except Exception:
+                _time.sleep(2)
+        return None
     except Exception:
         return None
 
@@ -508,8 +505,7 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
     beats = None
     model_id = "template-v0-offline"
     prompt_version = "prompt-v1-template"
-    _want_qwen = os.getenv("AUDITION_LLM_MODEL", "").startswith("qwen")
-    if os.getenv("OPENAI_API_KEY", "") or _want_qwen:
+    if bool(os.getenv("OPENCODE_API_KEY", "")):
         import prompt as _prompt
         messages, prompt_version = _prompt.compile(
             character, scenario, state, mems, modulator, mod,
@@ -524,10 +520,17 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
                 t = str(b.get("type", "setup")).strip().lower()
                 t = _tmap.get(t, t)
                 txt = str(b.get("text", "")).replace("*", "").replace("#", "").strip()[:280]
+                try:
+                    pa = int(b.get("pause_after_ms", 400))
+                except (TypeError, ValueError):
+                    pa = 400
+                try:
+                    em = float(b.get("emphasis", 0.6))
+                except (TypeError, ValueError):
+                    em = 0.6
                 beats.append({"id": b.get("id", f"b{i+1}"), "type": t, "text": txt,
-                              "pause_after_ms": int(b.get("pause_after_ms", 400)),
-                              "emphasis": float(b.get("emphasis", 0.6))})
-            model_id = os.getenv("AUDITION_LLM_MODEL", "gpt-4o-mini")
+                              "pause_after_ms": pa, "emphasis": em})
+            model_id = os.getenv("OPENCODE_MODEL", "mimo-v2.6-flash")
     if beats is None:
         beats = _template_beats(character, scenario, operator, critique, avoid)
     # modulator delivery deltas: emphasis shift + pause scaling (the HOW)
