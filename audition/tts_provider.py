@@ -61,10 +61,48 @@ def _espeak_save(text: str, out_wav: Path) -> None:
         raise RuntimeError("espeak failed")
 
 
+def synthesize_qwen(audition_id: str, text: str, voice: str,
+                    model: str = "qwen-audio-3.0-tts-flash") -> dict:
+    """Opt-in Qwen TTS via `bl speech synthesize`. Only when AUDITION_TTS=qwen.
+
+    Voice IDs are model-specific (use `bl speech synthesize --list-voices --model X`).
+    qwen-voice-design IDs do NOT work on audio-3.0-tts-plus — separate providers.
+    """
+    import os as _os
+    import alibaba as _ali
+    if not _ali.get_key():
+        raise RuntimeError("DASHSCOPE_API_KEY missing (audition/.env)")
+    out = AUDIO_DIR / f"{audition_id}-qwen.mp3"
+    if out.exists():
+        out.unlink()
+    r = _ali._run_bl(_ali.tts_argv(model, text[:5000], voice, str(out)), timeout=120)
+    if not r["ok"] or not out.exists() or out.stat().st_size < 2000:
+        raise RuntimeError(f"qwen tts failed: {(r['err'] or r['out'])[:200]}")
+    dur = _ffprobe_ms(out) or estimate_ms(text, 0)
+    return {"path": str(out), "duration_ms": dur,
+            "provenance": f"qwen-tts:{model}+ffprobe",
+            "sha256": hashlib.sha256(out.read_bytes()).hexdigest()}
+
+
 def synthesize(audition_id: str, text: str, voice: str, rate: str = "+0%",
                pitch: str = "+0Hz") -> dict:
     """Tries edge-tts, then piper-local, then espeak. Raises if all fail (no fake audio)."""
+    import os as _os
+    if _os.getenv("AUDITION_TTS", "") == "qwen":
+        qmodel = _os.getenv("AUDITION_TTS_MODEL", "qwen-audio-3.0-tts-flash")
+        qvoice = _os.getenv("AUDITION_TTS_VOICE", voice)
+        try:
+            return synthesize_qwen(audition_id, text, qvoice, qmodel)
+        except Exception as e:
+            # fall through to edge-tts chain; record error below
+            _qerr = str(e)[:200]
+        else:
+            _qerr = ""
+    else:
+        _qerr = ""
     errors = []
+    if _qerr:
+        errors.append(f"qwen: {_qerr}")
     # 1. edge-tts (best voices, needs Bing network)
     try:
         out = AUDIO_DIR / f"{audition_id}.mp3"

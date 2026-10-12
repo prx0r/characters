@@ -811,6 +811,100 @@ def set_source(aud_id: str):
         conn.close()
 
 
+@app.get("/api/stage/rigs")
+def stage_rigs():
+    import stage as _st
+    return jsonify({"rigs": _st.list_rigs()})
+
+
+@app.get("/api/stage/stages")
+def stage_stages():
+    import stage as _st
+    return jsonify({"stages": _st.list_stages()})
+
+
+@app.get("/api/stage/character/<character_id>")
+def stage_character(character_id: str):
+    """Character Pack for the stage: psychology, emotions, gestures, voice.
+
+    Powers the Stage Lab puppet + Rive mapping. Read-only; never mutates canon.
+    """
+    char = generate.get_character(character_id)
+    rig = None
+    import stage as _st
+    for r in _st.list_rigs():
+        if r.get("character_id") == character_id:
+            rig = _st.load_rig(r["rig_id"])
+    raw = (char.get("raw") or {}) if isinstance(char, dict) else {}
+    return jsonify({
+        "character_id": character_id, "name": char.get("name"),
+        "deal": char.get("deal"), "want": char.get("want"), "fear": char.get("fear"),
+        "blind_spots": char.get("blind_spots"), "action_policy": char.get("action_policy"),
+        "philosophy": raw.get("philosophy", {}), "expression": raw.get("expression", {}),
+        "modulator_range": raw.get("modulator_range") or raw.get("philosophy", {}).get("modulator_range", []),
+        "misinterpretation_rule": raw.get("misinterpretation_rule", ""),
+        "awareness": raw.get("awareness", "unknown"),
+        "emotions": {m: (generate.load_modulators().get(m, {}) or {}).get("tilt", m)
+                     for m in (generate.seed_modulators(char) if hasattr(generate, "seed_modulators") else [])},
+        "rig": ({"rig_id": rig.get("rig_id"), "version": rig.get("version"),
+                 "gestures": rig.get("gestures"), "expressions": rig.get("expressions"),
+                 "mouth_shapes": rig.get("mouth_shapes"),
+                 "movement_rules": rig.get("movement_rules"),
+                 "rive": rig.get("rive")} if rig else None),
+    })
+
+
+@app.post("/api/stage/direct/<aud_id>")
+def stage_direct(aud_id: str):
+    """Stage Director: beats + psychology -> proposed performance.v1 timeline."""
+    import stage as _st
+    data = request.get_json(force=True) or {}
+    rig_id = data.get("rig_id", "ralph")
+    stage_id = data.get("stage_id", "comedy_club")
+    conn = _conn()
+    try:
+        aud = store.get_audition(conn, aud_id)
+    finally:
+        conn.close()
+    if not aud:
+        return jsonify({"error": "unknown audition id"}), 404
+    rig = _st.load_rig(rig_id)
+    stg = _st.load_stage(stage_id)
+    if not rig:
+        return jsonify({"error": f"unknown rig {rig_id}"}), 400
+    if not stg:
+        return jsonify({"error": f"unknown stage {stage_id}"}), 400
+    tl = _st.direct(aud, rig, stg)
+    errs = _st.validate_timeline(tl)
+    if errs:
+        return jsonify({"error": "; ".join(errs[:4])}), 400
+    tid = store.new_id("tl")
+    conn = _conn()
+    try:
+        conn.execute("INSERT INTO stage_timelines (id, audition_id, character_id, rig_id,"
+                     " rig_version, stage_id, timeline, created_at) VALUES (?,?,?,?,?,?,?,?)",
+                     (tid, aud_id, aud["character_id"], rig_id, rig.get("version", ""),
+                      stage_id, json.dumps(tl), time.time()))
+        conn.commit()
+    finally:
+        conn.close()
+    return jsonify({"timeline_id": tid, **tl})
+
+
+@app.get("/api/stage/timeline/<tid>")
+def stage_timeline(tid: str):
+    conn = _conn()
+    try:
+        r = conn.execute("SELECT * FROM stage_timelines WHERE id=?", (tid,)).fetchone()
+    finally:
+        conn.close()
+    if not r:
+        return jsonify({"error": "unknown timeline"}), 404
+    d = dict(r)
+    d["timeline"] = json.loads(d["timeline"])
+    return jsonify(d)
+
+
 if __name__ == "__main__":
     _startup_sweep()
     print("Audition app on http://127.0.0.1:8807/")

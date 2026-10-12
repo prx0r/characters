@@ -50,6 +50,19 @@ button{cursor:pointer}button:disabled{opacity:.4;cursor:default}
 <div id="takes" class="muted" style="margin-top:8px"></div>
 <div class="muted">Your original is preserved untouched. Character-voice conversion (ElevenLabs) needs a key — not configured.</div>
 </div>
+<div class="card"><h3>Stage Lab <span class="muted">P0 — Ralph performs the minute</span></h3>
+<div class="row"><select id="rigSel"></select><select id="stageSel"></select><button id="directBtn" disabled>🎬 Direct this minute</button><span id="stageStatus" class="muted"></span></div>
+<div class="row" style="margin-top:10px;gap:16px;align-items:flex-start">
+<svg id="puppet" width="220" height="300" viewBox="0 0 220 300" style="background:radial-gradient(circle at 50% 20%,#3a2c10,#111 70%);border-radius:12px;flex:none">
+<ellipse id="pShadow" cx="110" cy="278" rx="60" ry="10" fill="#000" opacity=".5"/>
+<g id="pBody"><rect x="60" y="170" width="100" height="100" rx="14" fill="#2b3440"/><rect x="100" y="170" width="20" height="100" fill="#e8e4d8"/><polygon id="pTie" points="110,185 118,205 110,235 102,205" fill="#7c1f1f"/><rect id="pSuitL" x="60" y="170" width="100" height="100" rx="14" fill="none" stroke="#0f1319" stroke-width="3"/></g>
+<g id="pHead"><ellipse cx="110" cy="120" rx="52" ry="58" fill="#6b8f5e"/><ellipse cx="110" cy="120" rx="52" ry="58" fill="none" stroke="#2c3a26" stroke-width="3"/><g id="pBrowL"><rect x="70" y="82" width="30" height="7" rx="3" fill="#2c3a26"/></g><g id="pBrowR"><rect x="120" y="82" width="30" height="7" rx="3" fill="#2c3a26"/></g><g id="pEyeL"><ellipse cx="85" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse id="pPupilL" cx="85" cy="113" rx="5" ry="9" fill="#111"/></g><g id="pEyeR"><ellipse cx="135" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse id="pPupilR" cx="135" cy="113" rx="5" ry="9" fill="#111"/></g><rect id="pLidL" x="71" y="96" width="28" height="0" fill="#6b8f5e"/><rect id="pLidR" x="121" y="96" width="28" height="0" fill="#6b8f5e"/><ellipse id="pMouth" cx="110" cy="160" rx="16" ry="5" fill="#1a0f0f"/><text id="pExpr" x="110" y="292" text-anchor="middle" fill="#facc15" font-size="13">deadpan</text></g>
+<text id="pCam" x="8" y="18" fill="#999" font-size="12">medium</text>
+</svg>
+<div style="flex:1;min-width:200px"><div id="events" class="muted" style="font-size:13px;max-height:260px;overflow:auto"></div></div>
+</div>
+<div class="muted" style="font-size:12px">Rive-ready rig (<span id="rigVer"></span>): gestures drive named inputs when the .riv lands; today the SVG fallback performs them. Punchlines hold still — that stillness is the joke.</div>
+</div>
 <script>
 let AUD=null, RATING=null, ITER=1, POLL=null;
 const $=id=>document.getElementById(id);
@@ -83,7 +96,22 @@ $('recBtn').onclick=async()=>{try{const s=await navigator.mediaDevices.getUserMe
 $('stopBtn').onclick=()=>{if(REC&&REC.state!=='inactive'){REC.stop();REC.stream.getTracks().forEach(t=>t.stop());$('stopBtn').disabled=true;$('recBtn').disabled=false;}};
 $('srcAI').onclick=async()=>{await api('POST',`/api/auditions/${AUD.id}/source`,{source:'ai_tts'});$('audio').src=AUD.audio_url;$('srcStatus').textContent='source: ai_tts';};
 $('srcHuman').onclick=async()=>{const d=await api('GET',`/api/auditions/${AUD.id}/takes`);if(!d.takes.length){$('srcStatus').textContent='record a take first';return;}const t=d.takes[d.takes.length-1];await api('POST',`/api/auditions/${AUD.id}/source`,{source:'human_voice_performance',take_id:t.id});$('audio').src='/takes/'+t.id;$('srcStatus').textContent='source: human_voice_performance';};
-const _setAud=setAud;setAud=function(d){_setAud(d);loadTakes();};
+const _setAud=setAud;setAud=function(d){_setAud(d);loadTakes();$('directBtn').disabled=!d||d.status!=='ready';};
+let TL=null,TL_FIRED=new Set();
+async function loadStageOpts(){const r=await api('GET','/api/stage/rigs');$('rigSel').innerHTML=r.rigs.map(x=>`<option value="${x.rig_id}">${x.name||x.rig_id} (${x.gestures.length} gestures)</option>`).join('');const s=await api('GET','/api/stage/stages');$('stageSel').innerHTML=s.stages.map(x=>`<option value="${x.stage_id}">${x.name||x.stage_id}</option>`).join('');const c=await api('GET','/api/stage/character/reptilian_ralph_middle_management').catch(()=>null);if(c&&c.rig)$('rigVer').textContent=c.rig.rig_id+' '+c.rig.version;}
+function puppetApply(ev){const P=id=>document.getElementById(id);if(ev.kind==='expression'){$('pExpr').textContent=ev.id;const mad=ev.id==='annoyed';P('pBrowL').setAttribute('transform',mad?'rotate(-12 85 85)':'');P('pBrowR').setAttribute('transform',mad?'rotate(12 135 85)':'');}
+if(ev.kind==='camera'){$('pCam').textContent=ev.id+' · '+new Date(ev.t).toISOString().slice(14,19);const sc={wide:0.85,medium:1,closeup:1.35,pushin:1.2}[ev.id]||1;$('puppet').setAttribute('viewBox',`0 0 220 300`);$('pHead').setAttribute('transform',`translate(110 120) scale(${sc}) translate(-110 -120)`);}
+if(ev.kind==='gesture'){if(ev.id==='eye_glitch'){['pPupilL','pPupilR'].forEach(i=>{P(i).setAttribute('rx','2');P(i).setAttribute('fill','#b91c1c');});$('pExpr').textContent='SLIT.';setTimeout(()=>{['pPupilL','pPupilR'].forEach(i=>{P(i).setAttribute('rx','5');P(i).setAttribute('fill','#111');});},900);}
+if(ev.id==='suit_adjust'){$('pBody').setAttribute('transform','translate(-6 0)');setTimeout(()=>$('pBody').setAttribute('transform','translate(6 0)'),250);setTimeout(()=>$('pBody').setAttribute('transform',''),600);}
+if(ev.id==='warm_rock_lean'){$('pHead').setAttribute('transform','translate(0 20)');$('pBody').setAttribute('transform','translate(0 10)');setTimeout(()=>{$('pHead').setAttribute('transform','');$('pBody').setAttribute('transform','');},1400);}
+if(ev.id==='head_tilt'){$('pHead').setAttribute('transform','rotate(8 110 120)');setTimeout(()=>$('pHead').setAttribute('transform',''),700);}
+if(ev.id==='lean_forward'){$('pHead').setAttribute('transform','translate(0 14)');setTimeout(()=>$('pHead').setAttribute('transform',''),800);}}
+if(ev.kind==='hold'){$('pExpr').textContent='…';}
+if(ev.kind==='look'){$('pPupilL').setAttribute('cx',ev.id==='look_away'?'78':'85');$('pPupilR').setAttribute('cx',ev.id==='look_away'?'128':'135');}}
+$('directBtn').onclick=async()=>{if(!AUD)return;$('stageStatus').textContent='directing…';const d=await api('POST','/api/stage/direct/'+AUD.id,{rig_id:$('rigSel').value,stage_id:$('stageSel').value});if(d.error){$('stageStatus').textContent=d.error;return;}TL=d;TL_FIRED=new Set();$('stageStatus').textContent=d.events.length+' events · '+d.rig_id+' '+d.rig_version;$('events').innerHTML=d.events.map((e,i)=>`<div data-ei="${i}">⏱ ${(e.t/1000).toFixed(1)}s <b>${e.kind}</b> ${e.id||''} ${e.ms||''}</div>`).join('');};
+setInterval(()=>{const a=$('audio');if(!a||a.paused||!TL)return;const ms=a.currentTime*1000;TL.events.forEach((e,i)=>{if(ms>=e.t&&!TL_FIRED.has(i)){TL_FIRED.add(i);puppetApply(e);const el=document.querySelector(`[data-ei="${i}"]`);if(el){el.style.color='#facc15';}}});const mouth=document.getElementById('pMouth');const speaking=!TL.events.some(e=>e.kind==='hold'&&ms>=e.t&&ms<=e.t+(e.ms||0));mouth.setAttribute('ry',speaking?(4+6*Math.abs(Math.sin(ms/130))):2);},120);
+setInterval(()=>{if($('audio')&&!$('audio').paused)return;const l=document.getElementById('pLidL'),r=document.getElementById('pLidR');[l,r].forEach(x=>x.setAttribute('height','16'));setTimeout(()=>[l,r].forEach(x=>x.setAttribute('height','0')),180);},4200);
+loadStageOpts();
 loadChars();
 </script>
 </body>

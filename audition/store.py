@@ -123,6 +123,15 @@ def migrate(conn: sqlite3.Connection) -> None:
       id TEXT PRIMARY KEY, character_id TEXT NOT NULL, memory_id TEXT NOT NULL,
       audition_id TEXT NOT NULL, mechanism TEXT NOT NULL, landed INTEGER NOT NULL DEFAULT 0,
       created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS stage_timelines (
+      id TEXT PRIMARY KEY, audition_id TEXT NOT NULL, character_id TEXT NOT NULL,
+      rig_id TEXT NOT NULL, rig_version TEXT NOT NULL, stage_id TEXT NOT NULL,
+      timeline TEXT NOT NULL, created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS voice_profiles (
+      id TEXT PRIMARY KEY, character_id TEXT NOT NULL, provider TEXT NOT NULL,
+      design_prompt TEXT NOT NULL, reference_audio_path TEXT NOT NULL DEFAULT '',
+      reference_audio_sha256 TEXT NOT NULL DEFAULT '', status TEXT NOT NULL DEFAULT 'candidate',
+      created_at REAL NOT NULL)""")
     conn.commit()
 
 

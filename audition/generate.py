@@ -176,13 +176,32 @@ def _prior_text(recent: list[dict]) -> str:
 
 def _llm_generate(messages: list[dict]) -> dict | None:
     """Optional OpenAI path with compiled seed/system messages."""
+    model = os.getenv("AUDITION_LLM_MODEL", "gpt-4o-mini")
+    # Alibaba path: AUDITION_LLM_MODEL=qwen-* + DASHSCOPE_API_KEY in .env.
+    # Uses `bl text chat` (OpenAI-compatible DashScope). Falls back to None.
+    if model.startswith("qwen"):
+        try:
+            import alibaba as _ali
+            if not _ali.get_key():
+                return None
+            sys_msg = next((m["content"] for m in messages if m.get("role") == "system"), "")
+            usr_msg = next((m["content"] for m in reversed(messages) if m.get("role") == "user"), "")
+            r = _ali._run_bl(_ali.chat_argv(model, usr_msg, sys_msg), timeout=60)
+            if not r["ok"]:
+                return None
+            txt = r["out"]
+            start, end = txt.find("{"), txt.rfind("}")
+            if start >= 0 and end > start:
+                return json.loads(txt[start:end + 1])
+            return None
+        except Exception:
+            return None
     key = os.getenv("OPENAI_API_KEY", "")
     if not key:
         return None
     try:
         from openai import OpenAI
         client = OpenAI(api_key=key)
-        model = os.getenv("AUDITION_LLM_MODEL", "gpt-4o-mini")
         resp = client.chat.completions.create(
             model=model, temperature=0.9, max_tokens=900,
             response_format={"type": "json_object"},
