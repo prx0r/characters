@@ -2,13 +2,14 @@
   "version": "performance.v1",
   "source": "kt728_jamesbond_short",
   "duration_s": 32.0,
-  "method": "mediapipe_heuristic_v1",
+  "method": "mediapipe+asr_aligned_v1",
+  "n_asr_words": 134,
   "events": [
     {
       "t": 0.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": 2.072
+      "energy": 0.605
     },
     {
       "t": 0.0,
@@ -19,58 +20,61 @@
       "t": 0.0,
       "kind": "speak_start",
       "value": {
-        "energy": 2.072
+        "text": "You know how they ' re like You know how they ' re like",
+        "energy": 0.605,
+        "anger_proxy": false
       }
     },
     {
       "t": 1.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": 1.567
+      "energy": 0.6
     },
     {
       "t": 1.0,
       "kind": "speak_start",
       "value": {
-        "energy": 1.567
+        "text": "like divers ifying like divers ifying",
+        "energy": 0.6,
+        "anger_proxy": false
       }
     },
     {
       "t": 2.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -0.432
-    },
-    {
-      "t": 2.0,
-      "kind": "hold",
-      "ms": 1200
+      "energy": 0.514
     },
     {
       "t": 2.0,
       "kind": "speak_start",
       "value": {
-        "energy": -0.432
+        "text": "ifying all the movie ifying all the movie",
+        "energy": 0.514,
+        "anger_proxy": false
       }
     },
     {
       "t": 3.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -0.185
+      "energy": 0.53
     },
     {
       "t": 3.0,
       "kind": "speak_start",
       "value": {
-        "energy": -0.185
+        "text": "franchises now They franchises now They",
+        "energy": 0.53,
+        "anger_proxy": false
       }
     },
     {
       "t": 4.0,
       "kind": "expression",
       "value": "deadpan",
-      "energy": -6.255
+      "energy": 0.071
     },
     {
       "t": 4.0,
@@ -78,145 +82,174 @@
       "value": "small gesture"
     },
     {
+      "t": 4.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "' re making like a gay ' re making like a gay",
+        "energy": 0.071,
+        "anger_proxy": false
+      }
+    },
+    {
       "t": 5.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": 2.633
+      "energy": 0.628
+    },
+    {
+      "t": 5.0,
+      "kind": "gesture",
+      "value": "small gesture"
     },
     {
       "t": 5.0,
       "kind": "speak_start",
       "value": {
-        "energy": 2.633
+        "text": "gay James Bond He gay James Bond He",
+        "energy": 0.628,
+        "anger_proxy": false
       }
     },
     {
       "t": 6.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -0.707
-    },
-    {
-      "t": 6.0,
-      "kind": "hold",
-      "ms": 1200
+      "energy": 0.529
     },
     {
       "t": 6.0,
       "kind": "speak_start",
       "value": {
-        "energy": -0.707
+        "text": "He ' s gotta suck so He ' s gotta suck so",
+        "energy": 0.529,
+        "anger_proxy": false
       }
     },
     {
       "t": 7.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -0.707
+      "energy": 0.519
     },
     {
       "t": 7.0,
       "kind": "speak_start",
       "value": {
-        "energy": -0.707
+        "text": "so much so much",
+        "energy": 0.519,
+        "anger_proxy": false
       }
     },
     {
       "t": 8.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -0.919
+      "energy": 0.524
     },
     {
       "t": 8.0,
       "kind": "speak_start",
       "value": {
-        "energy": -0.919
+        "text": "to get those passwords to get those passwords",
+        "energy": 0.524,
+        "anger_proxy": false
       }
     },
     {
       "t": 9.0,
       "kind": "expression",
-      "value": "smirk",
-      "energy": 0.102
+      "value": "neutral",
+      "energy": 0.635
     },
     {
       "t": 9.0,
       "kind": "speak_start",
       "value": {
-        "energy": 0.102
+        "text": "passwords passwords",
+        "energy": 0.635,
+        "anger_proxy": false
       }
     },
     {
       "t": 10.0,
       "kind": "expression",
-      "value": "smirk",
-      "energy": 0.988
+      "value": "neutral",
+      "energy": 0.665
     },
     {
       "t": 10.0,
       "kind": "speak_start",
       "value": {
-        "energy": 0.988
+        "text": "They ' re doing Taken They ' re doing Taken",
+        "energy": 0.665,
+        "anger_proxy": false
       }
     },
     {
       "t": 11.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -1.052
+      "energy": 0.476
     },
     {
       "t": 11.0,
       "kind": "speak_start",
       "value": {
-        "energy": -1.052
+        "text": "Taken you know Taken with Taken you know Taken with",
+        "energy": 0.476,
+        "anger_proxy": false
       }
     },
     {
       "t": 12.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -2.819
+      "energy": 0.4
     },
     {
       "t": 12.0,
       "kind": "speak_start",
       "value": {
-        "energy": -2.819
+        "text": "with Liam Ne eson with Liam Ne eson",
+        "energy": 0.4,
+        "anger_proxy": false
       }
     },
     {
       "t": 13.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -0.418
+      "energy": 0.52
     },
     {
       "t": 13.0,
       "kind": "speak_start",
       "value": {
-        "energy": -0.418
+        "text": "eson They ' re doing one with eson They ' re doing one with",
+        "energy": 0.52,
+        "anger_proxy": false
       }
     },
     {
       "t": 14.0,
       "kind": "expression",
-      "value": "smirk",
-      "energy": 1.113
+      "value": "neutral",
+      "energy": 0.623
     },
     {
       "t": 14.0,
       "kind": "speak_start",
       "value": {
-        "energy": 1.113
+        "text": "a black dad a black dad",
+        "energy": 0.623,
+        "anger_proxy": false
       }
     },
     {
       "t": 15.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": 2.723
+      "energy": 0.691
     },
     {
       "t": 15.0,
@@ -227,229 +260,162 @@
       "t": 15.0,
       "kind": "speak_start",
       "value": {
-        "energy": 2.723
+        "text": "dad dad",
+        "energy": 0.691,
+        "anger_proxy": false
       }
     },
     {
-      "t": 16.0,
-      "kind": "expression",
-      "value": "neutral",
-      "energy": 0.118
+      "t": 15.52,
+      "kind": "hold",
+      "ms": 1200
     },
     {
-      "t": 16.0,
+      "t": 15.52,
       "kind": "hold",
       "ms": 1200
     },
     {
       "t": 16.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": 0.118
-      }
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.579
     },
     {
       "t": 17.0,
       "kind": "expression",
-      "value": "smirk",
-      "energy": 0.35
-    },
-    {
-      "t": 17.0,
-      "kind": "gesture",
-      "value": "hand to face"
-    },
-    {
-      "t": 17.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": 0.35
-      }
+      "value": "neutral",
+      "energy": 0.596
     },
     {
       "t": 18.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -1.117
-    },
-    {
-      "t": 18.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": -1.117
-      }
+      "energy": 0.515
     },
     {
       "t": 19.0,
       "kind": "expression",
-      "value": "smirk",
-      "energy": -0.39
-    },
-    {
-      "t": 19.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": -0.39
-      }
+      "value": "neutral",
+      "energy": 0.563
     },
     {
       "t": 20.0,
       "kind": "expression",
       "value": "neutral",
-      "energy": -1.815
+      "energy": 0.499
     },
     {
       "t": 20.0,
       "kind": "speak_start",
       "value": {
-        "energy": -1.815
+        "text": "The phone The phone",
+        "energy": 0.499,
+        "anger_proxy": false
       }
     },
     {
       "t": 21.0,
       "kind": "expression",
-      "value": "smirk",
-      "energy": 0.917
+      "value": "neutral",
+      "energy": 0.624
     },
     {
       "t": 21.0,
       "kind": "speak_start",
       "value": {
-        "energy": 0.917
+        "text": "phone just keeps ringing phone just keeps ringing",
+        "energy": 0.624,
+        "anger_proxy": false
       }
     },
     {
       "t": 22.0,
       "kind": "expression",
-      "value": "smirk",
-      "energy": 1.482
+      "value": "neutral",
+      "energy": 0.658
     },
     {
       "t": 22.0,
       "kind": "speak_start",
       "value": {
-        "energy": 1.482
+        "text": "ringing ringing",
+        "energy": 0.658,
+        "anger_proxy": false
       }
     },
     {
-      "t": 23.0,
-      "kind": "expression",
-      "value": "neutral",
-      "energy": 0.447
-    },
-    {
-      "t": 23.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": 0.447
-      }
-    },
-    {
-      "t": 24.0,
-      "kind": "expression",
-      "value": "smirk",
-      "energy": 0.42
-    },
-    {
-      "t": 24.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": 0.42
-      }
-    },
-    {
-      "t": 25.0,
-      "kind": "expression",
-      "value": "neutral",
-      "energy": -1.377
-    },
-    {
-      "t": 25.0,
-      "kind": "gesture",
-      "value": "hand to face"
-    },
-    {
-      "t": 25.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": -1.377
-      }
-    },
-    {
-      "t": 26.0,
-      "kind": "expression",
-      "value": "neutral",
-      "energy": -1.903
-    },
-    {
-      "t": 26.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": -1.903
-      }
-    },
-    {
-      "t": 27.0,
-      "kind": "expression",
-      "value": "smirk",
-      "energy": -0.151
-    },
-    {
-      "t": 27.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": -0.151
-      }
-    },
-    {
-      "t": 28.0,
-      "kind": "expression",
-      "value": "smirk",
-      "energy": 0.428
-    },
-    {
-      "t": 28.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": 0.428
-      }
-    },
-    {
-      "t": 29.0,
-      "kind": "expression",
-      "value": "smirk",
-      "energy": 2.633
-    },
-    {
-      "t": 29.0,
-      "kind": "speak_start",
-      "value": {
-        "energy": 2.633
-      }
-    },
-    {
-      "t": 30.0,
-      "kind": "expression",
-      "value": "neutral",
-      "energy": -2.358
-    },
-    {
-      "t": 30.0,
+      "t": 22.72,
       "kind": "hold",
       "ms": 1200
     },
     {
+      "t": 22.72,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 23.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.589
+    },
+    {
+      "t": 24.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.593
+    },
+    {
+      "t": 25.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.505
+    },
+    {
+      "t": 26.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.493
+    },
+    {
+      "t": 27.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.574
+    },
+    {
+      "t": 28.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.602
+    },
+    {
+      "t": 29.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.714
+    },
+    {
+      "t": 30.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.426
+    },
+    {
       "t": 30.0,
       "kind": "speak_start",
       "value": {
-        "energy": -2.358
+        "text": "Sorry baby Sorry baby",
+        "energy": 0.426,
+        "anger_proxy": false
       }
     },
     {
       "t": 31.0,
       "kind": "expression",
-      "value": "smirk",
-      "energy": 4.612
+      "value": "neutral",
+      "energy": 0.772
     },
     {
       "t": 31.0,
@@ -460,9 +426,11 @@
       "t": 31.0,
       "kind": "speak_start",
       "value": {
-        "energy": 4.612
+        "text": "baby Had to make a stop baby Had to make a stop",
+        "energy": 0.772,
+        "anger_proxy": false
       }
     }
   ],
-  "n_events": 73
+  "n_events": 62
 }
