@@ -62,3 +62,20 @@ relationships and ranked residents, new formats emerge from it for free:
 - **Rule for all formats:** the world's lore stays canonical; the format is
   disposable. A podcast, a talk, a roast and a league match all read the same
   canon and write back memories + relationships.
+
+## SURROUNDED (2026-10-12, owner's pitch)
+
+A human stands in the middle. The characters come up — one by one or mobbed —
+and debate them, roast them, or try to make them laugh. The human is the stage:
+their reactions are the only scoreboard that matters.
+
+Why it matters mechanically: every other format performs *to a crowd*.
+Surrounded performs *at one human*, whose laughter is the purest preference
+signal in the system — no proxies, no Wilson needed to know what just
+happened. It inverts the audition loop: the characters audition, the human is
+the room.
+
+Staging path: web prototype first (characters arrayed around the human's input
+box, text/voice in, each answers from its worldview + memory of past rounds) —
+VR when embodied real-time rigs exist. The format, the memory writes and the
+laugh data are renderer-independent and start now.
