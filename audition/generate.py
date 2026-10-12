@@ -478,7 +478,22 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
             import jev_decide
             import jev_questions as _qq
             mems0 = ((character.get("raw", {}) or {}).get("memories", []) or [])
-            st = _qq.seed_state(character, scenario, mems0, strategy.get("instructions", ""))
+            # performance history: past battle scores + POGs by modulator.
+            # Closes the RL loop — Jev tilts toward proven modulators.
+            # Fail-open: empty brief = all unproven = explore freely.
+            perf_brief = ""
+            try:
+                import store as _store
+                _conn = _store.connect()
+                try:
+                    _hist = _store.performance_history(_conn, character_id, 10)
+                    perf_brief = _store.format_performance_brief(_hist)
+                finally:
+                    _conn.close()
+            except Exception:
+                pass
+            st = _qq.seed_state(character, scenario, mems0, strategy.get("instructions", ""),
+                                perf_brief)
             tilts = {m: (load_modulators().get(m, {}).get("tilt", m)) for m in mod_cands}
             hyps = {o: THEORY_OF_OP.get(o, o) for o in op_cands}
             call = jev_decide.decide_instance(st, mod_cands, tilts, op_cands, hyps)

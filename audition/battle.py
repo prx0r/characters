@@ -94,10 +94,31 @@ def battle(character_id: str, recent: list[dict], strategy: dict, n: int = 3,
     priors = [r.get("full_text", "") for r in (recent or [])]
     fixed = None
     mode = "open"
+    prefilter = {"applied": False, "score": None, "reason": "open mode: scenarios vary per candidate"}
     if matched:
         used = [r.get("scenario_id", "") for r in (recent or []) if r.get("scenario_id")]
         fixed = _gen.pick_scenario(used, rng)
         mode = "matched:" + fixed["id"]
+        # Pre-filter: one cheap Jev judgment on the fixed premise saves
+        # 3 full generations if dead. Fail-open (pass on any error).
+        # Explore path inside generate_minute still varies approach freely.
+        try:
+            import prefilter as _pf
+            _char = _gen.get_character(character_id)
+            _pf_res = _pf.judge_premise(_char, fixed)
+            prefilter = {"applied": True, "score": _pf_res.get("score"),
+                         "reason": _pf_res.get("reason", "")}
+            if not _pf_res.get("pass", True):
+                # dead premise: pick one alternative, check once more, then proceed regardless
+                # (never block a battle entirely — a false negative costs more than 3 generations)
+                _alt = _gen.pick_scenario(used + [fixed["id"]], rng)
+                _pf2 = _pf.judge_premise(_char, _alt)
+                if _pf2.get("pass", True):
+                    fixed = _alt
+                    mode = "matched:" + fixed["id"] + " (prefilter reroll)"
+                    prefilter["rerolled_to"] = fixed["id"]
+        except Exception:
+            pass
     cands = []
     running = list(recent or [])
     for i in range(n):
@@ -115,4 +136,4 @@ def battle(character_id: str, recent: list[dict], strategy: dict, n: int = 3,
               "text": c["gen"]["full_text"],
               "total": c["score"]["total"], "parts": c["score"]["parts"]} for c in cands]
     return {"winner": cands[0]["gen"], "winner_score": cands[0]["score"], "table": table,
-            "mode": mode}
+            "mode": mode, "prefilter": prefilter}
