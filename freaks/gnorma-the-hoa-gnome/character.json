@@ -59,7 +59,8 @@
   "vibe": "anxious",
   "voice": {
     "provider": "edge-tts",
-    "voice_id": "en-US-AriaNeural"
+    "voice_id": "en-US-AriaNeural",
+    "eleven_voice_id": "XrExE9yKIg1WjnnlVkGX"
   },
   "canon": "gnome"
 }

@@ -1466,6 +1466,30 @@ def _no_store_dynamic(resp):
     return resp
 
 
+@app.get("/pilots")
+def pilots_page():
+    import glob as _g
+    from pathlib import Path as _P
+    files = sorted(_g.glob("/tmp/opencode/pilots/*_pilot.mp3"))
+    items = "".join(
+        f'<div class="card"><b>{_P(f).stem}</b><br><audio src="/pilot/{_P(f).name}" controls style="width:100%"></audio></div>'
+        for f in files)
+    return (f"<!doctype html><html><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>"
+            f"<title>v4 pilots</title><style>body{{font-family:system-ui;max-width:640px;margin:20px auto;padding:0 14px;background:#111;color:#eee}}.card{{border:1px solid #333;border-radius:12px;padding:12px;margin:12px 0}}</style></head>"
+            f"<body><h1>v4 turbo pilots</h1>{items or 'no pilots yet'}</body></html>")
+
+
+@app.get("/pilot/<name>")
+def pilot_serve(name: str):
+    from pathlib import Path as _P
+    if not __import__("re").fullmatch(r"[\w\-]+\.mp3", name):
+        return {"error": "bad name"}, 400
+    p = _P("/tmp/opencode/pilots") / name
+    if not p.exists():
+        return {"error": "unknown pilot"}, 404
+    return send_file(p, mimetype="audio/mpeg")
+
+
 if __name__ == "__main__":
     _startup_sweep()
     print("Audition app on http://127.0.0.1:8807/")
