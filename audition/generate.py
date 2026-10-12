@@ -256,13 +256,42 @@ def _template_beats(character: dict, scenario: dict, operator: str,
             ("closer", _rr.choice(rudy_closers)),
         ]
     elif character["id"].startswith("reptilian"):
+        # Ralph: same philosophy every night, but the SET is about TONIGHT's
+        # scenario. Operator picks the punch mechanism; blind spot lands the tag.
+        punches = {
+            "unmask": ("The eyelids slipped mid-sentence. There it is. Performance review: lizard. "
+                       "HR calls it an disclosure event. I call it Tuesday."),
+            "rigidify": ("I followed procedure exactly. Eleven pages per warmth request, filed in triplicate. "
+                         "The procedure approved my freezing to death. Efficiently."),
+            "false_analogy": ("Domination is just HR with fangs, I always say. Then HR bit back. "
+                              "Turns out the metaphor had teeth. Mine are bigger. Barely."),
+            "identity_contradict": ("I run the planet. Middle management. Read that back. "
+                                    "Apex overlord, outranked by a thermostat and a regional supervisor named Deb."),
+            "expose_self_blindness": ("So I filed a ticket: unknown reptile in the building, extremely management. "
+                                      "Ticket assigned to: me. Priority: me. I denied my own transfer."),
+            "status_invert": ("I convened the bloodline review. Attendance: me. Minutes: me, shivering. "
+                              "The empire runs on my Yelp review of the break room."),
+        }
+        punch = punches.get(operator, ("You think shape-shifting is glamorous. It is Spanx for your entire soul, "
+                                       "with contacts that dry out by noon."))
+        scen_open = f"New directive just came down, and it reads like this: {how}" if how else \
+            "New directive just came down. It contradicts the previous directive. Classic."
+        scen_grind = (f"Head office says {real} Meanwhile my suit itches in places I cannot scratch in public, "
+                      f"and the eyelids slip whenever I lie, which is constantly.") if real else \
+            ("This human suit itches in places I cannot scratch in public, and the eyelids slip "
+             "whenever I lie, which is constantly.")
+        scen_paper = (f"People imagine domination looks like thrones and fire. Tonight it looks like this: {deriv} "
+                      f"Eleven pages per warmth request.{tell}") if deriv and deriv != how else \
+            (f"People imagine domination looks like thrones and fire. It looks like this: warm rocks confiscated, "
+             f"thermostat at sixty-eight, eleven pages per warmth request.{tell}")
+        tag_t = (f" I see {tension} and I process it as a workflow ticket.") if tension else ""
         beats = [
             ("setup", f"Yes. I am the thing from the videos. Seven feet, cold-blooded, old bloodline. I run the planet. Middle management."),
-            ("setup", f"This human suit itches in places I cannot scratch in public, and the eyelids slip whenever I lie, which is constantly."),
-            ("misdirect" if push_misdirect else "setup",
-             f"People imagine domination looks like thrones and fire. It looks like this: warm rocks confiscated, thermostat at sixty-eight, eleven pages per warmth request.{tell}"),
-            ("punchline", f"You think shape-shifting is glamorous. It is Spanx for your entire soul, with contacts that dry out by noon."),
-            ("tag", f"I am blind to {blind}. I filed for transfer to Dulce twice. Denied twice. Reason: I laugh too hard and the suit drops.".strip()),
+            ("setup", scen_open),
+            ("setup" if not push_misdirect else "misdirect", scen_grind),
+            ("setup", scen_paper),
+            ("punchline", punch),
+            ("tag", f"I am blind to {blind}.{tag_t} I filed for transfer to Dulce twice. Denied twice.".strip()),
             ("closer", _rr.choice(ralph_closers)),
         ]
     else:
