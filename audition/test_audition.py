@@ -16,7 +16,7 @@ def test_character_graph_loads():
     assert n["action_policy"], "action policy required"
     assert len(generate.list_blocks()) >= 10, "need source blocks"
     import json as j
-    th = j.load(open("/root/pogpet/templates/theories.json"))
+    th = j.load(open(generate.POGPET / "templates/theories.json"))
     assert len(th["theories"]) >= 12
 
 

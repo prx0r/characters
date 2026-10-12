@@ -16,8 +16,19 @@ import random
 import re
 from pathlib import Path
 
-POGPET = Path("/root/pogpet")
-FREAKS = Path("/root/characters/freaks")
+_REPO = Path(__file__).resolve().parent.parent
+# Defaults keep the original /root layout; env overrides let other boxes
+# (sandbox clones) run the same pipeline without editing code.
+POGPET = Path(os.getenv("POGPET_ROOT", "/root/pogpet"))
+def _readable(p: str) -> bool:
+    try:
+        return Path(p).is_dir()
+    except OSError:
+        return False
+
+
+FREAKS = Path(os.getenv("CHARS_FREAKS", "/root/characters/freaks"
+                        if _readable("/root/characters/freaks") else str(_REPO / "freaks")))
 
 CHARACTER_VERSION = "v1-p0"
 
@@ -123,6 +134,8 @@ def list_characters() -> list[dict]:
                 slug = r["character_id"]
                 if (FREAKS / slug / "character.json").exists():
                     c = load_freak_character(slug)
+                    if c and ((c.get("raw") or {}).get("privacy") or {}).get("visibility") == "private":
+                        continue  # real people never join the public roster
                     if c and all(x["id"] != c["id"] for x in chars):
                         chars.append(c)
         finally:
@@ -154,6 +167,11 @@ def get_character(character_id: str) -> dict:
         return load_freak_character("zeus-sky-sovereign") or load_nolan()
     if character_id in ("hera_queen_ledger", "hera", "hera-queen-ledger"):
         return load_freak_character("hera-queen-ledger") or load_nolan()
+    # Any other pack in freaks/ by slug or underscore id (human packs, world residents).
+    slug = character_id.replace("_", "-")
+    c = load_freak_character(slug)
+    if c:
+        return c
     return load_nolan()
 
 
@@ -195,7 +213,7 @@ def tts_base_rate(character: dict) -> str:
 def _kt_prior_ops() -> dict:
     """Kill Tony operator lifts (hypotheses, not proof). Missing file = no bias."""
     try:
-        d = json.load(open("/root/characters/theory/killtony-priors.json"))
+        d = json.load(open(_REPO / "theory/killtony-priors.json"))
         return {op: v.get("train_lift", 0) for op, v in d.get("operator_priors", {}).items()}
     except Exception:
         return {}
@@ -246,8 +264,65 @@ def _llm_generate(messages: list[dict]) -> dict | None:
         return None
 
 
+def league_eligible(character_id: str) -> bool:
+    """Private packs (real people) never enter arena/Elo leagues or the public roster."""
+    try:
+        raw = (get_character(character_id).get("raw") or {})
+    except Exception:
+        return True
+    if raw.get("name") is None:
+        return True
+    pv = raw.get("privacy") or {}
+    return not (pv.get("visibility") == "private" or pv.get("league_eligible") is False)
+
+
+def is_human(character: dict) -> bool:
+    """Real-human packs (world_type human / canon human-*). They carry a
+    privacy block and are rendered only from user-stated facts + marked flourishes."""
+    raw = character.get("raw", {}) or {}
+    return raw.get("world_type") == "human" or str(raw.get("canon", "")).startswith("human")
+
+
+SHORT_WORD_BUDGET = 42  # ~15 s spoken at ~2.6-2.8 words/s plus holds
+
+
+def _human_beats(character: dict, scenario: dict, operator: str, rng: random.Random,
+                 length: str = "minute") -> list[tuple[str, str]]:
+    """Human branch: beats come from a scenario.human.v1 block (opener, turn,
+    punches by operator, tag, closers). The block is data, authored per subject;
+    the pipeline picks the mechanism (operator), modulator and closer, then gates."""
+    punches = scenario.get("punches") or {}
+    punch = punches.get(operator)
+    if not punch:
+        prior = ((character.get("raw") or {}).get("comedy") or {}).get("operator_priors") or {}
+        ranked = sorted(punches, key=lambda o: -prior.get(o, 0))
+        punch = punches[ranked[0]] if ranked else scenario.get("comic_claim", "")
+    opener = scenario.get("opener") or scenario.get("comic_claim", "")
+    turn = scenario.get("turn", "")
+    tag = scenario.get("tag", "")
+    closers = scenario.get("closers") or ["Kettle's on."]
+    closer = rng.choice(closers)
+    tag_closers = scenario.get("tag_closers") or []
+    if length != "short":
+        if tag and tag_closers:
+            closer = rng.choice(tag_closers)
+        seq = [("setup", opener)] + ([("escalation", turn)] if turn else []) + \
+              [("punchline", punch)] + ([("tag", tag)] if tag else []) + [("closer", closer)]
+        return seq
+    # short (~15 s): opener + punch + closer always; turn then tag only if the word budget allows
+    core = [("setup", opener), ("punchline", punch), ("closer", closer)]
+    wc = lambda seq: sum(len(t.split()) for _, t in seq)
+    if turn and wc(core) + len(turn.split()) <= SHORT_WORD_BUDGET:
+        core.insert(1, ("escalation", turn))
+    if tag and wc(core) + len(tag.split()) <= SHORT_WORD_BUDGET:
+        core.insert(len(core) - 1, ("tag", tag))
+        if tag_closers:
+            core[-1] = ("closer", rng.choice(tag_closers))
+    return core
+
+
 def _template_beats(character: dict, scenario: dict, operator: str,
-                     critique: str, avoid: str) -> list[dict]:
+                     critique: str, avoid: str, length: str = "minute") -> list[dict]:
     name = character["name"]
     first = name.split()[0].rstrip(",")
     claim = scenario.get("comic_claim", "")
@@ -278,7 +353,10 @@ def _template_beats(character: dict, scenario: dict, operator: str,
                      "HR has been notified. I have not.", "Denied. Next."]
     rudy_closers = ["Stay warm. Hydrate.", "Ticket closed. Vent sings on.",
                     "Back to the ducts."]
-    if character["id"].startswith("rudy"):
+    if is_human(character):
+        _hr = _r.Random(int(hashlib.md5((scenario.get("id", "") + operator).encode()).hexdigest(), 16) % (2**31))
+        beats = _human_beats(character, scenario, operator, _hr, length)
+    elif character["id"].startswith("rudy"):
         beats = [
             ("setup", f"New work order on level four, and it reads like this: {how}"),
             ("setup", f"I do HVAC down here, which means when {real or 'head office acts up'}, the ducts hear about it first. Filed under airflow."),
@@ -370,7 +448,7 @@ _MODS = None
 def load_modulators() -> dict:
     global _MODS
     if _MODS is None:
-        _MODS = _load_json(Path("/root/characters/audition/modulators.json")) or {}
+        _MODS = _load_json(_REPO / "audition/modulators.json") or {}
     return _MODS
 
 
@@ -393,10 +471,12 @@ def actor_decide(character: dict, scenario: dict, state: dict, mems: list,
 
 
 def seed_modulators(character: dict) -> list[str]:
-    rng = (character.get("raw", {}) or {}).get("philosophy", {}).get("modulator_range", [])
+    raw = character.get("raw", {}) or {}
+    rng = raw.get("philosophy", {}).get("modulator_range", []) or (
+        raw.get("modulator_range", []) if is_human(character) else [])
     if rng:
         return [m for m in rng if m in load_modulators()] or list(load_modulators())
-    ov = _load_json(Path("/root/characters/audition/seeds/nolan_seed.json")) or {}
+    ov = _load_json(_REPO / "audition/seeds/nolan_seed.json") or {}
     if character["id"] == "no_nose_nolan" and ov.get("modulator_range"):
         return [m for m in ov["modulator_range"] if m in load_modulators()]
     return list(load_modulators())
@@ -404,7 +484,7 @@ def seed_modulators(character: dict) -> list[str]:
 
 def generate_minute(character_id: str, recent: list[dict], strategy: dict,
                     seed: int | None = None, used_ids: list[str] | None = None,
-                    scenario: dict | None = None) -> dict:
+                    scenario: dict | None = None, length: str = "minute") -> dict:
     rng = random.Random(seed if seed is not None else random.randint(1, 10**9))
     character = get_character(character_id)
     used = list(used_ids or []) or [r.get("scenario_id", "") for r in (recent or []) if r.get("scenario_id")]
@@ -447,6 +527,12 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
                 jev_appraisal, jev_vetoes = call.get("appraisal", {}), call.get("vetoes", {})
         except Exception:
             pass
+    operator_requested = operator
+    if is_human(character) and scenario.get("punches") and operator not in scenario["punches"]:
+        # human blocks license specific mechanisms; remap to the best-prior licensed one
+        prior = ((character.get("raw") or {}).get("comedy") or {}).get("operator_priors") or {}
+        lic = list(scenario["punches"])
+        operator = sorted(lic, key=lambda o: (-prior.get(o, 0), lic.index(o)))[0]
     theory = THEORY_OF_OP.get(operator, "rigidity")
 
     mod = load_modulators().get(modulator, {})
@@ -533,7 +619,7 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
                               "pause_after_ms": pa, "emphasis": em})
             model_id = os.getenv("OPENCODE_MODEL", "mimo-v2.6-flash")
     if beats is None:
-        beats = _template_beats(character, scenario, operator, critique, avoid)
+        beats = _template_beats(character, scenario, operator, critique, avoid, length)
     # modulator delivery deltas: emphasis shift + pause scaling (the HOW)
     for b in beats:
         b["emphasis"] = round(min(1.0, max(0.2, b.get("emphasis", 0.6) + demph)), 2)
@@ -591,12 +677,12 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
                              "chooser": chooser, "chooser_confidence": mod_conf,
                              "operator_confidence": op_conf,
                              "jev_appraisal": jev_appraisal, "jev_vetoes": jev_vetoes,
-                             "operator": operator},
+                             "operator": operator, "operator_requested": operator_requested},
                 "change_from_last": ("Fresh scenario; " if (scenario["id"] not in used) else "Same pool, new angle; ") +
                                      (f"fixing critique: {critique[:120]}" if critique.strip() else "no critique yet; testing preferred operators")}
     return {"character": character, "scenario": scenario, "operator_ids": [operator],
             "theory_ids": sorted(set([theory] + (character.get("preferred_theories", [])[:1]))),
-            "beats": beats, "full_text": full_text, "decision": decision,
+            "beats": beats, "full_text": full_text, "decision": decision, "length": length,
             "modulator": modulator,
             "exploration": explore, "model_id": model_id, "seed": seed or rng.randint(1, 10**9)}
 
@@ -641,12 +727,14 @@ def summarize_strategy(character_id: str, auditions_feedback: list[dict]) -> dic
 MINUTE_SCHEMA = "minute-v1"
 
 
-def validate_minute(gen: dict, character_id: str) -> list[str]:
+def validate_minute(gen: dict, character_id: str, fmt: str | None = None) -> list[str]:
     """Strict versioned validation. Returns error list (empty = valid). Never truncates."""
     errs = []
     beats = gen.get("beats") or []
-    if not (4 <= len(beats) <= 8):
-        errs.append(f"beat count {len(beats)} outside 4-8")
+    fmt = fmt or gen.get("length", "minute")
+    lo_b, hi_b, lo_w, hi_w = (3, 6, 20, 48) if fmt == "short" else (4, 8, 60, 260)
+    if not (lo_b <= len(beats) <= hi_b):
+        errs.append(f"beat count {len(beats)} outside {lo_b}-{hi_b}")
     valid_types = {"setup", "escalation", "misdirect", "punchline", "tag", "callback", "closer", "opener"}
     for b in beats:
         if not (b.get("text") or "").strip():
@@ -654,8 +742,8 @@ def validate_minute(gen: dict, character_id: str) -> list[str]:
         if b.get("type") not in valid_types:
             errs.append(f"bad beat type {b.get('type')}")
     words = sum(len((b.get("text") or "").split()) for b in beats)
-    if not (60 <= words <= 260):
-        errs.append(f"word count {words} outside 60-260")
+    if not (lo_w <= words <= hi_w):
+        errs.append(f"word count {words} outside {lo_w}-{hi_w}")
     if gen.get("scenario", {}).get("id") in (None, ""):
         errs.append("missing scenario id")
     dec = gen.get("decision", {}) or {}
@@ -667,7 +755,9 @@ def validate_minute(gen: dict, character_id: str) -> list[str]:
     try:
         import gates
         others = ["partner", "rex", "bloodhound"] if "nolan" in character_id else []
-        g = gates.check(beats, others_present=others)
+        others = others + list(((gen.get("character") or {}).get("raw") or {}).get("others_present", []))
+        g = gates.check(beats, others_present=others,
+                        character=(gen.get("character") or {}).get("raw"))
         errs.extend("GATE: " + v for v in g["vetoes"])
     except Exception:
         pass

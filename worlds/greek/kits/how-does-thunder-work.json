@@ -1,0 +1,72 @@
+{
+ "schema": "sketch.kit.v1",
+ "id": "greek-how-does-thunder-work",
+ "world": "greek",
+ "edge": [
+  "zeus",
+  "chris-prior-golf-dad"
+ ],
+ "visibility": "private",
+ "authorship": "agent-written lines (Hark); house LLM backend not configured in this sandbox. Edge, mechanism choice and gates are the format factory's.",
+ "premise": "How Does Thunder Work?: a visiting retired dad who watches how-things-work videos asks the sky sovereign to explain his own thunderbolt.",
+ "fact_basis": [
+  "Chris watches how-things-work YouTube; big Tesla fan; dark humour (user_stated)",
+  "Zeus pack: thunderbolts for emphasis; treats complaints as petitions from smaller gods"
+ ],
+ "invented": [
+  "Chris visiting Olympus"
+ ],
+ "operators": [
+  "literalize",
+  "false_analogy"
+ ],
+ "fires": {
+  "false_analogy": [
+   "zeus-sky-sovereign"
+  ]
+ },
+ "lines": [
+  {
+   "who": "A",
+   "type": "setup",
+   "text": "Mortal. Kneel before the lord of thunder."
+  },
+  {
+   "who": "B",
+   "type": "setup",
+   "text": "Lovely. Quick one. How does the thunderbolt actually work?"
+  },
+  {
+   "who": "A",
+   "type": "setup",
+   "text": "I throw it. It obeys."
+  },
+  {
+   "who": "B",
+   "type": "punchline",
+   "by_operator": {
+    "literalize": "Right, but where's the charge? Top of the cloud, or the bottom?",
+    "false_analogy": "Big Tesla fan, me. He made lightning in a lab. Didn't throw anything."
+   }
+  },
+  {
+   "who": "A",
+   "type": "tag",
+   "by_operator": {
+    "literalize": "The top is mine. The bottom is Hera's department.",
+    "false_analogy": "Who is this Tesla? Bring him before me."
+   }
+  },
+  {
+   "who": "B",
+   "type": "closer",
+   "by_operator": {
+    "literalize": "So nobody knows.",
+    "false_analogy": "Bit late for that, mate."
+   }
+  }
+ ],
+ "others_present": [
+  "tesla"
+ ]
+}

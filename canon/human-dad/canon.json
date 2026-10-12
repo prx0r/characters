@@ -1,0 +1,49 @@
+{
+ "slug": "human-dad",
+ "title": "HUMAN DAD — reference block for real people (private canon-equivalent)",
+ "status": "canon-v1-human",
+ "world_type": "human",
+ "summary": "Canon-equivalent for REAL humans. Folklore canons are mined; a real person is never mined. Everything about the individual comes from the person who knows them (user_stated); anything else is a marked comedic flourish (invented). This block holds only the archetype and the rules.",
+ "classification": "real-human archetype (family member). Not folklore, not public domain. Private by default.",
+ "core_lore_paraphrased": [
+  "Archetype only, never biography: the dad as household engineer, explainer of things nobody asked about, teller of the joke twice.",
+  "The family roast is a love language: teasing flows both ways and always lands on the safe target (habits, hobbies, gadgets), never the body or the bank balance.",
+  "Dark humour about getting older is self-directed: the dad jokes about his own mortality so nobody else has to worry."
+ ],
+ "physical_profile": [
+  "None asserted by canon. A real person's look comes only from their own photos (likeness reference) and is drawn kindly, never caricatured.",
+  "Weight or body jokes are family teasing at most and must target the teasing, not the body."
+ ],
+ "behavior_social": [
+  "Explains: how it works matters more than whether it works",
+  "Deflects a compliment with a joke; delivers affection inside a punchline",
+  "Teases back warmly; the closer is kind"
+ ],
+ "comedy_engine": {
+  "angles": [
+   "hobby as engineering problem (golf physics, gadget teardown)",
+   "explainer energy at the dinner table",
+   "gentle self-directed mortality humour around birthdays",
+   "family teasing flipped back on the teasers with affection",
+   "spouse double-act: shared routines, opposite habits"
+  ],
+  "seeds": ["any customer's family member onboarded through the OddHobb character bridge (pg backend/character_bridge.py)"]
+ },
+ "real_person_rules": {
+  "provenance_required": "every fact in a performer pack carries provenance user_stated or invented; invented facts are comedy flourishes and must never be presented as biography",
+  "no_invented_biography": ["jobs", "employers", "places lived", "real events", "medical details", "finances", "politics", "religion"],
+  "visibility_default": "private",
+  "league_eligible_default": false,
+  "voice_cloning_default": false,
+  "hard_gates": "performer packs list privacy.hard_gates regexes; audition/gates.py vetoes any beat that matches",
+  "consent": "packs are built only from what a family member (the customer) supplied; the subject can be removed on request"
+ },
+ "usage_rules": {
+  "do": ["keep it affectionate; the subject should laugh hardest", "mark every flourish invented", "keep worlds containing real people private"],
+  "dont": ["body-shame", "invent biography", "enter public leagues or Elo tables by default", "clone a real voice", "joke about anyone outside the family by name"]
+ },
+ "verify_against": [
+  {"what": "user-stated facts for a subject", "where": "OddHobb subject profile (subject_profiles_v2) or family_profiles.json export"},
+  {"what": "pack proves block: hard gates fire, provenance on every fact", "where": "freaks/chris-prior-golf-dad/character.json + audition/validate_pack.py"}
+ ]
+}

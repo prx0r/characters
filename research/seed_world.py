@@ -25,6 +25,8 @@ HERE = Path(__file__).parent
 ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / "audition"))
 DEITYDB = Path("/root/deitydb/backups/deitydb_pre_v2_1_62.sqlite")
+# Pogtown worlds DB (default audition/auditions.db; override for tests/exports)
+WORLDS_DB = None
 
 # FIXED scenario battery: same seeds -> same scenarios (controlled comparison:
 # same scenario, different graphs). Resolved once, pinned here.
@@ -41,6 +43,17 @@ CURATED_EDGES = {
         ("apollo", "artemis", "sibling", "sun vs moon: twins competing over the same sky"),
         ("aphrodite", "ares", "consort", "beauty vs war: the alliance nobody admits"),
         ("hera", "athena", "rival", "wife vs favorite-child: proxy war by etiquette"),
+        # visiting human (private pack; not a league resident)
+        ("zeus", "chris-prior-golf-dad", "visitor",
+         "sky sovereign vs visiting mortal: 'because I said so' vs 'yes, but how does it actually work?' "
+         "(the retired dad who watches how-lightning-works videos and is a big Tesla fan)"),
+    ],
+    # Private real-family world. Relationship is user_stated; charge wording is
+    # built only from user-stated traits (provenance in each pack).
+    "prior-family": [
+        ("chris-prior-golf-dad", "cathy-prior", "spouse",
+         "the healthy eater who still gets teased about his weight vs the kind, loving control freak "
+         "with the sneaky evening chocolate"),
     ],
 }
 
@@ -48,6 +61,21 @@ WORLD_BIBLES = {
     "greek": ("Olympus runs on protocol older than the sky and pettier than a group chat. "
               "Every god has a domain (their excuse), a spouse or sibling (their problem), "
               "and a mortal habit they deny. Home crowd knows the myths; break canon and they boo."),
+    "prior-family": ("A private family world: one house, two people who love each other and tease each other. "
+                     "Everything here comes from what the family told us; flourishes are marked invented. "
+                     "Home crowd is the family itself. Never public, never in a league."),
+}
+
+WORLD_VISIBILITY = {"prior-family": "private"}
+
+# Performer-pack residents (real people or visitors): (node_id, character slug, role, league_eligible, visibility).
+# Real people are always private and never league-eligible, wherever they visit.
+PACK_RESIDENTS = {
+    "prior-family": [("chris-prior-golf-dad", "chris-prior-golf-dad", "resident", 0, "private"),
+                     ("cathy-prior", "cathy-prior", "resident", 0, "private")],
+    "greek": [("zeus", "zeus-sky-sovereign", "resident", 1, "public"),
+              ("hera", "hera-queen-ledger", "resident", 1, "public"),
+              ("chris-prior-golf-dad", "chris-prior-golf-dad", "visitor", 0, "private")],
 }
 
 # Worlds without DeityDB entities: residents point at existing canon dirs.
@@ -104,17 +132,21 @@ def main() -> None:
     ap.add_argument("--tradition", default="")
     ap.add_argument("--entities", default="")
     ap.add_argument("--limit", type=int, default=12)
+    ap.add_argument("--db", default="", help="worlds sqlite (default audition/auditions.db)")
     args = ap.parse_args()
+    global WORLDS_DB
+    WORLDS_DB = args.db or None
 
     import store
     ids = [x for x in args.entities.split(",") if x]
     ents = fetch_entities(args.tradition, ids, args.limit) if (args.tradition or ids) else []
     print(f"entities: {len(ents)}")
-    conn = store.connect()
+    conn = store.connect(WORLDS_DB) if WORLDS_DB else store.connect()
     try:
-        conn.execute("INSERT OR IGNORE INTO worlds (world_id,name,lore,shared_worldview,created_at)"
-                     " VALUES (?,?,?,?,?)",
-                     (args.world, args.world.title(), WORLD_BIBLES.get(args.world, ""), "", time.time()))
+        conn.execute("INSERT OR IGNORE INTO worlds (world_id,name,lore,shared_worldview,created_at,visibility)"
+                     " VALUES (?,?,?,?,?,?)",
+                     (args.world, args.world.replace("-", " ").title(), WORLD_BIBLES.get(args.world, ""), "",
+                      time.time(), WORLD_VISIBILITY.get(args.world, "public")))
         for ent in ents:
             slug = slugify(ent["canonical_name"])
             cdir = ROOT / "canon" / slug
@@ -125,7 +157,16 @@ def main() -> None:
                              (args.world, slug))
             except Exception as e:
                 print("resident err", slug, e)
+        for node, slug, role, league, vis in PACK_RESIDENTS.get(args.world, []):
+            conn.execute("INSERT INTO world_residents (world_id,canon_id,character_id,role,league_eligible,visibility)"
+                         " VALUES (?,?,?,?,?,?) ON CONFLICT(world_id,canon_id) DO UPDATE SET"
+                         " character_id=excluded.character_id, role=excluded.role,"
+                         " league_eligible=excluded.league_eligible, visibility=excluded.visibility",
+                         (args.world, node, slug, role, league, vis))
         for a, b, rel, charge in CURATED_EDGES.get(args.world, []):
+            if conn.execute("SELECT 1 FROM world_relationships WHERE world_id=? AND a=? AND b=?",
+                            (args.world, a, b)).fetchone():
+                continue  # idempotent re-seed
             conn.execute("INSERT OR IGNORE INTO world_relationships (id,world_id,a,b,charge,created_at)"
                          " VALUES (?,?,?,?,?,?)",
                          (store.new_id("rel"), args.world, a, b, f"{rel}: {charge}", time.time()))
@@ -135,7 +176,9 @@ def main() -> None:
         conn.commit()
     finally:
         conn.close()
-    print("canon blocks + world rows written; edges:", len(CURATED_EDGES.get(args.world, [])))
+    print("canon blocks + world rows written; edges:", len(CURATED_EDGES.get(args.world, [])),
+          "pack residents:", len(PACK_RESIDENTS.get(args.world, [])),
+          "visibility:", WORLD_VISIBILITY.get(args.world, "public"))
     print("SEED_BATTERY (fixed scenarios):", SEED_BATTERY)
 
 

@@ -1,0 +1,118 @@
+{
+ "schema": "human-set.v1",
+ "slug": "chris-prior-golf-dad",
+ "scenario_id": "chris_57th_birthday",
+ "premise": "57th birthday (14 Oct 2026)",
+ "length": "short",
+ "generator": "template-v0-offline",
+ "authorship": "agent-written comic material (Hark), because the house LLM backend (OPENCODE_API_KEY, mimo-v2.6-flash) is not configured in this sandbox; the audition pipeline picks operator/modulator/closer, scores and gates it",
+ "house_llm": false,
+ "operator": "literalize",
+ "modulator": "dry",
+ "run_id": "745b2e8846ad0112",
+ "beats": [
+  {
+   "id": "b1",
+   "type": "setup",
+   "text": "I turn fifty-seven this week, which at my age is a result.",
+   "pause_after_ms": 375,
+   "emphasis": 0.55,
+   "modulator": "dry",
+   "start_ms": 0,
+   "end_ms": 4990
+  },
+  {
+   "id": "b2",
+   "type": "punchline",
+   "text": "I've started reading the small print on everything. Mostly to check my own warranty.",
+   "pause_after_ms": 1250,
+   "emphasis": 0.85,
+   "modulator": "dry",
+   "start_ms": 4990,
+   "end_ms": 11624
+  },
+  {
+   "id": "b3",
+   "type": "tag",
+   "text": "Cathy's planned the party: the guests, the food, and my speech.",
+   "pause_after_ms": 375,
+   "emphasis": 0.55,
+   "modulator": "dry",
+   "start_ms": 11624,
+   "end_ms": 16229
+  },
+  {
+   "id": "b4",
+   "type": "closer",
+   "text": "Apparently I'm grateful.",
+   "pause_after_ms": 875,
+   "emphasis": 0.85,
+   "modulator": "dry",
+   "start_ms": 16229,
+   "end_ms": 18257
+  }
+ ],
+ "full_text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful.",
+ "word_count": 40,
+ "est_spoken_s": 15.4,
+ "score": {
+  "parts": {
+   "slop": 0.5,
+   "slop_verdict": "clean",
+   "not_swappable": 0.5,
+   "not_generic": 0.5,
+   "reframe": 0.5,
+   "play_ready": 0.5,
+   "novelty": 0.879,
+   "shape": 1.0,
+   "gates": 1.0,
+   "gate_flags": 0
+  },
+  "total": 0.613
+ },
+ "candidates": [
+  {
+   "operator": "literalize",
+   "modulator": "dry",
+   "total": 0.613,
+   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+  },
+  {
+   "operator": "literalize",
+   "modulator": "cheeky",
+   "total": 0.525,
+   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+  },
+  {
+   "operator": "literalize",
+   "modulator": "morbid",
+   "total": 0.525,
+   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+  },
+  {
+   "operator": "literalize",
+   "modulator": "relaxed",
+   "total": 0.525,
+   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+  },
+  {
+   "operator": "literalize",
+   "modulator": "morbid",
+   "total": 0.525,
+   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+  },
+  {
+   "operator": "literalize",
+   "modulator": "dry",
+   "total": 0.525,
+   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+  }
+ ],
+ "validate_minute": "PASS",
+ "gates": {
+  "vetoes": [],
+  "flags": [],
+  "passed": true
+ },
+ "created_at": 1791804775.1268725
+}

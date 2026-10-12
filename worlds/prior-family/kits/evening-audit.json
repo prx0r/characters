@@ -1,0 +1,67 @@
+{
+ "schema": "sketch.kit.v1",
+ "id": "prior-family-evening-audit",
+ "world": "prior-family",
+ "edge": [
+  "chris-prior-golf-dad",
+  "cathy-prior"
+ ],
+ "visibility": "private",
+ "authorship": "agent-written lines (Hark); house LLM backend not configured in this sandbox. Edge, mechanism choice and gates are the format factory's.",
+ "premise": "The Evening Audit: Cathy runs the biscuit count; Chris, the healthy eater, gets the weight jokes; somebody is rustling a wrapper during the period drama.",
+ "fact_basis": [
+  "Chris eats super healthily, teased about weight (user_stated, gentle)",
+  "Cathy: control freak, kind, loving; period dramas and romance; sneaky evening chocolate (user_stated)"
+ ],
+ "invented": [
+  "biscuit count",
+  "wrapper behind the cushion",
+  "proposal scene"
+ ],
+ "operators": [
+  "literalize",
+  "status_invert"
+ ],
+ "fires": {
+  "literalize": [
+   "chris-prior-golf-dad"
+  ],
+  "status_invert": [
+   "cathy-prior"
+  ]
+ },
+ "lines": [
+  {
+   "who": "B",
+   "type": "setup",
+   "text": "Chris. One sensible biscuit. I've counted them."
+  },
+  {
+   "who": "A",
+   "type": "setup",
+   "text": "Broccoli, lentils and a walk today. I'm the healthiest man here."
+  },
+  {
+   "who": "B",
+   "type": "setup",
+   "text": "Then why does everyone joke about your weight?"
+  },
+  {
+   "who": "A",
+   "type": "punchline",
+   "by_operator": {
+    "literalize": "I've investigated, love. I'm carrying a lot of material. What's behind that cushion?",
+    "status_invert": "Good question. So who's rustling a wrapper behind that cushion?"
+   }
+  },
+  {
+   "who": "B",
+   "type": "closer",
+   "text": "Shh. He's about to propose.",
+   "look": "audience"
+  }
+ ],
+ "others_present": [
+  "darcy"
+ ]
+}

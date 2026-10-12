@@ -116,3 +116,23 @@ answers, comparable behavior. Jev never writes text.
   preference derives late, with uncertainty, never by copying MW weights.
 - Briefing beats injection: future agents get `get_performance_brief`,
   not raw analytics in the system prompt. Deferred until an agent exists.
+
+## v1.5 — Real humans (private packs, 2026-10-12)
+Real people (a customer's family) get packs too, never mined like folklore.
+- Canon-equivalent: `canon/human-dad` (`world_type: human`) holds the archetype
+  and rules only; nothing biographical.
+- Every fact carries provenance: `user_stated` (from the family, via the OddHobb
+  subject profile) or `invented` (comedic flourish, never biography).
+  `persona.facts` = user_stated only; `persona.flourishes[]` = invented.
+- `privacy`: `visibility: private`, `league_eligible: false`, `voice_cloning: false`,
+  `off_limits[]`, and `hard_gates[]` regexes that `gates.check(..., character=)`
+  turns into vetoes. Private packs never join the public roster or arena
+  (`generate.league_eligible`).
+- Worlds can be private (`worlds.visibility`); residents can be visitors with
+  `league_eligible=0` (`world_residents`). `seed_world.PACK_RESIDENTS`.
+- Short sets: `generate_minute(..., length="short")` (~15 s, ≤42 words) and
+  `validate_minute(..., fmt="short")`; human scenarios are `scenario.human.v1`
+  blocks (opener/turn/punches-by-operator/tag/closers).
+- Sketch format: `formats.sketch_from_edge` (1 edge + kit → premise + duet script).
+- Pack validator: `audition/validate_pack.py` (README pack rules + human rules).
+- Bridge: OddHobb `backend/character_bridge.py` builds these packs from a subject.

@@ -1,0 +1,24 @@
+{
+  "slug": "chris-prior-golf-dad",
+  "created_at": "Mon 2026-10-12 06:34 PM (UTC+07:00)",
+  "updated_at": "Mon 2026-10-12 06:34 PM (UTC+07:00)",
+  "creator": "characters-foundry-v1",
+  "status": "ready",
+  "files": {
+    "character.json": "sha256:a2d3d590e4284004694ef25dfb06b2935508f1b462fa593926a097ff304919c5",
+    "delivery.json": "sha256:b27d3a0dc46ef3fed2a53f40360755188407f870ee68127322af6cda22d4ee89",
+    "scenarios.json": "sha256:2e97376bc908f1254335bafd4b1d87e6536fb58ee881d78116b35995c6985f81"
+  },
+  "beat_count": 11,
+  "word_count": 141,
+  "voice": "bm_george:0.7+bm_lewis:0.3",
+  "visibility": "private",
+  "league_eligible": false,
+  "voice_cloning": false,
+  "lineage": {
+    "relation": "interpretation",
+    "parent": null,
+    "root": "human-dad",
+    "depth": 1
+  }
+}

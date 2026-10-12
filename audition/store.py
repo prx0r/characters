@@ -172,6 +172,14 @@ def migrate(conn: sqlite3.Connection) -> None:
     conn.execute("""CREATE TABLE IF NOT EXISTS world_residents (
       world_id TEXT NOT NULL, canon_id TEXT NOT NULL, character_id TEXT NOT NULL DEFAULT '',
       role TEXT NOT NULL DEFAULT 'resident', PRIMARY KEY (world_id, canon_id))""")
+    # privacy: real-person worlds are private; residents can be non-league visitors
+    for _tbl, _cols in (("worlds", (("visibility", "TEXT NOT NULL DEFAULT 'public'"),)),
+                        ("world_residents", (("league_eligible", "INTEGER NOT NULL DEFAULT 1"),
+                                             ("visibility", "TEXT NOT NULL DEFAULT 'public'")))):
+        _have = {r[1] for r in conn.execute(f"PRAGMA table_info({_tbl})").fetchall()}
+        for _col, _ddl in _cols:
+            if _col not in _have:
+                conn.execute(f"ALTER TABLE {_tbl} ADD COLUMN {_col} {_ddl}")
     conn.execute("""CREATE TABLE IF NOT EXISTS world_relationships (
       id TEXT PRIMARY KEY, world_id TEXT NOT NULL, a TEXT NOT NULL, b TEXT NOT NULL,
       charge TEXT NOT NULL, created_at REAL NOT NULL)""")

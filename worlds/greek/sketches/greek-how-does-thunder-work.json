@@ -1,0 +1,136 @@
+{
+ "schema": "sketch.v1",
+ "format": "sketch",
+ "world_id": "greek",
+ "name": "greek-how-does-thunder-work",
+ "cast": {
+  "A": "zeus-sky-sovereign",
+  "B": "chris-prior-golf-dad"
+ },
+ "edge": {
+  "a": "zeus-sky-sovereign",
+  "b": "chris-prior-golf-dad",
+  "charge": "visitor: sky sovereign vs visiting mortal: 'because I said so' vs 'yes, but how does it actually work?' (the retired dad who watches how-lightning-works videos and is a big Tesla fan)"
+ },
+ "premise": "How Does Thunder Work?: a visiting retired dad who watches how-things-work videos asks the sky sovereign to explain his own thunderbolt. | edge (greek): visitor: sky sovereign vs visiting mortal: 'because I said so' vs 'yes, but how does it actually work?' (the retired dad who watches how-lightning-works videos and is a big Tesla fan) | mechanism: false_analogy | fires: zeus-sky-sovereign",
+ "operator": "false_analogy",
+ "operator_ranking": [
+  [
+   "false_analogy",
+   1.2
+  ],
+  [
+   "literalize",
+   0.8
+  ]
+ ],
+ "misinterpretation_rules": {
+  "zeus-sky-sovereign": "Treats every complaint as a petition from a smaller god",
+  "chris-prior-golf-dad": "Treats every tease as a fault report: diagnoses it, explains the mechanism, then signs off with a darker joke"
+ },
+ "lines": [
+  {
+   "who": "A",
+   "type": "setup",
+   "text": "Mortal. Kneel before the lord of thunder.",
+   "performance": {
+    "expression": "neutral",
+    "gesture": "normal",
+    "look": "partner"
+   },
+   "speech": {
+    "emphasis": 0.5
+   },
+   "pause_after_ms": 280
+  },
+  {
+   "who": "B",
+   "type": "setup",
+   "text": "Lovely. Quick one. How does the thunderbolt actually work?",
+   "performance": {
+    "expression": "neutral",
+    "gesture": "normal",
+    "look": "partner"
+   },
+   "speech": {
+    "emphasis": 0.5
+   },
+   "pause_after_ms": 280
+  },
+  {
+   "who": "A",
+   "type": "setup",
+   "text": "I throw it. It obeys.",
+   "performance": {
+    "expression": "neutral",
+    "gesture": "normal",
+    "look": "partner"
+   },
+   "speech": {
+    "emphasis": 0.5
+   },
+   "pause_after_ms": 280
+  },
+  {
+   "who": "B",
+   "type": "punchline",
+   "text": "Big Tesla fan, me. He made lightning in a lab. Didn't throw anything.",
+   "performance": {
+    "expression": "deadpan",
+    "gesture": "hold still",
+    "look": "audience"
+   },
+   "speech": {
+    "emphasis": 0.9
+   },
+   "pause_after_ms": 900
+  },
+  {
+   "who": "A",
+   "type": "tag",
+   "text": "Who is this Tesla? Bring him before me.",
+   "performance": {
+    "expression": "smug",
+    "gesture": "small gesture",
+    "look": "partner"
+   },
+   "speech": {
+    "emphasis": 0.7
+   },
+   "pause_after_ms": 400
+  },
+  {
+   "who": "B",
+   "type": "closer",
+   "text": "Bit late for that, mate.",
+   "performance": {
+    "expression": "smug",
+    "gesture": "lean in",
+    "look": "audience"
+   },
+   "speech": {
+    "emphasis": 1.0
+   },
+   "pause_after_ms": 1000
+  }
+ ],
+ "word_count": 47,
+ "est_spoken_s": 18.1,
+ "gates": {
+  "zeus-sky-sovereign": {
+   "vetoes": [],
+   "flags": [],
+   "passed": true
+  },
+  "chris-prior-golf-dad": {
+   "vetoes": [],
+   "flags": [],
+   "passed": true
+  }
+ },
+ "passed": true,
+ "authorship": "agent-written lines (Hark); house LLM backend not configured in this sandbox. Edge, mechanism choice and gates are the format factory's.",
+ "visibility": "private",
+ "edge_id": "rel_b87fbed14b81",
+ "world_visibility": "public"
+}

@@ -13,8 +13,30 @@ JARGON = ["reframe cruelty", "operator", "modulator", "rigidify", "displacement"
 SELF_THIRD = re.compile(r"\b[Hh]e\b|\b[Hh]im\b|\b[Hh]is\b")
 
 
-def check(beats: list[dict], others_present: list[str] | None = None) -> dict:
-    """Returns {vetoes: [...], flags: [...], passed: bool}."""
+def privacy_check(beats: list[dict], character: dict | None) -> list[str]:
+    """Real-person hard gates. A pack with privacy.hard_gates (list of
+    {id, pattern, why}) vetoes any beat matching a pattern. Off-limits topics
+    for real humans are not soft flags: they never reach a stage."""
+    if not character:
+        return []
+    priv = character.get("privacy") or {}
+    out = []
+    for g in priv.get("hard_gates") or []:
+        try:
+            rx = re.compile(g["pattern"], re.I)
+        except (re.error, KeyError):
+            out.append(f"privacy gate {g.get('id')} has a bad pattern")
+            continue
+        for b in beats:
+            if rx.search(b.get("text", "")):
+                out.append(f"{b.get('id')}: privacy hard gate '{g.get('id')}' ({g.get('why', '')})")
+    return out
+
+
+def check(beats: list[dict], others_present: list[str] | None = None,
+          character: dict | None = None) -> dict:
+    """Returns {vetoes: [...], flags: [...], passed: bool}.
+    character (raw pack) enables real-person privacy hard gates."""
     others = [o.lower() for o in (others_present or [])]
     vetoes, flags = [], []
     full = " ".join(b.get("text", "") for b in beats)
@@ -35,4 +57,5 @@ def check(beats: list[dict], others_present: list[str] | None = None) -> dict:
             flags.append("b1 too short to be a cold-open joke")
         if len(beats[-1].get("text", "").split()) > 12:
             vetoes.append("closer over 12 words")
+    vetoes.extend(privacy_check(beats, character))
     return {"vetoes": vetoes, "flags": flags, "passed": not vetoes}

@@ -1,0 +1,19 @@
+{
+  "slug": "cathy-prior",
+  "created_at": "Mon 2026-10-12 06:34 PM (UTC+07:00)",
+  "updated_at": "Mon 2026-10-12 06:34 PM (UTC+07:00)",
+  "creator": "characters-foundry-v1",
+  "status": "ready",
+  "files": {
+    "character.json": "sha256:00150c5ad8394e9dbe3313b56c85242d2cb0e779a03de381dcbca6cc0619a6b9"
+  },
+  "visibility": "private",
+  "league_eligible": false,
+  "voice_cloning": false,
+  "lineage": {
+    "relation": "interpretation",
+    "parent": null,
+    "root": "human-dad",
+    "depth": 1
+  }
+}

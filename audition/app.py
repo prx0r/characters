@@ -1010,6 +1010,8 @@ def arena_add():
             aud0 = store.get_audition(conn0, ref)
         finally:
             conn0.close()
+        if aud0 and not generate.league_eligible(aud0.get("character_id", "")):
+            return jsonify({"error": "private character: not league-eligible"}), 403
         if aud0:
             theories = list(aud0.get("theory_ids") or [])
             operators = list(aud0.get("operator_ids") or [])
@@ -1177,6 +1179,8 @@ def arena_ai_bracket():
         chars = [c["id"] for c in generate.list_characters()]
         entered = []
         for ch in chars:
+            if not generate.league_eligible(ch):
+                continue
             r = conn.execute("SELECT id FROM auditions WHERE character_id=? AND status='ready'"
                              " ORDER BY created_at DESC LIMIT 1", (ch,)).fetchone()
             if not r:

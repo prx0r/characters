@@ -12,7 +12,7 @@ import random
 
 
 def score_candidate(full_text: str, beats: list[dict], decision: dict,
-                    prior_texts: list[str]) -> dict:
+                    prior_texts: list[str], character: dict | None = None) -> dict:
     """Higher is better. Components recorded for audit."""
     parts: dict = {}
     # 1. slop fused (clean wins)
@@ -58,7 +58,8 @@ def score_candidate(full_text: str, beats: list[dict], decision: dict,
     # 5. gates: hard veto tanks the candidate; flags cost a little
     try:
         import gates
-        g = gates.check(beats)
+        g = gates.check(beats, others_present=list((character or {}).get("others_present", [])),
+                        character=character)
         parts["gates"] = 1.0 if g["passed"] else 0.0
         parts["gate_flags"] = len(g["flags"])
     except Exception:
@@ -73,7 +74,8 @@ def score_candidate(full_text: str, beats: list[dict], decision: dict,
 
 
 def battle(character_id: str, recent: list[dict], strategy: dict, n: int = 3,
-           seed: int | None = None, matched: bool = False) -> dict:
+           seed: int | None = None, matched: bool = False,
+           scenario: dict | None = None, length: str = "minute") -> dict:
     """Generate n variants, return winner + ranked table. Deterministic seeds.
 
     matched=True holds ONE scenario across candidates (vary operator/modulator
@@ -84,7 +86,9 @@ def battle(character_id: str, recent: list[dict], strategy: dict, n: int = 3,
     priors = [r.get("full_text", "") for r in (recent or [])]
     fixed = None
     mode = "open"
-    if matched:
+    if scenario is not None:
+        fixed, mode = scenario, "matched:" + scenario.get("id", "?")
+    elif matched:
         used = [r.get("scenario_id", "") for r in (recent or []) if r.get("scenario_id")]
         fixed = _gen.pick_scenario(used, rng)
         mode = "matched:" + fixed["id"]
@@ -92,8 +96,9 @@ def battle(character_id: str, recent: list[dict], strategy: dict, n: int = 3,
     running = list(recent or [])
     for i in range(n):
         g = _gen.generate_minute(character_id, running, strategy, seed=rng.randint(1, 10**9),
-                                 scenario=fixed)
-        sc = score_candidate(g["full_text"], g["beats"], g["decision"], priors)
+                                 scenario=fixed, length=length)
+        sc = score_candidate(g["full_text"], g["beats"], g["decision"], priors,
+                             character=(g.get("character") or {}).get("raw"))
         priors = priors + [g["full_text"]]
         running = running + [{"scenario_id": g["scenario"]["id"], "full_text": g["full_text"],
                               "comment": "", "operator_ids": "[]", "rating": 0, "pog_count": 0}]
