@@ -37,14 +37,20 @@ async function api(m,u,b){const r=await fetch(u,{method:m,headers:{'Content-Type
 function watchMs(){return Math.round(performance.now()-T0);}
 async function send(aud,decision,comment){return api('POST','/api/shorts/event',{audition_id:aud,watch_ms:watchMs(),decision,comment:comment||''});}
 function puppetSVG(){return `<svg viewBox="0 0 220 300" style="background:transparent">
+<defs><linearGradient id="spot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffdf9e" stop-opacity=".28"/><stop offset="1" stop-color="#ffdf9e" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="0" width="26" height="300" fill="#5b1414"/><rect x="194" y="0" width="26" height="300" fill="#5b1414"/>
+<rect x="22" y="0" width="6" height="300" fill="#3d0d0d"/><rect x="192" y="0" width="6" height="300" fill="#3d0d0d"/>
+<polygon points="70,0 150,0 190,300 30,300" fill="url(#spot)"/>
+<rect x="0" y="252" width="220" height="48" fill="#151020"/>
 <ellipse cx="110" cy="278" rx="60" ry="10" fill="#000" opacity=".5"/>
-<text class="CAMT" x="8" y="18" fill="#999" font-size="12">medium</text>
+<text class="CAMT" x="30" y="18" fill="#999" font-size="12">medium</text>
 <g class="PB"><rect x="60" y="170" width="100" height="100" rx="14" fill="#2b3440"/><rect x="100" y="170" width="20" height="100" fill="#e8e4d8"/><polygon points="110,185 118,205 110,235 102,205" fill="#7c1f1f"/></g>
 <g class="PH"><ellipse cx="110" cy="120" rx="52" ry="58" fill="#6b8f5e"/><ellipse cx="110" cy="120" rx="52" ry="58" fill="none" stroke="#2c3a26" stroke-width="3"/>
 <rect class="BL" x="70" y="82" width="30" height="7" rx="3" fill="#2c3a26"/><rect class="BR" x="120" y="82" width="30" height="7" rx="3" fill="#2c3a26"/>
 <ellipse cx="85" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PL" cx="85" cy="113" rx="5" ry="9" fill="#111"/>
 <ellipse cx="135" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PR" cx="135" cy="113" rx="5" ry="9" fill="#111"/>
 <ellipse class="MO" cx="110" cy="160" rx="16" ry="5" fill="#1a0f0f"/></g>
+<g class="MIC"><rect x="107" y="205" width="6" height="75" rx="3" fill="#0c0c0c"/><ellipse cx="110" cy="282" rx="16" ry="4" fill="#0c0c0c"/><circle cx="110" cy="196" r="13" fill="#1f2937"/><circle cx="110" cy="196" r="13" fill="none" stroke="#4b5563" stroke-width="2"/><line x1="100" y="192" x2="120" y="192" stroke="#4b5563" stroke-width="1"/><line x1="100" y="197" x2="120" y="197" stroke="#4b5563" stroke-width="1"/><line x1="101" y="202" x2="119" y="202" stroke="#4b5563" stroke-width="1"/></g>
 <text class="EX" x="110" y="294" text-anchor="middle" fill="#facc15" font-size="14">deadpan</text></svg>`;}
 function applyEv(card,ev){const q=s=>card.querySelector(s);
 if(ev.kind==='expression'){card.querySelector('.EX').textContent=ev.id;const mad=ev.id==='annoyed';
