@@ -546,3 +546,188 @@ def set_energy(conn: sqlite3.Connection, character_id: str, energy: float) -> No
                  " ON CONFLICT(character_id) DO UPDATE SET energy=excluded.energy,"
                  " updated_at=excluded.updated_at", (character_id, max(0.0, min(80.0, energy)), _t.time()))
     conn.commit()
+
+
+def performance_history(conn: sqlite3.Connection, character_id: str,
+                        n: int = 10) -> list[dict]:
+    """Recent auditions WITH scores for Jev decision context.
+
+    Returns [{audition_id, scenario_id, modulator, operator, battle_score,
+    pogs, rating, room}] ordered newest-first. Combines: decision JSON
+    (battle_score, modulator, operator), POG counts, feedback ratings.
+    Empty scores → None (Jev treats as unproven, not zero).
+    """
+    rows = conn.execute(
+        """SELECT id, scenario_id, decision FROM auditions
+           WHERE character_id=? ORDER BY created_at DESC LIMIT ?""",
+        (character_id, n)).fetchall()
+    out = []
+    for r in rows:
+        try:
+            dec = json.loads(r["decision"] or "{}")
+        except (json.JSONDecodeError, TypeError):
+            dec = {}
+        inst = dec.get("instance") or {}
+        bs = dec.get("battle_score")
+        if isinstance(bs, dict):
+            bs = bs.get("total")
+        try:
+            bs = float(bs) if bs is not None else None
+        except (ValueError, TypeError):
+            bs = None
+        pogs = conn.execute("SELECT COUNT(*) FROM pogs WHERE audition_id=?",
+                            (r["id"],)).fetchone()
+        fb = conn.execute("SELECT rating, room_reaction FROM feedbacks "
+                          "WHERE audition_id=?", (r["id"],)).fetchone()
+        out.append({
+            "audition_id": r["id"],
+            "scenario_id": r["scenario_id"],
+            "modulator": inst.get("modulator") or dec.get("modulator"),
+            "operator": inst.get("operator") or dec.get("operator"),
+            "battle_score": bs,
+            "pogs": (pogs[0] if pogs else 0) or 0,
+            "rating": (fb["rating"] if fb else None),
+            "room": (fb["room_reaction"] if fb else None) or "",
+        })
+    return out
+
+
+def format_performance_brief(history: list[dict]) -> str:
+    """Compact performance summary for Jev state (fits token budget).
+
+    Groups by modulator: avg battle score + POGs + count. Jev uses this
+    to tilt toward proven modulators and away from proven duds.
+    """
+    if not history:
+        return "No prior performances — all modulators unproven."
+    from collections import defaultdict
+    by_mod: dict[str, dict] = defaultdict(lambda: {"n": 0, "bs": [], "pogs": 0})
+    for h in history:
+        m = h.get("modulator") or "unknown"
+        by_mod[m]["n"] += 1
+        if h.get("battle_score") is not None:
+            by_mod[m]["bs"].append(h["battle_score"])
+        by_mod[m]["pogs"] += h.get("pogs", 0)
+    lines = []
+    for mod, d in sorted(by_mod.items(),
+                         key=lambda kv: (sum(kv[1]["bs"]) / max(1, len(kv[1]["bs"]))),
+                         reverse=True):
+        avg = (sum(d["bs"]) / len(d["bs"])) if d["bs"] else None
+        avg_s = f"{avg:.2f}" if avg is not None else "unscored"
+        lines.append(f"{mod}: {d['n']}x, battle {avg_s}, {d['pogs']} pogs")
+    return "Past performance by modulator (higher battle = funnier):\n" + "\n".join(lines)
+
+
+def propose_strategy_update(conn: sqlite3.Connection, character_id: str,
+                            min_new: int = 5) -> dict | None:
+    """Propose a strategy version from accumulated evidence (threshold-gated).
+
+    Triggers when >= min_new scored auditions exist since the current
+    strategy version's creation. Summarizes: top modulators/operators by
+    battle score + POGs (success), bottom ones (failed), and drafts
+    instruction deltas. Saves as status='proposed' — pointer never moves
+    without human approval (accept via set_strategy_status).
+    Returns the proposal or None if threshold not met (or tables missing).
+    """
+    try:
+        cur = get_strategy(conn, character_id)
+    except Exception:
+        return None
+    cur_ver = cur.get("version", "strategy_01")
+    # auditions since current version (by created_at of version row)
+    ver_row = conn.execute(
+        "SELECT created_at FROM strategy_versions WHERE character_id=? AND version=?",
+        (character_id, cur_ver)).fetchone()
+    since = (ver_row["created_at"] if ver_row and ver_row["created_at"] else 0)
+    hist = [h for h in performance_history(conn, character_id, 50)]
+    # filter to new since version — use audition created_at
+    fresh_ids = {r["id"] for r in conn.execute(
+        "SELECT id FROM auditions WHERE character_id=? AND created_at>?",
+        (character_id, since)).fetchall()}
+    fresh = [h for h in hist if h["audition_id"] in fresh_ids
+             and h.get("battle_score") is not None]
+    if len(fresh) < min_new:
+        return None
+    from collections import defaultdict
+    mod_scores: dict[str, list[float]] = defaultdict(list)
+    op_scores: dict[str, list[float]] = defaultdict(list)
+    for h in fresh:
+        if h.get("modulator"):
+            mod_scores[h["modulator"]].append(h["battle_score"])
+        if h.get("operator"):
+            op_scores[h["operator"]].append(h["battle_score"])
+    def _avg(v):
+        return sum(v) / len(v)
+    top_mods = sorted(mod_scores.items(), key=lambda kv: _avg(kv[1]), reverse=True)[:3]
+    bot_mods = sorted(mod_scores.items(), key=lambda kv: _avg(kv[1]))[:2]
+    top_ops = sorted(op_scores.items(), key=lambda kv: _avg(kv[1]), reverse=True)[:3]
+    success = {m: round(_avg(v), 2) for m, v in top_mods}
+    failed = {m: round(_avg(v), 2) for m, v in bot_mods}
+    lines = [f"Auto-proposal from {len(fresh)} scored auditions since {cur_ver}."]
+    if top_mods:
+        lines.append("Lean into: " + ", ".join(f"{m} ({_avg(v):.2f})" for m, v in top_mods) + ".")
+    if bot_mods:
+        lines.append("Pull back from: " + ", ".join(f"{m} ({_avg(v):.2f})" for m, v in bot_mods) + ".")
+    if top_ops:
+        lines.append("Operators working: " + ", ".join(f"{o} ({_avg(v):.2f})" for o, v in top_ops) + ".")
+    instructions = cur.get("instructions", "") + "\n\n" + " ".join(lines)
+    import time as _t
+    ver = f"strategy_auto_{int(_t.time())}"
+    evidence = [h["audition_id"] for h in fresh]
+    save_strategy_version(conn, character_id, ver, cur_ver,
+                          success, failed, instructions, evidence,
+                          ["auto-fit from battle scores + POGs"],
+                          f"{len(fresh)} new scored auditions", status="proposed")
+    return {"version": ver, "parent": cur_ver, "fresh_count": len(fresh),
+            "success": success, "failed": failed, "status": "proposed",
+            "next": "human reviews via blind battles, then set_strategy_status(accepted)"}
+
+
+def loser_texts(conn: sqlite3.Connection, character_id: str,
+                n: int = 20) -> list[dict]:
+    """Battle loser full texts for Jev negative training.
+
+    Losers were always stored in battle_runs.table_json — just never
+    surfaced. Returns [{text, modulator, operator, score, winner_score,
+    scenario}] newest-first. The score gap (winner - loser) is the
+    training signal: what specifically lost, and by how much.
+    """
+    rows = []
+    try:
+        rows = conn.execute(
+            "SELECT job_id, table_json, winner_idx FROM battle_runs"
+            " WHERE character_id=? ORDER BY created_at DESC LIMIT ?",
+            (character_id, max(1, n))).fetchall()
+    except Exception:
+        return []
+    out = []
+    for r in rows:
+        try:
+            table = json.loads(r["table_json"] or "[]")
+        except (json.JSONDecodeError, TypeError):
+            continue
+        try:
+            winner_score = table[r["winner_idx"]].get("total", 0) \
+                if 0 <= r["winner_idx"] < len(table) else 0
+        except (IndexError, TypeError, AttributeError):
+            winner_score = 0
+        for i, cand in enumerate(table):
+            if i == r["winner_idx"] or not isinstance(cand, dict):
+                continue
+            text = cand.get("text", "")
+            if not text or len(text.split()) < 20:
+                continue
+            try:
+                score = float(cand.get("total", 0) or 0)
+            except (ValueError, TypeError):
+                score = 0
+            out.append({
+                "text": text,
+                "modulator": cand.get("modulator", ""),
+                "operator": cand.get("operator", ""),
+                "score": score,
+                "winner_score": winner_score,
+                "gap": round(winner_score - score, 3),
+                "battle": r["job_id"],
+            })
+    return out
