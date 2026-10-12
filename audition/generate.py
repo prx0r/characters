@@ -95,7 +95,13 @@ DICEBEAR_STYLES = {"no_nose_nolan": "personas",
                    "reptilian_ralph_middle_management": "adventurer",
                    "rudy_dulce_hvac": "bottts",
                    "zeus_sky_sovereign": "adventurer",
-                   "hera_queen_ledger": "lorelei"}
+                   "hera_queen_ledger": "lorelei",
+                   "vex9_morale_officer": "bottts",
+                   "nip_the_lodger": "adventurer-neutral",
+                   "strophe_chorus_clerk": "personas",
+                   "pippa_post_pigeon": "open-peeps",
+                   "diogenes_tub_cynic": "croodles",
+                   "baba_yaga_crone": "lorelei"}
 
 
 def avatar_url(character_id: str) -> str:
@@ -154,6 +160,15 @@ def get_character(character_id: str) -> dict:
         return load_freak_character("zeus-sky-sovereign") or load_nolan()
     if character_id in ("hera_queen_ledger", "hera", "hera-queen-ledger"):
         return load_freak_character("hera-queen-ledger") or load_nolan()
+    for _slug, _ids in (("vex9-morale-officer", ("vex9_morale_officer", "vex9", "vex")),
+                        ("nip-the-lodger", ("nip_the_lodger", "nip")),
+                        ("strophe-chorus-clerk", ("strophe_chorus_clerk", "strophe")),
+                        ("pippa-post-pigeon", ("pippa_post_pigeon", "pippa")),
+                        ("diogenes-tub-cynic", ("diogenes_tub_cynic", "diogenes"))):
+        if character_id in _ids:
+            return load_freak_character(_slug) or load_nolan()
+    if character_id in ("baba_yaga_crone", "baba", "baba-yaga-crone"):
+        return load_freak_character("baba-yaga-crone") or load_nolan()
     return load_nolan()
 
 
@@ -343,7 +358,7 @@ def _template_beats(character: dict, scenario: dict, operator: str,
             ("tag", f"Note for the record: I am blind to {blind}. The court stenographer wrote that down.".strip()),
             ("closer", "Session adjourned." if "Zeus" in character.get("name", "") else "So logged."),
         ]
-    else:
+    elif character["id"] == "no_nose_nolan":
         # Nolan: incompetence framed as expertise, evidence-free method
         work = "detective work" if "detect" in how.lower() or "job" in scenario.get("id", "") else "police work"
         beats = [
@@ -355,6 +370,31 @@ def _template_beats(character: dict, scenario: dict, operator: str,
             ("callback" if not dodge_dogs else "tag",
              f"My partner the bloodhound found three felonies before breakfast while I found the break room. I am blind to {blind}, and frankly that is what makes me management material."),
             ("closer", "Smell that? Definitely a promotion."),
+        ]
+    else:
+        # Generic freak branch: persona deal + facts + scenario + operator.
+        # Any new pack performs immediately; no dog content leaks in.
+        raw = character.get("raw") or {}
+        facts = (character.get("traits") or [])[:2]
+        factline = (" " + " ".join(facts)) if facts else ""
+        rule = (raw.get("misinterpretation_rule") or "")
+        closers = {"diogenes": "Sunlight. Now.", "pippa": "Green light. Go.",
+                   "strophe": "Exit, pursued by billing.", "vex": "Survey says... me.",
+                   "nip": "Porridge. Now."}
+        closer = next((v for k, v in closers.items() if k in character["id"]), "Thank you. Goodnight.")
+        op_punch = {
+            "repeat_variation": f"Again, louder, for the ones in back: {deriv} And encore: {deriv}",
+            "literalize": f"Taken literally, {how} means exactly what it says, which is exactly the problem.",
+            "double_interpret": f"Two readings. One: {how} Two: I get paid. I prefer two.",
+        }.get(operator, f"Here is what actually happened: {deriv}")
+        beats = [
+            ("setup", f"I am {character.get('name')}. {character.get('deal', '')}".strip()),
+            ("setup", f"Tonight's business: {how}.{factline}".strip()),
+            ("misdirect" if push_misdirect else "setup",
+             f"You think this is about you. {rule}".strip() or f"You think this is about you. It is about {tension or 'procedure'}.".strip()),
+            ("punchline", op_punch.strip()),
+            ("tag", f"For the record, I am blind to {blind}. Noted.".strip()),
+            ("closer", closer),
         ]
     out = []
     for i, (btype, text) in enumerate(beats, 1):
