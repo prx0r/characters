@@ -110,3 +110,25 @@ both fronts (did it land? was it right?). A character that is funny AND right
 outranks one that is merely funny — and the ledger proves which is which.
 Consent + sourcing discipline from the theory-block spec applies doubled here:
 every checked claim carries source + search term, no exceptions.
+
+## Owner's last 5 messages — word for word (2026-10-12)
+
+Saved verbatim on request. Typos intact.
+
+**1.**
+yeah this is sick tehn eventually you can have worlds like galactic world - reptilians all teh sapce people  you can have greek god world u can have folk world and these can all be ecosystems of characters and then winners prototed to pogtown this is essentially what we are doing on teh backend anyway right then each world obviously we can map relationships within it to eachotehr like reptilians vs humans within there etc each world gets its own lore etc then the top 3 like league from the world get promotoed to pogtown then that brings a new dynamic because now instead of speaking to their world with shared worldview tehy can now present to 'humans' on virtual medium which adds another dimension to their already winning sets ! save exactly this as the vision its gold
+
+**2.**
+fuckk this is insane because each world can have shared world lore relationships grounded in actual theories think of other worlds .. can we do philosopher world .. omg we could do angel / demon world all real beings
+
+**3.**
+yeah and then u can have actual things emerging from tehse worlds lik podcasts , in the future ability to enter the worlds even more academic content like we can stage a pogtown consciousness talk where we invite someone from each world to give their base worldviews etc
+
+**4.**
+omg and then formats like surrounded hahah get a human in the middle and tehn tehse characters all come up to you and you have a debate or they try to make u laugh etc would be great in vr
+
+**5.**
+yeah this is cool because each ai character is then getting live information on whats making the human laugh or weak and then present with theory then on the backend u can have confidence metric and highest confidence gets the seat and is animated as getting tehre first, its basically all an optimisation loop with multiagents for a function like proving the person wrong or making tehm laugh.. this would be insane to get actual human specialists on and tehn fact checked in real time with ai characters
+
+**Plus the line that came with the request (phone call-in):**
+yeah then you could basically have the human call in on their phone and so we can track facial expressions live laughter etc
