@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ari Engine — Gemini Stage Lab</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a0a;color:#eee;font-family:system-ui,-apple-system,sans-serif;min-height:100vh;padding:20px}
+h1{font-size:22px;color:#facc15;margin-bottom:4px}
+.sub{color:#888;font-size:13px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:#161616;border:1px solid #2a2a2a;border-radius:10px;padding:16px;transition:border-color .15s}
+.card:hover{border-color:#facc15}
+.card h2{font-size:15px;color:#eee;margin-bottom:8px}
+.meta{font-size:12px;color:#888;line-height:1.6}
+.meta b{color:#ccc}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;margin-right:4px}
+.badge.emotion{background:#1e3a5f;color:#7dd3fc}
+.badge.anger{background:#7f1d1d;color:#fca5a5}
+.badge.ok{background:#14532d;color:#86efac}
+.badge.time{background:#333;color:#aaa}
+.actions{margin-top:12px;display:flex;gap:8px}
+.actions a{display:inline-block;padding:7px 14px;border-radius:6px;text-decoration:none;font-size:13px;font-weight:600}
+.btn-play{background:#facc15;color:#000}
+.btn-play:hover{background:#fde047}
+.btn-tl{background:#222;color:#eee;border:1px solid #444}
+.btn-tl:hover{background:#333}
+#status{margin-bottom:16px;font-size:13px;color:#888}
+#status .ok{color:#86efac}
+#status .err{color:#f87171}
+.empty{text-align:center;padding:60px;color:#555}
+</style>
+</head>
+<body>
+<h1>Ari Engine</h1>
+<div class="sub">Gemini 3.8-flash → Stage Lab → Ralph puppet · 5 sets analyzed</div>
+<div id="status">loading…</div>
+<div class="grid" id="grid"></div>
+
+<script>
+async function load(){
+  const st=document.getElementById('status');
+  try{
+    const r=await fetch('/api/stage/gemini');
+    const d=await r.json();
+    const sets=d.sets||[];
+    st.innerHTML=`<span class="ok">✓</span> ${sets.length} sets · click Play to open Ralph stage`;
+    if(!sets.length){
+      document.getElementById('grid').innerHTML='<div class="empty">no gemini sets found</div>';
+      return;
+    }
+    document.getElementById('grid').innerHTML=sets.map(s=>`
+      <div class="card">
+        <h2>${s.title}</h2>
+        <div class="meta">
+          <span class="badge time">${s.duration_s?s.duration_s.toFixed(0)+'s':'—'}</span>
+          ${s.dominant_emotion?`<span class="badge emotion">${s.dominant_emotion}</span>`:''}
+          ${s.anger_present?`<span class="badge anger">${s.anger_type||'anger'}</span>`:''}
+          ${s.has_player?'<span class="badge ok">player</span>':''}
+          ${s.has_timeline?'<span class="badge ok">timeline</span>':''}
+          <br>
+          <b>${s.n_segments}</b> segments · ${s.stem}
+        </div>
+        <div class="actions">
+          ${s.player_url?`<a class="btn-play" href="${s.player_url}" target="_blank">▶ Play on Ralph</a>`:''}
+          ${s.timeline_url?`<a class="btn-tl" href="${s.timeline_url}" target="_blank">JSON</a>`:''}
+        </div>
+      </div>
+    `).join('');
+  }catch(e){
+    st.innerHTML=`<span class="err">✗</span> ${e.message}`;
+  }
+}
+load();
+</script>
+</body>
+</html>
