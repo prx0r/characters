@@ -134,9 +134,11 @@ PUPPET_SVG = r'''<svg viewBox="0 0 220 300" style="background:transparent">
 
 
 def make_player_html(gem: dict, events: list[dict], title: str, duration_ms: int,
+                     visemes: list[dict] | None = None,
                      video_url: str | None = None) -> str:
     """Standalone HTML player — timeline plays against Ralph puppet."""
     events_js = json.dumps(events)
+    vis_js = json.dumps(visemes or [])
     gem_js = json.dumps({
         "segments": [
             {"t0": s.get("t0"), "t1": s.get("t1"),
@@ -191,8 +193,9 @@ background:radial-gradient(circle at 50% 30%,#2b2010,#000 72%)}}
 <script>
 const EVENTS={events_js};
 const GEM={gem_js};
+const VISEMES={vis_js};
 const DUR={duration_ms};
-let playing=false, t0=0, tpos=0, raf=null;
+let playing=false, t0=0, tpos=0, raf=null, visIdx=0;
 
 const q=s=>document.querySelector(s);
 function apply(ev){{
@@ -252,6 +255,27 @@ function segAt(ms){{
   return (GEM.segments||[]).find(s=>ms>=s.t0*1000 && ms<s.t1*1000);
 }}
 
+// Ralph mouth shape → SVG ellipse params (ry, rx, cy)
+const MOUTH={{closed:[3,14,160],rest:[5,16,160],AI:[12,18,158],E:[8,17,159],
+  O:[10,12,159],U:[7,10,160],FV:[4,15,160],L:[7,15,159],MBP:[2,13,160],open:[14,20,157]}};
+function applyViseme(ms){{
+  if(!VISEMES.length)return;
+  // binary search for current viseme
+  let lo=0,hi=VISEMES.length-1,cur=VISEMES[0];
+  while(lo<=hi){{
+    const mid=(lo+hi)>>1;
+    if(VISEMES[mid].t<=ms){{cur=VISEMES[mid];lo=mid+1;}}
+    else hi=mid-1;
+  }}
+  const p=MOUTH[cur.shape]||MOUTH.rest;
+  const mo=q('.MO');
+  if(mo){{
+    mo.setAttribute('ry',p[0]);
+    mo.setAttribute('rx',p[1]);
+    mo.setAttribute('cy',p[2]);
+  }}
+}}
+
 function tick(){{
   if(!playing)return;
   tpos = performance.now()-t0;
@@ -265,6 +289,8 @@ function tick(){{
     if(ev._f)continue;
     if(ev.t<=tpos){{ev._f=1;apply(ev);}}
   }}
+  // viseme mouth animation
+  applyViseme(tpos);
   // current segment HUD
   const seg=segAt(tpos);
   if(seg){{
@@ -289,9 +315,9 @@ function stop(){{
 q('#play').onclick=()=>playing?stop():play();
 q('#scrub').oninput=e=>{{
   tpos=+e.target.value;
-  // reapply state up to tpos
   EVENTS.forEach(e=>e._f=0);
   for(const ev of EVENTS){{if(ev.t<=tpos){{ev._f=1;apply(ev);}}}}
+  applyViseme(tpos);
   q('#barfill').style.width=(tpos/DUR*100)+'%';
 }};
 // anger banner
@@ -322,9 +348,20 @@ def main():
     tl_path = OUT / f"{stem}.stage_timeline.json"
     tl_path.write_text(json.dumps(tl, indent=2))
     print(f"timeline: {tl_path.name} ({len(events)} events, {duration_ms}ms)")
+    # load visemes if they exist
+    aud_id = stem.replace("_gemini", "")
+    vis_path = AUDITION / "audio" / f"{aud_id}.visemes.json"
+    if not vis_path.exists():
+        vis_path = AUDITION / "audio" / f"{stem}.visemes.json"
+    visemes = None
+    if vis_path.exists():
+        visemes = json.loads(vis_path.read_text())
+        print(f"visemes:  {len(visemes)} events from {vis_path.name}")
+    else:
+        print(f"visemes:  none found at {vis_path}")
     # write player
     title = stem.replace("_", " ").title()
-    html = make_player_html(gem, events, title, duration_ms)
+    html = make_player_html(gem, events, title, duration_ms, visemes=visemes)
     html_path = OUT / f"{stem}_player.html"
     html_path.write_text(html)
     print(f"player:   {html_path}")
