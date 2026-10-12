@@ -1,0 +1,244 @@
+{
+  "speaker_guess": "Hans Kim",
+  "overall": {
+    "energy_arc": "Starts conversational and observational, ramps up into tense physical reenactment, bursts into ridiculous goofy movement, and lands on a punchy absurd tag.",
+    "dominant_emotion": "sarcastic",
+    "dominant_emotion_intensity": 0.78,
+    "stage_presence": "Dynamic physical storytelling with sharp transitions between relatable anxiety and awkward absurdity."
+  },
+  "segments": [
+    {
+      "t0": 0.0,
+      "t1": 13.0,
+      "emotion": "neutral",
+      "emotion_intensity": 0.45,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.15,
+        "head": "tilt_right",
+        "arms": "mic_point",
+        "face": "neutral",
+        "brow": "raised",
+        "micro_gesture": "Subtle finger snap marking the atmospheric tension"
+      },
+      "comedy": {
+        "beat_type": "setup",
+        "gtvh_operators": [
+          "Situation",
+          "Target"
+        ],
+        "status_move": "flat",
+        "note": "Establishes common awkward urban male experience of trailing behind a lone woman at night."
+      },
+      "vocal": {
+        "energy": 0.5,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "emphasis_words": [
+          "feeling",
+          "tension",
+          "woman"
+        ],
+        "note": "Conversational, setting the scene with steady cadence."
+      }
+    },
+    {
+      "t0": 13.0,
+      "t1": 20.0,
+      "emotion": "sarcastic",
+      "emotion_intensity": 0.6,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.05,
+        "head": "nod",
+        "arms": "gesture_out",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Mirrored hand cuts matching turn directions"
+      },
+      "comedy": {
+        "beat_type": "escalation",
+        "gtvh_operators": [
+          "Parallelism",
+          "Exaggeration"
+        ],
+        "status_move": "flat",
+        "note": "Synchronized turns heightening the unintentional stalking illusion."
+      },
+      "vocal": {
+        "energy": 0.6,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "emphasis_words": [
+          "left",
+          "right",
+          "rush"
+        ],
+        "note": "Quick, rhythmic delivery mirroring pacing steps."
+      }
+    },
+    {
+      "t0": 20.0,
+      "t1": 38.0,
+      "emotion": "mock_indignant",
+      "emotion_intensity": 0.8,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.4,
+        "head": "tilt_right",
+        "arms": "crossed",
+        "face": "wide_eyes",
+        "brow": "raised",
+        "micro_gesture": "Turning back to audience with frozen bug-eyed look over shoulder"
+      },
+      "comedy": {
+        "beat_type": "escalation",
+        "gtvh_operators": [
+          "Caricature",
+          "Role Reversal"
+        ],
+        "status_move": "down",
+        "note": "Acts out the woman's panicked athletic prep followed by the terrifying eye contact moment."
+      },
+      "vocal": {
+        "energy": 0.65,
+        "pitch_shift": "drop",
+        "pace": "normal",
+        "emphasis_words": [
+          "hamstrings",
+          "tense",
+          "look"
+        ],
+        "note": "Hushed conspiratorial tone before the visual beat."
+      }
+    },
+    {
+      "t0": 38.0,
+      "t1": 49.5,
+      "emotion": "gleeful",
+      "emotion_intensity": 0.85,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.1,
+        "head": "shake",
+        "arms": "open",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Exaggerated skipping silly walk with flailing limbs"
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "Incongruity",
+          "Physical Slapstick"
+        ],
+        "status_move": "down",
+        "note": "Absurdly counterproductive solution to looking non-threatening by acting completely deranged."
+      },
+      "vocal": {
+        "energy": 0.85,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "emphasis_words": [
+          "hard",
+          "rapist",
+          "this"
+        ],
+        "note": "Burst of loud defensive energy into demonstrative question."
+      }
+    },
+    {
+      "t0": 49.5,
+      "t1": 58.0,
+      "emotion": "deadpan",
+      "emotion_intensity": 0.75,
+      "body": {
+        "lean": "back",
+        "lean_amount": 0.2,
+        "head": "neutral",
+        "arms": "sides",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "Stiff puffed posture holding silence while band and audience crack up"
+      },
+      "comedy": {
+        "beat_type": "tag",
+        "gtvh_operators": [
+          "Escalation",
+          "Unexpected Twist"
+        ],
+        "status_move": "reversal",
+        "note": "Attempt to avert suspicion accidentally turns into an ambush maneuver."
+      },
+      "vocal": {
+        "energy": 0.6,
+        "pitch_shift": "fall",
+        "pace": "normal",
+        "emphasis_words": [
+          "alternate",
+          "reappear",
+          "street"
+        ],
+        "note": "Calm, deadpan punch delivery contrasting the sinister implication."
+      }
+    }
+  ],
+  "gesture_library": [
+    {
+      "name": "Lookback Freeze",
+      "t_guess": 36.5,
+      "duration_est_s": 2.0,
+      "body_params": {
+        "lean": 0.35,
+        "head_deg": 110.0,
+        "arm_open": 0.2,
+        "brow": 1.0
+      },
+      "emotion_tag": "mock_horror"
+    },
+    {
+      "name": "Non-Threatening Silly Walk",
+      "t_guess": 46.5,
+      "duration_est_s": 3.0,
+      "body_params": {
+        "lean": 0.05,
+        "head_deg": 0.0,
+        "arm_open": 0.95,
+        "brow": 0.5
+      },
+      "emotion_tag": "gleeful"
+    }
+  ],
+  "anger_analysis": {
+    "present": false,
+    "type": "none",
+    "body_signature": [],
+    "face_signature": [],
+    "vocal_signature": [],
+    "target": "none",
+    "release_or_withhold": "none",
+    "contrast_before_after": "none"
+  },
+  "_meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 15.5,
+    "clip_mb": 3.29,
+    "usage": {
+      "promptTokenCount": 5989,
+      "candidatesTokenCount": 1802,
+      "totalTokenCount": 8032,
+      "promptTokensDetails": [
+        {
+          "modality": "VIDEO",
+          "tokenCount": 5361
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 241,
+      "serviceTier": "standard"
+    }
+  }
+}

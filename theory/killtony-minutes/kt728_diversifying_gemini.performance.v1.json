@@ -1,0 +1,224 @@
+{
+  "version": "performance.v1",
+  "source": "kt728_diversifying_gemini",
+  "method": "gemini-3.8-flash_video",
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "neutral",
+      "intensity": 0.5
+    },
+    {
+      "t": 0.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 0.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 0.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "neutral",
+        "energy": 0.6,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "beat_type": "setup"
+      }
+    },
+    {
+      "t": 11.5,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.8
+    },
+    {
+      "t": 11.5,
+      "kind": "gesture",
+      "value": "hold still"
+    },
+    {
+      "t": 11.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 11.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.55,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "beat_type": "punchline"
+      }
+    },
+    {
+      "t": 11.55,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 25.5,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.7
+    },
+    {
+      "t": 25.5,
+      "kind": "gesture",
+      "value": "hold still"
+    },
+    {
+      "t": 25.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 25.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "sarcastic",
+        "energy": 0.65,
+        "pitch_shift": "fall",
+        "pace": "normal",
+        "beat_type": "tag"
+      }
+    },
+    {
+      "t": 31.0,
+      "kind": "expression",
+      "value": "grimace",
+      "intensity": 0.85
+    },
+    {
+      "t": 31.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 31.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 31.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "mock_indignant",
+        "energy": 0.9,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "beat_type": "premise"
+      }
+    },
+    {
+      "t": 46.5,
+      "kind": "expression",
+      "value": "mock_horror",
+      "intensity": 0.75
+    },
+    {
+      "t": 46.5,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 46.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 46.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "sarcastic",
+        "energy": 0.7,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "beat_type": "escalation"
+      }
+    },
+    {
+      "t": 57.5,
+      "kind": "expression",
+      "value": "grimace",
+      "intensity": 0.8
+    },
+    {
+      "t": 57.5,
+      "kind": "gesture",
+      "value": "hold still"
+    },
+    {
+      "t": 57.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 57.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "defiant",
+        "energy": 0.75,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "beat_type": "escalation"
+      }
+    },
+    {
+      "t": 110.0,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.9
+    },
+    {
+      "t": 110.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 110.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 110.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "gleeful",
+        "energy": 0.85,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "beat_type": "closer"
+      }
+    }
+  ],
+  "n_events": 29,
+  "meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 22.0,
+    "clip_mb": 5.23,
+    "usage": {
+      "promptTokenCount": 7721,
+      "candidatesTokenCount": 2681,
+      "totalTokenCount": 10721,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        },
+        {
+          "modality": "VIDEO",
+          "tokenCount": 7093
+        }
+      ],
+      "thoughtsTokenCount": 319,
+      "serviceTier": "standard"
+    }
+  }
+}
