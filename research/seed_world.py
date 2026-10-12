@@ -50,6 +50,11 @@ WORLD_BIBLES = {
               "and a mortal habit they deny. Home crowd knows the myths; break canon and they boo."),
 }
 
+# Worlds without DeityDB entities: residents point at existing canon dirs.
+WORLD_RESIDENTS = {
+    "earth": ["owl", "sasquatch"],
+}
+
 
 def slugify(name: str) -> str:
     return "".join(c.lower() if c.isalnum() else "-" for c in name).strip("-").replace("--", "-")
@@ -103,7 +108,7 @@ def main() -> None:
 
     import store
     ids = [x for x in args.entities.split(",") if x]
-    ents = fetch_entities(args.tradition, ids, args.limit)
+    ents = fetch_entities(args.tradition, ids, args.limit) if (args.tradition or ids) else []
     print(f"entities: {len(ents)}")
     conn = store.connect()
     try:
@@ -124,6 +129,9 @@ def main() -> None:
             conn.execute("INSERT OR IGNORE INTO world_relationships (id,world_id,a,b,charge,created_at)"
                          " VALUES (?,?,?,?,?,?)",
                          (store.new_id("rel"), args.world, a, b, f"{rel}: {charge}", time.time()))
+        for cn in WORLD_RESIDENTS.get(args.world, []):
+            conn.execute("INSERT OR IGNORE INTO world_residents (world_id,canon_id) VALUES (?,?)",
+                         (args.world, cn))
         conn.commit()
     finally:
         conn.close()

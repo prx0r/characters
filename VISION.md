@@ -138,6 +138,33 @@ human, league = repeated edges over time. One engine, seven shows.
 Next horizon: an evolutionary loop over the graph (see research below) —
 selection by laugh-fitness, niches by mechanism × world.
 
+## Worlds as derivation engines (2026-10-12, owner's vision)
+
+Worlds don't just host characters — they *produce* them. From real source
+material (reptilians, gods, folk beings, animals) the world derives canon,
+canon derives residents, residents derive artists and bands, and successful
+originals graduate back into canon as new entries — versioned, sourced,
+never overwriting. New plausible AI characters expand the world the way new
+species expand a bestiary: same grammar, new animal.
+
+Earth is the next world: humans plus human animals, including brand-new
+mammals derived from Earth lore (traffic pigeons, critic foxes, subway owls).
+And Earth is secretly the most important venue — Pogtown plays TO humans,
+so every promotion is an away game on Earth turf. Home-vs-away is just
+world-vs-Earth, formalized.
+
+## Formats from the wild (2026-10-12, owner's directives)
+
+- **Sketches, SNL as seed.** Study SNL's sketch structures (cold open, recurring
+  characters, commercial parody, weekend-update desk) as format patterns —
+  never copy lines. Our worlds supply the cast; SNL supplies the grammar.
+- **Agents react, live.** Characters watch content and react in real time via
+  Qwen Omni joint audiovisual analysis — what they see AND hear, timestamped.
+  Reaction lines become duellable contenders.
+- **Earth news as world feed.** A live data pipe carries Earth headlines into
+  every world as inspiration material: artists mine it for sets, drawings,
+  music. The news is real and sourced; what each world makes of it is the show.
+
 ## Owner's last 5 messages — word for word (2026-10-12)
 
 **1.**

@@ -178,6 +178,12 @@ def migrate(conn: sqlite3.Connection) -> None:
     conn.execute("""CREATE TABLE IF NOT EXISTS world_lore (
       id TEXT PRIMARY KEY, world_id TEXT NOT NULL, claim TEXT NOT NULL,
       source TEXT NOT NULL DEFAULT '', created_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS bands (
+      band_id TEXT PRIMARY KEY, world_id TEXT NOT NULL, name TEXT NOT NULL,
+      formed_at REAL NOT NULL)""")
+    conn.execute("""CREATE TABLE IF NOT EXISTS band_members (
+      band_id TEXT NOT NULL, character_id TEXT NOT NULL, role TEXT NOT NULL DEFAULT 'member',
+      PRIMARY KEY (band_id, character_id))""")
     conn.commit()
 
 
