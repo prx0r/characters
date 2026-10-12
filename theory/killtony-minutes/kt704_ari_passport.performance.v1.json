@@ -1,0 +1,930 @@
+{
+  "version": "performance.v1",
+  "source": "kt704_ari_passport",
+  "duration_s": 54.33,
+  "method": "mediapipe+asr_aligned_v1",
+  "n_asr_words": 320,
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.085
+    },
+    {
+      "t": 0.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "What I love about What I love about",
+        "energy": 0.085,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 1.0,
+      "kind": "expression",
+      "value": "surprised",
+      "energy": 0.862
+    },
+    {
+      "t": 1.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 1.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "about Texas is that about Texas is that",
+        "energy": 0.862,
+        "anger_proxy": true
+      }
+    },
+    {
+      "t": 2.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.584
+    },
+    {
+      "t": 2.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "that you guys that you guys",
+        "energy": 0.584,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 3.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.529
+    },
+    {
+      "t": 3.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "guys are like guys are like",
+        "energy": 0.529,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 4.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.449
+    },
+    {
+      "t": 4.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 4.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "proud to be American proud to be American",
+        "energy": 0.449,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 5.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.505
+    },
+    {
+      "t": 5.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "American And American And",
+        "energy": 0.505,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 6.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.488
+    },
+    {
+      "t": 6.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "I love that I love that",
+        "energy": 0.488,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 7.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.549
+    },
+    {
+      "t": 7.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "energy Because the first energy Because the first",
+        "energy": 0.549,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 8.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.543
+    },
+    {
+      "t": 8.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "first time I came to first time I came to",
+        "energy": 0.543,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 9.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.494
+    },
+    {
+      "t": 9.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "to America I went to America I went",
+        "energy": 0.494,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 10.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.463
+    },
+    {
+      "t": 10.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "went to Seattle went to Seattle",
+        "energy": 0.463,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 11.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.492
+    },
+    {
+      "t": 11.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Seattle Very different Seattle Very different",
+        "energy": 0.492,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 12.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.419
+    },
+    {
+      "t": 12.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "different vibe different vibe",
+        "energy": 0.419,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 13.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.498
+    },
+    {
+      "t": 13.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "vibe Dude I go to vibe Dude I go to",
+        "energy": 0.498,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 14.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.436
+    },
+    {
+      "t": 14.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "to Seattle I ' to Seattle I '",
+        "energy": 0.436,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 15.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.55
+    },
+    {
+      "t": 15.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "' m hyp ed I ' m ready to ' m hyp ed I ' m ready to",
+        "energy": 0.55,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 16.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.434
+    },
+    {
+      "t": 16.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "to get off the plane to get off the plane",
+        "energy": 0.434,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 17.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.44
+    },
+    {
+      "t": 17.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "I watch Saving Private I watch Saving Private",
+        "energy": 0.44,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 18.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.46
+    },
+    {
+      "t": 18.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Private Ryan back Private Ryan back",
+        "energy": 0.46,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 19.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.467
+    },
+    {
+      "t": 19.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "to back three to back three",
+        "energy": 0.467,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 20.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.755
+    },
+    {
+      "t": 20.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 20.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "times I ' times I '",
+        "energy": 0.755,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 21.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.444
+    },
+    {
+      "t": 21.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "m ready to shoot m ready to shoot",
+        "energy": 0.444,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 22.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.427
+    },
+    {
+      "t": 22.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "shoot somebody Let shoot somebody Let",
+        "energy": 0.427,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 23.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.47
+    },
+    {
+      "t": 23.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 23.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "' s storm ' s storm",
+        "energy": 0.47,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 24.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.525
+    },
+    {
+      "t": 24.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 24.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "storm the Capitol storm the Capitol",
+        "energy": 0.525,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 25.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.452
+    },
+    {
+      "t": 25.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Capitol and sh - - Capitol and sh - -",
+        "energy": 0.452,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 26.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.61
+    },
+    {
+      "t": 26.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 26.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "- And then I get to - And then I get to",
+        "energy": 0.61,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 27.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.499
+    },
+    {
+      "t": 27.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 27.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "to Seattle to Seattle",
+        "energy": 0.499,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 28.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.53
+    },
+    {
+      "t": 28.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 28.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "everybody walks around everybody walks around",
+        "energy": 0.53,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 29.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.476
+    },
+    {
+      "t": 29.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 29.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "around Every around Every",
+        "energy": 0.476,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 30.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.518
+    },
+    {
+      "t": 30.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 30.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Every bitch I met Every bitch I met",
+        "energy": 0.518,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 31.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.612
+    },
+    {
+      "t": 31.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 31.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "met had like green met had like green",
+        "energy": 0.612,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 32.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.461
+    },
+    {
+      "t": 32.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 32.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "green hair green hair",
+        "energy": 0.461,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 33.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.489
+    },
+    {
+      "t": 33.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "hair Every hair Every",
+        "energy": 0.489,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 33.12,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 33.12,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 34.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.379
+    },
+    {
+      "t": 34.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Every conversation Every conversation",
+        "energy": 0.379,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 35.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.469
+    },
+    {
+      "t": 35.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "I had in Seattle they I had in Seattle they",
+        "energy": 0.469,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 36.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.455
+    },
+    {
+      "t": 36.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "they were all like \" You know they were all like \" You know",
+        "energy": 0.455,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 37.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.41
+    },
+    {
+      "t": 37.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "know America know America",
+        "energy": 0.41,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 38.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.441
+    },
+    {
+      "t": 38.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 38.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "is built on a is built on a",
+        "energy": 0.441,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 39.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.398
+    },
+    {
+      "t": 39.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "a racist a racist",
+        "energy": 0.398,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 40.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.481
+    },
+    {
+      "t": 40.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "racist agenda \" Who gives racist agenda \" Who gives",
+        "energy": 0.481,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 41.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.547
+    },
+    {
+      "t": 41.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "gives a f - - You ' gives a f - - You '",
+        "energy": 0.547,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 42.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.557
+    },
+    {
+      "t": 42.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "' re here on ' re here on",
+        "energy": 0.557,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 43.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.658
+    },
+    {
+      "t": 43.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "on the winning side on the winning side",
+        "energy": 0.658,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 44.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.63
+    },
+    {
+      "t": 44.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 44.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "side If you don ' t like side If you don ' t like",
+        "energy": 0.63,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 45.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.572
+    },
+    {
+      "t": 45.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "America go America go",
+        "energy": 0.572,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 46.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.531
+    },
+    {
+      "t": 46.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "go check out go check out",
+        "energy": 0.531,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 47.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.49
+    },
+    {
+      "t": 47.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Ukraine Try to Ukraine Try to",
+        "energy": 0.49,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 48.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.502
+    },
+    {
+      "t": 48.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "get an oat meal get an oat meal",
+        "energy": 0.502,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 49.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.532
+    },
+    {
+      "t": 49.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "meal latte in meal latte in",
+        "energy": 0.532,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 50.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.488
+    },
+    {
+      "t": 50.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "in downtown in downtown",
+        "energy": 0.488,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 51.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.659
+    },
+    {
+      "t": 51.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 51.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Kiev you Kiev you",
+        "energy": 0.659,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 52.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.603
+    },
+    {
+      "t": 52.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 52.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "un gr ateful un gr ateful",
+        "energy": 0.603,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 53.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.499
+    },
+    {
+      "t": 53.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 53.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "ateful - - ateful - -",
+        "energy": 0.499,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 54.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.465
+    },
+    {
+      "t": 54.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "- -",
+        "energy": 0.465,
+        "anger_proxy": false
+      }
+    }
+  ],
+  "n_events": 129
+}

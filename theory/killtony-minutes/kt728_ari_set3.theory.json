@@ -1,0 +1,182 @@
+{
+  "id": "kt728_ari_set3",
+  "model": "qwen-plus-character",
+  "episode": 728,
+  "set_number": 3,
+  "theory": {
+    "overall": {
+      "archetype": "bisociation",
+      "primary_operators": [
+        "double_interpret",
+        "literalize",
+        "status_reversal"
+      ],
+      "energy_arc": "flat_build",
+      "dominant_emotion": "deadpan",
+      "dominant_emotion_intensity": 0.6
+    },
+    "beats": [
+      {
+        "text_excerpt": "You know how they're like uh diversifying all the movie franchises now?",
+        "beat_type": "setup",
+        "operators": [
+          "observational"
+        ],
+        "emotion": "neutral",
+        "emotion_intensity": 0.3,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Casual shrug, looking around the room to gauge agreement.",
+        "vocal_hypothesis": "Conversational, slightly hesitant filler ('uh') to sound relatable."
+      },
+      {
+        "text_excerpt": "They're making like a gay James Bond.",
+        "beat_type": "setup",
+        "operators": [
+          "bisociation"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.5,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Slight smirk, leaning into the mic for the premise.",
+        "vocal_hypothesis": "Punchy delivery on 'gay' and 'James Bond'."
+      },
+      {
+        "text_excerpt": "He's got to suck so much dick to get those passwords.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret",
+          "literalize"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.8,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "up",
+        "body_hypothesis": "Deadpan stare or a subtle grimace to sell the vulgarity.",
+        "vocal_hypothesis": "Flat, matter-of-fact tone to contrast with the crude imagery."
+      },
+      {
+        "text_excerpt": "They're doing taken, you know, taken with Liam Neeson. They're doing one with a black dad.",
+        "beat_type": "setup",
+        "operators": [
+          "observational"
+        ],
+        "emotion": "neutral",
+        "emotion_intensity": 0.4,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Quick hand gestures mimicking a phone ringing or pacing.",
+        "vocal_hypothesis": "Faster pace, setting up the cultural reference efficiently."
+      },
+      {
+        "text_excerpt": "The phone just keeps ringing. Sorry baby, had to make a stop.",
+        "beat_type": "punchline",
+        "operators": [
+          "double_interpret",
+          "incongruity"
+        ],
+        "emotion": "mock_indignant",
+        "emotion_intensity": 0.5,
+        "anger_flavor": "mock",
+        "anger_target": "Hollywood diversity tropes",
+        "status_move": "up",
+        "body_hypothesis": "Mimics holding a phone, apologetic head tilt.",
+        "vocal_hypothesis": "Adopts a rushed, guilty voice for the character."
+      },
+      {
+        "text_excerpt": "Feminists are upset. They're trying to cancel the new Catwoman movie that's coming out,",
+        "beat_type": "setup",
+        "operators": [
+          "status_reversal"
+        ],
+        "emotion": "defiant",
+        "emotion_intensity": 0.6,
+        "anger_flavor": "cold",
+        "anger_target": "Feminists/Cancel culture",
+        "status_move": "down",
+        "body_hypothesis": "Shifts stance, maybe crosses arms defensively.",
+        "vocal_hypothesis": "Slightly louder, projecting the conflict of the bit."
+      },
+      {
+        "text_excerpt": "because the new Catwoman is Zo\u00eb Kravitz. A banging bitch.",
+        "beat_type": "tag",
+        "operators": [
+          "literalize"
+        ],
+        "emotion": "gleeful",
+        "emotion_intensity": 0.7,
+        "anger_flavor": null,
+        "anger_target": null,
+        "status_move": "flat",
+        "body_hypothesis": "Appreciative look, maybe an eye roll at the absurdity.",
+        "vocal_hypothesis": "Emphasizes 'banging bitch' with a low, appreciative tone."
+      },
+      {
+        "text_excerpt": "And the feminists are saying why does Catwoman always have to be some supermodel? Why couldn't Catwoman be like a plus size model?",
+        "beat_type": "setup",
+        "operators": [
+          "strawman"
+        ],
+        "emotion": "mock_indignant",
+        "emotion_intensity": 0.7,
+        "anger_flavor": "mock",
+        "anger_target": "Feminists",
+        "status_move": "down",
+        "body_hypothesis": "Voice pitches up, mimicking a whiny activist.",
+        "vocal_hypothesis": "Fast, rhetorical questioning cadence."
+      },
+      {
+        "text_excerpt": "Uh she needs to climb. You ever see a fat cat?",
+        "beat_type": "punchline",
+        "operators": [
+          "literalize",
+          "bisociation"
+        ],
+        "emotion": "deadpan",
+        "emotion_intensity": 0.8,
+        "anger_flavor": "cold",
+        "anger_target": "Plus-size casting push",
+        "status_move": "up",
+        "body_hypothesis": "Looks at the audience as if stating an obvious fact.",
+        "vocal_hypothesis": "Dry, logical delivery, dropping the pitch on 'climb'."
+      },
+      {
+        "text_excerpt": "Bitch, you can't be Catwoman, you can be Garfield.",
+        "beat_type": "closer",
+        "operators": [
+          "status_reversal",
+          "incongruity"
+        ],
+        "emotion": "angry",
+        "emotion_intensity": 0.9,
+        "anger_flavor": "hot",
+        "anger_target": "Hypothetical plus-size actress",
+        "status_move": "reversal",
+        "body_hypothesis": "Points aggressively at the crowd or shakes head in finality.",
+        "vocal_hypothesis": "Sharp, punchy volume spike to close the set."
+      }
+    ],
+    "anger_manual": {
+      "present": true,
+      "if_present": {
+        "type": "mock_indignant",
+        "body_signature_hypotheses": [
+          "Crossed arms during feminist setup",
+          "Aggressive pointing during Garfield closer"
+        ],
+        "vocal_signature_hypotheses": [
+          "Pitching voice up to mock activists",
+          "Dropping to harsh, blunt tone for the insult"
+        ],
+        "contrast_note": "The anger is entirely performative, serving as a vehicle for edgy observational humor rather than genuine outrage."
+      }
+    },
+    "notes": "The set relies heavily on bisociation\u2014merging corporate Hollywood diversity mandates with crude sexual logic (Bond) and literal animal biology (Catwoman). The persona plays a contrarian observer who uses aggressive mockery to highlight perceived absurdities in modern casting."
+  },
+  "short": "/home/box/ari_matti_sets/shorts/kt728_jamesbond_short.mp4"
+}

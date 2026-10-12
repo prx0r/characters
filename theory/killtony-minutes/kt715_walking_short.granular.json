@@ -1,0 +1,3587 @@
+{
+  "id": "kt715_walking_short",
+  "video": "/home/box/ari_matti_sets/proc/kt715_walking_short.mp4",
+  "extracted_at": "2026-10-12T14:29:54+0700",
+  "mediapipe": {
+    "fps_sampled": 12.0,
+    "source_fps": 24.0,
+    "n_frames": 704,
+    "duration_s": 58.58
+  },
+  "numeric_windows": [
+    {
+      "t0": 0.0,
+      "t1": 1.0,
+      "brow_mean": 0.2456,
+      "brow_range": 0.0834,
+      "mouth_open_mean": 0.0672,
+      "mouth_open_max": 0.1671,
+      "mouth_wide_max": 0.4314,
+      "eye_open_mean": 0.0473,
+      "lean_x_mean": 0.1649,
+      "lean_x_range": 0.1557,
+      "arm_open_mean": 0.7731,
+      "shoulder_tilt_abs": 0.2142,
+      "hand_face_right_min": 0.4931
+    },
+    {
+      "t0": 1.0,
+      "t1": 2.0,
+      "brow_mean": 0.1605,
+      "brow_range": 0.1241,
+      "mouth_open_mean": 0.0367,
+      "mouth_open_max": 0.1178,
+      "mouth_wide_max": 0.3826,
+      "eye_open_mean": 0.0364,
+      "lean_x_mean": 0.0527,
+      "lean_x_range": 0.2146,
+      "arm_open_mean": 0.5834,
+      "shoulder_tilt_abs": 0.0544,
+      "hand_face_right_min": 0.4594
+    },
+    {
+      "t0": 2.0,
+      "t1": 3.0,
+      "brow_mean": 0.1255,
+      "brow_range": 0.0541,
+      "mouth_open_mean": 0.025,
+      "mouth_open_max": 0.074,
+      "mouth_wide_max": 0.3464,
+      "eye_open_mean": 0.0546,
+      "lean_x_mean": -0.154,
+      "lean_x_range": 0.1957,
+      "arm_open_mean": 0.5466,
+      "shoulder_tilt_abs": 0.1423,
+      "hand_face_right_min": 0.501
+    },
+    {
+      "t0": 3.0,
+      "t1": 4.0,
+      "brow_mean": 0.1941,
+      "brow_range": 0.0475,
+      "mouth_open_mean": 0.0297,
+      "mouth_open_max": 0.0826,
+      "mouth_wide_max": 0.4131,
+      "eye_open_mean": 0.0536,
+      "lean_x_mean": 0.0318,
+      "lean_x_range": 0.1123,
+      "arm_open_mean": 0.4892,
+      "shoulder_tilt_abs": 0.0529,
+      "hand_face_right_min": 0.4917
+    },
+    {
+      "t0": 4.0,
+      "t1": 5.0,
+      "brow_mean": 0.1972,
+      "brow_range": 0.0146,
+      "mouth_open_mean": 0.0191,
+      "mouth_open_max": 0.0651,
+      "mouth_wide_max": 0.3545,
+      "eye_open_mean": 0.0754,
+      "lean_x_mean": 0.0293,
+      "lean_x_range": 0.078,
+      "arm_open_mean": 0.5029,
+      "shoulder_tilt_abs": 0.0596,
+      "hand_face_right_min": 0.5304
+    },
+    {
+      "t0": 5.0,
+      "t1": 6.0,
+      "brow_mean": 0.197,
+      "brow_range": 0.0209,
+      "mouth_open_mean": 0.0145,
+      "mouth_open_max": 0.0355,
+      "mouth_wide_max": 0.3233,
+      "eye_open_mean": 0.0689,
+      "lean_x_mean": 0.073,
+      "lean_x_range": 0.0404,
+      "arm_open_mean": 0.4769,
+      "shoulder_tilt_abs": 0.0611,
+      "hand_face_right_min": 0.5527
+    },
+    {
+      "t0": 6.0,
+      "t1": 7.0,
+      "brow_mean": 0.2247,
+      "brow_range": 0.0354,
+      "mouth_open_mean": 0.0337,
+      "mouth_open_max": 0.1012,
+      "mouth_wide_max": 0.3324,
+      "eye_open_mean": 0.0432,
+      "lean_x_mean": 0.1135,
+      "lean_x_range": 0.0835,
+      "arm_open_mean": 0.5039,
+      "shoulder_tilt_abs": 0.0698,
+      "hand_face_right_min": 0.5594
+    },
+    {
+      "t0": 7.0,
+      "t1": 8.0,
+      "brow_mean": 0.2159,
+      "brow_range": 0.0267,
+      "mouth_open_mean": 0.0066,
+      "mouth_open_max": 0.0273,
+      "mouth_wide_max": 0.3218,
+      "eye_open_mean": 0.0518,
+      "lean_x_mean": 0.1007,
+      "lean_x_range": 0.1196,
+      "arm_open_mean": 0.5341,
+      "shoulder_tilt_abs": 0.0547,
+      "hand_face_right_min": 0.4896
+    },
+    {
+      "t0": 8.0,
+      "t1": 9.0,
+      "brow_mean": 0.2059,
+      "brow_range": 0.0238,
+      "mouth_open_mean": 0.0113,
+      "mouth_open_max": 0.0299,
+      "mouth_wide_max": 0.3214,
+      "eye_open_mean": 0.0468,
+      "lean_x_mean": 0.09,
+      "lean_x_range": 0.0954,
+      "arm_open_mean": 0.4993,
+      "shoulder_tilt_abs": 0.0946,
+      "hand_face_right_min": 0.5429
+    },
+    {
+      "t0": 9.0,
+      "t1": 10.0,
+      "brow_mean": 0.1842,
+      "brow_range": 0.0329,
+      "mouth_open_mean": 0.0242,
+      "mouth_open_max": 0.0722,
+      "mouth_wide_max": 0.4315,
+      "eye_open_mean": 0.0429,
+      "lean_x_mean": 0.0522,
+      "lean_x_range": 0.0742,
+      "arm_open_mean": 0.5783,
+      "shoulder_tilt_abs": 0.0061,
+      "hand_face_right_min": 0.468
+    },
+    {
+      "t0": 10.0,
+      "t1": 11.0,
+      "brow_mean": 0.1793,
+      "brow_range": 0.013,
+      "mouth_open_mean": 0.0166,
+      "mouth_open_max": 0.0628,
+      "mouth_wide_max": 0.3641,
+      "eye_open_mean": 0.0451,
+      "lean_x_mean": 0.083,
+      "lean_x_range": 0.0591,
+      "arm_open_mean": 0.5743,
+      "shoulder_tilt_abs": 0.0191,
+      "hand_face_right_min": 0.4828
+    },
+    {
+      "t0": 11.0,
+      "t1": 12.0,
+      "brow_mean": 0.1559,
+      "brow_range": 0.0359,
+      "mouth_open_mean": 0.0041,
+      "mouth_open_max": 0.0097,
+      "mouth_wide_max": 0.3512,
+      "eye_open_mean": 0.0761,
+      "lean_x_mean": 0.058,
+      "lean_x_range": 0.0611,
+      "arm_open_mean": 0.5638,
+      "shoulder_tilt_abs": 0.014,
+      "hand_face_right_min": 0.5286
+    },
+    {
+      "t0": 12.0,
+      "t1": 13.0,
+      "brow_mean": 0.1408,
+      "brow_range": 0.0109,
+      "mouth_open_mean": 0.0034,
+      "mouth_open_max": 0.0048,
+      "mouth_wide_max": 0.3579,
+      "eye_open_mean": 0.0811,
+      "lean_x_mean": 0.0595,
+      "lean_x_range": 0.0762,
+      "arm_open_mean": 0.5613,
+      "shoulder_tilt_abs": 0.0237,
+      "hand_face_right_min": 0.5418
+    },
+    {
+      "t0": 13.0,
+      "t1": 14.0,
+      "brow_mean": 0.1708,
+      "brow_range": 0.0554,
+      "mouth_open_mean": 0.0172,
+      "mouth_open_max": 0.0571,
+      "mouth_wide_max": 0.3722,
+      "eye_open_mean": 0.0763,
+      "lean_x_mean": 0.0626,
+      "lean_x_range": 0.0622,
+      "arm_open_mean": 0.5744,
+      "shoulder_tilt_abs": 0.0229,
+      "hand_face_right_min": 0.545
+    },
+    {
+      "t0": 14.0,
+      "t1": 15.0,
+      "brow_mean": 0.1355,
+      "brow_range": 0.0404,
+      "mouth_open_mean": 0.0206,
+      "mouth_open_max": 0.0609,
+      "mouth_wide_max": 0.3388,
+      "eye_open_mean": 0.0878,
+      "lean_x_mean": 0.0406,
+      "lean_x_range": 0.0688,
+      "arm_open_mean": 0.5432,
+      "shoulder_tilt_abs": 0.0113,
+      "hand_face_right_min": 0.5127
+    },
+    {
+      "t0": 15.0,
+      "t1": 16.0,
+      "brow_mean": 0.1227,
+      "brow_range": 0.0678,
+      "mouth_open_mean": 0.0158,
+      "mouth_open_max": 0.0534,
+      "mouth_wide_max": 0.3572,
+      "eye_open_mean": 0.0762,
+      "lean_x_mean": 0.0478,
+      "lean_x_range": 0.066,
+      "arm_open_mean": 0.5018,
+      "shoulder_tilt_abs": 0.0073,
+      "hand_face_right_min": 0.5158
+    },
+    {
+      "t0": 16.0,
+      "t1": 17.0,
+      "brow_mean": 0.1052,
+      "brow_range": 0.0084,
+      "mouth_open_mean": 0.0144,
+      "mouth_open_max": 0.0512,
+      "mouth_wide_max": 0.3571,
+      "eye_open_mean": 0.0854,
+      "lean_x_mean": 0.0505,
+      "lean_x_range": 0.0713,
+      "arm_open_mean": 0.4865,
+      "shoulder_tilt_abs": 0.0015,
+      "hand_face_right_min": 0.5281
+    },
+    {
+      "t0": 17.0,
+      "t1": 18.0,
+      "brow_mean": 0.1268,
+      "brow_range": 0.0617,
+      "mouth_open_mean": 0.0167,
+      "mouth_open_max": 0.0475,
+      "mouth_wide_max": 0.3699,
+      "eye_open_mean": 0.0783,
+      "lean_x_mean": 0.0741,
+      "lean_x_range": 0.0842,
+      "arm_open_mean": 0.5219,
+      "shoulder_tilt_abs": 0.0061,
+      "hand_face_right_min": 0.4183
+    },
+    {
+      "t0": 18.0,
+      "t1": 19.0,
+      "brow_mean": 0.1237,
+      "brow_range": 0.0774,
+      "mouth_open_mean": 0.0483,
+      "mouth_open_max": 0.0885,
+      "mouth_wide_max": 0.3558,
+      "eye_open_mean": 0.0375,
+      "lean_x_mean": 0.0483,
+      "lean_x_range": 0.2046,
+      "arm_open_mean": 0.5265,
+      "shoulder_tilt_abs": 0.0327,
+      "hand_face_right_min": 0.5259
+    },
+    {
+      "t0": 19.0,
+      "t1": 20.0,
+      "brow_mean": 0.1061,
+      "brow_range": 0.0054,
+      "mouth_open_mean": 0.0454,
+      "mouth_open_max": 0.0872,
+      "mouth_wide_max": 0.3571,
+      "eye_open_mean": 0.0493,
+      "lean_x_mean": -0.0114,
+      "lean_x_range": 0.0545,
+      "arm_open_mean": 0.458,
+      "shoulder_tilt_abs": 0.0537,
+      "hand_face_right_min": 0.6201
+    },
+    {
+      "t0": 20.0,
+      "t1": 21.0,
+      "brow_mean": 0.102,
+      "brow_range": 0.0434,
+      "mouth_open_mean": 0.0164,
+      "mouth_open_max": 0.0356,
+      "mouth_wide_max": 0.354,
+      "eye_open_mean": 0.0229,
+      "lean_x_mean": 0.0988,
+      "lean_x_range": 0.1761,
+      "arm_open_mean": 0.3442,
+      "shoulder_tilt_abs": 0.1284,
+      "hand_face_right_min": 0.2074
+    },
+    {
+      "t0": 21.0,
+      "t1": 22.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.0524,
+      "lean_x_range": 0.1156,
+      "arm_open_mean": 0.3985,
+      "shoulder_tilt_abs": 0.0568,
+      "hand_face_right_min": 0.4876
+    },
+    {
+      "t0": 22.0,
+      "t1": 23.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.0246,
+      "lean_x_range": 0.0564,
+      "arm_open_mean": 0.4402,
+      "shoulder_tilt_abs": 0.0447,
+      "hand_face_right_min": 0.5289
+    },
+    {
+      "t0": 23.0,
+      "t1": 24.0,
+      "brow_mean": 0.1124,
+      "brow_range": 0.0116,
+      "mouth_open_mean": 0.0152,
+      "mouth_open_max": 0.0308,
+      "mouth_wide_max": 0.3511,
+      "eye_open_mean": 0.0564,
+      "lean_x_mean": 0.003,
+      "lean_x_range": 0.1378,
+      "arm_open_mean": 0.7164,
+      "shoulder_tilt_abs": 0.0718,
+      "hand_face_right_min": 0.5229
+    },
+    {
+      "t0": 24.0,
+      "t1": 25.0,
+      "brow_mean": 0.1023,
+      "brow_range": 0.0068,
+      "mouth_open_mean": 0.0396,
+      "mouth_open_max": 0.0672,
+      "mouth_wide_max": 0.3557,
+      "eye_open_mean": 0.0626,
+      "lean_x_mean": 0.0407,
+      "lean_x_range": 0.2916,
+      "arm_open_mean": 0.6684,
+      "shoulder_tilt_abs": 0.02,
+      "hand_face_right_min": 0.5733
+    },
+    {
+      "t0": 25.0,
+      "t1": 26.0,
+      "brow_mean": 0.1095,
+      "brow_range": 0.0541,
+      "mouth_open_mean": 0.0216,
+      "mouth_open_max": 0.0404,
+      "mouth_wide_max": 0.3435,
+      "eye_open_mean": 0.0534,
+      "lean_x_mean": 0.0467,
+      "lean_x_range": 0.1641,
+      "arm_open_mean": 0.5178,
+      "shoulder_tilt_abs": 0.0639,
+      "hand_face_right_min": 0.5439
+    },
+    {
+      "t0": 26.0,
+      "t1": 27.0,
+      "brow_mean": 0.209,
+      "brow_range": 0.1127,
+      "mouth_open_mean": 0.152,
+      "mouth_open_max": 0.2366,
+      "mouth_wide_max": 0.4158,
+      "eye_open_mean": 0.0754,
+      "lean_x_mean": 0.1073,
+      "lean_x_range": 0.1421,
+      "arm_open_mean": 0.8397,
+      "shoulder_tilt_abs": 0.2134,
+      "hand_face_right_min": 0.5842
+    },
+    {
+      "t0": 27.0,
+      "t1": 28.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0227,
+      "lean_x_range": 0.0734,
+      "arm_open_mean": 0.703,
+      "shoulder_tilt_abs": 0.0334,
+      "hand_face_right_min": 0.5384
+    },
+    {
+      "t0": 28.0,
+      "t1": 29.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1684,
+      "lean_x_range": 0.2907,
+      "arm_open_mean": 1.0081,
+      "shoulder_tilt_abs": 0.1964,
+      "hand_face_right_min": 0.9864
+    },
+    {
+      "t0": 29.0,
+      "t1": 30.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0359,
+      "lean_x_range": 0.1678,
+      "arm_open_mean": 0.8456,
+      "shoulder_tilt_abs": 0.0756,
+      "hand_face_right_min": 1.1702
+    },
+    {
+      "t0": 30.0,
+      "t1": 31.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0034,
+      "lean_x_range": 0.1899,
+      "arm_open_mean": 0.8484,
+      "shoulder_tilt_abs": 0.1363,
+      "hand_face_right_min": 1.1264
+    },
+    {
+      "t0": 31.0,
+      "t1": 32.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.0329,
+      "lean_x_range": 0.1211,
+      "arm_open_mean": 0.7709,
+      "shoulder_tilt_abs": 0.0103,
+      "hand_face_right_min": 1.0853
+    },
+    {
+      "t0": 32.0,
+      "t1": 33.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0412,
+      "lean_x_range": 0.0633,
+      "arm_open_mean": 0.5129,
+      "shoulder_tilt_abs": 0.0376,
+      "hand_face_right_min": 0.74
+    },
+    {
+      "t0": 33.0,
+      "t1": 34.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.071,
+      "lean_x_range": 0.0616,
+      "arm_open_mean": 0.7551,
+      "shoulder_tilt_abs": 0.0446,
+      "hand_face_right_min": 0.9309
+    },
+    {
+      "t0": 34.0,
+      "t1": 35.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.1082,
+      "lean_x_range": 0.0592,
+      "arm_open_mean": 0.7058,
+      "shoulder_tilt_abs": 0.0216,
+      "hand_face_right_min": 0.7182
+    },
+    {
+      "t0": 35.0,
+      "t1": 36.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.1113,
+      "lean_x_range": 0.0666,
+      "arm_open_mean": 0.6062,
+      "shoulder_tilt_abs": 0.022,
+      "hand_face_right_min": 0.8162
+    },
+    {
+      "t0": 36.0,
+      "t1": 37.0,
+      "brow_mean": 0.1556,
+      "brow_range": 0.0219,
+      "mouth_open_mean": 0.0018,
+      "mouth_open_max": 0.0033,
+      "mouth_wide_max": 0.3379,
+      "eye_open_mean": 0.0887,
+      "lean_x_mean": -0.0194,
+      "lean_x_range": 0.1526,
+      "arm_open_mean": 0.8413,
+      "shoulder_tilt_abs": 0.1465,
+      "hand_face_right_min": 1.0238
+    },
+    {
+      "t0": 37.0,
+      "t1": 38.0,
+      "brow_mean": 0.1489,
+      "brow_range": 0.0064,
+      "mouth_open_mean": 0.001,
+      "mouth_open_max": 0.0017,
+      "mouth_wide_max": 0.3456,
+      "eye_open_mean": 0.0889,
+      "lean_x_mean": -0.0584,
+      "lean_x_range": 0.1462,
+      "arm_open_mean": 0.991,
+      "shoulder_tilt_abs": 0.1999,
+      "hand_face_right_min": 1.3511
+    },
+    {
+      "t0": 38.0,
+      "t1": 39.0,
+      "brow_mean": 0.1597,
+      "brow_range": 0.0459,
+      "mouth_open_mean": 0.0221,
+      "mouth_open_max": 0.1183,
+      "mouth_wide_max": 0.4174,
+      "eye_open_mean": 0.0777,
+      "lean_x_mean": 0.0071,
+      "lean_x_range": 0.1314,
+      "arm_open_mean": 0.7599,
+      "shoulder_tilt_abs": 0.1064,
+      "hand_face_right_min": 0.7353
+    },
+    {
+      "t0": 39.0,
+      "t1": 40.0,
+      "brow_mean": 0.1736,
+      "brow_range": 0.1135,
+      "mouth_open_mean": 0.0783,
+      "mouth_open_max": 0.1693,
+      "mouth_wide_max": 0.362,
+      "eye_open_mean": 0.0682,
+      "lean_x_mean": -0.017,
+      "lean_x_range": 0.1911,
+      "arm_open_mean": 0.5002,
+      "shoulder_tilt_abs": 0.0796,
+      "hand_face_right_min": 0.5075
+    },
+    {
+      "t0": 40.0,
+      "t1": 41.0,
+      "brow_mean": 0.1461,
+      "brow_range": 0.0439,
+      "mouth_open_mean": 0.052,
+      "mouth_open_max": 0.116,
+      "mouth_wide_max": 0.3605,
+      "eye_open_mean": 0.071,
+      "lean_x_mean": -0.1192,
+      "lean_x_range": 0.1244,
+      "arm_open_mean": 0.5231,
+      "shoulder_tilt_abs": 0.0348,
+      "hand_face_right_min": 0.3686
+    },
+    {
+      "t0": 41.0,
+      "t1": 42.0,
+      "brow_mean": 0.1696,
+      "brow_range": 0.0551,
+      "mouth_open_mean": 0.1168,
+      "mouth_open_max": 0.1963,
+      "mouth_wide_max": 0.3505,
+      "eye_open_mean": 0.0698,
+      "lean_x_mean": -0.029,
+      "lean_x_range": 0.1045,
+      "arm_open_mean": 0.4166,
+      "shoulder_tilt_abs": 0.0084,
+      "hand_face_right_min": 0.2365
+    },
+    {
+      "t0": 42.0,
+      "t1": 43.0,
+      "brow_mean": 0.1229,
+      "brow_range": 0.0359,
+      "mouth_open_mean": 0.054,
+      "mouth_open_max": 0.1825,
+      "mouth_wide_max": 0.3652,
+      "eye_open_mean": 0.032,
+      "lean_x_mean": 0.0173,
+      "lean_x_range": 0.2117,
+      "arm_open_mean": 0.5532,
+      "shoulder_tilt_abs": 0.0025,
+      "hand_face_right_min": 0.4638
+    },
+    {
+      "t0": 43.0,
+      "t1": 44.0,
+      "brow_mean": 0.1277,
+      "brow_range": 0.0754,
+      "mouth_open_mean": 0.0066,
+      "mouth_open_max": 0.0125,
+      "mouth_wide_max": 0.3341,
+      "eye_open_mean": 0.0341,
+      "lean_x_mean": -0.0169,
+      "lean_x_range": 0.2291,
+      "arm_open_mean": 0.5411,
+      "shoulder_tilt_abs": 0.0436,
+      "hand_face_right_min": 0.4458
+    },
+    {
+      "t0": 44.0,
+      "t1": 45.0,
+      "brow_mean": 0.1419,
+      "brow_range": 0.0587,
+      "mouth_open_mean": 0.0061,
+      "mouth_open_max": 0.015,
+      "mouth_wide_max": 0.3745,
+      "eye_open_mean": 0.0375,
+      "lean_x_mean": 0.019,
+      "lean_x_range": 0.3572,
+      "arm_open_mean": 0.5753,
+      "shoulder_tilt_abs": 0.0189,
+      "hand_face_right_min": 0.4985
+    },
+    {
+      "t0": 45.0,
+      "t1": 46.0,
+      "brow_mean": 0.1178,
+      "brow_range": 0.1081,
+      "mouth_open_mean": 0.0394,
+      "mouth_open_max": 0.0508,
+      "mouth_wide_max": 0.3887,
+      "eye_open_mean": 0.0299,
+      "lean_x_mean": -0.0086,
+      "lean_x_range": 0.2935,
+      "arm_open_mean": 0.7173,
+      "shoulder_tilt_abs": 0.017,
+      "hand_face_right_min": 0.7976
+    },
+    {
+      "t0": 46.0,
+      "t1": 47.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.151,
+      "lean_x_range": 0.1531,
+      "arm_open_mean": 0.658,
+      "shoulder_tilt_abs": 0.112,
+      "hand_face_right_min": 0.431
+    },
+    {
+      "t0": 47.0,
+      "t1": 48.0,
+      "brow_mean": 0.1993,
+      "brow_range": 0.0329,
+      "mouth_open_mean": 0.0202,
+      "mouth_open_max": 0.0544,
+      "mouth_wide_max": 0.3567,
+      "eye_open_mean": 0.0356,
+      "lean_x_mean": 0.0136,
+      "lean_x_range": 0.2166,
+      "arm_open_mean": 0.4576,
+      "shoulder_tilt_abs": 0.0043,
+      "hand_face_right_min": 0.4216
+    },
+    {
+      "t0": 48.0,
+      "t1": 49.0,
+      "brow_mean": 0.1898,
+      "brow_range": 0.049,
+      "mouth_open_mean": 0.0178,
+      "mouth_open_max": 0.0353,
+      "mouth_wide_max": 0.3435,
+      "eye_open_mean": 0.0367,
+      "lean_x_mean": -0.0129,
+      "lean_x_range": 0.3493,
+      "arm_open_mean": 0.6886,
+      "shoulder_tilt_abs": 0.037,
+      "hand_face_right_min": 0.7613
+    },
+    {
+      "t0": 49.0,
+      "t1": 50.0,
+      "brow_mean": 0.1694,
+      "brow_range": 0.0613,
+      "mouth_open_mean": 0.0187,
+      "mouth_open_max": 0.0279,
+      "mouth_wide_max": 0.3616,
+      "eye_open_mean": 0.0486,
+      "lean_x_mean": -0.1556,
+      "lean_x_range": 0.2275,
+      "arm_open_mean": 0.8308,
+      "shoulder_tilt_abs": 0.1548,
+      "hand_face_right_min": 0.8755
+    },
+    {
+      "t0": 50.0,
+      "t1": 51.0,
+      "brow_mean": 0.1677,
+      "brow_range": 0.0572,
+      "mouth_open_mean": 0.027,
+      "mouth_open_max": 0.0936,
+      "mouth_wide_max": 0.428,
+      "eye_open_mean": 0.0701,
+      "lean_x_mean": 0.0091,
+      "lean_x_range": 0.1027,
+      "arm_open_mean": 0.5584,
+      "shoulder_tilt_abs": 0.1191,
+      "hand_face_right_min": 0.3722
+    },
+    {
+      "t0": 51.0,
+      "t1": 52.0,
+      "brow_mean": 0.1859,
+      "brow_range": 0.0,
+      "mouth_open_mean": 0.0451,
+      "mouth_open_max": 0.0451,
+      "mouth_wide_max": 0.3228,
+      "eye_open_mean": 0.0768,
+      "lean_x_mean": 0.0353,
+      "lean_x_range": 0.1051,
+      "arm_open_mean": 0.2741,
+      "shoulder_tilt_abs": 0.0178,
+      "hand_face_right_min": 0.4863
+    },
+    {
+      "t0": 52.0,
+      "t1": 53.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.0926,
+      "lean_x_range": 0.0627,
+      "arm_open_mean": 0.2801,
+      "shoulder_tilt_abs": 0.0783,
+      "hand_face_right_min": 0.5262
+    },
+    {
+      "t0": 53.0,
+      "t1": 54.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1231,
+      "lean_x_range": 0.0462,
+      "arm_open_mean": 0.2732,
+      "shoulder_tilt_abs": 0.0853,
+      "hand_face_right_min": 0.5052
+    },
+    {
+      "t0": 54.0,
+      "t1": 55.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1383,
+      "lean_x_range": 0.0521,
+      "arm_open_mean": 0.2803,
+      "shoulder_tilt_abs": 0.0891,
+      "hand_face_right_min": 0.561
+    },
+    {
+      "t0": 55.0,
+      "t1": 56.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1492,
+      "lean_x_range": 0.0545,
+      "arm_open_mean": 0.2783,
+      "shoulder_tilt_abs": 0.0797,
+      "hand_face_right_min": 0.5243
+    },
+    {
+      "t0": 56.0,
+      "t1": 57.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1369,
+      "lean_x_range": 0.0776,
+      "arm_open_mean": 0.5056,
+      "shoulder_tilt_abs": 0.041,
+      "hand_face_right_min": 0.4741
+    },
+    {
+      "t0": 57.0,
+      "t1": 58.0,
+      "brow_mean": 0.2012,
+      "brow_range": 0.0,
+      "mouth_open_mean": 0.0458,
+      "mouth_open_max": 0.0458,
+      "mouth_wide_max": 0.3189,
+      "eye_open_mean": 0.0693,
+      "lean_x_mean": 0.0249,
+      "lean_x_range": 0.1761,
+      "arm_open_mean": 0.907,
+      "shoulder_tilt_abs": 0.0249,
+      "hand_face_right_min": 1.0361
+    },
+    {
+      "t0": 58.0,
+      "t1": 59.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0831,
+      "lean_x_range": 0.0873,
+      "arm_open_mean": 0.9017,
+      "shoulder_tilt_abs": 0.0766,
+      "hand_face_right_min": 1.2322
+    }
+  ],
+  "audio_pass": {},
+  "frames_pass": {},
+  "anger_focus": {
+    "n_anger_windows": 0,
+    "n_baseline_windows": 59,
+    "anger_segments": [],
+    "anger_vs_baseline": {
+      "brow_mean": {
+        "anger": null,
+        "baseline": 0.1593,
+        "delta": null
+      },
+      "brow_range": {
+        "anger": null,
+        "baseline": 0.0447,
+        "delta": null
+      },
+      "mouth_open_max": {
+        "anger": null,
+        "baseline": 0.0701,
+        "delta": null
+      },
+      "mouth_wide_max": {
+        "anger": null,
+        "baseline": 0.3617,
+        "delta": null
+      },
+      "lean_x_mean": {
+        "anger": null,
+        "baseline": 0.0228,
+        "delta": null
+      },
+      "lean_x_range": {
+        "anger": null,
+        "baseline": 0.1323,
+        "delta": null
+      },
+      "arm_open_mean": {
+        "anger": null,
+        "baseline": 0.5897,
+        "delta": null
+      },
+      "shoulder_tilt_abs": {
+        "anger": null,
+        "baseline": 0.0637,
+        "delta": null
+      },
+      "hand_face_right_min": {
+        "anger": null,
+        "baseline": 0.6187,
+        "delta": null
+      }
+    },
+    "visual_signature": null
+  },
+  "speech_aligned_windows": [
+    {
+      "t0": 0.0,
+      "t1": 1.0,
+      "brow_mean": 0.2456,
+      "brow_range": 0.0834,
+      "mouth_open_mean": 0.0672,
+      "mouth_open_max": 0.1671,
+      "mouth_wide_max": 0.4314,
+      "eye_open_mean": 0.0473,
+      "lean_x_mean": 0.1649,
+      "lean_x_range": 0.1557,
+      "arm_open_mean": 0.7731,
+      "shoulder_tilt_abs": 0.2142,
+      "hand_face_right_min": 0.4931,
+      "speech_text": "Gu ys will notice Gu ys will notice",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0.167,
+      "energy": 0.671,
+      "anger_proxy": false
+    },
+    {
+      "t0": 1.0,
+      "t1": 2.0,
+      "brow_mean": 0.1605,
+      "brow_range": 0.1241,
+      "mouth_open_mean": 0.0367,
+      "mouth_open_max": 0.1178,
+      "mouth_wide_max": 0.3826,
+      "eye_open_mean": 0.0364,
+      "lean_x_mean": 0.0527,
+      "lean_x_range": 0.2146,
+      "arm_open_mean": 0.5834,
+      "shoulder_tilt_abs": 0.0544,
+      "hand_face_right_min": 0.4594,
+      "speech_text": "notice feeling you know notice feeling you know",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0.118,
+      "energy": 0.721,
+      "anger_proxy": false
+    },
+    {
+      "t0": 2.0,
+      "t1": 3.0,
+      "brow_mean": 0.1255,
+      "brow_range": 0.0541,
+      "mouth_open_mean": 0.025,
+      "mouth_open_max": 0.074,
+      "mouth_wide_max": 0.3464,
+      "eye_open_mean": 0.0546,
+      "lean_x_mean": -0.154,
+      "lean_x_range": 0.1957,
+      "arm_open_mean": 0.5466,
+      "shoulder_tilt_abs": 0.1423,
+      "hand_face_right_min": 0.501,
+      "speech_text": "know when you ' re know when you ' re",
+      "n_words": 10,
+      "speaking": true,
+      "mouth_vs_speech": 0.074,
+      "energy": 0.596,
+      "anger_proxy": false
+    },
+    {
+      "t0": 3.0,
+      "t1": 4.0,
+      "brow_mean": 0.1941,
+      "brow_range": 0.0475,
+      "mouth_open_mean": 0.0297,
+      "mouth_open_max": 0.0826,
+      "mouth_wide_max": 0.4131,
+      "eye_open_mean": 0.0536,
+      "lean_x_mean": 0.0318,
+      "lean_x_range": 0.1123,
+      "arm_open_mean": 0.4892,
+      "shoulder_tilt_abs": 0.0529,
+      "hand_face_right_min": 0.4917,
+      "speech_text": "re walking late re walking late",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.083,
+      "energy": 0.573,
+      "anger_proxy": false
+    },
+    {
+      "t0": 4.0,
+      "t1": 5.0,
+      "brow_mean": 0.1972,
+      "brow_range": 0.0146,
+      "mouth_open_mean": 0.0191,
+      "mouth_open_max": 0.0651,
+      "mouth_wide_max": 0.3545,
+      "eye_open_mean": 0.0754,
+      "lean_x_mean": 0.0293,
+      "lean_x_range": 0.078,
+      "arm_open_mean": 0.5029,
+      "shoulder_tilt_abs": 0.0596,
+      "hand_face_right_min": 0.5304,
+      "speech_text": "late at night late at night",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.065,
+      "energy": 0.447,
+      "anger_proxy": false
+    },
+    {
+      "t0": 5.0,
+      "t1": 6.0,
+      "brow_mean": 0.197,
+      "brow_range": 0.0209,
+      "mouth_open_mean": 0.0145,
+      "mouth_open_max": 0.0355,
+      "mouth_wide_max": 0.3233,
+      "eye_open_mean": 0.0689,
+      "lean_x_mean": 0.073,
+      "lean_x_range": 0.0404,
+      "arm_open_mean": 0.4769,
+      "shoulder_tilt_abs": 0.0611,
+      "hand_face_right_min": 0.5527,
+      "speech_text": "night and you ' re night and you ' re",
+      "n_words": 10,
+      "speaking": true,
+      "mouth_vs_speech": 0.035,
+      "energy": 0.385,
+      "anger_proxy": false
+    },
+    {
+      "t0": 6.0,
+      "t1": 7.0,
+      "brow_mean": 0.2247,
+      "brow_range": 0.0354,
+      "mouth_open_mean": 0.0337,
+      "mouth_open_max": 0.1012,
+      "mouth_wide_max": 0.3324,
+      "eye_open_mean": 0.0432,
+      "lean_x_mean": 0.1135,
+      "lean_x_range": 0.0835,
+      "arm_open_mean": 0.5039,
+      "shoulder_tilt_abs": 0.0698,
+      "hand_face_right_min": 0.5594,
+      "speech_text": "like behind like behind",
+      "n_words": 4,
+      "speaking": true,
+      "mouth_vs_speech": 0.101,
+      "energy": 0.451,
+      "anger_proxy": false
+    },
+    {
+      "t0": 7.0,
+      "t1": 8.0,
+      "brow_mean": 0.2159,
+      "brow_range": 0.0267,
+      "mouth_open_mean": 0.0066,
+      "mouth_open_max": 0.0273,
+      "mouth_wide_max": 0.3218,
+      "eye_open_mean": 0.0518,
+      "lean_x_mean": 0.1007,
+      "lean_x_range": 0.1196,
+      "arm_open_mean": 0.5341,
+      "shoulder_tilt_abs": 0.0547,
+      "hand_face_right_min": 0.4896,
+      "speech_text": "a woman you a woman you",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.027,
+      "energy": 0.468,
+      "anger_proxy": false
+    },
+    {
+      "t0": 8.0,
+      "t1": 9.0,
+      "brow_mean": 0.2059,
+      "brow_range": 0.0238,
+      "mouth_open_mean": 0.0113,
+      "mouth_open_max": 0.0299,
+      "mouth_wide_max": 0.3214,
+      "eye_open_mean": 0.0468,
+      "lean_x_mean": 0.09,
+      "lean_x_range": 0.0954,
+      "arm_open_mean": 0.4993,
+      "shoulder_tilt_abs": 0.0946,
+      "hand_face_right_min": 0.5429,
+      "speech_text": "don ' t know don ' t know",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0.03,
+      "energy": 0.441,
+      "anger_proxy": false
+    },
+    {
+      "t0": 9.0,
+      "t1": 10.0,
+      "brow_mean": 0.1842,
+      "brow_range": 0.0329,
+      "mouth_open_mean": 0.0242,
+      "mouth_open_max": 0.0722,
+      "mouth_wide_max": 0.4315,
+      "eye_open_mean": 0.0429,
+      "lean_x_mean": 0.0522,
+      "lean_x_range": 0.0742,
+      "arm_open_mean": 0.5783,
+      "shoulder_tilt_abs": 0.0061,
+      "hand_face_right_min": 0.468,
+      "speech_text": "know and there ' s that know and there ' s that",
+      "n_words": 12,
+      "speaking": true,
+      "mouth_vs_speech": 0.072,
+      "energy": 0.539,
+      "anger_proxy": false
+    },
+    {
+      "t0": 10.0,
+      "t1": 11.0,
+      "brow_mean": 0.1793,
+      "brow_range": 0.013,
+      "mouth_open_mean": 0.0166,
+      "mouth_open_max": 0.0628,
+      "mouth_wide_max": 0.3641,
+      "eye_open_mean": 0.0451,
+      "lean_x_mean": 0.083,
+      "lean_x_range": 0.0591,
+      "arm_open_mean": 0.5743,
+      "shoulder_tilt_abs": 0.0191,
+      "hand_face_right_min": 0.4828,
+      "speech_text": "tension tension",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0.063,
+      "energy": 0.436,
+      "anger_proxy": false
+    },
+    {
+      "t0": 11.0,
+      "t1": 12.0,
+      "brow_mean": 0.1559,
+      "brow_range": 0.0359,
+      "mouth_open_mean": 0.0041,
+      "mouth_open_max": 0.0097,
+      "mouth_wide_max": 0.3512,
+      "eye_open_mean": 0.0761,
+      "lean_x_mean": 0.058,
+      "lean_x_range": 0.0611,
+      "arm_open_mean": 0.5638,
+      "shoulder_tilt_abs": 0.014,
+      "hand_face_right_min": 0.5286,
+      "speech_text": "tension tension",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0.01,
+      "energy": 0.448,
+      "anger_proxy": false
+    },
+    {
+      "t0": 12.0,
+      "t1": 13.0,
+      "brow_mean": 0.1408,
+      "brow_range": 0.0109,
+      "mouth_open_mean": 0.0034,
+      "mouth_open_max": 0.0048,
+      "mouth_wide_max": 0.3579,
+      "eye_open_mean": 0.0811,
+      "lean_x_mean": 0.0595,
+      "lean_x_range": 0.0762,
+      "arm_open_mean": 0.5613,
+      "shoulder_tilt_abs": 0.0237,
+      "hand_face_right_min": 0.5418,
+      "speech_text": "",
+      "n_words": 0,
+      "speaking": false,
+      "mouth_vs_speech": 0.005,
+      "energy": 0.445,
+      "anger_proxy": false
+    },
+    {
+      "t0": 13.0,
+      "t1": 14.0,
+      "brow_mean": 0.1708,
+      "brow_range": 0.0554,
+      "mouth_open_mean": 0.0172,
+      "mouth_open_max": 0.0571,
+      "mouth_wide_max": 0.3722,
+      "eye_open_mean": 0.0763,
+      "lean_x_mean": 0.0626,
+      "lean_x_range": 0.0622,
+      "arm_open_mean": 0.5744,
+      "shoulder_tilt_abs": 0.0229,
+      "hand_face_right_min": 0.545,
+      "speech_text": "She turns left She turns left",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.057,
+      "energy": 0.49,
+      "anger_proxy": false
+    },
+    {
+      "t0": 14.0,
+      "t1": 15.0,
+      "brow_mean": 0.1355,
+      "brow_range": 0.0404,
+      "mouth_open_mean": 0.0206,
+      "mouth_open_max": 0.0609,
+      "mouth_wide_max": 0.3388,
+      "eye_open_mean": 0.0878,
+      "lean_x_mean": 0.0406,
+      "lean_x_range": 0.0688,
+      "arm_open_mean": 0.5432,
+      "shoulder_tilt_abs": 0.0113,
+      "hand_face_right_min": 0.5127,
+      "speech_text": "left you turn left left you turn left",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0.061,
+      "energy": 0.448,
+      "anger_proxy": false
+    },
+    {
+      "t0": 15.0,
+      "t1": 16.0,
+      "brow_mean": 0.1227,
+      "brow_range": 0.0678,
+      "mouth_open_mean": 0.0158,
+      "mouth_open_max": 0.0534,
+      "mouth_wide_max": 0.3572,
+      "eye_open_mean": 0.0762,
+      "lean_x_mean": 0.0478,
+      "lean_x_range": 0.066,
+      "arm_open_mean": 0.5018,
+      "shoulder_tilt_abs": 0.0073,
+      "hand_face_right_min": 0.5158,
+      "speech_text": "left She turns left She turns",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.053,
+      "energy": 0.491,
+      "anger_proxy": false
+    },
+    {
+      "t0": 16.0,
+      "t1": 17.0,
+      "brow_mean": 0.1052,
+      "brow_range": 0.0084,
+      "mouth_open_mean": 0.0144,
+      "mouth_open_max": 0.0512,
+      "mouth_wide_max": 0.3571,
+      "eye_open_mean": 0.0854,
+      "lean_x_mean": 0.0505,
+      "lean_x_range": 0.0713,
+      "arm_open_mean": 0.4865,
+      "shoulder_tilt_abs": 0.0015,
+      "hand_face_right_min": 0.5281,
+      "speech_text": "turns right you turn turns right you turn",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0.051,
+      "energy": 0.437,
+      "anger_proxy": false
+    },
+    {
+      "t0": 17.0,
+      "t1": 18.0,
+      "brow_mean": 0.1268,
+      "brow_range": 0.0617,
+      "mouth_open_mean": 0.0167,
+      "mouth_open_max": 0.0475,
+      "mouth_wide_max": 0.3699,
+      "eye_open_mean": 0.0783,
+      "lean_x_mean": 0.0741,
+      "lean_x_range": 0.0842,
+      "arm_open_mean": 0.5219,
+      "shoulder_tilt_abs": 0.0061,
+      "hand_face_right_min": 0.4183,
+      "speech_text": "turn right And turn right And",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.048,
+      "energy": 0.516,
+      "anger_proxy": false
+    },
+    {
+      "t0": 18.0,
+      "t1": 19.0,
+      "brow_mean": 0.1237,
+      "brow_range": 0.0774,
+      "mouth_open_mean": 0.0483,
+      "mouth_open_max": 0.0885,
+      "mouth_wide_max": 0.3558,
+      "eye_open_mean": 0.0375,
+      "lean_x_mean": 0.0483,
+      "lean_x_range": 0.2046,
+      "arm_open_mean": 0.5265,
+      "shoulder_tilt_abs": 0.0327,
+      "hand_face_right_min": 0.5259,
+      "speech_text": "And you ' re kind of in a rush And you ' re kind of in a rush",
+      "n_words": 18,
+      "speaking": true,
+      "mouth_vs_speech": 0.088,
+      "energy": 0.638,
+      "anger_proxy": false
+    },
+    {
+      "t0": 19.0,
+      "t1": 20.0,
+      "brow_mean": 0.1061,
+      "brow_range": 0.0054,
+      "mouth_open_mean": 0.0454,
+      "mouth_open_max": 0.0872,
+      "mouth_wide_max": 0.3571,
+      "eye_open_mean": 0.0493,
+      "lean_x_mean": -0.0114,
+      "lean_x_range": 0.0545,
+      "arm_open_mean": 0.458,
+      "shoulder_tilt_abs": 0.0537,
+      "hand_face_right_min": 0.6201,
+      "speech_text": "rush rush",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0.087,
+      "energy": 0.417,
+      "anger_proxy": false
+    },
+    {
+      "t0": 20.0,
+      "t1": 21.0,
+      "brow_mean": 0.102,
+      "brow_range": 0.0434,
+      "mouth_open_mean": 0.0164,
+      "mouth_open_max": 0.0356,
+      "mouth_wide_max": 0.354,
+      "eye_open_mean": 0.0229,
+      "lean_x_mean": 0.0988,
+      "lean_x_range": 0.1761,
+      "arm_open_mean": 0.3442,
+      "shoulder_tilt_abs": 0.1284,
+      "hand_face_right_min": 0.2074,
+      "speech_text": "rush You know when you notice rush You know when you notice",
+      "n_words": 12,
+      "speaking": true,
+      "mouth_vs_speech": 0.036,
+      "energy": 0.574,
+      "anger_proxy": false
+    },
+    {
+      "t0": 21.0,
+      "t1": 22.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.0524,
+      "lean_x_range": 0.1156,
+      "arm_open_mean": 0.3985,
+      "shoulder_tilt_abs": 0.0568,
+      "hand_face_right_min": 0.4876,
+      "speech_text": "notice that she knows notice that she knows",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.116,
+      "anger_proxy": false
+    },
+    {
+      "t0": 22.0,
+      "t1": 23.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.0246,
+      "lean_x_range": 0.0564,
+      "arm_open_mean": 0.4402,
+      "shoulder_tilt_abs": 0.0447,
+      "hand_face_right_min": 0.5289,
+      "speech_text": "knows you ' re there as well knows you ' re there as well",
+      "n_words": 14,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.056,
+      "anger_proxy": false
+    },
+    {
+      "t0": 23.0,
+      "t1": 24.0,
+      "brow_mean": 0.1124,
+      "brow_range": 0.0116,
+      "mouth_open_mean": 0.0152,
+      "mouth_open_max": 0.0308,
+      "mouth_wide_max": 0.3511,
+      "eye_open_mean": 0.0564,
+      "lean_x_mean": 0.003,
+      "lean_x_range": 0.1378,
+      "arm_open_mean": 0.7164,
+      "shoulder_tilt_abs": 0.0718,
+      "hand_face_right_min": 0.5229,
+      "speech_text": "well the body well the body",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.031,
+      "energy": 0.501,
+      "anger_proxy": false
+    },
+    {
+      "t0": 24.0,
+      "t1": 25.0,
+      "brow_mean": 0.1023,
+      "brow_range": 0.0068,
+      "mouth_open_mean": 0.0396,
+      "mouth_open_max": 0.0672,
+      "mouth_wide_max": 0.3557,
+      "eye_open_mean": 0.0626,
+      "lean_x_mean": 0.0407,
+      "lean_x_range": 0.2916,
+      "arm_open_mean": 0.6684,
+      "shoulder_tilt_abs": 0.02,
+      "hand_face_right_min": 0.5733,
+      "speech_text": "body language changes body language changes",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.067,
+      "energy": 0.654,
+      "anger_proxy": false
+    },
+    {
+      "t0": 25.0,
+      "t1": 26.0,
+      "brow_mean": 0.1095,
+      "brow_range": 0.0541,
+      "mouth_open_mean": 0.0216,
+      "mouth_open_max": 0.0404,
+      "mouth_wide_max": 0.3435,
+      "eye_open_mean": 0.0534,
+      "lean_x_mean": 0.0467,
+      "lean_x_range": 0.1641,
+      "arm_open_mean": 0.5178,
+      "shoulder_tilt_abs": 0.0639,
+      "hand_face_right_min": 0.5439,
+      "speech_text": "changes a little bit changes a little bit",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0.04,
+      "energy": 0.562,
+      "anger_proxy": false
+    },
+    {
+      "t0": 26.0,
+      "t1": 27.0,
+      "brow_mean": 0.209,
+      "brow_range": 0.1127,
+      "mouth_open_mean": 0.152,
+      "mouth_open_max": 0.2366,
+      "mouth_wide_max": 0.4158,
+      "eye_open_mean": 0.0754,
+      "lean_x_mean": 0.1073,
+      "lean_x_range": 0.1421,
+      "arm_open_mean": 0.8397,
+      "shoulder_tilt_abs": 0.2134,
+      "hand_face_right_min": 0.5842,
+      "speech_text": "They start clutch ing They start clutch ing",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0.237,
+      "energy": 0.671,
+      "anger_proxy": false
+    },
+    {
+      "t0": 27.0,
+      "t1": 28.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0227,
+      "lean_x_range": 0.0734,
+      "arm_open_mean": 0.703,
+      "shoulder_tilt_abs": 0.0334,
+      "hand_face_right_min": 0.5384,
+      "speech_text": "ing the bag ing the bag",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.073,
+      "anger_proxy": false
+    },
+    {
+      "t0": 28.0,
+      "t1": 29.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1684,
+      "lean_x_range": 0.2907,
+      "arm_open_mean": 1.0081,
+      "shoulder_tilt_abs": 0.1964,
+      "hand_face_right_min": 0.9864,
+      "speech_text": "bag warming bag warming",
+      "n_words": 4,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.291,
+      "anger_proxy": false
+    },
+    {
+      "t0": 29.0,
+      "t1": 30.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0359,
+      "lean_x_range": 0.1678,
+      "arm_open_mean": 0.8456,
+      "shoulder_tilt_abs": 0.0756,
+      "hand_face_right_min": 1.1702,
+      "speech_text": "warming up the ham warming up the ham",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.168,
+      "anger_proxy": false
+    },
+    {
+      "t0": 30.0,
+      "t1": 31.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0034,
+      "lean_x_range": 0.1899,
+      "arm_open_mean": 0.8484,
+      "shoulder_tilt_abs": 0.1363,
+      "hand_face_right_min": 1.1264,
+      "speech_text": "ham strings ham strings",
+      "n_words": 4,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.19,
+      "anger_proxy": false
+    },
+    {
+      "t0": 31.0,
+      "t1": 32.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.0329,
+      "lean_x_range": 0.1211,
+      "arm_open_mean": 0.7709,
+      "shoulder_tilt_abs": 0.0103,
+      "hand_face_right_min": 1.0853,
+      "speech_text": "And then there ' s a really And then there ' s a really",
+      "n_words": 14,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.121,
+      "anger_proxy": false
+    },
+    {
+      "t0": 32.0,
+      "t1": 33.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0412,
+      "lean_x_range": 0.0633,
+      "arm_open_mean": 0.5129,
+      "shoulder_tilt_abs": 0.0376,
+      "hand_face_right_min": 0.74,
+      "speech_text": "really tense moment really tense moment",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.063,
+      "anger_proxy": false
+    },
+    {
+      "t0": 33.0,
+      "t1": 34.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.071,
+      "lean_x_range": 0.0616,
+      "arm_open_mean": 0.7551,
+      "shoulder_tilt_abs": 0.0446,
+      "hand_face_right_min": 0.9309,
+      "speech_text": "moment you know like when they moment you know like when they",
+      "n_words": 12,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.062,
+      "anger_proxy": false
+    },
+    {
+      "t0": 34.0,
+      "t1": 35.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.1082,
+      "lean_x_range": 0.0592,
+      "arm_open_mean": 0.7058,
+      "shoulder_tilt_abs": 0.0216,
+      "hand_face_right_min": 0.7182,
+      "speech_text": "they finally they finally",
+      "n_words": 4,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.059,
+      "anger_proxy": false
+    },
+    {
+      "t0": 35.0,
+      "t1": 36.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.1113,
+      "lean_x_range": 0.0666,
+      "arm_open_mean": 0.6062,
+      "shoulder_tilt_abs": 0.022,
+      "hand_face_right_min": 0.8162,
+      "speech_text": "look look",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.067,
+      "anger_proxy": false
+    },
+    {
+      "t0": 36.0,
+      "t1": 37.0,
+      "brow_mean": 0.1556,
+      "brow_range": 0.0219,
+      "mouth_open_mean": 0.0018,
+      "mouth_open_max": 0.0033,
+      "mouth_wide_max": 0.3379,
+      "eye_open_mean": 0.0887,
+      "lean_x_mean": -0.0194,
+      "lean_x_range": 0.1526,
+      "arm_open_mean": 0.8413,
+      "shoulder_tilt_abs": 0.1465,
+      "hand_face_right_min": 1.0238,
+      "speech_text": "look look",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0.003,
+      "energy": 0.512,
+      "anger_proxy": false
+    },
+    {
+      "t0": 37.0,
+      "t1": 38.0,
+      "brow_mean": 0.1489,
+      "brow_range": 0.0064,
+      "mouth_open_mean": 0.001,
+      "mouth_open_max": 0.0017,
+      "mouth_wide_max": 0.3456,
+      "eye_open_mean": 0.0889,
+      "lean_x_mean": -0.0584,
+      "lean_x_range": 0.1462,
+      "arm_open_mean": 0.991,
+      "shoulder_tilt_abs": 0.1999,
+      "hand_face_right_min": 1.3511,
+      "speech_text": "",
+      "n_words": 0,
+      "speaking": false,
+      "mouth_vs_speech": 0.002,
+      "energy": 0.498,
+      "anger_proxy": false
+    },
+    {
+      "t0": 38.0,
+      "t1": 39.0,
+      "brow_mean": 0.1597,
+      "brow_range": 0.0459,
+      "mouth_open_mean": 0.0221,
+      "mouth_open_max": 0.1183,
+      "mouth_wide_max": 0.4174,
+      "eye_open_mean": 0.0777,
+      "lean_x_mean": 0.0071,
+      "lean_x_range": 0.1314,
+      "arm_open_mean": 0.7599,
+      "shoulder_tilt_abs": 0.1064,
+      "hand_face_right_min": 0.7353,
+      "speech_text": "And now And now",
+      "n_words": 4,
+      "speaking": true,
+      "mouth_vs_speech": 0.118,
+      "energy": 0.595,
+      "anger_proxy": false
+    },
+    {
+      "t0": 39.0,
+      "t1": 40.0,
+      "brow_mean": 0.1736,
+      "brow_range": 0.1135,
+      "mouth_open_mean": 0.0783,
+      "mouth_open_max": 0.1693,
+      "mouth_wide_max": 0.362,
+      "eye_open_mean": 0.0682,
+      "lean_x_mean": -0.017,
+      "lean_x_range": 0.1911,
+      "arm_open_mean": 0.5002,
+      "shoulder_tilt_abs": 0.0796,
+      "hand_face_right_min": 0.5075,
+      "speech_text": "now you like gotta now you like gotta",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0.169,
+      "energy": 0.667,
+      "anger_proxy": false
+    },
+    {
+      "t0": 40.0,
+      "t1": 41.0,
+      "brow_mean": 0.1461,
+      "brow_range": 0.0439,
+      "mouth_open_mean": 0.052,
+      "mouth_open_max": 0.116,
+      "mouth_wide_max": 0.3605,
+      "eye_open_mean": 0.071,
+      "lean_x_mean": -0.1192,
+      "lean_x_range": 0.1244,
+      "arm_open_mean": 0.5231,
+      "shoulder_tilt_abs": 0.0348,
+      "hand_face_right_min": 0.3686,
+      "speech_text": "gotta try really gotta try really",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.116,
+      "energy": 0.529,
+      "anger_proxy": false
+    },
+    {
+      "t0": 41.0,
+      "t1": 42.0,
+      "brow_mean": 0.1696,
+      "brow_range": 0.0551,
+      "mouth_open_mean": 0.1168,
+      "mouth_open_max": 0.1963,
+      "mouth_wide_max": 0.3505,
+      "eye_open_mean": 0.0698,
+      "lean_x_mean": -0.029,
+      "lean_x_range": 0.1045,
+      "arm_open_mean": 0.4166,
+      "shoulder_tilt_abs": 0.0084,
+      "hand_face_right_min": 0.2365,
+      "speech_text": "really hard really hard",
+      "n_words": 4,
+      "speaking": true,
+      "mouth_vs_speech": 0.196,
+      "energy": 0.51,
+      "anger_proxy": false
+    },
+    {
+      "t0": 42.0,
+      "t1": 43.0,
+      "brow_mean": 0.1229,
+      "brow_range": 0.0359,
+      "mouth_open_mean": 0.054,
+      "mouth_open_max": 0.1825,
+      "mouth_wide_max": 0.3652,
+      "eye_open_mean": 0.032,
+      "lean_x_mean": 0.0173,
+      "lean_x_range": 0.2117,
+      "arm_open_mean": 0.5532,
+      "shoulder_tilt_abs": 0.0025,
+      "hand_face_right_min": 0.4638,
+      "speech_text": "hard to not hard to not",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.182,
+      "energy": 0.613,
+      "anger_proxy": false
+    },
+    {
+      "t0": 43.0,
+      "t1": 44.0,
+      "brow_mean": 0.1277,
+      "brow_range": 0.0754,
+      "mouth_open_mean": 0.0066,
+      "mouth_open_max": 0.0125,
+      "mouth_wide_max": 0.3341,
+      "eye_open_mean": 0.0341,
+      "lean_x_mean": -0.0169,
+      "lean_x_range": 0.2291,
+      "arm_open_mean": 0.5411,
+      "shoulder_tilt_abs": 0.0436,
+      "hand_face_right_min": 0.4458,
+      "speech_text": "not walk like a rap not walk like a rap",
+      "n_words": 10,
+      "speaking": true,
+      "mouth_vs_speech": 0.013,
+      "energy": 0.639,
+      "anger_proxy": false
+    },
+    {
+      "t0": 44.0,
+      "t1": 45.0,
+      "brow_mean": 0.1419,
+      "brow_range": 0.0587,
+      "mouth_open_mean": 0.0061,
+      "mouth_open_max": 0.015,
+      "mouth_wide_max": 0.3745,
+      "eye_open_mean": 0.0375,
+      "lean_x_mean": 0.019,
+      "lean_x_range": 0.3572,
+      "arm_open_mean": 0.5753,
+      "shoulder_tilt_abs": 0.0189,
+      "hand_face_right_min": 0.4985,
+      "speech_text": "rap ist rap ist",
+      "n_words": 4,
+      "speaking": true,
+      "mouth_vs_speech": 0.015,
+      "energy": 0.79,
+      "anger_proxy": false
+    },
+    {
+      "t0": 45.0,
+      "t1": 46.0,
+      "brow_mean": 0.1178,
+      "brow_range": 0.1081,
+      "mouth_open_mean": 0.0394,
+      "mouth_open_max": 0.0508,
+      "mouth_wide_max": 0.3887,
+      "eye_open_mean": 0.0299,
+      "lean_x_mean": -0.0086,
+      "lean_x_range": 0.2935,
+      "arm_open_mean": 0.7173,
+      "shoulder_tilt_abs": 0.017,
+      "hand_face_right_min": 0.7976,
+      "speech_text": "ist ist",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0.051,
+      "energy": 0.79,
+      "anger_proxy": false
+    },
+    {
+      "t0": 46.0,
+      "t1": 47.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.151,
+      "lean_x_range": 0.1531,
+      "arm_open_mean": 0.658,
+      "shoulder_tilt_abs": 0.112,
+      "hand_face_right_min": 0.431,
+      "speech_text": "Would a rap Would a rap",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.153,
+      "anger_proxy": false
+    },
+    {
+      "t0": 47.0,
+      "t1": 48.0,
+      "brow_mean": 0.1993,
+      "brow_range": 0.0329,
+      "mouth_open_mean": 0.0202,
+      "mouth_open_max": 0.0544,
+      "mouth_wide_max": 0.3567,
+      "eye_open_mean": 0.0356,
+      "lean_x_mean": 0.0136,
+      "lean_x_range": 0.2166,
+      "arm_open_mean": 0.4576,
+      "shoulder_tilt_abs": 0.0043,
+      "hand_face_right_min": 0.4216,
+      "speech_text": "ist do this ist do this",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.054,
+      "energy": 0.606,
+      "anger_proxy": false
+    },
+    {
+      "t0": 48.0,
+      "t1": 49.0,
+      "brow_mean": 0.1898,
+      "brow_range": 0.049,
+      "mouth_open_mean": 0.0178,
+      "mouth_open_max": 0.0353,
+      "mouth_wide_max": 0.3435,
+      "eye_open_mean": 0.0367,
+      "lean_x_mean": -0.0129,
+      "lean_x_range": 0.3493,
+      "arm_open_mean": 0.6886,
+      "shoulder_tilt_abs": 0.037,
+      "hand_face_right_min": 0.7613,
+      "speech_text": "this this",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0.035,
+      "energy": 0.742,
+      "anger_proxy": false
+    },
+    {
+      "t0": 49.0,
+      "t1": 50.0,
+      "brow_mean": 0.1694,
+      "brow_range": 0.0613,
+      "mouth_open_mean": 0.0187,
+      "mouth_open_max": 0.0279,
+      "mouth_wide_max": 0.3616,
+      "eye_open_mean": 0.0486,
+      "lean_x_mean": -0.1556,
+      "lean_x_range": 0.2275,
+      "arm_open_mean": 0.8308,
+      "shoulder_tilt_abs": 0.1548,
+      "hand_face_right_min": 0.8755,
+      "speech_text": "",
+      "n_words": 0,
+      "speaking": false,
+      "mouth_vs_speech": 0.028,
+      "energy": 0.65,
+      "anger_proxy": false
+    },
+    {
+      "t0": 50.0,
+      "t1": 51.0,
+      "brow_mean": 0.1677,
+      "brow_range": 0.0572,
+      "mouth_open_mean": 0.027,
+      "mouth_open_max": 0.0936,
+      "mouth_wide_max": 0.428,
+      "eye_open_mean": 0.0701,
+      "lean_x_mean": 0.0091,
+      "lean_x_range": 0.1027,
+      "arm_open_mean": 0.5584,
+      "shoulder_tilt_abs": 0.1191,
+      "hand_face_right_min": 0.3722,
+      "speech_text": "Then you take Then you take",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.094,
+      "energy": 0.588,
+      "anger_proxy": false
+    },
+    {
+      "t0": 51.0,
+      "t1": 52.0,
+      "brow_mean": 0.1859,
+      "brow_range": 0.0,
+      "mouth_open_mean": 0.0451,
+      "mouth_open_max": 0.0451,
+      "mouth_wide_max": 0.3228,
+      "eye_open_mean": 0.0768,
+      "lean_x_mean": 0.0353,
+      "lean_x_range": 0.1051,
+      "arm_open_mean": 0.2741,
+      "shoulder_tilt_abs": 0.0178,
+      "hand_face_right_min": 0.4863,
+      "speech_text": "an alternate route an alternate route",
+      "n_words": 6,
+      "speaking": true,
+      "mouth_vs_speech": 0.045,
+      "energy": 0.428,
+      "anger_proxy": false
+    },
+    {
+      "t0": 52.0,
+      "t1": 53.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.0926,
+      "lean_x_range": 0.0627,
+      "arm_open_mean": 0.2801,
+      "shoulder_tilt_abs": 0.0783,
+      "hand_face_right_min": 0.5262,
+      "speech_text": "route route",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.063,
+      "anger_proxy": false
+    },
+    {
+      "t0": 53.0,
+      "t1": 54.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1231,
+      "lean_x_range": 0.0462,
+      "arm_open_mean": 0.2732,
+      "shoulder_tilt_abs": 0.0853,
+      "hand_face_right_min": 0.5052,
+      "speech_text": "route and then you re route and then you re",
+      "n_words": 10,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.046,
+      "anger_proxy": false
+    },
+    {
+      "t0": 54.0,
+      "t1": 55.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1383,
+      "lean_x_range": 0.0521,
+      "arm_open_mean": 0.2803,
+      "shoulder_tilt_abs": 0.0891,
+      "hand_face_right_min": 0.561,
+      "speech_text": "re appear re appear",
+      "n_words": 4,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.052,
+      "anger_proxy": false
+    },
+    {
+      "t0": 55.0,
+      "t1": 56.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1492,
+      "lean_x_range": 0.0545,
+      "arm_open_mean": 0.2783,
+      "shoulder_tilt_abs": 0.0797,
+      "hand_face_right_min": 0.5243,
+      "speech_text": "appear from another street appear from another street",
+      "n_words": 8,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.054,
+      "anger_proxy": false
+    },
+    {
+      "t0": 56.0,
+      "t1": 57.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": 0.1369,
+      "lean_x_range": 0.0776,
+      "arm_open_mean": 0.5056,
+      "shoulder_tilt_abs": 0.041,
+      "hand_face_right_min": 0.4741,
+      "speech_text": "street street",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0,
+      "energy": 0.078,
+      "anger_proxy": false
+    },
+    {
+      "t0": 57.0,
+      "t1": 58.0,
+      "brow_mean": 0.2012,
+      "brow_range": 0.0,
+      "mouth_open_mean": 0.0458,
+      "mouth_open_max": 0.0458,
+      "mouth_wide_max": 0.3189,
+      "eye_open_mean": 0.0693,
+      "lean_x_mean": 0.0249,
+      "lean_x_range": 0.1761,
+      "arm_open_mean": 0.907,
+      "shoulder_tilt_abs": 0.0249,
+      "hand_face_right_min": 1.0361,
+      "speech_text": "street street",
+      "n_words": 2,
+      "speaking": true,
+      "mouth_vs_speech": 0.046,
+      "energy": 0.495,
+      "anger_proxy": false
+    },
+    {
+      "t0": 58.0,
+      "t1": 59.0,
+      "brow_mean": null,
+      "brow_range": null,
+      "mouth_open_mean": null,
+      "mouth_open_max": null,
+      "mouth_wide_max": null,
+      "eye_open_mean": null,
+      "lean_x_mean": -0.0831,
+      "lean_x_range": 0.0873,
+      "arm_open_mean": 0.9017,
+      "shoulder_tilt_abs": 0.0766,
+      "hand_face_right_min": 1.2322,
+      "speech_text": "",
+      "n_words": 0,
+      "speaking": false,
+      "mouth_vs_speech": 0,
+      "energy": 0.087,
+      "anger_proxy": false
+    }
+  ],
+  "asr_words": [
+    {
+      "text": "Gu",
+      "t0": 0.28,
+      "t1": 0.4
+    },
+    {
+      "text": "ys",
+      "t0": 0.4,
+      "t1": 0.68
+    },
+    {
+      "text": "will",
+      "t0": 0.68,
+      "t1": 0.88
+    },
+    {
+      "text": "notice",
+      "t0": 0.88,
+      "t1": 1.36
+    },
+    {
+      "text": "feeling",
+      "t0": 1.36,
+      "t1": 1.8
+    },
+    {
+      "text": "you",
+      "t0": 1.8,
+      "t1": 1.92
+    },
+    {
+      "text": "know",
+      "t0": 1.92,
+      "t1": 2.12
+    },
+    {
+      "text": "when",
+      "t0": 2.12,
+      "t1": 2.24
+    },
+    {
+      "text": "you",
+      "t0": 2.24,
+      "t1": 2.36
+    },
+    {
+      "text": "'",
+      "t0": 2.36,
+      "t1": 2.653
+    },
+    {
+      "text": "re",
+      "t0": 2.653,
+      "t1": 3.24
+    },
+    {
+      "text": "walking",
+      "t0": 3.24,
+      "t1": 3.84
+    },
+    {
+      "text": "late",
+      "t0": 3.84,
+      "t1": 4.12
+    },
+    {
+      "text": "at",
+      "t0": 4.12,
+      "t1": 4.36
+    },
+    {
+      "text": "night",
+      "t0": 4.36,
+      "t1": 5.6
+    },
+    {
+      "text": "and",
+      "t0": 5.6,
+      "t1": 5.8
+    },
+    {
+      "text": "you",
+      "t0": 5.8,
+      "t1": 5.88
+    },
+    {
+      "text": "'",
+      "t0": 5.88,
+      "t1": 5.92
+    },
+    {
+      "text": "re",
+      "t0": 5.92,
+      "t1": 6.0
+    },
+    {
+      "text": "like",
+      "t0": 6.0,
+      "t1": 6.4
+    },
+    {
+      "text": "behind",
+      "t0": 6.4,
+      "t1": 6.8
+    },
+    {
+      "text": "a",
+      "t0": 7.0,
+      "t1": 7.2
+    },
+    {
+      "text": "woman",
+      "t0": 7.2,
+      "t1": 7.76
+    },
+    {
+      "text": "you",
+      "t0": 7.76,
+      "t1": 8.0
+    },
+    {
+      "text": "don",
+      "t0": 8.0,
+      "t1": 8.08
+    },
+    {
+      "text": "'",
+      "t0": 8.08,
+      "t1": 8.18
+    },
+    {
+      "text": "t",
+      "t0": 8.18,
+      "t1": 8.28
+    },
+    {
+      "text": "know",
+      "t0": 8.28,
+      "t1": 9.12
+    },
+    {
+      "text": "and",
+      "t0": 9.12,
+      "t1": 9.32
+    },
+    {
+      "text": "there",
+      "t0": 9.32,
+      "t1": 9.44
+    },
+    {
+      "text": "'",
+      "t0": 9.44,
+      "t1": 9.52
+    },
+    {
+      "text": "s",
+      "t0": 9.52,
+      "t1": 9.6
+    },
+    {
+      "text": "that",
+      "t0": 9.6,
+      "t1": 10.0
+    },
+    {
+      "text": "tension",
+      "t0": 10.0,
+      "t1": 11.64
+    },
+    {
+      "text": "She",
+      "t0": 13.28,
+      "t1": 13.6
+    },
+    {
+      "text": "turns",
+      "t0": 13.6,
+      "t1": 13.96
+    },
+    {
+      "text": "left",
+      "t0": 13.96,
+      "t1": 14.32
+    },
+    {
+      "text": "you",
+      "t0": 14.32,
+      "t1": 14.56
+    },
+    {
+      "text": "turn",
+      "t0": 14.56,
+      "t1": 14.88
+    },
+    {
+      "text": "left",
+      "t0": 14.88,
+      "t1": 15.6
+    },
+    {
+      "text": "She",
+      "t0": 15.6,
+      "t1": 15.92
+    },
+    {
+      "text": "turns",
+      "t0": 15.92,
+      "t1": 16.28
+    },
+    {
+      "text": "right",
+      "t0": 16.28,
+      "t1": 16.6
+    },
+    {
+      "text": "you",
+      "t0": 16.6,
+      "t1": 16.96
+    },
+    {
+      "text": "turn",
+      "t0": 16.96,
+      "t1": 17.28
+    },
+    {
+      "text": "right",
+      "t0": 17.28,
+      "t1": 17.92
+    },
+    {
+      "text": "And",
+      "t0": 17.92,
+      "t1": 18.08
+    },
+    {
+      "text": "you",
+      "t0": 18.08,
+      "t1": 18.16
+    },
+    {
+      "text": "'",
+      "t0": 18.16,
+      "t1": 18.213
+    },
+    {
+      "text": "re",
+      "t0": 18.213,
+      "t1": 18.32
+    },
+    {
+      "text": "kind",
+      "t0": 18.32,
+      "t1": 18.48
+    },
+    {
+      "text": "of",
+      "t0": 18.48,
+      "t1": 18.6
+    },
+    {
+      "text": "in",
+      "t0": 18.6,
+      "t1": 18.68
+    },
+    {
+      "text": "a",
+      "t0": 18.78,
+      "t1": 18.88
+    },
+    {
+      "text": "rush",
+      "t0": 18.88,
+      "t1": 20.04
+    },
+    {
+      "text": "You",
+      "t0": 20.12,
+      "t1": 20.24
+    },
+    {
+      "text": "know",
+      "t0": 20.24,
+      "t1": 20.36
+    },
+    {
+      "text": "when",
+      "t0": 20.36,
+      "t1": 20.48
+    },
+    {
+      "text": "you",
+      "t0": 20.48,
+      "t1": 20.8
+    },
+    {
+      "text": "notice",
+      "t0": 20.8,
+      "t1": 21.16
+    },
+    {
+      "text": "that",
+      "t0": 21.16,
+      "t1": 21.4
+    },
+    {
+      "text": "she",
+      "t0": 21.4,
+      "t1": 21.76
+    },
+    {
+      "text": "knows",
+      "t0": 21.76,
+      "t1": 22.08
+    },
+    {
+      "text": "you",
+      "t0": 22.08,
+      "t1": 22.2
+    },
+    {
+      "text": "'",
+      "t0": 22.2,
+      "t1": 22.253
+    },
+    {
+      "text": "re",
+      "t0": 22.253,
+      "t1": 22.36
+    },
+    {
+      "text": "there",
+      "t0": 22.36,
+      "t1": 22.64
+    },
+    {
+      "text": "as",
+      "t0": 22.64,
+      "t1": 22.8
+    },
+    {
+      "text": "well",
+      "t0": 22.8,
+      "t1": 23.64
+    },
+    {
+      "text": "the",
+      "t0": 23.64,
+      "t1": 23.84
+    },
+    {
+      "text": "body",
+      "t0": 23.84,
+      "t1": 24.32
+    },
+    {
+      "text": "language",
+      "t0": 24.32,
+      "t1": 24.84
+    },
+    {
+      "text": "changes",
+      "t0": 24.84,
+      "t1": 25.32
+    },
+    {
+      "text": "a",
+      "t0": 25.36,
+      "t1": 25.4
+    },
+    {
+      "text": "little",
+      "t0": 25.4,
+      "t1": 25.68
+    },
+    {
+      "text": "bit",
+      "t0": 25.68,
+      "t1": 26.0
+    },
+    {
+      "text": "They",
+      "t0": 26.0,
+      "t1": 26.2
+    },
+    {
+      "text": "start",
+      "t0": 26.2,
+      "t1": 26.56
+    },
+    {
+      "text": "clutch",
+      "t0": 26.56,
+      "t1": 26.76
+    },
+    {
+      "text": "ing",
+      "t0": 26.76,
+      "t1": 27.12
+    },
+    {
+      "text": "the",
+      "t0": 27.12,
+      "t1": 27.36
+    },
+    {
+      "text": "bag",
+      "t0": 27.36,
+      "t1": 28.52
+    },
+    {
+      "text": "warming",
+      "t0": 28.72,
+      "t1": 29.16
+    },
+    {
+      "text": "up",
+      "t0": 29.16,
+      "t1": 29.4
+    },
+    {
+      "text": "the",
+      "t0": 29.4,
+      "t1": 29.6
+    },
+    {
+      "text": "ham",
+      "t0": 29.6,
+      "t1": 30.04
+    },
+    {
+      "text": "strings",
+      "t0": 30.04,
+      "t1": 31.0
+    },
+    {
+      "text": "And",
+      "t0": 31.0,
+      "t1": 31.16
+    },
+    {
+      "text": "then",
+      "t0": 31.16,
+      "t1": 31.28
+    },
+    {
+      "text": "there",
+      "t0": 31.28,
+      "t1": 31.4
+    },
+    {
+      "text": "'",
+      "t0": 31.4,
+      "t1": 31.46
+    },
+    {
+      "text": "s",
+      "t0": 31.46,
+      "t1": 31.52
+    },
+    {
+      "text": "a",
+      "t0": 31.62,
+      "t1": 31.72
+    },
+    {
+      "text": "really",
+      "t0": 31.72,
+      "t1": 32.16
+    },
+    {
+      "text": "tense",
+      "t0": 32.16,
+      "t1": 32.76
+    },
+    {
+      "text": "moment",
+      "t0": 32.76,
+      "t1": 33.04
+    },
+    {
+      "text": "you",
+      "t0": 33.04,
+      "t1": 33.16
+    },
+    {
+      "text": "know",
+      "t0": 33.16,
+      "t1": 33.48
+    },
+    {
+      "text": "like",
+      "t0": 33.48,
+      "t1": 33.72
+    },
+    {
+      "text": "when",
+      "t0": 33.72,
+      "t1": 33.96
+    },
+    {
+      "text": "they",
+      "t0": 33.96,
+      "t1": 34.28
+    },
+    {
+      "text": "finally",
+      "t0": 34.28,
+      "t1": 35.0
+    },
+    {
+      "text": "look",
+      "t0": 35.0,
+      "t1": 36.2
+    },
+    {
+      "text": "And",
+      "t0": 38.72,
+      "t1": 38.96
+    },
+    {
+      "text": "now",
+      "t0": 38.96,
+      "t1": 39.32
+    },
+    {
+      "text": "you",
+      "t0": 39.32,
+      "t1": 39.6
+    },
+    {
+      "text": "like",
+      "t0": 39.6,
+      "t1": 39.88
+    },
+    {
+      "text": "gotta",
+      "t0": 39.88,
+      "t1": 40.36
+    },
+    {
+      "text": "try",
+      "t0": 40.36,
+      "t1": 40.84
+    },
+    {
+      "text": "really",
+      "t0": 40.84,
+      "t1": 41.28
+    },
+    {
+      "text": "hard",
+      "t0": 41.28,
+      "t1": 42.44
+    },
+    {
+      "text": "to",
+      "t0": 42.44,
+      "t1": 42.76
+    },
+    {
+      "text": "not",
+      "t0": 42.76,
+      "t1": 43.16
+    },
+    {
+      "text": "walk",
+      "t0": 43.16,
+      "t1": 43.48
+    },
+    {
+      "text": "like",
+      "t0": 43.48,
+      "t1": 43.68
+    },
+    {
+      "text": "a",
+      "t0": 43.76,
+      "t1": 43.84
+    },
+    {
+      "text": "rap",
+      "t0": 43.84,
+      "t1": 44.16
+    },
+    {
+      "text": "ist",
+      "t0": 44.16,
+      "t1": 45.08
+    },
+    {
+      "text": "Would",
+      "t0": 46.44,
+      "t1": 46.6
+    },
+    {
+      "text": "a",
+      "t0": 46.66,
+      "t1": 46.72
+    },
+    {
+      "text": "rap",
+      "t0": 46.72,
+      "t1": 47.0
+    },
+    {
+      "text": "ist",
+      "t0": 47.0,
+      "t1": 47.12
+    },
+    {
+      "text": "do",
+      "t0": 47.12,
+      "t1": 47.36
+    },
+    {
+      "text": "this",
+      "t0": 47.36,
+      "t1": 48.4
+    },
+    {
+      "text": "Then",
+      "t0": 50.24,
+      "t1": 50.44
+    },
+    {
+      "text": "you",
+      "t0": 50.44,
+      "t1": 50.6
+    },
+    {
+      "text": "take",
+      "t0": 50.6,
+      "t1": 50.88
+    },
+    {
+      "text": "an",
+      "t0": 51.013,
+      "t1": 51.28
+    },
+    {
+      "text": "alternate",
+      "t0": 51.28,
+      "t1": 51.88
+    },
+    {
+      "text": "route",
+      "t0": 51.88,
+      "t1": 53.2
+    },
+    {
+      "text": "and",
+      "t0": 53.2,
+      "t1": 53.4
+    },
+    {
+      "text": "then",
+      "t0": 53.4,
+      "t1": 53.64
+    },
+    {
+      "text": "you",
+      "t0": 53.64,
+      "t1": 53.96
+    },
+    {
+      "text": "re",
+      "t0": 53.96,
+      "t1": 54.179
+    },
+    {
+      "text": "appear",
+      "t0": 54.179,
+      "t1": 55.08
+    },
+    {
+      "text": "from",
+      "t0": 55.08,
+      "t1": 55.44
+    },
+    {
+      "text": "another",
+      "t0": 55.44,
+      "t1": 55.96
+    },
+    {
+      "text": "street",
+      "t0": 55.96,
+      "t1": 57.08
+    },
+    {
+      "text": "Gu",
+      "t0": 0.28,
+      "t1": 0.4
+    },
+    {
+      "text": "ys",
+      "t0": 0.4,
+      "t1": 0.68
+    },
+    {
+      "text": "will",
+      "t0": 0.68,
+      "t1": 0.88
+    },
+    {
+      "text": "notice",
+      "t0": 0.88,
+      "t1": 1.36
+    },
+    {
+      "text": "feeling",
+      "t0": 1.36,
+      "t1": 1.8
+    },
+    {
+      "text": "you",
+      "t0": 1.8,
+      "t1": 1.92
+    },
+    {
+      "text": "know",
+      "t0": 1.92,
+      "t1": 2.12
+    },
+    {
+      "text": "when",
+      "t0": 2.12,
+      "t1": 2.24
+    },
+    {
+      "text": "you",
+      "t0": 2.24,
+      "t1": 2.36
+    },
+    {
+      "text": "'",
+      "t0": 2.36,
+      "t1": 2.653
+    },
+    {
+      "text": "re",
+      "t0": 2.653,
+      "t1": 3.24
+    },
+    {
+      "text": "walking",
+      "t0": 3.24,
+      "t1": 3.84
+    },
+    {
+      "text": "late",
+      "t0": 3.84,
+      "t1": 4.12
+    },
+    {
+      "text": "at",
+      "t0": 4.12,
+      "t1": 4.36
+    },
+    {
+      "text": "night",
+      "t0": 4.36,
+      "t1": 5.6
+    },
+    {
+      "text": "and",
+      "t0": 5.6,
+      "t1": 5.8
+    },
+    {
+      "text": "you",
+      "t0": 5.8,
+      "t1": 5.88
+    },
+    {
+      "text": "'",
+      "t0": 5.88,
+      "t1": 5.92
+    },
+    {
+      "text": "re",
+      "t0": 5.92,
+      "t1": 6.0
+    },
+    {
+      "text": "like",
+      "t0": 6.0,
+      "t1": 6.4
+    },
+    {
+      "text": "behind",
+      "t0": 6.4,
+      "t1": 6.8
+    },
+    {
+      "text": "a",
+      "t0": 7.0,
+      "t1": 7.2
+    },
+    {
+      "text": "woman",
+      "t0": 7.2,
+      "t1": 7.76
+    },
+    {
+      "text": "you",
+      "t0": 7.76,
+      "t1": 8.0
+    },
+    {
+      "text": "don",
+      "t0": 8.0,
+      "t1": 8.08
+    },
+    {
+      "text": "'",
+      "t0": 8.08,
+      "t1": 8.18
+    },
+    {
+      "text": "t",
+      "t0": 8.18,
+      "t1": 8.28
+    },
+    {
+      "text": "know",
+      "t0": 8.28,
+      "t1": 9.12
+    },
+    {
+      "text": "and",
+      "t0": 9.12,
+      "t1": 9.32
+    },
+    {
+      "text": "there",
+      "t0": 9.32,
+      "t1": 9.44
+    },
+    {
+      "text": "'",
+      "t0": 9.44,
+      "t1": 9.52
+    },
+    {
+      "text": "s",
+      "t0": 9.52,
+      "t1": 9.6
+    },
+    {
+      "text": "that",
+      "t0": 9.6,
+      "t1": 10.0
+    },
+    {
+      "text": "tension",
+      "t0": 10.0,
+      "t1": 11.64
+    },
+    {
+      "text": "She",
+      "t0": 13.28,
+      "t1": 13.6
+    },
+    {
+      "text": "turns",
+      "t0": 13.6,
+      "t1": 13.96
+    },
+    {
+      "text": "left",
+      "t0": 13.96,
+      "t1": 14.32
+    },
+    {
+      "text": "you",
+      "t0": 14.32,
+      "t1": 14.56
+    },
+    {
+      "text": "turn",
+      "t0": 14.56,
+      "t1": 14.88
+    },
+    {
+      "text": "left",
+      "t0": 14.88,
+      "t1": 15.6
+    },
+    {
+      "text": "She",
+      "t0": 15.6,
+      "t1": 15.92
+    },
+    {
+      "text": "turns",
+      "t0": 15.92,
+      "t1": 16.28
+    },
+    {
+      "text": "right",
+      "t0": 16.28,
+      "t1": 16.6
+    },
+    {
+      "text": "you",
+      "t0": 16.6,
+      "t1": 16.96
+    },
+    {
+      "text": "turn",
+      "t0": 16.96,
+      "t1": 17.28
+    },
+    {
+      "text": "right",
+      "t0": 17.28,
+      "t1": 17.92
+    },
+    {
+      "text": "And",
+      "t0": 17.92,
+      "t1": 18.08
+    },
+    {
+      "text": "you",
+      "t0": 18.08,
+      "t1": 18.16
+    },
+    {
+      "text": "'",
+      "t0": 18.16,
+      "t1": 18.213
+    },
+    {
+      "text": "re",
+      "t0": 18.213,
+      "t1": 18.32
+    },
+    {
+      "text": "kind",
+      "t0": 18.32,
+      "t1": 18.48
+    },
+    {
+      "text": "of",
+      "t0": 18.48,
+      "t1": 18.6
+    },
+    {
+      "text": "in",
+      "t0": 18.6,
+      "t1": 18.68
+    },
+    {
+      "text": "a",
+      "t0": 18.78,
+      "t1": 18.88
+    },
+    {
+      "text": "rush",
+      "t0": 18.88,
+      "t1": 20.04
+    },
+    {
+      "text": "You",
+      "t0": 20.12,
+      "t1": 20.24
+    },
+    {
+      "text": "know",
+      "t0": 20.24,
+      "t1": 20.36
+    },
+    {
+      "text": "when",
+      "t0": 20.36,
+      "t1": 20.48
+    },
+    {
+      "text": "you",
+      "t0": 20.48,
+      "t1": 20.8
+    },
+    {
+      "text": "notice",
+      "t0": 20.8,
+      "t1": 21.16
+    },
+    {
+      "text": "that",
+      "t0": 21.16,
+      "t1": 21.4
+    },
+    {
+      "text": "she",
+      "t0": 21.4,
+      "t1": 21.76
+    },
+    {
+      "text": "knows",
+      "t0": 21.76,
+      "t1": 22.08
+    },
+    {
+      "text": "you",
+      "t0": 22.08,
+      "t1": 22.2
+    },
+    {
+      "text": "'",
+      "t0": 22.2,
+      "t1": 22.253
+    },
+    {
+      "text": "re",
+      "t0": 22.253,
+      "t1": 22.36
+    },
+    {
+      "text": "there",
+      "t0": 22.36,
+      "t1": 22.64
+    },
+    {
+      "text": "as",
+      "t0": 22.64,
+      "t1": 22.8
+    },
+    {
+      "text": "well",
+      "t0": 22.8,
+      "t1": 23.64
+    },
+    {
+      "text": "the",
+      "t0": 23.64,
+      "t1": 23.84
+    },
+    {
+      "text": "body",
+      "t0": 23.84,
+      "t1": 24.32
+    },
+    {
+      "text": "language",
+      "t0": 24.32,
+      "t1": 24.84
+    },
+    {
+      "text": "changes",
+      "t0": 24.84,
+      "t1": 25.32
+    },
+    {
+      "text": "a",
+      "t0": 25.36,
+      "t1": 25.4
+    },
+    {
+      "text": "little",
+      "t0": 25.4,
+      "t1": 25.68
+    },
+    {
+      "text": "bit",
+      "t0": 25.68,
+      "t1": 26.0
+    },
+    {
+      "text": "They",
+      "t0": 26.0,
+      "t1": 26.2
+    },
+    {
+      "text": "start",
+      "t0": 26.2,
+      "t1": 26.56
+    },
+    {
+      "text": "clutch",
+      "t0": 26.56,
+      "t1": 26.76
+    },
+    {
+      "text": "ing",
+      "t0": 26.76,
+      "t1": 27.12
+    },
+    {
+      "text": "the",
+      "t0": 27.12,
+      "t1": 27.36
+    },
+    {
+      "text": "bag",
+      "t0": 27.36,
+      "t1": 28.52
+    },
+    {
+      "text": "warming",
+      "t0": 28.72,
+      "t1": 29.16
+    },
+    {
+      "text": "up",
+      "t0": 29.16,
+      "t1": 29.4
+    },
+    {
+      "text": "the",
+      "t0": 29.4,
+      "t1": 29.6
+    },
+    {
+      "text": "ham",
+      "t0": 29.6,
+      "t1": 30.04
+    },
+    {
+      "text": "strings",
+      "t0": 30.04,
+      "t1": 31.0
+    },
+    {
+      "text": "And",
+      "t0": 31.0,
+      "t1": 31.16
+    },
+    {
+      "text": "then",
+      "t0": 31.16,
+      "t1": 31.28
+    },
+    {
+      "text": "there",
+      "t0": 31.28,
+      "t1": 31.4
+    },
+    {
+      "text": "'",
+      "t0": 31.4,
+      "t1": 31.46
+    },
+    {
+      "text": "s",
+      "t0": 31.46,
+      "t1": 31.52
+    },
+    {
+      "text": "a",
+      "t0": 31.62,
+      "t1": 31.72
+    },
+    {
+      "text": "really",
+      "t0": 31.72,
+      "t1": 32.16
+    },
+    {
+      "text": "tense",
+      "t0": 32.16,
+      "t1": 32.76
+    },
+    {
+      "text": "moment",
+      "t0": 32.76,
+      "t1": 33.04
+    },
+    {
+      "text": "you",
+      "t0": 33.04,
+      "t1": 33.16
+    },
+    {
+      "text": "know",
+      "t0": 33.16,
+      "t1": 33.48
+    },
+    {
+      "text": "like",
+      "t0": 33.48,
+      "t1": 33.72
+    },
+    {
+      "text": "when",
+      "t0": 33.72,
+      "t1": 33.96
+    },
+    {
+      "text": "they",
+      "t0": 33.96,
+      "t1": 34.28
+    },
+    {
+      "text": "finally",
+      "t0": 34.28,
+      "t1": 35.0
+    },
+    {
+      "text": "look",
+      "t0": 35.0,
+      "t1": 36.2
+    },
+    {
+      "text": "And",
+      "t0": 38.72,
+      "t1": 38.96
+    },
+    {
+      "text": "now",
+      "t0": 38.96,
+      "t1": 39.32
+    },
+    {
+      "text": "you",
+      "t0": 39.32,
+      "t1": 39.6
+    },
+    {
+      "text": "like",
+      "t0": 39.6,
+      "t1": 39.88
+    },
+    {
+      "text": "gotta",
+      "t0": 39.88,
+      "t1": 40.36
+    },
+    {
+      "text": "try",
+      "t0": 40.36,
+      "t1": 40.84
+    },
+    {
+      "text": "really",
+      "t0": 40.84,
+      "t1": 41.28
+    },
+    {
+      "text": "hard",
+      "t0": 41.28,
+      "t1": 42.44
+    },
+    {
+      "text": "to",
+      "t0": 42.44,
+      "t1": 42.76
+    },
+    {
+      "text": "not",
+      "t0": 42.76,
+      "t1": 43.16
+    },
+    {
+      "text": "walk",
+      "t0": 43.16,
+      "t1": 43.48
+    },
+    {
+      "text": "like",
+      "t0": 43.48,
+      "t1": 43.68
+    },
+    {
+      "text": "a",
+      "t0": 43.76,
+      "t1": 43.84
+    },
+    {
+      "text": "rap",
+      "t0": 43.84,
+      "t1": 44.16
+    },
+    {
+      "text": "ist",
+      "t0": 44.16,
+      "t1": 45.08
+    },
+    {
+      "text": "Would",
+      "t0": 46.44,
+      "t1": 46.6
+    },
+    {
+      "text": "a",
+      "t0": 46.66,
+      "t1": 46.72
+    },
+    {
+      "text": "rap",
+      "t0": 46.72,
+      "t1": 47.0
+    },
+    {
+      "text": "ist",
+      "t0": 47.0,
+      "t1": 47.12
+    },
+    {
+      "text": "do",
+      "t0": 47.12,
+      "t1": 47.36
+    },
+    {
+      "text": "this",
+      "t0": 47.36,
+      "t1": 48.4
+    },
+    {
+      "text": "Then",
+      "t0": 50.24,
+      "t1": 50.44
+    },
+    {
+      "text": "you",
+      "t0": 50.44,
+      "t1": 50.6
+    },
+    {
+      "text": "take",
+      "t0": 50.6,
+      "t1": 50.88
+    },
+    {
+      "text": "an",
+      "t0": 51.013,
+      "t1": 51.28
+    },
+    {
+      "text": "alternate",
+      "t0": 51.28,
+      "t1": 51.88
+    },
+    {
+      "text": "route",
+      "t0": 51.88,
+      "t1": 53.2
+    },
+    {
+      "text": "and",
+      "t0": 53.2,
+      "t1": 53.4
+    },
+    {
+      "text": "then",
+      "t0": 53.4,
+      "t1": 53.64
+    },
+    {
+      "text": "you",
+      "t0": 53.64,
+      "t1": 53.96
+    },
+    {
+      "text": "re",
+      "t0": 53.96,
+      "t1": 54.179
+    },
+    {
+      "text": "appear",
+      "t0": 54.179,
+      "t1": 55.08
+    },
+    {
+      "text": "from",
+      "t0": 55.08,
+      "t1": 55.44
+    },
+    {
+      "text": "another",
+      "t0": 55.44,
+      "t1": 55.96
+    },
+    {
+      "text": "street",
+      "t0": 55.96,
+      "t1": 57.08
+    }
+  ],
+  "asr_word_count": 276,
+  "punchline_gaps_s": [
+    11.64,
+    36.2,
+    45.08,
+    48.4,
+    11.64,
+    36.2,
+    45.08,
+    48.4
+  ]
+}
