@@ -2,6 +2,1863 @@
   "version": "performance.v1",
   "source": "kt715_ep715_clip",
   "duration_s": 105.08,
-  "events": [],
-  "n_events": 0
+  "method": "mediapipe+asr_aligned_v1",
+  "n_asr_words": 388,
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.102
+    },
+    {
+      "t": 1.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.579
+    },
+    {
+      "t": 1.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 1.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "I was I was",
+        "energy": 0.579,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 2.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.821
+    },
+    {
+      "t": 2.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 2.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "walking walking",
+        "energy": 0.821,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 3.0,
+      "kind": "expression",
+      "value": "annoyed",
+      "energy": 0.942
+    },
+    {
+      "t": 3.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 3.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "walking home last night walking home last night",
+        "energy": 0.942,
+        "anger_proxy": true
+      }
+    },
+    {
+      "t": 4.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.819
+    },
+    {
+      "t": 4.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 4.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "night night",
+        "energy": 0.819,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 5.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.614
+    },
+    {
+      "t": 5.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 5.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "and and",
+        "energy": 0.614,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 6.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.637
+    },
+    {
+      "t": 6.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 6.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "and guys and guys",
+        "energy": 0.637,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 7.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.656
+    },
+    {
+      "t": 7.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 7.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "guys will know this feeling guys will know this feeling",
+        "energy": 0.656,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 8.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.792
+    },
+    {
+      "t": 8.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 8.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "feeling You know when you ' re feeling You know when you ' r",
+        "energy": 0.792,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 9.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.847
+    },
+    {
+      "t": 9.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 9.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "re walking re walking",
+        "energy": 0.847,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 10.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.656
+    },
+    {
+      "t": 10.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 10.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "walking late at night walking late at night",
+        "energy": 0.656,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 11.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.462
+    },
+    {
+      "t": 11.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "night and you ' re night and you ' re",
+        "energy": 0.462,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 12.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.461
+    },
+    {
+      "t": 12.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "like behind a like behind a",
+        "energy": 0.461,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 13.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.475
+    },
+    {
+      "t": 13.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "a woman you don ' a woman you don '",
+        "energy": 0.475,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 14.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.478
+    },
+    {
+      "t": 14.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "t know t know",
+        "energy": 0.478,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 15.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.443
+    },
+    {
+      "t": 15.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "know know",
+        "energy": 0.443,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 15.2,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 15.2,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 16.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.413
+    },
+    {
+      "t": 16.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "and you and you",
+        "energy": 0.413,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 17.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.535
+    },
+    {
+      "t": 17.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "' re walking the same ' re walking the same",
+        "energy": 0.535,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 18.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.538
+    },
+    {
+      "t": 18.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "same direction same direction",
+        "energy": 0.538,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 19.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.439
+    },
+    {
+      "t": 19.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "direction direction",
+        "energy": 0.439,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 19.52,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 19.52,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 20.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.447
+    },
+    {
+      "t": 20.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "and there ' s that tension and there ' s that tension",
+        "energy": 0.447,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 21.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.428
+    },
+    {
+      "t": 21.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "tension tension",
+        "energy": 0.428,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 22.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.47
+    },
+    {
+      "t": 22.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "tension tension",
+        "energy": 0.47,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 22.44,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 22.44,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 23.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.451
+    },
+    {
+      "t": 24.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.515
+    },
+    {
+      "t": 24.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "She She",
+        "energy": 0.515,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 25.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.497
+    },
+    {
+      "t": 25.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "She turns left you She turns left you",
+        "energy": 0.497,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 26.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.417
+    },
+    {
+      "t": 26.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "you turn left you turn left",
+        "energy": 0.417,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 27.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.583
+    },
+    {
+      "t": 27.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 27.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "left left",
+        "energy": 0.583,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 27.44,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 27.44,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 28.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.444
+    },
+    {
+      "t": 28.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "She turns She turns",
+        "energy": 0.444,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 29.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.443
+    },
+    {
+      "t": 29.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "turns right you turn turns right you turn",
+        "energy": 0.443,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 30.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.57
+    },
+    {
+      "t": 30.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "turn right turn right",
+        "energy": 0.57,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 31.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.605
+    },
+    {
+      "t": 31.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "right right",
+        "energy": 0.605,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 31.04,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 31.04,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 32.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.588
+    },
+    {
+      "t": 32.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "And you ' re kind And you ' re kind",
+        "energy": 0.588,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 33.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.54
+    },
+    {
+      "t": 33.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 33.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "kind of in a rush kind of in a rush",
+        "energy": 0.54,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 34.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.438
+    },
+    {
+      "t": 34.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "rush rush",
+        "energy": 0.438,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 34.72,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 34.72,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 35.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.459
+    },
+    {
+      "t": 36.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.04
+    },
+    {
+      "t": 37.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.075
+    },
+    {
+      "t": 37.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "but you also but you also",
+        "energy": 0.075,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 38.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.074
+    },
+    {
+      "t": 38.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "also don ' t want to seem like also don ' t want to seem lik",
+        "energy": 0.074,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 39.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.049
+    },
+    {
+      "t": 39.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "like an assail like an assail",
+        "energy": 0.049,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 40.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.138
+    },
+    {
+      "t": 40.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "ant ant",
+        "energy": 0.138,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 41.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.226
+    },
+    {
+      "t": 41.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 41.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "ant ant",
+        "energy": 0.226,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 41.16,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 41.16,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 42.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.643
+    },
+    {
+      "t": 42.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 43.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.679
+    },
+    {
+      "t": 43.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 43.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "It gets really It gets really",
+        "energy": 0.679,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 44.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.525
+    },
+    {
+      "t": 44.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "really strange you know when you really strange you know whe",
+        "energy": 0.525,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 45.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.369
+    },
+    {
+      "t": 45.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 45.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "you notice that she knows you notice that she knows",
+        "energy": 0.369,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 46.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.309
+    },
+    {
+      "t": 46.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 46.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "knows you ' re there as well knows you ' re there as well",
+        "energy": 0.309,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 47.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.053
+    },
+    {
+      "t": 47.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "well well",
+        "energy": 0.053,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 47.96,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 47.96,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 48.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.543
+    },
+    {
+      "t": 49.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.429
+    },
+    {
+      "t": 49.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "The body language The body language",
+        "energy": 0.429,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 50.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.454
+    },
+    {
+      "t": 50.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "language changes a little bit language changes a little bit",
+        "energy": 0.454,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 51.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.667
+    },
+    {
+      "t": 51.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 51.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "bit They start clutch ing bit They start clutch ing",
+        "energy": 0.667,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 52.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.203
+    },
+    {
+      "t": 52.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 52.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "ing the bag ing the bag",
+        "energy": 0.203,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 53.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.041
+    },
+    {
+      "t": 53.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "bag bag",
+        "energy": 0.041,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 53.68,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 53.68,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 54.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.239
+    },
+    {
+      "t": 54.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 54.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "warming warming",
+        "energy": 0.239,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 55.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.125
+    },
+    {
+      "t": 55.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 55.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "warming up the ham warming up the ham",
+        "energy": 0.125,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 56.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.405
+    },
+    {
+      "t": 56.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 56.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "ham strings ham strings",
+        "energy": 0.405,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 57.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.055
+    },
+    {
+      "t": 57.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 57.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "strings strings",
+        "energy": 0.055,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 57.4,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 57.4,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 58.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.211
+    },
+    {
+      "t": 58.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 58.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "And then And then",
+        "energy": 0.211,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 59.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.312
+    },
+    {
+      "t": 59.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 59.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "then there ' s a really tense then there ' s a really tense",
+        "energy": 0.312,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 60.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.083
+    },
+    {
+      "t": 60.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 60.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "tense moment you know tense moment you know",
+        "energy": 0.083,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 61.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.071
+    },
+    {
+      "t": 61.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 61.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "know like when they finally know like when they finally",
+        "energy": 0.071,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 62.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.046
+    },
+    {
+      "t": 62.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 62.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "finally look finally look",
+        "energy": 0.046,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 63.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.527
+    },
+    {
+      "t": 63.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 63.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "look look",
+        "energy": 0.527,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 63.6,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 63.6,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 64.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.387
+    },
+    {
+      "t": 64.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 65.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.408
+    },
+    {
+      "t": 65.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 66.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.495
+    },
+    {
+      "t": 66.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 67.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.401
+    },
+    {
+      "t": 67.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 68.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.507
+    },
+    {
+      "t": 68.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 69.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.682
+    },
+    {
+      "t": 69.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 69.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "and now and now",
+        "energy": 0.682,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 70.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.68
+    },
+    {
+      "t": 70.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 70.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "now you like gotta now you like gotta",
+        "energy": 0.68,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 71.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.485
+    },
+    {
+      "t": 71.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 71.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "gotta try really gotta try really",
+        "energy": 0.485,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 72.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.441
+    },
+    {
+      "t": 72.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "hard hard",
+        "energy": 0.441,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 73.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.218
+    },
+    {
+      "t": 73.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 73.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "hard to not walk hard to not walk",
+        "energy": 0.218,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 74.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.258
+    },
+    {
+      "t": 74.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 74.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "walk like a [ ble ep walk like a [ ble ep",
+        "energy": 0.258,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 75.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.334
+    },
+    {
+      "t": 75.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 75.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "] ]",
+        "energy": 0.334,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 76.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.344
+    },
+    {
+      "t": 76.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 76.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "] ]",
+        "energy": 0.344,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 76.2,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 76.2,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 77.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.331
+    },
+    {
+      "t": 77.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 78.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.23
+    },
+    {
+      "t": 78.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 79.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.308
+    },
+    {
+      "t": 79.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 79.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Would a [ ble ep ] do Would a [ ble ep ] do",
+        "energy": 0.308,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 80.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.198
+    },
+    {
+      "t": 80.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 80.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "do this do this",
+        "energy": 0.198,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 81.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.325
+    },
+    {
+      "t": 81.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 81.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "this this",
+        "energy": 0.325,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 81.12,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 81.12,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 82.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.289
+    },
+    {
+      "t": 82.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 83.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.176
+    },
+    {
+      "t": 83.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 84.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.756
+    },
+    {
+      "t": 84.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 85.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.661
+    },
+    {
+      "t": 85.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 85.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Then you Then you",
+        "energy": 0.661,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 86.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.695
+    },
+    {
+      "t": 86.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 86.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "you take an alternate you take an alternate",
+        "energy": 0.695,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 87.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.071
+    },
+    {
+      "t": 87.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "alternate route alternate route",
+        "energy": 0.071,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 88.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.045
+    },
+    {
+      "t": 88.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "route route",
+        "energy": 0.045,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 88.4,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 88.4,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 89.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.026
+    },
+    {
+      "t": 89.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "and then you re appear and then you re appear",
+        "energy": 0.026,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 90.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.05
+    },
+    {
+      "t": 90.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "appear from appear from",
+        "energy": 0.05,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 91.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.054
+    },
+    {
+      "t": 91.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "from another street from another street",
+        "energy": 0.054,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 92.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.094
+    },
+    {
+      "t": 92.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 92.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "street street",
+        "energy": 0.094,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 92.64,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 92.64,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 93.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.168
+    },
+    {
+      "t": 93.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 94.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.438
+    },
+    {
+      "t": 94.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 95.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.477
+    },
+    {
+      "t": 95.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "You You",
+        "energy": 0.477,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 96.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.5
+    },
+    {
+      "t": 96.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "gotta be like \" Don ' gotta be like \" Don '",
+        "energy": 0.5,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 97.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.461
+    },
+    {
+      "t": 97.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "' t worry ' t worry",
+        "energy": 0.461,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 98.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.435
+    },
+    {
+      "t": 98.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "worry I just worry I just",
+        "energy": 0.435,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 99.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.496
+    },
+    {
+      "t": 99.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "just live where just live where",
+        "energy": 0.496,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 100.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.48
+    },
+    {
+      "t": 100.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "where you live where you live",
+        "energy": 0.48,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 101.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.519
+    },
+    {
+      "t": 101.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "live \" live \"",
+        "energy": 0.519,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 102.0,
+      "kind": "expression",
+      "value": "neutral",
+      "energy": 0.784
+    },
+    {
+      "t": 102.0,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 102.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "\" \"",
+        "energy": 0.784,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 102.04,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 102.04,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 103.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.159
+    },
+    {
+      "t": 103.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "Thank you so much Thank you so much",
+        "energy": 0.159,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 104.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.091
+    },
+    {
+      "t": 104.0,
+      "kind": "speak_start",
+      "value": {
+        "text": "much much",
+        "energy": 0.091,
+        "anger_proxy": false
+      }
+    },
+    {
+      "t": 105.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "energy": 0.001
+    }
+  ],
+  "n_events": 280
 }
