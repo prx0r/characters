@@ -9,52 +9,42 @@
  "house_llm": false,
  "operator": "status_invert",
  "modulator": "smug",
- "run_id": "25418876a239baa8",
+ "run_id": "939ac26e58749d91",
  "beats": [
   {
    "id": "b1",
    "type": "setup",
-   "text": "I watch how-things-work videos. Forty minutes on a zip.",
+   "text": "I watch how-things-work videos. Big Tesla fan.",
    "pause_after_ms": 330,
    "emphasis": 0.7,
    "modulator": "smug",
    "start_ms": 0,
-   "end_ms": 3791
+   "end_ms": 3022
   },
   {
    "id": "b2",
-   "type": "escalation",
-   "text": "Big Tesla fan, me.",
-   "pause_after_ms": 330,
-   "emphasis": 0.7,
-   "modulator": "smug",
-   "start_ms": 3791,
-   "end_ms": 5659
-  },
-  {
-   "id": "b3",
    "type": "punchline",
-   "text": "The car updates itself overnight and wakes up better. I've been trying that for fifty-six years.",
+   "text": "The car updates overnight and wakes up better. I've been trying that for fifty-six years.",
    "pause_after_ms": 1100,
    "emphasis": 1.0,
    "modulator": "smug",
-   "start_ms": 5659,
-   "end_ms": 12912
+   "start_ms": 3022,
+   "end_ms": 9891
   },
   {
-   "id": "b4",
+   "id": "b3",
    "type": "closer",
-   "text": "Still waiting on my update.",
+   "text": "Still waiting.",
    "pause_after_ms": 770,
    "emphasis": 1.0,
    "modulator": "smug",
-   "start_ms": 12912,
-   "end_ms": 15605
+   "start_ms": 9891,
+   "end_ms": 11430
   }
  ],
- "full_text": "I watch how-things-work videos. Forty minutes on a zip. Big Tesla fan, me. The car updates itself overnight and wakes up better. I've been trying that for fifty-six years. Still waiting on my update.",
- "word_count": 34,
- "est_spoken_s": 13.1,
+ "full_text": "I watch how-things-work videos. Big Tesla fan. The car updates overnight and wakes up better. I've been trying that for fifty-six years. Still waiting.",
+ "word_count": 24,
+ "est_spoken_s": 9.2,
  "score": {
   "parts": {
    "slop": 0.5,
@@ -63,49 +53,49 @@
    "not_generic": 0.5,
    "reframe": 0.5,
    "play_ready": 0.5,
-   "novelty": 0.922,
-   "shape": 0.4,
+   "novelty": 0.957,
+   "shape": 1.0,
    "gates": 1.0,
    "gate_flags": 0
   },
-  "total": 0.587
+  "total": 0.621
  },
  "candidates": [
   {
    "operator": "status_invert",
    "modulator": "smug",
-   "total": 0.587,
-   "text": "I watch how-things-work videos. Forty minutes on a zip. Big Tesla fan, me. The car updates itself overnight and wakes up better. I've been trying that for fifty-six years. Still waiting on my update."
+   "total": 0.621,
+   "text": "I watch how-things-work videos. Big Tesla fan. The car updates overnight and wakes up better. I've been trying that for fifty-six years. Still waiting."
   },
   {
    "operator": "status_invert",
    "modulator": "cheeky",
-   "total": 0.495,
-   "text": "I watch how-things-work videos. Forty minutes on a zip. Big Tesla fan, me. The car updates itself overnight and wakes up better. I've been trying that for fifty-six years. Still waiting on my update."
+   "total": 0.525,
+   "text": "I watch how-things-work videos. Big Tesla fan. The car updates overnight and wakes up better. I've been trying that for fifty-six years. Still waiting."
   },
   {
    "operator": "status_invert",
    "modulator": "tender",
-   "total": 0.495,
-   "text": "I watch how-things-work videos. Forty minutes on a zip. Big Tesla fan, me. The car updates itself overnight and wakes up better. I've been trying that for fifty-six years. Still waiting on my update."
+   "total": 0.525,
+   "text": "I watch how-things-work videos. Big Tesla fan. The car updates overnight and wakes up better. I've been trying that for fifty-six years. Still waiting."
   },
   {
    "operator": "status_invert",
    "modulator": "dry",
-   "total": 0.495,
-   "text": "I watch how-things-work videos. Forty minutes on a zip. Big Tesla fan, me. The car updates itself overnight and wakes up better. I've been trying that for fifty-six years. Still waiting on my update."
+   "total": 0.525,
+   "text": "I watch how-things-work videos. Big Tesla fan. The car updates overnight and wakes up better. I've been trying that for fifty-six years. Still waiting."
   },
   {
    "operator": "status_invert",
    "modulator": "tender",
-   "total": 0.495,
-   "text": "I watch how-things-work videos. Forty minutes on a zip. Big Tesla fan, me. The car updates itself overnight and wakes up better. I've been trying that for fifty-six years. Still waiting on my update."
+   "total": 0.525,
+   "text": "I watch how-things-work videos. Big Tesla fan. The car updates overnight and wakes up better. I've been trying that for fifty-six years. Still waiting."
   },
   {
    "operator": "status_invert",
    "modulator": "cheeky",
-   "total": 0.495,
-   "text": "I watch how-things-work videos. Forty minutes on a zip. Big Tesla fan, me. The car updates itself overnight and wakes up better. I've been trying that for fifty-six years. Still waiting on my update."
+   "total": 0.525,
+   "text": "I watch how-things-work videos. Big Tesla fan. The car updates overnight and wakes up better. I've been trying that for fifty-six years. Still waiting."
   }
  ],
  "validate_minute": "PASS",
@@ -114,5 +104,5 @@
   "flags": [],
   "passed": true
  },
- "created_at": 1791804773.9923127
+ "created_at": 1791805371.1468182
 }

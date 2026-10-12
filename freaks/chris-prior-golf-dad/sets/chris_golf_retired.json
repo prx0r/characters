@@ -9,52 +9,52 @@
  "house_llm": false,
  "operator": "literalize",
  "modulator": "tender",
- "run_id": "f1f685a94e1dbd20",
+ "run_id": "21fe09f5b7b6f940",
  "beats": [
   {
    "id": "b1",
    "type": "setup",
-   "text": "I'm retired, so obviously I play golf.",
+   "text": "I'm retired. I play golf.",
    "pause_after_ms": 405,
    "emphasis": 0.5,
    "modulator": "tender",
    "start_ms": 0,
-   "end_ms": 3097
+   "end_ms": 2328
   },
   {
    "id": "b2",
    "type": "punchline",
-   "text": "They said retirement would get me out of the house. Golf gets me further. Mostly into the trees.",
+   "text": "Retirement gets you out of the house. Golf gets you into the trees.",
    "pause_after_ms": 1350,
    "emphasis": 0.8,
    "modulator": "tender",
-   "start_ms": 3097,
-   "end_ms": 11370
+   "start_ms": 2328,
+   "end_ms": 8678
   },
   {
    "id": "b3",
    "type": "tag",
-   "text": "When I go, scatter my ashes on the fairway.",
+   "text": "Scatter my ashes on the fairway.",
    "pause_after_ms": 405,
    "emphasis": 0.5,
    "modulator": "tender",
-   "start_ms": 11370,
-   "end_ms": 15236
+   "start_ms": 8678,
+   "end_ms": 11390
   },
   {
    "id": "b4",
    "type": "closer",
-   "text": "First time I'll have been on it.",
+   "text": "First time I'll be on it.",
    "pause_after_ms": 945,
    "emphasis": 0.8,
    "modulator": "tender",
-   "start_ms": 15236,
-   "end_ms": 18873
+   "start_ms": 11390,
+   "end_ms": 14642
   }
  ],
- "full_text": "I'm retired, so obviously I play golf. They said retirement would get me out of the house. Golf gets me further. Mostly into the trees. When I go, scatter my ashes on the fairway. First time I'll have been on it.",
- "word_count": 41,
- "est_spoken_s": 15.8,
+ "full_text": "I'm retired. I play golf. Retirement gets you out of the house. Golf gets you into the trees. Scatter my ashes on the fairway. First time I'll be on it.",
+ "word_count": 30,
+ "est_spoken_s": 11.5,
  "score": {
   "parts": {
    "slop": 0.5,
@@ -64,55 +64,57 @@
    "reframe": 0.5,
    "play_ready": 0.5,
    "novelty": 1.0,
-   "shape": 1.0,
+   "shape": 0.4,
    "gates": 1.0,
-   "gate_flags": 0
+   "gate_flags": 1
   },
-  "total": 0.625
+  "total": 0.595
  },
  "candidates": [
   {
    "operator": "literalize",
    "modulator": "tender",
-   "total": 0.625,
-   "text": "I'm retired, so obviously I play golf. They said retirement would get me out of the house. Golf gets me further. Mostly into the trees. When I go, scatter my ashes on the fairway. First time I'll have been on it."
+   "total": 0.595,
+   "text": "I'm retired. I play golf. Retirement gets you out of the house. Golf gets you into the trees. Scatter my ashes on the fairway. First time I'll be on it."
   },
   {
    "operator": "expose_self_blindness",
    "modulator": "relaxed",
-   "total": 0.584,
-   "text": "I'm retired, so obviously I play golf. I've watched every video on the perfect swing. I know exactly how it works. My arms haven't seen them. When I go, scatter my ashes on the fairway. First time I'll have been on it."
+   "total": 0.551,
+   "text": "I'm retired. I play golf. I've watched every swing video. I know how it works. My arms don't. Scatter my ashes on the fairway. First time I'll be on it."
   },
   {
    "operator": "literalize",
    "modulator": "tender",
-   "total": 0.525,
-   "text": "I'm retired, so obviously I play golf. They said retirement would get me out of the house. Golf gets me further. Mostly into the trees. When I go, scatter my ashes on the fairway. First time I'll have been on it."
+   "total": 0.495,
+   "text": "I'm retired. I play golf. Retirement gets you out of the house. Golf gets you into the trees. Scatter my ashes on the fairway. First time I'll be on it."
   },
   {
    "operator": "literalize",
    "modulator": "morbid",
-   "total": 0.525,
-   "text": "I'm retired, so obviously I play golf. They said retirement would get me out of the house. Golf gets me further. Mostly into the trees. When I go, scatter my ashes on the fairway. First time I'll have been on it."
+   "total": 0.495,
+   "text": "I'm retired. I play golf. Retirement gets you out of the house. Golf gets you into the trees. Scatter my ashes on the fairway. First time I'll be on it."
   },
   {
    "operator": "literalize",
    "modulator": "tender",
-   "total": 0.525,
-   "text": "I'm retired, so obviously I play golf. They said retirement would get me out of the house. Golf gets me further. Mostly into the trees. When I go, scatter my ashes on the fairway. First time I'll have been on it."
+   "total": 0.495,
+   "text": "I'm retired. I play golf. Retirement gets you out of the house. Golf gets you into the trees. Scatter my ashes on the fairway. First time I'll be on it."
   },
   {
    "operator": "literalize",
    "modulator": "morbid",
-   "total": 0.525,
-   "text": "I'm retired, so obviously I play golf. They said retirement would get me out of the house. Golf gets me further. Mostly into the trees. When I go, scatter my ashes on the fairway. First time I'll have been on it."
+   "total": 0.495,
+   "text": "I'm retired. I play golf. Retirement gets you out of the house. Golf gets you into the trees. Scatter my ashes on the fairway. First time I'll be on it."
   }
  ],
  "validate_minute": "PASS",
  "gates": {
   "vetoes": [],
-  "flags": [],
+  "flags": [
+   "b1 too short to be a cold-open joke"
+  ],
   "passed": true
  },
- "created_at": 1791804773.3234591
+ "created_at": 1791805370.5588272
 }

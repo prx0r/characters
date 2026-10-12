@@ -9,52 +9,42 @@
  "house_llm": false,
  "operator": "literalize",
  "modulator": "dry",
- "run_id": "745b2e8846ad0112",
+ "run_id": "972f853dec53ea12",
  "beats": [
   {
    "id": "b1",
    "type": "setup",
-   "text": "I turn fifty-seven this week, which at my age is a result.",
+   "text": "Fifty-seven this week. At my age, that's a result.",
    "pause_after_ms": 375,
    "emphasis": 0.55,
    "modulator": "dry",
    "start_ms": 0,
-   "end_ms": 4990
+   "end_ms": 3836
   },
   {
    "id": "b2",
    "type": "punchline",
-   "text": "I've started reading the small print on everything. Mostly to check my own warranty.",
+   "text": "I read the small print on everything now. Checking my own warranty.",
    "pause_after_ms": 1250,
    "emphasis": 0.85,
    "modulator": "dry",
-   "start_ms": 4990,
-   "end_ms": 11624
+   "start_ms": 3836,
+   "end_ms": 9701
   },
   {
    "id": "b3",
-   "type": "tag",
-   "text": "Cathy's planned the party: the guests, the food, and my speech.",
-   "pause_after_ms": 375,
-   "emphasis": 0.55,
-   "modulator": "dry",
-   "start_ms": 11624,
-   "end_ms": 16229
-  },
-  {
-   "id": "b4",
    "type": "closer",
-   "text": "Apparently I'm grateful.",
+   "text": "Go easy on the candles.",
    "pause_after_ms": 875,
    "emphasis": 0.85,
    "modulator": "dry",
-   "start_ms": 16229,
-   "end_ms": 18257
+   "start_ms": 9701,
+   "end_ms": 12499
   }
  ],
- "full_text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful.",
- "word_count": 40,
- "est_spoken_s": 15.4,
+ "full_text": "Fifty-seven this week. At my age, that's a result. I read the small print on everything now. Checking my own warranty. Go easy on the candles.",
+ "word_count": 26,
+ "est_spoken_s": 10.0,
  "score": {
   "parts": {
    "slop": 0.5,
@@ -63,49 +53,49 @@
    "not_generic": 0.5,
    "reframe": 0.5,
    "play_ready": 0.5,
-   "novelty": 0.879,
+   "novelty": 0.909,
    "shape": 1.0,
    "gates": 1.0,
    "gate_flags": 0
   },
-  "total": 0.613
+  "total": 0.616
  },
  "candidates": [
   {
    "operator": "literalize",
    "modulator": "dry",
-   "total": 0.613,
-   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+   "total": 0.616,
+   "text": "Fifty-seven this week. At my age, that's a result. I read the small print on everything now. Checking my own warranty. Go easy on the candles."
   },
   {
    "operator": "literalize",
    "modulator": "cheeky",
    "total": 0.525,
-   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+   "text": "Fifty-seven this week. At my age, that's a result. I read the small print on everything now. Checking my own warranty. Go easy on the candles."
   },
   {
    "operator": "literalize",
    "modulator": "morbid",
    "total": 0.525,
-   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+   "text": "Fifty-seven this week. At my age, that's a result. I read the small print on everything now. Checking my own warranty. Go easy on the candles."
   },
   {
    "operator": "literalize",
    "modulator": "relaxed",
    "total": 0.525,
-   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+   "text": "Fifty-seven this week. At my age, that's a result. I read the small print on everything now. Checking my own warranty. Go easy on the candles."
   },
   {
    "operator": "literalize",
    "modulator": "morbid",
    "total": 0.525,
-   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+   "text": "Fifty-seven this week. At my age, that's a result. I read the small print on everything now. Checking my own warranty. Go easy on the candles."
   },
   {
    "operator": "literalize",
    "modulator": "dry",
    "total": 0.525,
-   "text": "I turn fifty-seven this week, which at my age is a result. I've started reading the small print on everything. Mostly to check my own warranty. Cathy's planned the party: the guests, the food, and my speech. Apparently I'm grateful."
+   "text": "Fifty-seven this week. At my age, that's a result. I read the small print on everything now. Checking my own warranty. Go easy on the candles."
   }
  ],
  "validate_minute": "PASS",
@@ -114,5 +104,5 @@
   "flags": [],
   "passed": true
  },
- "created_at": 1791804775.1268725
+ "created_at": 1791805372.392736
 }

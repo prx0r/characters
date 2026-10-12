@@ -283,7 +283,7 @@ def is_human(character: dict) -> bool:
     return raw.get("world_type") == "human" or str(raw.get("canon", "")).startswith("human")
 
 
-SHORT_WORD_BUDGET = 42  # ~15 s spoken at ~2.6-2.8 words/s plus holds
+SHORT_WORD_BUDGET = 30  # <=15 s rendered: ~2.55 words/s (Kokoro) + punchline holds + lead-in/tail
 
 
 def _human_beats(character: dict, scenario: dict, operator: str, rng: random.Random,
@@ -732,7 +732,7 @@ def validate_minute(gen: dict, character_id: str, fmt: str | None = None) -> lis
     errs = []
     beats = gen.get("beats") or []
     fmt = fmt or gen.get("length", "minute")
-    lo_b, hi_b, lo_w, hi_w = (3, 6, 20, 48) if fmt == "short" else (4, 8, 60, 260)
+    lo_b, hi_b, lo_w, hi_w = (3, 6, 18, 40) if fmt == "short" else (4, 8, 60, 260)
     if not (lo_b <= len(beats) <= hi_b):
         errs.append(f"beat count {len(beats)} outside {lo_b}-{hi_b}")
     valid_types = {"setup", "escalation", "misdirect", "punchline", "tag", "callback", "closer", "opener"}

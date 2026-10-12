@@ -18,16 +18,19 @@
    "comic_claim": "Retirement promised more time outdoors; golf delivered it, mostly in the trees.",
    "comic_model": "Treat a golf round as an engineering study that keeps failing in the same place.",
    "reality_model": "Retired, plays golf, jokes darkly about it.",
-   "opener": "I'm retired, so obviously I play golf.",
+   "opener": "I'm retired. I play golf.",
    "turn": "Four hours walking with a stick, looking for something I lost on purpose.",
    "punches": {
-    "literalize": "They said retirement would get me out of the house. Golf gets me further. Mostly into the trees.",
-    "false_analogy": "It's basically engineering. Wind speed, slope, grain of the grass. Then I hit it in the pond.",
-    "expose_self_blindness": "I've watched every video on the perfect swing. I know exactly how it works. My arms haven't seen them."
+    "literalize": "Retirement gets you out of the house. Golf gets you into the trees.",
+    "false_analogy": "It's engineering. Wind, slope, grain of the grass. Then I hit the pond.",
+    "expose_self_blindness": "I've watched every swing video. I know how it works. My arms don't."
    },
-   "tag": "When I go, scatter my ashes on the fairway.",
+   "tag": "Scatter my ashes on the fairway.",
    "closers": [
-    "First time I'll have been on it."
+    "Mind the trees."
+   ],
+   "tag_closers": [
+    "First time I'll be on it."
    ]
   },
   {
@@ -46,16 +49,16 @@
    "comic_claim": "The how-it-works fan is out-improved by the machine he admires.",
    "comic_model": "Compare man and machine on their own spec sheet.",
    "reality_model": "Tesla fan who watches how-things-work videos.",
-   "opener": "I watch how-things-work videos. Forty minutes on a zip.",
-   "turn": "Big Tesla fan, me.",
+   "opener": "I watch how-things-work videos. Big Tesla fan.",
+   "turn": "",
    "punches": {
-    "status_invert": "The car updates itself overnight and wakes up better. I've been trying that for fifty-six years.",
-    "rigidify": "I can't just use a thing, I have to know how it works. The kettle took a fortnight. Lovely cup of tea.",
-    "expose_self_blindness": "I'll explain the motors, the braking, the batteries, to anyone. Nobody has ever asked. Not once."
+    "status_invert": "The car updates overnight and wakes up better. I've been trying that for fifty-six years.",
+    "rigidify": "I can't just use a thing. I have to know how it works. Kettle took a fortnight.",
+    "expose_self_blindness": "I'll explain the motors to anyone. Nobody has ever asked."
    },
-   "tag": "Cathy said watch something romantic. So I did: how a wedding ring is made.",
+   "tag": "Cathy said watch something romantic. So: how a wedding ring is made.",
    "closers": [
-    "Still waiting on my update."
+    "Still waiting."
    ],
    "tag_closers": [
     "She cried. I took notes."
@@ -76,17 +79,17 @@
    "comic_claim": "The healthiest eater in the house gets the weight jokes; the evidence points elsewhere.",
    "comic_model": "Run the teasing as a fault investigation; the fault is the family, not the food.",
    "reality_model": "He eats super healthily and is teased anyway; it's a family joke.",
-   "opener": "I eat super healthily. Broccoli, lentils, fish, the lot.",
-   "turn": "And the family still tease me about my weight.",
+   "opener": "I eat super healthily. Broccoli, lentils, fish.",
+   "turn": "The family still tease me about my weight.",
    "punches": {
-    "false_analogy": "I've investigated. It isn't the food. I'm just carrying a lot of material.",
-    "status_invert": "Meanwhile someone in this house eats chocolate in secret every evening. And I get the jokes.",
-    "literalize": "They say it's all in my head. Fair. That's where I keep the jokes, and they're heavy."
+    "false_analogy": "I've investigated. It's not the food. I'm carrying a lot of material.",
+    "status_invert": "Meanwhile someone here eats chocolate every evening. And I get the jokes.",
+    "literalize": "They say it's all in my head. Fair. That's where I keep the jokes."
    },
    "tag": "",
    "closers": [
-    "Pass the kale.",
-    "Lentils, anyone?"
+    "Lentils, anyone?",
+    "Pass the kale."
    ]
   },
   {
@@ -105,15 +108,18 @@
    "comic_claim": "At fifty-seven every purchase is a bet on the future.",
    "comic_model": "Treat a birthday as a warranty check; let Cathy run the paperwork.",
    "reality_model": "Turning 57 this week; likes dark humour; Cathy organises.",
-   "opener": "I turn fifty-seven this week, which at my age is a result.",
+   "opener": "Fifty-seven this week. At my age, that's a result.",
    "turn": "",
    "punches": {
     "rigidify": "I've stopped buying long-life milk. Feels presumptuous.",
-    "literalize": "I've started reading the small print on everything. Mostly to check my own warranty.",
+    "literalize": "I read the small print on everything now. Checking my own warranty.",
     "false_analogy": "If I were a car, I'd be a classic. If I were a Tesla, they'd fix me overnight."
    },
-   "tag": "Cathy's planned the party: the guests, the food, and my speech.",
+   "tag": "Cathy's planned the party. Including my speech.",
    "closers": [
+    "Go easy on the candles."
+   ],
+   "tag_closers": [
     "Apparently I'm grateful."
    ]
   }

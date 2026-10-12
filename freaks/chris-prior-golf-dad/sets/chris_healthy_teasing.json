@@ -9,52 +9,52 @@
  "house_llm": false,
  "operator": "false_analogy",
  "modulator": "dry",
- "run_id": "03f956f17018d65e",
+ "run_id": "cf35c0cbc6c41a7a",
  "beats": [
   {
    "id": "b1",
    "type": "setup",
-   "text": "I eat super healthily. Broccoli, lentils, fish, the lot.",
+   "text": "I eat super healthily. Broccoli, lentils, fish.",
    "pause_after_ms": 375,
    "emphasis": 0.55,
    "modulator": "dry",
    "start_ms": 0,
-   "end_ms": 3836
+   "end_ms": 3067
   },
   {
    "id": "b2",
    "type": "escalation",
-   "text": "And the family still tease me about my weight.",
+   "text": "The family still tease me about my weight.",
    "pause_after_ms": 375,
    "emphasis": 0.55,
    "modulator": "dry",
-   "start_ms": 3836,
-   "end_ms": 7672
+   "start_ms": 3067,
+   "end_ms": 6518
   },
   {
    "id": "b3",
    "type": "punchline",
-   "text": "I've investigated. It isn't the food. I'm just carrying a lot of material.",
+   "text": "I've investigated. It's not the food. I'm carrying a lot of material.",
    "pause_after_ms": 1250,
    "emphasis": 0.85,
    "modulator": "dry",
-   "start_ms": 7672,
-   "end_ms": 13922
+   "start_ms": 6518,
+   "end_ms": 12383
   },
   {
    "id": "b4",
    "type": "closer",
-   "text": "Lentils, anyone?",
+   "text": "Pass the kale.",
    "pause_after_ms": 875,
    "emphasis": 0.85,
    "modulator": "dry",
-   "start_ms": 13922,
-   "end_ms": 15566
+   "start_ms": 12383,
+   "end_ms": 14411
   }
  ],
- "full_text": "I eat super healthily. Broccoli, lentils, fish, the lot. And the family still tease me about my weight. I've investigated. It isn't the food. I'm just carrying a lot of material. Lentils, anyone?",
- "word_count": 33,
- "est_spoken_s": 12.7,
+ "full_text": "I eat super healthily. Broccoli, lentils, fish. The family still tease me about my weight. I've investigated. It's not the food. I'm carrying a lot of material. Pass the kale.",
+ "word_count": 30,
+ "est_spoken_s": 11.5,
  "score": {
   "parts": {
    "slop": 0.5,
@@ -63,49 +63,49 @@
    "not_generic": 0.5,
    "reframe": 0.5,
    "play_ready": 0.5,
-   "novelty": 0.875,
+   "novelty": 0.896,
    "shape": 1.0,
    "gates": 1.0,
    "gate_flags": 0
   },
-  "total": 0.613
+  "total": 0.615
  },
  "candidates": [
   {
    "operator": "false_analogy",
    "modulator": "dry",
-   "total": 0.613,
-   "text": "I eat super healthily. Broccoli, lentils, fish, the lot. And the family still tease me about my weight. I've investigated. It isn't the food. I'm just carrying a lot of material. Lentils, anyone?"
+   "total": 0.615,
+   "text": "I eat super healthily. Broccoli, lentils, fish. The family still tease me about my weight. I've investigated. It's not the food. I'm carrying a lot of material. Pass the kale."
+  },
+  {
+   "operator": "literalize",
+   "modulator": "tender",
+   "total": 0.593,
+   "text": "I eat super healthily. Broccoli, lentils, fish. They say it's all in my head. Fair. That's where I keep the jokes. Pass the kale."
   },
   {
    "operator": "status_invert",
    "modulator": "dry",
-   "total": 0.584,
-   "text": "I eat super healthily. Broccoli, lentils, fish, the lot. And the family still tease me about my weight. Meanwhile someone in this house eats chocolate in secret every evening. And I get the jokes. Pass the kale."
-  },
-  {
-   "operator": "literalize",
-   "modulator": "tender",
-   "total": 0.583,
-   "text": "I eat super healthily. Broccoli, lentils, fish, the lot. And the family still tease me about my weight. They say it's all in my head. Fair. That's where I keep the jokes, and they're heavy. Lentils, anyone?"
+   "total": 0.587,
+   "text": "I eat super healthily. Broccoli, lentils, fish. The family still tease me about my weight. Meanwhile someone here eats chocolate every evening. And I get the jokes. Lentils, anyone?"
   },
   {
    "operator": "literalize",
    "modulator": "tender",
    "total": 0.525,
-   "text": "I eat super healthily. Broccoli, lentils, fish, the lot. And the family still tease me about my weight. They say it's all in my head. Fair. That's where I keep the jokes, and they're heavy. Lentils, anyone?"
+   "text": "I eat super healthily. Broccoli, lentils, fish. They say it's all in my head. Fair. That's where I keep the jokes. Pass the kale."
   },
   {
    "operator": "literalize",
    "modulator": "dry",
    "total": 0.525,
-   "text": "I eat super healthily. Broccoli, lentils, fish, the lot. And the family still tease me about my weight. They say it's all in my head. Fair. That's where I keep the jokes, and they're heavy. Lentils, anyone?"
+   "text": "I eat super healthily. Broccoli, lentils, fish. They say it's all in my head. Fair. That's where I keep the jokes. Pass the kale."
   },
   {
    "operator": "literalize",
    "modulator": "dry",
    "total": 0.525,
-   "text": "I eat super healthily. Broccoli, lentils, fish, the lot. And the family still tease me about my weight. They say it's all in my head. Fair. That's where I keep the jokes, and they're heavy. Lentils, anyone?"
+   "text": "I eat super healthily. Broccoli, lentils, fish. They say it's all in my head. Fair. That's where I keep the jokes. Pass the kale."
   }
  ],
  "validate_minute": "PASS",
@@ -114,5 +114,5 @@
   "flags": [],
   "passed": true
  },
- "created_at": 1791804774.5621133
+ "created_at": 1791805371.813381
 }
