@@ -1,0 +1,20 @@
+{
+ "slug": "hera",
+ "name": "Hera",
+ "world": "greek",
+ "classification": "Greek Olympian goddess (public-domain myth; paraphrased, no verbatim)",
+ "core_lore_paraphrased": [
+  "Domains: marriage; queenship.",
+  "Standing: Olympian; tags: olympian, major cult."
+ ],
+ "behavior_social": [],
+ "comedy_engine": {
+  "angles": [],
+  "seeds": []
+ },
+ "provenance": {
+  "deitydb_id": "ENT_HERA",
+  "confidence": "A",
+  "rule": "paraphrase only; blind_spots unknown until evidenced (import rule \u00a73)"
+ }
+}

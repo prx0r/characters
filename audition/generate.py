@@ -92,7 +92,9 @@ def load_freak_character(slug: str) -> dict | None:
 DICEBEAR_BASE = "https://api.dicebear.com/10.x"
 DICEBEAR_STYLES = {"no_nose_nolan": "personas",
                    "reptilian_ralph_middle_management": "adventurer",
-                   "rudy_dulce_hvac": "bottts"}
+                   "rudy_dulce_hvac": "bottts",
+                   "zeus_sky_sovereign": "adventurer",
+                   "hera_queen_ledger": "lorelei"}
 
 
 def avatar_url(character_id: str) -> str:
@@ -111,6 +113,21 @@ def list_characters() -> list[dict]:
     portraits = {"no_nose_nolan": "/static/portraits/nolan.jpg",
                  "reptilian_ralph_middle_management": "/static/portraits/ralph.jpg",
                  "rudy_dulce_hvac": "/static/portraits/rudy.jpg"}
+    try:  # world residents with performer packs join the roster automatically
+        import store as _store
+        _c = _store.connect()
+        try:
+            for r in _c.execute("SELECT canon_id, character_id FROM world_residents"
+                                " WHERE character_id<>''").fetchall():
+                slug = r["character_id"]
+                if (FREAKS / slug / "character.json").exists():
+                    c = load_freak_character(slug)
+                    if c and all(x["id"] != c["id"] for x in chars):
+                        chars.append(c)
+        finally:
+            _c.close()
+    except Exception:
+        pass
     vibes = {"no_nose_nolan": {"url": "/static/vibes/nolan.jpg",
                                "credit": "Bloodhound photo, Wikimedia Commons (CC BY-SA 3.0)"},
              "reptilian_ralph_middle_management": {"url": "/static/vibes/ralph.jpg",
@@ -132,6 +149,10 @@ def get_character(character_id: str) -> dict:
         return load_freak_character("reptilian-ralph-middle-management") or load_nolan()
     if character_id in ("rudy_dulce_hvac", "rudy"):
         return load_freak_character("rudy-dulce-hvac") or load_nolan()
+    if character_id in ("zeus_sky_sovereign", "zeus", "zeus-sky-sovereign"):
+        return load_freak_character("zeus-sky-sovereign") or load_nolan()
+    if character_id in ("hera_queen_ledger", "hera", "hera-queen-ledger"):
+        return load_freak_character("hera-queen-ledger") or load_nolan()
     return load_nolan()
 
 
@@ -308,6 +329,22 @@ def _template_beats(character: dict, scenario: dict, operator: str,
             ("punchline", punch),
             ("tag", f"I am blind to {blind}.{tag_t} I filed for transfer to Dulce twice. Denied twice.".strip()),
             ("closer", _rr.choice(ralph_closers)),
+        ]
+    elif character["id"] in ("zeus_sky_sovereign", "hera_queen_ledger"):
+        # Deity test branch: deal + facts + scenario + operator. No canned
+        # biography beyond the pack; blind spots stay unknown-marked.
+        facts = (character.get("traits") or [])[:2]
+        factline = (" " + " ".join(facts)) if facts else ""
+        rule = ((character.get("raw") or {}).get("misinterpretation_rule") or "")
+        want = character.get("want", "order")
+        beats = [
+            ("setup", f"I am {character.get('name')}. {character.get('deal', '')}".strip()),
+            ("setup", f"Tonight's matter before the court: {how}.{factline}".strip()),
+            ("misdirect" if push_misdirect else "escalation",
+             f"Mortals imagine it is about them. It is about procedure. {rule}".strip()),
+            ("punchline", f"Here is the ruling no one appealed: {deriv} So I did what {want} required.".strip()),
+            ("tag", f"Note for the record: I am blind to {blind}. The court stenographer wrote that down.".strip()),
+            ("closer", "Session adjourned." if "Zeus" in character.get("name", "") else "So logged."),
         ]
     else:
         # Nolan: incompetence framed as expertise, evidence-free method

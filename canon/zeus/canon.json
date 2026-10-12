@@ -1,0 +1,20 @@
+{
+ "slug": "zeus",
+ "name": "Zeus",
+ "world": "greek",
+ "classification": "Greek Olympian god (public-domain myth; paraphrased, no verbatim)",
+ "core_lore_paraphrased": [
+  "Domains: sky; weather; kingship; law.",
+  "Standing: Olympian; tags: olympian, major cult."
+ ],
+ "behavior_social": [],
+ "comedy_engine": {
+  "angles": [],
+  "seeds": []
+ },
+ "provenance": {
+  "deitydb_id": "ENT_ZEUS",
+  "confidence": "A",
+  "rule": "paraphrase only; blind_spots unknown until evidenced (import rule \u00a73)"
+ }
+}
