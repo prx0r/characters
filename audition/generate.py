@@ -101,7 +101,8 @@ DICEBEAR_STYLES = {"no_nose_nolan": "personas",
                    "strophe_chorus_clerk": "personas",
                    "pippa_post_pigeon": "open-peeps",
                    "diogenes_tub_cynic": "croodles",
-                   "baba_yaga_crone": "lorelei"}
+                   "baba_yaga_crone": "lorelei",
+                   "yuki_snow_narrator": "notionists"}
 
 
 def avatar_url(character_id: str) -> str:
@@ -169,6 +170,8 @@ def get_character(character_id: str) -> dict:
             return load_freak_character(_slug) or load_nolan()
     if character_id in ("baba_yaga_crone", "baba", "baba-yaga-crone"):
         return load_freak_character("baba-yaga-crone") or load_nolan()
+    if character_id in ("yuki_snow_narrator", "yuki", "yuki-snow-narrator"):
+        return load_freak_character("yuki-snow-narrator") or load_nolan()
     return load_nolan()
 
 

@@ -1,0 +1,60 @@
+{
+ "character_id": "yuki_snow_narrator",
+ "expressions": [
+  "deadpan",
+  "neutral"
+ ],
+ "gestures": [
+  "blink",
+  "snow_still",
+  "lantern_dim",
+  "look_audience"
+ ],
+ "mouth_shapes": [
+  "closed",
+  "rest",
+  "AI",
+  "E",
+  "O",
+  "U",
+  "FV",
+  "L",
+  "MBP",
+  "open"
+ ],
+ "movement_rules": [
+  "stillness is the medium",
+  "never hurries a haunting"
+ ],
+ "name": "Yuki Snow Narrator (puppet v1)",
+ "profile": {
+  "energy": 0.35,
+  "eye_contact": 0.9,
+  "gesture_frequency": 0.2,
+  "movement": 0.25,
+  "pace": 0.7,
+  "punchline_hold_ms": 1500
+ },
+ "rig_id": "yuki",
+ "rive": {
+  "artboard": "Ralph",
+  "note": "Each gesture/expression maps to a state-machine input of the same name when the .riv exists. Until then the svg block drives the Stage Lab fallback. No .riv required for timeline validity.",
+  "state_machine": "Acting",
+  "targets": [
+   "eye_glitch",
+   "suit_adjust",
+   "warm_rock_lean",
+   "head_tilt",
+   "lean_forward",
+   "small_shrug",
+   "blink"
+  ]
+ },
+ "version": "rig-v1-svg",
+ "svg": {
+  "skin": "#e8eef2",
+  "suit": "#2a3440",
+  "trim": "#9fb3c8",
+  "accessory": "none"
+ }
+}

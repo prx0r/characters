@@ -152,7 +152,7 @@ def surrounded(human_prompt: str, mob_ids: list[str]) -> dict:
     return rec
 
 
-def tell(resident_id: str, collection: str, max_words: int = 350) -> dict:
+def tell(resident_id: str, collection: str, max_words: int = 350, tale: str = "") -> dict:
     """Storyteller telling: resident intro + tale excerpt + commentary outro.
 
     Source text stays in easy/folk-and-fable (referenced, never copied into
@@ -165,6 +165,11 @@ def tell(resident_id: str, collection: str, max_words: int = 350) -> dict:
     if not script.exists():
         raise ValueError(f"unknown collection {collection}")
     raw = script.read_text()
+    if tale:
+        # jump to the tale heading; last occurrence skips tables of contents
+        idx = raw.upper().rfind(tale.upper())
+        if idx >= 0:
+            raw = raw[idx:]
     up = raw.upper()
     start = up.find("*** START OF")
     if start >= 0:
