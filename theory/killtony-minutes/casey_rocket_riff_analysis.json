@@ -1,0 +1,105 @@
+{
+  "casey_character": {
+    "persona_archetype": "Hyperactive Drifter / Esoteric Southern Absurdist",
+    "comic_identity": "The Sultan of Riff; an anarchic improviser who fuses fast-talking vaudevillian speed, fringe conspiracy pseudo-science, and blue-collar gas-station surrealism.",
+    "why_it_works": "He never blocks a premise; instead, he hyper-specifies Theo's vague, rambling instincts into concrete, manic hallucinations that sound simultaneously like trucker lore and quantum physics.",
+    "signature_devices": [
+      "Pseudo-technical jargon synthesis (e.g., 'terminal mental velocity', '425 megahertz queso dip')",
+      "Class-contrast juxtaposition (Hamptons wealth vs. seventh-grade reading level truckers)",
+      "Cadence hijacking through micro-affirmations ('Sure', 'Yeah', 'I'm the first to admit that')",
+      "Sonic and sensory synesthesia (linking sound waves directly to cash prizes and dairy)"
+    ],
+    "relationship_to_theo": "Symmetrical improvisational foil; where Theo meanders through folk-parable cadence, Casey accelerates and crystallizes the premise into rapid-fire cartoon logic.",
+    "energy_level": 9.4
+  },
+  "riff_analysis": [
+    {
+      "theo_setup": "Sometimes I can't tell if I'm having, like, male hot flashes or whatever... you'll see a little kid just like go, like, just looking for, like, a-",
+      "casey_response": "Men of a certain age being the spectrum of all ages, yeah... To cool these kids off. Sure. Yeah, a spigot.",
+      "technique": "literalize",
+      "gtvh_operators": [
+        "Script Opposition: Normal Aging vs. Universal Infantile Affliction",
+        "Logical Mechanism: Exaggeration / Literalization",
+        "Language: Idiomatic inversion"
+      ],
+      "why_funny": "Takes the euphemism 'men of a certain age' (usually 50+) and violently broadens it to toddlers, solving the pediatric 'hot flash' with farm-machinery hardware ('a spigot').",
+      "cognitive_move": "Reframes Theo's loose medical anxiety into an absurd, wide-ranging epidemiological reality requiring crude physical plumbing."
+    },
+    {
+      "theo_setup": "...doing, like, the, the level we've gotten to in a society of trying to help ourselves is crazy. It's like-",
+      "casey_response": "Yeah. Yeah, there's all kinds of sounds that can help you win the lottery. Um, I'm the first to admit that. Yeah, so certain, like, tonal shifts. So if you go, like, low, like, you'll win, what is it? Like, 10 to 20 grand.",
+      "technique": "non_sequitur",
+      "gtvh_operators": [
+        "Script Opposition: Self-Help/Meditation vs. Gambling Mechanics",
+        "Situation: Commercialized Wellness",
+        "Target: Binaural beats and frequency healing"
+      ],
+      "why_funny": "Casey pivots from self-care to the pragmatic, low-stakes greed of using audio frequencies specifically to win scratch-offs, admitting it with faux-humility ('I'm the first to admit that').",
+      "cognitive_move": "Maps the woo-woo concept of sound-bath healing directly onto trailer-park financial strategy."
+    },
+    {
+      "theo_setup": "...people are playing, like, a lot of, like, certain hertz of sounds that are supposed to, like-",
+      "casey_response": "So but the higher ones, they get dangerous for your, like, what do they call it? Like, um, terminal mental velocity. Yeah.",
+      "technique": "absurdist_expansion",
+      "gtvh_operators": [
+        "Script Opposition: Therapeutic Acoustics vs. Lethal Ballistics",
+        "Logical Mechanism: False Analogy",
+        "Language: Scientific neologism"
+      ],
+      "why_funny": "Inventing 'terminal mental velocity' treats cognition as a falling object governed by physics that can shatter if exposed to treble.",
+      "cognitive_move": "Extrapolates pseudo-scientific frequency culture to an apocalyptic physical consequence with fake academic authority."
+    },
+    {
+      "theo_setup": "...rich people or whatever, and they're suddenly eating, like, rare cheeses, cheeses made from, you know, obviously the t- you know, cultivated or pasteurized in the tears of the poor and young.",
+      "casey_response": "'Cause there's somebody running around with a 425 megahertz queso dip right now. I know there's a truck that just stalled out on the way to the Hamptons that was full of it, and, uh-",
+      "technique": "escalate",
+      "gtvh_operators": [
+        "Script Opposition: Elite Luxury vs. Highway Logistics",
+        "Situation: Commercial Transit Breakdown",
+        "Logical Mechanism: Fusion of unrelated concepts (electromagnetism + Tex-Mex cheese)"
+      ],
+      "why_funny": "Combines high-frequency sound theory with the most pedestrian party food (queso dip) and grounds the entire cosmic idea into a mundane roadside breakdown on an interstate.",
+      "cognitive_move": "Blends Theo's class-warfare dairy metaphor with earlier frequency lore to create a tangible narrative artifact: an overloaded cheese truck."
+    },
+    {
+      "theo_setup": "The engine just could not function like that.",
+      "casey_response": "I think w- when you, when you're pushing that much high dollar dairy and you're pulling it behind you, and you have a fucking, probably a seventh or eighth grade reading level driver-",
+      "technique": "literalize",
+      "gtvh_operators": [
+        "Script Opposition: High-Stakes Cargo vs. Low-Skilled Labor",
+        "Narrative Strategy: Hyper-specific character sketching",
+        "Logical Mechanism: Grounded realism inside fantasy"
+      ],
+      "why_funny": "The comedy stems from the hyper-specific, unglamorous detail of the freight driver's exact reading comprehension level, contrasting against the mythic 'high dollar dairy'.",
+      "cognitive_move": "Anchors an impossibly surreal concept into brutal blue-collar economic realities."
+    },
+    {
+      "theo_setup": "Like a Whippet, like pimento cheese Whippets, and you fucking-",
+      "casey_response": "And then you go with the gas, which is, um, just, like, a handful of, like, Ritz. ... Yeah, Galaxy gas, yeah. ... Ooh, I got a stomach ache.",
+      "technique": "physical_metaphor",
+      "gtvh_operators": [
+        "Script Opposition: Inhalant Drug Abuse vs. Toddler Snack Routine",
+        "Logical Mechanism: Category Error / Substitution",
+        "Target: Trend of inhalants (Galaxy Gas)"
+      ],
+      "why_funny": "Replacing nitrous oxide with a dry handful of Ritz crackers, followed immediately by an anti-climactic, childish consequence ('Ooh, I got a stomach ache').",
+      "cognitive_move": "De-escalates dangerous illicit drug culture into the mundane tummy troubles of eating dry crackers too fast."
+    }
+  ],
+  "comedy_theory": {
+    "primary_mechanism": "Semantic Domain Collusion: High-frequency physics, elite socioeconomic rituals, and southern dive-bar consumer goods are treated as the same operating system.",
+    "benign_violation_pattern": "Simulating cognitive decline, drug abuse, and class disparity through completely benign, low-threat consumer objects (queso, Ritz crackers, water spigots).",
+    "incongruity_resolution": "The listener resolves the madness because Casey maintains absolute journalistic certainty, framing sheer nonsense as verified regional logistics.",
+    "status_dynamics": "Equal-status folk surrealism; Casey acts as the hyperactive field reporter confirming Theo's intuitive philosophical hunches.",
+    "timing_pattern": "Micro-burst interjections that cut across the end of Theo's syntactic pauses, supplying rapid-fire nouns before the premise can lose kinetic momentum."
+  },
+  "character_formulation": {
+    "core_belief": "The universe is an interlocking network of vibration frequencies, commercial freight routes, and processed cheese.",
+    "blind_spot": "Believes that fabricated medical conditions and fringe mechanics are undisputed common knowledge.",
+    "want": "To maintain hyper-kinetic conversational escape velocity and outrun reality.",
+    "fear": "Mental deceleration; encountering dead silence or static linear logic.",
+    "self_model": "A rogue CB-radio operator transmitting classified cultural dispatches from the interstate.",
+    "comic_worldview": "Society is fundamentally unhinged, held together by junk food, illiterate logistics, and sheer vibrational luck.",
+    "physical_signature": "Twitching kinetic energy, sudden vocal pitch drops, mic-fiddling, and an internal rhythm oscillating between speed-demon pacing and southern drawl."
+  }
+}

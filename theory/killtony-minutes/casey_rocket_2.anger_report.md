@@ -1,20 +1,20 @@
 # Anger / body / voice report — `casey_rocket_2`
 
-- anger windows: **0** / baseline: **0**
+- anger windows: **0** / baseline: **44**
 
 ## Numeric delta (anger − baseline)
 
 | dial | anger | baseline | delta |
 |------|------:|---------:|------:|
-| brow_mean | None | None | None |
-| brow_range | None | None | None |
-| mouth_open_max | None | None | None |
-| mouth_wide_max | None | None | None |
-| lean_x_mean | None | None | None |
-| lean_x_range | None | None | None |
-| arm_open_mean | None | None | None |
-| shoulder_tilt_abs | None | None | None |
-| hand_face_right_min | None | None | None |
+| brow_mean | None | 0.1249 | None |
+| brow_range | None | 0.0732 | None |
+| mouth_open_max | None | 0.1062 | None |
+| mouth_wide_max | None | 0.3646 | None |
+| lean_x_mean | None | -0.0447 | None |
+| lean_x_range | None | 0.2368 | None |
+| arm_open_mean | None | 0.5275 | None |
+| shoulder_tilt_abs | None | 0.0491 | None |
+| hand_face_right_min | None | 0.434 | None |
 
 ## Visual signature
 ```json
