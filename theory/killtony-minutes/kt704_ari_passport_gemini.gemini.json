@@ -1,0 +1,260 @@
+{
+  "speaker_guess": "Eastern European stand-up comedian",
+  "overall": {
+    "energy_arc": "Starts conversational and upbeat, builds through high-octane energetic act-out, drops into mocking whiny impersonation, then explodes into fiery mock-indignant rage before resolving in a triumphant laughing tag.",
+    "dominant_emotion": "mock_indignant",
+    "dominant_emotion_intensity": 0.85,
+    "stage_presence": "Dynamic, aggressive act-outs with intense vocal shifts, pacing, and theatrical mock fury."
+  },
+  "segments": [
+    {
+      "t0": 0.0,
+      "t1": 12.5,
+      "emotion": "gleeful",
+      "emotion_intensity": 0.65,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.1,
+        "head": "nod",
+        "arms": "gesture_out",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Casual nod and slight hand pump acknowledging the crowd"
+      },
+      "comedy": {
+        "beat_type": "setup",
+        "gtvh_operators": [
+          "juxtaposition",
+          "cultural contrast"
+        ],
+        "status_move": "up",
+        "note": "Flattering the Texas audience's patriotism before introducing the contrast of Seattle."
+      },
+      "vocal": {
+        "energy": 0.6,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "emphasis_words": [
+          "Texas",
+          "proud",
+          "American",
+          "energy",
+          "Seattle"
+        ],
+        "note": "Warm, engaging tone with thick Eastern European accent."
+      }
+    },
+    {
+      "t0": 12.5,
+      "t1": 25.5,
+      "emotion": "manic",
+      "emotion_intensity": 0.85,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.35,
+        "head": "jut",
+        "arms": "mic_point",
+        "face": "grimace",
+        "brow": "furrowed",
+        "micro_gesture": "Intense downward hand chopping and aggressive posture"
+      },
+      "comedy": {
+        "beat_type": "escalation",
+        "gtvh_operators": [
+          "exaggeration",
+          "hyperbole"
+        ],
+        "status_move": "up",
+        "note": "Extreme hyperbole depicting hyper-patriotic movie-fueled aggression upon landing in the US."
+      },
+      "vocal": {
+        "energy": 0.9,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "emphasis_words": [
+          "hyped",
+          "Saving Private Ryan",
+          "shoot somebody",
+          "storm the Capitol"
+        ],
+        "note": "Loud, raspy, accelerating delivery reflecting pumped adrenaline."
+      }
+    },
+    {
+      "t0": 25.5,
+      "t1": 40.5,
+      "emotion": "sarcastic",
+      "emotion_intensity": 0.75,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.0,
+        "head": "tilt_left",
+        "arms": "hand_to_face",
+        "face": "deadpan",
+        "brow": "neutral",
+        "micro_gesture": "Slouching body and mimicking a meek, whiny posture"
+      },
+      "comedy": {
+        "beat_type": "premise",
+        "gtvh_operators": [
+          "parody",
+          "stereotyping"
+        ],
+        "status_move": "down",
+        "note": "Parodying the Seattle residents complaining about systemic issues."
+      },
+      "vocal": {
+        "energy": 0.45,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "emphasis_words": [
+          "green hair",
+          "racist agenda"
+        ],
+        "note": "Whiny, high-pitched nasal mock accent."
+      }
+    },
+    {
+      "t0": 40.5,
+      "t1": 54.0,
+      "emotion": "mock_indignant",
+      "emotion_intensity": 0.95,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.4,
+        "head": "jut",
+        "arms": "gesture_out",
+        "face": "sneer",
+        "brow": "flat_angry",
+        "micro_gesture": "Sharp accusatory point toward the crowd while bellowing"
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "absurd comparison",
+          "shock",
+          "perspective shift"
+        ],
+        "status_move": "reversal",
+        "note": "Exploding with immigrant perspective comparing first-world complaints to warzone reality."
+      },
+      "vocal": {
+        "energy": 0.95,
+        "pitch_shift": "spike",
+        "pace": "rapid_fire",
+        "emphasis_words": [
+          "Who gives a fuck",
+          "winning side",
+          "Ukraine",
+          "oatmeal latte",
+          "Kyiv",
+          "ungrateful"
+        ],
+        "note": "Full-throated screaming punchline packed with raw comedic outrage."
+      }
+    },
+    {
+      "t0": 54.0,
+      "t1": 59.0,
+      "emotion": "gleeful",
+      "emotion_intensity": 0.8,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.05,
+        "head": "tilt_right",
+        "arms": "open",
+        "face": "smirk",
+        "brow": "raised",
+        "micro_gesture": "Wide grin, looking at audience while chuckling into the mic"
+      },
+      "comedy": {
+        "beat_type": "closer",
+        "gtvh_operators": [
+          "transactional absurdity",
+          "practical resolution"
+        ],
+        "status_move": "up",
+        "note": "Quick pragmatic punch tag asking for their passport if they don't want it."
+      },
+      "vocal": {
+        "energy": 0.75,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "emphasis_words": [
+          "passport"
+        ],
+        "note": "Playful, punchy closing line followed by genuine laughter."
+      }
+    }
+  ],
+  "gesture_library": [
+    {
+      "name": "militant_hyped_crouch",
+      "t_guess": 18.5,
+      "duration_est_s": 3.0,
+      "body_params": {
+        "lean": 0.35,
+        "head_deg": 10.0,
+        "arm_open": 0.4,
+        "brow": -0.6
+      },
+      "emotion_tag": "manic"
+    },
+    {
+      "name": "righteous_indignation_point",
+      "t_guess": 51.0,
+      "duration_est_s": 2.5,
+      "body_params": {
+        "lean": 0.4,
+        "head_deg": 0.0,
+        "arm_open": 0.8,
+        "brow": -0.8
+      },
+      "emotion_tag": "mock_indignant"
+    }
+  ],
+  "anger_analysis": {
+    "present": true,
+    "type": "fake_rage_for_joke",
+    "body_signature": [
+      "Aggressive forward lean",
+      "Tense shoulder positioning",
+      "Pointed finger gesture directly at imaginary recipient"
+    ],
+    "face_signature": [
+      "Tightened sneer",
+      "Narrowed eyes with furrowed brow",
+      "Wide-open shouting jaw"
+    ],
+    "vocal_signature": [
+      "Sudden volume spike to near shouting",
+      "Gravelly vocal fry",
+      "Hard consonant plosives on insult punchlines"
+    ],
+    "target": "Ungrateful Americans complaining about living in the US",
+    "release_or_withhold": "Full explosive release",
+    "contrast_before_after": "Contrasted against quiet, deadpan mocking of a whiny liberal voice before, and followed by a beaming smile and laughter on the button."
+  },
+  "_meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 75.3,
+    "clip_mb": 2.88,
+    "usage": {
+      "promptTokenCount": 6083,
+      "candidatesTokenCount": 2025,
+      "totalTokenCount": 8558,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        },
+        {
+          "modality": "VIDEO",
+          "tokenCount": 5455
+        }
+      ],
+      "thoughtsTokenCount": 450,
+      "serviceTier": "standard"
+    }
+  }
+}

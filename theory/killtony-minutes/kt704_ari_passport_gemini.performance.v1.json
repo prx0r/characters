@@ -1,0 +1,170 @@
+{
+  "version": "performance.v1",
+  "source": "kt704_ari_passport_gemini",
+  "method": "gemini-3.8-flash_video",
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.65
+    },
+    {
+      "t": 0.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 0.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 0.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "gleeful",
+        "energy": 0.6,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "beat_type": "setup"
+      }
+    },
+    {
+      "t": 12.5,
+      "kind": "expression",
+      "value": "grimace",
+      "intensity": 0.85
+    },
+    {
+      "t": 12.5,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 12.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 12.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "manic",
+        "energy": 0.9,
+        "pitch_shift": "spike",
+        "pace": "fast",
+        "beat_type": "escalation"
+      }
+    },
+    {
+      "t": 25.5,
+      "kind": "expression",
+      "value": "deadpan",
+      "intensity": 0.75
+    },
+    {
+      "t": 25.5,
+      "kind": "gesture",
+      "value": "hold still"
+    },
+    {
+      "t": 25.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 25.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "sarcastic",
+        "energy": 0.45,
+        "pitch_shift": "drop",
+        "pace": "slow",
+        "beat_type": "premise"
+      }
+    },
+    {
+      "t": 40.5,
+      "kind": "expression",
+      "value": "sneer",
+      "intensity": 0.95
+    },
+    {
+      "t": 40.5,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 40.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 40.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "mock_indignant",
+        "energy": 0.95,
+        "pitch_shift": "spike",
+        "pace": "rapid_fire",
+        "beat_type": "punchline"
+      }
+    },
+    {
+      "t": 40.55,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 54.0,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.8
+    },
+    {
+      "t": 54.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 54.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 54.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "gleeful",
+        "energy": 0.75,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "beat_type": "closer"
+      }
+    }
+  ],
+  "n_events": 21,
+  "meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 75.3,
+    "clip_mb": 2.88,
+    "usage": {
+      "promptTokenCount": 6083,
+      "candidatesTokenCount": 2025,
+      "totalTokenCount": 8558,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        },
+        {
+          "modality": "VIDEO",
+          "tokenCount": 5455
+        }
+      ],
+      "thoughtsTokenCount": 450,
+      "serviceTier": "standard"
+    }
+  }
+}
