@@ -61,6 +61,29 @@
       "intensity": 0.6
     },
     {
+      "t": 21750,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.14
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 23100,
+      "kind": "hold",
+      "ms": 310,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 25340,
+      "kind": "hold",
+      "ms": 510,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
       "t": 25500,
       "kind": "expression",
       "id": "suspicious",
@@ -97,6 +120,31 @@
       "kind": "gesture",
       "id": "small_shrug",
       "intensity": 0.5
+    },
+    {
+      "t": 44390,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.129
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 45930,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.35
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 53000,
+      "kind": "hold",
+      "ms": 390,
+      "note": "natural_pause",
+      "source": "prosody-lens"
     },
     {
       "t": 53500,
@@ -146,9 +194,27 @@
       "id": "closeup"
     },
     {
+      "t": 55680,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.15
+      },
+      "source": "prosody-lens"
+    },
+    {
       "t": 55800,
       "kind": "camera",
       "id": "medium"
+    },
+    {
+      "t": 56240,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.35
+      },
+      "source": "prosody-lens"
     },
     {
       "t": 58600,
@@ -161,5 +227,10 @@
       "to": "stage_left"
     }
   ],
-  "n_events": 27
+  "n_events": 35,
+  "prosody": {
+    "pauses": 3,
+    "pause_ratio": 0.0202,
+    "median_f0": 201.83
+  }
 }

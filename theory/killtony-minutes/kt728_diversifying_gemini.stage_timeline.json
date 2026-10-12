@@ -37,6 +37,29 @@
       "kind": "speak_start"
     },
     {
+      "t": 5050,
+      "kind": "hold",
+      "ms": 640,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 7840,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.048
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 11300,
+      "kind": "hold",
+      "ms": 830,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
       "t": 11500,
       "kind": "expression",
       "id": "deadpan",
@@ -85,6 +108,13 @@
       "id": "medium"
     },
     {
+      "t": 30300,
+      "kind": "hold",
+      "ms": 390,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
       "t": 31000,
       "kind": "expression",
       "id": "annoyed",
@@ -115,6 +145,68 @@
       "intensity": 0.5
     },
     {
+      "t": 34460,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.35
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 36350,
+      "kind": "hold",
+      "ms": 450,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 40710,
+      "kind": "hold",
+      "ms": 440,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 41820,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 1.874
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 44130,
+      "kind": "hold",
+      "ms": 270,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 45290,
+      "kind": "hold",
+      "ms": 300,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 45580,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.14
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 46090,
+      "kind": "hold",
+      "ms": 620,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
       "t": 46500,
       "kind": "expression",
       "id": "suspicious",
@@ -134,6 +226,20 @@
       "intensity": 0.5
     },
     {
+      "t": 54770,
+      "kind": "hold",
+      "ms": 430,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 56710,
+      "kind": "hold",
+      "ms": 1430,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
       "t": 57500,
       "kind": "expression",
       "id": "confident",
@@ -145,6 +251,29 @@
       "kind": "gesture",
       "id": "head_tilt",
       "intensity": 0.6
+    },
+    {
+      "t": 58210,
+      "kind": "hold",
+      "ms": 580,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 66560,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.295
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 72040,
+      "kind": "hold",
+      "ms": 410,
+      "note": "natural_pause",
+      "source": "prosody-lens"
     },
     {
       "t": 109500,
@@ -187,5 +316,10 @@
       "to": "stage_left"
     }
   ],
-  "n_events": 31
+  "n_events": 48,
+  "prosody": {
+    "pauses": 13,
+    "pause_ratio": 0.0934,
+    "median_f0": 200.331
+  }
 }

@@ -23,6 +23,15 @@
       "intensity": 0.3
     },
     {
+      "t": 200,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.004
+      },
+      "source": "prosody-lens"
+    },
+    {
       "t": 300,
       "kind": "gesture",
       "id": "head_tilt",
@@ -43,6 +52,29 @@
       "kind": "speak_start"
     },
     {
+      "t": 1930,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 1.35
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 5170,
+      "kind": "hold",
+      "ms": 420,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
+      "t": 8790,
+      "kind": "hold",
+      "ms": 320,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
       "t": 13000,
       "kind": "expression",
       "id": "suspicious",
@@ -54,6 +86,13 @@
       "kind": "gesture",
       "id": "small_shrug",
       "intensity": 0.5
+    },
+    {
+      "t": 19600,
+      "kind": "hold",
+      "ms": 460,
+      "note": "natural_pause",
+      "source": "prosody-lens"
     },
     {
       "t": 20000,
@@ -75,6 +114,22 @@
       "intensity": 0.6
     },
     {
+      "t": 31020,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.148
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 35560,
+      "kind": "hold",
+      "ms": 900,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
       "t": 38000,
       "kind": "expression",
       "id": "self_satisfied",
@@ -86,6 +141,24 @@
       "kind": "gesture",
       "id": "small_shrug",
       "intensity": 0.5
+    },
+    {
+      "t": 39310,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 1.546
+      },
+      "source": "prosody-lens"
+    },
+    {
+      "t": 46460,
+      "kind": "speak_start",
+      "value": {
+        "acoustic_peak": true,
+        "score": 2.35
+      },
+      "source": "prosody-lens"
     },
     {
       "t": 49500,
@@ -123,6 +196,13 @@
       "id": "medium"
     },
     {
+      "t": 52740,
+      "kind": "hold",
+      "ms": 300,
+      "note": "natural_pause",
+      "source": "prosody-lens"
+    },
+    {
       "t": 57600,
       "kind": "camera",
       "id": "wide"
@@ -133,5 +213,10 @@
       "to": "stage_left"
     }
   ],
-  "n_events": 22
+  "n_events": 32,
+  "prosody": {
+    "pauses": 5,
+    "pause_ratio": 0.0409,
+    "median_f0": 139.051
+  }
 }
