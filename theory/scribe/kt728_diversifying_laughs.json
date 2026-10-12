@@ -1,0 +1,66 @@
+{
+  "laughs": [
+    {
+      "t": 11.34,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 18.62,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 26.6,
+      "type": "[laughs]",
+      "context": "[laughs]"
+    },
+    {
+      "t": 27.6,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 30.44,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 46.44,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 61.7,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 63.12,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 67.2,
+      "type": "[laughing]",
+      "context": "[laughing]"
+    },
+    {
+      "t": 72.3,
+      "type": "[laughs]",
+      "context": "[laughs]"
+    },
+    {
+      "t": 75.4,
+      "type": "[laughs]",
+      "context": "[laughs]"
+    }
+  ],
+  "claps": [
+    {
+      "t": 26.34,
+      "type": "[clapping]"
+    }
+  ],
+  "censored": []
+}
