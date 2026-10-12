@@ -150,3 +150,50 @@ def surrounded(human_prompt: str, mob_ids: list[str]) -> dict:
     p = F.save_record("surrounded", rec)
     rec["record_path"] = str(p)
     return rec
+
+
+def tell(resident_id: str, collection: str, max_words: int = 350) -> dict:
+    """Storyteller telling: resident intro + tale excerpt + commentary outro.
+
+    Source text stays in easy/folk-and-fable (referenced, never copied into
+    git). Character framing is ours. Proves repertoire -> performance.
+    """
+    from graph_ops import CharacterGraph
+    from pathlib import Path as _P
+    g = CharacterGraph(resident_id)
+    script = _P(f"/root/easy/folk-and-fable/{collection}/script.txt")
+    if not script.exists():
+        raise ValueError(f"unknown collection {collection}")
+    raw = script.read_text()
+    up = raw.upper()
+    start = up.find("*** START OF")
+    if start >= 0:
+        nl = raw.find("\n", start)
+        raw = raw[nl + 1:] if nl >= 0 else raw
+    end = up.find("*** END OF")
+    if end >= 0:
+        raw = raw[:end]
+    words = raw.split()[:max_words]
+    # end on a sentence boundary
+    text = " ".join(words)
+    for end in (".", "!", "?", ":", ";"):
+        cut = text.rfind(end)
+        if cut > len(text) * 0.7:
+            text = text[: cut + 1]
+            break
+    tag = f"tell_{resident_id[:12]}_{int(time.time())}"
+    parts = [("intro", f"{g.first} here, and tonight I tell you {collection.replace('-', ' ')}. Listen, and no skipping."),
+             ("tale", text),
+             ("outro", f"There. Told straight, which is more than it deserved. "
+                       f"I am blind to {', '.join(g.blind_spots[:1]) or 'nothing'}, but the tale stands.")]
+    transcript, paths = [], []
+    for i, (kind, line) in enumerate(parts):
+        a = g.say(line, f"{tag}_{i}")
+        paths.append(a["path"])
+        transcript.append({"kind": kind, "speaker": g.id, "text": line[:300], "audio": a["path"]})
+    out = F.AUDIO / f"{tag}.mp3"
+    m = F.concat_mp3(paths, out)
+    rec = {"format": "telling", "resident": resident_id, "collection": collection,
+           "audio": m, "transcript": transcript}
+    F.save_record("telling", rec)
+    return rec
