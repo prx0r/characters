@@ -1,0 +1,202 @@
+{
+  "version": "performance.v1",
+  "source": "kt728_jamesbond_gemini",
+  "method": "gemini-3.8-flash_video",
+  "events": [
+    {
+      "t": 0.0,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.6
+    },
+    {
+      "t": 0.0,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 0.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 0.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "sarcastic",
+        "energy": 0.6,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "beat_type": "premise"
+      }
+    },
+    {
+      "t": 5.2,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.7
+    },
+    {
+      "t": 5.2,
+      "kind": "gesture",
+      "value": "lean in"
+    },
+    {
+      "t": 5.2,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 5.2,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "gleeful",
+        "energy": 0.65,
+        "pitch_shift": "fall",
+        "pace": "normal",
+        "beat_type": "punchline"
+      }
+    },
+    {
+      "t": 5.25,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 10.0,
+      "kind": "expression",
+      "value": "deadpan",
+      "intensity": 0.5
+    },
+    {
+      "t": 10.0,
+      "kind": "gesture",
+      "value": "hold still"
+    },
+    {
+      "t": 10.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 10.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "neutral",
+        "energy": 0.55,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "beat_type": "setup"
+      }
+    },
+    {
+      "t": 15.5,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.75
+    },
+    {
+      "t": 15.5,
+      "kind": "gesture",
+      "value": "hold still"
+    },
+    {
+      "t": 15.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 15.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "sarcastic",
+        "energy": 0.6,
+        "pitch_shift": "flat",
+        "pace": "slow",
+        "beat_type": "punchline"
+      }
+    },
+    {
+      "t": 15.55,
+      "kind": "hold",
+      "ms": 1200
+    },
+    {
+      "t": 23.0,
+      "kind": "expression",
+      "value": "wide_eyes",
+      "intensity": 0.85
+    },
+    {
+      "t": 23.0,
+      "kind": "gesture",
+      "value": "hold still"
+    },
+    {
+      "t": 23.0,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 23.0,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "deadpan",
+        "energy": 0.0,
+        "pitch_shift": "flat",
+        "pace": "slow",
+        "beat_type": "button"
+      }
+    },
+    {
+      "t": 28.5,
+      "kind": "expression",
+      "value": "smirk",
+      "intensity": 0.7
+    },
+    {
+      "t": 28.5,
+      "kind": "gesture",
+      "value": "small gesture"
+    },
+    {
+      "t": 28.5,
+      "kind": "look",
+      "value": "audience"
+    },
+    {
+      "t": 28.5,
+      "kind": "speak_start",
+      "value": {
+        "emotion": "gleeful",
+        "energy": 0.65,
+        "pitch_shift": "drop",
+        "pace": "normal",
+        "beat_type": "tag"
+      }
+    }
+  ],
+  "n_events": 26,
+  "meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 34.5,
+    "clip_mb": 2.35,
+    "usage": {
+      "promptTokenCount": 3540,
+      "candidatesTokenCount": 2050,
+      "totalTokenCount": 5943,
+      "promptTokensDetails": [
+        {
+          "modality": "VIDEO",
+          "tokenCount": 2912
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        }
+      ],
+      "thoughtsTokenCount": 353,
+      "serviceTier": "standard"
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "speaker_guess": "Ari Matti",
+  "overall": {
+    "energy_arc": "Starts casual and narrative, steadily builds tension through relatable pacing, explodes into manic physical comedy and finishes on high-energy absurd punchline delivery.",
+    "dominant_emotion": "manic",
+    "dominant_emotion_intensity": 0.85,
+    "stage_presence": "Dynamic, highly physical crowd-engaging performer using deliberate tension-and-release mechanics."
+  },
+  "segments": [
+    {
+      "t0": 0.0,
+      "t1": 24.0,
+      "emotion": "neutral",
+      "emotion_intensity": 0.45,
+      "body": {
+        "lean": "neutral",
+        "lean_amount": 0.1,
+        "head": "neutral",
+        "arms": "mic_point",
+        "face": "neutral",
+        "brow": "raised",
+        "micro_gesture": "Holds mic closely, pacing slightly across stage to set an observant mood."
+      },
+      "comedy": {
+        "beat_type": "setup",
+        "gtvh_operators": [
+          "situation",
+          "social_context"
+        ],
+        "status_move": "down",
+        "note": "Establishes a universally recognizable awkward social dilemma."
+      },
+      "vocal": {
+        "energy": 0.5,
+        "pitch_shift": "flat",
+        "pace": "normal",
+        "emphasis_words": [
+          "walking",
+          "night",
+          "behind",
+          "tension"
+        ],
+        "note": "Measured, conversational tone introducing the premise."
+      }
+    },
+    {
+      "t0": 24.0,
+      "t1": 43.0,
+      "emotion": "embarrassed",
+      "emotion_intensity": 0.65,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.3,
+        "head": "nod",
+        "arms": "gesture_out",
+        "face": "smirk",
+        "brow": "furrowed",
+        "micro_gesture": "Flat hand chops mimicking directional turns and hurried pace."
+      },
+      "comedy": {
+        "beat_type": "escalation",
+        "gtvh_operators": [
+          "exaggeration",
+          "social_awkwardness"
+        ],
+        "status_move": "down",
+        "note": "Builds the comedic stakes of accidental stalking."
+      },
+      "vocal": {
+        "energy": 0.65,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "emphasis_words": [
+          "left",
+          "right",
+          "rush",
+          "assailant"
+        ],
+        "note": "Rhythmic repetition emphasizing synchronization of movements."
+      }
+    },
+    {
+      "t0": 43.0,
+      "t1": 68.0,
+      "emotion": "mock_indignant",
+      "emotion_intensity": 0.75,
+      "body": {
+        "lean": "back",
+        "lean_amount": 0.4,
+        "head": "tilt_left",
+        "arms": "gesture_out",
+        "face": "wide_eyes",
+        "brow": "raised",
+        "micro_gesture": "Turns completely around to act out the woman's panicked glance and clutching handbag."
+      },
+      "comedy": {
+        "beat_type": "escalation",
+        "gtvh_operators": [
+          "role_play",
+          "hyperbole"
+        ],
+        "status_move": "reversal",
+        "note": "Physical act-out showing both perspectives of the paranoia."
+      },
+      "vocal": {
+        "energy": 0.7,
+        "pitch_shift": "rise",
+        "pace": "normal",
+        "emphasis_words": [
+          "body language",
+          "hamstrings",
+          "finally look"
+        ],
+        "note": "Building vocal tension right before the physical release."
+      }
+    },
+    {
+      "t0": 68.0,
+      "t1": 84.0,
+      "emotion": "gleeful",
+      "emotion_intensity": 0.9,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.5,
+        "head": "neutral",
+        "arms": "open",
+        "face": "wide_eyes",
+        "brow": "raised",
+        "micro_gesture": "Exaggerated goofy gallop and silly arm swings across the stage."
+      },
+      "comedy": {
+        "beat_type": "punchline",
+        "gtvh_operators": [
+          "absurdity",
+          "physical_contrast"
+        ],
+        "status_move": "down",
+        "note": "High-energy physical release demonstrating an absurd, non-threatening walk."
+      },
+      "vocal": {
+        "energy": 0.85,
+        "pitch_shift": "spike",
+        "pace": "rapid_fire",
+        "emphasis_words": [
+          "really hard",
+          "not walk",
+          "this"
+        ],
+        "note": "Playful, bright yell driving the physical act-out."
+      }
+    },
+    {
+      "t0": 84.0,
+      "t1": 105.0,
+      "emotion": "manic",
+      "emotion_intensity": 0.95,
+      "body": {
+        "lean": "forward",
+        "lean_amount": 0.6,
+        "head": "jut",
+        "arms": "mic_point",
+        "face": "mock_horror",
+        "brow": "raised",
+        "micro_gesture": "Leaning deep into the audience with bug eyes shouting sinister reassurance."
+      },
+      "comedy": {
+        "beat_type": "closer",
+        "gtvh_operators": [
+          "irony",
+          "misunderstanding",
+          "punchline"
+        ],
+        "status_move": "reversal",
+        "note": "Twists harmless intentions into maximum perceived threat for the final laugh."
+      },
+      "vocal": {
+        "energy": 0.95,
+        "pitch_shift": "spike",
+        "pace": "normal",
+        "emphasis_words": [
+          "DON'T WORRY",
+          "LIVE WHERE YOU LIVE"
+        ],
+        "note": "Loud, guttural, over-enthusiastic yell delivering the punchline."
+      }
+    }
+  ],
+  "gesture_library": [
+    {
+      "name": "Panicked Over-the-Shoulder Glance",
+      "t_guess": 64.0,
+      "duration_est_s": 2.5,
+      "body_params": {
+        "lean": -0.3,
+        "head_deg": 90.0,
+        "arm_open": 0.2,
+        "brow": 0.9
+      },
+      "emotion_tag": "mock_indignant"
+    },
+    {
+      "name": "Non-Threatening Silly Gallop",
+      "t_guess": 76.0,
+      "duration_est_s": 4.0,
+      "body_params": {
+        "lean": 0.4,
+        "head_deg": 0.0,
+        "arm_open": 0.8,
+        "brow": 0.7
+      },
+      "emotion_tag": "gleeful"
+    },
+    {
+      "name": "Creepy Reassurance Lean",
+      "t_guess": 97.0,
+      "duration_est_s": 3.5,
+      "body_params": {
+        "lean": 0.6,
+        "head_deg": 15.0,
+        "arm_open": 0.4,
+        "brow": 1.0
+      },
+      "emotion_tag": "manic"
+    }
+  ],
+  "anger_analysis": {
+    "present": true,
+    "type": "fake_rage_for_joke",
+    "body_signature": [
+      "Aggressive forward lean",
+      "Head jutting forward toward the microphone",
+      "Tense shoulder posture"
+    ],
+    "face_signature": [
+      "Staring wide eyes",
+      "Intense frozen grin"
+    ],
+    "vocal_signature": [
+      "Sudden high-volume guttural shouting",
+      "Abrupt transition from silence to screaming"
+    ],
+    "target": "The terrified stranger and the absurdity of trying to comfort her",
+    "release_or_withhold": "Sudden, explosive release as the payoff to sustained situational tension",
+    "contrast_before_after": "Shifts instantly from awkward silent walking act-out to full-throated manic shouting."
+  },
+  "_meta": {
+    "model": "gemini-3.8-flash",
+    "elapsed_s": 98.3,
+    "clip_mb": 5.64,
+    "usage": {
+      "promptTokenCount": 10183,
+      "candidatesTokenCount": 2071,
+      "totalTokenCount": 12677,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 628
+        },
+        {
+          "modality": "VIDEO",
+          "tokenCount": 9555
+        }
+      ],
+      "thoughtsTokenCount": 423,
+      "serviceTier": "standard"
+    }
+  }
+}

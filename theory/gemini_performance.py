@@ -92,14 +92,14 @@ def compress_clip(src: Path, max_mb: float = 15, seconds: int | None = None) -> 
     cmd = ["ffmpeg", "-y", "-i", str(src), *dur_args,
            "-c:v", "libx264", "-preset", "veryfast", "-crf", "28",
            "-vf", "scale=480:-2", "-c:a", "aac", "-b:a", "48k", str(out)]
-    subprocess.run(cmd, capture_output=True, timeout=120)
+    subprocess.run(cmd, capture_output=True, timeout=300)
     # shrink further if needed
     while out.exists() and out.stat().st_size > max_mb * 1024 * 1024:
         subprocess.run(
             ["ffmpeg", "-y", "-i", str(out), "-c:v", "libx264", "-preset", "veryfast",
              "-crf", "32", "-vf", "scale=360:-2", "-c:a", "aac", "-b:a", "32k",
              str(out.with_suffix(".tmp.mp4"))],
-            capture_output=True, timeout=120)
+            capture_output=True, timeout=300)
         out.with_suffix(".tmp.mp4").replace(out)
     return out
 
