@@ -1,0 +1,68 @@
+{
+  "set": "louis_roadrage",
+  "misses": [
+    {
+      "seg": 2,
+      "emotion": "manic",
+      "wpm_err": 10.4,
+      "var_st": 5.31,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": -0.15,
+          "why": "too fast vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 4,
+      "emotion": "manic",
+      "wpm_err": -21.8,
+      "var_st": 5.81,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 7,
+      "emotion": "manic",
+      "wpm_err": -11.1,
+      "var_st": 4.96,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    }
+  ],
+  "miss_count": 3,
+  "segment_count": 12,
+  "prior_updates": {
+    "manic": {
+      "n": 11,
+      "mean_wpm_err": -3.4,
+      "mean_var_err": 0.0,
+      "suggest_speed_delta": 0.02,
+      "suggest_temp_delta": 0.0
+    },
+    "deadpan": {
+      "n": 1,
+      "mean_wpm_err": 0.9,
+      "mean_var_err": 0.0,
+      "suggest_speed_delta": -0.01,
+      "suggest_temp_delta": 0.0
+    }
+  },
+  "theory_notes": [],
+  "real_prosody": {
+    "pitch_var": null,
+    "thirds_var": []
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

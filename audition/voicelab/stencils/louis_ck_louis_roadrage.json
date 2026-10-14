@@ -1,0 +1,273 @@
+{
+  "stencil_id": "louis_ck_louis_roadrage",
+  "performer": "louis_ck",
+  "source_set": "louis_roadrage",
+  "voice_slot": "[SLOT \u2014 clone or card]",
+  "note": "delivery score: recipes+structure. material (text) is one payload; swap for world material keeping beat types.",
+  "segments": [
+    {
+      "seg": 0,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 1.06,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 232.4,
+        "target_wpm": 226.9,
+        "var_st": 5.9,
+        "score": 3.03
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 1,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 1.13,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 267.6,
+        "target_wpm": 268.7,
+        "var_st": 6.01,
+        "score": 0.86
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 2,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.94,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 201.8,
+        "target_wpm": 191.4,
+        "var_st": 5.31,
+        "score": 6.76
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 3,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 1.05,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 311.5,
+        "target_wpm": 315.8,
+        "var_st": 5.32,
+        "score": 2.65
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 4,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 0.85,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 234.5,
+        "target_wpm": 256.3,
+        "var_st": 5.81,
+        "score": 9.22
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 5,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 0.9,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 237.5,
+        "target_wpm": 233.5,
+        "var_st": 7.16,
+        "score": 2.61
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 6,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 1.0,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 225.1,
+        "target_wpm": 229.2,
+        "var_st": 4.98,
+        "score": 3.5
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 7,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 1.89,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 377.1,
+        "target_wpm": 388.2,
+        "var_st": 4.96,
+        "score": 4.6
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 8,
+      "emotion": "deadpan",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.5,
+        "cue": "",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 106.0,
+        "target_wpm": 105.1,
+        "var_st": 6.08,
+        "score": 3.07
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "deadpan"
+      }
+    },
+    {
+      "seg": 9,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.98,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 250.6,
+        "target_wpm": 253.5,
+        "var_st": 5.4,
+        "score": 2.35
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 10,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 1.59,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 342.4,
+        "target_wpm": 346.2,
+        "var_st": 5.19,
+        "score": 2.54
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 11,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.8,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 187.7,
+        "target_wpm": 195.4,
+        "var_st": 7.52,
+        "score": 5.29
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    }
+  ],
+  "delivery_vector": {
+    "mean_wpm": 247.8,
+    "mean_var": 5.8,
+    "mean_temp": 0.85,
+    "mean_speed": 1.06,
+    "emotion_mix": [
+      "deadpan",
+      "manic"
+    ],
+    "n_segments": 12
+  },
+  "avg_score": 3.87
+}

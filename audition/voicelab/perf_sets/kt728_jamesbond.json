@@ -1,0 +1,70 @@
+{
+  "performer": "ari_matti",
+  "set": "kt728_jamesbond",
+  "voice": "",
+  "segments": [
+    {
+      "seg": 0,
+      "emotion": "sarcastic",
+      "rid": "779ca698f9",
+      "temp": 0.65,
+      "speed": 1.28,
+      "cue": "[excited]",
+      "vol": 0.0,
+      "wpm": 193.3,
+      "var_st": 3.01,
+      "duration_ms": 5276,
+      "score": 3.74,
+      "target_wpm": 196.9,
+      "file": "/tmp/opencode/characters/audition/audio/ps-kt728_jamesbond-0-779ca698f9-fish.mp3"
+    },
+    {
+      "seg": 1,
+      "emotion": "gleeful",
+      "rid": "b39f4c6c25",
+      "temp": 0.8,
+      "speed": 0.96,
+      "cue": "[delighted]",
+      "vol": 0.0,
+      "wpm": 138.1,
+      "var_st": 6.08,
+      "duration_ms": 4780,
+      "score": 5.44,
+      "target_wpm": 132.0,
+      "file": "/tmp/opencode/characters/audition/audio/ps-kt728_jamesbond-1-b39f4c6c25-fish.mp3"
+    },
+    {
+      "seg": 2,
+      "emotion": "neutral",
+      "rid": "fc8762ae89",
+      "temp": 0.72,
+      "speed": 0.63,
+      "cue": "[neutral]",
+      "vol": 0.0,
+      "wpm": 97.5,
+      "var_st": 5.51,
+      "duration_ms": 9848,
+      "score": 5.83,
+      "target_wpm": 92.7,
+      "file": "/tmp/opencode/characters/audition/audio/ps-kt728_jamesbond-2-fc8762ae89-fish.mp3"
+    },
+    {
+      "seg": 5,
+      "emotion": "gleeful",
+      "rid": "5235e75489",
+      "temp": 0.8,
+      "speed": 0.69,
+      "cue": "[excited]",
+      "vol": 0.0,
+      "wpm": 170.2,
+      "var_st": 3.38,
+      "duration_ms": 2821,
+      "score": 20.87,
+      "target_wpm": 208.7,
+      "file": "/tmp/opencode/characters/audition/audio/ps-kt728_jamesbond-5-5235e75489-fish.mp3"
+    }
+  ],
+  "out": "/tmp/opencode/characters/audition/voicelab/perf_sets/kt728_jamesbond.wav",
+  "total_ms": 20453,
+  "at": "2026-10-14T12:46:20Z"
+}

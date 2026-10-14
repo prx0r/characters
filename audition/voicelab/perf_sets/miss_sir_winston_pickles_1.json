@@ -1,0 +1,40 @@
+{
+  "set": "sir_winston_pickles_1",
+  "misses": [
+    {
+      "seg": 0,
+      "emotion": "deadpan",
+      "wpm_err": -8.1,
+      "var_st": 6.25,
+      "var_err_vs_real": 0.32,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    }
+  ],
+  "miss_count": 1,
+  "segment_count": 3,
+  "prior_updates": {
+    "deadpan": {
+      "n": 3,
+      "mean_wpm_err": -4.4,
+      "mean_var_err": -0.02,
+      "suggest_speed_delta": 0.03,
+      "suggest_temp_delta": -0.0
+    }
+  },
+  "theory_notes": [],
+  "real_prosody": {
+    "pitch_var": 5.93,
+    "thirds_var": [
+      4.797,
+      4.157,
+      6.567
+    ]
+  },
+  "at": "2026-10-14T12:59:47Z"
+}

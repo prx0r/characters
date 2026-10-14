@@ -1,0 +1,185 @@
+{
+ "segments": [
+  {
+   "t0": 121.8,
+   "t1": 124.18,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 126.44,
+   "t1": 131.8,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 133.68,
+   "t1": 144.34,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 145.66,
+   "t1": 147.18,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 148.66,
+   "t1": 158.96,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 161.0,
+   "t1": 174.36,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 177.22,
+   "t1": 186.12,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 187.6,
+   "t1": 189.3,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 190.7,
+   "t1": 199.26,
+   "emotion": "deadpan",
+   "emotion_intensity": 0.55,
+   "vocal": {
+    "energy": 0.55,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 207.42,
+   "t1": 218.78,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 219.86,
+   "t1": 224.02,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  },
+  {
+   "t0": 229.34,
+   "t1": 239.78,
+   "emotion": "manic",
+   "emotion_intensity": 0.75,
+   "vocal": {
+    "energy": 0.75,
+    "pace": "fast",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "beat_type": "premise",
+    "note": "pseudo-aruze (pause/pace heuristic), not gemini"
+   }
+  }
+ ],
+ "_meta": "heuristic segmentation from whisper words; louis_roadrage window 120-240s"
+}

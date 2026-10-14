@@ -1,0 +1,63 @@
+{
+  "rule": "PROPOSAL only \u2014 human approves before EMO map merge",
+  "aggregated_from": 10,
+  "updates": {
+    "gleeful": {
+      "n_segments": 9,
+      "mean_wpm_err": -2.2,
+      "mean_var_err": -0.95,
+      "emo_temp_delta": -0.05,
+      "cue_speed_note": "pace ok"
+    },
+    "manic": {
+      "n_segments": 17,
+      "mean_wpm_err": -2.4,
+      "mean_var_err": -0.03,
+      "emo_temp_delta": -0.0,
+      "cue_speed_note": "pace ok"
+    },
+    "deadpan": {
+      "n_segments": 11,
+      "mean_wpm_err": 1.0,
+      "mean_var_err": 0.11,
+      "emo_temp_delta": 0.01,
+      "cue_speed_note": "pace ok"
+    },
+    "sarcastic": {
+      "n_segments": 6,
+      "mean_wpm_err": 1.6,
+      "mean_var_err": 0.08,
+      "emo_temp_delta": 0.0,
+      "cue_speed_note": "pace ok"
+    },
+    "mock_indignant": {
+      "n_segments": 4,
+      "mean_wpm_err": -0.7,
+      "mean_var_err": 0.67,
+      "emo_temp_delta": 0.03,
+      "cue_speed_note": "pace ok"
+    },
+    "neutral": {
+      "n_segments": 4,
+      "mean_wpm_err": -3.2,
+      "mean_var_err": -0.43,
+      "emo_temp_delta": -0.02,
+      "cue_speed_note": "pace ok"
+    },
+    "embarrassed": {
+      "n_segments": 1,
+      "mean_wpm_err": 7.3,
+      "mean_var_err": -0.43,
+      "emo_temp_delta": -0.02,
+      "cue_speed_note": "trim speed"
+    },
+    "defiant": {
+      "n_segments": 1,
+      "mean_wpm_err": 16.7,
+      "mean_var_err": 0.37,
+      "emo_temp_delta": 0.02,
+      "cue_speed_note": "trim speed"
+    }
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

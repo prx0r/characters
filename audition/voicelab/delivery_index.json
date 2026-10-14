@@ -1,0 +1,157 @@
+{
+  "stencils": {
+    "sir_winston_pickles_sir_winston_pickles_2": {
+      "vector": {
+        "mean_wpm": 0.998,
+        "mean_var": 0.0635,
+        "mean_temp": 0.0044,
+        "mean_speed": 0.0063
+      },
+      "performer": "sir_winston_pickles",
+      "avg_score": 28.19,
+      "emotions": [
+        "deadpan"
+      ]
+    },
+    "sir_winston_pickles_sir_winston_pickles_1": {
+      "vector": {
+        "mean_wpm": 0.9995,
+        "mean_var": 0.0322,
+        "mean_temp": 0.0027,
+        "mean_speed": 0.0068
+      },
+      "performer": "sir_winston_pickles",
+      "avg_score": 5.48,
+      "emotions": [
+        "deadpan"
+      ]
+    },
+    "casey_rocket_casey_rocket_2": {
+      "vector": {
+        "mean_wpm": 0.9997,
+        "mean_var": 0.0246,
+        "mean_temp": 0.0039,
+        "mean_speed": 0.0055
+      },
+      "performer": "casey_rocket",
+      "avg_score": 5.61,
+      "emotions": [
+        "deadpan",
+        "gleeful",
+        "manic",
+        "sarcastic"
+      ]
+    },
+    "casey_rocket_casey_rocket_1": {
+      "vector": {
+        "mean_wpm": 0.9993,
+        "mean_var": 0.0362,
+        "mean_temp": 0.0068,
+        "mean_speed": 0.0056
+      },
+      "performer": "casey_rocket",
+      "avg_score": 5.23,
+      "emotions": [
+        "deadpan",
+        "gleeful",
+        "manic"
+      ]
+    },
+    "louis_ck_louis_roadrage": {
+      "vector": {
+        "mean_wpm": 0.9997,
+        "mean_var": 0.0234,
+        "mean_temp": 0.0034,
+        "mean_speed": 0.0043
+      },
+      "performer": "louis_ck",
+      "avg_score": 3.87,
+      "emotions": [
+        "deadpan",
+        "manic"
+      ]
+    },
+    "ari_matti_kt728_jamesbond": {
+      "vector": {
+        "mean_wpm": 0.9995,
+        "mean_var": 0.03,
+        "mean_temp": 0.0049,
+        "mean_speed": 0.0059
+      },
+      "performer": "ari_matti",
+      "avg_score": 8.97,
+      "emotions": [
+        "gleeful",
+        "neutral",
+        "sarcastic"
+      ]
+    },
+    "ari_matti_kt728_diversifying": {
+      "vector": {
+        "mean_wpm": 0.999,
+        "mean_var": 0.0446,
+        "mean_temp": 0.0067,
+        "mean_speed": 0.0059
+      },
+      "performer": "ari_matti",
+      "avg_score": 16.39,
+      "emotions": [
+        "defiant",
+        "mock_indignant",
+        "neutral",
+        "sarcastic"
+      ]
+    },
+    "ari_matti_kt715_walking": {
+      "vector": {
+        "mean_wpm": 0.999,
+        "mean_var": 0.0441,
+        "mean_temp": 0.0054,
+        "mean_speed": 0.0049
+      },
+      "performer": "ari_matti",
+      "avg_score": 5.1,
+      "emotions": [
+        "deadpan",
+        "gleeful",
+        "mock_indignant",
+        "neutral",
+        "sarcastic"
+      ]
+    },
+    "ari_matti_kt715_ep715": {
+      "vector": {
+        "mean_wpm": 0.9989,
+        "mean_var": 0.0455,
+        "mean_temp": 0.0076,
+        "mean_speed": 0.0048
+      },
+      "performer": "ari_matti",
+      "avg_score": 6.44,
+      "emotions": [
+        "embarrassed",
+        "gleeful",
+        "manic",
+        "mock_indignant",
+        "neutral"
+      ]
+    },
+    "ari_matti_kt704_passport": {
+      "vector": {
+        "mean_wpm": 0.9995,
+        "mean_var": 0.0319,
+        "mean_temp": 0.0058,
+        "mean_speed": 0.0053
+      },
+      "performer": "ari_matti",
+      "avg_score": 6.58,
+      "emotions": [
+        "gleeful",
+        "manic",
+        "mock_indignant",
+        "sarcastic"
+      ]
+    }
+  },
+  "lookup": "cosine over mean wpm/var/temp/speed; emotions as tiebreak"
+}

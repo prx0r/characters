@@ -1,0 +1,101 @@
+{
+  "set": "kt715_ep715",
+  "misses": [
+    {
+      "seg": 0,
+      "emotion": "neutral",
+      "wpm_err": -8.1,
+      "var_st": 4.42,
+      "var_err_vs_real": -1.11,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        },
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 3,
+      "emotion": "gleeful",
+      "wpm_err": 0.5,
+      "var_st": 3.34,
+      "var_err_vs_real": -2.19,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 4,
+      "emotion": "manic",
+      "wpm_err": 9.1,
+      "var_st": 5.48,
+      "var_err_vs_real": -0.05,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": -0.15,
+          "why": "too fast vs his timing"
+        }
+      ]
+    }
+  ],
+  "miss_count": 3,
+  "segment_count": 5,
+  "prior_updates": {
+    "neutral": {
+      "n": 1,
+      "mean_wpm_err": -8.1,
+      "mean_var_err": -1.11,
+      "suggest_speed_delta": 0.05,
+      "suggest_temp_delta": -0.06
+    },
+    "embarrassed": {
+      "n": 1,
+      "mean_wpm_err": 7.3,
+      "mean_var_err": -0.43,
+      "suggest_speed_delta": -0.05,
+      "suggest_temp_delta": -0.02
+    },
+    "mock_indignant": {
+      "n": 1,
+      "mean_wpm_err": 2.8,
+      "mean_var_err": 0.28,
+      "suggest_speed_delta": -0.02,
+      "suggest_temp_delta": 0.01
+    },
+    "gleeful": {
+      "n": 1,
+      "mean_wpm_err": 0.5,
+      "mean_var_err": -2.19,
+      "suggest_speed_delta": -0.0,
+      "suggest_temp_delta": -0.11
+    },
+    "manic": {
+      "n": 1,
+      "mean_wpm_err": 9.1,
+      "mean_var_err": -0.05,
+      "suggest_speed_delta": -0.06,
+      "suggest_temp_delta": -0.0
+    }
+  },
+  "theory_notes": [],
+  "real_prosody": {
+    "pitch_var": 5.533,
+    "thirds_var": [
+      5.846,
+      4.35,
+      5.216
+    ]
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

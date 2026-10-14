@@ -1,0 +1,122 @@
+{
+  "set": "casey_rocket_1",
+  "misses": [
+    {
+      "seg": 1,
+      "emotion": "gleeful",
+      "wpm_err": 1.4,
+      "var_st": 4.25,
+      "var_err_vs_real": -1.24,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 2,
+      "emotion": "manic",
+      "wpm_err": -1.8,
+      "var_st": 3.96,
+      "var_err_vs_real": -1.53,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 3,
+      "emotion": "deadpan",
+      "wpm_err": 14.6,
+      "var_st": 4.17,
+      "var_err_vs_real": -1.32,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": -0.15,
+          "why": "too fast vs his timing"
+        },
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 5,
+      "emotion": "gleeful",
+      "wpm_err": -0.6,
+      "var_st": 4.35,
+      "var_err_vs_real": -1.14,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    }
+  ],
+  "miss_count": 4,
+  "segment_count": 5,
+  "prior_updates": {
+    "gleeful": {
+      "n": 2,
+      "mean_wpm_err": 0.4,
+      "mean_var_err": -1.19,
+      "suggest_speed_delta": -0.0,
+      "suggest_temp_delta": -0.06
+    },
+    "manic": {
+      "n": 2,
+      "mean_wpm_err": -0.5,
+      "mean_var_err": -1.27,
+      "suggest_speed_delta": 0.0,
+      "suggest_temp_delta": -0.06
+    },
+    "deadpan": {
+      "n": 1,
+      "mean_wpm_err": 14.6,
+      "mean_var_err": -1.32,
+      "suggest_speed_delta": -0.1,
+      "suggest_temp_delta": -0.07
+    }
+  },
+  "theory_notes": [
+    {
+      "note": "casey laugh corpus loaded",
+      "n_laughs": 50,
+      "delivery_stats": {
+        "riff_type_counts": {
+          "bit": 153,
+          "micro_tag": 156,
+          "full_riff": 213,
+          "quick_riff": 181
+        },
+        "laugh_pattern_counts": {
+          "none": 435,
+          "mid_sentence": 117,
+          "overlap": 92,
+          "after": 59
+        },
+        "mean_pause": 5.47,
+        "laugh_mid_sentence_pct": 16.6
+      }
+    }
+  ],
+  "real_prosody": {
+    "pitch_var": 5.494,
+    "thirds_var": [
+      6.368,
+      4.542,
+      5.327
+    ]
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

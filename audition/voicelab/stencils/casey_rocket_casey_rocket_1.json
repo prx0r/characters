@@ -1,0 +1,127 @@
+{
+  "stencil_id": "casey_rocket_casey_rocket_1",
+  "performer": "casey_rocket",
+  "source_set": "casey_rocket_1",
+  "voice_slot": "[SLOT \u2014 clone or card]",
+  "note": "delivery score: recipes+structure. material (text) is one payload; swap for world material keeping beat types.",
+  "segments": [
+    {
+      "seg": 1,
+      "emotion": "gleeful",
+      "recipe": {
+        "temp": 0.92,
+        "speed": 0.5,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 84.6,
+        "target_wpm": 83.2,
+        "var_st": 4.25,
+        "score": 3.12
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "gleeful"
+      }
+    },
+    {
+      "seg": 2,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 0.5,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 88.1,
+        "target_wpm": 89.9,
+        "var_st": 3.96,
+        "score": 4.89
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 3,
+      "emotion": "deadpan",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.8,
+        "cue": "",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 122.1,
+        "target_wpm": 107.5,
+        "var_st": 4.17,
+        "score": 13.63
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "deadpan"
+      }
+    },
+    {
+      "seg": 4,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.8,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 143.2,
+        "target_wpm": 142.4,
+        "var_st": 4.49,
+        "score": 2.84
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 5,
+      "emotion": "gleeful",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.68,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 146.6,
+        "target_wpm": 147.2,
+        "var_st": 4.35,
+        "score": 1.67
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "gleeful"
+      }
+    }
+  ],
+  "delivery_vector": {
+    "mean_wpm": 116.9,
+    "mean_var": 4.24,
+    "mean_temp": 0.79,
+    "mean_speed": 0.66,
+    "emotion_mix": [
+      "deadpan",
+      "gleeful",
+      "manic"
+    ],
+    "n_segments": 5
+  },
+  "avg_score": 5.23
+}

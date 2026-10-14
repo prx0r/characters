@@ -1,0 +1,73 @@
+{
+  "set": "kt728_jamesbond",
+  "misses": [
+    {
+      "seg": 0,
+      "emotion": "sarcastic",
+      "wpm_err": -3.6,
+      "var_st": 3.01,
+      "var_err_vs_real": -2.14,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 5,
+      "emotion": "gleeful",
+      "wpm_err": -38.5,
+      "var_st": 3.38,
+      "var_err_vs_real": -1.77,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        },
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    }
+  ],
+  "miss_count": 2,
+  "segment_count": 4,
+  "prior_updates": {
+    "sarcastic": {
+      "n": 1,
+      "mean_wpm_err": -3.6,
+      "mean_var_err": -2.14,
+      "suggest_speed_delta": 0.02,
+      "suggest_temp_delta": -0.11
+    },
+    "gleeful": {
+      "n": 2,
+      "mean_wpm_err": -16.2,
+      "mean_var_err": -0.42,
+      "suggest_speed_delta": 0.11,
+      "suggest_temp_delta": -0.02
+    },
+    "neutral": {
+      "n": 1,
+      "mean_wpm_err": 4.8,
+      "mean_var_err": 0.36,
+      "suggest_speed_delta": -0.03,
+      "suggest_temp_delta": 0.02
+    }
+  },
+  "theory_notes": [],
+  "real_prosody": {
+    "pitch_var": 5.147,
+    "thirds_var": [
+      3.47,
+      6.107,
+      4.114
+    ]
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

@@ -1,0 +1,103 @@
+{
+  "set": "kt704_passport",
+  "misses": [
+    {
+      "seg": 0,
+      "emotion": "gleeful",
+      "wpm_err": 0.9,
+      "var_st": 2.75,
+      "var_err_vs_real": -2.21,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 1,
+      "emotion": "manic",
+      "wpm_err": -16.6,
+      "var_st": 5.24,
+      "var_err_vs_real": 0.28,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 3,
+      "emotion": "mock_indignant",
+      "wpm_err": -3.4,
+      "var_st": 6.03,
+      "var_err_vs_real": 1.07,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": -0.1,
+          "why": "wilder than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 4,
+      "emotion": "gleeful",
+      "wpm_err": -13.2,
+      "var_st": 4.24,
+      "var_err_vs_real": -0.72,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    }
+  ],
+  "miss_count": 4,
+  "segment_count": 5,
+  "prior_updates": {
+    "gleeful": {
+      "n": 2,
+      "mean_wpm_err": -6.1,
+      "mean_var_err": -1.46,
+      "suggest_speed_delta": 0.04,
+      "suggest_temp_delta": -0.07
+    },
+    "manic": {
+      "n": 1,
+      "mean_wpm_err": -16.6,
+      "mean_var_err": 0.28,
+      "suggest_speed_delta": 0.11,
+      "suggest_temp_delta": 0.01
+    },
+    "sarcastic": {
+      "n": 1,
+      "mean_wpm_err": 4.3,
+      "mean_var_err": -0.21,
+      "suggest_speed_delta": -0.03,
+      "suggest_temp_delta": -0.01
+    },
+    "mock_indignant": {
+      "n": 1,
+      "mean_wpm_err": -3.4,
+      "mean_var_err": 1.07,
+      "suggest_speed_delta": 0.02,
+      "suggest_temp_delta": 0.05
+    }
+  },
+  "theory_notes": [],
+  "real_prosody": {
+    "pitch_var": 4.964,
+    "thirds_var": [
+      4.378,
+      4.229,
+      4.548
+    ]
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

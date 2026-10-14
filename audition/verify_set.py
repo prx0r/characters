@@ -23,13 +23,25 @@ PROF = HERE / "voicelab" / "profiles"
 _model = None
 
 
-def asr(text_path: Path) -> str:
+def asr(audio_path: Path) -> str:
     global _model
     if _model is None:
         from faster_whisper import WhisperModel
         _model = WhisperModel("tiny", device="cpu", compute_type="int8")
-    segs, _ = _model.transcribe(str(text_path), language="en",
-                                beam_size=1, vad_filter=False)
+    # decode ourselves — system pyav is incompatible with fw's decode_audio
+    import array
+    import subprocess
+    import tempfile
+    import numpy as np
+    with tempfile.NamedTemporaryFile(suffix=".pcm") as tmp:
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(audio_path),
+                        "-ac", "1", "-ar", "16000", "-f", "s16le", tmp.name],
+                       capture_output=True, timeout=120, check=True)
+        raw = Path(tmp.name).read_bytes()
+    a = array.array("h")
+    a.frombytes(raw)
+    audio = np.asarray(a, dtype="float32") / 32768.0
+    segs, _ = _model.transcribe(audio, language="en", beam_size=1, vad_filter=False)
     return " ".join(s.text.strip() for s in segs)
 
 
@@ -63,7 +75,7 @@ def render_seg(name, text, temp, speed, vol, cue, voice):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--profile", default="profiles/kt704_standup.json")
+    ap.add_argument("--profile", default="kt704_standup.json")
     ap.add_argument("--voice", default="spongebob")
     ap.add_argument("--fix-rounds", type=int, default=1)
     args = ap.parse_args()
