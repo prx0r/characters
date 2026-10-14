@@ -1,0 +1,82 @@
+{
+  "mapping": "casey_2 set -> joker (literal, same swing flow)",
+  "shape": "manic-deadpan oscillation x surreal container",
+  "stencil": "casey_rocket_2",
+  "voice": "fish library Real Joker fad5a5a6",
+  "beats": [
+    {
+      "seg": 0,
+      "label": "gleeful",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.81,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "text": "They put me in Arkham again. Third time this fiscal year! The food's terrible but the COMMUNITY!"
+    },
+    {
+      "seg": 1,
+      "label": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 1.35,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "text": "Two-Face and me split the electricity bill \u2014 he pays half, he pays the other half, he ALWAYS pays twice, it's magnificent!"
+    },
+    {
+      "seg": 2,
+      "label": "deadpan",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.81,
+        "cue": "",
+        "vol": 0.0
+      },
+      "text": "The Bat doesn't get it. I'm not trying to win. I'm trying to make the numbers on his little spreadsheet not make sense anymore."
+    },
+    {
+      "seg": 3,
+      "label": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.86,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "text": "One guard laughed at my joke yesterday! One! I'm framing it. I'm framing the moment and hanging it in my cell!"
+    },
+    {
+      "seg": 4,
+      "label": "deadpan",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.94,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "text": "Therapy says I should 'channel' my energy. So I channeled it. Into eleven channels. Two of them are weather now."
+    },
+    {
+      "seg": 5,
+      "label": "sarcastic",
+      "recipe": {
+        "temp": 0.65,
+        "speed": 0.92,
+        "cue": "[sarcastic]",
+        "vol": 0.0
+      },
+      "text": "The city keeps asking what I want. What do I WANT? I want you to realize the punchline was the plan all along. It always is. Good night, Gotham."
+    }
+  ],
+  "verify_match": 0.977,
+  "unsaid": [
+    "two-face",
+    "\u2014",
+    "eleven"
+  ],
+  "duration_ms": 67395,
+  "rating": null
+}
