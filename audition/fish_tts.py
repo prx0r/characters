@@ -315,6 +315,24 @@ def temperature_for(vibe: str) -> float | None:
     return VIBE_TEMPERATURE.get((vibe or "").lower())
 
 
+def mary_prosody(modulator: str) -> dict | None:
+    """MARY emotion-module predictions for a modulator (human-speech prior).
+    precedence: measured cue_tempo > MARY > defaults. MARY supplies
+    pitch_direction (valence) which we cannot measure on TTS."""
+    try:
+        m = json.loads((HERE / "voicelab" / "mary_model.json").read_text())
+        return m["modulators"].get(modulator)
+    except Exception:
+        return None
+
+
+def valence_direction(modulator: str) -> str:
+    """Pitch-direction hint from valence (MARY accent-shape rule):
+    valence<0 falling, >0 rising. Maps to fish pitch_shift language."""
+    mp = mary_prosody(modulator)
+    return (mp or {}).get("pitch_direction", "flat")
+
+
 def voice_for_pack(slug: str) -> tuple[str | None, list[dict] | None]:
     """Pack slug -> (reference_id, zero-shot references) from voice.fish pick."""
     try:

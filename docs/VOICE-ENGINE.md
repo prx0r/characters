@@ -72,6 +72,37 @@ only for one-shot identity checks (~100 credits, always print
 `credits_charged`); clone creation is free; ask with exact numbers before
 ANY new charge.
 
+## Theory — why delivery works (mapped to science, 2026-10-14)
+
+Our measured findings independently recovered three science lineages:
+
+1. **Scherer CPM / Banse & Scherer (1996)** — emotions have distinct
+   acoustic profiles along arousal/valence/power. 7 factors explain ~57%
+   variance (Larrouy-Maestri 2025): voice quality, loudness, pitch,
+   rhythm/tempo, shimmer, pitch variation, MFCC. Our five-dial grammar
+   (pitch level, pitch var, volume var, pace, level) is a subset of these.
+2. **MARY emotion module** (arxiv 2307.02132) — formal linear rules:
+   `rate = 0.5·arousal + 0.2·valence`, `volume = 0.33·arousal`,
+   accent shape by valence (falling<0, rising>0). Wired as
+   `voicelab/mary_model.json`; `fish_tts.mary_prosody()` + `valence_direction()`.
+   **Precedence: measured cue_tempo > MARY > defaults.** Divergence is a
+   finding: MARY (human acted speech) vs our TTS factors disagree
+   directionally on [sarcastic]/[frustrated] — the TTS model renders
+   emotion differently than humans do. Our measurements are ground truth
+   FOR THIS ENGINE; MARY fills gaps + supplies valence direction.
+3. **Frijda action readiness** — emotions ARE action-ready states; tempo
+   is their motor residue. [excited]+17% = approach-vector leaking into
+   speech. This is the WHY behind cue-tempo coupling.
+
+Key dissociation (our data, n=703 Casey riffs + TIC-TALK): before
+punchlines the BODY stills (r=-0.75) while the VOICE accelerates (laughed
+riffs 3.2 vs 3.8 wps, shorter pre-pauses). Classical "pause before punch"
+is wrong for voice, right for body.
+
+van Rijn & Larrouy-Maestri (2023): rate faster for joy/pride, slower for
+"pleasure"; pitch higher for joy, lower for lust/admiration — matches our
+sultry/mommy registry (slow, low) vs luna (fast, high) exactly.
+
 ## The KT → character pipeline (the actual product loop)
 
 1. **Mine a KT set** → `theory/scribe/*.json` (word timestamps) +

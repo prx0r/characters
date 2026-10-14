@@ -1,13 +1,244 @@
 {
-  "angry": {"cognitive": {"attention": "threats to status", "belief_certainty": 0.9, "interpretation": "criticism is conspiracy"}, "emotional": {"arousal": 0.85, "defensiveness": 0.9, "risk_taking": 0.7}, "performative": {"emphasis_delta": 0.15, "gestures": "sharp", "pace_delta": 0.1, "pause_mult": 0.7}, "restraint_interaction": "high restraint turns anger into icy politeness; low restraint into shouting", "tilt": "patience down; blames named individuals, not process"},
-  "condescending": {"cognitive": {"attention": "others slow comprehension", "belief_certainty": 0.95, "interpretation": "confusion is stupidity"}, "emotional": {"arousal": 0.4, "defensiveness": 0.3, "risk_taking": 0.3}, "performative": {"emphasis_delta": 0.05, "gestures": "measured", "pace_delta": -0.05, "pause_mult": 1.2}, "restraint_interaction": "restraint makes it pedagogical; without it, open contempt", "tilt": "explains cruelty as if to children"},
-  "drunk_on_power": {"cognitive": {"attention": "adoration", "belief_certainty": 1.0, "interpretation": "everything is going to plan"}, "emotional": {"arousal": 0.7, "defensiveness": 0.1, "risk_taking": 0.9}, "performative": {"emphasis_delta": 0.1, "gestures": "expansive", "pace_delta": 0.05, "pause_mult": 0.9}, "restraint_interaction": "restraint barely holds; leaks the quiet part", "tilt": "says the overlord part out loud"},
-  "exhausted": {"cognitive": {"attention": "the nearest warm surface", "belief_certainty": 0.4, "interpretation": "everything is procedure"}, "emotional": {"arousal": 0.2, "defensiveness": 0.2, "risk_taking": 0.4}, "performative": {"emphasis_delta": -0.1, "gestures": "minimal", "pace_delta": -0.1, "pause_mult": 1.4}, "restraint_interaction": "fatigue defeats restraint; cold-blooded truth leaks", "tilt": "stops euphemising; truth leaks through fatigue"},
-  "manic": {"cognitive": {"attention": "everything at once", "belief_certainty": 0.95, "interpretation": "all doors are open right now"}, "emotional": {"arousal": 0.95, "defensiveness": 0.2, "risk_taking": 0.9}, "performative": {"emphasis_delta": 0.2, "gestures": "expansive", "pace_delta": 0.25, "pause_mult": 0.5}, "restraint_interaction": "restraint cannot keep up; energy leaks sideways", "tilt": "accelerates through the punchline"},
-  "paranoid": {"cognitive": {"attention": "cameras and watchers", "belief_certainty": 0.85, "interpretation": "scrutiny is imminent exposure"}, "emotional": {"arousal": 0.75, "defensiveness": 0.95, "risk_taking": 0.2}, "performative": {"emphasis_delta": 0.0, "gestures": "still", "pace_delta": 0.0, "pause_mult": 1.1}, "restraint_interaction": "restraint reads as control; eyes do the fear", "tilt": "addresses cameras directly; denies preemptively"},
-  "panicked": {"cognitive": {"attention": "the exit", "belief_certainty": 0.5, "interpretation": "the trap is already closed"}, "emotional": {"arousal": 0.9, "defensiveness": 0.8, "risk_taking": 0.1}, "performative": {"emphasis_delta": 0.1, "gestures": "fluttering", "pace_delta": 0.3, "pause_mult": 0.4}, "restraint_interaction": "restraint cracks first; words trip over each other", "tilt": "over-explains before being accused"},
-  "relaxed": {"cognitive": {"attention": "comfort and routine", "belief_certainty": 0.6, "interpretation": "all is well administered"}, "emotional": {"arousal": 0.3, "defensiveness": 0.2, "risk_taking": 0.4}, "performative": {"emphasis_delta": -0.05, "gestures": "open", "pace_delta": -0.1, "pause_mult": 1.3}, "restraint_interaction": "restraint + ease = unnerving sincerity", "tilt": "cruelty as casual admin chat"},
-  "sad": {"cognitive": {"attention": "what was lost", "belief_certainty": 0.4, "interpretation": "the loss was deserved anyway"}, "emotional": {"arousal": 0.25, "defensiveness": 0.3, "risk_taking": 0.2}, "performative": {"emphasis_delta": -0.1, "gestures": "minimal", "pace_delta": -0.15, "pause_mult": 1.5}, "restraint_interaction": "restraint holds the voice steady while it empties", "tilt": "makes the audience carry the feeling"},
-  "smug": {"cognitive": {"attention": "own cleverness", "belief_certainty": 0.9, "interpretation": "the phrasing is the achievement"}, "emotional": {"arousal": 0.5, "defensiveness": 0.4, "risk_taking": 0.5}, "performative": {"emphasis_delta": 0.1, "gestures": "savoring", "pace_delta": -0.05, "pause_mult": 1.1}, "restraint_interaction": "restraint polishes the smugness into velvet", "tilt": "lingers on the cleverness of the phrasing"},
-  "subservient": {"cognitive": {"attention": "the ranking of everyone present", "belief_certainty": 0.8, "interpretation": "status is the only fact"}, "emotional": {"arousal": 0.45, "defensiveness": 0.6, "risk_taking": 0.15}, "performative": {"emphasis_delta": -0.05, "gestures": "small", "pace_delta": -0.05, "pause_mult": 1.15}, "restraint_interaction": "restraint is the default; approval-seeking leaks at the edges", "tilt": "pre-apologises for existing"}
+ "angry": {
+  "cognitive": {
+   "attention": "threats to status",
+   "belief_certainty": 0.9,
+   "interpretation": "criticism is conspiracy"
+  },
+  "emotional": {
+   "arousal": 0.85,
+   "defensiveness": 0.9,
+   "risk_taking": 0.7,
+   "valence": -0.6,
+   "power": 0.8
+  },
+  "performative": {
+   "emphasis_delta": 0.15,
+   "gestures": "sharp",
+   "pace_delta": 0.1,
+   "pause_mult": 0.7
+  },
+  "restraint_interaction": "high restraint turns anger into icy politeness; low restraint into shouting",
+  "tilt": "patience down; blames named individuals, not process"
+ },
+ "condescending": {
+  "cognitive": {
+   "attention": "others slow comprehension",
+   "belief_certainty": 0.95,
+   "interpretation": "confusion is stupidity"
+  },
+  "emotional": {
+   "arousal": 0.4,
+   "defensiveness": 0.3,
+   "risk_taking": 0.3,
+   "valence": -0.4,
+   "power": 0.7
+  },
+  "performative": {
+   "emphasis_delta": 0.05,
+   "gestures": "measured",
+   "pace_delta": -0.05,
+   "pause_mult": 1.2
+  },
+  "restraint_interaction": "restraint makes it pedagogical; without it, open contempt",
+  "tilt": "explains cruelty as if to children"
+ },
+ "drunk_on_power": {
+  "cognitive": {
+   "attention": "adoration",
+   "belief_certainty": 1.0,
+   "interpretation": "everything is going to plan"
+  },
+  "emotional": {
+   "arousal": 0.7,
+   "defensiveness": 0.1,
+   "risk_taking": 0.9,
+   "valence": 0.5,
+   "power": 1.0
+  },
+  "performative": {
+   "emphasis_delta": 0.1,
+   "gestures": "expansive",
+   "pace_delta": 0.05,
+   "pause_mult": 0.9
+  },
+  "restraint_interaction": "restraint barely holds; leaks the quiet part",
+  "tilt": "says the overlord part out loud"
+ },
+ "exhausted": {
+  "cognitive": {
+   "attention": "the nearest warm surface",
+   "belief_certainty": 0.4,
+   "interpretation": "everything is procedure"
+  },
+  "emotional": {
+   "arousal": 0.2,
+   "defensiveness": 0.2,
+   "risk_taking": 0.4,
+   "valence": -0.3,
+   "power": 0.2
+  },
+  "performative": {
+   "emphasis_delta": -0.1,
+   "gestures": "minimal",
+   "pace_delta": -0.1,
+   "pause_mult": 1.4
+  },
+  "restraint_interaction": "fatigue defeats restraint; cold-blooded truth leaks",
+  "tilt": "stops euphemising; truth leaks through fatigue"
+ },
+ "manic": {
+  "cognitive": {
+   "attention": "everything at once",
+   "belief_certainty": 0.95,
+   "interpretation": "all doors are open right now"
+  },
+  "emotional": {
+   "arousal": 0.95,
+   "defensiveness": 0.2,
+   "risk_taking": 0.9,
+   "valence": 0.4,
+   "power": 0.9
+  },
+  "performative": {
+   "emphasis_delta": 0.2,
+   "gestures": "expansive",
+   "pace_delta": 0.25,
+   "pause_mult": 0.5
+  },
+  "restraint_interaction": "restraint cannot keep up; energy leaks sideways",
+  "tilt": "accelerates through the punchline"
+ },
+ "paranoid": {
+  "cognitive": {
+   "attention": "cameras and watchers",
+   "belief_certainty": 0.85,
+   "interpretation": "scrutiny is imminent exposure"
+  },
+  "emotional": {
+   "arousal": 0.75,
+   "defensiveness": 0.95,
+   "risk_taking": 0.2,
+   "valence": -0.7,
+   "power": 0.3
+  },
+  "performative": {
+   "emphasis_delta": 0.0,
+   "gestures": "still",
+   "pace_delta": 0.0,
+   "pause_mult": 1.1
+  },
+  "restraint_interaction": "restraint reads as control; eyes do the fear",
+  "tilt": "addresses cameras directly; denies preemptively"
+ },
+ "panicked": {
+  "cognitive": {
+   "attention": "the exit",
+   "belief_certainty": 0.5,
+   "interpretation": "the trap is already closed"
+  },
+  "emotional": {
+   "arousal": 0.9,
+   "defensiveness": 0.8,
+   "risk_taking": 0.1,
+   "valence": -0.8,
+   "power": 0.1
+  },
+  "performative": {
+   "emphasis_delta": 0.1,
+   "gestures": "fluttering",
+   "pace_delta": 0.3,
+   "pause_mult": 0.4
+  },
+  "restraint_interaction": "restraint cracks first; words trip over each other",
+  "tilt": "over-explains before being accused"
+ },
+ "relaxed": {
+  "cognitive": {
+   "attention": "comfort and routine",
+   "belief_certainty": 0.6,
+   "interpretation": "all is well administered"
+  },
+  "emotional": {
+   "arousal": 0.3,
+   "defensiveness": 0.2,
+   "risk_taking": 0.4,
+   "valence": 0.5,
+   "power": 0.5
+  },
+  "performative": {
+   "emphasis_delta": -0.05,
+   "gestures": "open",
+   "pace_delta": -0.1,
+   "pause_mult": 1.3
+  },
+  "restraint_interaction": "restraint + ease = unnerving sincerity",
+  "tilt": "cruelty as casual admin chat"
+ },
+ "sad": {
+  "cognitive": {
+   "attention": "what was lost",
+   "belief_certainty": 0.4,
+   "interpretation": "the loss was deserved anyway"
+  },
+  "emotional": {
+   "arousal": 0.25,
+   "defensiveness": 0.3,
+   "risk_taking": 0.2,
+   "valence": -0.7,
+   "power": 0.15
+  },
+  "performative": {
+   "emphasis_delta": -0.1,
+   "gestures": "minimal",
+   "pace_delta": -0.15,
+   "pause_mult": 1.5
+  },
+  "restraint_interaction": "restraint holds the voice steady while it empties",
+  "tilt": "makes the audience carry the feeling"
+ },
+ "smug": {
+  "cognitive": {
+   "attention": "own cleverness",
+   "belief_certainty": 0.9,
+   "interpretation": "the phrasing is the achievement"
+  },
+  "emotional": {
+   "arousal": 0.5,
+   "defensiveness": 0.4,
+   "risk_taking": 0.5,
+   "valence": 0.3,
+   "power": 0.8
+  },
+  "performative": {
+   "emphasis_delta": 0.1,
+   "gestures": "savoring",
+   "pace_delta": -0.05,
+   "pause_mult": 1.1
+  },
+  "restraint_interaction": "restraint polishes the smugness into velvet",
+  "tilt": "lingers on the cleverness of the phrasing"
+ },
+ "subservient": {
+  "cognitive": {
+   "attention": "the ranking of everyone present",
+   "belief_certainty": 0.8,
+   "interpretation": "status is the only fact"
+  },
+  "emotional": {
+   "arousal": 0.45,
+   "defensiveness": 0.6,
+   "risk_taking": 0.15,
+   "valence": 0.1,
+   "power": 0.1
+  },
+  "performative": {
+   "emphasis_delta": -0.05,
+   "gestures": "small",
+   "pace_delta": -0.05,
+   "pause_mult": 1.15
+  },
+  "restraint_interaction": "restraint is the default; approval-seeking leaks at the edges",
+  "tilt": "pre-apologises for existing"
+ }
 }
