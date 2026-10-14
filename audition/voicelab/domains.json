@@ -1,0 +1,88 @@
+{
+  "sleep": {
+    "recipe_fish": {
+      "cue": "[relaxed]",
+      "temperature": 0.35,
+      "prosody_speed": 0.72,
+      "volume_db": -1.5
+    },
+    "exemplar": "Close your eyes now. The day is done... everything can wait until morning... just let the words... slow down... and drift...",
+    "signature": "slow + dark centroid + wide drowsy glides (yawn physics), not flat",
+    "measured_sleep_male": "wpm152 var7.0 dyn50 centroid1068",
+    "measured_sleep_female": "wpm154 var5.9 dyn47 centroid1351",
+    "transfer_test": {
+      "narrator_neutral_recipe_off": {
+        "wpm": 196.6,
+        "var_st": 5.17,
+        "dyn_db": 52.2,
+        "level_db": -18.4,
+        "centroid": 1567.0
+      },
+      "narrator_neutral_SLEEP_recipe": {
+        "wpm": 133.0,
+        "var_st": 5.47,
+        "dyn_db": 29.8,
+        "level_db": -23.8,
+        "centroid": 1443.0
+      },
+      "narrator_sleepTEXT_SLEEP_recipe": {
+        "wpm": 113.0,
+        "var_st": 5.25,
+        "dyn_db": 50.7,
+        "level_db": -25.4,
+        "centroid": 1614.0
+      }
+    }
+  },
+  "seductive": {
+    "recipe_fish": {
+      "cue": "[calm]",
+      "temperature": 0.5,
+      "prosody_speed": 0.75,
+      "volume_db": -2.0
+    },
+    "exemplar": "Come closer... there's no hurry... nothing out there wants you... not tonight... just us... and the slow part... of the sentence...",
+    "signature": "slow + quiet + glides; warm vs ice = variance/level fine-tune",
+    "transfer_test": {
+      "wpm": 113.8,
+      "var_st": 5.56,
+      "dyn_db": 53.1,
+      "level_db": -27.7
+    }
+  },
+  "comedy": {
+    "recipe_fish": {
+      "cue": "[sarcastic]",
+      "temperature": 0.85,
+      "prosody_speed": 1.45,
+      "volume_db": 1.0
+    },
+    "exemplar": "So the cucumbers. Everybody asks about the cucumbers. Nobody pays. That's the joke. That's also the business model.",
+    "signature": "fast + punchy; SUB-STATES from exact-word calibrations: manic [excited].85/1.30, deadpan no-cue.45/1.69, gleeful [delighted].90/1.54, mock-indignant [frustrated>angry].85/1.56",
+    "substates_source": "voicelab/calibrate/{ari,casey}_calibrate.json",
+    "transfer_test": {
+      "wpm": 205.7,
+      "var_st": 6.71,
+      "dyn_db": 45.6,
+      "level_db": -25.3
+    }
+  },
+  "whimsical": {
+    "recipe_fish": {
+      "cue": "",
+      "temperature": 0.4,
+      "prosody_speed": 1.15,
+      "volume_db": 0.0
+    },
+    "signature": "level float: high voice card + low temp; no punch cues"
+  },
+  "narration": {
+    "recipe_fish": {
+      "cue": "",
+      "temperature": 0.5,
+      "prosody_speed": 1.0,
+      "volume_db": 0.0
+    },
+    "signature": "neutral knobs; voice-selected (narrator card)"
+  }
+}

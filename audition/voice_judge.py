@@ -124,7 +124,28 @@ def measure(path: Path) -> dict:
                                  for x in rms_db) / len(rms_db)) ** 0.5, 1),
             "p90_p10_db": round(rms_db[int(len(rms_db) * 0.9)] - rms_db[int(len(rms_db) * 0.1)], 1),
         }
+    # brightness: spectral centroid (Hz) — squeaky/nasal vs dark/warm proxy
+    brightness = {}
+    try:
+        import numpy as np
+        x = np.asarray(samples, dtype="float64")
+        n = 2048
+        cands = []
+        for i in range(0, len(x) - n, n):
+            seg = x[i:i + n]
+            if np.sqrt(np.mean(seg ** 2)) < 0.01:
+                continue
+            sp = np.abs(np.fft.rfft(seg * np.hanning(n)))
+            freqs = np.fft.rfftfreq(n, 1.0 / sr)
+            if sp.sum() > 0:
+                cands.append(float((freqs * sp).sum() / sp.sum()))
+        if cands:
+            cands.sort()
+            brightness = {"spectral_centroid_hz": round(cands[len(cands) // 2], 0)}
+    except ImportError:
+        pass
     return {"duration_ms": dur_ms, "pitch": pitch, "intensity": intensity,
+            "brightness": brightness,
             "method": "parselmouth-missing;numpy-or-pure-autocorrelation"}
 
 
@@ -164,6 +185,89 @@ def judge(path: Path, vibe: str = "", claimed_ms: int = 0,
             "ok": lo <= pv <= hi})
     verdict["ok"] = all(c.get("ok") for c in verdict["checks"]) if verdict["checks"] else None
     return verdict
+
+
+def timbre_profile(path: Path) -> dict:
+    """Timbre fingerprint of a clip — comparable to theory acoustic.json fields.
+
+    numpy-only: centroid (have), MFCC-13, proxy jitter/shimmer from frame
+    pitch/amp deltas. Proxy-labeled: true period jitter needs Praat.
+    """
+    import numpy as np
+    samples, sr = _decode_mono(path)
+    x = np.asarray(samples, dtype="float64")
+    n, hop = 2048, 512
+    frames = [x[i:i + n] * np.hanning(n) for i in range(0, len(x) - n, hop)
+              if np.sqrt(np.mean(x[i:i + n] ** 2)) > 0.01]
+    if not frames:
+        return {}
+    spec = np.abs(np.fft.rfft(np.stack(frames), axis=1)) ** 2
+    freqs = np.fft.rfftfreq(n, 1.0 / sr)
+    centroid = float(((freqs[None, :] * spec).sum(1) / spec.sum(1)).mean())
+    # MFCC-13 via mel filterbank
+    n_mels = 26
+    fmin, fmax = 0.0, sr / 2
+    mel = lambda f: 2595 * np.log10(1 + f / 700)
+    inv = lambda m: 700 * (10 ** (m / 2595) - 1)
+    mels = np.linspace(mel(fmin), mel(fmax), n_mels + 2)
+    hz = inv(mels)
+    bins = np.searchsorted(freqs, hz)
+    fb = np.zeros((n_mels, len(freqs)))
+    for i in range(n_mels):
+        a, b, c = bins[i], bins[i + 1], bins[i + 2]
+        if b > a:
+            fb[i, a:b] = (np.arange(a, b) - a) / max(b - a, 1)
+        if c > b:
+            fb[i, b:c] = (c - np.arange(b, c)) / max(c - b, 1)
+    logmel = np.log10((spec @ fb.T) + 1e-10)
+    mfcc = np.fft.irct(logmel.mean(0), n=13) if hasattr(np.fft, "irct") else None
+    if mfcc is None:
+        # manual DCT-II
+        k = np.arange(13)[:, None]
+        nn = logmel.shape[1]
+        mfcc = np.sqrt(2 / nn) * (logmel.mean(0)[None, :] *
+                                  np.cos(np.pi * k * (np.arange(nn) + 0.5) / nn)).sum(1)
+    # proxy jitter/shimmer from frame-level f0/amp deltas
+    track = np.asarray(_pitch_track(samples, sr)) if False else np.asarray(
+        _pitch_track_pure(samples, sr))
+    jitter = shimmer = None
+    if len(track) > 10:
+        t = np.asarray(track)
+        jitter = float(np.mean(np.abs(np.diff(t)) / np.maximum(t[:-1], 1)) * 100)
+    amps = [np.sqrt(np.mean(f ** 2)) for f in frames if np.sqrt(np.mean(f ** 2)) > 0]
+    if len(amps) > 10:
+        a = np.asarray(amps)
+        shimmer = float(np.mean(np.abs(np.diff(a)) / np.maximum(a[:-1], 1e-6)) * 100)
+    return {"centroid_hz": round(centroid, 1),
+            "mfcc_mean": [round(float(v), 1) for v in mfcc] if mfcc is not None else [],
+            "jitter_pct_proxy": round(jitter, 2) if jitter is not None else None,
+            "shimmer_pct_proxy": round(shimmer, 2) if shimmer is not None else None}
+
+
+def timbre_distance(measured: dict, target: dict) -> dict:
+    """Rel-error vector vs theory acoustic.json target (f0/spectral/quality)."""
+    out = {}
+    tf0 = (target.get("f0") or {}).get("median_hz")
+    if tf0 and measured.get("median_hz"):
+        out["f0_rel_err"] = round(abs(measured["median_hz"] - tf0) / tf0, 3)
+    tc = (target.get("spectral") or {}).get("centroid_mean_hz")
+    if tc and measured.get("centroid_hz"):
+        out["centroid_rel_err"] = round(abs(measured["centroid_hz"] - tc) / tc, 3)
+    tq = target.get("voice_quality") or {}
+    if tq.get("jitter_pct") and measured.get("jitter_pct_proxy"):
+        out["jitter_rel_err"] = round(abs(measured["jitter_pct_proxy"] - tq["jitter_pct"]) / tq["jitter_pct"], 3)
+    if tq.get("shimmer_pct") and measured.get("shimmer_pct_proxy"):
+        out["shimmer_rel_err"] = round(abs(measured["shimmer_pct_proxy"] - tq["shimmer_pct"]) / tq["shimmer_pct"], 3)
+    tm = target.get("mfcc_mean")
+    mm = measured.get("mfcc_mean")
+    if tm and mm and len(tm) == len(mm):
+        num = sum((a - b) ** 2 for a, b in zip(mm, tm))
+        den = sum(a * a for a in tm) or 1
+        out["mfcc_rel_l2"] = round((num / den) ** 0.5, 3)
+    if out:
+        vals = [v for k, v in out.items() if k != "composite"]
+        out["composite"] = round(sum(vals) / len(vals), 3)
+    return out
 
 
 def _main() -> None:
