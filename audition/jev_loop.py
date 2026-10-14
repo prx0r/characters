@@ -99,7 +99,7 @@ def measure_wpm_var(path: Path, n_words: int) -> dict:
 
 
 def run_round(setname: str, round_i: int, errors: list, profile: dict,
-               speed_scale: float = 1.0) -> dict:
+               speed_scale: float = 1.0, beat_scales: dict | None = None) -> dict:
     import re
     words_all, gem = load_set(setname)
     words = [w for w in words_all if not w["text"].strip().startswith("[")]
@@ -119,7 +119,9 @@ def run_round(setname: str, round_i: int, errors: list, profile: dict,
         true_all = gemini_labels(gem, b["t0"], b["t1"])
         match = 1.0 if pred_emo == true_emo else (
             0.5 if pred_emo in true_all[1:3] else 0.0)
-        wav = render_pred(setname, round_i, b, pred_emo, pace, speed_scale)
+        bscale = (beat_scales or {}).get(sid, 1.0)
+        wav = render_pred(setname, round_i, b, pred_emo, pace,
+                          speed_scale * bscale)
         gen = measure_wpm_var(wav, b["n_words"])
         # actual: speech-span wpm from word timings (crowd time excluded)
         in_win = [w for w in words if b["t0"] <= w["start"] < b["t1"]]
@@ -138,6 +140,12 @@ def run_round(setname: str, round_i: int, errors: list, profile: dict,
                "gen_var": gen["var_st"], "act_var": act_var, "var_err": var_err,
                "wav": str(wav)}
         rows.append(row)
+        if beat_scales is not None and gen["wpm"] > 40 and act_wpm > 40:
+            import math
+            ratio = act_wpm / gen["wpm"]
+            ratio = max(0.5, min(2.0, ratio))
+            old = beat_scales.get(sid, 1.0)
+            beat_scales[sid] = round(old * (ratio ** 0.7), 3)  # damped
         new_errors.append({"seg": sid, "pred_emo": pred_emo, "true_emo": true_emo,
                            "pace": round(pace, 2), "wpm_err": wpm_err,
                            "var_err": var_err,
@@ -240,8 +248,10 @@ def run(setname: str, rounds: int = 3, profile: dict | None = None) -> dict:
     errors: list = []
     history = []
     speed_scale = 1.0
+    beat_scales: dict = {}
     for r in range(1, rounds + 1):
-        summary, new_errors = run_round(setname, r, errors, profile, speed_scale)
+        summary, new_errors = run_round(setname, r, errors, profile, speed_scale,
+                                        beat_scales)
         # empirical tempo calibration: geometric mean of act/gen wpm ratio
         ratios = [r_["act_wpm"] / max(r_["gen_wpm"], 1) for r_ in summary["rows"]
                    if r_["gen_wpm"] > 50 and r_["act_wpm"] > 50]
