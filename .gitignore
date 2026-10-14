@@ -5,3 +5,4 @@ __pycache__/
 
 # voice lab audio (recipes/JSONs stay tracked)
 audition/voicelab/**/*.wav
+audition/voicelab/**/*.mp3

@@ -12,12 +12,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import time
 from pathlib import Path
 
 HERE = Path(__file__).parent
 REPO = HERE.parent
 LAB = HERE / "voicelab" / "ari_set"
+VOICE = os.getenv("ARI_VOICE_ID", "") or None  # clone id → his timbre
 
 # gemini segments (kt704): (t0, t1, emotion, base_temp, base_speed, cue)
 SEGMENTS = [
@@ -53,7 +55,7 @@ def render(name, text, temp, speed, vol, cue):
     import fish_tts
     t = f"{cue} {text}".strip() if cue else text
     r = fish_tts.synthesize_fish(f"ariset-{name}", t, direction=False,
-                                 temperature=temp,
+                                 temperature=temp, voice=VOICE,
                                  prosody={"speed": round(speed, 2), "volume": vol})
     return Path(r["path"])
 
