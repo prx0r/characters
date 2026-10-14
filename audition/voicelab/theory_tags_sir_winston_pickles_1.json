@@ -1,0 +1,19 @@
+{
+  "set": "sir_winston_pickles_1",
+  "cost_usd": 2.4948e-05,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "This, by the way, is little Kwame. I've been sponsoring this little gu",
+      "garden_path": 0.76,
+      "identity_contradiction": 0.36,
+      "surprise": 2.22,
+      "escalation": 0.51,
+      "pause_before": 0,
+      "wpm_dev": 0.0,
+      "laugh_near": true
+    }
+  ],
+  "laugh_correlations": {},
+  "at": "2026-10-14T19:22:36Z"
+}

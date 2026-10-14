@@ -105,11 +105,19 @@ def compose(slug: str, tts: str = "auto", modulator: str | None = None,
         provenance.append({"beat": bid, "path": r["path"],
                            "duration_ms": r["duration_ms"],
                            "provenance": r["provenance"]})
-        pause = int(b.get("pause_after_ms", 300) or 0)
+        import random
+        pause = int(b.get("pause_after_ms", 600) or 600)
         nxt = beats[beats.index(b) + 1] if b is not beats[-1] else {}
-        # TIC-TALK stillness-before-punch: >=500ms before punch/closer beats
-        if (nxt.get("type") or "") in ("punchline", "closer", "tag"):
-            pause = max(pause, 500)
+        ntype = (nxt.get("type") or "")
+        # dpv (Timing-is-Everything, 828 sets): setups establish ~0.6s;
+        # STRATEGIC COUPLING: pause ~1.5s before punch/closer (pros extend
+        # 41% before high-surprise; amateur 27%; our old 500ms = amateur)
+        if ntype in ("punchline", "closer"):
+            pause = max(pause, 1500)
+        elif ntype == "tag":
+            pause = max(pause, 1000)
+        # pause variability (r=0.35 with votes): jitter gaps +-25% deterministically
+        pause = int(pause * (0.85 + 0.3 * ((hash(str(b.get("id"))) % 100) / 100)))
         if pause > 0 and b is not beats[-1]:
             parts.append(fish_tts.silence_wav(pause))
 

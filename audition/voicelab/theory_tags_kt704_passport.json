@@ -1,0 +1,52 @@
+{
+  "set": "kt704_passport",
+  "cost_usd": 6.3378e-05,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "What I love about Texas is that you guys are, like, proud to be Americ",
+      "garden_path": 0.47,
+      "identity_contradiction": 0.15,
+      "surprise": 0.4,
+      "escalation": 0.23,
+      "pause_before": 0,
+      "wpm_dev": 8.5,
+      "laugh_near": false
+    },
+    {
+      "seg": "s1",
+      "text": "hyped. I'm ready to get off the plane. I watched Saving Private Ryan b",
+      "garden_path": 0.7,
+      "identity_contradiction": 0.33,
+      "surprise": 1.57,
+      "escalation": 0.85,
+      "pause_before": 0.0,
+      "wpm_dev": 12.0,
+      "laugh_near": false
+    },
+    {
+      "seg": "s2",
+      "text": "I met had, like, green hair. Every conversation I had in Seattle, they",
+      "garden_path": 0.41,
+      "identity_contradiction": 0.25,
+      "surprise": 1.52,
+      "escalation": 0.79,
+      "pause_before": 0.46,
+      "wpm_dev": 13.2,
+      "laugh_near": false
+    },
+    {
+      "seg": "s3",
+      "text": "go check out Ukraine. Try to get an oatmeal latte in downtown Kiev, yo",
+      "garden_path": 0.32,
+      "identity_contradiction": 0.26,
+      "surprise": 1.32,
+      "escalation": 0.85,
+      "pause_before": 0.0,
+      "wpm_dev": -33.7,
+      "laugh_near": false
+    }
+  ],
+  "laugh_correlations": {},
+  "at": "2026-10-14T19:22:35Z"
+}
