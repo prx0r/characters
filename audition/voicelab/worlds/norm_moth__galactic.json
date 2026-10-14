@@ -1,0 +1,55 @@
+{
+  "title": "norm_moth__galactic",
+  "collision": "wrong_expert",
+  "source_delivery": "norm_macdonald_moth (192wpm, pitch_std 10.1, dyn 13.3)",
+  "world": "galactic",
+  "beats": [
+    {
+      "label": "setup",
+      "text": "I went to the Galactic Bureaucracy to file a complaint. The clerk \u2014 a gray, four feet tall, big eyes \u2014 he says, 'What seems to be the problem?'",
+      "cue": "[neutral]",
+      "temp": 0.55,
+      "speed": 0.85,
+      "vol": -1.0
+    },
+    {
+      "label": "escalation",
+      "text": "And I say, 'Doc, I don't even know what I'm doing anymore. I work in HR on Zeta Reticuli, and all day long, I process forms. Honestly, I don't even know what I'm processing anymore. I don't even know if the Supervisor knows. He only knows he has power over me, and that seems to bring him happiness.'",
+      "cue": "[sarcastic]",
+      "temp": 0.6,
+      "speed": 0.9,
+      "vol": 0.0
+    },
+    {
+      "label": "deadpan",
+      "text": "And the gray says, 'You should see a psychiatrist.' And I say, 'But Doc \u2014 the light was on.'",
+      "cue": "[indifferent]",
+      "temp": 0.4,
+      "speed": 0.75,
+      "vol": -2.0
+    },
+    {
+      "label": "closer",
+      "text": "And the gray just stares at me. Because on Zeta Reticuli, the light is ALWAYS on.",
+      "cue": "[deadpan]",
+      "temp": 0.35,
+      "speed": 0.7,
+      "vol": -2.5
+    }
+  ],
+  "out": "voicelab/worlds/norm_moth__galactic.wav",
+  "verify_match": 0.934,
+  "unsaid": [
+    "\u2014",
+    "gray",
+    "feet",
+    "\u2014",
+    "gray",
+    "\u2014",
+    "gray",
+    "because"
+  ],
+  "duration_ms": 46027,
+  "pitch_std": 5.62,
+  "wpm": 159.0
+}

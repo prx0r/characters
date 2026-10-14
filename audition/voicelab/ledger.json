@@ -1,7 +1,7 @@
 {
   "rule": "every A/B run registers; verdict pending until human fills",
   "comedy_judge_note": "this ledger + stencils + priors = timing/delivery ground truth for the future judge engine",
-  "updated_at": "2026-10-14T13:28:02Z",
+  "updated_at": "2026-10-14T14:27:52Z",
   "priors_file": "/tmp/opencode/characters/audition/voicelab/emo_priors_v2.json",
   "archive_dir": "/home/box/voice_engine/sets",
   "entries": {

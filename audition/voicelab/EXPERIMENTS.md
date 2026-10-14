@@ -1,6 +1,6 @@
 # EXPERIMENTS — A/B ledger (auto-generated; verdicts pending)
 
-Updated: 2026-10-14T13:28:02Z  |  audio archive: `/home/box/voice_engine/sets`
+Updated: 2026-10-14T14:27:52Z  |  audio archive: `/home/box/voice_engine/sets`
 
 | set | performer | segs | avg_score | misses | zero-shot MAE | verdict |
 |---|---|---|---|---|---|---|
