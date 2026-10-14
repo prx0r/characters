@@ -1,0 +1,46 @@
+{
+  "profile": "kt704_standup.json",
+  "voice": "kid_darwin",
+  "segments": [
+    {
+      "seg": 0,
+      "recipe": {
+        "temp": 0.73,
+        "speed": 0.89,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "match": 0.914
+    },
+    {
+      "seg": 1,
+      "recipe": {
+        "temp": 0.77,
+        "speed": 0.81,
+        "cue": "[sarcastic]",
+        "vol": 0.0
+      },
+      "match": 1.0
+    },
+    {
+      "seg": 2,
+      "recipe": {
+        "temp": 0.73,
+        "speed": 0.85,
+        "cue": "[angry]",
+        "vol": 0.0
+      },
+      "match": 0.935
+    },
+    {
+      "seg": 3,
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.68,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "match": 0.947
+    }
+  ]
+}
