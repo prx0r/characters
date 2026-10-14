@@ -117,11 +117,31 @@ def compose(slug: str, tts: str = "auto", modulator: str | None = None,
     fish_tts.stitch_wav(parts, out)
     actual = fish_tts._ffprobe_ms(out)
     claimed = int((delivery.get("metadata") or {}).get("total_duration_ms") or 0)
+
+    # auto-verify: CF whisper on the stitched render, word-match vs intended
+    verify = None
+    try:
+        import cf_asr
+        intended = " ".join((b.get("text") or "") for b in beats)
+        heard = cf_asr.transcribe(out)
+        heard_words = {w["text"].lower().strip(".,!?;:'\"") for w in heard.get("words", [])}
+        intended_words = [w.lower().strip(".,!?;:'\"") for w in intended.split()
+                          if w.lower().strip(".,!?;:'\"") not in ("", "crap")]
+        unsaid = [w for w in intended_words if w not in heard_words]
+        match = 1.0 - len(unsaid) / max(len(intended_words), 1)
+        verify = {"asr": heard.get("asr"), "match": round(match, 3),
+                  "unsaid": unsaid[:10],
+                  "laugh_events": len(heard.get("laugh_events") or [])}
+        print(f"  verify: match={verify['match']} unsaid={unsaid[:5] or 'none'}")
+    except Exception as e:
+        verify = {"error": str(e)[:120]}
+
     rec = {
         "slug": slug, "tts": tts, "modulator": mod, "voice": voice_id,
         "zero_shot": bool(refs or ref_id), "beats": provenance,
         "out": str(out), "actual_ms": actual, "claimed_ms": claimed,
         "drift_ms": (actual - claimed) if (actual and claimed) else None,
+        "verify": verify,
         "elapsed_s": round(time.time() - t0, 1),
         "composed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }

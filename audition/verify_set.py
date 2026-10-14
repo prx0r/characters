@@ -24,11 +24,17 @@ _model = None
 
 
 def asr(audio_path: Path) -> str:
+    """CF whisper primary (fast on short clean renders, ~4s), local tiny fallback."""
+    try:
+        import cf_asr
+        d = cf_asr.transcribe(audio_path)
+        return " ".join(w["text"] for w in d.get("words", []))
+    except Exception:
+        pass
     global _model
     if _model is None:
         from faster_whisper import WhisperModel
         _model = WhisperModel("tiny", device="cpu", compute_type="int8")
-    # decode ourselves — system pyav is incompatible with fw's decode_audio
     import array
     import subprocess
     import tempfile

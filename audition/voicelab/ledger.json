@@ -1,0 +1,342 @@
+{
+  "rule": "every A/B run registers; verdict pending until human fills",
+  "comedy_judge_note": "this ledger + stencils + priors = timing/delivery ground truth for the future judge engine",
+  "updated_at": "2026-10-14T13:28:02Z",
+  "priors_file": "/tmp/opencode/characters/audition/voicelab/emo_priors_v2.json",
+  "archive_dir": "/home/box/voice_engine/sets",
+  "entries": {
+    "casey_rocket_casey_rocket_1": {
+      "performer": "casey_rocket",
+      "set": "casey_rocket_1",
+      "voice": "9c36c951cee84457a5cc9f94387e9a42",
+      "n_segments": 5,
+      "avg_score": 5.23,
+      "miss_count": 4,
+      "learned_per_emotion": {
+        "gleeful": {
+          "mean_wpm_err": 0.4,
+          "suggested_speed_delta": -0.0
+        },
+        "manic": {
+          "mean_wpm_err": -0.5,
+          "suggested_speed_delta": 0.0
+        },
+        "deadpan": {
+          "mean_wpm_err": 14.6,
+          "suggested_speed_delta": -0.1
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/casey_rocket_casey_rocket_1.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/casey_rocket_1.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_casey_rocket_1.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/casey_rocket_casey_rocket_1.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "casey_rocket_casey_rocket_2": {
+      "performer": "casey_rocket",
+      "set": "casey_rocket_2",
+      "voice": "9c36c951cee84457a5cc9f94387e9a42",
+      "n_segments": 6,
+      "avg_score": 5.61,
+      "miss_count": 3,
+      "learned_per_emotion": {
+        "gleeful": {
+          "mean_wpm_err": 16.6,
+          "suggested_speed_delta": -0.11
+        },
+        "manic": {
+          "mean_wpm_err": -0.7,
+          "suggested_speed_delta": 0.0
+        },
+        "deadpan": {
+          "mean_wpm_err": -13.5,
+          "suggested_speed_delta": 0.09
+        },
+        "sarcastic": {
+          "mean_wpm_err": -4.0,
+          "suggested_speed_delta": 0.03
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/casey_rocket_casey_rocket_2.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/casey_rocket_2.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_casey_rocket_2.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/casey_rocket_casey_rocket_2.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "ari_matti_kt704_passport": {
+      "performer": "ari_matti",
+      "set": "kt704_passport",
+      "voice": "",
+      "n_segments": 5,
+      "avg_score": 6.58,
+      "miss_count": 4,
+      "learned_per_emotion": {
+        "gleeful": {
+          "mean_wpm_err": -6.1,
+          "suggested_speed_delta": 0.04
+        },
+        "manic": {
+          "mean_wpm_err": -16.6,
+          "suggested_speed_delta": 0.11
+        },
+        "sarcastic": {
+          "mean_wpm_err": 4.3,
+          "suggested_speed_delta": -0.03
+        },
+        "mock_indignant": {
+          "mean_wpm_err": -3.4,
+          "suggested_speed_delta": 0.02
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/ari_matti_kt704_passport.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/kt704_passport.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_kt704_passport.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/ari_matti_kt704_passport.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "ari_matti_kt715_ep715": {
+      "performer": "ari_matti",
+      "set": "kt715_ep715",
+      "voice": "",
+      "n_segments": 5,
+      "avg_score": 6.44,
+      "miss_count": 3,
+      "learned_per_emotion": {
+        "neutral": {
+          "mean_wpm_err": -8.1,
+          "suggested_speed_delta": 0.05
+        },
+        "embarrassed": {
+          "mean_wpm_err": 7.3,
+          "suggested_speed_delta": -0.05
+        },
+        "mock_indignant": {
+          "mean_wpm_err": 2.8,
+          "suggested_speed_delta": -0.02
+        },
+        "gleeful": {
+          "mean_wpm_err": 0.5,
+          "suggested_speed_delta": -0.0
+        },
+        "manic": {
+          "mean_wpm_err": 9.1,
+          "suggested_speed_delta": -0.06
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/ari_matti_kt715_ep715.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/kt715_ep715.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_kt715_ep715.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/ari_matti_kt715_ep715.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "ari_matti_kt715_walking": {
+      "performer": "ari_matti",
+      "set": "kt715_walking",
+      "voice": "",
+      "n_segments": 5,
+      "avg_score": 5.1,
+      "miss_count": 5,
+      "learned_per_emotion": {
+        "neutral": {
+          "mean_wpm_err": -9.2,
+          "suggested_speed_delta": 0.06
+        },
+        "sarcastic": {
+          "mean_wpm_err": -4.4,
+          "suggested_speed_delta": 0.03
+        },
+        "mock_indignant": {
+          "mean_wpm_err": 1.7,
+          "suggested_speed_delta": -0.01
+        },
+        "gleeful": {
+          "mean_wpm_err": -8.6,
+          "suggested_speed_delta": 0.06
+        },
+        "deadpan": {
+          "mean_wpm_err": 0.1,
+          "suggested_speed_delta": -0.0
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/ari_matti_kt715_walking.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/kt715_walking.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_kt715_walking.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/ari_matti_kt715_walking.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "ari_matti_kt728_diversifying": {
+      "performer": "ari_matti",
+      "set": "kt728_diversifying",
+      "voice": "",
+      "n_segments": 5,
+      "avg_score": 16.39,
+      "miss_count": 3,
+      "learned_per_emotion": {
+        "neutral": {
+          "mean_wpm_err": -0.4,
+          "suggested_speed_delta": 0.0
+        },
+        "sarcastic": {
+          "mean_wpm_err": 15.6,
+          "suggested_speed_delta": -0.1
+        },
+        "mock_indignant": {
+          "mean_wpm_err": -3.7,
+          "suggested_speed_delta": 0.02
+        },
+        "defiant": {
+          "mean_wpm_err": 16.7,
+          "suggested_speed_delta": -0.11
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/ari_matti_kt728_diversifying.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/kt728_diversifying.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_kt728_diversifying.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/ari_matti_kt728_diversifying.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "ari_matti_kt728_jamesbond": {
+      "performer": "ari_matti",
+      "set": "kt728_jamesbond",
+      "voice": "",
+      "n_segments": 4,
+      "avg_score": 8.97,
+      "miss_count": 2,
+      "learned_per_emotion": {
+        "sarcastic": {
+          "mean_wpm_err": -3.6,
+          "suggested_speed_delta": 0.02
+        },
+        "gleeful": {
+          "mean_wpm_err": -16.2,
+          "suggested_speed_delta": 0.11
+        },
+        "neutral": {
+          "mean_wpm_err": 4.8,
+          "suggested_speed_delta": -0.03
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/ari_matti_kt728_jamesbond.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/kt728_jamesbond.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_kt728_jamesbond.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/ari_matti_kt728_jamesbond.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "louis_ck_louis_roadrage": {
+      "performer": "louis_ck",
+      "set": "louis_roadrage",
+      "voice": "fb015415ebf141999fc882baa0e0834c",
+      "n_segments": 12,
+      "avg_score": 3.87,
+      "miss_count": 3,
+      "learned_per_emotion": {
+        "manic": {
+          "mean_wpm_err": -3.4,
+          "suggested_speed_delta": 0.02
+        },
+        "deadpan": {
+          "mean_wpm_err": 0.9,
+          "suggested_speed_delta": -0.01
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/louis_ck_louis_roadrage.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/louis_roadrage.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_louis_roadrage.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/louis_ck_louis_roadrage.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "sir_winston_pickles_sir_winston_pickles_1": {
+      "performer": "sir_winston_pickles",
+      "set": "sir_winston_pickles_1",
+      "voice": "100e10e7c5464a10b5120a01ade115a2",
+      "n_segments": 3,
+      "avg_score": 5.48,
+      "miss_count": 1,
+      "learned_per_emotion": {
+        "deadpan": {
+          "mean_wpm_err": -4.4,
+          "suggested_speed_delta": 0.03
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/sir_winston_pickles_sir_winston_pickles_1.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/sir_winston_pickles_1.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_sir_winston_pickles_1.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/sir_winston_pickles_sir_winston_pickles_1.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "sir_winston_pickles_sir_winston_pickles_2": {
+      "performer": "sir_winston_pickles",
+      "set": "sir_winston_pickles_2",
+      "voice": "100e10e7c5464a10b5120a01ade115a2",
+      "n_segments": 3,
+      "avg_score": 28.19,
+      "miss_count": 3,
+      "learned_per_emotion": {
+        "deadpan": {
+          "mean_wpm_err": 8.4,
+          "suggested_speed_delta": -0.06
+        }
+      },
+      "audio": "/home/box/voice_engine/sets/sir_winston_pickles_sir_winston_pickles_2.wav",
+      "board": "/tmp/opencode/characters/audition/voicelab/perf_sets/sir_winston_pickles_2.json",
+      "miss_ledger": "/tmp/opencode/characters/audition/voicelab/perf_sets/miss_sir_winston_pickles_2.json",
+      "stencil": "/tmp/opencode/characters/audition/voicelab/stencils/sir_winston_pickles_sir_winston_pickles_2.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "zeroshot_kam_patterson": {
+      "performer": "kam_patterson",
+      "set": "(unseen)",
+      "n_segments": 1,
+      "zero_shot_mae": 74.6,
+      "after_adapt_mae": 33.6,
+      "board": "/tmp/opencode/characters/audition/voicelab/zeroshot_kam_patterson.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "ari_calibrate": {
+      "performer": "ari",
+      "set": "(calibration)",
+      "calibrate_winners": {},
+      "board": "/tmp/opencode/characters/audition/voicelab/calibrate/ari_calibrate.json",
+      "verdict": null,
+      "verdict_note": ""
+    },
+    "casey_calibrate": {
+      "performer": "casey",
+      "set": "(calibration)",
+      "calibrate_winners": {
+        "manic": {
+          "wpm": 220.3,
+          "score": 1.98,
+          "cue": null,
+          "temp": 0.85
+        },
+        "deadpan": {
+          "wpm": 225.6,
+          "score": 4.03,
+          "cue": null,
+          "temp": 0.44999999999999996
+        },
+        "gleeful": {
+          "wpm": 299.2,
+          "score": 5.46,
+          "cue": null,
+          "temp": 0.9
+        }
+      },
+      "board": "/tmp/opencode/characters/audition/voicelab/calibrate/casey_calibrate.json",
+      "verdict": null,
+      "verdict_note": ""
+    }
+  }
+}
