@@ -57,3 +57,44 @@ The "humans load vids, characters react" format:
 - live stream = host (sage_narrator) + rotating reactors ranked by Jev
 - agent-only mode: same pipeline, no human host, characters debate the clip
 This is VISION.md's SURROUNDED + podcast pattern, pointed at video input.
+
+## 6. Mood function — Jev-driven temperament in live interview (owner design)
+
+The KT interview, alive: Tony asks a question → the character's TEMPERAMENT
+(modulator, from Jev given conversation context) defines how they interpret
+it and what response TYPE fits. Wiring:
+- qwen-omni (Alibaba stack) feeds live conversation context
+- Jev (jev_decide) picks modulator given: character's modulator_range +
+  prior POGs per modulator + conversation affect — the "mood function"
+- temperament = (modulator + MARY affect coords) → interpretation filter:
+  paranoid hears threat, smug hears admiration, subservient hears orders
+- response type from archetype (sincere_storyteller tells a story,
+  suspension_deadpan asserts an unreality, mock_indignant finds grievance)
+- render via voice card + recipe, <2s on free tier
+Different characters wired differently = different modulator priors +
+different preferred_theories + different misinterpretation_rules. The
+whole WHO×WHAT×HOW schema, live.
+
+## 7. agentrun.ai (workflow DSL "powered by Jev")
+
+agentrun.ai (grep.ai/Parcha Labs): typed workflow DSL combining Jev
+decisions + agent calls + code, inspectable/deterministic, Apache-2.0,
+beta `@parcha/agentrun-dsl`. Their runJudge interface = a Jev adapter
+(`@parcha/agentrun-jev`) — the interview mood loop maps directly:
+runJudge = our jev_decide, runNode = qwen character response,
+runEffect = TTS render + ledger write. Worth authoring the live-show
+quickfire as an AgentRun workflow when we go live: deterministic replay
+of every show beat + typed judgments. Not needed for current engine
+(our jev_decide.py suffices); adopt when multi-agent orchestration
+outgrows a single script.
+
+## 8. Taste calibration port (influence <-> characters)
+
+Unified verdict shape (both repos): `{state: hot|growing|steady|cooling|cold,
+action: double_down|experiment|pivot, n, wilson_lb, source}`.
+Voice battle loop (`audition/voice_battle.py`): blind A/B pairs of
+candidates, Elo K=32, Wilson LB gates "hot", calibrate at ~20 picks
+(mini-LoRe — fitted weights from few comparisons, no training infra).
+Verdicts feed casting.json; owner's locks/notes feed the material.
+Crosswalk: influence taste_profile 85-features <-> our casting weights;
+one fuse() shape kills the fork.

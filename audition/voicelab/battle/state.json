@@ -1,0 +1,33 @@
+{
+  "ratings": {
+    "kid_darwin": 1500.0,
+    "spongebob": 1500.0,
+    "roast": 1500.0,
+    "narrator": 1500.0,
+    "luna": 1500.0
+  },
+  "history": [],
+  "current": {
+    "a": "roast",
+    "b": "luna"
+  },
+  "material": "I run river protection. Payment is cucumbers. Strictly cucumbers. Dave owes me nine.",
+  "candidates": {
+    "kid_darwin": {
+      "type": "voice_card"
+    },
+    "spongebob": {
+      "type": "voice_card"
+    },
+    "roast": {
+      "type": "voice_card"
+    },
+    "narrator": {
+      "type": "voice_card"
+    },
+    "luna": {
+      "type": "voice_card"
+    }
+  },
+  "created": "2026-10-14T14:56:09Z"
+}
