@@ -108,7 +108,7 @@ if __name__ == "__main__":
     ensure_session()
     if sys.argv[1] == "call":
         out = tool(sys.argv[2], json.loads(sys.argv[3]), mid=99)
-        print(json.dumps(out, indent=1)[:2000])
+        print(json.dumps(out, indent=1))
     elif sys.argv[1] == "upload":
         out = upload(sys.argv[2])
-        print(json.dumps(out, indent=1)[:1200])
+        print(json.dumps(out, indent=1))

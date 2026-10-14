@@ -67,3 +67,59 @@ speed (0.5–2.0), volume (dB), pronunciation, voice choice.
 
 Everything above: `s2.1-pro-free`, $0. voice-design blocked on 402 (needs
 API credit top-up) — owner said no spend until then.
+**Credit policy (owner rule):** default synthesis = free API forever; MCP TTS
+only for one-shot identity checks (~100 credits, always print
+`credits_charged`); clone creation is free; ask with exact numbers before
+ANY new charge.
+
+## The KT → character pipeline (the actual product loop)
+
+1. **Mine a KT set** → `theory/scribe/*.json` (word timestamps) +
+   `*.gemini.json` (emotion arcs) + `*.acoustic.json` (timbre stats).
+2. **Freeze a standup profile** (`voicelab/profiles/<set>.json`): exact
+   words per segment + per-segment recipes (temp/speed/cue/vol). Voice is a
+   SLOT, not part of the profile. See `kt704_standup.json`.
+3. **Map profile → character archetype.** The delivery IS the casting:
+   wild-deep roast energy (var 6+, dyn 51dB) → dracula/villain types;
+   flat-narrow deadpan (var <2) → cryptkeeper/creepy-narrator; manic-spike
+   → chaotic gremlins. Owner mapping: "mr pickle delivery = dracula".
+4. **Drop a voice into the slot**: library card from `voices.json`, a
+   private clone (`mcp_fish.py` + `create_voice_clone`, creation $0), or
+   default. Render: same profile text+recipes, new voice_id.
+5. **Verify loop** (`verify_set.py`): faster-whisper transcribes the
+   render, word-diff vs intended text, auto-fix (slow down, re-cue) until
+   match is clean. Catches muffled/unsaid words.
+6. Fine-tune with the ari/casey RL machinery (`ari_set.py`) when a
+   character needs its own arc inside a domain.
+
+Stencil demo (2026-10-14): `kt704_standup` performed by ari clone,
+spongebob, kid, roast — same words+recipes, four identities.
+
+## Portable setup (another box)
+
+```bash
+# 1. deps (no torch; CPU only)
+python3 -m pip install faster-whisper          # verify-loop ASR
+# ffmpeg required
+
+# 2. free-tier key
+echo 'FISH_API_KEY=...' > audition/.env        # chmod 600; gitignored
+
+# 3. Fish MCP (identity search/clone; plan credits)
+opencode mcp add fish-audio --url https://api.fish.audio/mcp
+opencode mcp auth fish-audio                   # browser OAuth; token in
+                                               # ~/.local/share/opencode/mcp-auth.json
+                                               # (auto-refresh handled by mcp_fish.py)
+
+# 4. smoke
+python3 audition/compose_set.py kappa-kyle-cucumber-debt --dry-run
+python3 audition/mcp_fish.py call get_credit_balance '{}'
+ARI_VOICE_ID=<clone> python3 audition/ari_set.py --rounds 1
+python3 audition/verify_set.py --voice spongebob
+```
+
+Layout contract: engine = `audition/{fish_tts,voice_judge,mcp_fish,
+compose_set,calibrate_*,ari_set,verify_set,ab_voice,voicecast}.py`;
+registries = `audition/voicelab/{voices,domains}.json` +
+`voicelab/profiles/*.json`; corpus bands = `theory/vibe-bands.json`.
+Everything serializes to JSON; renders stay untracked (wav/mp3 gitignored).

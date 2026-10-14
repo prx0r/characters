@@ -1,0 +1,52 @@
+{
+  "profile_id": "kt704_standup",
+  "set": "kt704",
+  "type": "standup_minute",
+  "note": "ari exact words + per-segment emotion recipes; voice is a slot",
+  "segments": [
+    {
+      "seg": 0,
+      "text": "Dude, I go to Seattle, I'm hyped. I'm ready to get off the plane. I watched Saving Private Ryan back to back three times. [clapping] I'm ready to shoot somebody. Let's [censored] storm the Capitol and",
+      "emotion": null,
+      "recipe": {
+        "temp": 0.73,
+        "speed": 0.89,
+        "cue": "[delighted]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 1,
+      "text": "[censored] . And then I get to Seattle, everybody walks around. Every [censored] I met had, like, green hair. Every conversation I had in Seattle, they were all like, \"You know, America is built on a racist agenda.\"",
+      "emotion": null,
+      "recipe": {
+        "temp": 0.77,
+        "speed": 0.81,
+        "cue": "[sarcastic]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 2,
+      "text": "Who gives a [censored] ? You're here on the winning side. If you don't like America, go check out Ukraine. Try to get an oatmeal latte in downtown Kiev, you ungrateful [censored]",
+      "emotion": null,
+      "recipe": {
+        "temp": 0.73,
+        "speed": 0.85,
+        "cue": "[angry]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 3,
+      "text": ". [clapping] If you don't like America, give me your passport.",
+      "emotion": null,
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.68,
+        "cue": "[delighted]",
+        "vol": 0.0
+      }
+    }
+  ]
+}
