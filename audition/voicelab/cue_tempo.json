@@ -1,0 +1,18 @@
+{
+  "note": "cues accelerate beyond speed knob; speed = target/(base_wpm*factor); temp also shifts tempo (measured on [excited])",
+  "base_wpm_this_voice": 161.2,
+  "factors": {
+    "[excited]": 1.17,
+    "[delighted]": 0.98,
+    "[sarcastic]": 1.11,
+    "[frustrated]": 0.93,
+    "[neutral]": 0.94,
+    "[angry]": 0.99,
+    "": 1.0
+  },
+  "temp_factors_excited": {
+    "0.45": 0.83,
+    "0.65": 1.0,
+    "0.85": 0.84
+  }
+}
