@@ -350,6 +350,58 @@ def voice_for_pack(slug: str) -> tuple[str | None, list[dict] | None]:
     return None, None
 
 
+# Tone markers carry SEMANTIC tempo (S2 docs): these are how fish "thinks"
+# about pace — not a speed knob. Measured intrinsic factors in cue_tempo.json.
+TONE_TEMPO = {
+    "[in a hurry tone]": 1.25,
+    "[shouting]": 1.10,
+    "[calm]": 0.85,
+    "[soft tone]": 0.88,
+    "[whispering]": 0.80,
+}
+
+
+def tempo_via_prompt(target_mult: float, base_cue: str = "") -> tuple[str, float]:
+    """Map a tempo multiplier to (cue_string, clean_zone_speed).
+
+    The engine delivers tempo three ways, in priority order:
+      1. emotion cue's intrinsic tempo (cue_tempo factors)
+      2. tone marker (semantic pace: hurry/calm/whisper)
+      3. prosody.speed ONLY in fish's clean zone 0.92-1.08 (no pitch artifact)
+    Never a post-stretch. Never outside the clean zone.
+    """
+    try:
+        ct = json.loads((HERE / "voicelab" / "cue_tempo.json").read_text())["factors"]
+    except Exception:
+        ct = {}
+    cue_f = ct.get(base_cue, 1.0) if base_cue else 1.0
+    residual = target_mult / max(cue_f, 0.5)
+    tone = ""
+    if residual >= 1.12:
+        tone = "[in a hurry tone]"
+    elif residual <= 0.88:
+        tone = "[calm]" if residual > 0.7 else "[whispering]"
+    tone_f = TONE_TEMPO.get(tone, 1.0)
+    speed = max(0.92, min(1.08, residual / tone_f))
+    cues = " ".join(c for c in (base_cue, tone) if c)
+    return cues, round(speed, 2)
+
+
+def tempo_wav(src: Path, factor: float, out: Path | None = None) -> Path:
+    """Pitch-preserving fallback (ffmpeg atempo). LAST resort only — the
+    engine prefers prompting tempo via cues/markers (owner rule)."""
+    src = Path(src)
+    out = out or src.with_name(src.stem + f"_t{factor:.2f}" + src.suffix)
+    factor = max(0.5, min(2.0, float(factor)))
+    r = subprocess.run(
+        ["ffmpeg", "-y", "-v", "error", "-i", str(src),
+         "-filter:a", f"atempo={factor:.3f}", str(out)],
+        capture_output=True, timeout=60)
+    if r.returncode != 0 or not out.exists():
+        raise RuntimeError(f"atempo failed: {r.stderr.decode()[:150]}")
+    return out
+
+
 def synthesize_fish(audition_id: str, text: str, voice: str | None = None,
                     modulator: str = "", mod: dict | None = None,
                     paid: bool = False, direction: bool = True,
@@ -360,12 +412,29 @@ def synthesize_fish(audition_id: str, text: str, voice: str | None = None,
     model = model_for(paid=paid)
     directed = wrap_text(text, modulator or "neutral", mod, direction=direction)
     ref = voice or os.getenv("FISH_VOICE_ID") or None
+    # tempo via PROMPTING (owner rule): decompose speed target into
+    # emotion-cue intrinsic tempo + tone marker + clean-zone speed.
+    # Fish delivers the pace; nothing is stretched in post.
+    desired_speed = (prosody or {}).get("speed")
+    fish_prosody = dict(prosody) if prosody else None
+    if desired_speed is not None and not (0.92 <= float(desired_speed) <= 1.08):
+        import re as _re
+        m = _re.search(r"\[[^\]]+\]", directed)
+        base_cue = m.group(0) if m else ""
+        tone, clean_speed = tempo_via_prompt(float(desired_speed), base_cue)
+        # prepend only the NEW tone marker (keep emotion cue in place)
+        tone_new = [t for t in TONE_TEMPO if t in tone and t not in directed]
+        if tone_new:
+            directed = f"{tone_new[0]} {directed}"
+        if fish_prosody is None:
+            fish_prosody = {}
+        fish_prosody["speed"] = clean_speed
     out = AUDIO_DIR / f"{audition_id}-fish.mp3"
     if out.exists():
         out.unlink()
     try:
         data = _request(directed, ref, model, references=references,
-                        temperature=temperature, prosody=prosody,
+                        temperature=temperature, prosody=fish_prosody,
                         pronunciation=pronunciation)
     except Exception as e:
         raise RuntimeError(f"fish tts ({model}) failed: {str(e)[:200]}")
@@ -375,8 +444,10 @@ def synthesize_fish(audition_id: str, text: str, voice: str | None = None,
     dur = _ffprobe_ms(out) or estimate_ms(directed)
     return {"path": str(out), "duration_ms": dur,
             "provenance": f"fish-tts:{model}" + ("+direction" if direction else "")
+                          + ("+prompted-tempo" if fish_prosody and desired_speed
+                             and not (0.92 <= float(desired_speed) <= 1.08) else "")
                           + ("+ffprobe" if _ffprobe_ms(out) else "+estimated"),
-            "sha256": hashlib.sha256(data).hexdigest(),
+            "sha256": hashlib.sha256(out.read_bytes()).hexdigest(),
             "model": model, "directed": direction}
 
 
