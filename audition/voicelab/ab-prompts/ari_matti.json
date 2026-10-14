@@ -1,0 +1,42 @@
+{
+  "performer": "ari_matti",
+  "bodies": [
+    {
+      "variant": "t1",
+      "request": {
+        "instruction": "Comedy stage voice, adult male, mid-range pitch around 185Hz with sudden wide pitch swings, crisp consonants, light Nordic-European accent in English, dry measured setups that snap into sharp high-energy spikes, expressive not flat.",
+        "reference_text": "Audiences always ask me about the schedule.",
+        "language": "en",
+        "n": 1,
+        "seed": 42
+      },
+      "sent": false,
+      "cost_if_fired_usd": 0.01
+    },
+    {
+      "variant": "t2",
+      "request": {
+        "instruction": "Adult male comedian voice, mid pitch, high pitch variability, sarcastic unhurried cadence that explodes into fast mock-indignant bursts, slight rasp at volume, sharp intake of energy on punchlines.",
+        "reference_text": "Audiences always ask me about the schedule.",
+        "language": "en",
+        "n": 1,
+        "seed": 42
+      },
+      "sent": false,
+      "cost_if_fired_usd": 0.01
+    },
+    {
+      "variant": "t3",
+      "request": {
+        "instruction": "Comedy delivery model (stage persona hypothesis, not the real person): gleeful then sarcastic then mock_indignant arc. Pitch variability target 4.96 semitones; median pitch around 186.61 Hz. Delivery swings between measured setups and sharp high-energy spikes.",
+        "reference_text": "Audiences always ask me about the schedule.",
+        "language": "en",
+        "n": 1,
+        "seed": 42
+      },
+      "sent": false,
+      "cost_if_fired_usd": 0.01
+    }
+  ],
+  "blocked_on": "API credit (voice-design 402)"
+}

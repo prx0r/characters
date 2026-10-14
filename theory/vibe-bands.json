@@ -1,0 +1,479 @@
+{
+  "version": "vibe-bands.v1",
+  "method": "distill_dna.py \u2014 gemini segment emotions + praat prosody stats",
+  "note": "Delivery target bands only. No transcript content. Use: voice_judge compares rendered audio stats against these.",
+  "vibes": {
+    "deadpan": {
+      "energy": {
+        "n": 18,
+        "lo": 0.45,
+        "mid": 0.53,
+        "hi": 0.65
+      },
+      "pace": {
+        "n": 18,
+        "lo": 0.25,
+        "mid": 0.5,
+        "hi": 0.5
+      },
+      "pitch_shift_mean": -0.5,
+      "intensity": {
+        "n": 18,
+        "lo": 0.7,
+        "mid": 0.8,
+        "hi": 0.95
+      },
+      "n_segments": 18,
+      "sources": [
+        "casey_rocket_1_gemini.gemini",
+        "casey_rocket_2_gemini.gemini",
+        "casey_rocket_2_gemini_video.gemini",
+        "kt715_walking_gemini.gemini",
+        "kt728_diversifying_gemini.gemini",
+        "kt728_jamesbond_gemini.gemini",
+        "sir_winston_pickles_1_gemini.gemini",
+        "sir_winston_pickles_2_gemini.gemini"
+      ]
+    },
+    "defiant": {
+      "energy": {
+        "n": 1,
+        "lo": 0.75,
+        "mid": 0.75,
+        "hi": 0.75
+      },
+      "pace": {
+        "n": 1,
+        "lo": 0.25,
+        "mid": 0.25,
+        "hi": 0.25
+      },
+      "pitch_shift_mean": -1.0,
+      "intensity": {
+        "n": 1,
+        "lo": 0.8,
+        "mid": 0.8,
+        "hi": 0.8
+      },
+      "n_segments": 1,
+      "sources": [
+        "kt728_diversifying_gemini.gemini"
+      ]
+    },
+    "embarrassed": {
+      "energy": {
+        "n": 1,
+        "lo": 0.65,
+        "mid": 0.65,
+        "hi": 0.65
+      },
+      "pace": {
+        "n": 1,
+        "lo": 0.5,
+        "mid": 0.5,
+        "hi": 0.5
+      },
+      "pitch_shift_mean": 1.0,
+      "intensity": {
+        "n": 1,
+        "lo": 0.65,
+        "mid": 0.65,
+        "hi": 0.65
+      },
+      "n_segments": 1,
+      "sources": [
+        "kt715_ep715_gemini.gemini"
+      ]
+    },
+    "gleeful": {
+      "energy": {
+        "n": 13,
+        "lo": 0.65,
+        "mid": 0.75,
+        "hi": 0.85
+      },
+      "pace": {
+        "n": 13,
+        "lo": 0.25,
+        "mid": 0.5,
+        "hi": 0.8
+      },
+      "pitch_shift_mean": 0.38,
+      "intensity": {
+        "n": 13,
+        "lo": 0.7,
+        "mid": 0.8,
+        "hi": 0.9
+      },
+      "n_segments": 13,
+      "sources": [
+        "casey_rocket_1_gemini.gemini",
+        "casey_rocket_2_gemini.gemini",
+        "casey_rocket_2_gemini_video.gemini",
+        "kt704_ari_passport_gemini.gemini",
+        "kt715_ep715_gemini.gemini",
+        "kt715_walking_gemini.gemini",
+        "kt728_diversifying_gemini.gemini",
+        "kt728_jamesbond_gemini.gemini"
+      ]
+    },
+    "manic": {
+      "energy": {
+        "n": 9,
+        "lo": 0.75,
+        "mid": 0.8,
+        "hi": 0.95
+      },
+      "pace": {
+        "n": 9,
+        "lo": 0.5,
+        "mid": 0.8,
+        "hi": 0.8
+      },
+      "pitch_shift_mean": 0.56,
+      "intensity": {
+        "n": 9,
+        "lo": 0.8,
+        "mid": 0.85,
+        "hi": 0.95
+      },
+      "n_segments": 9,
+      "sources": [
+        "casey_rocket_1_gemini.gemini",
+        "casey_rocket_2_gemini.gemini",
+        "casey_rocket_2_gemini_video.gemini",
+        "kt704_ari_passport_gemini.gemini",
+        "kt715_ep715_gemini.gemini"
+      ]
+    },
+    "mock_indignant": {
+      "energy": {
+        "n": 4,
+        "lo": 0.65,
+        "mid": 0.8,
+        "hi": 0.95
+      },
+      "pace": {
+        "n": 4,
+        "lo": 0.5,
+        "mid": 0.65,
+        "hi": 1.0
+      },
+      "pitch_shift_mean": 0.5,
+      "intensity": {
+        "n": 4,
+        "lo": 0.75,
+        "mid": 0.82,
+        "hi": 0.95
+      },
+      "n_segments": 4,
+      "sources": [
+        "kt704_ari_passport_gemini.gemini",
+        "kt715_ep715_gemini.gemini",
+        "kt715_walking_gemini.gemini",
+        "kt728_diversifying_gemini.gemini"
+      ]
+    },
+    "neutral": {
+      "energy": {
+        "n": 4,
+        "lo": 0.5,
+        "mid": 0.53,
+        "hi": 0.6
+      },
+      "pace": {
+        "n": 4,
+        "lo": 0.5,
+        "mid": 0.5,
+        "hi": 0.5
+      },
+      "pitch_shift_mean": 0.25,
+      "intensity": {
+        "n": 4,
+        "lo": 0.45,
+        "mid": 0.47,
+        "hi": 0.5
+      },
+      "n_segments": 4,
+      "sources": [
+        "kt715_ep715_gemini.gemini",
+        "kt715_walking_gemini.gemini",
+        "kt728_diversifying_gemini.gemini",
+        "kt728_jamesbond_gemini.gemini"
+      ]
+    },
+    "sarcastic": {
+      "energy": {
+        "n": 7,
+        "lo": 0.6,
+        "mid": 0.6,
+        "hi": 0.7
+      },
+      "pace": {
+        "n": 7,
+        "lo": 0.25,
+        "mid": 0.5,
+        "hi": 0.5
+      },
+      "pitch_shift_mean": 0.0,
+      "intensity": {
+        "n": 7,
+        "lo": 0.6,
+        "mid": 0.75,
+        "hi": 0.75
+      },
+      "n_segments": 7,
+      "sources": [
+        "casey_rocket_2_gemini.gemini",
+        "kt704_ari_passport_gemini.gemini",
+        "kt715_walking_gemini.gemini",
+        "kt728_diversifying_gemini.gemini",
+        "kt728_jamesbond_gemini.gemini"
+      ]
+    }
+  },
+  "corpus_prosody": {
+    "pitch_var_st": {
+      "n": 9,
+      "lo": 4.23,
+      "mid": 5.15,
+      "hi": 5.93
+    },
+    "pitch_median_hz": {
+      "n": 9,
+      "lo": 139.05,
+      "mid": 178.29,
+      "hi": 200.33
+    },
+    "intensity_std_db": {
+      "n": 9,
+      "lo": 7.01,
+      "mid": 9.16,
+      "hi": 16.72
+    },
+    "clips": [
+      {
+        "clip": "casey_rocket_1",
+        "pitch_var_st": 5.494,
+        "pitch_median_hz": 178.286,
+        "intensity_std_db": 7.014,
+        "intensity_range_db": 51.689
+      },
+      {
+        "clip": "casey_rocket_2",
+        "pitch_var_st": 4.122,
+        "pitch_median_hz": 175.772,
+        "intensity_std_db": 6.748,
+        "intensity_range_db": 40.505
+      },
+      {
+        "clip": "kt704",
+        "pitch_var_st": 4.964,
+        "pitch_median_hz": 201.83,
+        "intensity_std_db": 37.806,
+        "intensity_range_db": 380.853
+      },
+      {
+        "clip": "kt715_ep715",
+        "pitch_var_st": 5.533,
+        "pitch_median_hz": 153.087,
+        "intensity_std_db": 9.795,
+        "intensity_range_db": 287.96
+      },
+      {
+        "clip": "kt715_walking",
+        "pitch_var_st": 4.229,
+        "pitch_median_hz": 139.051,
+        "intensity_std_db": 9.16,
+        "intensity_range_db": 44.502
+      },
+      {
+        "clip": "kt728_diversifying",
+        "pitch_var_st": 4.943,
+        "pitch_median_hz": 200.331,
+        "intensity_std_db": 16.724,
+        "intensity_range_db": 380.35
+      },
+      {
+        "clip": "kt728_jamesbond",
+        "pitch_var_st": 5.147,
+        "pitch_median_hz": 186.613,
+        "intensity_std_db": 8.679,
+        "intensity_range_db": 53.064
+      },
+      {
+        "clip": "sir_winston_pickles_1",
+        "pitch_var_st": 5.93,
+        "pitch_median_hz": 130.943,
+        "intensity_std_db": 9.15,
+        "intensity_range_db": 51.921
+      },
+      {
+        "clip": "sir_winston_pickles_2",
+        "pitch_var_st": 6.59,
+        "pitch_median_hz": 179.533,
+        "intensity_std_db": 13.636,
+        "intensity_range_db": 55.157
+      }
+    ]
+  },
+  "performers": {
+    "ari_matti": {
+      "emotion_mix": {
+        "deadpan": 3,
+        "defiant": 1,
+        "embarrassed": 1,
+        "gleeful": 7,
+        "manic": 2,
+        "mock_indignant": 4,
+        "neutral": 4,
+        "sarcastic": 6
+      },
+      "emotion_mix_pct": {
+        "deadpan": 11,
+        "defiant": 4,
+        "embarrassed": 4,
+        "gleeful": 25,
+        "manic": 7,
+        "mock_indignant": 14,
+        "neutral": 14,
+        "sarcastic": 21
+      },
+      "energy": {
+        "n": 28,
+        "lo": 0.55,
+        "mid": 0.65,
+        "hi": 0.85
+      },
+      "pace": {
+        "n": 28,
+        "lo": 0.25,
+        "mid": 0.5,
+        "hi": 0.8
+      },
+      "prosody": {
+        "pitch_var_st": {
+          "n": 5,
+          "lo": 4.23,
+          "mid": 4.96,
+          "hi": 5.53
+        },
+        "pitch_median_hz": {
+          "n": 5,
+          "lo": 139.05,
+          "mid": 186.61,
+          "hi": 201.83
+        },
+        "intensity_std_db": {
+          "n": 5,
+          "lo": 8.68,
+          "mid": 9.79,
+          "hi": 37.81
+        },
+        "clips": [
+          {
+            "clip": "kt704",
+            "pitch_var_st": 4.964,
+            "pitch_median_hz": 201.83,
+            "intensity_std_db": 37.806,
+            "intensity_range_db": 380.853
+          },
+          {
+            "clip": "kt715_ep715",
+            "pitch_var_st": 5.533,
+            "pitch_median_hz": 153.087,
+            "intensity_std_db": 9.795,
+            "intensity_range_db": 287.96
+          },
+          {
+            "clip": "kt715_walking",
+            "pitch_var_st": 4.229,
+            "pitch_median_hz": 139.051,
+            "intensity_std_db": 9.16,
+            "intensity_range_db": 44.502
+          },
+          {
+            "clip": "kt728_diversifying",
+            "pitch_var_st": 4.943,
+            "pitch_median_hz": 200.331,
+            "intensity_std_db": 16.724,
+            "intensity_range_db": 380.35
+          },
+          {
+            "clip": "kt728_jamesbond",
+            "pitch_var_st": 5.147,
+            "pitch_median_hz": 186.613,
+            "intensity_std_db": 8.679,
+            "intensity_range_db": 53.064
+          }
+        ]
+      },
+      "voice_design_extra": "Comedy delivery model (stage persona hypothesis, not the real person): gleeful then sarcastic then mock_indignant arc. Pitch variability target 4.96 semitones; median pitch around 186.61 Hz. Delivery swings between measured setups and sharp high-energy spikes.",
+      "note": "Delivery stats only. No transcript, no joke content, not the real person."
+    },
+    "casey_rocket": {
+      "emotion_mix": {
+        "deadpan": 3,
+        "gleeful": 4,
+        "manic": 5,
+        "sarcastic": 1
+      },
+      "emotion_mix_pct": {
+        "deadpan": 23,
+        "gleeful": 31,
+        "manic": 38,
+        "sarcastic": 8
+      },
+      "energy": {
+        "n": 13,
+        "lo": 0.65,
+        "mid": 0.75,
+        "hi": 0.85
+      },
+      "pace": {
+        "n": 13,
+        "lo": 0.25,
+        "mid": 0.5,
+        "hi": 0.8
+      },
+      "prosody": {
+        "pitch_var_st": {
+          "n": 2,
+          "lo": 4.12,
+          "mid": 4.81,
+          "hi": 5.49
+        },
+        "pitch_median_hz": {
+          "n": 2,
+          "lo": 175.77,
+          "mid": 177.03,
+          "hi": 178.29
+        },
+        "intensity_std_db": {
+          "n": 2,
+          "lo": 6.75,
+          "mid": 6.88,
+          "hi": 7.01
+        },
+        "clips": [
+          {
+            "clip": "casey_rocket_1",
+            "pitch_var_st": 5.494,
+            "pitch_median_hz": 178.286,
+            "intensity_std_db": 7.014,
+            "intensity_range_db": 51.689
+          },
+          {
+            "clip": "casey_rocket_2",
+            "pitch_var_st": 4.122,
+            "pitch_median_hz": 175.772,
+            "intensity_std_db": 6.748,
+            "intensity_range_db": 40.505
+          }
+        ]
+      },
+      "voice_design_extra": "Comedy delivery model (stage persona hypothesis, not the real person): manic then gleeful then deadpan arc. Pitch variability target 4.81 semitones; median pitch around 177.03 Hz. Delivery swings between measured setups and sharp high-energy spikes.",
+      "note": "Delivery stats only. No transcript, no joke content, not the real person."
+    }
+  }
+}

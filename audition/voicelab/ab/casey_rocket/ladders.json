@@ -1,0 +1,200 @@
+{
+  "performer": "casey_rocket",
+  "probe": "Audiences always ask me about the schedule. I tell them the schedule is a suggestion. Last week the schedule showed up at my door and I offered it a seat. It declined. Now we meet Thursdays, formally, and nobody moves first.",
+  "note": "DNA: manic/gleeful energy, rapid_fire, pitch spikes, deadpan drops. Bands: energy .55-.85, pace up to .8+.",
+  "rendered_at": "2026-10-14T09:15:24Z",
+  "variants": [
+    {
+      "variant": "v1_manic_swing",
+      "temperature": 0.85,
+      "beats": [
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v1_manic_swing-audience-fish.mp3",
+          "duration_ms": 2377,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "fe2c1abb8c287506721c80731dd95b270ad8f3a49910762095594e22b7215bb8",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v1_manic_swing-itellt-fish.mp3",
+          "duration_ms": 2403,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "8b048d11ba791eaa317988c432b0d692c696180cd61e63d457717477acc13b25",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v1_manic_swing-lastwee-fish.mp3",
+          "duration_ms": 3578,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "f1c7fb42624afb042e1c908bac52adf27d04992602b6b4d27e3135a829fd3c7c",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v1_manic_swing-itdecli-fish.mp3",
+          "duration_ms": 1462,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "5db01bc1a8dffc85deacde06d6d4d89529a5bfc25187321aadafc05d70d63677",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v1_manic_swing-nowwem-fish.mp3",
+          "duration_ms": 4493,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "f7a6993e992d40f1cfb457f9517265b1ed09a8783ae0f30ba1551478abbf4899",
+          "model": "s2.1-pro-free",
+          "directed": false
+        }
+      ],
+      "total_ms": 14313,
+      "file": "/tmp/opencode/characters/audition/voicelab/ab/casey_rocket/v1_manic_swing.wav"
+    },
+    {
+      "variant": "v2_rapid_gleeful",
+      "temperature": 0.9,
+      "beats": [
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v2_rapid_gleeful-audience-fish.mp3",
+          "duration_ms": 2115,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "7d44169c1fa0ba7eaa5a2be79ef3f18f76465abfbc42a649300ff1a49d80f75f",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v2_rapid_gleeful-itellt-fish.mp3",
+          "duration_ms": 2037,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "7e093a5a68b683e253b859e230a008a55d091425a1ad4fde9e769e6c329efede",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v2_rapid_gleeful-lastwee-fish.mp3",
+          "duration_ms": 2533,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "4287855a74f2f1901c1c0865b5186d4508e8d2e2477959af78f24f1b6985fb29",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v2_rapid_gleeful-itdecli-fish.mp3",
+          "duration_ms": 1097,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "19f0a7fce6aafcefb3c33312dd75aab5c158bcbe23a5c94bcec44fd208c4bcd2",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v2_rapid_gleeful-nowwem-fish.mp3",
+          "duration_ms": 2873,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "6ff302b104ce349161967396923361b6f801408309cd8b8229d91c92100a3a8d",
+          "model": "s2.1-pro-free",
+          "directed": false
+        }
+      ],
+      "total_ms": 10655,
+      "file": "/tmp/opencode/characters/audition/voicelab/ab/casey_rocket/v2_rapid_gleeful.wav"
+    },
+    {
+      "variant": "v3_drop_out",
+      "temperature": 0.8,
+      "beats": [
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v3_drop_out-audience-fish.mp3",
+          "duration_ms": 2350,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "c5772a0e5683bdc08ea428730fd51ecb740a27912c0a9e39e7e63d03855411fa",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v3_drop_out-itellt-fish.mp3",
+          "duration_ms": 2141,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "0476e0c1b89bb38aee2f094914bfb39a53ca265729edcede7cfbadb51ce9ce39",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v3_drop_out-lastwee-fish.mp3",
+          "duration_ms": 2899,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "a2c17291726b27904263e95bd3afe9a617cd15f8c72d329c29a1e75517943876",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v3_drop_out-itdecli-fish.mp3",
+          "duration_ms": 1645,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "cb42e87b36c57d848e9ce4b5b982d3e098a0ec387055bc1a97f93ec5fff56299",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v3_drop_out-nowwem-fish.mp3",
+          "duration_ms": 5642,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "429515999071407afcfe632be069013ef94a11b5cef325d6154d0d30e30466de",
+          "model": "s2.1-pro-free",
+          "directed": false
+        }
+      ],
+      "total_ms": 14677,
+      "file": "/tmp/opencode/characters/audition/voicelab/ab/casey_rocket/v3_drop_out.wav"
+    },
+    {
+      "variant": "v4_control",
+      "temperature": 0.7,
+      "beats": [
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v4_control-audience-fish.mp3",
+          "duration_ms": 2847,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "5aaa8bb76ea5d4d7e02e5957e148f69cd815f4af62f679f3cd115315f4a76cd0",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v4_control-isasug-fish.mp3",
+          "duration_ms": 2559,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "c0c7328e8ba0e1ed4bb156c1e19bfa893f7783a6ba6a3f9232918655b60d86ef",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v4_control-showedu-fish.mp3",
+          "duration_ms": 3813,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "bd4bb3a0d89040f7f759aa2fc30ed1dcdf8f9774308b61931d7b38c60d194257",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v4_control-itdecli-fish.mp3",
+          "duration_ms": 1097,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "e967bd8bdae0f3fde78fd393397afdafa506d67ebb5dd0b77131a39549acdcd9",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-casey_rocket-v4_control-nobodym-fish.mp3",
+          "duration_ms": 4231,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "b83111fede7906dc5975b53fdf970a3c9bbd43cafc095d62adbaa7e1d503e3a9",
+          "model": "s2.1-pro-free",
+          "directed": false
+        }
+      ],
+      "total_ms": 14547,
+      "file": "/tmp/opencode/characters/audition/voicelab/ab/casey_rocket/v4_control.wav"
+    }
+  ]
+}

@@ -2,3 +2,6 @@
 .venv/
 __pycache__/
 *.pyc
+
+# voice lab audio (recipes/JSONs stay tracked)
+audition/voicelab/**/*.wav

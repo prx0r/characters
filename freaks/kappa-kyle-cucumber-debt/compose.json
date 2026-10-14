@@ -1,0 +1,81 @@
+{
+  "slug": "kappa-kyle-cucumber-debt",
+  "tts": "fish",
+  "modulator": "smug",
+  "voice": "en-US-GuyNeural",
+  "zero_shot": false,
+  "beats": [
+    {
+      "beat": "b1",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b1-fish.mp3",
+      "duration_ms": 7392,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b2",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b2-fish.mp3",
+      "duration_ms": 5407,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b3",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b3-fish.mp3",
+      "duration_ms": 8097,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b4",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b4-fish.mp3",
+      "duration_ms": 6896,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b5",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b5-fish.mp3",
+      "duration_ms": 7784,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b6",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b6-fish.mp3",
+      "duration_ms": 5485,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b7",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b7-fish.mp3",
+      "duration_ms": 5485,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b8",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b8-fish.mp3",
+      "duration_ms": 5407,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b9",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b9-fish.mp3",
+      "duration_ms": 5355,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b10",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b10-fish.mp3",
+      "duration_ms": 1697,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    },
+    {
+      "beat": "b11",
+      "path": "/tmp/opencode/characters/audition/audio/kappa-kyle-cucumber-debt-b11-fish.mp3",
+      "duration_ms": 2847,
+      "provenance": "fish-tts:s2.1-pro-free+ffprobe"
+    }
+  ],
+  "out": "/tmp/opencode/characters/freaks/kappa-kyle-cucumber-debt/set.wav",
+  "actual_ms": 61857,
+  "claimed_ms": 61000,
+  "drift_ms": 857,
+  "elapsed_s": 36.7,
+  "composed_at": "2026-10-14T08:56:42Z"
+}

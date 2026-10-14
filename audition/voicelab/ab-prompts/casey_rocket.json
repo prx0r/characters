@@ -1,0 +1,42 @@
+{
+  "performer": "casey_rocket",
+  "bodies": [
+    {
+      "variant": "t1",
+      "request": {
+        "instruction": "Comedy stage voice, adult male, kinetic rapid-fire delivery, wide pitch swings with sudden spikes, slightly raspy warm stoner-cadence, gleeful manic energy that can collapse into flat deadpan instantly.",
+        "reference_text": "Audiences always ask me about the schedule.",
+        "language": "en",
+        "n": 1,
+        "seed": 42
+      },
+      "sent": false,
+      "cost_if_fired_usd": 0.01
+    },
+    {
+      "variant": "t2",
+      "request": {
+        "instruction": "Adult male, fast erratic pacing, pitch spikes then abrupt drops, playful surreal warmth, high energy with sudden deadpan, mid pitch.",
+        "reference_text": "Audiences always ask me about the schedule.",
+        "language": "en",
+        "n": 1,
+        "seed": 42
+      },
+      "sent": false,
+      "cost_if_fired_usd": 0.01
+    },
+    {
+      "variant": "t3",
+      "request": {
+        "instruction": "Comedy delivery model (stage persona hypothesis, not the real person): manic then gleeful then deadpan arc. Pitch variability target 4.81 semitones; median pitch around 177.03 Hz. Delivery swings between measured setups and sharp high-energy spikes.",
+        "reference_text": "Audiences always ask me about the schedule.",
+        "language": "en",
+        "n": 1,
+        "seed": 42
+      },
+      "sent": false,
+      "cost_if_fired_usd": 0.01
+    }
+  ],
+  "blocked_on": "API credit (voice-design 402)"
+}
