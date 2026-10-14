@@ -1,0 +1,55 @@
+{
+  "rule": "comedian -> delivery archetype -> famous character mappings (persona hypothesis, stage only). Used for casting characters onto proven delivery engines.",
+  "archetypes": {
+    "suspension_deadpan": {
+      "def": "enters his own reality; deadpan authority over absurd premises; the joke is that HE believes it",
+      "delivery": "wide pitch swings (std~10), flat volume (dyn~13), slow burn, long tangent then snap return",
+      "comedians": ["norm_macdonald"],
+      "famous_characters": ["Ron Burgundy (Anchorman)", "Captain Holt (Brooklyn 99)", "Korg (Thor Ragnarok)", "Leslie Nielsen (Frank Drebin)"],
+      "our_engine_fit": ["deadpan_cryptkeeper", "villain_dracula", "ice_sovereign"],
+      "worlds": ["galactic (file-clerk menace)", "folklore (ancient being unbothered)"]
+    },
+    "sincere_storyteller": {
+      "def": "self-deprecating, takes audience to weird dark places; sincerity IS the engine; laughs are byproduct not target",
+      "delivery": "mid pitch, wide dynamics, build-then-collapse structure, physical specificity, comfort with silence",
+      "comedians": ["louis_ck", "maria_bamford", "mitch_hedberg"],
+      "famous_characters": ["Morty (Rick and Morty - the anxiety)", "Bojack Horseman", "Larry David (Curb)"],
+      "our_engine_fit": ["sage_narrator", "warm_mother", "chaos_gremlin (low-tempo variant)"],
+      "worlds": ["folklore (weary traveler)", "earth-adjacent (regular person in weird world)"]
+    },
+    "mock_indignant_velocity": {
+      "def": "grievance engine; offense as rocket fuel; spikes into rage then gleeful collapse",
+      "delivery": "fast (200+ wpm), cue ladder frustrated->angry, temp .85, sprints INTO laughs",
+      "comedians": ["ari_matti", "andrew_schulz"],
+      "famous_characters": ["Anger (Inside Out)", "The Dude's angry neighbor (Big Lebowski)", "Randy Marsh"],
+      "our_engine_fit": ["mock_indignant_engine", "hype_host"],
+      "worlds": ["galactic (fleet bureaucrat snapped)", "folklore (imp shortchanged)"]
+    },
+    "manic_swing": {
+      "def": "kinetic energy weaponized; rapid-fire then deadpan drops; physical chaos as punctuation",
+      "delivery": "excited cue 1.30 speed, deadpan no-cue .45/1.69, huge tempo deltas",
+      "comedians": ["casey_rocket", "sam_kinison"],
+      "famous_characters": ["Taz (Looney Tunes)", "Moss (IT Crowd - kinetic variant)", "Gene (Bob's Burgers)"],
+      "our_engine_fit": ["chaos_gremlin", "trickster"],
+      "worlds": ["folklore (chaos sprite)", "galactic (unstable AI)"]
+    },
+    "roast_bravado": {
+      "def": "deep-voiced wide-dynamics insult engine; crowd-work heavy; confidence as material",
+      "delivery": "low pitch (~119), widest dynamics (51dB), var 6.4",
+      "comedians": ["dean_cooke_estimate", "kam_patterson", "uncle_lazer"],
+      "famous_characters": ["Bluto (Animal House)", "Thersites (Troilus - Shakespeare's roaster)", "Fat Tony"],
+      "our_engine_fit": ["hype_host", "villain_dracula (campy variant)"],
+      "worlds": ["galactic (warlord jester)", "folklore (ogre with opinions)"]
+    },
+    "whimsical_float": {
+      "def": "level highness; airy certainty over nonsense; the float IS the character",
+      "delivery": "high pitch (250), narrow var (3.1), soft dynamics, brisk",
+      "comedians": ["mitch_hedberg (overlap with storyteller)", "steven_wright"],
+      "famous_characters": ["Luna Lovegood", "Phoebe Buffay", "Peppermint Patty"],
+      "our_engine_fit": ["whimsical_fae", "trickster"],
+      "worlds": ["folklore (fae native)", "galactic (benevolent odd alien)"]
+    }
+  },
+  "note": "Mappings are delivery-mechanism hypotheses from measured stats + public persona research. Stage-persona only, no biographical claims.",
+  "at": "2026-10-14"
+}
