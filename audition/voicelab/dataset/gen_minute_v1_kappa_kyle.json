@@ -1,0 +1,726 @@
+{
+  "id": "gen_minute_v1_kappa_kyle",
+  "source": "/home/box/minute_v1_kappa_kyle.wav",
+  "duration_ms": 45426,
+  "ingested_at": "2026-10-14T14:15:20Z",
+  "words": [
+    {
+      "text": "So",
+      "start": 0.0,
+      "end": 0.39,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "that's",
+      "start": 0.39,
+      "end": 0.78,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "none",
+      "start": 0.78,
+      "end": 1.18,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "from",
+      "start": 1.18,
+      "end": 1.57,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "him",
+      "start": 1.57,
+      "end": 1.96,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "one",
+      "start": 1.96,
+      "end": 2.23,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "from",
+      "start": 2.23,
+      "end": 2.5,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you",
+      "start": 2.5,
+      "end": 2.78,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "and",
+      "start": 2.78,
+      "end": 3.05,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "if",
+      "start": 3.05,
+      "end": 3.32,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 3.32,
+      "end": 3.62,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "nail",
+      "start": 3.62,
+      "end": 3.91,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "this",
+      "start": 3.91,
+      "end": 4.21,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 4.21,
+      "end": 4.5,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "whole",
+      "start": 4.5,
+      "end": 4.8,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "building",
+      "start": 4.8,
+      "end": 5.4,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "owes",
+      "start": 5.4,
+      "end": 6.01,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "me",
+      "start": 6.01,
+      "end": 6.61,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Bow",
+      "start": 6.61,
+      "end": 7.22,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "back",
+      "start": 7.22,
+      "end": 7.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 7.82,
+      "end": 8.41,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "dare",
+      "start": 8.41,
+      "end": 9.0,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you",
+      "start": 9.0,
+      "end": 9.58,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I'm",
+      "start": 9.58,
+      "end": 10.17,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Capacyle",
+      "start": 10.17,
+      "end": 10.76,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "and",
+      "start": 10.76,
+      "end": 11.27,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I'm",
+      "start": 11.27,
+      "end": 11.78,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "auditioning",
+      "start": 11.78,
+      "end": 12.28,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "which",
+      "start": 12.28,
+      "end": 12.79,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "means",
+      "start": 12.79,
+      "end": 13.3,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you",
+      "start": 13.3,
+      "end": 13.59,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "owe",
+      "start": 13.59,
+      "end": 13.88,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "me",
+      "start": 13.88,
+      "end": 14.18,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 14.18,
+      "end": 14.47,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "cucumber",
+      "start": 14.47,
+      "end": 14.76,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "for",
+      "start": 14.76,
+      "end": 15.22,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "my",
+      "start": 15.22,
+      "end": 15.69,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "time",
+      "start": 15.69,
+      "end": 16.15,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 16.15,
+      "end": 16.62,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "keep",
+      "start": 16.62,
+      "end": 17.08,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 17.08,
+      "end": 17.52,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "ledger",
+      "start": 17.52,
+      "end": 17.95,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Everyone",
+      "start": 17.95,
+      "end": 18.39,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "who",
+      "start": 18.39,
+      "end": 18.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "hears",
+      "start": 18.82,
+      "end": 19.26,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "me",
+      "start": 19.26,
+      "end": 19.63,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "talk",
+      "start": 19.63,
+      "end": 20.0,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "owes",
+      "start": 20.0,
+      "end": 20.38,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "exactly",
+      "start": 20.38,
+      "end": 20.75,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "one",
+      "start": 20.75,
+      "end": 21.12,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "cucumber",
+      "start": 21.12,
+      "end": 21.64,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "It's",
+      "start": 21.64,
+      "end": 22.17,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "in",
+      "start": 22.17,
+      "end": 22.69,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 22.69,
+      "end": 23.22,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "bylaws",
+      "start": 23.22,
+      "end": 23.74,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "day",
+      "start": 23.74,
+      "end": 24.21,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "from",
+      "start": 24.21,
+      "end": 24.68,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "three",
+      "start": 24.68,
+      "end": 25.14,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "B",
+      "start": 25.14,
+      "end": 25.61,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "still",
+      "start": 25.61,
+      "end": 26.08,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "hasn't",
+      "start": 26.08,
+      "end": 26.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "paid",
+      "start": 26.46,
+      "end": 26.83,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "and",
+      "start": 26.83,
+      "end": 27.21,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Now",
+      "start": 27.21,
+      "end": 27.58,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you're",
+      "start": 27.58,
+      "end": 27.96,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "looking",
+      "start": 27.96,
+      "end": 28.2,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "at",
+      "start": 28.2,
+      "end": 28.43,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "me",
+      "start": 28.43,
+      "end": 28.67,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "like",
+      "start": 28.67,
+      "end": 28.9,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "he",
+      "start": 28.9,
+      "end": 29.14,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "does",
+      "start": 29.14,
+      "end": 29.59,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "like",
+      "start": 29.59,
+      "end": 30.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 30.04,
+      "end": 30.5,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "debt",
+      "start": 30.5,
+      "end": 30.95,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "isn't",
+      "start": 30.95,
+      "end": 31.4,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "real",
+      "start": 31.4,
+      "end": 31.9,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "so",
+      "start": 31.9,
+      "end": 32.41,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "that's",
+      "start": 32.41,
+      "end": 32.91,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "nine",
+      "start": 32.91,
+      "end": 33.42,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "from",
+      "start": 33.42,
+      "end": 33.92,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "him",
+      "start": 33.92,
+      "end": 34.59,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "One",
+      "start": 34.59,
+      "end": 35.26,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "from",
+      "start": 35.26,
+      "end": 35.94,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you",
+      "start": 35.94,
+      "end": 36.61,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "and",
+      "start": 36.61,
+      "end": 37.28,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "if",
+      "start": 37.28,
+      "end": 37.43,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 37.43,
+      "end": 37.58,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "nail",
+      "start": 37.58,
+      "end": 37.74,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "this",
+      "start": 37.74,
+      "end": 37.89,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 37.89,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "whole",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "building",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "owes",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "me",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "go",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "back",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "dare",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you",
+      "start": 38.04,
+      "end": 38.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    }
+  ],
+  "laugh_events": [],
+  "punch_candidates": [],
+  "delivery": {
+    "wpm": 130.8,
+    "pitch_std": 4.73,
+    "median_hz": 301.9,
+    "dyn_db": 43.1,
+    "centroid": 1757.0
+  },
+  "profile": {
+    "performer": "kappa_kyle",
+    "crowd_history": []
+  },
+  "audio_copy": "/tmp/opencode/characters/audition/voicelab/dataset/gen_minute_v1_kappa_kyle.wav",
+  "verdict": null,
+  "verdict_note": "",
+  "rubric": {
+    "parts": {
+      "pace": 0.649,
+      "laugh_density": 0.0
+    },
+    "composite": 0.325,
+    "laugh_rate_per_10s": 0.0,
+    "note": "same rubric for real + generated; verify only on generated"
+  }
+}

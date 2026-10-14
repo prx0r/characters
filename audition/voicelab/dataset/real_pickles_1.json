@@ -1,0 +1,343 @@
+{
+  "id": "real_pickles_1",
+  "source": "/home/box/comedy_sets/shorts/sir_winston_pickles_1.mp4",
+  "duration_ms": 16648,
+  "ingested_at": "2026-10-14T14:15:58Z",
+  "words": [
+    {
+      "text": "This",
+      "start": 0.0,
+      "end": 0.25,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "by",
+      "start": 0.25,
+      "end": 0.5,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 0.5,
+      "end": 0.74,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "way",
+      "start": 0.74,
+      "end": 0.99,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "is",
+      "start": 0.99,
+      "end": 1.24,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "little",
+      "start": 1.24,
+      "end": 1.68,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Kwame",
+      "start": 1.68,
+      "end": 2.13,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I've",
+      "start": 2.13,
+      "end": 2.57,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "been",
+      "start": 2.57,
+      "end": 3.02,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "sponsoring",
+      "start": 3.02,
+      "end": 3.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "this",
+      "start": 3.46,
+      "end": 3.7,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "little",
+      "start": 3.7,
+      "end": 3.93,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "guy",
+      "start": 3.93,
+      "end": 4.17,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "in",
+      "start": 4.17,
+      "end": 4.4,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Africa",
+      "start": 4.4,
+      "end": 4.64,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "for",
+      "start": 4.64,
+      "end": 4.94,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 4.94,
+      "end": 5.24,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "last",
+      "start": 5.24,
+      "end": 5.54,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "three",
+      "start": 5.54,
+      "end": 5.84,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "years",
+      "start": 5.84,
+      "end": 6.14,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "at",
+      "start": 6.14,
+      "end": 6.43,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "99",
+      "start": 6.43,
+      "end": 6.72,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "cents",
+      "start": 6.72,
+      "end": 7.02,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 7.02,
+      "end": 7.31,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "week",
+      "start": 7.31,
+      "end": 7.6,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "and",
+      "start": 7.6,
+      "end": 7.94,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "there",
+      "start": 7.94,
+      "end": 8.29,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Unbeknownst",
+      "start": 8.29,
+      "end": 8.63,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 8.63,
+      "end": 8.98,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "me",
+      "start": 8.98,
+      "end": 9.32,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "last",
+      "start": 9.32,
+      "end": 9.6,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "March",
+      "start": 9.6,
+      "end": 9.89,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "my",
+      "start": 9.89,
+      "end": 10.17,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "credit",
+      "start": 10.17,
+      "end": 10.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "card",
+      "start": 10.46,
+      "end": 10.74,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "expired",
+      "start": 10.74,
+      "end": 11.26,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "so",
+      "start": 11.26,
+      "end": 11.78,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "er",
+      "start": 11.78,
+      "end": 12.3,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "he's",
+      "start": 12.3,
+      "end": 12.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "dead",
+      "start": 12.82,
+      "end": 13.34,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    }
+  ],
+  "laugh_events": [],
+  "punch_candidates": [],
+  "delivery": {
+    "wpm": 144.2,
+    "pitch_std": 6.75,
+    "median_hz": 134.5,
+    "dyn_db": 24.7,
+    "centroid": 1436.0
+  },
+  "profile": {
+    "performer": "sir_winston_pickles",
+    "crowd_history": [
+      {
+        "crowd_ord": 4,
+        "golden": false,
+        "praise": 5,
+        "n_beats": 24,
+        "words": 238
+      },
+      {
+        "crowd_ord": 3,
+        "golden": false,
+        "praise": 5,
+        "n_beats": 15,
+        "words": 114
+      },
+      {
+        "crowd_ord": 3,
+        "golden": false,
+        "praise": 5,
+        "n_beats": 14,
+        "words": 168
+      },
+      {
+        "crowd_ord": 4,
+        "golden": false,
+        "praise": 5,
+        "n_beats": 10,
+        "words": 104
+      }
+    ]
+  },
+  "audio_copy": "/tmp/opencode/characters/audition/voicelab/dataset/real_pickles_1.wav",
+  "verdict": null,
+  "verdict_note": "",
+  "rubric": {
+    "parts": {
+      "pace": 0.744,
+      "laugh_density": 0.0,
+      "crowd_prior": 0.7
+    },
+    "composite": 0.481,
+    "laugh_rate_per_10s": 0.0,
+    "note": "same rubric for real + generated; verify only on generated"
+  }
+}
