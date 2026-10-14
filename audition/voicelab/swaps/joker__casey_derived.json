@@ -1,0 +1,83 @@
+{
+  "mapping": "casey_2 ACTUAL text -> joker (whitespace-normalized minimal subs)",
+  "subs_applied": [
+    "'softball game'->'escape-league game'",
+    "'fentanyl league'->'henchman league'",
+    "'shooting up and sleeping on the ball field'->'gassing up and sleeping in the getaway van'",
+    "'creator of the smartwatch'->'creator of the smile-watch'",
+    "'Sirius XM Radio'->'Arkham FM Radio'"
+  ],
+  "beats": [
+    {
+      "seg": 0,
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.81,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "text": "ll right. Hell, yeah. Arkham FM Radio. All right. Very cool. Okay, I gotta get"
+    },
+    {
+      "seg": 1,
+      "recipe": {
+        "temp": 0.85,
+        "speed": 1.35,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "text": "out of here. I got a escape-league game after this. So it's not a beer"
+    },
+    {
+      "seg": 2,
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.81,
+        "cue": "",
+        "vol": 0.0
+      },
+      "text": "league, it's a henchman league. Should be pretty fun. Just me and the boys gassing"
+    },
+    {
+      "seg": 3,
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.86,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "text": "up and sleeping in the getaway van, so. Should be a good time. Most of"
+    },
+    {
+      "seg": 4,
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.94,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "text": "you probably know me as the creator of the smile-watch, uh, but I also donate"
+    },
+    {
+      "seg": 5,
+      "recipe": {
+        "temp": 0.65,
+        "speed": 0.92,
+        "cue": "[sarcastic]",
+        "vol": 0.0
+      },
+      "text": "to a number of successful charities, uh, most no"
+    }
+  ],
+  "verify_match": 0.905,
+  "unsaid": [
+    "ll",
+    "arkham",
+    "fm",
+    "got",
+    "escape-league",
+    "smile-watch"
+  ],
+  "duration_ms": 48404,
+  "rating": null
+}
