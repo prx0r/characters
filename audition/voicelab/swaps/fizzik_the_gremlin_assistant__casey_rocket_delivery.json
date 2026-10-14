@@ -1,0 +1,76 @@
+{
+  "character": "Fizzik the Gremlin Assistant",
+  "comedian_delivery": "casey_rocket",
+  "voice": "kid",
+  "collision": "chaos gremlin who overorganizes chaos; deadpan drops after manic spikes",
+  "verify_match": 0.958,
+  "duration_ms": 43911,
+  "beats": [
+    {
+      "seg": 0,
+      "label": "gleeful",
+      "text": "I'm Fizzik! I assist! I assist CHAOS! Chaos has a schedule and I keep it!",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.81,
+        "cue": "[delighted]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 1,
+      "label": "manic",
+      "text": "Today's apocalypse was moved to Tuesday. Nobody told the void. The void showed up EARLY.",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 1.35,
+        "cue": "[excited]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 2,
+      "label": "deadpan",
+      "text": "I alphabetized the cursed amulets. A through Z. The screaming one is under S. For screaming.",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.81,
+        "cue": "",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 3,
+      "label": "manic",
+      "text": "The master said don't touch the cursed orb. I didn't touch it. I nudged it. With a stick. Technically legal.",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.86,
+        "cue": "[delighted]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 4,
+      "label": "deadpan",
+      "text": "Everything's fine! The portal is contained! In a bucket! A SMALL bucket! Look, mostly fine.",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.94,
+        "cue": "[excited]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 5,
+      "label": "sarcastic",
+      "text": "I'm Fizzik! I assist! I assist CHAOS! Chaos has a schedule and I keep it!",
+      "recipe": {
+        "temp": 0.65,
+        "speed": 0.92,
+        "cue": "[sarcastic]",
+        "vol": 0.0
+      }
+    }
+  ]
+}
