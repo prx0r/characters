@@ -65,7 +65,7 @@ def _norm(v) -> float:
 MP_MODELS = Path("/tmp/opencode/mp_models")
 
 
-def extract_mediapipe(video_path: Path, sample_every: int = 2) -> dict:
+def extract_mediapipe(video_path: Path, sample_every: int = 2, store_raw: bool = False) -> dict:
     """Sample face+body dials at ~15fps using MediaPipe Tasks API."""
     import mediapipe as mp
     from mediapipe.tasks.python import vision
@@ -82,6 +82,7 @@ def extract_mediapipe(video_path: Path, sample_every: int = 2) -> dict:
         min_tracking_confidence=0.5)
     face_lm = vision.FaceLandmarker.create_from_options(face_opts)
     pose_lm = vision.PoseLandmarker.create_from_options(pose_opts)
+    raw_frames = []
 
     cap = cv2.VideoCapture(str(video_path))
     fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
@@ -123,7 +124,7 @@ def extract_mediapipe(video_path: Path, sample_every: int = 2) -> dict:
                     "head_pitch_proxy": round((pt(CHIN)[1] - pt(NOSE_TIP)[1]) / face_w, 4),
                     "nose_mouth": round(_dist(pt(NOSE_TIP)[:2], pt(LIP_TOP)[:2]) / face_w, 4),
                 }
-                # blendshapes if present (categories: browInnerUp, jawOpen, mouthSmile...)
+                # blendshapes if present
                 if fm.face_blendshapes:
                     bs = {c.category_name: round(c.score, 4) for c in fm.face_blendshapes[0]}
                     for k in ("browInnerUp", "browDownLeft", "browDownRight",
@@ -135,6 +136,13 @@ def extract_mediapipe(video_path: Path, sample_every: int = 2) -> dict:
                               "cheekPuff", "noseSneerLeft", "noseSneerRight"):
                         if k in bs:
                             face_d[f"bs_{k}"] = bs[k]
+                    if store_raw:
+                        raw_frames.append({
+                            "t": round(t, 3),
+                            "blendshapes": bs,
+                            "face_geom": {k: v for k, v in face_d.items() if not k.startswith("bs_")},
+                            "body": row.get("body", {}),
+                        })
                 row["face"] = face_d
 
             pr = pose_lm.detect_for_video(mp_img, ts)
@@ -178,13 +186,16 @@ def extract_mediapipe(video_path: Path, sample_every: int = 2) -> dict:
                         frames[i][section][f"d_{k}"] = round(
                             (frames[i][section][k] - frames[i - 1][section][k]) / dt, 4)
 
-    return {
+    result = {
         "fps_sampled": round(fps / sample_every, 2),
         "source_fps": fps,
         "n_frames": len(frames),
         "duration_s": round(frames[-1]["t"], 2) if frames else 0,
         "frames": frames,
     }
+    if store_raw:
+        result["raw_frames"] = raw_frames
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -510,7 +521,7 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     print(f"[1/4] MediaPipe {vid.name} ...", flush=True)
-    mp_data = extract_mediapipe(vid, sample_every=args.sample_every)
+    mp_data = extract_mediapipe(vid, sample_every=args.sample_every, store_raw=True)
     print(f"      {mp_data['n_frames']} samples, {mp_data['duration_s']}s")
 
     print("[2/4] numeric windows ...", flush=True)
