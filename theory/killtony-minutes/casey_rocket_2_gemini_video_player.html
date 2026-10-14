@@ -1,0 +1,193 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casey Rocket 2 Gemini Video — Ralph Stage Lab</title>
+<style>
+html,body{margin:0;height:100%;background:#000;color:#eee;font-family:system-ui,sans-serif}
+#wrap{display:flex;flex-direction:column;height:100vh}
+#stagebox{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+background:radial-gradient(circle at 50% 30%,#2b2010,#000 72%)}
+#stagebox svg{width:min(70vh,90vw);max-height:90vh}
+#hud{position:absolute;top:10px;left:12px;font-size:12px;color:#aaa;z-index:2}
+#seg{position:absolute;top:10px;right:12px;font-size:12px;color:#facc15;text-align:right;max-width:45%}
+#emotion{position:absolute;bottom:12px;left:12px;font-size:14px;color:#facc15}
+#beat{position:absolute;bottom:12px;right:12px;font-size:12px;color:#888}
+#bar{height:4px;background:#333;position:relative}
+#barfill{height:100%;background:#facc15;width:0%}
+#ctrl{padding:8px 12px;display:flex;gap:10px;align-items:center;background:#111}
+#ctrl button{background:#222;color:#eee;border:1px solid #555;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:14px}
+#ctrl button:hover{background:#333}
+#ctrl input[type=range]{flex:1}
+#meta{font-size:11px;color:#666;padding:0 12px 8px}
+#anger{color:#f87171;font-size:12px;padding:4px 12px;display:none}
+</style></head><body>
+<div id="wrap">
+<div id="stagebox">
+<div id="hud">Stage Lab · Ralph</div>
+<div id="seg"></div>
+<svg viewBox="0 0 220 300" style="background:transparent">
+<defs><linearGradient id="spot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffdf9e" stop-opacity=".28"/><stop offset="1" stop-color="#ffdf9e" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="0" width="26" height="300" fill="#5b1414"/><rect x="194" y="0" width="26" height="300" fill="#5b1414"/>
+<rect x="22" y="0" width="6" height="300" fill="#3d0d0d"/><rect x="192" y="0" width="6" height="300" fill="#3d0d0d"/>
+<polygon points="70,0 150,0 190,300 30,300" fill="url(#spot)"/>
+<rect x="0" y="252" width="220" height="48" fill="#151020"/>
+<ellipse cx="110" cy="278" rx="60" ry="10" fill="#000" opacity=".5"/>
+<text class="CAMT" x="30" y="18" fill="#999" font-size="12">medium</text>
+<g class="PB"><rect class="SUIT" x="60" y="170" width="100" height="100" rx="14" fill="#2b3440"/><rect x="100" y="170" width="20" height="100" fill="#e8e4d8"/><polygon points="110,185 118,205 110,235 102,205" fill="#7c1f1f"/></g>
+<g class="PH"><ellipse class="SKIN" cx="110" cy="120" rx="52" ry="58" fill="#6b8f5e"/><ellipse cx="110" cy="120" rx="52" ry="58" fill="none" stroke="#2c3a26" stroke-width="3"/>
+<rect class="BL" x="70" y="82" width="30" height="7" rx="3" fill="#2c3a26"/><rect class="BR" x="120" y="82" width="30" height="7" rx="3" fill="#2c3a26"/>
+<ellipse cx="85" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PL" cx="85" cy="113" rx="5" ry="9" fill="#111"/>
+<ellipse cx="135" cy="112" rx="14" ry="16" fill="#f4f1e4"/><ellipse class="PR" cx="135" cy="113" rx="5" ry="9" fill="#111"/>
+<ellipse class="MO" cx="110" cy="160" rx="16" ry="5" fill="#1a0f0f"/></g>
+<g class="MIC"><rect x="107" y="205" width="6" height="75" rx="3" fill="#0c0c0c"/><ellipse cx="110" cy="282" rx="16" ry="4" fill="#0c0c0c"/><circle cx="110" cy="196" r="13" fill="#1f2937"/><circle cx="110" cy="196" r="13" fill="none" stroke="#4b5563" stroke-width="2"/></g>
+<text class="EX" x="110" y="294" text-anchor="middle" fill="#facc15" font-size="14">deadpan</text></svg>
+<div id="emotion">—</div>
+<div id="beat">—</div>
+</div>
+<div id="bar"><div id="barfill"></div></div>
+<div id="ctrl">
+<button id="play">▶ Play</button>
+<input type="range" id="scrub" min="0" max="44500" value="0">
+<span id="clock" style="font-size:12px;color:#aaa;min-width:70px">0:00 / 0:44</span>
+</div>
+<div id="anger"></div>
+<div id="meta">Casey Rocket 2 Gemini Video · 34 events · 7 segments</div>
+</div>
+<script>
+const EVENTS=[{"t": 0, "kind": "expression", "id": "self_satisfied", "source_emotion": "gleeful", "intensity": 0.75}, {"t": 0, "kind": "lights", "id": "house_up"}, {"t": 200, "kind": "gesture", "id": "lean_forward", "intensity": 0.5}, {"t": 300, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 400, "kind": "enter", "from": "stage_left"}, {"t": 1200, "kind": "camera", "id": "medium"}, {"t": 1200, "kind": "speak_start"}, {"t": 3800, "kind": "expression", "id": "surprised", "source_emotion": "manic", "intensity": 0.8}, {"t": 4000, "kind": "gesture", "id": "suit_adjust", "intensity": 0.5}, {"t": 4200, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 8500, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.7}, {"t": 8700, "kind": "gesture", "id": "lean_forward", "intensity": 0.7}, {"t": 8800, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 8900, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 15000, "kind": "expression", "id": "self_satisfied", "source_emotion": "gleeful", "intensity": 0.75}, {"t": 15000, "kind": "hold", "ms": 1200, "note": "punchline stillness"}, {"t": 15400, "kind": "gesture", "id": "eye_glitch", "intensity": 1.0}, {"t": 15400, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 15800, "kind": "camera", "id": "closeup"}, {"t": 16800, "kind": "camera", "id": "medium"}, {"t": 22000, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.8}, {"t": 22200, "kind": "gesture", "id": "lean_forward", "intensity": 0.4}, {"t": 31000, "kind": "expression", "id": "deadpan", "source_emotion": "deadpan", "intensity": 0.85}, {"t": 31300, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 31400, "kind": "gesture", "id": "small_shrug", "intensity": 0.5}, {"t": 40000, "kind": "expression", "id": "surprised", "source_emotion": "manic", "intensity": 0.9}, {"t": 40000, "kind": "hold", "ms": 1200, "note": "punchline stillness"}, {"t": 40200, "kind": "gesture", "id": "lean_forward", "intensity": 1.0}, {"t": 40300, "kind": "gesture", "id": "head_tilt", "intensity": 0.6}, {"t": 40400, "kind": "gesture", "id": "eye_glitch", "intensity": 1.0}, {"t": 40800, "kind": "camera", "id": "closeup"}, {"t": 41800, "kind": "camera", "id": "medium"}, {"t": 44100, "kind": "camera", "id": "wide"}, {"t": 44500, "kind": "exit", "to": "stage_left"}];
+const GEM={"segments": [{"t0": 0.0, "t1": 3.8, "emotion": "gleeful", "beat_type": "setup", "text_hint": "Melodic, exaggerated country singing vibrato"}, {"t0": 3.8, "t1": 8.5, "emotion": "manic", "beat_type": "tag", "text_hint": "Hyped broadcaster cadence combined with rapid breathy chuckles"}, {"t0": 8.5, "t1": 15.0, "emotion": "deadpan", "beat_type": "punchline", "text_hint": "Casual conversational pivot into extreme dark premise"}, {"t0": 15.0, "t1": 22.0, "emotion": "gleeful", "beat_type": "escalation", "text_hint": "Sing-song cadence ending in self-amused chuckle"}, {"t0": 22.0, "t1": 31.0, "emotion": "deadpan", "beat_type": "premise", "text_hint": "Matter-of-fact deadpan delivery"}, {"t0": 31.0, "t1": 40.0, "emotion": "deadpan", "beat_type": "punchline", "text_hint": "Direct, crisp punchline drop followed by silence for audience reaction"}, {"t0": 40.0, "t1": 44.5, "emotion": "manic", "beat_type": "button", "text_hint": "Throaty, raspy, confident payoff utterance"}], "anger": {"present": false, "type": "none", "body_signature": [], "face_signature": [], "vocal_signature": [], "target": "none", "release_or_withhold": "none", "contrast_before_after": "N/A"}, "overall": {"energy_arc": "Consistently manic and kinetic, shifting rapidly between vocal musical riffs, agitated stage pacing, deadpan non-sequiturs, and a quick punchy button.", "dominant_emotion": "manic", "dominant_emotion_intensity": 0.85, "stage_presence": "Chaotic physical pacing, crouches, sudden direction changes, pacing behind and in front of the band, eccentric prop-free physical comedy."}};
+const VISEMES=[];
+const DUR=44500;
+let playing=false, t0=0, tpos=0, raf=null, visIdx=0;
+
+const q=s=>document.querySelector(s);
+function apply(ev){
+  const kind=ev.kind, id=ev.id||'';
+  if(kind==='expression'){
+    q('.EX').textContent=id;
+    const mad=id==='annoyed';
+    q('.BL').setAttribute('transform',mad?'rotate(-12 85 85)':'');
+    q('.BR').setAttribute('transform',mad?'rotate(12 135 85)':'');
+    const mo=q('.MO');
+    if(id==='surprised'){mo.setAttribute('ry','10');mo.setAttribute('cy','158');}
+    else if(id==='deadpan'){mo.setAttribute('ry','4');mo.setAttribute('cy','160');}
+    else{mo.setAttribute('ry','5');mo.setAttribute('cy','160');}
+  }
+  else if(kind==='camera'){
+    const t=q('.CAMT'); if(t)t.textContent=id;
+    const sc={wide:.85,medium:1,closeup:1.35,pushin:1.2}[id]||1;
+    q('.PH').setAttribute('transform',`translate(110 120) scale(${sc}) translate(-110 -120)`);
+  }
+  else if(kind==='gesture'){
+    if(id==='eye_glitch'){
+      ['.PL','.PR'].forEach(s=>{q(s).setAttribute('rx','2');q(s).setAttribute('fill','#b91c1c');});
+      q('.EX').textContent='SLIT.';
+      setTimeout(()=>['.PL','.PR'].forEach(s=>{q(s).setAttribute('rx','5');q(s).setAttribute('fill','#111');}),900);
+    }
+    if(id==='suit_adjust'){
+      q('.PB').setAttribute('transform','translate(-6 0)');
+      setTimeout(()=>q('.PB').setAttribute('transform','translate(6 0)'),250);
+      setTimeout(()=>q('.PB').setAttribute('transform',''),600);
+    }
+    if(id==='warm_rock_lean'){
+      q('.PH').setAttribute('transform','translate(0 20)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),1400);
+    }
+    if(id==='head_tilt'){
+      q('.PH').setAttribute('transform','rotate(8 110 120)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),700);
+    }
+    if(id==='lean_forward'){
+      q('.PH').setAttribute('transform','translate(0 14)');
+      setTimeout(()=>q('.PH').setAttribute('transform',''),900);
+    }
+    if(id==='small_shrug'){
+      q('.PB').setAttribute('transform','translate(0 -8)');
+      setTimeout(()=>q('.PB').setAttribute('transform',''),650);
+    }
+  }
+  else if(kind==='hold'){
+    q('.EX').textContent='…';
+  }
+  else if(kind==='speak_start'){
+    /* vocal info from segment */
+  }
+}
+
+function segAt(ms){
+  return (GEM.segments||[]).find(s=>ms>=s.t0*1000 && ms<s.t1*1000);
+}
+
+// Ralph mouth shape → SVG ellipse params (ry, rx, cy)
+const MOUTH={closed:[3,14,160],rest:[5,16,160],AI:[12,18,158],E:[8,17,159],
+  O:[10,12,159],U:[7,10,160],FV:[4,15,160],L:[7,15,159],MBP:[2,13,160],open:[14,20,157]};
+function applyViseme(ms){
+  if(!VISEMES.length)return;
+  // binary search for current viseme
+  let lo=0,hi=VISEMES.length-1,cur=VISEMES[0];
+  while(lo<=hi){
+    const mid=(lo+hi)>>1;
+    if(VISEMES[mid].t<=ms){cur=VISEMES[mid];lo=mid+1;}
+    else hi=mid-1;
+  }
+  const p=MOUTH[cur.shape]||MOUTH.rest;
+  const mo=q('.MO');
+  if(mo){
+    mo.setAttribute('ry',p[0]);
+    mo.setAttribute('rx',p[1]);
+    mo.setAttribute('cy',p[2]);
+  }
+}
+
+function tick(){
+  if(!playing)return;
+  tpos = performance.now()-t0;
+  if(tpos>=DUR){tpos=DUR;stop();}
+  q('#barfill').style.width=(tpos/DUR*100)+'%';
+  q('#scrub').value=tpos;
+  const secs=Math.floor(tpos/1000);
+  q('#clock').textContent=`${Math.floor(secs/60)}:${String(secs%60).padStart(2,'0')} / ${Math.floor(DUR/60000)}:${String(Math.floor(DUR/1000)%60).padStart(2,'0')}`;
+  // fire events whose t <= tpos
+  for(const ev of EVENTS){
+    if(ev._f)continue;
+    if(ev.t<=tpos){ev._f=1;apply(ev);}
+  }
+  // viseme mouth animation
+  applyViseme(tpos);
+  // current segment HUD
+  const seg=segAt(tpos);
+  if(seg){
+    q('#emotion').textContent=seg.emotion||'—';
+    q('#beat').textContent=seg.beat_type||'—';
+    q('#seg').textContent=(seg.text_hint||'').slice(0,80);
+  }
+  raf=requestAnimationFrame(tick);
+}
+function play(){
+  playing=true;
+  // reset one-shots
+  EVENTS.forEach(e=>e._f=0);
+  t0=performance.now()-tpos;
+  q('#play').textContent='⏸ Pause';
+  raf=requestAnimationFrame(tick);
+}
+function stop(){
+  playing=false;cancelAnimationFrame(raf);
+  q('#play').textContent='▶ Play';
+}
+q('#play').onclick=()=>playing?stop():play();
+q('#scrub').oninput=e=>{
+  tpos=+e.target.value;
+  EVENTS.forEach(e=>e._f=0);
+  for(const ev of EVENTS){if(ev.t<=tpos){ev._f=1;apply(ev);}}
+  applyViseme(tpos);
+  q('#barfill').style.width=(tpos/DUR*100)+'%';
+};
+// anger banner
+const ang=GEM.anger||{};
+if(ang.present){
+  const el=q('#anger');
+  el.style.display='block';
+  el.textContent=`anger: ${ang.type} — ${(ang.body_signature||[]).join('; ')}`;
+}
+</script></body></html>

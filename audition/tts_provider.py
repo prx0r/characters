@@ -85,9 +85,24 @@ def synthesize_qwen(audition_id: str, text: str, voice: str,
 
 
 def synthesize(audition_id: str, text: str, voice: str, rate: str = "+0%",
-               pitch: str = "+0Hz") -> dict:
+               pitch: str = "+0Hz", modulator: str = "",
+               mod: dict | None = None) -> dict:
     """Tries edge-tts, then piper-local, then espeak. Raises if all fail (no fake audio)."""
     import os as _os
+    if _os.getenv("AUDITION_TTS", "") == "fish":
+        try:
+            import fish_tts as _fish
+            return _fish.synthesize_fish(audition_id, text, voice=voice,
+                                         modulator=modulator or "neutral", mod=mod,
+                                         paid=_os.getenv("FISH_PAID", "") == "1",
+                                         direction=bool(_os.getenv("FISH_DIRECTIONS", "1")))
+        except Exception as e:
+            # fall through to qwen/edge chain; record error below
+            _ferr = str(e)[:200]
+        else:
+            _ferr = ""
+    else:
+        _ferr = ""
     if _os.getenv("AUDITION_TTS", "") == "qwen":
         qmodel = _os.getenv("AUDITION_TTS_MODEL", "qwen-audio-3.0-tts-flash")
         qvoice = _os.getenv("AUDITION_TTS_VOICE", voice)
@@ -101,6 +116,8 @@ def synthesize(audition_id: str, text: str, voice: str, rate: str = "+0%",
     else:
         _qerr = ""
     errors = []
+    if _ferr:
+        errors.append(f"fish: {_ferr}")
     if _qerr:
         errors.append(f"qwen: {_qerr}")
     # 1. edge-tts (best voices, needs Bing network)

@@ -1,0 +1,162 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.fish.audio/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Voice Cloning Best Practices
+
+> Simple tips to get the best voice cloning results with Fish Audio
+
+## Getting Started
+
+Voice cloning lets you create a digital version of any voice. Use at least 10 seconds of audio recording for studio-quality results right in the Playground or via the API.
+
+## Recording Your Voice
+
+### Find a Quiet Space
+
+**Good places to record:**
+
+* A bedroom with curtains and carpet
+* Inside a parked car
+* A quiet office or study room
+* Any room with soft furniture
+
+**Avoid recording near:**
+
+* Open windows with traffic noise
+* Running appliances (AC, fans, refrigerators)
+* Other people talking
+* TVs or music playing
+
+### Use What You Have
+
+**Best options:**
+
+* USB microphone or gaming headset
+* Phone voice recorder app (place it on a stable surface)
+* Earbuds with microphone (hold them steady)
+
+**Quick tip:** Keep the microphone about a hand's width from your mouth and speak normally.
+
+## What to Say
+
+**Best approach:** Record 2-3 clips of 15-20 seconds each that form a complete paragraph.
+
+Here's a sample script you can read naturally:
+
+```
+"Hello, my name is Alex, and I enjoy reading books about technology 
+and science. Yesterday, I walked through the park, observing the 
+beautiful autumn leaves. The weather was quite pleasant, with a 
+gentle breeze and warm sunshine. I often think about how amazing 
+our world is, full of interesting discoveries waiting to be made."
+```
+
+### Recording Tips
+
+**Must Have:**
+
+* Only one person speaking
+* Steady volume throughout
+* Consistent tone and emotion
+* Small pauses between sentences (about half a second)
+
+**Nice to Have:**
+
+* No background noise
+* No room echo
+* Professional mic (but phone is fine too!)
+
+**Avoid:**
+
+* Multiple speakers in one recording
+* Big changes in volume or emotion
+* Background music or TV
+* Rushing through without pauses
+
+## Troubleshooting
+
+### Common Problems
+
+**Voice sounds robotic?**
+
+* Try recording for longer, 30-60 seconds
+* Speak more naturally and add pauses
+
+**Voice doesn't sound like you?**
+
+* Make sure you're the only person speaking in the recording
+* Check that there's no background music or TV
+
+**Poor audio quality?**
+
+* Find a quieter room to record
+* Move closer to your microphone
+* Try using a different recording device
+
+## Important: Getting Permission
+
+<Warning>
+  Only clone voices you have permission to use:
+
+  * Your own voice
+  * Someone who gave you written permission
+  * Never use voices from the internet without permission
+  * Never use celebrity or public figure voices without permission
+</Warning>
+
+## How to Upload Your Recording
+
+<Steps>
+  <Step title="Go to Fish Audio">
+    Visit [fish.audio](https://fish.audio) and log in
+  </Step>
+
+  <Step title="Click 'Create Voice'">
+    Find the voice creation button in your dashboard
+  </Step>
+
+  <Step title="Upload Your Audio">
+    Select your recorded file and give your voice a name
+  </Step>
+
+  <Step title="Wait for Processing">
+    It usually takes just a few seconds
+  </Step>
+
+  <Step title="Try It Out">
+    Type some text and hear your cloned voice speak!
+  </Step>
+</Steps>
+
+## Making Different Voices
+
+Want to create character voices or different styles? Try these:
+
+### Different Emotions
+
+Record the same text with different feelings:
+
+* Happy and energetic
+* Calm and relaxed
+* Serious and professional
+
+### Different Characters
+
+Create unique voices for:
+
+* Storytelling and audiobooks
+* Game characters
+* Educational content
+* Podcast intros
+
+## Get Help
+
+Need assistance? We're here to help:
+
+* **Community Forum**: [Join our Discord](https://discord.gg/fish-audio)
+* **Email Support**: [support@fish.audio](mailto:support@fish.audio)
+* **Video Tutorials**: Coming soon!
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

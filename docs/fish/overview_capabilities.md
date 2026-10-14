@@ -1,0 +1,102 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.fish.audio/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Overview
+
+> Everything Fish Audio can do, and how to build with it
+
+Fish Audio is a voice AI platform. Every core feature is available three ways: in the [web app](/overview/platform) (no code), through the [REST API](/api-reference/introduction), and via the official [SDK](/developer-guide/sdk-guide/quickstart).
+
+## Core features
+
+<CardGroup cols={2}>
+  <Card title="Text to Speech" icon="microphone" href="/features/text-to-speech">
+    Convert text into lifelike speech with the `s2.1-pro`, `s2-pro`, and deprecated `s1` models.
+  </Card>
+
+  <Card title="Speech to Text" icon="waveform" href="/features/speech-to-text">
+    Transcribe audio with `transcribe-1-pro`: multi-speaker conversations, long recordings, emotion cues, and optional timestamps.
+  </Card>
+
+  <Card title="Voice Cloning" icon="clone" href="/features/voice-cloning">
+    Clone a voice instantly from a clip, or train a persistent model.
+  </Card>
+
+  <Card title="Realtime Streaming" icon="bolt" href="/features/realtime-streaming">
+    Stream audio as it generates, for voice agents and live apps.
+  </Card>
+
+  <Card title="Manage Voices" icon="sliders" href="/features/manage-voices">
+    List, inspect, update, and delete your voice models.
+  </Card>
+</CardGroup>
+
+## Also in the web app
+
+These run in the browser, no code required. See the [Platform guide](/overview/platform).
+
+<CardGroup cols={2}>
+  <Card title="Professional Voice Clone" icon="microphone-stand" href="/overview/platform/create-voice/professional-voice-clone">
+    Clone a real, verified voice at studio quality, then release it.
+  </Card>
+
+  <Card title="Voice Design" icon="wand-magic-sparkles" href="/overview/platform/create-voice/voice-design">
+    Design a voice from a plain-text description. Best for original characters.
+  </Card>
+
+  <Card title="Voice Changer" icon="wand-magic-sparkles" href="/overview/platform">
+    Transform existing audio into a different voice.
+  </Card>
+
+  <Card title="Story Studio" icon="book-open" href="/overview/platform">
+    Produce multi-speaker, long-form audio: audiobooks and narration.
+  </Card>
+
+  <Card title="Music & Sound Effects" icon="music" href="/overview/platform">
+    Generate music and cinematic sound effects from a prompt.
+  </Card>
+
+  <Card title="Audio Separation" icon="scissors" href="/overview/platform">
+    Split audio into stems, and related processing utilities.
+  </Card>
+</CardGroup>
+
+## Models
+
+These text-to-speech models power most capabilities:
+
+* **`s2.1-pro`**: the recommended production model, with improved quality, latency, and throughput over S2-Pro.
+* **`s2.1-pro-free`**: the same model at \$0 for testing, prototyping, development, and smaller businesses, without TTFA or DPA guarantees.
+* **`s2-pro`**: the previous-generation S2 model, with multi-speaker and natural-language expression control.
+* **`s1`**: the previous generation, with `(parenthesis)` emotion tags. S1 is deprecated and will be retired on December 31, 2026. After that date, requests that specify `s1` are served by `s2.1-pro`. See [Migrate from S1](/developer-guide/models-pricing/migrate-from-s1).
+
+For speech to text, select the model with the `model` header on `POST /v1/asr`:
+
+* **`transcribe-1-pro`**: the recommended model, for everything from short clips to multi-speaker conversations (speaker markers and speaker turns) and long recordings, with inline emotion cues. Send `model: transcribe-1-pro` explicitly.
+* **`transcribe-1`**: general transcription of short recordings. A request whose `model` header is missing or not an exact match is served by this model.
+
+See [Models Overview](/developer-guide/models-pricing/models-overview) and [Choosing a Model](/developer-guide/models-pricing/choosing-a-model) for the full lineup and languages, and [Speech to Text](/features/speech-to-text#input-audio) for transcription formats and limits.
+
+## Pick your path
+
+<CardGroup cols={2}>
+  <Card title="Use the web app" icon="browser" href="/overview/platform">
+    No code: generate audio, clone voices, and produce projects in your browser.
+  </Card>
+
+  <Card title="Build with the SDK" icon="code" href="/developer-guide/sdk-guide/quickstart">
+    The Python library for your application.
+  </Card>
+
+  <Card title="Call the API" icon="terminal" href="/api-reference/introduction">
+    Raw REST and WebSocket endpoints for any language.
+  </Card>
+
+  <Card title="Use your AI coding agent" icon="robot" href="/developer-guide/resources/coding-agents">
+    Install the Fish Audio skill so your agent writes correct code.
+  </Card>
+</CardGroup>
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

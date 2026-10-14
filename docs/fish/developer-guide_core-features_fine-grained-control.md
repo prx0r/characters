@@ -1,0 +1,117 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.fish.audio/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Fine-grained Control
+
+> Advanced control over speech generation
+
+<Card title="Try it live in the API playground" icon="flask" href="/api-reference/endpoint/openapi-v1/text-to-speech" horizontal>
+  Put your phoneme or paralanguage tags into the `text` field and send a real
+  request to hear the result.
+</Card>
+
+<Card title="Use pronunciation dictionaries" icon="book-open" href="/developer-guide/core-features/fine-grained-control/pronunciation-dictionaries" horizontal>
+  Create, preview, and publish pronunciation rules in the web app, then reuse
+  them across TTS requests.
+</Card>
+
+## Getting Started
+
+To use fine-grained control, you can use either our SDK, API, or Playground.
+
+SDK/API: Phoneme tags are preserved by text normalization, so you can keep the default normalization behavior for pronunciation control. Set `"normalize": false` only when you want to prevent normalization from rewriting the surrounding text, such as numbers, dates, or URLs.
+
+Playground: You can use V1.6 Control Model, without setting any other options.
+
+<Note>
+  Disabling normalization may reduce the stability of reading numbers, dates,
+  and URLs. You'll need to handle these cases manually for best results.
+</Note>
+
+## Phoneme Control
+
+Phoneme control allows you to specify exact pronunciations for words, characters, or short phrases. Wrap the desired pronunciation in `<|phoneme_start|>` and `<|phoneme_end|>` tags.
+
+The replacement scope depends on the language:
+
+* English: replace one word with CMU Arpabet.
+* Chinese: replace one character or syllable with tone-number pinyin.
+* Japanese: replace a short Japanese word or phrase with OpenJTalk-style romaji and pitch accent markers.
+
+<CardGroup cols={3}>
+  <Card title="English" icon="language" href="/developer-guide/core-features/fine-grained-control/english">
+    CMU Arpabet examples for names, homographs, acronyms, and technical terms.
+  </Card>
+
+  <Card title="Chinese" icon="language" href="/developer-guide/core-features/fine-grained-control/chinese">
+    Tone-number pinyin examples for multi-character words, tones, and polyphonic
+    characters.
+  </Card>
+
+  <Card title="Japanese" icon="language" href="/developer-guide/core-features/fine-grained-control/japanese">
+    OpenJTalk romaji phonemes with pitch accent digits.
+  </Card>
+</CardGroup>
+
+### Quick Examples
+
+English:
+
+```text theme={null}
+I am an <|phoneme_start|>EH1 N JH AH0 N IH1 R<|phoneme_end|>.
+```
+
+Chinese:
+
+```text theme={null}
+我是一个<|phoneme_start|>gong1<|phoneme_end|><|phoneme_start|>cheng2<|phoneme_end|><|phoneme_start|>shi1<|phoneme_end|>。
+```
+
+Japanese:
+
+```text theme={null}
+<|phoneme_start|>ha0shi1ga0<|phoneme_end|>見えます。
+```
+
+## Paralanguage
+
+Paralanguage controls allow you to add natural speech elements and pauses to make the generated speech sound more human-like. There are two main types of controls:
+
+### Pause Words
+
+You can use common pause words like "um", "uh", "嗯", "啊" to control the rhythm of the speech.
+
+### Special Effects
+
+The following special effects can be added using parentheses:
+
+| Effect | Description | First Available | Stage |
+| - | - | - | - |
+| `(break)` | Short pause | V1.6 | Experimental |
+| `(long-break)` | Extended pause | V1.6 | Experimental |
+| `(breath)` | Breathing sound | V1.6 | Experimental |
+| `(laugh)` | Laughter sound | V1.6 | Experimental |
+| `(cough)` | Coughing sound | V1.6 | Experimental |
+| `(lip-smacking)` | Lip smacking sound | V1.6 | Experimental |
+| `(sigh)` | Sighing sound | V1.6 | Experimental |
+
+<Warning>
+  The effects `(laugh)`, `(cough)`, `(lip-smacking)`, and `(sigh)` are
+  developing. You may need to repeat them multiple times for better results.
+</Warning>
+
+Example:
+
+```text theme={null}
+I am, um, an (break) engineer.
+```
+
+You can combine paralanguage and phoneme control in the same text:
+
+```text theme={null}
+I am, um, an (break) <|phoneme_start|>EH1 N JH AH0 N IH1 R<|phoneme_end|>.
+```
+
+
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

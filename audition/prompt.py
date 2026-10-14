@@ -89,7 +89,14 @@ def tts_params(modulator: str, mod: dict, base: str = "normal") -> dict:
         pitch = "+40Hz"
     elif emo.get("arousal", 0.5) <= 0.3:
         pitch = "-30Hz"
-    return {"rate": rate, "pitch": pitch, "modulator": modulator}
+    direction = ""
+    try:
+        import fish_tts as _fish
+        direction = _fish.directions_for_modulator(modulator, mod)
+    except Exception:
+        pass
+    return {"rate": rate, "pitch": pitch, "modulator": modulator,
+            "direction": direction}
 
 
 def build_context(scenario: dict, state: dict, memories: list[str],

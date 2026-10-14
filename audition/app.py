@@ -137,7 +137,8 @@ def _persist_ready(job_id: str, character_id: str, conn, gen: dict, strat: dict,
     # edge-tts wants +NN% rate; map our named rates
     rate = {"slow": "-15%", "normal": "+0%", "fast": "+12%"}.get(tp.get("rate", "normal"), "+0%")
     audio = tts_provider.synthesize(job_id, gen["full_text"], voice,
-                                    rate=rate, pitch=tp.get("pitch", "+0Hz"))
+                                    rate=rate, pitch=tp.get("pitch", "+0Hz"),
+                                    modulator=tp.get("modulator", ""))
     est_total = sum(b["end_ms"] - b["start_ms"] for b in gen["beats"])
     # scale beat timings to real audio duration
     scale = (audio["duration_ms"] / est_total) if est_total else 1.0

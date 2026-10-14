@@ -44,7 +44,11 @@ evidence decides. Site live at https://auditions.pogtown.com/
 
 - LLM: OpenCode Go `mimo-v2.6-flash` → `mimo-v2.5` fallback → template.
   Gateway flaky: 2×15s tries. Never OpenAI models.
-- TTS: edge-tts (free); ElevenLabs v4 for showcase (owner-approved only).
+- TTS: edge-tts (free); ElevenLabs v4 for showcase (owner-approved only);
+  Fish Audio `s2.1-pro-free` ($0) LIVE — key in .env, smoke-tested. Opt in with
+  `AUDITION_TTS=fish`. Drama 3 `drama-3` gated behind `FISH_PAID=1` (ASK BEFORE
+  ANY SPEND; drama-3 pricing unpublished). Avatar/lip-sync video needs Fish web
+  Plus plan ($11/mo) — not API. Full cost table: `docs/FISH.md`.
 - Portraits: DiceBear seeds (placeholders, honestly labeled).
 - No GPU workloads locally. No torch installs. Disk floor: 4G free.
 
