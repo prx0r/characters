@@ -1,0 +1,87 @@
+{
+  "pack": "kappa-kyle-cucumber-debt",
+  "stencil": "ari_matti_kt704_passport",
+  "voice": "kid_darwin",
+  "voice_id": "3a561684e5fa46eb9528e8e6ff9000c9",
+  "beats": [
+    {
+      "seg": 0,
+      "label": "gleeful",
+      "text": "will do anything for a cucumber and keeps a ledger of who owes him one.",
+      "recipe": {
+        "temp": 0.92,
+        "speed": 0.9,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "file": "/tmp/opencode/characters/audition/audio/swap-kappa-kyle-cucumber-debt-ari_matti_kt704_passport-0-fish.mp3"
+    },
+    {
+      "seg": 1,
+      "label": "manic",
+      "text": "I'm Kappa Kyle, the Cucumber-Debt Collector! 400-year-old Japanese river imp who moved to the city and now runs a protection racket payable exclusively in cucumbers!",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.75,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "file": "/tmp/opencode/characters/audition/audio/swap-kappa-kyle-cucumber-debt-ari_matti_kt704_passport-1-fish.mp3"
+    },
+    {
+      "seg": 2,
+      "label": "sarcastic",
+      "text": "a water dish on his head must stay wet; if it spills he passes out on the spot.",
+      "recipe": {
+        "temp": 0.65,
+        "speed": 0.8,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "file": "/tmp/opencode/characters/audition/audio/swap-kappa-kyle-cucumber-debt-ari_matti_kt704_passport-2-fish.mp3"
+    },
+    {
+      "seg": 3,
+      "label": "mock_indignant",
+      "text": "They say bowing is not a business model \u2014 and I still can't get my a balanced ledger!",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 0.79,
+        "cue": "[frustrated]",
+        "vol": 0.0
+      },
+      "file": "/tmp/opencode/characters/audition/audio/swap-kappa-kyle-cucumber-debt-ari_matti_kt704_passport-3-fish.mp3"
+    },
+    {
+      "seg": 4,
+      "label": "gleeful",
+      "text": "will do anything for a cucumber and keeps a ledger of who owes him one.",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.56,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "file": "/tmp/opencode/characters/audition/audio/swap-kappa-kyle-cucumber-debt-ari_matti_kt704_passport-4-fish.mp3"
+    }
+  ],
+  "out": "/tmp/opencode/characters/audition/voicelab/swaps/kappa-kyle-cucumber-debt__ari_matti_kt704_passport__kid_darwin.wav",
+  "verify_match": 0.901,
+  "unsaid": [
+    "will",
+    "keeps",
+    "cucumber-debt",
+    "400-year-old",
+    "imp",
+    "bowing",
+    "\u2014",
+    "will",
+    "keeps"
+  ],
+  "laugh_events": 0,
+  "duration_ms": 39079,
+  "pitch_std": 5.53,
+  "elapsed_s": 32.7,
+  "note": "delivery=KT stencil, material=pack persona, voice=card",
+  "at": "2026-10-14T13:59:17Z"
+}
