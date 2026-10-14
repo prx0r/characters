@@ -1,0 +1,284 @@
+{
+  "kgraph": "uncle_laser",
+  "set": "uncle_lazer_kt",
+  "condition": "rich text-only graph -> emerge -> Jev -> MARY tempo (no fitted scale, no clone, never heard them)",
+  "affect": {
+    "arousal": 0.375,
+    "valence": -0.037500000000000006,
+    "power": 0.4875,
+    "evidence": {
+      "fear": [
+        "dry"
+      ],
+      "power": [
+        "hierarchy"
+      ],
+      "warmth": [],
+      "spike": [],
+      "texture": [
+        "drawl",
+        "dry",
+        "flat",
+        "slow"
+      ]
+    }
+  },
+  "mary_rate": -0.13,
+  "emotion_acc": 0.0,
+  "wpm_mae": 61.1,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Closing tonight's show Ladies and gentlemen a very very polarizing figure in the",
+      "pred_emo": "deadpan",
+      "true_emo": "mock_indignant",
+      "true_all": [
+        "mock_indignant"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.06,
+      "gen_wpm": 162.4,
+      "act_wpm": 78.0,
+      "wpm_err": 84.4,
+      "gen_var": 7.16,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s0-fish.mp3"
+    },
+    {
+      "seg": "s1",
+      "text": "a drag brunch That's not the funny part sir But I know",
+      "pred_emo": "deadpan",
+      "true_emo": "sarcastic",
+      "true_all": [
+        "sarcastic"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.1,
+      "gen_wpm": 212.1,
+      "act_wpm": 61.4,
+      "wpm_err": 150.7,
+      "gen_var": 7.16,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s1-fish.mp3"
+    },
+    {
+      "seg": "s2",
+      "text": "what you're thinking Same thing I was thinking Like bottomless mimosas NASCAR co",
+      "pred_emo": "deadpan",
+      "true_emo": "sarcastic",
+      "true_all": [
+        "sarcastic",
+        "sarcastic"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.21,
+      "gen_wpm": 123.9,
+      "act_wpm": 176.1,
+      "wpm_err": -52.3,
+      "gen_var": 9.96,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s2-fish.mp3"
+    },
+    {
+      "seg": "s3",
+      "text": "I was born this way I was like you't a fucking born that way you know You weren'",
+      "pred_emo": "deadpan",
+      "true_emo": "sarcastic",
+      "true_all": [
+        "sarcastic",
+        "sarcastic"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.35,
+      "gen_wpm": 232.2,
+      "act_wpm": 181.3,
+      "wpm_err": 50.9,
+      "gen_var": 2.68,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s3-fish.mp3"
+    },
+    {
+      "seg": "s4",
+      "text": "okay And Man Peter started fucking sexing back and forth and now I'm a shooter s",
+      "pred_emo": "deadpan",
+      "true_emo": "sarcastic",
+      "true_all": [
+        "sarcastic",
+        "sarcastic",
+        "sarcastic"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.28,
+      "gen_wpm": 224.7,
+      "act_wpm": 148.4,
+      "wpm_err": 76.3,
+      "gen_var": 7.06,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s4-fish.mp3"
+    },
+    {
+      "seg": "s5",
+      "text": "after and she's like well you know I'm post I'm a winner done being prepared to ",
+      "pred_emo": "deadpan",
+      "true_emo": "sarcastic",
+      "true_all": [
+        "sarcastic",
+        "sarcastic"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.18,
+      "gen_wpm": 186.3,
+      "act_wpm": 183.8,
+      "wpm_err": 2.6,
+      "gen_var": 7.17,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s5-fish.mp3"
+    },
+    {
+      "seg": "s6",
+      "text": "lasagna in the microwave for too long But y 'all have been inside a winner er th",
+      "pred_emo": "deadpan",
+      "true_emo": "mock_indignant",
+      "true_all": [
+        "mock_indignant",
+        "sarcastic"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.13,
+      "gen_wpm": 144.8,
+      "act_wpm": 87.9,
+      "wpm_err": 56.9,
+      "gen_var": 4.04,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s6-fish.mp3"
+    },
+    {
+      "seg": "s7",
+      "text": "for John Lot shallower than you think it is lot more shallower It's like you eve",
+      "pred_emo": "deadpan",
+      "true_emo": "mock_indignant",
+      "true_all": [
+        "mock_indignant",
+        "mock_indignant",
+        "gleeful"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.22,
+      "gen_wpm": 161.1,
+      "act_wpm": 152.1,
+      "wpm_err": 9.0,
+      "gen_var": 8.82,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s7-fish.mp3"
+    },
+    {
+      "seg": "s8",
+      "text": "wow Uncle mother fucking laser I know exactly what I want to say right now It's ",
+      "pred_emo": "deadpan",
+      "true_emo": "mock_indignant",
+      "true_all": [
+        "mock_indignant"
+      ],
+      "match_score": 0.0,
+      "pred_pace": 0.2,
+      "gen_wpm": 158.9,
+      "act_wpm": 92.4,
+      "wpm_err": 66.5,
+      "gen_var": 6.0,
+      "wav": "/tmp/opencode/characters/audition/audio/kg-s8-fish.mp3"
+    }
+  ],
+  "theory_review": [
+    {
+      "seg": "s0",
+      "pred": "deadpan",
+      "true": "mock_indignant",
+      "wpm_gen": 162.4,
+      "wpm_act": 78.0,
+      "why_actual_wins": [
+        "drawl-hold: actual slower than graph predicts \u2014 either pause-embedding inside the beat or action-readiness BLOCKED (Frijda: avoidance readiness = drag, not acceleration)",
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual mock_indignant \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    },
+    {
+      "seg": "s1",
+      "pred": "deadpan",
+      "true": "sarcastic",
+      "wpm_gen": 212.1,
+      "wpm_act": 61.4,
+      "why_actual_wins": [
+        "drawl-hold: actual slower than graph predicts \u2014 either pause-embedding inside the beat or action-readiness BLOCKED (Frijda: avoidance readiness = drag, not acceleration)",
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual sarcastic \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    },
+    {
+      "seg": "s2",
+      "pred": "deadpan",
+      "true": "sarcastic",
+      "wpm_gen": 123.9,
+      "wpm_act": 176.1,
+      "why_actual_wins": [
+        "sprint-into-laugh: actual accelerates near audience response (Casey corpus: laughed riffs faster + shorter pre-pauses)",
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual sarcastic \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    },
+    {
+      "seg": "s3",
+      "pred": "deadpan",
+      "true": "sarcastic",
+      "wpm_gen": 232.2,
+      "wpm_act": 181.3,
+      "why_actual_wins": [
+        "drawl-hold: actual slower than graph predicts \u2014 either pause-embedding inside the beat or action-readiness BLOCKED (Frijda: avoidance readiness = drag, not acceleration)",
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual sarcastic \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    },
+    {
+      "seg": "s4",
+      "pred": "deadpan",
+      "true": "sarcastic",
+      "wpm_gen": 224.7,
+      "wpm_act": 148.4,
+      "why_actual_wins": [
+        "drawl-hold: actual slower than graph predicts \u2014 either pause-embedding inside the beat or action-readiness BLOCKED (Frijda: avoidance readiness = drag, not acceleration)",
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual sarcastic \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    },
+    {
+      "seg": "s5",
+      "pred": "deadpan",
+      "true": "sarcastic",
+      "wpm_gen": 186.3,
+      "wpm_act": 183.8,
+      "why_actual_wins": [
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual sarcastic \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    },
+    {
+      "seg": "s6",
+      "pred": "deadpan",
+      "true": "mock_indignant",
+      "wpm_gen": 144.8,
+      "wpm_act": 87.9,
+      "why_actual_wins": [
+        "drawl-hold: actual slower than graph predicts \u2014 either pause-embedding inside the beat or action-readiness BLOCKED (Frijda: avoidance readiness = drag, not acceleration)",
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual mock_indignant \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    },
+    {
+      "seg": "s7",
+      "pred": "deadpan",
+      "true": "mock_indignant",
+      "wpm_gen": 161.1,
+      "wpm_act": 152.1,
+      "why_actual_wins": [
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual mock_indignant \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    },
+    {
+      "seg": "s8",
+      "pred": "deadpan",
+      "true": "mock_indignant",
+      "wpm_gen": 158.9,
+      "wpm_act": 92.4,
+      "why_actual_wins": [
+        "drawl-hold: actual slower than graph predicts \u2014 either pause-embedding inside the beat or action-readiness BLOCKED (Frijda: avoidance readiness = drag, not acceleration)",
+        "graph mis-specified for this beat: predicted deadpan from graph psyche, actual mock_indignant \u2014 the graph's modulator_cycle may need this state earlier"
+      ]
+    }
+  ],
+  "wav": "/home/box/kgraph_uncle_laser_uncle_lazer_kt.wav",
+  "at": "2026-10-14T18:43:12Z"
+}

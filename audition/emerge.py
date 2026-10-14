@@ -72,6 +72,28 @@ def affect_from_graph(c: dict) -> dict:
     valence = 0.1 + 0.08 * len(warm_hits) - 0.07 * len(fear_hits)
     power = 0.4 + 0.07 * len(power_hits)
 
+    # delivery_texture field: separates HOW THEY TALK from who they
+    # perform being (lazer: manic self-model, dry-drawl delivery).
+    # Direct affect priors when present — trumps aspirational persona text.
+    tex = (c.get("delivery_texture") or "").lower()
+    TEXT_AFFECT = {
+        "dry": (0.4, -0.1, 0.5), "drawl": (0.35, -0.05, 0.5),
+        "deadpan": (0.35, 0.0, 0.55), "flat": (0.4, 0.0, 0.5),
+        "warm": (0.5, 0.5, 0.4), "slow": (0.35, 0.0, 0.45),
+        "manic": (0.9, 0.3, 0.8), "sprint": (0.85, 0.2, 0.7),
+    }
+    if tex:
+        hits = {k: v for k, v in TEXT_AFFECT.items() if k in tex}
+        if hits:
+            vals = list(hits.values())
+            arousal = sum(v[0] for v in vals) / len(vals)
+            valence = sum(v[1] for v in vals) / len(vals)
+            power = sum(v[2] for v in vals) / len(vals)
+            return {"arousal": arousal, "valence": valence, "power": power,
+                    "evidence": {"fear": sorted(fear_hits), "power": sorted(power_hits),
+                                 "warmth": sorted(warm_hits), "spike": sorted(spike_hits),
+                                 "texture": sorted(hits)}}
+
     # vibe field as direct prior override (owner-authored shortcut)
     vibe = (c.get("vibe") or "").lower()
     VIBE_AFFECT = {"deadpan": (0.35, 0.0, 0.55), "manic": (0.9, 0.3, 0.8),
