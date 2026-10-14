@@ -1,0 +1,41 @@
+{
+  "mapping": "pickles_1 set -> dracula (literal, same flow)",
+  "stencil": "sir_winston_pickles_1",
+  "voice": "library dracula 04e9ab89",
+  "beats": [
+    {
+      "seg": 0,
+      "recipe": {
+        "temp": 0.45,
+        "speed": 1.47,
+        "cue": "",
+        "vol": 0.0
+      },
+      "text": "This is Greg. I sponsored him. He's a goat. Don't ask about the arrangement."
+    },
+    {
+      "seg": 1,
+      "recipe": {
+        "temp": 0.45,
+        "speed": 1.25,
+        "cue": "",
+        "vol": 0.0
+      },
+      "text": "The paperwork was extensive. Blood type, bite history, hooves. The hooves took all afternoon."
+    },
+    {
+      "seg": 2,
+      "recipe": {
+        "temp": 0.57,
+        "speed": 1.0,
+        "cue": "",
+        "vol": 0.0
+      },
+      "text": "He's my emotional support animal. I'm his emotional apex predator. We've agreed to never discuss the hierarchy."
+    }
+  ],
+  "verify_match": 1.0,
+  "unsaid": [],
+  "duration_ms": 22386,
+  "rating": null
+}
