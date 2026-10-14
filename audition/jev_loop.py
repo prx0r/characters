@@ -41,16 +41,26 @@ CLIPS = {
     "casey_rocket_2": "/home/box/comedy_sets/shorts/casey_rocket_2.mp4",
     "louis_roadrage": "/home/box/louis_sets/louis_roadrage.m4a",
     "norm_moth": "/home/box/norm_sets/norm_joke_trim.wav",
+    "will_montgomery_1": "/home/box/comedy_sets/shorts/will_montgomery_1.mp4",
+    "kam_patterson_1": "/home/box/comedy_sets/shorts/kam_patterson_1.mp4",
+    "kam_patterson_2": "/home/box/comedy_sets/shorts/kam_patterson_2.mp4",
+    "sir_winston_pickles_1": "/home/box/comedy_sets/shorts/sir_winston_pickles_1.mp4",
+    "sir_winston_pickles_2": "/home/box/comedy_sets/shorts/sir_winston_pickles_2.mp4",
 }
 CLONES = {"ari": "dbeb1d68566245e2b857617b830e8031",
           "casey": "9c36c951cee84457a5cc9f94387e9a42",
           "pickles": "100e10e7c5464a10b5120a01ade115a2",
           "louis": "fb015415ebf141999fc882baa0e0834c",
-          "norm": "085d639799cc449c8a5350fe843c14b"}
+          "norm": "085d639799cc449c8a5350fe8543c14b",
+          "will": "9c1e219466b84e448976d5f163d3d9fc",
+          "kam": "6ab05a976a684ea49798183783cbd3f9"}
 SET_PERFORMER = {"kt704_passport": "ari", "kt715_ep715": "ari", "kt715_walking": "ari",
                  "kt715_nashville": "ari", "kt728_diversifying": "ari", "kt728_jamesbond": "ari",
                  "casey_rocket_1": "casey", "casey_rocket_2": "casey",
-                 "louis_roadrage": "louis", "norm_moth": "norm"}
+                 "louis_roadrage": "louis", "norm_moth": "norm",
+                 "will_montgomery_1": "will", "kam_patterson_1": "kam",
+                 "kam_patterson_2": "kam",
+                 "sir_winston_pickles_1": "pickles", "sir_winston_pickles_2": "pickles"}
 BASE_WPM = 154.3  # per-performer probe override in run()
 CLONE = CLONES["ari"]
 
@@ -178,8 +188,31 @@ PROFILES = {
                          "tells it like he's figuring it out live",
         "affect": {"arousal": 0.4, "valence": 0.1, "power": 0.6},
     },
+    "will": {
+        "name": "william_montgomery",
+        "persona_note": "Unhinged scream-comedy chaos agent; violent tonal swings; "
+                        "shouts punchlines then collapses into muttering; unhinged intensity",
+        "delivery_note": "extreme dynamics; sudden shouts; AM-GT shows mock_indignant/"
+                         "gleeful mix; wide variance",
+        "affect": {"arousal": 0.9, "valence": -0.2, "power": 0.9},
+    },
+    "kam": {
+        "name": "kam_patterson",
+        "persona_note": "Machine-gun crowd-work energy; barrel-through-laughter delivery; "
+                        "storyteller who sprints; gleeful agreement with his own premises",
+        "delivery_note": "fast (210+ wpm measured), gleeful-dominant AM-GT, "
+                         "laughs overlap speech (barrel-through style)",
+        "affect": {"arousal": 0.85, "valence": 0.4, "power": 0.7},
+    },
+    "pickles": {
+        "name": "sir_winston_pickles",
+        "persona_note": "Absurdist prop-comic gentleman; formal delivery of insanity; "
+                        "sponsors a little person; deadpan aristocrat of chaos",
+        "delivery_note": "gemini GT available; pickles_1 183wpm measured, "
+                         "deadpan-formal register",
+        "affect": {"arousal": 0.5, "valence": 0.2, "power": 0.7},
+    },
 }
-
 BOUNDS = {"emotion_acc": 0.60, "wpm_mae": 20.0, "var_mae": 1.5}
 
 

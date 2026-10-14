@@ -1,0 +1,1047 @@
+{
+ "language_code": "eng",
+ "text": "I was in Walmart a couple days ago and I was looking for candles I was sitting there and he was working at Walmart and I said how are you doing ma 'am I would like to find these candles And she went me know it's been no English That's how I do the accent Y 'all right Me know it's been English And I said oh that's okay And then she went say it into my phone Now y 'all don't know what the fuck I'm saying right now Anyway so you know Siri has no idea what the fuck I say anytime So I went candles and the phone went what And I went candles and the phone went what So she took the phone back and it was like just spell it And then I just went fuck goddamn it How do we get here",
+ "words": [
+  {
+   "text": "I",
+   "start": 0.0,
+   "end": 0.18,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 0.18,
+   "end": 0.35,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "in",
+   "start": 0.35,
+   "end": 0.53,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Walmart",
+   "start": 0.53,
+   "end": 0.7,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "a",
+   "start": 0.7,
+   "end": 0.88,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "couple",
+   "start": 0.88,
+   "end": 1.12,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "days",
+   "start": 1.12,
+   "end": 1.37,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "ago",
+   "start": 1.37,
+   "end": 1.61,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 1.61,
+   "end": 1.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 1.86,
+   "end": 2.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 2.1,
+   "end": 2.28,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "looking",
+   "start": 2.28,
+   "end": 2.47,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "for",
+   "start": 2.47,
+   "end": 2.65,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "candles",
+   "start": 2.65,
+   "end": 2.84,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 2.84,
+   "end": 3.02,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 3.02,
+   "end": 3.11,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "sitting",
+   "start": 3.11,
+   "end": 3.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "there",
+   "start": 3.2,
+   "end": 3.28,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 3.28,
+   "end": 3.37,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "he",
+   "start": 3.37,
+   "end": 3.46,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 3.46,
+   "end": 3.64,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "working",
+   "start": 3.64,
+   "end": 3.83,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "at",
+   "start": 3.83,
+   "end": 4.01,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Walmart",
+   "start": 4.01,
+   "end": 4.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 4.2,
+   "end": 4.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 4.38,
+   "end": 4.46,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "said",
+   "start": 4.46,
+   "end": 4.53,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "how",
+   "start": 4.53,
+   "end": 4.61,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "are",
+   "start": 4.61,
+   "end": 4.68,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "you",
+   "start": 4.68,
+   "end": 4.76,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "doing",
+   "start": 4.76,
+   "end": 4.88,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "ma",
+   "start": 4.88,
+   "end": 4.99,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "'am",
+   "start": 4.99,
+   "end": 5.11,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 5.11,
+   "end": 5.22,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "would",
+   "start": 5.22,
+   "end": 5.34,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "like",
+   "start": 5.34,
+   "end": 5.6,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "to",
+   "start": 5.6,
+   "end": 5.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "find",
+   "start": 5.86,
+   "end": 6.12,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "these",
+   "start": 6.12,
+   "end": 6.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "candles",
+   "start": 6.38,
+   "end": 6.64,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "And",
+   "start": 6.64,
+   "end": 6.8,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "she",
+   "start": 6.8,
+   "end": 6.95,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "went",
+   "start": 6.95,
+   "end": 7.11,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "me",
+   "start": 7.11,
+   "end": 7.26,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "know",
+   "start": 7.26,
+   "end": 7.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it's",
+   "start": 7.42,
+   "end": 7.6,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "been",
+   "start": 7.6,
+   "end": 7.79,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "no",
+   "start": 7.79,
+   "end": 7.97,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "English",
+   "start": 7.97,
+   "end": 8.16,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "That's",
+   "start": 8.16,
+   "end": 8.34,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "how",
+   "start": 8.34,
+   "end": 8.51,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 8.51,
+   "end": 8.68,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "do",
+   "start": 8.68,
+   "end": 8.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 8.86,
+   "end": 9.03,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "accent",
+   "start": 9.03,
+   "end": 9.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Y",
+   "start": 9.36,
+   "end": 9.76,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "'all",
+   "start": 9.76,
+   "end": 10.16,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "right",
+   "start": 10.16,
+   "end": 10.56,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Me",
+   "start": 10.56,
+   "end": 10.96,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "know",
+   "start": 10.96,
+   "end": 11.36,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it's",
+   "start": 11.36,
+   "end": 11.55,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "been",
+   "start": 11.55,
+   "end": 11.74,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "English",
+   "start": 11.74,
+   "end": 11.94,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "And",
+   "start": 11.94,
+   "end": 12.13,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 12.13,
+   "end": 12.32,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "said",
+   "start": 12.32,
+   "end": 12.7,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "oh",
+   "start": 12.7,
+   "end": 13.09,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "that's",
+   "start": 13.09,
+   "end": 13.47,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "okay",
+   "start": 13.47,
+   "end": 13.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "And",
+   "start": 13.86,
+   "end": 14.24,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "then",
+   "start": 14.24,
+   "end": 14.53,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "she",
+   "start": 14.53,
+   "end": 14.82,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "went",
+   "start": 14.82,
+   "end": 15.12,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "say",
+   "start": 15.12,
+   "end": 15.41,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 15.41,
+   "end": 15.7,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "into",
+   "start": 15.7,
+   "end": 16.0,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "my",
+   "start": 16.0,
+   "end": 16.29,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "phone",
+   "start": 16.29,
+   "end": 16.59,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Now",
+   "start": 16.59,
+   "end": 16.88,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "y",
+   "start": 16.88,
+   "end": 17.18,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "'all",
+   "start": 17.18,
+   "end": 17.28,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "don't",
+   "start": 17.28,
+   "end": 17.37,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "know",
+   "start": 17.37,
+   "end": 17.47,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "what",
+   "start": 17.47,
+   "end": 17.56,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 17.56,
+   "end": 17.66,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "fuck",
+   "start": 17.66,
+   "end": 17.88,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I'm",
+   "start": 17.88,
+   "end": 18.11,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "saying",
+   "start": 18.11,
+   "end": 18.33,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "right",
+   "start": 18.33,
+   "end": 18.56,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "now",
+   "start": 18.56,
+   "end": 18.78,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Anyway",
+   "start": 18.78,
+   "end": 19.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "so",
+   "start": 19.2,
+   "end": 19.61,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "you",
+   "start": 19.61,
+   "end": 20.03,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "know",
+   "start": 20.03,
+   "end": 20.44,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Siri",
+   "start": 20.44,
+   "end": 20.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "has",
+   "start": 20.86,
+   "end": 21.06,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "no",
+   "start": 21.06,
+   "end": 21.27,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "idea",
+   "start": 21.27,
+   "end": 21.47,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "what",
+   "start": 21.47,
+   "end": 21.68,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 21.68,
+   "end": 21.88,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "fuck",
+   "start": 21.88,
+   "end": 22.31,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 22.31,
+   "end": 22.74,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "say",
+   "start": 22.74,
+   "end": 23.18,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "anytime",
+   "start": 23.18,
+   "end": 23.61,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "So",
+   "start": 23.61,
+   "end": 24.04,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 24.04,
+   "end": 24.28,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "went",
+   "start": 24.28,
+   "end": 24.52,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "candles",
+   "start": 24.52,
+   "end": 24.76,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 24.76,
+   "end": 25.0,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 25.0,
+   "end": 25.24,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "phone",
+   "start": 25.24,
+   "end": 25.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "went",
+   "start": 25.5,
+   "end": 25.75,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "what",
+   "start": 25.75,
+   "end": 26.01,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "And",
+   "start": 26.01,
+   "end": 26.26,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 26.26,
+   "end": 26.52,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "went",
+   "start": 26.52,
+   "end": 26.74,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "candles",
+   "start": 26.74,
+   "end": 26.95,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 26.95,
+   "end": 27.17,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 27.17,
+   "end": 27.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "phone",
+   "start": 27.38,
+   "end": 27.6,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "went",
+   "start": 27.6,
+   "end": 28.21,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "what",
+   "start": 28.21,
+   "end": 28.82,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "So",
+   "start": 28.82,
+   "end": 29.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "she",
+   "start": 29.42,
+   "end": 30.03,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "took",
+   "start": 30.03,
+   "end": 30.64,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 30.64,
+   "end": 30.84,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "phone",
+   "start": 30.84,
+   "end": 31.03,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "back",
+   "start": 31.03,
+   "end": 31.23,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 31.23,
+   "end": 31.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 31.42,
+   "end": 31.62,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 31.62,
+   "end": 31.89,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "like",
+   "start": 31.89,
+   "end": 32.16,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "just",
+   "start": 32.16,
+   "end": 32.44,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "spell",
+   "start": 32.44,
+   "end": 32.71,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 32.71,
+   "end": 32.98,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "And",
+   "start": 32.98,
+   "end": 33.15,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "then",
+   "start": 33.15,
+   "end": 33.32,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 33.32,
+   "end": 33.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "just",
+   "start": 33.5,
+   "end": 33.67,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "went",
+   "start": 33.67,
+   "end": 33.84,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "fuck",
+   "start": 33.84,
+   "end": 34.11,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "goddamn",
+   "start": 34.11,
+   "end": 34.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 34.38,
+   "end": 34.66,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "How",
+   "start": 34.66,
+   "end": 34.93,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "do",
+   "start": 34.93,
+   "end": 35.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "we",
+   "start": 35.2,
+   "end": 35.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "get",
+   "start": 35.2,
+   "end": 35.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "here",
+   "start": 35.2,
+   "end": 35.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  }
+ ],
+ "laugh_events": [],
+ "punch_candidates": [],
+ "audio_duration_secs": 38.963084,
+ "asr": "cloudflare-whisper",
+ "note": "laughter extracted from transcript 'ha ha' runs (StandUp4AI-style)"
+}
