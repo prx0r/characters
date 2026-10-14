@@ -44,7 +44,10 @@ def persona_wpm(comedian: str) -> float | None:
     return round(ws[len(ws) // 2], 1)  # median, robust to outliers
 
 
-def segments(words, gap=1.1, min_n=8):
+def segments(words, gap=0.8, min_n=5):
+    """Laugh-gap segmentation (StandUp4AI insight): gaps >0.8s in continuous
+    speech are usually audience-laughter holes, not dead air — split there
+    and mark the pre-gap word as a punch candidate (audio-first beat label)."""
     segs, cur = [], [words[0]]
     for w in words[1:]:
         if w["start"] - cur[-1]["end"] > gap and len(cur) >= min_n:
@@ -53,7 +56,12 @@ def segments(words, gap=1.1, min_n=8):
             cur.append(w)
     if len(cur) >= min_n:
         segs.append(cur)
-    return segs
+    # punch candidates: last word before a >0.8s gap
+    punches = set()
+    for a, b in zip(words, words[1:]):
+        if b["start"] - a["end"] > gap:
+            punches.add(a["start"])
+    return segs, punches
 
 
 def emo_of(ws):
@@ -91,7 +99,9 @@ def main():
 
     import fish_tts, voice_judge
     words = json.loads(Path(args.scribe).read_text())["words"]
-    segs = segments(words)
+    segs, punch_times = segments(words)
+    print(f"laugh-gap segments: {len(segs)} (was 1 with old 1.1s gap) | "
+          f"punch candidates: {len(punch_times)}")
 
     # ground truth = the actual clip
     gt = measure(Path(args.audio), len(words))

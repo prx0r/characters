@@ -106,6 +106,10 @@ def compose(slug: str, tts: str = "auto", modulator: str | None = None,
                            "duration_ms": r["duration_ms"],
                            "provenance": r["provenance"]})
         pause = int(b.get("pause_after_ms", 300) or 0)
+        nxt = beats[beats.index(b) + 1] if b is not beats[-1] else {}
+        # TIC-TALK stillness-before-punch: >=500ms before punch/closer beats
+        if (nxt.get("type") or "") in ("punchline", "closer", "tag"):
+            pause = max(pause, 500)
         if pause > 0 and b is not beats[-1]:
             parts.append(fish_tts.silence_wav(pause))
 
