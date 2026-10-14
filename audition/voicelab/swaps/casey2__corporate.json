@@ -1,0 +1,28 @@
+{
+  "variant": "corporate",
+  "subs": [
+    [
+      "softball game",
+      "team-building retreat"
+    ],
+    [
+      "fentanyl league",
+      "synergy league"
+    ],
+    [
+      "shooting up and sleeping on the ball field",
+      "networking and sleeping in the co-work space"
+    ],
+    [
+      "creator of the smartwatch",
+      "inventor of the productivity band"
+    ],
+    [
+      "Sirius XM Radio",
+      "Internal Comms Radio"
+    ]
+  ],
+  "verify_match": 0.913,
+  "duration_ms": 37616,
+  "rating": null
+}

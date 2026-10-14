@@ -1,0 +1,28 @@
+{
+  "variant": "naturedoc",
+  "subs": [
+    [
+      "softball game",
+      "migration march"
+    ],
+    [
+      "fentanyl league",
+      "molting season"
+    ],
+    [
+      "shooting up and sleeping on the ball field",
+      "pecking up and sleeping on the mating ground"
+    ],
+    [
+      "creator of the smartwatch",
+      "inventor of the third eyelid"
+    ],
+    [
+      "Sirius XM Radio",
+      "Migration Broadcast Radio"
+    ]
+  ],
+  "verify_match": 0.952,
+  "duration_ms": 37799,
+  "rating": null
+}
