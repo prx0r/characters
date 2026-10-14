@@ -1,0 +1,31 @@
+{
+  "affect_derived": {
+    "arousal": 0.5,
+    "valence": 0.5,
+    "power": 0.4,
+    "evidence": {
+      "fear": [],
+      "power": [],
+      "warmth": [
+        "kind",
+        "thank"
+      ],
+      "spike": [],
+      "texture": [
+        "warm"
+      ]
+    }
+  },
+  "signature": {
+    "emotion": "neutral",
+    "cue": "[neutral]"
+  },
+  "modulator_cycle": [
+    "relaxed",
+    "smug"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pitch_band": "mid"
+  }
+}
