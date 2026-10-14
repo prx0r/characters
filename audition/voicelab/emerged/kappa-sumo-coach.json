@@ -1,0 +1,43 @@
+{
+  "slug": "kappa-sumo-coach",
+  "name": "Coach Kappa, Sumo of the Shallows",
+  "affect_derived": {
+    "arousal": 0.5,
+    "valence": 0.18,
+    "power": 0.47,
+    "evidence": {
+      "fear": [],
+      "power": [
+        "sumo"
+      ],
+      "warmth": [
+        "bow"
+      ],
+      "spike": []
+    }
+  },
+  "mary": {
+    "pred_rate_delta": 0.04,
+    "pred_volume_db": 0.0,
+    "pitch_direction": "rising"
+  },
+  "signature": {
+    "emotion": "neutral",
+    "cue": "[neutral]",
+    "from_misinterpretation": "Treats every problem as a stance problem"
+  },
+  "modulator_cycle": [
+    "relaxed",
+    "smug"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pace_texture": "measured",
+    "pitch_band": "mid",
+    "signature_recipe": null,
+    "starting_modulator": "relaxed"
+  },
+  "why": "fear=- power=['sumo'] warmth=['bow'] spikes=-",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

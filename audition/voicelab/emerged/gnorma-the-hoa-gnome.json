@@ -1,0 +1,47 @@
+{
+  "slug": "gnorma-the-hoa-gnome",
+  "name": "Gnorma, HOA of the Garden",
+  "affect_derived": {
+    "arousal": 0.59,
+    "valence": 0.11,
+    "power": 0.47,
+    "evidence": {
+      "fear": [
+        "watched"
+      ],
+      "power": [
+        "law"
+      ],
+      "warmth": [
+        "home"
+      ],
+      "spike": [
+        "instantly"
+      ]
+    }
+  },
+  "mary": {
+    "pred_rate_delta": 0.11,
+    "pred_volume_db": 0.6,
+    "pitch_direction": "rising"
+  },
+  "signature": {
+    "emotion": "neutral",
+    "cue": "[neutral]",
+    "from_misinterpretation": "Treats every neighborly act as a covenant test"
+  },
+  "modulator_cycle": [
+    "relaxed",
+    "smug"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pace_texture": "measured",
+    "pitch_band": "mid",
+    "signature_recipe": null,
+    "starting_modulator": "relaxed"
+  },
+  "why": "fear=['watched'] power=['law'] warmth=['home'] spikes=['instantly']",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

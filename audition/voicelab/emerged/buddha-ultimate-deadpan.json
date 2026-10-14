@@ -1,0 +1,41 @@
+{
+  "slug": "buddha-ultimate-deadpan",
+  "name": "Buddha, the Ultimate Deadpan",
+  "affect_derived": {
+    "arousal": 0.44,
+    "valence": 0.01,
+    "power": 0.48,
+    "evidence": {
+      "fear": [
+        "watched"
+      ],
+      "power": [],
+      "warmth": [],
+      "spike": []
+    }
+  },
+  "mary": {
+    "pred_rate_delta": -0.06,
+    "pred_volume_db": -0.4,
+    "pitch_direction": "flat"
+  },
+  "signature": {
+    "emotion": "neutral",
+    "cue": "[neutral]",
+    "from_misinterpretation": "Treats every question as a koan and every koan as billable"
+  },
+  "modulator_cycle": [
+    "relaxed",
+    "smug"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pace_texture": "measured",
+    "pitch_band": "mid",
+    "signature_recipe": null,
+    "starting_modulator": "relaxed"
+  },
+  "why": "fear=['watched'] power=- warmth=- spikes=-",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

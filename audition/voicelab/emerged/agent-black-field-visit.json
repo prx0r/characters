@@ -1,0 +1,39 @@
+{
+  "slug": "agent-black-field-visit",
+  "name": "Agent Black, Field Visit",
+  "affect_derived": {
+    "arousal": 0.42,
+    "valence": 0.05,
+    "power": 0.48,
+    "evidence": {
+      "fear": [],
+      "power": [],
+      "warmth": [],
+      "spike": []
+    }
+  },
+  "mary": {
+    "pred_rate_delta": -0.07,
+    "pred_volume_db": -0.5,
+    "pitch_direction": "flat"
+  },
+  "signature": {
+    "emotion": "neutral",
+    "cue": "[neutral]",
+    "from_misinterpretation": "Treats every witness as a paperwork problem"
+  },
+  "modulator_cycle": [
+    "relaxed",
+    "smug"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pace_texture": "measured",
+    "pitch_band": "mid",
+    "signature_recipe": null,
+    "starting_modulator": "relaxed"
+  },
+  "why": "fear=- power=- warmth=- spikes=-",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

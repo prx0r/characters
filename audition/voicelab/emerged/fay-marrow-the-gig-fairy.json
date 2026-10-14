@@ -1,0 +1,42 @@
+{
+  "slug": "fay-marrow-the-gig-fairy",
+  "name": "Fay Marrow, Gig Fairy",
+  "affect_derived": {
+    "arousal": 0.73,
+    "valence": 0.24,
+    "power": 0.6,
+    "evidence": {
+      "fear": [],
+      "power": [],
+      "warmth": [
+        "thank"
+      ],
+      "spike": [
+        "manic"
+      ]
+    }
+  },
+  "mary": {
+    "pred_rate_delta": 0.28,
+    "pred_volume_db": 1.5,
+    "pitch_direction": "rising"
+  },
+  "signature": {
+    "emotion": "manic",
+    "cue": "[excited]",
+    "from_misinterpretation": "Treats every wish as a work order to execute literally"
+  },
+  "modulator_cycle": [
+    "manic"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "fast",
+    "pace_texture": "measured",
+    "pitch_band": "wide",
+    "signature_recipe": null,
+    "starting_modulator": "manic"
+  },
+  "why": "fear=- power=- warmth=['thank'] spikes=['manic']",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

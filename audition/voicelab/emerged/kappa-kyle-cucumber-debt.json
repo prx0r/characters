@@ -1,0 +1,50 @@
+{
+  "slug": "kappa-kyle-cucumber-debt",
+  "name": "Kappa Kyle, the Cucumber-Debt Collector",
+  "affect_derived": {
+    "arousal": 0.47,
+    "valence": 0.1,
+    "power": 0.58,
+    "evidence": {
+      "fear": [
+        "dry"
+      ],
+      "power": [
+        "ledger",
+        "sumo",
+        "tribute"
+      ],
+      "warmth": [
+        "bow",
+        "polite"
+      ],
+      "spike": [
+        "flustered"
+      ]
+    }
+  },
+  "mary": {
+    "pred_rate_delta": -0.01,
+    "pred_volume_db": -0.2,
+    "pitch_direction": "flat"
+  },
+  "signature": {
+    "emotion": "mock_indignant",
+    "cue": "[frustrated]",
+    "from_misinterpretation": "Treats every interaction as a transaction denominated in cucumbers"
+  },
+  "modulator_cycle": [
+    "relaxed",
+    "smug"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pace_texture": "measured with micro-spikes",
+    "pitch_band": "mid",
+    "signature_recipe": null,
+    "starting_modulator": "relaxed"
+  },
+  "why": "fear=['dry'] power=['ledger', 'sumo', 'tribute'] warmth=['bow', 'polite'] spikes=['flustered']",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

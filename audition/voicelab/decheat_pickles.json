@@ -1,0 +1,20 @@
+{
+  "performer": "pickles",
+  "test": "same predictions+scales, clone vs neutral voice",
+  "wpm_mae_clone": 18.7,
+  "wpm_mae_neutral": 43.7,
+  "var_mae_clone": 0.94,
+  "var_mae_neutral": 0.76,
+  "rows": [
+    {
+      "sid": "s0",
+      "emo": "deadpan",
+      "neutral_gen_wpm": 411.1,
+      "act_wpm": 367.4,
+      "clone_gen_wpm": 348.7,
+      "neutral_gen_var": 6.16,
+      "act_var": 5.4,
+      "clone_gen_var": 6.34
+    }
+  ]
+}
