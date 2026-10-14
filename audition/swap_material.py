@@ -70,26 +70,27 @@ def main():
     mat = load_pack_material(args.pack)
     voice = VOICES.get(args.voice, args.voice)
 
-    # build material lines mapped to the arc (original words, pack-sourced)
+    # material lines assigned IN STENCIL ORDER (arc structure preserved;
+    # label-lookup caused duplicate/missing slots)
     facts = mat["facts"]
-    lines = {
-        "manic": f"I'm {mat['name']}! {mat['deal'].split('.')[0]}!",
-        "sarcastic": (facts[0].rstrip(".") + "." if facts else mat["deal"]),
-        "mock_indignant": (f"They say {mat['blind'].rstrip('.')} — "
-                           f"and I still can't get my {mat['want'].rstrip('.')}!"),
-        "gleeful": (facts[1].rstrip(".") + "." if len(facts) > 1 else
-                    f"Bow back. I dare you."),
-        "neutral": (facts[2].rstrip(".") + "." if len(facts) > 2 else
-                    "The ledger never lies."),
-    }
+    arc_lines = [
+        f"I'm {mat['name']}! {mat['deal'].split('.')[0]}!",            # opener
+        (facts[0].rstrip(".") + "." if facts else mat["deal"]),          # detail
+        (f"They say {mat['blind'].rstrip('.')} — and I still can't get "
+         f"my {mat['want'].rstrip('.')}!"),                             # grievance
+        (facts[1].rstrip(".") + "." if len(facts) > 1 else
+         "Bow back. I dare you."),                                       # closer
+        (facts[2].rstrip(".") + "." if len(facts) > 2 else
+         "The ledger never lies."),                                      # tag
+    ]
     if args.extra_material:
-        lines["sarcastic"] = args.extra_material
+        arc_lines[1] = args.extra_material
 
     parts, beats_log, t0 = [], [], time.time()
-    for s in sten["segments"]:
+    for i_seg, s in enumerate(sten["segments"]):
         r = s["recipe"]
         label = s["material_slot"]["beat_label"]
-        text = lines.get(label, mat["deal"])
+        text = arc_lines[i_seg % len(arc_lines)]
         cue = r["cue"]
         t = f"{cue} {text}".strip() if cue else text
         out = fish_tts.synthesize_fish(

@@ -33,16 +33,18 @@ EMOTIONS = {
     "embarrassed": "awkward warmth, self-conscious",
 }
 
-# emotion -> engine recipe (from calibrate/ + domains/)
+# emotion -> engine recipe (cue, temp, speed_mult) — speed_mult rides on
+# top of the Jev pace bucket; captures within-set swings (casey: deadpan
+# 133wpm vs manic 365wpm = 2.7x range a single scale can't track)
 EMO_RECIPE = {
-    "manic":         ("[excited]", 0.85),
-    "gleeful":       ("[delighted]", 0.80),
-    "deadpan":       ("", 0.45),
-    "sarcastic":     ("[sarcastic]", 0.65),
-    "mock_indignant": ("[frustrated]", 0.85),
-    "neutral":       ("[neutral]", 0.60),
-    "defiant":       ("[frustrated]", 0.80),
-    "embarrassed":   ("[embarrassed]", 0.70),
+    "manic":         ("[excited]", 0.85, 1.15),
+    "gleeful":       ("[delighted]", 0.80, 1.05),
+    "deadpan":       ("", 0.45, 0.75),
+    "sarcastic":     ("[sarcastic]", 0.65, 0.95),
+    "mock_indignant": ("[frustrated]", 0.85, 1.10),
+    "neutral":       ("[neutral]", 0.60, 1.0),
+    "defiant":       ("[frustrated]", 0.80, 1.05),
+    "embarrassed":   ("[embarrassed]", 0.70, 0.9),
 }
 
 
@@ -95,6 +97,19 @@ def gemini_label(segments, t0, t1):
         if ov > best_ov:
             best_ov, best = ov, (s.get("emotion") or "neutral").lower()
     return best or "neutral"
+
+
+def gemini_labels(segments, t0, t1) -> list:
+    """All emotions overlapping this beat, ordered by overlap (boundary-tolerant
+    scoring: gemini segments are 60s-ish, our beats 15s — misalignment is
+    label noise, not model error. StandUp4AI flagged the same issue)."""
+    hits = []
+    for s in segments:
+        ov = max(0.0, min(t1, s["t1"]) - max(t0, s["t0"]))
+        if ov > 0:
+            hits.append(((s.get("emotion") or "neutral").lower(), round(ov, 1)))
+    hits.sort(key=lambda x: -x[1])
+    return [h[0] for h in hits] or ["neutral"]
 
 
 def summarize_errors(errors: list) -> dict:

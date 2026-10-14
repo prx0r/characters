@@ -23,7 +23,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from jev_or import decide
 from jev_deliver import (EMOTIONS, EMO_RECIPE, load_set, fixed_beats,
-                         gemini_label, build_state, questions_for, ARI_PROFILE)
+                         gemini_label, gemini_labels, build_state,
+                         questions_for, ARI_PROFILE)
 import fish_tts, voice_judge
 
 HERE = Path(__file__).parent
@@ -33,10 +34,25 @@ CLIPS = {
     "kt704_passport": "/home/box/ari_matti_sets/shorts/kt704_passport_short.mp4",
     "kt715_ep715": "/home/box/ari_matti_sets/shorts/kt715_ep715_clip.mp4",
     "kt715_walking": "/home/box/ari_matti_sets/shorts/kt715_walking_short.mp4",
+    "kt715_nashville": "/home/box/ari_matti_sets/shorts/kt715_nashville_short.mp4",
     "kt728_diversifying": "/home/box/ari_matti_sets/shorts/kt728_diversifying_short.mp4",
     "kt728_jamesbond": "/home/box/ari_matti_sets/shorts/kt728_jamesbond_short.mp4",
+    "casey_rocket_1": "/home/box/comedy_sets/shorts/casey_rocket_1.mp4",
+    "casey_rocket_2": "/home/box/comedy_sets/shorts/casey_rocket_2.mp4",
+    "louis_roadrage": "/home/box/louis_sets/louis_roadrage.m4a",
+    "norm_moth": "/home/box/norm_sets/norm_joke_trim.wav",
 }
-BASE_WPM = 154.3  # ari-clone base probe, speed 1.0
+CLONES = {"ari": "dbeb1d68566245e2b857617b830e8031",
+          "casey": "9c36c951cee84457a5cc9f94387e9a42",
+          "pickles": "100e10e7c5464a10b5120a01ade115a2",
+          "louis": "fb015415ebf141999fc882baa0e0834c",
+          "norm": "085d639799cc449c8a5350fe843c14b"}
+SET_PERFORMER = {"kt704_passport": "ari", "kt715_ep715": "ari", "kt715_walking": "ari",
+                 "kt715_nashville": "ari", "kt728_diversifying": "ari", "kt728_jamesbond": "ari",
+                 "casey_rocket_1": "casey", "casey_rocket_2": "casey",
+                 "louis_roadrage": "louis", "norm_moth": "norm"}
+BASE_WPM = 154.3  # per-performer probe override in run()
+CLONE = CLONES["ari"]
 
 # pace score (0-3 ordered scale) -> fish speed multiplier
 PACE_SPEED = {0: 0.70, 1: 0.95, 2: 1.20, 3: 1.45}
@@ -54,9 +70,9 @@ def slice_actual(setname: str, t0: float, t1: float) -> Path:
 def render_pred(setname: str, round_i: int, beat: dict, emo: str,
                 pace_score: float, speed_scale: float = 1.0) -> Path:
     """Jev prediction -> fish render (clone voice)."""
-    cue, temp = EMO_RECIPE.get(emo, ("[neutral]", 0.6))
+    cue, temp, emo_speed = EMO_RECIPE.get(emo, ("[neutral]", 0.6, 1.0))
     bucket = int(round(max(0, min(3, pace_score))))
-    speed = max(0.5, min(2.0, PACE_SPEED[bucket] * speed_scale))
+    speed = max(0.5, min(2.0, PACE_SPEED[bucket] * speed_scale * emo_speed))
     text = f"{cue} {beat['text']}".strip() if cue else beat["text"]
     r = fish_tts.synthesize_fish(
         f"jl-{setname}-r{round_i}-{beat['i']}", text, voice=CLONE,
@@ -90,6 +106,9 @@ def run_round(setname: str, round_i: int, errors: list, profile: dict,
         pred_emo = (answers.get(f"{sid}_emo") or {}).get("choice", "neutral")
         pace = (answers.get(f"{sid}_pace") or {}).get("score", 1.5)
         true_emo = gemini_label(gem, b["t0"], b["t1"])
+        true_all = gemini_labels(gem, b["t0"], b["t1"])
+        match = 1.0 if pred_emo == true_emo else (
+            0.5 if pred_emo in true_all[1:3] else 0.0)
         wav = render_pred(setname, round_i, b, pred_emo, pace, speed_scale)
         gen = measure_wpm_var(wav, b["n_words"])
         # actual: speech-span wpm from word timings (crowd time excluded)
@@ -103,7 +122,8 @@ def run_round(setname: str, round_i: int, errors: list, profile: dict,
         wpm_err = round(gen["wpm"] - act_wpm, 1)
         var_err = round(gen["var_st"] - act_var, 2)
         row = {"seg": sid, "pred_emo": pred_emo, "true_emo": true_emo,
-               "match": pred_emo == true_emo, "pace": round(pace, 2),
+               "match": pred_emo == true_emo, "match_score": match,
+               "true_all": true_all[:3], "pace": round(pace, 2),
                "gen_wpm": gen["wpm"], "act_wpm": act_wpm, "wpm_err": wpm_err,
                "gen_var": gen["var_st"], "act_var": act_var, "var_err": var_err,
                "wav": str(wav)}
@@ -115,7 +135,7 @@ def run_round(setname: str, round_i: int, errors: list, profile: dict,
                                    f"wpm {act_wpm} var {act_var}; gen was {gen['wpm']}/{gen['var_st']}"})
 
     n = max(len(rows), 1)
-    acc = sum(r["match"] for r in rows) / n
+    acc = sum(r.get("match_score", 1.0 if r["match"] else 0.0) for r in rows) / n
     wpm_mae = sum(abs(r["wpm_err"]) for r in rows) / n
     var_mae = sum(abs(r["var_err"]) for r in rows) / n
     summary = {"round": round_i, "emotion_acc": round(acc, 3),
@@ -131,6 +151,35 @@ def run_round(setname: str, round_i: int, errors: list, profile: dict,
     return summary, new_errors
 
 
+
+PROFILES = {
+    "ari": ARI_PROFILE,
+    "casey": {
+        "name": "casey_rocket",
+        "persona_note": "Kinetic manic-deadpan swinger; rapid-fire surreal bursts "
+                        "then flat drops; physical chaos as punctuation; self-aware absurdism",
+        "delivery_note": "manic [excited]; deadpan no-cue low temp; huge tempo deltas "
+                         "(deadpan ~135wpm vs manic ~360wpm); laughed riffs FASTER",
+        "affect": {"arousal": 0.8, "valence": 0.3, "power": 0.6},
+    },
+    "louis": {
+        "name": "louis_ck",
+        "persona_note": "Self-deprecating sincere storyteller; raw physical specificity; "
+                        "builds to weird dark places; sincerity is the engine; laughs as byproduct",
+        "delivery_note": "mid pitch, wide dynamics, build-then-collapse, comfort with silence; "
+                         "road-rage window measured ~210wpm fast passages",
+        "affect": {"arousal": 0.6, "valence": -0.4, "power": 0.5},
+    },
+    "norm": {
+        "name": "norm_macdonald",
+        "persona_note": "Suspension-of-reality deadpan; enters his own world and believes it; "
+                        "slow burn, long tangent then snap return; wide pitch swings, flat volume",
+        "delivery_note": "moth joke measured 192wpm, pitch_std 10.1 (widest), dyn 13.3 (flat); "
+                         "tells it like he's figuring it out live",
+        "affect": {"arousal": 0.4, "valence": 0.1, "power": 0.6},
+    },
+}
+
 BOUNDS = {"emotion_acc": 0.60, "wpm_mae": 20.0, "var_mae": 1.5}
 
 
@@ -140,8 +189,21 @@ def converged(s: dict) -> bool:
             and s["var_mae"] <= BOUNDS["var_mae"])
 
 
+def probe_base(clone: str) -> float:
+    r = fish_tts.synthesize_fish("jl-base-probe",
+                                 "The quick brown fox jumps over the lazy dog.",
+                                 voice=clone, direction=False, temperature=0.6)
+    m = voice_judge.measure(Path(r["path"]))
+    return round(9 / (m["duration_ms"] / 1000) * 60, 1)
+
+
 def run(setname: str, rounds: int = 3, profile: dict | None = None) -> dict:
-    profile = profile or ARI_PROFILE
+    global CLONE, BASE_WPM
+    perf = SET_PERFORMER.get(setname, "ari")
+    CLONE = CLONES[perf]
+    BASE_WPM = probe_base(CLONE)
+    print(f"performer={perf} clone={CLONE[:8]}.. base_wpm={BASE_WPM}")
+    profile = profile or PROFILES.get(perf, ARI_PROFILE)
     errors: list = []
     history = []
     speed_scale = 1.0
