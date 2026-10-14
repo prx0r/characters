@@ -1,0 +1,33 @@
+{
+  "variant": "medieval",
+  "note": "underdog peasant grievances, same velocity",
+  "subs": [
+    [
+      "Texas",
+      "Yorkshire"
+    ],
+    [
+      "American",
+      "loyal to the Crown"
+    ],
+    [
+      "America",
+      "the Kingdom"
+    ],
+    [
+      "Seattle",
+      "the Northern village"
+    ],
+    [
+      "Saving Private Ryan",
+      "the Crusade footage"
+    ],
+    [
+      "Capitol",
+      "the King's keep"
+    ]
+  ],
+  "verify_match": 0.952,
+  "duration_ms": 38295,
+  "rating": null
+}
