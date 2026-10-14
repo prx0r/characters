@@ -62,14 +62,20 @@ def load_set(setname: str):
 
 
 def fixed_beats(words, beat_s: float = 15.0):
-    """Honest segmentation: fixed-length windows, no timing leak."""
+    """Honest segmentation: fixed-length windows, no timing leak.
+    Strips [laughing]/[censored] annotation tokens — they inflate word
+    counts (real audio includes crowd time; TTS skips the tokens)."""
+    import re
     if not words:
         return []
-    t0, t1 = words[0]["start"], words[-1]["end"]
+    clean = [w for w in words if not w["text"].strip().startswith("[")]
+    if not clean:
+        return []
+    t0, t1 = clean[0]["start"], clean[-1]["end"]
     beats = []
     t = t0
     while t < t1:
-        ws = [w for w in words if t <= w["start"] < t + beat_s]
+        ws = [w for w in clean if t <= w["start"] < t + beat_s]
         if len(ws) >= 5:
             text = " ".join(w["text"] for w in ws)
             beats.append({"i": len(beats), "t0": round(t, 1),
@@ -91,6 +97,31 @@ def gemini_label(segments, t0, t1):
     return best or "neutral"
 
 
+def summarize_errors(errors: list) -> dict:
+    """Compress raw errors into low-dim bias terms (PersonalAlign/LoRe
+    insight: raw replay overfits; summaries generalize)."""
+    if not errors:
+        return {}
+    confusions = {}
+    wpm_by_pred = {}
+    for e in errors:
+        if not e.get("match", True) if "match" in e else e.get("pred_emo") != e.get("true_emo"):
+            key = e.get("pred_emo") or e.get("pred")
+            true = e.get("true_emo") or e.get("true")
+            if key and true:
+                confusions.setdefault(key, {})
+                confusions[key][true] = confusions[key].get(true, 0) + 1
+        pe = e.get("pred_emo") or e.get("pred")
+        if pe and "wpm_err" in e:
+            wpm_by_pred.setdefault(pe, []).append(e["wpm_err"])
+    wpm_bias = {k: round(sum(v) / len(v)) for k, v in wpm_by_pred.items()}
+    return {"confusion_biases": confusions, "wpm_bias_by_predicted_emotion": wpm_bias,
+            "n_errors": len(errors),
+            "guidance": "When you predict an emotion listed in confusion_biases, "
+                        "consider whether its most common actual label fits better. "
+                        "wpm_bias tells you how your pace predictions skew per emotion."}
+
+
 def build_state(profile: dict, beats: list, errors: list | None = None) -> dict:
     state = {
         "comedian": profile["name"],
@@ -100,7 +131,7 @@ def build_state(profile: dict, beats: list, errors: list | None = None) -> dict:
         "segments": [{"id": f"s{b['i']}", "text": b["text"]} for b in beats],
     }
     if errors:
-        state["calibration_errors"] = errors[-20:]
+        state["calibration"] = summarize_errors(errors)
     return state
 
 

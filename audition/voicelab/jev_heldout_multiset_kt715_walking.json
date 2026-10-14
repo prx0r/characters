@@ -1,0 +1,47 @@
+{
+  "tested": "kt715_walking",
+  "calibrated_on": [
+    "kt704_passport",
+    "kt715_ep715",
+    "kt728_diversifying",
+    "kt728_jamesbond"
+  ],
+  "emotion_dist": {
+    "gleeful": 26,
+    "sarcastic": 22,
+    "mock_indignant": 13,
+    "neutral": 13,
+    "manic": 9,
+    "deadpan": 9,
+    "embarrassed": 4,
+    "defiant": 4
+  },
+  "accuracy": 0.25,
+  "baseline": 0.5,
+  "rows": [
+    {
+      "seg": "s0",
+      "pred": "neutral",
+      "true": "neutral",
+      "match": true
+    },
+    {
+      "seg": "s1",
+      "pred": "sarcastic",
+      "true": "mock_indignant",
+      "match": false
+    },
+    {
+      "seg": "s2",
+      "pred": "sarcastic",
+      "true": "mock_indignant",
+      "match": false
+    },
+    {
+      "seg": "s3",
+      "pred": "sarcastic",
+      "true": "deadpan",
+      "match": false
+    }
+  ]
+}
