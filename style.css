@@ -307,3 +307,30 @@ body.in-theatre footer,body.in-theatre .banner{visibility:hidden}
   .slide[data-stage="vote"] .logo{animation:none;opacity:1;transform:none}
   .face.L,.face.R{transform:none}
 }
+
+/* ===== brand + auto-hiding chrome + share ===== */
+.brand{position:fixed;top:12px;left:clamp(10px,3vw,40px);z-index:45;font-size:22px;line-height:1;padding:6px 10px 5px;border-radius:8px;
+  color:var(--red2);background:rgba(7,7,10,.78);box-shadow:0 0 0 1px rgba(255,255,255,.08);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  text-shadow:0 0 16px var(--glow);transform:none;transform-origin:left top}
+.brand:hover,.brand:focus-visible{color:#fff;background:var(--red);outline:none}
+.top{padding-left:calc(clamp(10px,3vw,40px) + 128px);transition:opacity .3s ease,transform .3s ease}
+body.chrome-hidden .top{opacity:0;transform:translate3d(0,-12px,0);pointer-events:none}
+body.screening .top{background:linear-gradient(rgba(7,7,10,.92) 30%,rgba(7,7,10,0))}
+.sharebtn{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line)!important;border-radius:999px;padding:7px 12px;color:var(--text);background:rgba(19,19,25,.85);white-space:nowrap}
+.sharebtn:hover{border-color:var(--red)!important}
+.sharebtn[hidden]{display:none}
+.sharex{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line)!important;border-radius:999px;padding:7px 14px;color:var(--muted);background:rgba(19,19,25,.7)}
+.sharex:hover{color:var(--text);border-color:var(--red)!important}
+.friendres{margin:0;min-height:0;font-weight:700;font-size:clamp(16px,2.2vw,20px);opacity:0;transform:translate3d(0,6px,0);transition:opacity .3s,transform .3s}
+.friendres.on{opacity:1;transform:none}
+.friendres.agree{color:var(--gold)} .friendres.disagree{color:var(--red2)}
+.why .whyshare{border-color:var(--gold)!important;color:var(--gold)}
+@media (max-width:820px){
+  .brand{top:10px;font-size:19px}
+  .top{padding-left:calc(clamp(10px,3vw,40px) + 108px);padding-top:12px}
+  .sharebtn{padding:6px 10px}
+}
+@media (prefers-reduced-motion:reduce){
+  .top,.friendres{transition:none!important}
+  body.chrome-hidden .top{transform:none}
+}
