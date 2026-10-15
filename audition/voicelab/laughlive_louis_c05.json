@@ -1,0 +1,69 @@
+{
+  "set": "louis_c05",
+  "preds": [
+    {
+      "seg": "s0",
+      "p_laugh": 0.98,
+      "actual": 1,
+      "calibration_err": -0.02,
+      "predicted_loudness": "roar"
+    },
+    {
+      "seg": "s1",
+      "p_laugh": 0.98,
+      "actual": 1,
+      "calibration_err": -0.02,
+      "predicted_loudness": "roar"
+    },
+    {
+      "seg": "s2",
+      "p_laugh": 0.98,
+      "actual": 1,
+      "calibration_err": -0.02,
+      "predicted_loudness": "roar"
+    },
+    {
+      "seg": "s3",
+      "p_laugh": 0.98,
+      "actual": 1,
+      "calibration_err": -0.02,
+      "predicted_loudness": "roar"
+    },
+    {
+      "seg": "s4",
+      "p_laugh": 0.97,
+      "actual": 1,
+      "calibration_err": -0.03,
+      "predicted_loudness": "roar"
+    },
+    {
+      "seg": "s5",
+      "p_laugh": 0.98,
+      "actual": 1,
+      "calibration_err": -0.02,
+      "predicted_loudness": "roar"
+    },
+    {
+      "seg": "s6",
+      "p_laugh": 0.98,
+      "actual": 1,
+      "calibration_err": -0.02,
+      "predicted_loudness": "roar"
+    },
+    {
+      "seg": "s7",
+      "p_laugh": 0.97,
+      "actual": 1,
+      "calibration_err": -0.03,
+      "predicted_loudness": "roar"
+    },
+    {
+      "seg": "s8",
+      "p_laugh": 0.97,
+      "actual": 1,
+      "calibration_err": -0.03,
+      "predicted_loudness": "roar"
+    }
+  ],
+  "acc": 1.0
+}
