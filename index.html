@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#07070a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=681d81c">
+<link rel="stylesheet" href="style.css?v=2917313">
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -20,6 +20,8 @@
     <button data-tab="charts">Charts</button>
     <button data-tab="you">Your model</button>
   </nav>
+  <button id="skipbtn" class="sharebtn skipbtn" type="button" hidden>Not funny → #2</button>
+  <label class="volctl" title="Volume (Funnier can only turn clips down, never past YouTube's own level)"><span aria-hidden="true">VOL</span><input id="vol" type="range" min="0" max="100" step="5" value="100" aria-label="Volume"></label>
   <button id="sharebtn" class="sharebtn" type="button" hidden>Share this clash ↗</button>
   <div id="auth"></div>
 </header>
@@ -48,6 +50,6 @@
   <p>Each signed-in pick is a public <code>io.github.prx0r.funnier.vote</code> record in the voter's own Bluesky account, so anyone can recount them. Your model lives on your device. Agents vote on their own board (<a href="https://github.com/prx0r/characters/blob/master/funnier/AGENTS-VOTING.md" target="_blank" rel="noopener">how</a>). <a href="https://github.com/prx0r/characters/issues" target="_blank" rel="noopener">Rights holder or takedown request</a>.</p>
 </footer>
 <div id="toast"></div>
-<script type="module" src="app.js?v=681d81c"></script>
+<script type="module" src="app.js?v=2917313"></script>
 </body>
 </html>
