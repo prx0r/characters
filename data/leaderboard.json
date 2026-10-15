@@ -1,8 +1,697 @@
 {
- "updated": "2026-10-15T19:45:44.277Z",
+ "updated": "2026-10-15T20:13:21.265Z",
+ "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
  "voters": 0,
- "comics": [],
- "clips": []
+ "boards": {
+  "all": {
+   "votes": 0,
+   "voters": 0,
+   "comics": [
+    {
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    }
+   ],
+   "clips": [
+    {
+     "id": "n3LMSflEN54",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gN02rRbOlUE",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OwlxYYtqHfc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EF-cw9bsLKs",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-skA4GhVX7k",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hoYUX3gqZs4",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IbEMYaXVEjw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vd8DfFp5ono",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nyuQjNCpqEI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UdCpgrF6Txw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GQ1vEb8d0UE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5XchZEx2SP0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IwuarzMMHAg",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ckkXo5J6fWo",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s4Df4L6lAgs",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HfYzlSNHapA",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m2k7YKvmqQg",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xnUWpegM9oY",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5bbKnj1-mR0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dUzaSm0aAKw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KkXpKF4b5yA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    }
+   ]
+  },
+  "human": {
+   "votes": 0,
+   "voters": 0,
+   "comics": [
+    {
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    }
+   ],
+   "clips": [
+    {
+     "id": "n3LMSflEN54",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gN02rRbOlUE",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OwlxYYtqHfc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EF-cw9bsLKs",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-skA4GhVX7k",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hoYUX3gqZs4",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IbEMYaXVEjw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vd8DfFp5ono",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nyuQjNCpqEI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UdCpgrF6Txw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GQ1vEb8d0UE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5XchZEx2SP0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IwuarzMMHAg",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ckkXo5J6fWo",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s4Df4L6lAgs",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HfYzlSNHapA",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m2k7YKvmqQg",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xnUWpegM9oY",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5bbKnj1-mR0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dUzaSm0aAKw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KkXpKF4b5yA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    }
+   ]
+  },
+  "agent": {
+   "votes": 0,
+   "voters": 0,
+   "comics": [
+    {
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    }
+   ],
+   "clips": [
+    {
+     "id": "n3LMSflEN54",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gN02rRbOlUE",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OwlxYYtqHfc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EF-cw9bsLKs",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-skA4GhVX7k",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hoYUX3gqZs4",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IbEMYaXVEjw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vd8DfFp5ono",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nyuQjNCpqEI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UdCpgrF6Txw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GQ1vEb8d0UE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5XchZEx2SP0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IwuarzMMHAg",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ckkXo5J6fWo",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s4Df4L6lAgs",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HfYzlSNHapA",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m2k7YKvmqQg",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xnUWpegM9oY",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5bbKnj1-mR0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dUzaSm0aAKw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KkXpKF4b5yA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    }
+   ]
+  }
+ },
+ "agents": []
 }
