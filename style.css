@@ -493,3 +493,87 @@ body.in-theatre .dailyhero{visibility:hidden}
 .nextclash:hover,.nextclash:focus-visible{opacity:1;border-color:var(--line)!important;outline:none}
 @media (max-width:820px){ .userbtn{width:32px;height:32px} .top nav button{padding:8px 8px} }
 @media (prefers-reduced-motion:reduce){ .soundpill button{animation:none} }
+
+/* ===== accounts: avatars, menu, onboarding sheet, profile ===== */
+.av{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;overflow:hidden;flex:none;background:#23232d;color:#8d8b93;vertical-align:middle}
+.av svg,.av img{width:100%;height:100%;display:block;object-fit:cover}
+.av.sil .silsvg{width:72%;height:72%;margin-top:18%}
+.userbtn .av{width:100%;height:100%}
+.userbtn.in{background:transparent}
+.um-me{display:flex;align-items:center;gap:10px}
+.um-me .av{width:40px;height:40px}
+.um-me b{display:block;font-size:15px}
+.um-me small{display:block;color:var(--muted);font-size:12px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.um-item.gold{color:var(--gold)}
+.um-del{font-size:12px;color:var(--red2);padding:4px 0}
+.um-del:hover{text-decoration:underline}
+.um-legal{margin:8px 0 0;font-size:11px;color:#5d5b63}
+.um-legal a{color:#8d8b93}
+.gsibtn{min-height:44px;display:flex;justify-content:center}
+.sheet{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);overflow-y:auto}
+.sheet[hidden]{display:none}
+.sheetcard{position:relative;width:min(520px,100%);background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:24px 22px 18px;box-shadow:0 40px 120px -30px #000;animation:pillin .35s cubic-bezier(.2,.9,.2,1.1)}
+.sheetcard h2{font-family:var(--display);font-weight:400;font-size:38px;margin:0;letter-spacing:.01em}
+.sheetcard>p{margin:4px 0 14px}
+.sheetx{position:absolute;top:10px;right:14px;font-size:26px;color:var(--muted);line-height:1}
+.obl{display:flex;flex-direction:column;gap:6px;margin:0 0 14px;border:0;padding:0;font-size:13px;font-weight:600;color:#c9c6cf}
+.obl legend{padding:0;margin-bottom:6px}
+.obl input:not([type=radio]),.obl select{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 12px;font:inherit;font-size:15px;font-weight:500;width:100%}
+.obrow{display:flex;gap:6px}
+.obdice{flex:none;width:44px;border:1px solid var(--line)!important;border-radius:10px;font-size:18px}
+.obav{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.obav label,.obseg label{cursor:pointer}
+.obav input,.obseg input{position:absolute;opacity:0;pointer-events:none}
+.obav span{display:block;border-radius:50%;padding:2px;border:2px solid transparent;transition:transform .15s,border-color .15s}
+.obav span svg{width:100%;height:auto;display:block;border-radius:50%}
+.obav input:checked+span{border-color:var(--gold);transform:scale(1.06)}
+.obav input:focus-visible+span,.obseg input:focus-visible+span{outline:2px solid var(--red)}
+.obstats{border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+.obwhy{font-size:13px;color:var(--muted);margin:0 0 12px;line-height:1.45}
+.obwhy b{color:var(--text)}
+.obseg{display:flex;flex-wrap:wrap;gap:6px}
+.obseg span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:600;font-size:13px;color:var(--text)}
+.obseg input:checked+span{background:var(--text);color:#0b0b0e;border-color:var(--text)}
+.oberr{color:var(--red2);font-size:12px;font-weight:500;min-height:0}
+.oberr.big{font-size:13px;margin:0}
+.obact{display:flex;gap:8px;margin:10px 0 8px}
+.obact .dhbtn{padding:10px 20px;font-size:15px}
+.sheetcard .small a{color:var(--gold)}
+/* after-vote: split, friends, share row */
+.split{display:grid;grid-template-columns:auto minmax(80px,1fr) auto;gap:10px;align-items:center;font-size:13px;width:min(460px,86vw)}
+.split i{position:relative;height:6px;border-radius:6px;background:var(--line);overflow:hidden}
+.split i::before{content:'';position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.split.on i::before{width:var(--p)}
+.split b{font-family:var(--mono)}
+.split.l span:first-child b,.split.r span:last-child b{color:var(--gold)}
+.rcsplit{display:flex;flex-direction:column;align-items:center;gap:2px}
+.rcsplit small{font-size:11px}
+.rcfriends{text-align:center}
+.rcfriends p{margin:0 0 4px;font-size:12px;font-weight:700;letter-spacing:.02em}
+.fsides{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fsides>div{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;align-items:center}
+.fsides small{flex-basis:100%;font-size:11px;color:var(--muted)}
+.fa .av{width:26px;height:26px;box-shadow:0 0 0 2px var(--bg)}
+.rcshare{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.why .rcalt{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13px;color:var(--text);background:var(--panel);text-decoration:none}
+.why .rcalt:hover{border-color:var(--gold)}
+.why .rcadd{display:inline-flex;align-items:center;gap:8px;border-color:rgba(245,199,107,.5);color:var(--gold);font-weight:700}
+.rcadd .av{width:22px;height:22px}
+/* profile page */
+.pf{max-width:820px;margin:10px auto 0}
+.pfhead{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.pfhead .av{width:72px;height:72px}
+.pfhead h2{font-family:var(--display);font-weight:400;font-size:44px;margin:0;line-height:1}
+.pfhead p{margin:4px 0 0}
+.pfhead button{margin-left:auto}
+.pf h3{margin:28px 0 10px;font-size:18px}
+.pflist{display:flex;flex-direction:column;gap:8px}
+.pfrow{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px;flex-wrap:wrap}
+.pfrow .av{width:32px;height:32px}
+.pfm{margin-left:auto;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;color:var(--gold)}
+.pfm i{display:block;width:90px;height:6px;border-radius:6px;background:linear-gradient(90deg,var(--gold) var(--p),var(--line) var(--p))}
+.pfclash{font-weight:600;font-size:14px}.pfclash i{font-style:normal;color:var(--muted);font-size:12px}
+.pfppl{display:flex;gap:2px;margin-left:auto}
+.pfpriv{margin-top:30px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.pfpriv h3{margin:0 0 6px}
+@media (max-width:640px){ .obav{grid-template-columns:repeat(4,1fr)} .sheetcard{padding:20px 16px 14px} .pfhead button{margin-left:0} }
