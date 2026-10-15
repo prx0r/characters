@@ -1,0 +1,118 @@
+{
+  "set": "louis_c04",
+  "cost_usd": 0.000136206,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Thank you very much thanks everybody Hello Nice to be here How are you",
+      "garden_path": 0.14,
+      "identity_contradiction": 0.08,
+      "surprise": 0.68,
+      "escalation": 0.08,
+      "pause_before": 0,
+      "wpm_dev": -16.5,
+      "laugh_near": true
+    },
+    {
+      "seg": "s1",
+      "text": "broke Anybody else broke You ever get so broke that the bank starts ch",
+      "garden_path": 0.31,
+      "identity_contradiction": 0.11,
+      "surprise": 1.33,
+      "escalation": 0.81,
+      "pause_before": 0.0,
+      "wpm_dev": -17.1,
+      "laugh_near": true
+    },
+    {
+      "seg": "s2",
+      "text": "broke man Bank called me up to like high We're calling because you don",
+      "garden_path": 0.35,
+      "identity_contradiction": 0.21,
+      "surprise": 0.3,
+      "escalation": 0.68,
+      "pause_before": 0.0,
+      "wpm_dev": 18.7,
+      "laugh_near": true
+    },
+    {
+      "seg": "s3",
+      "text": "that I find my funds to be grossly insufficient Thanks for calling Why",
+      "garden_path": 0.37,
+      "identity_contradiction": 0.23,
+      "surprise": 0.3,
+      "escalation": 0.36,
+      "pause_before": 0.0,
+      "wpm_dev": -19.2,
+      "laugh_near": true
+    },
+    {
+      "seg": "s4",
+      "text": "How is this something I'm doing to you She's like sir you only have $2",
+      "garden_path": 0.45,
+      "identity_contradiction": 0.55,
+      "surprise": 0.68,
+      "escalation": 0.77,
+      "pause_before": 0.0,
+      "wpm_dev": 37.5,
+      "laugh_near": true
+    },
+    {
+      "seg": "s5",
+      "text": "my life is shitty So they charge me they charge me $15 that's how much",
+      "garden_path": 0.26,
+      "identity_contradiction": 0.16,
+      "surprise": 0.3,
+      "escalation": 0.73,
+      "pause_before": 0.0,
+      "wpm_dev": -8.8,
+      "laugh_near": true
+    },
+    {
+      "seg": "s6",
+      "text": "And here's the fucked up part now I only have five What did I pay the ",
+      "garden_path": 0.4,
+      "identity_contradiction": 0.15,
+      "surprise": 0.77,
+      "escalation": 0.84,
+      "pause_before": 2.94,
+      "wpm_dev": -0.3,
+      "laugh_near": true
+    },
+    {
+      "seg": "s7",
+      "text": "to have I paid the fucking money where's my 20 bucks That's like going",
+      "garden_path": 0.59,
+      "identity_contradiction": 0.19,
+      "surprise": 1.09,
+      "escalation": 0.73,
+      "pause_before": 0.0,
+      "wpm_dev": 26.0,
+      "laugh_near": true
+    },
+    {
+      "seg": "s8",
+      "text": "fucker You didn't pay for a movie You ever have negative money as depr",
+      "garden_path": 0.31,
+      "identity_contradiction": 0.14,
+      "surprise": 0.58,
+      "escalation": 0.82,
+      "pause_before": 0.0,
+      "wpm_dev": -24.4,
+      "laugh_near": true
+    },
+    {
+      "seg": "s9",
+      "text": "ten That means I don't even have no money now I wish I did I wish I di",
+      "garden_path": 0.35,
+      "identity_contradiction": 0.14,
+      "surprise": 0.39,
+      "escalation": 0.79,
+      "pause_before": 0.0,
+      "wpm_dev": 3.9,
+      "laugh_near": true
+    }
+  ],
+  "laugh_correlations": {},
+  "at": "2026-10-15T11:53:38Z"
+}

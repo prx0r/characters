@@ -1,0 +1,118 @@
+{
+  "set": "louis_c07",
+  "cost_usd": 0.000155568,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Thank you very much Thank you",
+      "garden_path": 0.22,
+      "identity_contradiction": 0.08,
+      "surprise": 0.4,
+      "escalation": 0.08,
+      "pause_before": 0,
+      "wpm_dev": -118.1,
+      "laugh_near": true
+    },
+    {
+      "seg": "s1",
+      "text": "Hi everybody It's nice to be here Nice to see you all It is It's nice ",
+      "garden_path": 0.48,
+      "identity_contradiction": 0.43,
+      "surprise": 2.95,
+      "escalation": 0.93,
+      "pause_before": 0.0,
+      "wpm_dev": 24.6,
+      "laugh_near": true
+    },
+    {
+      "seg": "s2",
+      "text": "mothers and here you are You're not mad are you Did you all get togeth",
+      "garden_path": 0.31,
+      "identity_contradiction": 0.4,
+      "surprise": 1.19,
+      "escalation": 0.62,
+      "pause_before": 0.0,
+      "wpm_dev": -57.7,
+      "laugh_near": true
+    },
+    {
+      "seg": "s3",
+      "text": "sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm ",
+      "garden_path": 0.36,
+      "identity_contradiction": 0.37,
+      "surprise": 2.56,
+      "escalation": 0.55,
+      "pause_before": 0.0,
+      "wpm_dev": 392.7,
+      "laugh_near": true
+    },
+    {
+      "seg": "s4",
+      "text": "don't really relate to it that much because I don't have a lot of fuck",
+      "garden_path": 0.34,
+      "identity_contradiction": 0.19,
+      "surprise": 1.61,
+      "escalation": 0.18,
+      "pause_before": 0.0,
+      "wpm_dev": -40.7,
+      "laugh_near": true
+    },
+    {
+      "seg": "s5",
+      "text": "-edged sword because you could win or you could lose Hey the football ",
+      "garden_path": 0.3,
+      "identity_contradiction": 0.14,
+      "surprise": 0.67,
+      "escalation": 0.21,
+      "pause_before": 0.0,
+      "wpm_dev": -67.7,
+      "laugh_near": true
+    },
+    {
+      "seg": "s6",
+      "text": "Mel's his two when you're not watching that even single -edge swords a",
+      "garden_path": 0.34,
+      "identity_contradiction": 0.14,
+      "surprise": 1.06,
+      "escalation": 0.21,
+      "pause_before": 0.02,
+      "wpm_dev": -85.1,
+      "laugh_near": true
+    },
+    {
+      "seg": "s7",
+      "text": "it but the other head is kind of flat and really cut well It's kind of",
+      "garden_path": 0.17,
+      "identity_contradiction": 0.2,
+      "surprise": 0.6,
+      "escalation": 0.21,
+      "pause_before": 0.0,
+      "wpm_dev": 27.0,
+      "laugh_near": true
+    },
+    {
+      "seg": "s8",
+      "text": "what it's all about That's what it's all about That's what it's all ab",
+      "garden_path": 0.2,
+      "identity_contradiction": 0.18,
+      "surprise": 0.78,
+      "escalation": 0.2,
+      "pause_before": 0.0,
+      "wpm_dev": -5.4,
+      "laugh_near": true
+    },
+    {
+      "seg": "s9",
+      "text": "clever I uh you ever feel like you're going to fart and then instead y",
+      "garden_path": 0.65,
+      "identity_contradiction": 0.13,
+      "surprise": 1.66,
+      "escalation": 0.65,
+      "pause_before": 0.0,
+      "wpm_dev": -69.7,
+      "laugh_near": true
+    }
+  ],
+  "laugh_correlations": {},
+  "at": "2026-10-15T11:55:41Z"
+}

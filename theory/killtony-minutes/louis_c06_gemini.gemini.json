@@ -1,0 +1,103 @@
+{
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 15.4,
+   "emotion": "mock_indignant",
+   "emotion_intensity": 0.48,
+   "vocal": {
+    "energy": 0.48,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=120 laugh_near=True"
+   }
+  },
+  {
+   "t0": 15.4,
+   "t1": 52.2,
+   "emotion": "gleeful",
+   "emotion_intensity": 0.99,
+   "vocal": {
+    "energy": 0.99,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=247 laugh_near=True"
+   }
+  },
+  {
+   "t0": 52.2,
+   "t1": 119.2,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.69,
+   "vocal": {
+    "energy": 0.69,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=171 laugh_near=True"
+   }
+  },
+  {
+   "t0": 119.2,
+   "t1": 129.4,
+   "emotion": "mock_indignant",
+   "emotion_intensity": 0.53,
+   "vocal": {
+    "energy": 0.53,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=132 laugh_near=True"
+   }
+  },
+  {
+   "t0": 129.4,
+   "t1": 134.2,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.76,
+   "vocal": {
+    "energy": 0.76,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=191 laugh_near=True"
+   }
+  },
+  {
+   "t0": 134.2,
+   "t1": 142.2,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.69,
+   "vocal": {
+    "energy": 0.69,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=173 laugh_near=True"
+   }
+  },
+  {
+   "t0": 142.2,
+   "t1": 150.26,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.72,
+   "vocal": {
+    "energy": 0.72,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=179 laugh_near=True"
+   }
+  }
+ ],
+ "_meta": "AM-laugh GT, louis series"
+}
