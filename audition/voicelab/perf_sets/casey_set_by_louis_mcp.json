@@ -1,0 +1,40 @@
+{
+  "render": "MCP text_to_speech + directed tags only (no speed knobs)",
+  "voice": "louis clone fb015415",
+  "source": "casey_rocket_1 predictions",
+  "credits_spent": 970,
+  "pitch": 136.8,
+  "duration_ms": 54778,
+  "beats": [
+    {
+      "seg": "s0",
+      "directed": "[calm] Casey Rocket. And yet I find, yet I find, there's no ",
+      "credits": 76
+    },
+    {
+      "seg": "s1",
+      "directed": "[excited] [in a hurry tone] God, senior year is gonna be nut",
+      "credits": 118
+    },
+    {
+      "seg": "s2",
+      "directed": "[excited] The ritual's almost complete, Tony. But one of us ",
+      "credits": 201
+    },
+    {
+      "seg": "s3",
+      "directed": "[excited] ... seven years ago tonight, my teacher, Ms. Garli",
+      "credits": 232
+    },
+    {
+      "seg": "s4",
+      "directed": "[calm] and- ... I said, \"Speaking?\" And- ... she said, \"What",
+      "credits": 161
+    },
+    {
+      "seg": "s5",
+      "directed": "[calm] ... she, she was startled. I think she was startled b",
+      "credits": 182
+    }
+  ]
+}
