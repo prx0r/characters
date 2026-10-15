@@ -3,32 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Funnier: two comics, one vote</title>
-<meta name="description" content="Watch two stand-up clips. Vote for the funnier one. Rankings for the funniest comics and clips, built on open Bluesky votes.">
+<title>Funnier: tonight's double feature</title>
+<meta name="description" content="Two comedy shorts, back to back. Pick the funnier one. Every pick trains the crowd's chart and your own taste model.">
+<meta name="theme-color" content="#07070a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="brand"><span class="logo">F</span><div><h1>Funnier</h1><p>Two clips. One vote. Who's funnier?</p></div></div>
+<div class="grain" aria-hidden="true"></div>
+<header class="top">
+  <a class="wordmark" href="#" data-tab="arena">FUNNIER</a>
+  <nav>
+    <button data-tab="arena">Screening</button>
+    <button data-tab="charts">Charts</button>
+    <button data-tab="you">Your model</button>
+  </nav>
   <div id="auth"></div>
 </header>
-<nav>
-  <button data-tab="arena">Arena</button>
-  <button data-tab="comics">Funniest comics</button>
-  <button data-tab="clips">Funniest clips</button>
-  <button data-tab="you">Your taste</button>
-</nav>
-<p id="banner"></p>
+
 <main>
-  <section class="view" id="v-arena"><div id="arena"></div></section>
-  <section class="view" id="v-comics" hidden><div class="boardsel"></div><p class="muted boardmeta"></p><div id="comics"></div></section>
-  <section class="view" id="v-clips" hidden><div class="boardsel"></div><p class="muted boardmeta"></p><div id="clips"></div></section>
+  <section class="view" id="v-arena">
+    <div class="marquee"><span class="dot"></span><span id="roundtag">Tonight's double feature</span><span class="sep">·</span><span id="lanebox"></span></div>
+    <div id="arena"></div>
+    <p id="banner" class="banner"></p>
+  </section>
+
+  <section class="view" id="v-charts" hidden>
+    <div class="head"><h2>Charts</h2><div class="boardsel"></div></div>
+    <p class="muted boardmeta"></p>
+    <h3 class="shelf">Top comics</h3><div id="comics" class="rail comics"></div>
+    <h3 class="shelf">Top shorts</h3><div id="clips" class="rail"></div>
+  </section>
+
   <section class="view" id="v-you" hidden><div id="you"></div></section>
 </main>
+
 <footer>
-  <p>Videos play in YouTube's official player, from the comics' and networks' own channels. By using Funnier you agree to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>; see the <a href="http://www.google.com/policies/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
-  <p>Rankings are Funnier's own, computed only from Funnier votes. They are not YouTube data. Each vote is a public <code>io.github.prx0r.funnier.vote</code> record in the voter's own Bluesky account, so anyone can recount them. Funnier stores nothing else about you; your device keeps your local votes. <a href="https://github.com/prx0r/characters/issues" target="_blank" rel="noopener">Rights holder or takedown request</a>.</p>
-  <p>Agents can vote too: they write the same record with <code>voter: "agent"</code> and a model name, and are ranked on their own board. Schema and how-to: <a href="https://github.com/prx0r/characters/blob/master/funnier/AGENTS-VOTING.md" target="_blank" rel="noopener">AGENTS-VOTING.md</a>. Rankings use a hierarchical Bradley-Terry model with bootstrapped 95% intervals.</p>
+  <p>Videos play in YouTube's official player, from the comics' and networks' own channels. By using Funnier you agree to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>; see the <a href="http://www.google.com/policies/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. Rankings are Funnier's own, computed only from Funnier picks. They are not YouTube data.</p>
+  <p>Each signed-in pick is a public <code>io.github.prx0r.funnier.vote</code> record in the voter's own Bluesky account, so anyone can recount them. Your model lives on your device. Agents vote on their own board (<a href="https://github.com/prx0r/characters/blob/master/funnier/AGENTS-VOTING.md" target="_blank" rel="noopener">how</a>). <a href="https://github.com/prx0r/characters/issues" target="_blank" rel="noopener">Rights holder or takedown request</a>.</p>
 </footer>
 <div id="toast"></div>
 <script type="module" src="app.js"></script>
