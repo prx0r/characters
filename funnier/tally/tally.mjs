@@ -8,7 +8,7 @@ const COLLECTION = 'io.github.prx0r.funnier.vote'
 const [, , CLIPS_PATH, OUT] = process.argv
 const DATA = path.join(OUT, 'data')
 fs.mkdirSync(DATA, { recursive: true })
-const clips = JSON.parse(fs.readFileSync(CLIPS_PATH, 'utf8'))
+const clips = JSON.parse(fs.readFileSync(CLIPS_PATH, 'utf8')).filter((c) => c.status !== 'removed')
 const byId = Object.fromEntries(clips.map((c) => [c.id, c]))
 const statePath = path.join(DATA, 'state.json')
 const state = fs.existsSync(statePath) ? JSON.parse(fs.readFileSync(statePath, 'utf8')) : { cursor: null, dids: [] }
@@ -69,13 +69,8 @@ async function recordsFor(did) {
   return { handle, recs }
 }
 
-function wilson(w, n, z = 1.96) {
-  if (!n) return 0
-  const p = w / n, d = 1 + (z * z) / n
-  return (p + (z * z) / (2 * n) - z * Math.sqrt((p * (1 - p) + (z * z) / (4 * n)) / n)) / d
-}
 
-await discover()
+if (!process.env.SYNTH) await discover()
 const votes = []
 const voters = []
 for (const did of dids) {
@@ -89,37 +84,144 @@ for (const did of dids) {
       if (!t || t > Date.now() + 5 * 60e3) continue
       const k = [v.a, v.b].sort().join('|')
       const prev = latest.get(k)
-      if (!prev || t > Date.parse(prev.createdAt)) latest.set(k, { uri: r.uri, did, a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt })
+      if (!prev || t > Date.parse(prev.createdAt)) latest.set(k, { uri: r.uri, did, a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt, voter: v.voter === 'agent' ? 'agent' : 'human', model: typeof v.model === 'string' ? v.model.slice(0, 80) : undefined })
     }
-    if (latest.size) { voters.push({ did, handle, votes: latest.size }); votes.push(...latest.values()) }
+    if (latest.size) {
+      const vs = [...latest.values()]
+      const isAgent = vs.some((x) => x.voter === 'agent') // once an account declares itself an agent, all its votes count as agent votes
+      const model = vs.find((x) => x.model)?.model
+      vs.forEach((x) => { x.voter = isAgent ? 'agent' : 'human' })
+      voters.push({ did, handle, kind: isAgent ? 'agent' : 'human', model, votes: vs.length }); votes.push(...vs)
+    }
   } catch (e) { console.warn('recount fail', did, e?.message || e) }
+}
+if (process.env.SYNTH) { // test: true strengths Norm>Louis>Rock>Seinfeld
+  const tr = { 'Norm Macdonald': 0.8, 'Louis C.K.': 0.4, 'Chris Rock': 0, 'Jerry Seinfeld': -0.4 }
+  for (let i = 0; i < +process.env.SYNTH; i++) {
+    const a = clips[Math.floor(Math.random() * clips.length)], b = clips[Math.floor(Math.random() * clips.length)]
+    if (a.id === b.id) continue
+    const p = 1 / (1 + Math.exp(-(tr[a.comic] - tr[b.comic])))
+    if (i < 7) voters.push({ did: 'synth' + i, handle: 'synth' + i, kind: i % 3 ? 'human' : 'agent', votes: 0 })
+    votes.push({ did: 'synth' + (i % 7), voter: i % 3 ? 'human' : 'agent', a: a.id, b: b.id, winner: Math.random() < p ? a.id : b.id, createdAt: new Date().toISOString() })
+  }
 }
 votes.sort((x, y) => Date.parse(x.createdAt) - Date.parse(y.createdAt))
 
-const K = 32
-const clipS = Object.fromEntries(clips.map((c) => [c.id, { id: c.id, elo: 1500, wins: 0, bouts: 0 }]))
-const comicS = {}
-const C = (n) => (comicS[n] ??= { comic: n, elo: 1500, wins: 0, bouts: 0 })
-const step = (A, B, sa) => {
-  const ea = 1 / (1 + 10 ** ((B.elo - A.elo) / 400))
-  A.elo += K * (sa - ea); B.elo += K * ((1 - sa) - (1 - ea))
-  A.bouts++; B.bouts++; (sa ? A : B).wins++
+// ---------- Hierarchical Bradley-Terry ----------
+// clip strength = comic strength + clip offset (offset shrunk toward 0); P(a beats b) = sigmoid(s_a - s_b).
+// Fitted by MAP gradient ascent over ALL votes (order-independent), 95% CIs by bootstrap resampling.
+const SCALE = 400 / Math.LN10, BASE = 1500
+const comics = [...new Set(clips.map((c) => c.comic))]
+const cIdx = Object.fromEntries(comics.map((c, i) => [c, i]))
+const kIdx = Object.fromEntries(clips.map((c, i) => [c.id, i]))
+const clipComic = clips.map((c) => cIdx[c.comic])
+const LAM_OFF = 0.5, LAM_COMIC = 0.05
+function fit(vs, init, iters = 400) {
+  const u = init ? [...init.u] : comics.map(() => 0)
+  const o = init ? [...init.o] : clips.map(() => 0)
+  const lr = 0.5 / Math.max(1, Math.sqrt(vs.length))
+  for (let t = 0; t < iters; t++) {
+    const gu = u.map((x) => -2 * LAM_COMIC * x), go = o.map((x) => -2 * LAM_OFF * x)
+    for (const v of vs) {
+      const w = kIdx[v.winner], l = kIdx[v.winner === v.a ? v.b : v.a]
+      const d = u[clipComic[w]] + o[w] - u[clipComic[l]] - o[l]
+      const g = 1 / (1 + Math.exp(d)) // d/dd log sigmoid(d)
+      go[w] += g; go[l] -= g; gu[clipComic[w]] += g; gu[clipComic[l]] -= g
+    }
+    for (let i = 0; i < u.length; i++) u[i] += lr * gu[i]
+    for (let i = 0; i < o.length; i++) o[i] += lr * go[i]
+  }
+  const m = u.reduce((a, b) => a + b, 0) / u.length // anchor: mean comic = 1500
+  return { u: u.map((x) => x - m), o }
 }
-for (const v of votes) {
-  const sa = v.winner === v.a ? 1 : 0
-  step(clipS[v.a], clipS[v.b], sa)
-  const ca = byId[v.a].comic, cb = byId[v.b].comic
-  if (ca !== cb) step(C(ca), C(cb), sa)
+const toElo = (x) => Math.round((BASE + SCALE * x) * 10) / 10
+function rank(votes) {
+const full = fit(votes, null, 1500)
+const B = votes.length ? 200 : 0
+const bootC = comics.map(() => []), bootK = clips.map(() => [])
+for (let b = 0; b < B; b++) {
+  const sample = votes.map(() => votes[Math.floor(Math.random() * votes.length)])
+  const f = fit(sample, full, 150)
+  f.u.forEach((x, i) => bootC[i].push(x))
+  f.o.forEach((x, i) => bootK[i].push(f.u[clipComic[i]] + x))
 }
-const fin = (o) => ({ ...o, elo: Math.round(o.elo * 10) / 10, wilson: Math.round(wilson(o.wins, o.bouts) * 1000) / 1000 })
+const q = (arr, p) => { if (!arr.length) return null; const s = [...arr].sort((a, b) => a - b); return s[Math.min(s.length - 1, Math.floor(p * s.length))] }
+const tallyWins = (key) => { const w = {}, n = {}; for (const v of votes) { const A = key(v.a), Bb = key(v.b), W = key(v.winner); if (A === Bb) continue; n[A] = (n[A] || 0) + 1; n[Bb] = (n[Bb] || 0) + 1; w[W] = (w[W] || 0) + 1 } return { w, n } }
+const cw = tallyWins((id) => byId[id].comic), kw = tallyWins((id) => id)
+const comicRows = comics.map((c, i) => ({
+  comic: c, elo: toElo(full.u[i]),
+  lo: B ? toElo(q(bootC[i], 0.025)) : null, hi: B ? toElo(q(bootC[i], 0.975)) : null,
+  wins: cw.w[c] || 0, bouts: cw.n[c] || 0,
+})).sort((a, b) => b.elo - a.elo)
+const clipRows = clips.map((c, i) => ({
+  id: c.id, comic: c.comic, elo: toElo(full.u[clipComic[i]] + full.o[i]),
+  lo: B ? toElo(q(bootK[i], 0.025)) : null, hi: B ? toElo(q(bootK[i], 0.975)) : null,
+  wins: kw.w[c.id] || 0, bouts: kw.n[c.id] || 0,
+})).sort((a, b) => b.elo - a.elo)
+  return { votes: votes.length, voters: new Set(votes.map((v) => v.did)).size, comics: comicRows, clips: clipRows }
+}
 const board = {
   updated: new Date().toISOString(),
+  method: 'hierarchical Bradley-Terry (MAP), 95% bootstrap CI',
   collection: COLLECTION,
   votes: votes.length,
   voters: voters.length,
-  comics: Object.values(comicS).map(fin).sort((a, b) => b.elo - a.elo),
-  clips: Object.values(clipS).filter((c) => c.bouts).map(fin).sort((a, b) => b.elo - a.elo),
+  boards: { all: rank(votes), human: rank(votes.filter((v) => v.voter === 'human')), agent: rank(votes.filter((v) => v.voter === 'agent')) },
+  agents: voters.filter((v) => v.kind === 'agent').map(({ handle, model, votes }) => ({ handle, model, votes })),
 }
+// ---------- Active sampling: which pairs teach us the most ----------
+// score = closeness of ratings x combined uncertainty, plus a floor for under-sampled clips; same length band only.
+const band = (c) => (c.sec == null ? null : c.sec < 120 ? 'short' : c.sec < 480 ? 'mid' : 'long')
+const allBoard = board.boards.all
+const stat = Object.fromEntries(allBoard.clips.map((c) => [c.id, c]))
+const pairCount = {}
+for (const v of votes) { const k = [v.a, v.b].sort().join('|'); pairCount[k] = (pairCount[k] || 0) + 1 }
+const pairs = []
+for (let i = 0; i < clips.length; i++) for (let j = i + 1; j < clips.length; j++) {
+  const A = clips[i], Bc = clips[j]
+  if (A.kind !== Bc.kind) continue // lanes: human vs human, ai vs ai (a "mixed" lane samples across)
+  const ba = band(A), bb = band(Bc)
+  if (ba && bb && ba !== bb) continue
+  const sa = stat[A.id], sb = stat[Bc.id]
+  const wa = sa.hi != null ? sa.hi - sa.lo : 400, wb = sb.hi != null ? sb.hi - sb.lo : 400
+  const close = Math.exp(-Math.abs(sa.elo - sb.elo) / 200)
+  const unc = (wa + wb) / 800
+  const fresh = 1 / (1 + Math.min(sa.bouts, sb.bouts) / 10)
+  const seen = 1 / (1 + (pairCount[A.id + '|' + Bc.id] || pairCount[Bc.id + '|' + A.id] || 0))
+  const cross = A.comic !== Bc.comic ? 1.25 : 1
+  pairs.push({ a: A.id, b: Bc.id, kind: A.kind, w: Math.round(1000 * (0.5 * close * unc + 0.5 * fresh) * seen * cross) / 1000 })
+}
+pairs.sort((x, y) => y.w - x.w)
+fs.writeFileSync(path.join(DATA, 'pairs.json'), JSON.stringify({ updated: board.updated, explore: 0.2, pairs }))
+
+// ---------- Personal taste: per-voter comic ratings, shrunk toward the global board ----------
+// Empirical-Bayes: start from global comic ratings, take a few gradient steps on the voter's own votes
+// with a prior pulling back to global (strength PRIOR). Few votes => looks like the crowd; many => looks like you.
+const TASTE_DIR = path.join(DATA, 'taste'); fs.mkdirSync(TASTE_DIR, { recursive: true })
+const gComic = Object.fromEntries(allBoard.comics.map((c) => [c.comic, (c.elo - 1500) / (400 / Math.LN10)]))
+const PRIOR = 2
+const tasteIndex = []
+for (const vt of voters) {
+  const mine = votes.filter((v) => v.did === vt.did)
+  const r = { ...gComic }
+  for (let t = 0; t < 300; t++) {
+    const g = Object.fromEntries(Object.keys(r).map((k) => [k, -PRIOR * (r[k] - gComic[k])]))
+    for (const v of mine) {
+      const A = byId[v.a].comic, Bc = byId[v.b].comic
+      if (A === Bc) continue
+      const W = v.winner === v.a ? A : Bc, L = W === A ? Bc : A
+      const p = 1 / (1 + Math.exp(r[W] - r[L]))
+      g[W] += p; g[L] -= p
+    }
+    for (const k in r) r[k] += 0.05 * g[k]
+  }
+  const prof = Object.entries(r).map(([comic, x]) => ({ comic, elo: Math.round(1500 + (400 / Math.LN10) * x), vsCrowd: Math.round((400 / Math.LN10) * (x - gComic[comic])) }))
+    .sort((a, b) => b.elo - a.elo)
+  const name = vt.did.replace(/[^a-z0-9]/gi, '_')
+  fs.writeFileSync(path.join(TASTE_DIR, name + '.json'), JSON.stringify({ did: vt.did, handle: vt.handle, kind: vt.kind, votes: mine.length, comics: prof }))
+  tasteIndex.push({ did: vt.did, handle: vt.handle, kind: vt.kind, votes: mine.length, top: prof[0]?.comic })
+}
+fs.writeFileSync(path.join(TASTE_DIR, 'index.json'), JSON.stringify(tasteIndex))
 fs.writeFileSync(path.join(DATA, 'leaderboard.json'), JSON.stringify(board, null, 1))
 fs.writeFileSync(path.join(DATA, 'votes.json'), JSON.stringify({ updated: board.updated, voters, votes }, null, 1))
 state.dids = [...dids]

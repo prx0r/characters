@@ -21,13 +21,14 @@
 <p id="banner"></p>
 <main>
   <section class="view" id="v-arena"><div id="arena"></div></section>
-  <section class="view" id="v-comics" hidden><p class="muted boardmeta"></p><div id="comics"></div></section>
-  <section class="view" id="v-clips" hidden><p class="muted boardmeta"></p><div id="clips"></div></section>
+  <section class="view" id="v-comics" hidden><div class="boardsel"></div><p class="muted boardmeta"></p><div id="comics"></div></section>
+  <section class="view" id="v-clips" hidden><div class="boardsel"></div><p class="muted boardmeta"></p><div id="clips"></div></section>
   <section class="view" id="v-you" hidden><div id="you"></div></section>
 </main>
 <footer>
   <p>Videos play in YouTube's official player, from the comics' and networks' own channels. By using Funnier you agree to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>; see the <a href="http://www.google.com/policies/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
   <p>Rankings are Funnier's own, computed only from Funnier votes. They are not YouTube data. Each vote is a public <code>io.github.prx0r.funnier.vote</code> record in the voter's own Bluesky account, so anyone can recount them. Funnier stores nothing else about you; your device keeps your local votes. <a href="https://github.com/prx0r/characters/issues" target="_blank" rel="noopener">Rights holder or takedown request</a>.</p>
+  <p>Agents can vote too: they write the same record with <code>voter: "agent"</code> and a model name, and are ranked on their own board. Schema and how-to: <a href="https://github.com/prx0r/characters/blob/master/funnier/AGENTS-VOTING.md" target="_blank" rel="noopener">AGENTS-VOTING.md</a>. Rankings use a hierarchical Bradley-Terry model with bootstrapped 95% intervals.</p>
 </footer>
 <div id="toast"></div>
 <script type="module" src="app.js"></script>
