@@ -188,24 +188,25 @@ function loadYT() {
   return ytReady
 }
 class Screen {
-  constructor(side, clip) { this.side = side; this.clip = clip; this.ready = null; this.started = false }
+  constructor(side, clip) { this.side = side; this.clip = clip; this.started = false; this.ready = new Promise((res) => (this._ready = res)) }
   async mount() {
     const c = this.clip, host = $('#p' + this.side)
     this.start = c.start || 0
     if (c.media === 'audio') {
       host.innerHTML = `<audio preload="auto" controls src="${esc(c.src)}"></audio>`
       this.a = host.querySelector('audio')
-      this.ready = new Promise((res) => (this.a.onloadedmetadata = () => res()))
+      this.a.onloadedmetadata = () => this._ready()
       return
     }
     const YT = await loadYT()
-    this.ready = new Promise((res) => {
+    {
+      const res = this._ready
       this.p = new YT.Player('p' + this.side, {
         host: 'https://www.youtube-nocookie.com', videoId: c.id,
         playerVars: { rel: 0, playsinline: 1, start: this.start, controls: 1 },
         events: { onReady: () => res(), onStateChange: (e) => { if (e.data === 0) this.ended = true } },
       })
-    })
+    }
   }
   dur() { const d = this.a ? this.a.duration : this.p?.getDuration?.(); return d || this.clip.sec || 0 }
   end() { const d = this.dur(); return this.clip.end || (d ? Math.min(d, this.start + SHORT_MAX) : this.start + SHORT_MAX) }
@@ -295,7 +296,7 @@ function runTick() {
     if (phase === 'R' && R.done()) R.pause()
     // the verdict arrives partway through the second short
     const secR = R.started ? R.t() - R.start : 0
-    if (!armed && R.started && (R.progress() >= 0.5 || secR >= 25 || R.done())) {
+    if (!armed && R.started && (R.progress() >= 0.4 || secR >= 20 || R.done())) {
       armed = true; $('#verdict')?.classList.add('on'); $('#hint').textContent = 'Use ← or → on your keyboard, too.'
     }
   }, 250)
@@ -334,7 +335,9 @@ function clipTile(c, i, extra) {
     <div class="poster">${img}<div class="cap"><b>${esc(k.title)}</b><span>${esc(k.comic)}${extra ? ' · ' + extra : ''}</span></div></div></a>`
 }
 function comicTile(c, i, extra) {
-  return `<div class="tile"><span class="num">${i + 1}</span><div class="poster comicposter"><b>${esc(c.comic)}</b><span class="rating">${extra}</span></div></div>`
+  const first = CLIPS.find((k) => k.comic === c.comic && k.media === 'youtube')
+  const bg = first ? `style="background-image:linear-gradient(180deg,rgba(7,7,10,.1),rgba(7,7,10,.95) 75%),url(${thumb(first.id)})"` : ''
+  return `<div class="tile"><span class="num">${i + 1}</span><div class="poster comicposter" ${bg}><b>${esc(c.comic)}</b><span class="rating">${extra}</span></div></div>`
 }
 function paintBoards() {
   const metas = document.querySelectorAll('.boardmeta')
