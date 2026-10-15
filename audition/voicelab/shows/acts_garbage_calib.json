@@ -1,0 +1,30 @@
+[
+  {
+    "act": 1,
+    "character": "GARBAGE: word soup",
+    "set_json": "swaps/garbage_soup.json"
+  },
+  {
+    "act": 2,
+    "character": "GARBAGE: flat bomb (no payoff)",
+    "set_json": "swaps/garbage_flat_bomb.json"
+  },
+  {
+    "act": 3,
+    "character": "Dracula (pickles engine)",
+    "set_json": "swaps/dracula__pickles_set_mapping.json",
+    "voice": "04e9ab898fb44ccd9b7ac2357439d6ec"
+  },
+  {
+    "act": 4,
+    "character": "Louis CK (real)",
+    "set_json": "swaps/louis_roadrage_act.json",
+    "voice": "fb015415ebf141999fc882baa0e0834c",
+    "real_set": "louis_roadrage",
+    "window": [
+      122.0,
+      240.0
+    ],
+    "gt_set": "louis_roadrage"
+  }
+]

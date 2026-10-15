@@ -18,6 +18,7 @@ import fish_tts, voice_judge
 HERE = Path(__file__).parent
 LAB = HERE / "voicelab"
 SHOWS = LAB / "shows"
+BEATS_DIR = SHOWS / "beats"
 
 ACTS = [
     {"act": 1, "character": "Dracula (pickles engine)",
@@ -33,7 +34,7 @@ def laugh_p(wpm, pos, hist):
     m = pickle.loads((LAB / "laugh_model_v3.pkl").read_bytes())
     return float(m["model"].predict_proba(np.array([[wpm/60, 1.0, 15.0, pos, hist]]))[0, 1])
 
-def perform(act: dict) -> dict:
+def perform(act: dict, args_name: str = "ep") -> dict:
     """Render act with adaptive pauses + inline crowd response."""
     rec = json.loads((LAB / act["set_json"]).read_text())
     beats = rec["beats"]
@@ -45,10 +46,14 @@ def perform(act: dict) -> dict:
         t = f"{cue} {b['text']}".strip() if cue else b["text"]
         est_wpm = len(b["text"].split()) / max(0.8 + len(b["text"].split())/2.6, 1) * 60
         p = laugh_p(est_wpm, (i+1)/len(beats), hist)
-        out = fish_tts.synthesize_fish(f"show-{act['act']}-{i}", t, voice=act["voice"],
+        out = fish_tts.synthesize_fish(f"show-{act['act']}-{i}", t, voice=act.get("voice"),
                                        direction=False, temperature=r.get("temp", 0.6),
                                        prosody={"speed": r.get("speed", 1.0),
                                                 "volume": r.get("vol", 0)})
+        BEATS_DIR.mkdir(parents=True, exist_ok=True)
+        import shutil as _sh
+        bfile = BEATS_DIR / f"{args_name}-act{act['act']}-b{i}.wav"
+        _sh.copy(out["path"], bfile)
         parts.append(Path(out["path"]))
         if p >= 0.55:
             lr = fish_tts.synthesize_fish(f"show-laugh-{act['act']}-{i}", "[crowd laughing]",
@@ -60,7 +65,9 @@ def perform(act: dict) -> dict:
             parts.append(Path(cr["path"])); verdict = "chuckle"
         else:
             parts.append(fish_tts.silence_wav(600)); verdict = "silence"
-        beat_log.append({"beat": i, "p_laugh": round(p, 2), "crowd": verdict})
+        beat_log.append({"beat": i, "p_laugh": round(p, 2), "crowd": verdict,
+                         "file": f"beats/{args_name}-act{act['act']}-b{i}.wav",
+                         "text": b["text"], "duration_ms": fish_tts._ffprobe_ms(Path(out["path"]))})
         hist = min(10, hist + (1 if p >= 0.55 else 0)) * 0.88
     wav = SHOWS / f"act{act['act']}_{act['character'].split()[0].lower()}.wav"
     fish_tts.stitch_wav(parts, wav)
@@ -108,7 +115,7 @@ def main():
     results = []
     for act in acts:
         print(f"ACT {act['act']}: {act['character']}")
-        r = perform(act)
+        r = perform(act, args_name=args.name)
         # composite judge score: mean P (crowd) + verify (words survived) - length penalty noise
         if r.get("measured_laughs_per_10s") is not None:
             # real set: density vs corpus mean 1.2/10s, capped at 1.0

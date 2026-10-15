@@ -1,0 +1,16 @@
+{
+  "beats": [
+    {
+      "text": "whisper banana forbidden jelly jelly tornado whisper invoice mortgage goblin protocol quantum banana mortgage senator jelly cactus tempo banana invoice senator invoice protocol jelly unicycle goblin forbidden banana pickle protocol ceiling forbidden tornado senator ceiling whisper mortgage flamingo whisper regrettable..",
+      "recipe": {
+        "temp": 0.6,
+        "speed": 1.0,
+        "vol": 0,
+        "pause": 400,
+        "cue": ""
+      }
+    }
+  ],
+  "verify_match": 0.0,
+  "note": "garbage calibration"
+}

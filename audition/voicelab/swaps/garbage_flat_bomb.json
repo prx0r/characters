@@ -1,0 +1,56 @@
+{
+  "beats": [
+    {
+      "text": "I was going to tell you about the thing.",
+      "recipe": {
+        "temp": 0.3,
+        "speed": 0.8,
+        "vol": -1,
+        "pause": 300,
+        "cue": ""
+      }
+    },
+    {
+      "text": "Anyway that's the thing.",
+      "recipe": {
+        "temp": 0.3,
+        "speed": 0.8,
+        "vol": -1,
+        "pause": 300,
+        "cue": ""
+      }
+    },
+    {
+      "text": "So yeah.",
+      "recipe": {
+        "temp": 0.3,
+        "speed": 0.8,
+        "vol": -1,
+        "pause": 300,
+        "cue": ""
+      }
+    },
+    {
+      "text": "The thing.",
+      "recipe": {
+        "temp": 0.3,
+        "speed": 0.8,
+        "vol": -1,
+        "pause": 300,
+        "cue": ""
+      }
+    },
+    {
+      "text": "You know.",
+      "recipe": {
+        "temp": 0.3,
+        "speed": 0.8,
+        "vol": -1,
+        "pause": 300,
+        "cue": ""
+      }
+    }
+  ],
+  "verify_match": 0.0,
+  "note": "garbage calibration"
+}
