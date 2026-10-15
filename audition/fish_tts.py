@@ -387,21 +387,6 @@ def tempo_via_prompt(target_mult: float, base_cue: str = "") -> tuple[str, float
     return cues, round(speed, 2)
 
 
-def tempo_wav(src: Path, factor: float, out: Path | None = None) -> Path:
-    """Pitch-preserving fallback (ffmpeg atempo). LAST resort only — the
-    engine prefers prompting tempo via cues/markers (owner rule)."""
-    src = Path(src)
-    out = out or src.with_name(src.stem + f"_t{factor:.2f}" + src.suffix)
-    factor = max(0.5, min(2.0, float(factor)))
-    r = subprocess.run(
-        ["ffmpeg", "-y", "-v", "error", "-i", str(src),
-         "-filter:a", f"atempo={factor:.3f}", str(out)],
-        capture_output=True, timeout=60)
-    if r.returncode != 0 or not out.exists():
-        raise RuntimeError(f"atempo failed: {r.stderr.decode()[:150]}")
-    return out
-
-
 def synthesize_fish(audition_id: str, text: str, voice: str | None = None,
                     modulator: str = "", mod: dict | None = None,
                     paid: bool = False, direction: bool = True,
