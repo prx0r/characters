@@ -101,15 +101,15 @@ main{padding:0 clamp(16px,4vw,48px) 40px;max-width:1500px;margin:0 auto}
 .shelf{font-size:20px;margin:34px 0 14px;font-weight:700}
 .rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,1fr);gap:18px;overflow-x:auto;padding-bottom:14px;scrollbar-width:thin}
 .rail.comics{grid-auto-columns:minmax(220px,1fr)}
-.tile{position:relative;display:flex;align-items:end;gap:6px;text-decoration:none;color:var(--text)}
-.tile .num{font-family:var(--display);font-size:150px;line-height:.75;color:var(--bg);-webkit-text-stroke:2px #4a4a55;margin-right:-18px;z-index:0}
+.tile{position:relative;display:flex;align-items:end;gap:6px;min-width:0;text-decoration:none;color:var(--text)}
+.tile .num{font-family:var(--display);font-size:150px;line-height:.75;color:var(--bg);-webkit-text-stroke:2px #4a4a55;margin-right:-4px;z-index:0;flex:none}
 .tile .poster{position:relative;z-index:1;flex:1;border-radius:10px;overflow:hidden;background:var(--panel);border:1px solid var(--line);transition:transform .25s}
 .tile:hover .poster{transform:scale(1.04)}
 .tile img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
-.tile .cap{padding:10px 12px}
+.tile .cap{padding:10px 12px;height:58px}
 .tile .cap b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tile .cap span{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.comicposter{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:end;padding:14px;background:linear-gradient(160deg,#2a0a10,#0b0b0e 70%)}
+.tile .poster.comicposter{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:end;padding:16px;background:linear-gradient(160deg,#2a0a10,#0b0b0e 70%);background-size:cover;background-position:center}
 .comicposter b{font-family:var(--display);font-size:30px;line-height:1;font-weight:400;letter-spacing:.01em}
 .comicposter .rating{font-family:var(--mono);color:var(--gold);font-size:13px;margin-top:8px}
 
@@ -142,3 +142,4 @@ code{font-family:var(--mono);font-size:.95em}
   .fbtn.L,.fbtn.R{justify-self:stretch}
   .kpis{grid-template-columns:repeat(2,1fr)} .barrow{grid-template-columns:110px 1fr 56px}
 }
+.tile .poster{min-width:0}
