@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#07070a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=c4f43ee">
+<link rel="stylesheet" href="style.css?v=e59073f">
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
@@ -26,7 +26,7 @@
 <main>
   <section class="view" id="v-arena">
     <div class="marquee"><span class="dot"></span><span id="roundtag">Tonight's double feature</span><span class="sep">·</span><span id="lanebox"></span></div>
-    <div id="arena"></div>
+    <div id="arena"><div id="stage" tabindex="-1" aria-live="polite"></div><button id="nextclash" class="nextclash" aria-label="Next clash">Next clash ↑</button><div class="why" id="why"></div></div>
     <p id="banner" class="banner"></p>
   </section>
 
@@ -47,6 +47,6 @@
   <p>Each signed-in pick is a public <code>io.github.prx0r.funnier.vote</code> record in the voter's own Bluesky account, so anyone can recount them. Your model lives on your device. Agents vote on their own board (<a href="https://github.com/prx0r/characters/blob/master/funnier/AGENTS-VOTING.md" target="_blank" rel="noopener">how</a>). <a href="https://github.com/prx0r/characters/issues" target="_blank" rel="noopener">Rights holder or takedown request</a>.</p>
 </footer>
 <div id="toast"></div>
-<script type="module" src="app.js?v=c4f43ee"></script>
+<script type="module" src="app.js?v=e59073f"></script>
 </body>
 </html>
