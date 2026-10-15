@@ -53,14 +53,16 @@ CLONES = {"ari": "dbeb1d68566245e2b857617b830e8031",
           "louis": "fb015415ebf141999fc882baa0e0834c",
           "norm": "085d639799cc449c8a5350fe8543c14b",
           "will": "9c1e219466b84e448976d5f163d3d9fc",
-          "kam": "6ab05a976a684ea49798183783cbd3f9"}
+          "kam": "6ab05a976a684ea49798183783cbd3f9",
+          "seinfeld": "f73820b82341447daa943f59ae414415"}
 SET_PERFORMER = {"kt704_passport": "ari", "kt715_ep715": "ari", "kt715_walking": "ari",
                  "kt715_nashville": "ari", "kt728_diversifying": "ari", "kt728_jamesbond": "ari",
                  "casey_rocket_1": "casey", "casey_rocket_2": "casey",
                  "louis_roadrage": "louis", "norm_moth": "norm",
                  "will_montgomery_1": "will", "kam_patterson_1": "kam",
                  "kam_patterson_2": "kam",
-                 "sir_winston_pickles_1": "pickles", "sir_winston_pickles_2": "pickles"}
+                 "sir_winston_pickles_1": "pickles", "sir_winston_pickles_2": "pickles",
+                 "seinfeld_c01": "seinfeld", "seinfeld_c02": "seinfeld", "seinfeld_c03": "seinfeld", "seinfeld_c04": "seinfeld", "seinfeld_c05": "seinfeld"}
 BASE_WPM = 154.3  # per-performer probe override in run()
 CLONE = CLONES["ari"]
 
@@ -219,6 +221,14 @@ PROFILES = {
         "delivery_note": "gemini GT available; pickles_1 183wpm measured, "
                          "deadpan-formal register",
         "affect": {"arousal": 0.5, "valence": 0.2, "power": 0.7},
+    },
+    "seinfeld": {
+        "name": "jerry_seinfeld",
+        "persona_note": "observational stand-still comic; incredulous everyman; "
+                        "tiny-life absurdity with surgical precision; voice-first GOAT",
+        "delivery_note": "mid-fast, precise articulation, controlled swings, "
+                         "setup-punch-tag discipline; minimal body, maximal phrasing",
+        "affect": {"arousal": 0.55, "valence": 0.3, "power": 0.55},
     },
 }
 BOUNDS = {"emotion_acc": 0.60, "wpm_mae": 20.0, "var_mae": 1.5}
