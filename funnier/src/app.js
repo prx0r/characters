@@ -416,6 +416,8 @@ function faceCard(c, side) {
 // the only label above the cards: who challenged you (shared links). Everything else stays quiet.
 function introLine() {
   if (current?.mode !== 'shared') return ''
+  const inv = sharedRound?.invite
+  if (inv?.inviter?.username && !inv.self) return `<span class="challenge">${avatarHTML(inv.inviter)}<span><b>${esc(inv.inviter.username)}</b> challenged you</span></span>`
   return `<span class="challenge">${sharedRound?.pick ? 'A friend challenged you. Do you agree?' : 'A friend sent you this clash'}</span>`
 }
 function slideHTML(a, b, n, first) {
@@ -997,13 +999,15 @@ function takeClash() {
   if (sh.rewatch) { pair.mode = 'rewatch'; sharedRound = null; return pair }
   pair.mode = 'shared'
   sharedRound = { ...sh, key: pairKey(sh.a, sh.b) }
+  if (sh.invite) sharedRound.invite = sh.invite
   return pair
 }
 function friendLine(a, b, winner) {
   if (!sharedRound?.pick || sharedRound.key !== pairKey(a.id, b.id)) return null
   const fw = BYID[sharedRound.pick === 'a' ? sharedRound.a : sharedRound.b]
   if (!fw) return null
-  const agree = fw.id === winner
+  const agree = fw.id === winner, who = sharedRound.invite?.inviter?.username
+  if (who) return { agree, text: agree ? `You agree with ${who}: ${fw.comic}.` : `${who} picked ${fw.comic}.` }
   return { agree, text: agree ? `You agreed with your friend: ${fw.comic}.` : `You disagreed. Your friend picked ${fw.comic}.` }
 }
 function clashURL(a, b, pick) {
@@ -1027,10 +1031,22 @@ async function copyText(t) {
     document.body.appendChild(ta); ta.select(); const ok = document.execCommand('copy'); ta.remove(); return ok
   } catch { return false }
 }
+const inviteCache = {}
+async function shareLink(a, b, pick) {
+  const k = [a.id, b.id, pick || ''].join('|')
+  if (signedIn()) {
+    if (!inviteCache[k]) inviteCache[k] = api('/invites', { method: 'POST', body: { a: a.id, b: b.id, pick: pick || null } })
+      .then((r) => (r.ok && r.j?.code ? (CFG.shareBase || SHARE_BASE) + '#i/' + r.j.code : null)).catch(() => null)
+    const u = await inviteCache[k]; if (u) return u
+    delete inviteCache[k]
+  }
+  return clashURL(a, b, pick)
+}
+const shareText = (a, b, pick) => (pick ? `I picked my winner. ${a.comic} vs ${b.comic}: which is funnier?` : `${a.comic} vs ${b.comic}: which is funnier?`)
+const waURL = (text, url) => 'https://wa.me/?text=' + encodeURIComponent(text + ' ' + url)
 async function shareClash(a, b, pick) {
   if (!a || !b) return
-  const url = clashURL(a, b, pick)
-  const text = pick ? `I picked my winner. ${a.comic} vs ${b.comic}: which is funnier?` : `${a.comic} vs ${b.comic}: which is funnier?`
+  const url = await shareLink(a, b, pick), text = shareText(a, b, pick)
   if (navigator.share) {
     try { await navigator.share({ title: 'Funnier: settle this clash', text, url }); return }
     catch (e) { if (e && e.name === 'AbortError') return }
@@ -1173,28 +1189,67 @@ function askWhy(v, shareOnly, fl, guess) {
   const box = $('#why'); if (!box) return
   const A = BYID[v.a], B = BYID[v.b], W = BYID[v.winner]
   const D = v.daily ? dailyFor(v.daily) : null
+  const pick = v.winner === v.a ? 'a' : 'b', inv = sharedRound?.invite && sharedRound.key === pairKey(v.a, v.b) ? sharedRound.invite : null
+  const text = shareText(A, B, pick)
   box.innerHTML = `<p class="rchead"><b>${shareOnly ? 'Noted, but it didn\u2019t count' : esc(W?.comic || '') + ' takes it.'}</b>${!shareOnly && guess ? `<span class="muted">${esc(guess)}</span>` : ''}${fl ? `<span class="${fl.agree ? 'agree' : 'disagree'}">${esc(fl.text)}</span>` : ''}</p>
-    ${D ? `<p class="rcworld">${worldLine(D)}</p>` : ''}
-    <button class="whyshare rcsend" type="button">Send to a friend — see if they agree ↗</button>
+    <div class="rcsplit" aria-live="polite">${D ? `<p class="rcworld">${worldLine(D)}</p>` : ''}</div>
+    <div class="rcfriends" hidden></div>
+    <div class="rcshare"><button type="button" class="rcsend" data-sh="native">Share ↗</button><a class="rcalt" data-sh="wa" href="${esc(waURL(text, clashURL(A, B, pick)))}" target="_blank" rel="noopener">WhatsApp</a><button type="button" class="rcalt" data-sh="copy">Copy link</button></div>
+    ${inv && !inv.self && !inv.friends && inv.inviter?.username ? `<button type="button" class="rcadd" data-sh="add">${avatarHTML(inv.inviter)}Add ${esc(inv.inviter.username)} as a friend</button>` : ''}
     ${shareOnly ? '' : `<div class="rcwhy"><span>Why was it funnier?</span>${WHY.map((w) => `<button type="button" data-why>${w}</button>`).join('')}</div>`}`
   let sharing = false
   const hideIn = (ms) => { clearTimeout(whyT); whyT = setTimeout(() => { if (!sharing) box.classList.remove('on') }, ms) }
-  box.classList.add('on'); hideIn(5000)
+  box.classList.add('on'); hideIn(signedIn() ? 7000 : 5000)
   box.onpointerenter = () => clearTimeout(whyT); box.onpointerleave = () => hideIn(2500)
   box.onfocusin = () => clearTimeout(whyT)
-  const ws = box.querySelector('.rcsend')
-  if (ws) ws.onclick = async (e) => {
-    e.stopPropagation(); sharing = true; clearTimeout(whyT)
-    await holdWhile(() => shareClash(A, B, v.winner === v.a ? 'a' : 'b'))
-    sharing = false; hideIn(1500)
-  }
+  const linkP = shareLink(A, B, pick)
+  const wa = box.querySelector('[data-sh="wa"]')
+  linkP.then((u) => { if (wa) wa.href = waURL(text, u) })
+  const hold = async (fn) => { sharing = true; clearTimeout(whyT); await holdWhile(fn); sharing = false; hideIn(1500) }
+  box.querySelector('[data-sh="native"]').onclick = (e) => { e.stopPropagation(); hold(() => shareClash(A, B, pick)) }
+  box.querySelector('[data-sh="copy"]').onclick = async (e) => { e.stopPropagation(); const u = await linkP; toast((await copyText(u)) ? 'Link copied. Your friend sees your pick only after they vote.' : 'Copy this link: ' + u) }
+  if (wa) wa.onclick = (e) => { e.stopPropagation(); clearTimeout(advT); advT = null }
+  const add = box.querySelector('[data-sh="add"]')
+  if (add) add.onclick = (e) => { e.stopPropagation(); clearTimeout(advT); advT = null; addFriend(inv, add) }
   box.querySelectorAll('button[data-why]').forEach((b) => (b.onclick = (e) => {
     e.stopPropagation()
     const votes = LS.get('votes', []); const last = votes.find((x) => x.createdAt === v.createdAt)
-    if (last) { last.why = b.textContent; LS.set('votes', votes) }
+    if (last) { last.why = b.textContent; LS.set('votes', votes); if (signedIn()) api('/votes', { method: 'POST', body: { votes: [apiVote(last)] } }).catch(() => {}) }
     const q2 = LS.get('queue', []); const lq = q2.find((x) => x.createdAt === v.createdAt); if (lq) { lq.why = b.textContent; LS.set('queue', q2) }
     box.classList.remove('on'); toast('Noted. Your model will use that.'); paintHistory()
   }))
+  // invite bookkeeping: this open voted; signed-out friends get added when they sign in
+  if (inv && !inv.self) {
+    if (inv.open_id != null) api(`/invites/${encodeURIComponent(inv.code)}/voted`, { method: 'POST', body: { open_id: inv.open_id } }).catch(() => {})
+    if (!signedIn() && !inv.friends) LS.set('pendingAccept', { code: inv.code, open_id: inv.open_id, username: inv.inviter?.username || '' })
+  }
+  paintResult(box, v, D, shareOnly)
+}
+// global split flashes in, then friends' faces on the side they picked
+async function paintResult(box, v, D, shareOnly) {
+  const A = BYID[v.a], B = BYID[v.b], el = box.querySelector('.rcsplit'), fr = box.querySelector('.rcfriends')
+  let pa = null, n = 0
+  if (CFG.apiBase) {
+    try { if (signedIn() && !shareOnly) await syncVotes() } catch {}
+    try { const r = await api(`/stats/clash/${encodeURIComponent(v.a)}/${encodeURIComponent(v.b)}`); if (r.ok && r.j?.total > 0) { pa = r.j.pctA; n = r.j.total } } catch {}
+  }
+  if (pa == null) { // fall back to the published (Bluesky) tally
+    const vs = PUBVOTES.filter((x) => x && pairKey(x.a, x.b) === pairKey(v.a, v.b))
+    if (vs.length) { n = vs.length; pa = Math.round((100 * vs.filter((x) => x.winner === v.a).length) / n) }
+  }
+  if (!box.contains(el)) return
+  if (pa != null) el.innerHTML = `<div class="split${v.winner === v.a ? ' l' : ' r'}"><span>${esc(A.comic)} <b>${pa}%</b></span><i style="--p:${pa}%"></i><span><b>${100 - pa}%</b> ${esc(B.comic)}</span></div><small class="muted">${n} pick${n === 1 ? '' : 's'} so far</small>`
+  else if (!D) el.innerHTML = `<p class="rcworld">You\u2019re the first to call this one.</p>`
+  requestAnimationFrame?.(() => el.querySelector('.split')?.classList.add('on'))
+  if (!signedIn() || !fr) return
+  try {
+    const r = await api(`/clash/${encodeURIComponent(v.a)}/${encodeURIComponent(v.b)}/friends`)
+    const fs = r.ok ? r.j?.friends || [] : []
+    if (!fs.length || !box.contains(fr)) return
+    const side = (id) => fs.filter((f) => f.winner === id).map((f) => `<span class="fa" title="${esc(f.username || '')}">${avatarHTML(f)}</span>`).join('')
+    fr.innerHTML = `<p>See what your friends think</p><div class="fsides"><div>${side(v.a) || '<span class="muted small">nobody</span>'}<small>${esc(A.comic)}</small></div><div>${side(v.b) || '<span class="muted small">nobody</span>'}<small>${esc(B.comic)}</small></div></div>`
+    fr.hidden = false
+  } catch {}
 }
 
 // ---------- history: everything you did, from this device's own logs ----------
@@ -1318,8 +1373,239 @@ function youSub(k) {
   if (YOUSUB === 'history') paintHistory()
 }
 
+// ---------- accounts: Google sign-in via funnier-api (Cloudflare Worker + D1) ----------
+let CFG = { apiBase: '', googleClientId: '', shareBase: SHARE_BASE }, USER = null
+const signedIn = () => !!(USER && CFG.apiBase)
+async function loadConfig() {
+  try { const r = await fetch('config.json', { cache: 'no-cache' }); if (r.ok) CFG = { ...CFG, ...(await r.json()) } } catch {}
+  if (IS_LOCAL && !CFG.apiBase && CFG.localApi) CFG.apiBase = CFG.localApi
+}
+async function api(path, { method = 'GET', body } = {}) {
+  if (!CFG.apiBase) throw new Error('no api')
+  const t = LS.get('session', null)
+  const r = await fetch(CFG.apiBase + path, { method, credentials: 'include',
+    headers: { ...(body ? { 'content-type': 'application/json' } : {}), ...(t ? { authorization: 'Bearer ' + t } : {}) },
+    body: body ? JSON.stringify(body) : undefined })
+  let j = null; try { j = await r.json() } catch {}
+  if (r.status === 401 && t && !path.startsWith('/auth/')) { LS.set('session', null); USER = null; paintUser() }
+  return { ok: !!r.ok, status: r.status, j }
+}
+const apiVote = (v) => ({ a: v.a, b: v.b, winner: v.winner, ...(v.why ? { why: v.why } : {}), ...(Number.isInteger(v.decisionMs) ? { ms: v.decisionMs } : {}), ...(v.daily ? { daily: v.daily } : {}), createdAt: v.createdAt })
+let syncing = null
+function syncVotes() {
+  if (!signedIn()) return Promise.resolve()
+  if (syncing) return syncing
+  syncing = (async () => {
+    const since = LS.get('syncedAt', ''), key = 'u:' + USER.id
+    const all = LS.get('votes', []).filter((v) => v && v.a && v.b && v.winner && (LS.get('syncedUser', '') !== key || String(v.createdAt) > since))
+    for (let i = 0; i < all.length; i += 500) {
+      const chunk = all.slice(i, i + 500), r = await api('/votes', { method: 'POST', body: { votes: chunk.map(apiVote) } })
+      if (!r.ok) return
+      LS.set('syncedAt', chunk.map((v) => String(v.createdAt)).sort().pop()); LS.set('syncedUser', key)
+    }
+  })().finally(() => (syncing = null))
+  return syncing
+}
+async function initAccount() {
+  if (!CFG.apiBase || !LS.get('session', null)) { paintUser(); return }
+  try { const r = await api('/me'); if (r.ok) { USER = r.j.user; afterSignIn(r.j.needsProfile, false) } } catch {}
+  paintUser()
+}
+async function afterSignIn(needs, fresh) {
+  paintUser(); paintProfilePage()
+  syncVotes().catch(() => {})
+  const pa = LS.get('pendingAccept', null)
+  if (pa?.code) {
+    try { const r = await api(`/invites/${encodeURIComponent(pa.code)}/accept`, { method: 'POST', body: { open_id: pa.open_id } }); if (r.ok) toast(`You and ${r.j.friend?.username || pa.username} are now friends.`) } catch {}
+    LS.set('pendingAccept', null)
+  }
+  if (needs && (fresh || !LS.get('onboardSeen', false))) openOnboarding()
+  else if (fresh) toast(`Signed in as ${USER.username || USER.name || 'you'}.`)
+}
+async function onGoogleCredential(resp) {
+  try {
+    const r = await api('/auth/google', { method: 'POST', body: { credential: resp.credential } })
+    if (!r.ok || !r.j?.token) return toast(r.status === 503 ? 'Google sign-in is coming soon.' : 'Sign-in didn\u2019t work. Please try again.')
+    LS.set('session', r.j.token); USER = r.j.user; setMenu(false)
+    afterSignIn(r.j.needsProfile, true)
+  } catch { toast('Sign-in didn\u2019t work. Please try again.') }
+}
+let gisP = null
+function loadGIS() {
+  if (gisP) return gisP
+  gisP = new Promise((res, rej) => {
+    if (window.google?.accounts?.id) return res(window.google)
+    const t = document.createElement('script'); t.src = 'https://accounts.google.com/gsi/client'; t.async = true
+    t.onload = () => res(window.google); t.onerror = () => { gisP = null; rej(new Error('gis')) }
+    document.head.appendChild(t)
+  }).then((g) => { g.accounts.id.initialize({ client_id: CFG.googleClientId, callback: onGoogleCredential, auto_select: false, itp_support: true, use_fedcm_for_prompt: true }); return g })
+  return gisP
+}
+function renderGoogleButton(host) {
+  if (!host || !CFG.googleClientId || !CFG.apiBase) return
+  loadGIS().then((g) => { if (document.body.contains(host)) { host.innerHTML = ''; g.accounts.id.renderButton(host, { type: 'standard', theme: 'filled_black', size: 'large', shape: 'pill', text: 'signin_with', logo_alignment: 'left', width: 256 }) } })
+    .catch(() => { host.innerHTML = '<p class="um-note">Couldn\u2019t reach Google. Check your connection and try again.</p>' })
+}
+async function signOut() {
+  try { await api('/auth/logout', { method: 'POST' }) } catch {}
+  try { window.google?.accounts?.id?.disableAutoSelect() } catch {}
+  LS.set('session', null); USER = null; setMenu(false); paintUser(); toast('Signed out. Your picks stay on this device.')
+  if (!$('#v-profile')?.hidden) showTab('arena')
+}
+async function deleteAccount() {
+  let ok = false
+  try { ok = window.confirm('Delete your Funnier account?\n\nThis permanently removes your profile, synced picks, friends and invites from our servers. Your history on this device stays until you clear it.') } catch {}
+  if (!ok) return
+  const r = await api('/me', { method: 'DELETE' }).catch(() => null)
+  if (!r?.ok) return toast('Couldn\u2019t delete right now. Please try again.')
+  LS.set('session', null); LS.set('syncedAt', ''); USER = null; setMenu(false); paintUser(); showTab('arena'); toast('Your account and its data are deleted.')
+}
+async function addFriend(inv, btn) {
+  if (!inv?.code) return
+  if (!signedIn()) {
+    LS.set('pendingAccept', { code: inv.code, open_id: inv.open_id, username: inv.inviter?.username || '' })
+    toast(`Sign in and you and ${inv.inviter?.username || 'your friend'} become friends.`); setMenu(true); return
+  }
+  const r = await api(`/invites/${encodeURIComponent(inv.code)}/accept`, { method: 'POST', body: { open_id: inv.open_id } }).catch(() => null)
+  if (r?.ok) { inv.friends = true; if (btn) { btn.disabled = true; btn.innerHTML = `${avatarHTML(inv.inviter)}Friends with ${esc(inv.inviter.username)} ✓` } toast(`You and ${inv.inviter.username} are now friends.`) }
+  else toast('Couldn\u2019t add them right now.')
+}
+// opening https://…/#i/<code>: "<username> challenged you", their clash plays next
+const parseInvite = (h) => { const m = String(h || '').match(/^#i\/([A-Za-z0-9]{4,16})/); return m ? m[1] : null }
+async function openInvite(code) {
+  if (!CFG.apiBase) return false
+  try {
+    const r = await api('/invites/' + encodeURIComponent(code))
+    if (!r.ok || !r.j?.a) { toast('That invite has expired, so here is tonight\u2019s screening.'); return false }
+    pendingClash = { a: r.j.a, b: r.j.b, pick: r.j.pick || null, invite: { code, inviter: r.j.inviter, open_id: r.j.open_id, self: !!r.j.self, friends: !!r.j.friends } }
+    return true
+  } catch { return false }
+}
+
+// ---------- avatars: 12 illustrated faces, drawn inline ----------
+const AVATARS = {
+  grin: { bg: '#e8102e', f: '#ffd9b8', e: 'dot', m: 'grin' }, deadpan: { bg: '#3a3a46', f: '#f1c9a5', e: 'line', m: 'flat' },
+  wink: { bg: '#f5c76b', f: '#e0a77d', e: 'wink', m: 'smile' }, shock: { bg: '#8fe3ff', f: '#ffe0c2', e: 'wide', m: 'o' },
+  smirk: { bg: '#7b5cff', f: '#c68b62', e: 'dot', m: 'smirk' }, cool: { bg: '#1d1d24', f: '#8d5a3b', e: 'shades', m: 'smile' },
+  nerd: { bg: '#2bb673', f: '#ffd9b8', e: 'glasses', m: 'smile' }, tash: { bg: '#ff7a45', f: '#f1c9a5', e: 'dot', m: 'tash' },
+  sleepy: { bg: '#5b6cff', f: '#e8b48f', e: 'sleepy', m: 'flat' }, tongue: { bg: '#ff4fa3', f: '#ffe0c2', e: 'wink', m: 'tongue' },
+  monocle: { bg: '#0e7c86', f: '#f6d3b3', e: 'monocle', m: 'smirk' }, clown: { bg: '#f3f1ec', f: '#fff6ea', e: 'dot', m: 'grin', nose: 1 },
+}
+const AVATAR_NAMES = { grin: 'Big grin', deadpan: 'Deadpan', wink: 'Wink', shock: 'Shocked', smirk: 'Smirk', cool: 'Too cool', nerd: 'Nerd', tash: 'Moustache', sleepy: 'Sleepy', tongue: 'Cheeky', monocle: 'Monocle', clown: 'Clown' }
+function avatarSVG(id) {
+  const a = AVATARS[id]; if (!a) return SILHOUETTE
+  const k = '#1b1b22', eyes = {
+    dot: `<circle cx="25" cy="33" r="2.6" fill="${k}"/><circle cx="39" cy="33" r="2.6" fill="${k}"/>`,
+    line: `<path d="M21 33h8M35 33h8" stroke="${k}" stroke-width="2.6" stroke-linecap="round"/>`,
+    wink: `<circle cx="25" cy="33" r="2.6" fill="${k}"/><path d="M35 34q4-4 8 0" stroke="${k}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`,
+    wide: `<circle cx="25" cy="32" r="5" fill="#fff" stroke="${k}" stroke-width="1.6"/><circle cx="39" cy="32" r="5" fill="#fff" stroke="${k}" stroke-width="1.6"/><circle cx="25" cy="32" r="2" fill="${k}"/><circle cx="39" cy="32" r="2" fill="${k}"/>`,
+    shades: `<rect x="18" y="29" width="12" height="7" rx="3" fill="${k}"/><rect x="34" y="29" width="12" height="7" rx="3" fill="${k}"/><path d="M30 31h4" stroke="${k}" stroke-width="2"/>`,
+    glasses: `<circle cx="25" cy="33" r="5.4" fill="none" stroke="${k}" stroke-width="2"/><circle cx="39" cy="33" r="5.4" fill="none" stroke="${k}" stroke-width="2"/><path d="M30.4 33h3.2" stroke="${k}" stroke-width="2"/><circle cx="25" cy="33" r="1.8" fill="${k}"/><circle cx="39" cy="33" r="1.8" fill="${k}"/>`,
+    sleepy: `<path d="M21 33q4 3 8 0M35 33q4 3 8 0" stroke="${k}" stroke-width="2.4" fill="none" stroke-linecap="round"/><text x="45" y="22" font-size="9" font-family="sans-serif" font-weight="700" fill="${k}">z</text>`,
+    monocle: `<circle cx="25" cy="33" r="2.6" fill="${k}"/><circle cx="39" cy="33" r="5.6" fill="rgba(255,255,255,.35)" stroke="#c9a227" stroke-width="2"/><circle cx="39" cy="33" r="2.2" fill="${k}"/><path d="M44 37q2 6-1 12" stroke="#c9a227" stroke-width="1.2" fill="none"/>`,
+  }[a.e]
+  const mouth = {
+    grin: `<path d="M23 42q9 10 18 0z" fill="${k}"/><path d="M25 43h14" stroke="#fff" stroke-width="2"/>`,
+    flat: `<path d="M26 45h12" stroke="${k}" stroke-width="2.6" stroke-linecap="round"/>`,
+    smile: `<path d="M25 43q7 6 14 0" stroke="${k}" stroke-width="2.6" fill="none" stroke-linecap="round"/>`,
+    o: `<ellipse cx="32" cy="46" rx="3.6" ry="4.4" fill="${k}"/>`,
+    smirk: `<path d="M27 45q7 1 12-4" stroke="${k}" stroke-width="2.6" fill="none" stroke-linecap="round"/>`,
+    tongue: `<path d="M25 43q7 6 14 0" stroke="${k}" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M33 46q3 6 6 0z" fill="#ff5c7a"/>`,
+    tash: `<path d="M26 47q6 3 12 0" stroke="${k}" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M32 41c-3-3-9-2-11 2 4-1 7 0 11 1 4-1 7-2 11-1-2-4-8-5-11-2z" fill="#5a3218"/>`,
+  }[a.m]
+  return `<svg class="avsvg" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="${a.bg}"/>${a.nose ? '<path d="M14 26q-6-12 6-14 2 8 0 14zM50 26q6-12-6-14-2 8 0 14z" fill="#ff7a45"/>' : ''}<circle cx="32" cy="36" r="19" fill="${a.f}"/>${eyes}${mouth}${a.nose ? '<circle cx="32" cy="39" r="3.6" fill="#e8102e"/>' : ''}</svg>`
+}
+function avatarHTML(u) {
+  if (u?.avatar_id && AVATARS[u.avatar_id]) return `<span class="av">${avatarSVG(u.avatar_id)}</span>`
+  if (u?.google_avatar && /^https:\/\//.test(u.google_avatar)) return `<span class="av"><img src="${esc(u.google_avatar)}" alt="" referrerpolicy="no-referrer" loading="lazy"></span>`
+  return `<span class="av sil">${SILHOUETTE}</span>`
+}
+const ADJ = ['Deadpan', 'Punchy', 'Snarky', 'Giggly', 'Sly', 'Witty', 'Cheeky', 'Zany', 'Dry', 'Absurd', 'Silly', 'Smug', 'Wry', 'Goofy']
+const ANI = ['Duck', 'Panda', 'Otter', 'Llama', 'Badger', 'Moose', 'Gecko', 'Walrus', 'Ferret', 'Toucan', 'Yak', 'Heron', 'Lemur', 'Puffin']
+const pickR = (a) => a[Math.floor(Math.random() * a.length)]
+const funnyName = () => pickR(ADJ) + pickR(ANI) + (10 + Math.floor(Math.random() * 90))
+
+// ---------- onboarding / edit profile sheet ----------
+function openOnboarding() {
+  const sh = $('#sheet'); if (!sh || !USER) return
+  LS.set('onboardSeen', true)
+  const u = USER, maxY = new Date().getFullYear() - 13, first = !u.username
+  const sex = u.sex_at_birth || ''
+  sh.innerHTML = `<div class="sheetcard" role="dialog" aria-modal="true" aria-labelledby="obh">
+    <button type="button" class="sheetx" data-ob="close" aria-label="Close">×</button>
+    <h2 id="obh">${first ? 'Make it yours' : 'Your profile'}</h2>
+    <p class="muted">${first ? 'Pick a name and a face your friends will see.' : 'Your name and face are what friends see.'}</p>
+    <form id="obform" novalidate>
+      <label class="obl">Username<span class="obrow"><input id="obuser" maxlength="20" autocomplete="off" spellcheck="false" value="${esc(u.username || funnyName())}"><button type="button" class="obdice" data-ob="dice" aria-label="Suggest another name">🎲</button></span><small class="oberr" data-err="username"></small></label>
+      <fieldset class="obl"><legend>Avatar</legend><div class="obav">${Object.keys(AVATARS).map((id, i) => `<label title="${AVATAR_NAMES[id]}"><input type="radio" name="obav" value="${id}" ${(u.avatar_id || 'grin') === id ? 'checked' : ''}><span>${avatarSVG(id)}</span></label>`).join('')}</div><small class="oberr" data-err="avatar_id"></small></fieldset>
+      <div class="obstats"><p class="obwhy"><b>Unlock your stats.</b> These power country and age splits (“58% of 25–34s in the UK picked Seinfeld”). They are never shown on your profile or to anyone else.</p>
+        <label class="obl">Country<select id="obcc">${ccOptions(u.country || ccGuess())}</select><small class="oberr" data-err="country"></small></label>
+        <label class="obl">Year of birth<input id="obyear" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="e.g. 1994" value="${u.birth_year || ''}"><small class="oberr" data-err="birth_year"></small></label>
+        <fieldset class="obl"><legend>Sex at birth</legend><div class="obseg">${[['male', 'Male'], ['female', 'Female'], ['skip', 'Prefer not to say']].map(([k, l]) => `<label><input type="radio" name="obsex" value="${k}" ${sex === k ? 'checked' : ''}><span>${l}</span></label>`).join('')}</div><small class="oberr" data-err="sex_at_birth"></small></fieldset></div>
+      <p class="oberr big" data-err="form"></p>
+      <div class="obact"><button type="submit" class="dhbtn">${first ? 'Save and start' : 'Save'}</button><button type="button" class="dhghost" data-ob="close">${first ? 'Later' : 'Cancel'}</button></div>
+      <p class="muted small">See our <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a>. You can delete your account any time from the account menu.</p>
+    </form></div>`
+  sh.hidden = false
+  const close = () => { sh.hidden = true; sh.innerHTML = '' }
+  sh.onclick = (e) => { if (e.target === sh) close() }
+  sh.querySelectorAll('[data-ob="close"]').forEach((b) => (b.onclick = close))
+  sh.querySelector('[data-ob="dice"]').onclick = () => { sh.querySelector('#obuser').value = funnyName() }
+  sh.querySelector('#obform').onsubmit = async (e) => {
+    e.preventDefault()
+    sh.querySelectorAll('.oberr').forEach((x) => (x.textContent = ''))
+    const val = (q) => sh.querySelector(q)?.value?.trim() || ''
+    const body = { username: val('#obuser'), avatar_id: sh.querySelector('input[name=obav]:checked')?.value }
+    const cc = val('#obcc'), yr = val('#obyear'), sx = sh.querySelector('input[name=obsex]:checked')?.value
+    if (cc) body.country = cc
+    if (yr) { const y = Number(yr); if (!Number.isInteger(y) || y < 1900 || y > new Date().getFullYear()) { sh.querySelector('[data-err=birth_year]').textContent = 'Enter a four-digit year.'; return } body.birth_year = y }
+    if (sx) body.sex_at_birth = sx
+    const btn = sh.querySelector('button[type=submit]'); btn.disabled = true
+    const r = await api('/me/profile', { method: 'PUT', body }).catch(() => null); btn.disabled = false
+    if (r?.j?.error === 'too_young') {
+      await api('/me', { method: 'DELETE' }).catch(() => {})
+      LS.set('session', null); USER = null; paintUser()
+      sh.querySelector('.sheetcard').innerHTML = `<h2>Sorry</h2><p>Funnier accounts are for people aged 13 and over, so we didn\u2019t keep this sign-in. You can keep watching and voting on this device without an account.</p><div class="obact"><button type="button" class="dhbtn" data-ob="close">OK</button></div>`
+      sh.querySelector('[data-ob="close"]').onclick = close
+      return
+    }
+    if (!r?.ok) {
+      const f = r?.j?.fields || {}
+      for (const [k, m] of Object.entries(f)) { const el = sh.querySelector(`[data-err="${k}"]`); if (el) el.textContent = k === 'username' && /taken/.test(m) ? 'That name\u2019s taken. Try another (🎲).' : m }
+      if (!Object.keys(f).length) sh.querySelector('[data-err=form]').textContent = 'Couldn\u2019t save right now. Please try again.'
+      return
+    }
+    USER = r.j.user; close(); paintUser(); paintProfilePage(); toast(first ? `Welcome, ${USER.username}.` : 'Profile saved.')
+  }
+}
+
+// ---------- your profile page: invites, taste match ----------
+async function paintProfilePage() {
+  const el = $('#profileview'); if (!el || $('#v-profile')?.hidden) return
+  if (!signedIn()) { el.innerHTML = `<div class="pf"><h2>Your profile</h2><p class="empty">Sign in with Google from the account menu to add friends and compare your taste.</p></div>`; return }
+  const u = USER
+  el.innerHTML = `<div class="pf"><div class="pfhead">${avatarHTML(u)}<div><h2>${esc(u.username || 'New comic fan')}</h2><p class="muted small">${esc(u.email || '')}</p></div><button type="button" class="dhghost" id="pfedit">Edit profile</button></div>
+    <div class="kpis pfk"><div class="kpi"><b id="pk-sent">–</b><span>clashes shared</span></div><div class="kpi"><b id="pk-open">–</b><span>opened by friends</span></div><div class="kpi"><b id="pk-voted">–</b><span>friends voted</span></div><div class="kpi"><b id="pk-fr">–</b><span>friends</span></div></div>
+    <h3>Taste match</h3><div id="pftaste" class="pflist"><p class="muted">Loading…</p></div>
+    <h3>Invites you sent</h3><div id="pfinv" class="pflist"><p class="muted">Loading…</p></div>
+    <div class="pfpriv"><h3>Only you see this</h3><p class="muted small">${[u.birth_year ? 'Born ' + u.birth_year : null, u.country ? ccName(u.country) : null, { male: 'Male', female: 'Female', skip: 'Prefer not to say' }[u.sex_at_birth] || null].filter(Boolean).map(esc).join(' · ') || 'No stats details yet. Add them in Edit profile to unlock country and age splits.'}</p>
+      <p class="hdata"><a class="btn ghost" href="privacy.html" target="_blank" rel="noopener">Privacy</a><button type="button" class="btn danger" id="pfdel">Delete my account</button></p></div></div>`
+  el.querySelector('#pfedit').onclick = openOnboarding
+  el.querySelector('#pfdel').onclick = deleteAccount
+  const [inv, taste] = await Promise.all([api('/me/invites').catch(() => null), api('/me/taste').catch(() => null)])
+  if (!document.body.contains(el)) return
+  const t = inv?.j?.totals, fr = taste?.j?.friends || []
+  if (t) { $('#pk-sent').textContent = t.sent; $('#pk-open').textContent = t.opened; $('#pk-voted').textContent = t.voted }
+  $('#pk-fr').textContent = fr.length
+  $('#pftaste').innerHTML = fr.length ? fr.map((f) => `<div class="pfrow">${avatarHTML(f)}<b>${esc(f.username || 'Friend')}</b><span class="pfm">${f.match == null ? `<small class="muted">${f.shared}/3 shared picks</small>` : `<i style="--p:${f.match}%"></i>${f.match}% match`}</span></div>`).join('')
+    : '<p class="muted">No friends yet. Share a clash after you vote; when a friend opens it and taps “Add as a friend”, you\u2019ll see how often you agree.</p>'
+  const list = inv?.j?.invites || []
+  $('#pfinv').innerHTML = list.length ? list.slice(0, 20).map((x) => `<div class="pfrow"><span class="pfclash">${esc(BYID[x.a]?.comic || 'Retired clip')} <i>vs</i> ${esc(BYID[x.b]?.comic || 'Retired clip')}</span><span class="pfppl">${(x.people || []).slice(0, 6).map((p) => `<span class="fa" title="${esc(p.username || '')}${p.voted ? ' voted' : ' opened'}">${avatarHTML(p)}</span>`).join('')}</span><small class="muted">${x.opens} open${x.opens === 1 ? '' : 's'} · ${x.voted} voted</small></div>`).join('')
+    : '<p class="muted">Nothing shared yet.</p>'
+}
+
 // ---------- account menu: one round icon top-right ----------
-const SILHOUETTE = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4.2" fill="currentColor"/><path d="M3.8 21c.9-4.4 4.2-6.6 8.2-6.6s7.3 2.2 8.2 6.6" fill="currentColor"/></svg>'
+const SILHOUETTE = '<svg viewBox="0 0 24 24" aria-hidden="true" class="silsvg"><circle cx="12" cy="9" r="4.2" fill="currentColor"/><path d="M3.8 21c.9-4.4 4.2-6.6 8.2-6.6s7.3 2.2 8.2 6.6" fill="currentColor"/></svg>'
 const menuOpen = () => !!$('#usermenu') && !$('#usermenu').hidden
 function setMenu(open) {
   const m = $('#usermenu'), b = $('#userbtn'); if (!m || !b) return
@@ -1328,24 +1614,43 @@ function setMenu(open) {
 }
 function paintUser() {
   const b = $('#userbtn'); if (!b) return
-  b.innerHTML = SILHOUETTE
+  b.innerHTML = signedIn() ? avatarHTML(USER) : SILHOUETTE
+  b.classList.toggle('in', signedIn())
+  b.setAttribute('aria-label', signedIn() ? `Account: ${USER.username || USER.name || 'you'}` : 'Sign in')
   if (menuOpen()) paintMenu()
 }
 function paintMenu() {
   const m = $('#usermenu'); if (!m) return
-  m.innerHTML = `<div class="um-sec"><button type="button" class="um-google" disabled>Sign in with Google <small>coming soon</small></button>
+  const lane = `<div class="um-sec um-row"><span>Lineup</span><span id="lanebox"></span></div>`
+  const adv = `<details class="um-adv"><summary>Advanced</summary><div class="um-sec">${bskyHTML()}</div></details>`
+  const legal = `<p class="um-legal"><a href="privacy.html" target="_blank" rel="noopener">Privacy</a> · <a href="terms.html" target="_blank" rel="noopener">Terms</a></p>`
+  if (signedIn()) {
+    m.innerHTML = `<div class="um-sec um-me">${avatarHTML(USER)}<div><b>${esc(USER.username || USER.name || 'You')}</b><small>${esc(USER.email || '')}</small></div></div>
+      <div class="um-sec"><button type="button" class="um-item" data-um="profile">Your profile</button><button type="button" class="um-item" data-um="history">History</button>${USER.username ? '' : '<button type="button" class="um-item gold" data-um="edit">Finish your profile</button>'}</div>
+      ${lane}<div class="um-sec"><button type="button" class="um-item" data-um="signout">Sign out</button></div>${adv}
+      <div class="um-sec"><button type="button" class="um-del" data-um="delete">Delete my account</button>${legal}</div>`
+  } else {
+    const can = CFG.googleClientId && CFG.apiBase
+    m.innerHTML = `<div class="um-sec">${can ? '<div id="gsibtn" class="gsibtn"><button type="button" class="um-google" disabled>Sign in with Google</button></div>' : '<button type="button" class="um-google" disabled>Sign in with Google <small>coming soon</small></button>'}
       <p class="um-note">Sync your picks, add friends and see how your taste matches theirs.</p></div>
-    <div class="um-sec um-row"><span>Lineup</span><span id="lanebox"></span></div>
-    <div class="um-sec"><button type="button" class="um-item" data-um="history">History</button></div>
-    <details class="um-adv"><summary>Advanced</summary><div class="um-sec">${bskyHTML()}</div></details>`
+      ${lane}<div class="um-sec"><button type="button" class="um-item" data-um="history">History</button></div>${adv}<div class="um-sec">${legal}</div>`
+    if (can) renderGoogleButton(m.querySelector('#gsibtn'))
+  }
   laneSelect(); bindBsky(m)
-  m.querySelectorAll('[data-um]').forEach((x) => (x.onclick = () => { setMenu(false); if (x.dataset.um === 'history') { showTab('you'); youSub('history') } }))
+  m.querySelectorAll('[data-um]').forEach((x) => (x.onclick = () => {
+    const k = x.dataset.um; setMenu(false)
+    if (k === 'history') { showTab('you'); youSub('history') }
+    else if (k === 'profile') { showTab('profile'); paintProfilePage() }
+    else if (k === 'edit') openOnboarding()
+    else if (k === 'signout') signOut()
+    else if (k === 'delete') deleteAccount()
+  }))
 }
 function bindUser() {
   const b = $('#userbtn'); if (!b) return
   b.onclick = (e) => { e.stopPropagation(); setMenu(!menuOpen()) }
   document.addEventListener('click', (e) => { if (menuOpen() && !e.target.closest?.('.usr')) setMenu(false) })
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuOpen()) { setMenu(false); b.focus() } })
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (menuOpen()) { setMenu(false); b.focus() } const sh = $('#sheet'); if (sh && !sh.hidden) { sh.hidden = true; sh.innerHTML = '' } } })
   paintUser()
 }
 
@@ -1374,6 +1679,9 @@ function tabs() {
   document.querySelectorAll('[data-sub]').forEach((b) => (b.onclick = () => youSub(b.dataset.sub)))
   document.querySelectorAll('[data-tab]').forEach((b) => (b.onclick = (e) => { e.preventDefault(); if (b.dataset.tab === 'comics') location.hash = 'comics'; show(b.dataset.tab) }))
   const route = () => {
+    const ic = parseInvite(location.hash)
+    if (ic) { history.replaceState(null, '', location.pathname + location.search); show('arena'); openInvite(ic).then((ok) => { if (ok && CLIPS.length) { moving = false; goNext(null) } }); return }
+    if (/^#profile/.test(location.hash)) { show('profile'); paintProfilePage(); return }
     const sh = parseClash(location.hash)
     if (sh) { pendingClash = sh; if (sh.rewatch) userStarted = true; history.replaceState(null, '', location.pathname + location.search); show('arena'); if (CLIPS.length) { moving = false; goNext(null) } return }
     if (/^#comic/.test(location.hash)) { show('comics'); paintComics() }
@@ -1385,14 +1693,15 @@ function tabs() {
 
 ;(async () => {
   tabs()
-  await loadData()
+  await Promise.all([loadData(), loadConfig()])
   MODEL = fitLocal(); TRAITS = fitTraits()
-  const sh = parseClash(location.hash)
-  if (sh) { pendingClash = sh; history.replaceState(null, '', location.pathname + location.search) }
+  const sh = parseClash(location.hash), ic = parseInvite(location.hash)
+  if (ic) { history.replaceState(null, '', location.pathname + location.search); await Promise.race([openInvite(ic), new Promise((r) => setTimeout(r, 4000))]) }
+  else if (sh) { pendingClash = sh; history.replaceState(null, '', location.pathname + location.search) }
   else { // the day's first visit opens on the daily clash (once a day, and not if you've already voted on it)
     const D = dailyFor(dayStr())
     if (D && !dailyMine(D.date) && LS.get('dailyAuto', '') !== D.date && !/^#(comic|history)/.test(location.hash)) { LS.set('dailyAuto', D.date); pendingClash = { a: D.a, b: D.b, pick: null, daily: D.date } }
   }
   bindGestures(); bindChrome(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); paintDaily(); window._route()
-  initAuth()
+  initAuth(); initAccount()
 })()
