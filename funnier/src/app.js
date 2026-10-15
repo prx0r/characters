@@ -9,7 +9,7 @@ const LS = {
   set: (k, v) => localStorage.setItem('funnier.' + k, JSON.stringify(v)),
 }
 
-let CLIPS = [], BYID = {}, BOARD = null, PAIRS = []
+let CLIPS = [], BYID = {}, BOARD = null, PAIRS = [], COMICS = {}, PUBVOTES = []
 let LANE = LS.get('lane', 'human'), BOARDKIND = 'all'
 const SHORT_MAX = 75 // seconds of each clip we screen when the clip is longer
 let client = null, agent = null, me = null
@@ -20,6 +20,8 @@ async function loadData() {
   CLIPS = (await (await fetch('clips.json', { cache: 'no-cache' })).json()).filter((c) => c.status !== 'removed')
   BYID = Object.fromEntries(CLIPS.map((c) => [c.id, c]))
   try { BOARD = await (await fetch('data/leaderboard.json', { cache: 'no-cache' })).json() } catch { BOARD = null }
+  try { COMICS = (await (await fetch('comics.json', { cache: 'no-cache' })).json()).comics || {} } catch { COMICS = {} }
+  try { PUBVOTES = (await (await fetch('data/votes.json', { cache: 'no-cache' })).json()).votes || [] } catch { PUBVOTES = [] }
   try { PAIRS = (await (await fetch('data/pairs.json', { cache: 'no-cache' })).json()).pairs || [] } catch { PAIRS = [] }
 }
 
@@ -73,7 +75,7 @@ async function publish(v) {
   const res = await agent.fetchHandler('/xrpc/com.atproto.repo.createRecord', {
     method: 'POST', headers: { 'content-type': 'application/json' },
     body: JSON.stringify({ repo: me.did, collection: COLLECTION,
-      record: { $type: COLLECTION, a: v.a, b: v.b, winner: v.winner, voter: 'human', basis: v.basis || 'watched', createdAt: v.createdAt } }),
+      record: { $type: COLLECTION, a: v.a, b: v.b, winner: v.winner, voter: 'human', basis: v.basis || 'watched', ...(v.why ? { why: v.why } : {}), createdAt: v.createdAt } }),
   })
   if (!res.ok) throw new Error('createRecord ' + res.status + ' ' + (await res.text()))
 }
@@ -118,6 +120,38 @@ function fitLocal() {
   return { r, o, bouts, n: votes.length, score: (id) => r[BYID[id].comic] + o[id] }
 }
 let MODEL = null
+const STYLES = ['deadpan', 'absurd', 'dark', 'observational', 'storytelling', 'rant', 'one-liners', 'self-deprecating', 'clean']
+const TYPES = {
+  deadpan: ['The Straight Face', 'You laugh hardest when nobody on stage does.'],
+  absurd: ['The Surrealist', 'Logic is optional. The weirder the turn, the bigger your laugh.'],
+  dark: ['The Gallows Crowd', 'Nothing is off-limits if the joke earns it.'],
+  observational: ['The Noticer', 'You love comics who say the thing everyone saw and nobody said.'],
+  storytelling: ['The Long-Game Listener', 'You will happily wait five minutes for one perfect payoff.'],
+  rant: ['The Choir', 'Give you a comic with a righteous head of steam and you are in.'],
+  'one-liners': ['The Punchline Purist', 'Setup, punch, next. No wasted words.'],
+  'self-deprecating': ['The Confessor', 'You trust a comic who makes themselves the target.'],
+  clean: ['The Craft Fan', 'You prize precision over shock.'],
+}
+function fitTraits() {
+  // pairwise logistic regression on style differences: P(A beats B) = sig(w . (xA - xB)), L2-regularised
+  const votes = LS.get('votes', []).filter((v) => BYID[v.a] && BYID[v.b])
+  const w = Object.fromEntries(STYLES.map((t) => [t, 0])), n = {}
+  const x = (c) => Object.fromEntries(STYLES.map((t) => [t, (c.style || []).includes(t) ? 1 : 0]))
+  const data = votes.map((v) => { const A = x(BYID[v.a]), B = x(BYID[v.b]); const d = {}; STYLES.forEach((t) => { d[t] = A[t] - B[t]; if (d[t]) n[t] = (n[t] || 0) + 1 }); return { d, y: v.winner === v.a ? 1 : 0 } })
+  for (let it = 0; it < 300; it++) {
+    const g = Object.fromEntries(STYLES.map((t) => [t, -0.6 * w[t]]))
+    for (const { d, y } of data) { const p = sig(STYLES.reduce((s, t) => s + w[t] * d[t], 0)); STYLES.forEach((t) => (g[t] += (y - p) * d[t])) }
+    STYLES.forEach((t) => (w[t] += 0.1 * g[t]))
+  }
+  return { w, n }
+}
+let TRAITS = { w: {}, n: {} }
+const traitScore = (c) => (c.style || []).reduce((s, t) => s + (TRAITS.w[t] || 0), 0)
+function humourType() {
+  const top = Object.entries(TRAITS.w).filter(([t]) => (TRAITS.n[t] || 0) >= 2).sort((a, b) => b[1] - a[1])
+  if (!top.length || top[0][1] < 0.15) return null
+  return { key: top[0][0], name: TYPES[top[0][0]][0], line: TYPES[top[0][0]][1], also: top[1] && top[1][1] > 0.15 ? top[1][0] : null }
+}
 
 // ---------- choosing the next double feature ----------
 function openPair(a, b) {
@@ -134,7 +168,8 @@ const shuffle = (a) => a.map((x) => [Math.random(), x]).sort((p, q) => p[0] - q[
 function pickForYou() {
   // your model's favourite unseen matchup: its top clip vs the clip it knows least about
   const P = pool(); if (P.length < 2) return null
-  const top = [...P].sort((x, y) => MODEL.score(y.id) + 0.3 * Math.random() - (MODEL.score(x.id) + 0.3 * Math.random()))
+  const fy = (c) => MODEL.score(c.id) + traitScore(c) + 0.3 * Math.random()
+  const top = [...P].sort((x, y) => fy(y) - fy(x))
   for (const a of top.slice(0, 6)) {
     const opp = P.filter((b) => b.comic !== a.comic && openPair(a.id, b.id)).sort((x, y) => (MODEL.bouts[x.id] || 0) - (MODEL.bouts[y.id] || 0) || Math.random() - 0.5)
     if (opp.length) return [a, opp[0]]
@@ -255,7 +290,7 @@ function newRound(autoplay) {
   }
   const [a, b] = current
   $('#roundtag').textContent = MODES[current.mode][0]
-  const pL = MODEL ? sig(MODEL.score(a.id) - MODEL.score(b.id)) : 0.5
+  const pL = MODEL ? sig(MODEL.score(a.id) + traitScore(a) - MODEL.score(b.id) - traitScore(b)) : 0.5
   prediction = { p: pL, side: pL >= 0.5 ? 'L' : 'R' }
   el.innerHTML = `<div class="theater"><div class="screens">${screenHTML(a, 'L')}${screenHTML(b, 'R')}</div>
     ${autoplay ? '' : `<div class="start"><div class="inner"><h2>Tonight's<br>double feature</h2><p>Two shorts, back to back. Then you pick the funnier one.</p><button class="play" id="go">▶ Start the show</button></div></div>`}</div>
@@ -263,7 +298,7 @@ function newRound(autoplay) {
       <button class="fbtn L" data-side="L">← FUNNIER</button>
       <div class="mid"><span class="vs">or</span><button id="replay">Replay</button><button id="skip">Skip pair</button></div>
       <button class="fbtn R" data-side="R">FUNNIER →</button></div>
-    <p class="hint" id="hint"></p>`
+    <p class="hint" id="hint"></p><div class="why" id="why"></div>`
   el.querySelectorAll('.fbtn').forEach((x) => (x.onclick = () => vote(x.dataset.side)))
   $('#skip').onclick = () => { LS.set('skipped', [...LS.get('skipped', []), pairKey(a.id, b.id)]); bumpSeen(a.id, b.id); newRound(true) }
   $('#replay').onclick = () => { screens.R?.pause(); screens.L.p?.seekTo?.(screens.L.start, true); if (screens.L.a) screens.L.a.currentTime = screens.L.start; screens.L.ended = false; phase = 'L'; screens.L.play() }
@@ -317,8 +352,21 @@ async function vote(side) {
     try { await publish(v); toast(`${w.comic} takes it.${guess}`) }
     catch { LS.set('queue', [...LS.get('queue', []), v]); toast(`Saved. It'll publish when Bluesky responds.${guess}`) }
   } else { LS.set('queue', [...LS.get('queue', []), v]); toast(`${w.comic} takes it.${guess}`) }
-  MODEL = fitLocal()
-  paintBanner(); paintYou(); newRound(true)
+  MODEL = fitLocal(); TRAITS = fitTraits()
+  paintBanner(); paintYou(); newRound(true); askWhy(v)
+}
+const WHY = ['Smarter', 'Weirder', 'Darker', 'Better delivery', 'More relatable', 'Better payoff']
+let whyT
+function askWhy(v) {
+  const box = $('#why'); if (!box) return
+  box.innerHTML = `<span>Why was it funnier?</span>${WHY.map((w) => `<button>${w}</button>`).join('')}`
+  box.classList.add('on'); clearTimeout(whyT); whyT = setTimeout(() => box.classList.remove('on'), 9000)
+  box.querySelectorAll('button').forEach((b) => (b.onclick = () => {
+    const votes = LS.get('votes', []); const last = votes[votes.length - 1]
+    if (last && last.createdAt === v.createdAt) { last.why = b.textContent; LS.set('votes', votes) }
+    const q = LS.get('queue', []); const lq = q.find((x) => x.createdAt === v.createdAt); if (lq) { lq.why = b.textContent; LS.set('queue', q) }
+    box.classList.remove('on'); toast('Noted. Your model will use that.')
+  }))
 }
 document.addEventListener('keydown', (e) => {
   if (e.target.tagName === 'INPUT') return
@@ -359,6 +407,53 @@ function paintBoards() {
   $('#clips').innerHTML = bd.clips.filter((c) => c.bouts && BYID[c.id]).slice(0, 10).map((c, i) => clipTile(c, i, Math.round(c.elo))).join('')
 }
 
+// ---------- comics ----------
+const slugOf = (name) => COMICS[name]?.slug || name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+function comicStats(name) {
+  const bd = BOARD?.boards?.all, crowd = bd?.comics?.find((c) => c.comic === name && c.bouts)
+  const mine = MODEL ? Math.round(1500 + SCALE * (MODEL.r[name] || 0)) : null
+  const clips = CLIPS.filter((c) => c.comic === name)
+  const rated = clips.map((c) => ({ c, r: bd?.clips?.find((x) => x.id === c.id && x.bouts) })).sort((a, b) => (b.r?.elo || 0) - (a.r?.elo || 0))
+  const styles = {}; clips.forEach((c) => (c.style || []).forEach((t) => (styles[t] = (styles[t] || 0) + 1)))
+  // head-to-head from published + local picks
+  const h2h = {}
+  for (const v of [...PUBVOTES, ...LS.get('votes', [])]) {
+    const A = BYID[v.a]?.comic, B = BYID[v.b]?.comic; if (!A || !B || A === B || (A !== name && B !== name)) continue
+    const opp = A === name ? B : A, won = BYID[v.winner]?.comic === name
+    h2h[opp] = h2h[opp] || { w: 0, n: 0 }; h2h[opp].n++; if (won) h2h[opp].w++
+  }
+  return { crowd, mine, clips, rated, styles: Object.entries(styles).sort((a, b) => b[1] - a[1]).map((x) => x[0]), h2h }
+}
+function paintComics() {
+  const el = $('#comicsview'), route = location.hash.match(/^#comic\/(.+)$/)
+  const names = [...new Set(CLIPS.map((c) => c.comic))]
+  if (route) {
+    const name = names.find((n) => slugOf(n) === route[1])
+    if (name) return paintProfile(el, name)
+  }
+  el.innerHTML = `<div class="head"><h2>Comics</h2></div><p class="muted">Tap a comic for their profile, best-rated shorts and head-to-heads.</p>
+    <div class="grid">${names.map((n) => { const st = comicStats(n), first = st.clips.find((k) => k.media === 'youtube')
+      return `<a class="ccard" href="#comic/${slugOf(n)}"><div class="cimg" style="background-image:linear-gradient(180deg,rgba(7,7,10,0) 30%,rgba(7,7,10,.95)),url(${COMICS[n]?.photo || (first ? thumb(first.id) : '')})"></div>
+        <div class="ctext"><b>${esc(n)}</b><span>${esc(COMICS[n]?.tagline || '')}</span><em>${st.crowd ? Math.round(st.crowd.elo) + ' crowd rating' : st.clips.length + ' shorts'}</em></div></a>` }).join('')}
+      <div class="ccard soon"><div class="cimg ai"></div><div class="ctext"><b>AI comedians</b><span>In rehearsal. Soon you'll train your own and premiere them here.</span><em>Coming soon</em></div></div>
+    </div>`
+}
+function paintProfile(el, name) {
+  const P = COMICS[name] || {}, st = comicStats(name), first = st.clips.find((k) => k.media === 'youtube')
+  const rng = st.crowd?.lo != null ? ` <small>${Math.round(st.crowd.lo)}–${Math.round(st.crowd.hi)}</small>` : ''
+  el.innerHTML = `<a class="back" href="#comics">← All comics</a>
+    <section class="hero" style="background-image:linear-gradient(90deg,rgba(7,7,10,.98) 25%,rgba(7,7,10,.55) 60%,rgba(7,7,10,.2)),url(${P.photo || (first ? thumb(first.id).replace('hqdefault', 'maxresdefault') : '')})">
+      <div class="hinner"><span class="eyebrow">Comedian</span><h1>${esc(name)}</h1><p class="tag">${esc(P.tagline || '')}</p>
+      <div class="facts">${(P.facts || []).map((f) => `<span>${esc(f)}</span>`).join('')}</div>
+      <div class="stats"><div><b>${st.crowd ? Math.round(st.crowd.elo) + rng : '—'}</b><span>Crowd rating</span></div><div><b>${st.mine ?? '—'}</b><span>Your model</span></div><div><b>${st.clips.length}</b><span>Shorts</span></div></div>
+      <div class="styles">${st.styles.map((t) => `<span class="chip">${t}</span>`).join('')}</div></div></section>
+    <div class="cols"><div><h3>About</h3><p class="${P.bio ? '' : 'muted'}">${P.bio ? esc(P.bio) : 'Profile coming soon. Bio, influences and specials will live here.'}</p>
+      ${Object.entries(P.links || {}).map(([k, u]) => `<a class="btn ghost" href="${esc(u)}" target="_blank" rel="noopener">${esc(k)}</a>`).join(' ')}</div>
+      <div><h3>Head-to-head</h3>${Object.keys(st.h2h).length ? `<div class="bars">${Object.entries(st.h2h).map(([o, r]) => `<div class="barrow"><span>vs ${esc(o)}</span><div class="track"><i style="left:0;width:${(100 * r.w) / r.n}%"></i></div><span class="v">${Math.round((100 * r.w) / r.n)}% · ${r.n}</span></div>`).join('')}</div>` : '<p class="muted">No matchups yet. Every pick involving this comic shows up here.</p>'}</div></div>
+    <h3 class="shelf">Best-rated shorts</h3><div class="rail">${st.rated.map(({ c, r }, i) => clipTile(c, r ? i : null, r ? Math.round(r.elo) : c.channel)).join('')}</div>`
+  scrollTo({ top: 0 })
+}
+
 // ---------- your model ----------
 function paintYou() {
   const el = $('#you'), votes = LS.get('votes', [])
@@ -395,6 +490,8 @@ function paintYou() {
       <div class="kpi"><b>${esc(comics[0].k.split(' ').slice(-1)[0])}</b><span>your top comic so far</span></div>
       <div class="kpi"><b>${new Set(votes.flatMap((v) => [v.a, v.b])).size}</b><span>shorts seen</span></div>
     </div>
+    ${(() => { const h = humourType(); return h ? `<div class="type"><span class="eyebrow">Your humour type</span><b>${h.name}</b><p>${h.line}${h.also ? ` With a streak of <i>${h.also}</i>.` : ''}</p></div>` : `<div class="type"><span class="eyebrow">Your humour type</span><b>Still reading you…</b><p>A few more picks across different styles and it will name your type.</p></div>` })()}
+    <h3>Styles you laugh at</h3><div class="bars">${STYLES.map((t) => { const x = TRAITS.w[t] || 0, wd = Math.min(50, Math.abs(x) * 40); return `<div class="barrow"><span>${t}</span><div class="track center"><i style="left:${x >= 0 ? 50 : 50 - wd}%;width:${wd}%"></i></div><span class="v">${(TRAITS.n[t] || 0) < 2 ? 'learning' : (x > 0 ? '+' : '') + x.toFixed(2)}</span></div>` }).join('')}</div>
     <h3>Comics, as your model sees them</h3><p class="muted">It starts from the crowd chart and moves toward your picks.</p><div class="bars">${bars}</div>
     <h3>What it's learning about you</h3><div class="bars">
       ${trait('Longer bits', longW, longN, 'longer', 'shorter')}
@@ -425,14 +522,16 @@ function tabs() {
     if (id !== 'arena') Object.values(screens).forEach((s) => s.pause())
     scrollTo({ top: 0 })
   }
-  document.querySelectorAll('[data-tab]').forEach((b) => (b.onclick = (e) => { e.preventDefault(); show(b.dataset.tab) }))
-  show('arena')
+  document.querySelectorAll('[data-tab]').forEach((b) => (b.onclick = (e) => { e.preventDefault(); if (b.dataset.tab === 'comics') location.hash = 'comics'; show(b.dataset.tab) }))
+  const route = () => { if (/^#comic/.test(location.hash)) { show('comics'); paintComics() } }
+  addEventListener('hashchange', route)
+  show('arena'); window._route = route
 }
 
 ;(async () => {
   tabs()
   await loadData()
-  MODEL = fitLocal()
-  laneSelect(); newRound(false); paintBoards(); paintYou(); paintBanner()
+  MODEL = fitLocal(); TRAITS = fitTraits()
+  laneSelect(); newRound(false); paintBoards(); paintYou(); paintComics(); paintBanner(); window._route()
   initAuth()
 })()

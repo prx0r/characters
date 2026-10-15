@@ -84,7 +84,7 @@ for (const did of dids) {
       if (!t || t > Date.now() + 5 * 60e3) continue
       const k = [v.a, v.b].sort().join('|')
       const prev = latest.get(k)
-      if (!prev || t > Date.parse(prev.createdAt)) latest.set(k, { uri: r.uri, did, a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt, voter: v.voter === 'agent' ? 'agent' : 'human', model: typeof v.model === 'string' ? v.model.slice(0, 80) : undefined })
+      if (!prev || t > Date.parse(prev.createdAt)) latest.set(k, { uri: r.uri, did, a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt, voter: v.voter === 'agent' ? 'agent' : 'human', model: typeof v.model === 'string' ? v.model.slice(0, 80) : undefined, why: typeof v.why === 'string' ? v.why.slice(0, 40) : undefined })
     }
     if (latest.size) {
       const vs = [...latest.values()]

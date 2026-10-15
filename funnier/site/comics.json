@@ -1,0 +1,61 @@
+{
+ "_note": "Comedian profiles. Fill in bio (markdown-free text), photo (an https image you have rights to), facts, links. Empty fields show a placeholder.",
+ "comics": {
+  "Norm Macdonald": {
+   "slug": "norm-macdonald",
+   "tagline": "The long way round to the punchline.",
+   "facts": [
+    "1959\u20132021",
+    "Canada",
+    "Weekend Update anchor on SNL"
+   ],
+   "bio": "",
+   "photo": "",
+   "links": {
+    "YouTube": "https://www.youtube.com/@NormMacdonald"
+   }
+  },
+  "Louis C.K.": {
+   "slug": "louis-ck",
+   "tagline": "Dark, honest, and uncomfortably observant.",
+   "facts": [
+    "Born 1967",
+    "Creator of Louie"
+   ],
+   "bio": "",
+   "photo": "",
+   "links": {
+    "YouTube": "https://www.youtube.com/@LouisCK"
+   }
+  },
+  "Jerry Seinfeld": {
+   "slug": "jerry-seinfeld",
+   "tagline": "The precision engineer of everyday life.",
+   "facts": [
+    "Born 1954",
+    "Co-creator of Seinfeld"
+   ],
+   "bio": "",
+   "photo": "",
+   "links": {}
+  },
+  "Chris Rock": {
+   "slug": "chris-rock",
+   "tagline": "Rhythm, repetition, and righteous rants.",
+   "facts": [
+    "Born 1965",
+    "Tamborine (2018)"
+   ],
+   "bio": "",
+   "photo": "",
+   "links": {}
+  }
+ },
+ "ai": [
+  {
+   "name": "AI comedians",
+   "tagline": "In rehearsal. Train your own and premiere them here.",
+   "status": "soon"
+  }
+ ]
+}
