@@ -224,6 +224,7 @@ const MODES = {
   foryou: ['Picked for you', pickForYou],
   training: ['Training the crowd chart', pickTraining],
   explore: ['Exploring something new', pickExplore],
+  shared: ['A friend shared this clash', () => null],
 }
 function pickPair() {
   const n = LS.get('votes', []).length
@@ -350,13 +351,15 @@ function slideHTML(a, b, n, first) {
       <div class="prog"><i></i></div></div>`
   return `<div class="slide" data-n="${n}">
     <div class="intro">
-      <div class="titlecard"><span class="eyebrow">${esc(MODES[current.mode]?.[0] || '')}</span><h2>Tonight's<br>screening</h2></div>
+      <div class="titlecard"><span class="eyebrow">${esc(current.mode === 'shared' && sharedRound?.pick ? 'A friend picked one. Do you agree?' : MODES[current.mode]?.[0] || '')}</span><h2>Tonight's<br>screening</h2></div>
       <div class="faceoff">${faceCard(a, 'L')}<span class="vsx">VS</span>${faceCard(b, 'R')}</div>
       ${first ? `<button class="play" data-act="start">▶ Start the show</button>` : `<p class="tapskip">Tap to skip the intro</p>`}
     </div>
     <div class="theatre">${scr(a, 'L')}${scr(b, 'R')}</div>
     <div class="ballot"><p class="bq">Which was funnier?</p><div class="picks">${shot(a, 'L')}${shot(b, 'R')}</div>
-      <div class="count"><i></i></div><p class="hint">Tap one, or ← / →. No pick in 3s = pass.</p></div>
+      <div class="count"><i></i></div><p class="hint">Tap one, or ← / →. No pick in 3s = pass.</p>
+      <p class="friendres" aria-live="polite"></p>
+      <button class="sharex" type="button" data-act="share">Share this clash ↗</button></div>
   </div>`
 }
 
@@ -370,6 +373,7 @@ function setStage(s) {
   stage = s
   if (cur?.el) cur.el.dataset.stage = s
   document.body.classList.toggle('in-theatre', s === 'left' || s === 'right')
+  updateChrome()
 }
 function stopScreening() {
   clearInterval(tick); tick = null; clearTimers()
@@ -380,7 +384,8 @@ function stopScreening() {
 // builds the next screening; when `old` is given, the old one slides up and away (TikTok-style)
 function newRound(first) { mountScreening(first, null) }
 function mountScreening(first, oldEl) {
-  current = pickPair()
+  current = takeClash() || pickPair()
+  if (current?.mode !== 'shared') sharedRound = null
   const host = $('#stage')
   if (!host) return
   if (!current) {
@@ -388,7 +393,7 @@ function mountScreening(first, oldEl) {
     const msg = LANE === 'ai' ? 'The AI comics are still in rehearsal. Their first sets premiere here soon.' : LANE === 'mixed' ? 'Human vs AI opens when the first AI sets premiere.' : "You've seen every clash on the bill. New shorts arrive daily."
     host.querySelectorAll('.slide').forEach((x) => x !== oldEl && x.remove())
     host.insertAdjacentHTML('beforeend', `<div class="slide empty-slide"><p class="empty">${msg}</p></div>`)
-    finishSlide(host, oldEl); cur = { el: host.lastElementChild, n: ++nScreen }; setStage('done')
+    finishSlide(host, oldEl); cur = { el: host.lastElementChild, n: ++nScreen }; setStage('done'); updateChrome()
     return
   }
   const [a, b] = current, n = ++nScreen
@@ -420,7 +425,12 @@ function finishSlide(host, oldEl) {
 function bindSlide(el) {
   el.querySelector('.intro').onclick = () => { if (stage === 'intro') { userStarted = true; startClip('L') } }
   el.querySelectorAll('.pick').forEach((x) => (x.onclick = (e) => { e.stopPropagation(); vote(x.dataset.side) }))
-  el.querySelectorAll('.shield').forEach((sh) => (sh.onclick = () => screens[sh.closest('.screen').dataset.side]?.toggle()))
+  el.querySelectorAll('.shield').forEach((sh) => (sh.onclick = () => {
+    if (tapRevealed) { tapRevealed = false; return } // chrome was hidden: this tap only brings it back
+    screens[sh.closest('.screen').dataset.side]?.toggle()
+  }))
+  const sx = el.querySelector('.sharex')
+  if (sx) sx.onclick = (e) => { e.stopPropagation(); shareCurrent() }
 }
 
 function startClip(side) {
@@ -456,7 +466,7 @@ function runTick() {
 function startVote() {
   clearInterval(tick); tick = null
   setStage('vote')
-  armed = true; armedAt = now() // decision time runs from the moment the FUNNIER logos appear
+  armed = true; armedAt = now(); sharedDuringBallot = false // decision time runs from the moment the FUNNIER logos appear
   const bar = q('.count i')
   if (bar) { bar.style.transition = 'none'; bar.style.transform = 'scaleX(1)'; void bar.offsetWidth; bar.style.transition = `transform ${VOTE_MS}ms linear`; bar.style.transform = 'scaleX(0)' }
   later(() => { if (stage === 'vote' && armed) pass() }, VOTE_MS + 60)
@@ -498,17 +508,21 @@ async function vote(side) {
   if (!current || !armed || stage !== 'vote') return
   armed = false; setStage('done')
   const [a, b] = current
-  const decisionMs = armedAt ? Math.max(0, Math.round(now() - armedAt)) : undefined
+  const decisionMs = armedAt && !sharedDuringBallot ? Math.max(0, Math.round(now() - armedAt)) : undefined
   const sg = signals()
   const v = { a: a.id, b: b.id, winner: side === 'L' ? a.id : b.id, voter: 'human', basis: 'watched', mode: current.mode, decisionMs, ...sg, createdAt: new Date().toISOString() }
   v.weight = voteWeight(v)
   q(`.pick.${side}`)?.classList.add('won')
   bumpSeen(a.id, b.id)
+  const fl = friendLine(a, b, v.winner)
+  if (fl) { const fe = q('.friendres'); if (fe) { fe.textContent = fl.text; fe.classList.add('on', fl.agree ? 'agree' : 'disagree') } }
+  const pre = fl ? fl.text + ' ' : ''
   // the watch minimum still applies: both clips at least ~30s (or to the end)
   if (!(screens.L?.enough() && screens.R?.enough())) {
     LS.set('partials', [...LS.get('partials', []), v].slice(-300))
-    toast('Noted, but it only counts when both clips were watched for 30s or to the end.')
-    later(() => goNext(null), 700)
+    toast(pre + 'Noted, but it only counts when both clips were watched for 30s or to the end.')
+    askWhy(v, true)
+    later(() => goNext(null), fl ? 2400 : 700)
     return
   }
   LS.set('votes', [...LS.get('votes', []), v])
@@ -516,22 +530,24 @@ async function vote(side) {
   const dur = LS.get('dur', {}); dur[a.id] = screens.L.dur(); dur[b.id] = screens.R.dur(); LS.set('dur', dur)
   const w = BYID[v.winner]
   const guess = MODEL && MODEL.n >= 3 ? (prediction.side === side ? ' Your model called it.' : ' Your model guessed the other one.') : ''
-  later(() => goNext(null), reduced() ? 300 : 900)
+  later(() => goNext(null), fl ? 2400 : reduced() ? 300 : 900)
   askWhy(v)
   if (agent) {
-    try { await publish(v); toast(`${w.comic} takes it.${guess}`) }
-    catch { LS.set('queue', [...LS.get('queue', []), v]); toast(`Saved. It'll publish when Bluesky responds.${guess}`) }
-  } else { LS.set('queue', [...LS.get('queue', []), v]); toast(`${w.comic} takes it.${guess}`) }
+    try { await publish(v); toast(pre || `${w.comic} takes it.${guess}`) }
+    catch { LS.set('queue', [...LS.get('queue', []), v]); toast(`${pre}Saved. It'll publish when Bluesky responds.${guess}`) }
+  } else { LS.set('queue', [...LS.get('queue', []), v]); toast(pre || `${w.comic} takes it.${guess}`) }
   MODEL = fitLocal(); TRAITS = fitTraits()
   paintBanner(); paintYou()
 }
 const WHY = ['Smarter', 'Weirder', 'Darker', 'Better delivery', 'More relatable', 'Better payoff']
 let whyT
-function askWhy(v) {
+function askWhy(v, shareOnly) {
   const box = $('#why'); if (!box) return
-  box.innerHTML = `<span>Why was it funnier?</span>${WHY.map((w) => `<button>${w}</button>`).join('')}`
+  box.innerHTML = `${shareOnly ? '' : `<span>Why was it funnier?</span>${WHY.map((w) => `<button data-why>${w}</button>`).join('')}`}<button class="whyshare" type="button">Share this clash ↗</button>`
   box.classList.add('on'); clearTimeout(whyT); whyT = setTimeout(() => box.classList.remove('on'), 5000)
-  box.querySelectorAll('button').forEach((b) => (b.onclick = () => {
+  const ws = box.querySelector('.whyshare')
+  if (ws) ws.onclick = (e) => { e.stopPropagation(); clearTimeout(whyT); whyT = setTimeout(() => box.classList.remove('on'), 1500); shareClash(BYID[v.a], BYID[v.b], v.winner === v.a ? 'a' : 'b') }
+  box.querySelectorAll('button[data-why]').forEach((b) => (b.onclick = () => {
     const votes = LS.get('votes', []); const last = votes[votes.length - 1]
     if (last && last.createdAt === v.createdAt) { last.why = b.textContent; LS.set('votes', votes) }
     const q2 = LS.get('queue', []); const lq = q2.find((x) => x.createdAt === v.createdAt); if (lq) { lq.why = b.textContent; LS.set('queue', q2) }
@@ -812,6 +828,113 @@ function sureLine(votes) {
   return `<p class="sure"><b>How sure you were</b><span>median ${(med / 1000).toFixed(1)}s to decide</span><span>${snap}% snap picks (under ${SNAP_MS / 1000}s)</span>${sp}</p>`
 }
 
+// ---------- chrome: the menu fades away during a screening, the logo never does ----------
+let showTab = () => {}, chromeT = null, chromeHidden = false, nearTop = false, tapRevealed = false
+const HIDE_FIRST_MS = 1500, HIDE_AFTER_MS = 2500, TOP_ZONE = 80
+function screeningActive() { return !!current && arenaOn() && ['intro', 'left', 'right', 'vote', 'done'].includes(stage) }
+function setChromeHidden(h) { chromeHidden = h; document.body.classList.toggle('chrome-hidden', h) }
+function scheduleHide(ms) {
+  clearTimeout(chromeT)
+  chromeT = setTimeout(function hide() {
+    if (!screeningActive()) return setChromeHidden(false)
+    const hdr = $('#chrome'), focused = hdr && hdr.querySelector(':focus-visible')
+    if (nearTop || focused || $('#auth input') === document.activeElement) { chromeT = setTimeout(hide, 600); return }
+    setChromeHidden(true)
+  }, ms)
+}
+function showChrome(ms = HIDE_AFTER_MS) {
+  if (chromeHidden) setChromeHidden(false)
+  if (screeningActive()) scheduleHide(ms); else clearTimeout(chromeT)
+}
+let wasActive = false
+function updateChrome() {
+  const sb = $('#sharebtn'); if (sb) sb.hidden = !current || !arenaOn()
+  const act = screeningActive()
+  if (act && !wasActive) scheduleHide(HIDE_FIRST_MS)
+  if (!act) { clearTimeout(chromeT); setChromeHidden(false) }
+  document.body.classList.toggle('screening', act)
+  wasActive = act
+}
+function bindChrome() {
+  addEventListener('pointermove', (e) => {
+    if (e.pointerType && e.pointerType !== 'mouse') return
+    nearTop = e.clientY <= TOP_ZONE
+    if (screeningActive()) showChrome()
+  }, { passive: true })
+  document.addEventListener('mouseleave', () => (nearTop = false))
+  // touch/pen: the first tap while the menu is hidden only reveals it (the shield then skips play/pause)
+  document.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse') { tapRevealed = false; return }
+    tapRevealed = chromeHidden && !!e.target.closest?.('.shield')
+    if (screeningActive()) showChrome()
+  }, { capture: true, passive: true })
+  document.addEventListener('focusin', (e) => { if (e.target.closest?.('#chrome, #brand')) showChrome() })
+  document.addEventListener('keydown', (e) => { if (e.key === 'Tab') showChrome() })
+  const sb = $('#sharebtn'); if (sb) sb.onclick = (e) => { e.stopPropagation(); shareCurrent() }
+}
+
+// ---------- share a clash: #clash/<clipA>/<clipB>&pick=a|b, no backend ----------
+const SHARE_BASE = 'https://prx0r.github.io/characters/'
+let pendingClash = null, sharedRound = null, sharedDuringBallot = false
+function parseClash(h) {
+  const m = String(h || '').match(/^#clash\/([^/&?]+)\/([^/&?]+)(?:[&?]pick=([ab]))?/)
+  if (!m) return null
+  const d = (x) => { try { return decodeURIComponent(x) } catch { return x } }
+  return { a: d(m[1]), b: d(m[2]), pick: m[3] || null }
+}
+function takeClash() {
+  const sh = pendingClash; pendingClash = null
+  if (!sh) return null
+  const A = BYID[sh.a], B = BYID[sh.b]
+  if (!A || !B || sh.a === sh.b) { setTimeout(() => toast('That clash is no longer on the bill, so here is tonight\u2019s instead.'), 400); return null }
+  const pair = [A, B]; pair.mode = 'shared'
+  sharedRound = { ...sh, key: pairKey(sh.a, sh.b) }
+  return pair
+}
+function friendLine(a, b, winner) {
+  if (!sharedRound?.pick || sharedRound.key !== pairKey(a.id, b.id)) return null
+  const fw = BYID[sharedRound.pick === 'a' ? sharedRound.a : sharedRound.b]
+  if (!fw) return null
+  const agree = fw.id === winner
+  return { agree, text: agree ? `You agreed with your friend: ${fw.comic}.` : `You disagreed. Your friend picked ${fw.comic}.` }
+}
+function clashURL(a, b, pick) {
+  const base = IS_LOCAL ? BASE : SHARE_BASE
+  return `${base}#clash/${encodeURIComponent(a.id)}/${encodeURIComponent(b.id)}${pick === 'a' || pick === 'b' ? '&pick=' + pick : ''}`
+}
+function myPick(a, b) {
+  const v = [...LS.get('votes', []), ...LS.get('partials', [])].filter((x) => x && pairKey(x.a, x.b) === pairKey(a.id, b.id)).pop()
+  return v ? (v.winner === a.id ? 'a' : v.winner === b.id ? 'b' : null) : null
+}
+function shareCurrent() {
+  if (!current || !current[0] || !current[1]) return toast('Nothing on screen to share yet.')
+  if (stage === 'vote' && armed) { // sharing mid-ballot pauses the 3s countdown; this pick gets no timing signal
+    sharedDuringBallot = true; clearTimers()
+    const bar = q('.count i'); if (bar) { const t = getComputedStyle(bar).transform; bar.style.transition = 'none'; bar.style.transform = t }
+    const h = q('.ballot .hint'); if (h) h.textContent = 'Countdown paused. Pick when you\u2019re ready.'
+  }
+  const [a, b] = current
+  shareClash(a, b, myPick(a, b))
+}
+async function copyText(t) {
+  try { await navigator.clipboard.writeText(t); return true } catch {}
+  try {
+    const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0;top:0'
+    document.body.appendChild(ta); ta.select(); const ok = document.execCommand('copy'); ta.remove(); return ok
+  } catch { return false }
+}
+async function shareClash(a, b, pick) {
+  if (!a || !b) return
+  const url = clashURL(a, b, pick)
+  const text = pick ? `I picked my winner. ${a.comic} vs ${b.comic}: which is funnier?` : `${a.comic} vs ${b.comic}: which is funnier?`
+  if (navigator.share) {
+    try { await navigator.share({ title: 'Funnier: settle this clash', text, url }); return }
+    catch (e) { if (e && e.name === 'AbortError') return }
+  }
+  if (await copyText(url)) toast(pick ? 'Link copied. Your friend sees your pick only after they vote.' : 'Link copied. Send it to a friend.')
+  else toast('Copy this link: ' + url)
+}
+
 // ---------- utils ----------
 function esc(s) { return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])) }
 let tt
@@ -823,9 +946,23 @@ function tabs() {
     if (id !== 'arena') Object.values(screens).forEach((s) => s.pause())
     document.body.classList.toggle('in-theatre', id === 'arena' && (stage === 'left' || stage === 'right'))
     scrollTo({ top: 0 })
+    updateChrome()
+  }
+  showTab = show
+  const brand = $('#brand')
+  if (brand) brand.onclick = (e) => { // the logo always brings you back to the screening
+    e.preventDefault()
+    const wasAway = !arenaOn()
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search)
+    show('arena'); showChrome(2500)
+    if (wasAway && (stage === 'left' || stage === 'right')) screens[stage === 'left' ? 'L' : 'R']?.play()
   }
   document.querySelectorAll('[data-tab]').forEach((b) => (b.onclick = (e) => { e.preventDefault(); if (b.dataset.tab === 'comics') location.hash = 'comics'; show(b.dataset.tab) }))
-  const route = () => { if (/^#comic/.test(location.hash)) { show('comics'); paintComics() } }
+  const route = () => {
+    const sh = parseClash(location.hash)
+    if (sh) { pendingClash = sh; history.replaceState(null, '', location.pathname + location.search); show('arena'); if (CLIPS.length) goNext(null); return }
+    if (/^#comic/.test(location.hash)) { show('comics'); paintComics() }
+  }
   addEventListener('hashchange', route)
   show('arena'); window._route = route
 }
@@ -834,6 +971,8 @@ function tabs() {
   tabs()
   await loadData()
   MODEL = fitLocal(); TRAITS = fitTraits()
-  laneSelect(); bindGestures(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); window._route()
+  const sh = parseClash(location.hash)
+  if (sh) { pendingClash = sh; history.replaceState(null, '', location.pathname + location.search) }
+  laneSelect(); bindGestures(); bindChrome(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); window._route()
   initAuth()
 })()
