@@ -29,10 +29,35 @@ STYLE_CARDS = {
     "louis_ck": {
         "sample_lines": ["I was going to tell you about the thing. Anyway that's the thing.",
                          "My girls are six and nine now.",
+                         "I'm an old man, I'll be gone very soon. I worry about getting old only.",
+                         "I got a escape-league game after this. So it's not a beer league, it's a henchman league.",
                          "I can smell their blood through three walls, Karen."],
-        "stats": "delivery: 1.67s avg pauses (above pros), 3.94 syll/s slow, "
-                 "19.6dB dynamics (close-mic), forward-spiral escalation, self-pay",
-        "fingerprint": "sincere confession-booth: literalize metaphor, escalate forward, self-damage"},
+        "stats": "delivery: 1.67s avg pauses (ABOVE the 828-set pros), 3.94 syll/s "
+                 "(slower than pros), 19.6dB dynamics (close-mic intimacy, vs roast 51), "
+                 "pitch_std 6.8 (wide inside quiet envelope), forward-spiral escalation "
+                 "(callbacks only 2%), self-pay rule, technique mix: literalize .24 / "
+                 "escalate .19 / self-dep .16 / sincere-frame .13 / absurd-confess .10",
+        "fingerprint": "sincere confession-booth: literalize metaphor to physical end, "
+                       "escalate forward, pay for it yourself, 1.7s silence is the intimacy"},
+    "ari_matti": {
+        "sample_lines": ["What I love about Texas is that you guys are, like, proud to be American.",
+                         "I watched Saving Private Ryan back to back three times. I'm ready to shoot somebody.",
+                         "Who gives a crap? You're here on the winning side."],
+        "stats": "delivery: grievance velocity, 200+wpm spikes, cue ladder "
+                 "frustrated->angry, temp .85, sprints INTO laughs, "
+                 "pitch_var 4.2-5.5, Estonian immigrant persona",
+        "fingerprint": "mock-indignant spike engine: sarcasm setups detonating "
+                       "into personal grievance, gleeful collapse"},
+    "seinfeld": {
+        "sample_lines": ["What's the deal with airline food?",
+                         "Who IS this guy? I'm asking you, who is this guy?",
+                         "The sea was angry that day, my friends."],
+        "stats": "delivery: observational precision, mid-fast, controlled swings, "
+                 "setup-punch-tag discipline, minimal body maximal phrasing; "
+                 "GT: laugh-dense (44 laughs/471 words on c02), "
+                 "gleeful/sarcastic mix",
+        "fingerprint": "incredulous everyman: tiny-life absurdity with surgical "
+                       "precision, 'what's the deal' mechanism, precise tag placement"},
     "norm_macdonald": {
         "sample_lines": ["A moth goes into a podiatrist's office.",
                          "The cold took her down, as it did many of us.",
