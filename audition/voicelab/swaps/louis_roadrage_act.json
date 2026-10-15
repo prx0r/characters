@@ -1,0 +1,78 @@
+{
+  "beats": [
+    {
+      "text": "I'm an old man, I'll be gone very soon. I worry about getting old only because I don't want to lose my memory. I mean, some of it I would love to lose. But it doesn't work that way. You got to take",
+      "recipe": {
+        "cue": "",
+        "temp": 0.45,
+        "speed": 0.43,
+        "vol": -1.5
+      }
+    },
+    {
+      "text": "it all or none, I guess. But I lose, I forget things. You know, like, remember Fanzi from Happy Days? I don't remember him. I don't even know what you're talking about. I forget weird things, you know? Like I was walking",
+      "recipe": {
+        "cue": "[embarrassed]",
+        "temp": 0.7,
+        "speed": 0.7,
+        "vol": -1.5
+      }
+    },
+    {
+      "text": "down the street once in New York. And there was a guy in a van and he rolled down the window and he said, Hey, get in the van, it's stuck in my dick. And I said, all right, you know? So I got in the van and you know, I was trying",
+      "recipe": {
+        "cue": "",
+        "temp": 0.45,
+        "speed": 0.59,
+        "vol": -1.5
+      }
+    },
+    {
+      "text": "to pull the door to the sliding door, but it kept, and he's like, it just shuts, don't. You don't have to. I'm like, sorry, he's like, it's everybody does that, it's okay. So I'm kneeling on the floor of the van on like a purse.",
+      "recipe": {
+        "cue": "[embarrassed]",
+        "temp": 0.7,
+        "speed": 0.7,
+        "vol": -1.5
+      }
+    },
+    {
+      "text": "And there's no lady in there, but I'm like, I came here to suck this guy's dick, not like, take inventory. This is just a work. So I start sucking his dick. And about halfway through, I'm guessing. I remembered that",
+      "recipe": {
+        "cue": "",
+        "temp": 0.45,
+        "speed": 0.59,
+        "vol": -1.5
+      }
+    },
+    {
+      "text": "I don't really like doing that. So I, okay, so I'm looking at the couple and they're walking on the other side",
+      "recipe": {
+        "cue": "",
+        "temp": 0.45,
+        "speed": 0.59,
+        "vol": -1.5
+      }
+    },
+    {
+      "text": "of the street. And I have a child with them. But I can't see their child because there's like a dumpster and some other stuff. I just see like a little head. And I'm waiting. I'm curious what their kid looks like, because they're so beautiful. Maybe I want to fuck their kid, I don't know.",
+      "recipe": {
+        "cue": "",
+        "temp": 0.45,
+        "speed": 0.59,
+        "vol": -1.5
+      }
+    },
+    {
+      "text": "That that's just me saying something terrible because it makes me laugh that it upsets you. That's all that is just so you know. It's just it's just enjoyable to me that you're upset.",
+      "recipe": {
+        "cue": "[sarcastic]",
+        "temp": 0.65,
+        "speed": 0.74,
+        "vol": -1.5
+      }
+    }
+  ],
+  "verify_match": 0.95,
+  "note": "louis actual set text, board recipes x scale, -1.5dB (formula)"
+}

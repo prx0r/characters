@@ -1,0 +1,100 @@
+{
+  "name": "louis_night",
+  "acts": [
+    {
+      "act": 2,
+      "character": "Dracula (pickles engine)",
+      "wav": "/tmp/opencode/characters/audition/voicelab/shows/act2_dracula.wav",
+      "beats": [
+        {
+          "beat": 0,
+          "p_laugh": 0.61,
+          "crowd": "CROWD"
+        },
+        {
+          "beat": 1,
+          "p_laugh": 0.28,
+          "crowd": "silence"
+        },
+        {
+          "beat": 2,
+          "p_laugh": 0.42,
+          "crowd": "chuckle"
+        }
+      ],
+      "mean_p": 0.437,
+      "crowd_events": 1,
+      "duration_ms": 78524,
+      "pitch_std": 8.28,
+      "verify_source": 1.0,
+      "judge_score": 0.606
+    },
+    {
+      "act": 1,
+      "character": "Louis CK (his actual set, his clone)",
+      "wav": "/tmp/opencode/characters/audition/voicelab/shows/act1_louis.wav",
+      "beats": [
+        {
+          "beat": 0,
+          "p_laugh": 0.2,
+          "crowd": "silence"
+        },
+        {
+          "beat": 1,
+          "p_laugh": 0.2,
+          "crowd": "silence"
+        },
+        {
+          "beat": 2,
+          "p_laugh": 0.19,
+          "crowd": "silence"
+        },
+        {
+          "beat": 3,
+          "p_laugh": 0.19,
+          "crowd": "silence"
+        },
+        {
+          "beat": 4,
+          "p_laugh": 0.36,
+          "crowd": "chuckle"
+        },
+        {
+          "beat": 5,
+          "p_laugh": 0.36,
+          "crowd": "chuckle"
+        },
+        {
+          "beat": 6,
+          "p_laugh": 0.17,
+          "crowd": "silence"
+        },
+        {
+          "beat": 7,
+          "p_laugh": 0.36,
+          "crowd": "chuckle"
+        }
+      ],
+      "mean_p": 0.254,
+      "crowd_events": 0,
+      "duration_ms": 96653,
+      "pitch_std": 6.08,
+      "verify_source": 0.95,
+      "judge_score": 0.463
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "character": "Dracula (pickles engine)",
+      "judge_score": 0.606
+    },
+    {
+      "rank": 2,
+      "character": "Louis CK (his actual set, his clone)",
+      "judge_score": 0.463
+    }
+  ],
+  "judge_stack": "laugh_model_v3 mean P (0.7) + verify (0.3); dpv stats logged",
+  "at": "2026-10-15T13:39:14Z"
+}

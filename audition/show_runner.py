@@ -75,11 +75,15 @@ def perform(act: dict) -> dict:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", default="pilot_001")
+    ap.add_argument("--acts-file", default=None)
     args = ap.parse_args()
     SHOWS.mkdir(exist_ok=True)
     print(f"EPISODE {args.name}: {len(ACTS)} acts\n")
+    acts = ACTS
+    if args.acts_file:
+        acts = json.loads(Path(args.acts_file).read_text())
     results = []
-    for act in ACTS:
+    for act in acts:
         print(f"ACT {act['act']}: {act['character']}")
         r = perform(act)
         # composite judge score: mean P (crowd) + verify (words survived) - length penalty noise
