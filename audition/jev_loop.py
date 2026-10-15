@@ -47,6 +47,9 @@ CLIPS = {
     "sir_winston_pickles_1": "/home/box/comedy_sets/shorts/sir_winston_pickles_1.mp4",
     "sir_winston_pickles_2": "/home/box/comedy_sets/shorts/sir_winston_pickles_2.mp4",
 }
+_extra = HERE / "voicelab" / "extra_clips.json"
+if _extra.exists():
+    CLIPS.update(json.loads(_extra.read_text()))
 CLONES = {"ari": "dbeb1d68566245e2b857617b830e8031",
           "casey": "9c36c951cee84457a5cc9f94387e9a42",
           "pickles": "100e10e7c5464a10b5120a01ade115a2",
