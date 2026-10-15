@@ -11,7 +11,7 @@ const LS = {
 
 let CLIPS = [], BYID = {}, BOARD = null, PAIRS = []
 let LANE = LS.get('lane', 'human'), BOARDKIND = 'all'
-const GATE_SEC = 30
+const SHORT_MAX = 75 // seconds of each clip we screen when the clip is longer
 let client = null, agent = null, me = null
 let current = null
 
@@ -65,8 +65,8 @@ function paintAuth() {
 function paintBanner() {
   const q = LS.get('queue', [])
   const b = $('#banner')
-  if (me) b.innerHTML = q.length ? `Publishing ${q.length} vote(s)…` : `Your votes are published to your Bluesky account and counted on the global board.`
-  else b.innerHTML = `You can vote now. <b>Sign in with Bluesky</b> to make your votes count on the global board${q.length ? ` (${q.length} waiting)` : ''}.`
+  if (me) b.innerHTML = q.length ? `Publishing ${q.length} pick(s)…` : `Your picks count on the global chart.`
+  else b.innerHTML = `Your picks train your own model on this device. <b>Sign in with Bluesky</b> to count them on the global chart too${q.length ? ` (${q.length} waiting)` : ''}.`
 }
 
 async function publish(v) {
@@ -86,40 +86,98 @@ async function flushQueue() {
   paintBanner()
 }
 
-// ---------- arena ----------
+// ---------- shared ----------
 function pairKey(a, b) { return [a, b].sort().join('|') }
+const sig = (x) => 1 / (1 + Math.exp(-x))
+const SCALE = 400 / Math.LN10
+const LATE_NIGHT = /coco|letterman|tonight|late/i
+function bumpSeen(...ids) { const s = LS.get('seen', {}); ids.forEach((i) => (s[i] = (s[i] || 0) + 1)); LS.set('seen', s) }
 
-function laneOK(a, b) {
-  if (LANE === 'mixed') return true
-  return a.kind === LANE && b.kind === LANE
+// ---------- your model: personal hierarchical Bradley-Terry, prior = crowd chart ----------
+function fitLocal() {
+  const votes = LS.get('votes', []).filter((v) => BYID[v.a] && BYID[v.b])
+  const g = {}
+  for (const c of BOARD?.boards?.all?.comics || []) if (c.bouts) g[c.comic] = (c.elo - 1500) / SCALE
+  const comics = [...new Set(CLIPS.map((c) => c.comic))]
+  const r = Object.fromEntries(comics.map((k) => [k, g[k] || 0]))
+  const o = Object.fromEntries(CLIPS.map((c) => [c.id, 0]))
+  const bouts = {}
+  for (const v of votes) { bouts[v.a] = (bouts[v.a] || 0) + 1; bouts[v.b] = (bouts[v.b] || 0) + 1 }
+  for (let t = 0; t < 250; t++) {
+    const gr = Object.fromEntries(comics.map((k) => [k, -0.5 * (r[k] - (g[k] || 0))]))
+    const go = Object.fromEntries(CLIPS.map((c) => [c.id, -1.0 * o[c.id]]))
+    for (const v of votes) {
+      const A = BYID[v.a], B = BYID[v.b]
+      const W = v.winner === v.a ? A : B, L = W === A ? B : A
+      const p = sig((r[L.comic] + o[L.id]) - (r[W.comic] + o[W.id]))
+      gr[W.comic] += p; gr[L.comic] -= p; go[W.id] += p; go[L.id] -= p
+    }
+    for (const k of comics) r[k] += 0.08 * gr[k]
+    for (const c of CLIPS) o[c.id] += 0.08 * go[c.id]
+  }
+  return { r, o, bouts, n: votes.length, score: (id) => r[BYID[id].comic] + o[id] }
 }
+let MODEL = null
 
-function pickPair() {
+// ---------- choosing the next double feature ----------
+function openPair(a, b) {
   const done = new Set(LS.get('votes', []).map((v) => pairKey(v.a, v.b)))
   const skipped = new Set(LS.get('skipped', []))
-  const open = (a, b) => BYID[a] && BYID[b] && !done.has(pairKey(a, b)) && !skipped.has(pairKey(a, b)) && laneOK(BYID[a], BYID[b])
-  // exploit: sample from the most informative pairs the backend computed (weighted by w); explore 20% of the time
-  const ranked = LANE === 'mixed' ? [] : PAIRS.filter((p) => open(p.a, p.b)).slice(0, 40)
-  if (ranked.length && Math.random() > 0.2) {
-    const tot = ranked.reduce((s, p) => s + p.w, 0)
-    let r = Math.random() * tot
-    for (const p of ranked) { r -= p.w; if (r <= 0) return Math.random() < 0.5 ? [BYID[p.a], BYID[p.b]] : [BYID[p.b], BYID[p.a]] }
+  const A = BYID[a], B = BYID[b]
+  if (!A || !B || a === b || done.has(pairKey(a, b)) || skipped.has(pairKey(a, b))) return false
+  if (LANE === 'mixed') return A.kind !== B.kind || Math.random() < 0.25
+  return A.kind === LANE && B.kind === LANE
+}
+function pool() { return CLIPS.filter((c) => LANE === 'mixed' || c.kind === LANE) }
+const shuffle = (a) => a.map((x) => [Math.random(), x]).sort((p, q) => p[0] - q[0]).map((p) => p[1])
+
+function pickForYou() {
+  // your model's favourite unseen matchup: its top clip vs the clip it knows least about
+  const P = pool(); if (P.length < 2) return null
+  const top = [...P].sort((x, y) => MODEL.score(y.id) + 0.3 * Math.random() - (MODEL.score(x.id) + 0.3 * Math.random()))
+  for (const a of top.slice(0, 6)) {
+    const opp = P.filter((b) => b.comic !== a.comic && openPair(a.id, b.id)).sort((x, y) => (MODEL.bouts[x.id] || 0) - (MODEL.bouts[y.id] || 0) || Math.random() - 0.5)
+    if (opp.length) return [a, opp[0]]
   }
-  const seen = LS.get('seen', {})
-  const pool = CLIPS.filter((c) => LANE === 'mixed' || c.kind === LANE)
-  const order = [...pool].sort((x, y) => (seen[x.id] || 0) - (seen[y.id] || 0) || Math.random() - 0.5)
-  for (const a of order) {
-    const opts = pool.filter((b) => b.id !== a.id && open(a.id, b.id) && (LANE !== 'mixed' || b.kind !== a.kind || Math.random() < 0.3))
+  return null
+}
+function pickTraining() {
+  // the pairs the crowd chart is least sure about (computed by the tally)
+  const ranked = PAIRS.filter((p) => openPair(p.a, p.b)).slice(0, 40)
+  if (!ranked.length) return null
+  let x = Math.random() * ranked.reduce((s, p) => s + p.w, 0)
+  for (const p of ranked) { x -= p.w; if (x <= 0) return [BYID[p.a], BYID[p.b]] }
+  return [BYID[ranked[0].a], BYID[ranked[0].b]]
+}
+function pickExplore() {
+  const seen = LS.get('seen', {}), P = shuffle(pool()).sort((x, y) => (seen[x.id] || 0) - (seen[y.id] || 0))
+  for (const a of P) {
+    const opts = P.filter((b) => openPair(a.id, b.id))
     if (!opts.length) continue
     const cross = opts.filter((b) => b.comic !== a.comic)
-    const src = cross.length && Math.random() < 0.8 ? cross : opts
-    const b = src[Math.floor(Math.random() * src.length)]
-    return Math.random() < 0.5 ? [a, b] : [b, a]
+    return [a, (cross.length ? cross : opts)[0]]
+  }
+  return null
+}
+const MODES = {
+  foryou: ['Picked for you', pickForYou],
+  training: ['Training the crowd chart', pickTraining],
+  explore: ['Exploring something new', pickExplore],
+}
+function pickPair() {
+  const n = LS.get('votes', []).length
+  const w = n < 6 ? { training: 0.55, explore: 0.45, foryou: 0 } : { foryou: 0.4, training: 0.4, explore: 0.2 }
+  let x = Math.random(), mode = 'explore'
+  for (const k of Object.keys(w)) { x -= w[k]; if (x <= 0) { mode = k; break } }
+  const order = [mode, ...Object.keys(MODES).filter((k) => k !== mode)]
+  for (const m of order) {
+    const p = MODES[m][1]()
+    if (p) { const pair = Math.random() < 0.5 ? p : [p[1], p[0]]; pair.mode = m; return pair }
   }
   return null
 }
 
-// ---------- players + watch gate ----------
+// ---------- players ----------
 let ytReady = null
 function loadYT() {
   if (ytReady) return ytReady
@@ -129,89 +187,155 @@ function loadYT() {
   })
   return ytReady
 }
-const watched = { L: 0, R: 0 }, need = { L: GATE_SEC, R: GATE_SEC }
-let gateTimer = null, players = {}
-
-function card(c, side) {
-  const tag = c.kind === 'ai' ? '<span class="chip ai">AI set</span>' : '<span class="chip">Human set</span>'
-  const media = c.media === 'audio'
-    ? `<div class="frame audio"><audio id="p${side}" controls preload="none" src="${esc(c.src)}"></audio></div>`
-    : `<div class="frame"><div id="p${side}"></div></div>`
-  const src = c.media === 'audio' ? esc(c.channel || 'Funnier') : `${esc(c.channel)} on YouTube`
-  return `<article class="card">${media}
-    <div class="meta"><h3>${esc(c.comic)} ${tag}</h3><p>${esc(c.title)} · <span class="src">${src}</span></p>
-    <div class="bar"><i id="g${side}"></i></div></div>
-    <button class="vote" data-side="${side}" disabled>${side === 'L' ? '← This one is funnier' : 'This one is funnier →'}</button>
-  </article>`
-}
-
-function gatePaint() {
-  for (const s of ['L', 'R']) { const el = $('#g' + s); if (el) el.style.width = Math.min(100, (100 * watched[s]) / need[s]) + '%' }
-  const ok = (watched.L >= need.L && watched.R >= need.R) || LS.get('unlocked', false)
-  document.querySelectorAll('.vote').forEach((b) => (b.disabled = !ok))
-  const h = $('#gatehint'); if (h) h.textContent = ok ? 'Pick the funnier one.' : `Watch at least ${GATE_SEC}s of each to unlock voting.`
-}
-
-async function mountPlayers(a, b) {
-  watched.L = watched.R = 0; need.L = need.R = GATE_SEC
-  clearInterval(gateTimer); players = {}
-  const YT = await loadYT()
-  for (const [side, c] of [['L', a], ['R', b]]) {
-    if (c.sec) need[side] = Math.min(GATE_SEC, Math.max(5, c.sec * 0.8))
-    if (c.media === 'audio') { players[side] = { audio: $('#p' + side) }; continue }
-    players[side] = new YT.Player('p' + side, {
-      host: 'https://www.youtube-nocookie.com', videoId: c.id,
-      playerVars: { rel: 0, playsinline: 1, modestbranding: 0 },
-      events: { onReady: (e) => { const d = e.target.getDuration?.(); if (d) need[side] = Math.min(GATE_SEC, Math.max(5, d * 0.8)) } },
+class Screen {
+  constructor(side, clip) { this.side = side; this.clip = clip; this.ready = null; this.started = false }
+  async mount() {
+    const c = this.clip, host = $('#p' + this.side)
+    this.start = c.start || 0
+    if (c.media === 'audio') {
+      host.innerHTML = `<audio preload="auto" controls src="${esc(c.src)}"></audio>`
+      this.a = host.querySelector('audio')
+      this.ready = new Promise((res) => (this.a.onloadedmetadata = () => res()))
+      return
+    }
+    const YT = await loadYT()
+    this.ready = new Promise((res) => {
+      this.p = new YT.Player('p' + this.side, {
+        host: 'https://www.youtube-nocookie.com', videoId: c.id,
+        playerVars: { rel: 0, playsinline: 1, start: this.start, controls: 1 },
+        events: { onReady: () => res(), onStateChange: (e) => { if (e.data === 0) this.ended = true } },
+      })
     })
   }
-  gateTimer = setInterval(() => {
-    for (const s of ['L', 'R']) {
-      const p = players[s]; if (!p) continue
-      const playing = p.audio ? !p.audio.paused : p.getPlayerState?.() === 1
-      if (playing) watched[s] += 1
-    }
-    gatePaint()
-  }, 1000)
-  gatePaint()
+  dur() { const d = this.a ? this.a.duration : this.p?.getDuration?.(); return d || this.clip.sec || 0 }
+  end() { const d = this.dur(); return this.clip.end || (d ? Math.min(d, this.start + SHORT_MAX) : this.start + SHORT_MAX) }
+  t() { return this.a ? this.a.currentTime : this.p?.getCurrentTime?.() || 0 }
+  playing() { return this.a ? !this.a.paused : this.p?.getPlayerState?.() === 1 }
+  progress() { const s = this.start, e = this.end(); return Math.max(0, Math.min(1, (this.t() - s) / Math.max(1, e - s))) }
+  done() { return this.ended || this.t() >= this.end() - 0.3 }
+  async play() {
+    await this.ready; this.started = true
+    if (this.a) { try { await this.a.play() } catch { toast('Tap the screen to start the sound') } return }
+    this.p.playVideo()
+    setTimeout(() => { // autoplay with sound refused: play muted and say so
+      const st = this.p.getPlayerState?.()
+      if (st !== 1 && st !== 3) { this.p.mute(); this.p.playVideo(); toast('Your browser started it muted. Tap the screen for sound.') }
+    }, 1800)
+  }
+  pause() { this.a ? this.a.pause() : this.p?.pauseVideo?.() }
+  destroy() { try { this.p?.destroy?.() } catch {} }
 }
 
-function paintArena() {
+// ---------- the screening ----------
+let screens = {}, phase = 'idle', tick = null, armed = false, prediction = null
+function chip(c) { return c.kind === 'ai' ? '<span class="chip ai">AI</span>' : '' }
+function screenHTML(c, side) {
+  return `<div class="screen ${side} idle" id="s${side}">
+    <div class="frame"><div id="p${side}"></div><div class="cover"><span class="ph">${side === 'L' ? 'ONE' : 'TWO'}</span></div></div>
+    <div class="label"><span class="side">${side === 'L' ? '1' : '2'}</span>
+      <div class="meta"><h3>${esc(c.comic)}${chip(c)}</h3><p>${esc(c.title)} · ${esc(c.channel || '')}</p></div>
+      <span class="status" id="st${side}">${side === 'L' ? 'Up first' : 'Up next'}</span></div>
+    <div class="prog"><i id="pg${side}"></i></div></div>`
+}
+function laneSelect() {
+  const box = $('#lanebox')
+  box.innerHTML = `<select id="lane">${[['human', 'Human comics'], ['ai', 'AI comics'], ['mixed', 'Human vs AI']].map(([k, l]) => `<option value="${k}" ${LANE === k ? 'selected' : ''}>${l}</option>`).join('')}</select>`
+  $('#lane').onchange = (e) => { LANE = e.target.value; LS.set('lane', LANE); newRound(phase !== 'idle') }
+}
+
+function newRound(autoplay) {
+  clearInterval(tick); Object.values(screens).forEach((s) => s.destroy()); screens = {}; armed = false
   current = pickPair()
   const el = $('#arena')
-  const lanes = `<div class="lanes">${[['human', 'Human sets'], ['ai', 'AI sets'], ['mixed', 'Human vs AI']].map(([k, l]) => `<button data-lane="${k}" class="${LANE === k ? 'on' : ''}">${l}</button>`).join('')}</div>`
   if (!current) {
-    el.innerHTML = lanes + `<p class="empty">${LANE === 'ai' ? 'No AI sets are published yet. The first Freaktown sets are on the way.' : LANE === 'mixed' ? 'Human vs AI opens once AI sets are published.' : "You've judged every matchup here. More clips are coming."}</p>`
-  } else {
-    const [a, b] = current
-    el.innerHTML = lanes + `<div class="duel">${card(a, 'L')}<div class="vs">VS</div>${card(b, 'R')}</div>
-      <div class="row"><span id="gatehint" class="muted"></span><button id="skip" class="ghost">Skip this pair</button><button id="unlock" class="ghost">I already know both</button></div>`
-    el.querySelectorAll('.vote').forEach((btn) => (btn.onclick = () => vote(btn.dataset.side)))
-    $('#skip').onclick = () => { LS.set('skipped', [...LS.get('skipped', []), pairKey(a.id, b.id)]); bumpSeen(a.id, b.id); paintArena() }
-    $('#unlock').onclick = () => { watched.L = need.L; watched.R = need.R; current.basis = 'prior'; gatePaint() }
-    mountPlayers(a, b)
+    $('#roundtag').textContent = 'Intermission'
+    el.innerHTML = `<p class="empty">${LANE === 'ai' ? 'The AI comics are still in rehearsal. Their first sets premiere here soon.' : LANE === 'mixed' ? 'Human vs AI opens when the first AI sets premiere.' : "You've seen every double feature on the bill. New shorts arrive daily."}</p>`
+    return
   }
-  el.querySelectorAll('[data-lane]').forEach((b) => (b.onclick = () => { LANE = b.dataset.lane; LS.set('lane', LANE); paintArena() }))
+  const [a, b] = current
+  $('#roundtag').textContent = MODES[current.mode][0]
+  const pL = MODEL ? sig(MODEL.score(a.id) - MODEL.score(b.id)) : 0.5
+  prediction = { p: pL, side: pL >= 0.5 ? 'L' : 'R' }
+  el.innerHTML = `<div class="theater"><div class="screens">${screenHTML(a, 'L')}${screenHTML(b, 'R')}</div>
+    ${autoplay ? '' : `<div class="start"><div class="inner"><h2>Tonight's<br>double feature</h2><p>Two shorts, back to back. Then you pick the funnier one.</p><button class="play" id="go">▶ Start the show</button></div></div>`}</div>
+    <div class="verdict" id="verdict">
+      <button class="fbtn L" data-side="L">← FUNNIER</button>
+      <div class="mid"><span class="vs">or</span><button id="replay">Replay</button><button id="skip">Skip pair</button></div>
+      <button class="fbtn R" data-side="R">FUNNIER →</button></div>
+    <p class="hint" id="hint"></p>`
+  el.querySelectorAll('.fbtn').forEach((x) => (x.onclick = () => vote(x.dataset.side)))
+  $('#skip').onclick = () => { LS.set('skipped', [...LS.get('skipped', []), pairKey(a.id, b.id)]); bumpSeen(a.id, b.id); newRound(true) }
+  $('#replay').onclick = () => { screens.R?.pause(); screens.L.p?.seekTo?.(screens.L.start, true); if (screens.L.a) screens.L.a.currentTime = screens.L.start; screens.L.ended = false; phase = 'L'; screens.L.play() }
+  screens = { L: new Screen('L', a), R: new Screen('R', b) }
+  screens.L.mount(); screens.R.mount()
+  phase = 'ready'
+  const go = () => { $('.start')?.remove(); phase = 'L'; screens.L.play(); runTick() }
+  if (autoplay) go(); else $('#go').onclick = go
 }
 
-function bumpSeen(...ids) { const s = LS.get('seen', {}); ids.forEach((i) => (s[i] = (s[i] || 0) + 1)); LS.set('seen', s) }
+function setLive(side) {
+  for (const s of ['L', 'R']) {
+    const el = $('#s' + s); if (!el) continue
+    el.classList.toggle('live', s === side); el.classList.toggle('idle', s !== side)
+  }
+}
+function runTick() {
+  clearInterval(tick)
+  tick = setInterval(() => {
+    const L = screens.L, R = screens.R; if (!L || !R) return
+    for (const s of ['L', 'R']) {
+      const sc = screens[s], pg = $('#pg' + s), st = $('#st' + s)
+      if (pg) pg.style.width = (sc.started ? 100 * sc.progress() : 0) + '%'
+      if (sc.playing()) $('#s' + s + ' .cover')?.classList.add('gone')
+      if (st) st.textContent = sc.playing() ? 'Now playing' : sc.started && sc.done() ? 'Seen' : sc.started ? 'Paused' : s === 'L' ? 'Up first' : 'Up next'
+    }
+    // whichever screen is actually playing is the live one (user may click around)
+    if (R.playing()) { phase = 'R'; setLive('R') } else if (L.playing()) { phase = 'L'; setLive('L') }
+    if (phase === 'L' && L.done()) { L.pause(); phase = 'R'; setLive('R'); R.play() }
+    if (phase === 'R' && R.done()) R.pause()
+    // the verdict arrives partway through the second short
+    const secR = R.started ? R.t() - R.start : 0
+    if (!armed && R.started && (R.progress() >= 0.5 || secR >= 25 || R.done())) {
+      armed = true; $('#verdict')?.classList.add('on'); $('#hint').textContent = 'Use ← or → on your keyboard, too.'
+    }
+  }, 250)
+}
 
 async function vote(side) {
+  if (!current || !armed) return
   const [a, b] = current
-  const v = { a: a.id, b: b.id, winner: side === 'L' ? a.id : b.id, voter: 'human', basis: current.basis || 'watched', createdAt: new Date().toISOString() }
+  const v = { a: a.id, b: b.id, winner: side === 'L' ? a.id : b.id, voter: 'human', basis: 'watched', mode: current.mode, createdAt: new Date().toISOString() }
   LS.set('votes', [...LS.get('votes', []), v])
+  const preds = LS.get('preds', []); preds.push({ p: prediction.p, hit: prediction.side === side }); LS.set('preds', preds.slice(-200))
+  // remember lengths for your model's length preference
+  const dur = LS.get('dur', {}); dur[a.id] = screens.L.dur(); dur[b.id] = screens.R.dur(); LS.set('dur', dur)
   bumpSeen(a.id, b.id)
   const w = BYID[v.winner]
+  const guess = MODEL && MODEL.n >= 3 ? (prediction.side === side ? ' Your model called it.' : ' Your model guessed the other one.') : ''
   if (agent) {
-    try { await publish(v); toast(`Counted: ${w.comic} wins. Published to your Bluesky repo.`) }
-    catch (e) { LS.set('queue', [...LS.get('queue', []), v]); toast('Saved; will publish when Bluesky responds.') }
-  } else {
-    LS.set('queue', [...LS.get('queue', []), v]); toast(`${w.comic} wins. Sign in to count it globally.`)
-  }
-  paintBanner(); paintYou(); paintArena()
+    try { await publish(v); toast(`${w.comic} takes it.${guess}`) }
+    catch { LS.set('queue', [...LS.get('queue', []), v]); toast(`Saved. It'll publish when Bluesky responds.${guess}`) }
+  } else { LS.set('queue', [...LS.get('queue', []), v]); toast(`${w.comic} takes it.${guess}`) }
+  MODEL = fitLocal()
+  paintBanner(); paintYou(); newRound(true)
 }
+document.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT') return
+  if (e.key === 'ArrowLeft') vote('L'); if (e.key === 'ArrowRight') vote('R')
+})
 
-// ---------- boards ----------
+// ---------- charts ----------
+const thumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
+function clipTile(c, i, extra) {
+  const k = BYID[c.id] || c
+  const img = k.media === 'youtube' ? `<img loading="lazy" src="${thumb(k.id)}" alt="">` : `<div class="comicposter" style="aspect-ratio:16/9"><b>${esc(k.comic)}</b></div>`
+  const href = k.media === 'youtube' ? `https://www.youtube.com/watch?v=${k.id}` : '#'
+  return `<a class="tile" href="${href}" target="_blank" rel="noopener">${i != null ? `<span class="num">${i + 1}</span>` : ''}
+    <div class="poster">${img}<div class="cap"><b>${esc(k.title)}</b><span>${esc(k.comic)}${extra ? ' · ' + extra : ''}</span></div></div></a>`
+}
+function comicTile(c, i, extra) {
+  return `<div class="tile"><span class="num">${i + 1}</span><div class="poster comicposter"><b>${esc(c.comic)}</b><span class="rating">${extra}</span></div></div>`
+}
 function paintBoards() {
   const metas = document.querySelectorAll('.boardmeta')
   const sel = `<div class="lanes">${[['all', 'Everyone'], ['human', 'Humans'], ['agent', 'Agents']].map(([k, l]) => `<button data-board="${k}" class="${BOARDKIND === k ? 'on' : ''}">${l}</button>`).join('')}</div>`
@@ -219,63 +343,93 @@ function paintBoards() {
   document.querySelectorAll('[data-board]').forEach((x) => (x.onclick = () => { BOARDKIND = x.dataset.board; paintBoards() }))
   const bd = BOARD?.boards?.[BOARDKIND]
   if (!bd || !bd.votes) {
-    metas.forEach((m) => (m.textContent = BOARDKIND === 'agent' ? 'No agent votes yet. Agents vote via the AT Protocol API (see AGENTS-VOTING.md in the repo).' : 'No published votes yet. Sign in with Bluesky and cast the first one; the board recounts about every 15 minutes.'))
-    $('#comics').innerHTML = $('#clips').innerHTML = ''
+    metas.forEach((m) => (m.textContent = BOARDKIND === 'agent' ? 'No agent picks yet. Agents vote through the AT Protocol API.' : 'The chart opens with the first published picks. Until then, here is everything in rotation.'))
+    const comics = [...new Set(CLIPS.map((c) => c.comic))]
+    $('#comics').innerHTML = comics.map((k, i) => comicTile({ comic: k }, i, CLIPS.filter((c) => c.comic === k).length + ' shorts')).join('')
+    $('#clips').innerHTML = CLIPS.map((c) => clipTile(c, null, c.channel)).join('')
     return
   }
   const ago = Math.max(0, Math.round((Date.now() - Date.parse(BOARD.updated)) / 60000))
-  metas.forEach((m) => (m.textContent = `${bd.votes} votes from ${bd.voters} account${bd.voters === 1 ? '' : 's'} · Bradley-Terry rating with 95% interval · recounted ${isNaN(ago) ? 'recently' : ago + ' min ago'}${bd.votes < 100 ? ' · early days, intervals are wide' : ''}`))
-  const ci = (r) => (r.lo != null ? `<span class="ci">${Math.round(r.lo)}–${Math.round(r.hi)}</span>` : '')
-  $('#comics').innerHTML = table(['#', 'Comic', 'Rating', '95% range', 'Win %', 'Bouts'],
-    bd.comics.filter((c) => c.bouts).map((c, i) => [i + 1, esc(c.comic), Math.round(c.elo), ci(c), pct(c.wins, c.bouts), c.bouts]))
-  $('#clips').innerHTML = table(['#', 'Clip', 'Comic', 'Type', 'Rating', '95% range', 'Bouts'],
-    bd.clips.filter((c) => c.bouts).map((c, i) => [i + 1, BYID[c.id]?.media === 'youtube' ? `<a href="https://www.youtube.com/watch?v=${c.id}" target="_blank" rel="noopener">${esc(BYID[c.id]?.title || c.id)}</a>` : esc(BYID[c.id]?.title || c.id), esc(c.comic), BYID[c.id]?.kind === 'ai' ? 'AI' : 'Human', Math.round(c.elo), ci(c), c.bouts]))
+  metas.forEach((m) => (m.textContent = `${bd.votes} picks from ${bd.voters} account${bd.voters === 1 ? '' : 's'} · Bradley-Terry ratings with 95% ranges · updated ${isNaN(ago) ? 'recently' : ago + ' min ago'}`))
+  const rng = (r) => (r.lo != null ? ` (${Math.round(r.lo)}–${Math.round(r.hi)})` : '')
+  $('#comics').innerHTML = bd.comics.filter((c) => c.bouts).map((c, i) => comicTile(c, i, Math.round(c.elo) + rng(c))).join('')
+  $('#clips').innerHTML = bd.clips.filter((c) => c.bouts && BYID[c.id]).slice(0, 10).map((c, i) => clipTile(c, i, Math.round(c.elo))).join('')
 }
 
+// ---------- your model ----------
 function paintYou() {
-  const votes = LS.get('votes', [])
-  const el = $('#you')
-  if (!votes.length) { el.innerHTML = `<p class="empty">Vote a few times and your own humour ranking shows up here.</p>`; return }
-  const elo = {}, wins = {}, bouts = {}
-  for (const v of votes) {
-    const A = BYID[v.a]?.comic, B = BYID[v.b]?.comic
-    if (!A || !B || A === B) continue
-    const ra = elo[A] ?? 1500, rb = elo[B] ?? 1500
-    const ea = 1 / (1 + 10 ** ((rb - ra) / 400)), sa = v.winner === v.a ? 1 : 0
-    elo[A] = ra + 32 * (sa - ea); elo[B] = rb + 32 * ((1 - sa) - (1 - ea))
-    const W = sa ? A : B
-    wins[W] = (wins[W] || 0) + 1; bouts[A] = (bouts[A] || 0) + 1; bouts[B] = (bouts[B] || 0) + 1
+  const el = $('#you'), votes = LS.get('votes', [])
+  if (!votes.length) {
+    el.innerHTML = `<h2>Your model</h2><p class="empty">Every pick trains a small model of your sense of humour, right here on your device.<br>Watch a double feature to start it.</p>`
+    return
   }
-  const rows = Object.keys(elo).sort((x, y) => elo[y] - elo[x]).map((c, i) => [i + 1, esc(c), Math.round(elo[c]), pct(wins[c] || 0, bouts[c]), bouts[c]])
-  el.innerHTML = `<p class="muted">${votes.length} vote(s) on this device. This is the seed of your humour profile.</p>` + table(['#', 'Comic', 'Your Elo', 'Win %', 'Bouts'], rows) + '<div id="youglobal"></div>'
+  MODEL = MODEL || fitLocal()
+  const preds = LS.get('preds', []).slice(3), last = preds.slice(-30)
+  const acc = last.length ? Math.round((100 * last.filter((p) => p.hit).length) / last.length) : null
+  const comics = Object.entries(MODEL.r).map(([k, x]) => ({ k, elo: Math.round(1500 + SCALE * x) })).sort((a, b) => b.elo - a.elo)
+  const lo = Math.min(...comics.map((c) => c.elo)) - 40, hi = Math.max(...comics.map((c) => c.elo)) + 40
+  const bars = comics.map((c) => `<div class="barrow"><span>${esc(c.k)}</span><div class="track"><i style="left:0;width:${(100 * (c.elo - lo)) / (hi - lo)}%"></i></div><span class="v">${c.elo}</span></div>`).join('')
+  // learned traits
+  const dur = LS.get('dur', {})
+  let longW = 0, longN = 0, lnW = 0, lnN = 0
+  for (const v of votes) {
+    const A = BYID[v.a], B = BYID[v.b]; if (!A || !B) continue
+    const da = dur[v.a], db = dur[v.b]
+    if (da && db && Math.abs(da - db) > 20) { longN++; if ((da > db ? v.a : v.b) === v.winner) longW++ }
+    const la = LATE_NIGHT.test(A.channel || ''), lb = LATE_NIGHT.test(B.channel || '')
+    if (la !== lb) { lnN++; if ((la ? v.a : v.b) === v.winner) lnW++ }
+  }
+  const trait = (label, w, n, a, b) => {
+    if (n < 2) return `<div class="barrow"><span>${label}</span><div class="track center"></div><span class="v">learning</span></div>`
+    const p = w / n, left = Math.min(50, 100 * p), width = Math.abs(100 * p - 50)
+    return `<div class="barrow"><span>${label}</span><div class="track center"><i style="left:${p >= 0.5 ? 50 : left}%;width:${width}%"></i></div><span class="v">${Math.round(100 * p)}% ${p >= 0.5 ? a : b}</span></div>`
+  }
+  const best = Object.keys(MODEL.o).filter((id) => MODEL.bouts[id]).sort((x, y) => MODEL.score(y) - MODEL.score(x)).slice(0, 5)
+  el.innerHTML = `<h2>Your model</h2>
+    <div class="kpis">
+      <div class="kpi"><b>${votes.length}</b><span>picks trained on</span></div>
+      <div class="kpi"><b>${acc == null ? '—' : acc + '%'}</b><span>how often it predicts you${last.length ? ` (last ${last.length})` : ''}</span></div>
+      <div class="kpi"><b>${esc(comics[0].k.split(' ').slice(-1)[0])}</b><span>your top comic so far</span></div>
+      <div class="kpi"><b>${new Set(votes.flatMap((v) => [v.a, v.b])).size}</b><span>shorts seen</span></div>
+    </div>
+    <h3>Comics, as your model sees them</h3><p class="muted">It starts from the crowd chart and moves toward your picks.</p><div class="bars">${bars}</div>
+    <h3>What it's learning about you</h3><div class="bars">
+      ${trait('Longer bits', longW, longN, 'longer', 'shorter')}
+      ${trait('Late-night TV', lnW, lnN, 'late-night', 'specials')}
+    </div>
+    ${best.length ? `<h3>Your funniest so far</h3><div class="rail">${best.map((id, i) => clipTile({ id }, i)).join('')}</div>` : ''}
+    <div id="youglobal"></div>
+    <h3>Why this matters</h3>
+    <p class="note">Your model is a portable critic. When we build the AI comedians, it can <b>judge their drafts for you</b>, tune a comic to <b>your</b> sense of humour, or sit on a panel next to other people's models. <button class="btn" id="export" style="margin-left:6px">Download my model</button></p>`
+  $('#export').onclick = () => {
+    const blob = new Blob([JSON.stringify({ kind: 'funnier.taste-model', version: 1, created: new Date().toISOString(), picks: votes.length, accuracy: acc, comics, clips: Object.fromEntries(Object.entries(MODEL.o).filter(([id]) => MODEL.bouts[id]).map(([id, x]) => [id, Math.round(SCALE * (MODEL.r[BYID[id].comic] + x))])) }, null, 2)], { type: 'application/json' })
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'funnier-taste-model.json'; a.click()
+  }
   if (me) fetch('data/taste/' + me.did.replace(/[^a-z0-9]/gi, '_') + '.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((t) => {
     if (!t) return
-    $('#youglobal').innerHTML = `<h3>Your published taste profile</h3><p class="muted">From ${t.votes} published vote(s), blended with the crowd until you have more. "vs crowd" shows where your taste departs.</p>` +
-      table(['#', 'Comic', 'Your rating', 'vs crowd'], t.comics.map((c, i) => [i + 1, esc(c.comic), c.elo, (c.vsCrowd > 0 ? '+' : '') + c.vsCrowd]))
+    $('#youglobal').innerHTML = `<h3>You vs the crowd</h3><p class="muted">From your ${t.votes} published picks.</p><div class="bars">${t.comics.map((c) => `<div class="barrow"><span>${esc(c.comic)}</span><div class="track center"><i style="left:${c.vsCrowd >= 0 ? 50 : 50 + Math.max(-50, c.vsCrowd / 4)}%;width:${Math.min(50, Math.abs(c.vsCrowd) / 4)}%"></i></div><span class="v">${c.vsCrowd > 0 ? '+' : ''}${c.vsCrowd}</span></div>`).join('')}</div>`
   }).catch(() => {})
 }
 
 // ---------- utils ----------
-function table(h, rows) {
-  return `<table><thead><tr>${h.map((x) => `<th>${x}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr>${r.map((x) => `<td>${x}</td>`).join('')}</tr>`).join('')}</tbody></table>`
-}
-function pct(w, n) { return n ? Math.round((100 * w) / n) + '%' : '–' }
-function esc(s) { return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])) }
+function esc(s) { return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])) }
 let tt
 function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('on'), 3200) }
-
 function tabs() {
   const show = (id) => {
-    document.querySelectorAll('[data-tab]').forEach((b) => b.classList.toggle('on', b.dataset.tab === id))
+    document.querySelectorAll('nav [data-tab]').forEach((b) => b.classList.toggle('on', b.dataset.tab === id))
     document.querySelectorAll('section.view').forEach((s) => (s.hidden = s.id !== 'v-' + id))
+    if (id !== 'arena') Object.values(screens).forEach((s) => s.pause())
+    scrollTo({ top: 0 })
   }
-  document.querySelectorAll('[data-tab]').forEach((b) => (b.onclick = () => show(b.dataset.tab)))
+  document.querySelectorAll('[data-tab]').forEach((b) => (b.onclick = (e) => { e.preventDefault(); show(b.dataset.tab) }))
   show('arena')
 }
 
 ;(async () => {
   tabs()
   await loadData()
-  paintArena(); paintBoards(); paintYou(); paintBanner()
+  MODEL = fitLocal()
+  laneSelect(); newRound(false); paintBoards(); paintYou(); paintBanner()
   initAuth()
 })()
