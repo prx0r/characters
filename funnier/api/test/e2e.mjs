@@ -39,6 +39,7 @@ const idToken = (sub, extra = {}, aud = CID) => new SignJWT({ email: sub + '@exa
   .setProtectedHeader({ alg: 'RS256', kid: 'test1' }).setIssuer('https://accounts.google.com').setAudience(aud).setSubject(sub).setIssuedAt().setExpirationTime('1h').sign(privateKey)
 
 execSync('npx wrangler d1 execute funnier --local --file schema.sql', { stdio: 'ignore' })
+try { execSync('npx wrangler d1 execute funnier --local --file migrations/0002_avatar_seed.sql', { stdio: 'ignore' }) } catch {} // already applied -> duplicate column
 execSync(`npx wrangler d1 execute funnier --local --command "DELETE FROM votes; DELETE FROM friends; DELETE FROM invites; DELETE FROM invite_opens; DELETE FROM users;"`, { stdio: 'ignore' })
 const PORT = 8797, BASE = `http://127.0.0.1:${PORT}`
 const dev = spawn('npx', ['wrangler', 'dev', '--local', '--port', String(PORT), '--ip', '127.0.0.1',
@@ -61,9 +62,12 @@ try {
   r = await J('GET', '/me', t1); ok(r.s === 200 && r.j.user.email === 'g1@example.com', 'GET /me with bearer -> 200')
   r = await J('PUT', '/me/profile', t1, { username: 'no spaces!' }); ok(r.s === 400 && r.j.fields?.username, 'bad username -> 400')
   r = await J('PUT', '/me/profile', t1, { birth_year: new Date().getUTCFullYear() - 10 }); ok(r.s === 400 && r.j.error === 'too_young', 'under 13 -> rejected')
-  r = await J('PUT', '/me/profile', t1, { avatar_id: 'banana' }); ok(r.s === 400, 'unknown avatar -> 400')
+  r = await J('PUT', '/me/profile', t1, { avatar_id: 'banana' }); ok(r.s === 400, 'unknown legacy avatar id -> 400')
+  r = await J('PUT', '/me/profile', t1, { avatar_seed: 'x'.repeat(41) }); ok(r.s === 400 && r.j.fields?.avatar_seed, 'avatar seed over 40 chars -> 400')
+  r = await J('PUT', '/me/profile', t1, { avatar_seed: 'bad seed!' }); ok(r.s === 400 && r.j.fields?.avatar_seed, 'avatar seed with spaces/symbols -> 400')
+  r = await J('PUT', '/me/profile', t1, { avatar_id: 'wink' }); ok(r.s === 200 && r.j.user.avatar_seed === 'preset-wink', 'legacy avatar_id maps to deterministic seed preset-wink')
   r = await J('PUT', '/me/profile', t1, { sex_at_birth: 'other' }); ok(r.s === 400, 'bad sex_at_birth -> 400')
-  r = await J('PUT', '/me/profile', t1, { username: 'DeadpanDuck42', avatar_id: 'wink', birth_year: 1990, country: 'gb', sex_at_birth: 'skip' })
+  r = await J('PUT', '/me/profile', t1, { username: 'DeadpanDuck42', avatar_seed: 'k3j9x0q2ab', birth_year: 1990, country: 'gb', sex_at_birth: 'skip' })
   ok(r.s === 200 && r.j.needsProfile === false && r.j.user.country === 'GB', 'full profile saved')
 
   r = await J('POST', '/auth/google', null, { credential: await idToken('g2') }); const t2 = r.j.token
@@ -74,7 +78,7 @@ try {
   r = await J('POST', '/invites', t1, { a: A, b: B, pick: 'a' }); const code = r.j?.code
   ok(r.s === 200 && /^[A-Za-z0-9]{8}$/.test(code || '') && r.j.urls.includes('https://funnier.si/#i/' + code), 'POST /invites -> code + funnier.si / github.io URLs')
   r = await J('POST', '/invites', t1, { a: A, b: B, pick: 'a' }); ok(r.j?.code === code, 're-sharing the same clash reuses the code')
-  r = await J('GET', '/invites/' + code, null); ok(r.s === 200 && r.j.inviter.username === 'DeadpanDuck42' && r.j.open_id, 'anonymous open: inviter username/avatar + open_id')
+  r = await J('GET', '/invites/' + code, null); ok(r.s === 200 && r.j.inviter.username === 'DeadpanDuck42' && r.j.inviter.avatar_seed === 'k3j9x0q2ab' && r.j.inviter.google_avatar === null && r.j.open_id, 'anonymous open: inviter username/avatar + open_id')
   const anonOpen = r.j.open_id
   r = await J('POST', `/invites/${code}/voted`, null, { open_id: anonOpen }); ok(r.s === 200, 'anonymous opener marks voted')
   r = await J('GET', '/invites/' + code, t2); const open2 = r.j.open_id; ok(r.s === 200 && r.j.friends === false, 'signed-in open recorded')
@@ -84,7 +88,7 @@ try {
   r = await J('POST', `/invites/${code}/accept`, t1, {}); ok(r.s === 400, 'cannot accept your own invite')
   r = await J('GET', '/me/invites', t1)
   ok(r.s === 200 && r.j.totals.sent === 1 && r.j.invites[0].opens === 2 && r.j.invites[0].voted === 2 && r.j.invites[0].people[0]?.username === 'PunchyPanda7', 'GET /me/invites: opens + voted + who')
-  r = await J('GET', `/clash/${B}/${A}/friends`, t1); ok(r.s === 200 && r.j.friends.length === 1 && r.j.friends[0].winner === B && r.j.friends[0].avatar_id === 'grin', "friends' votes on the pair (either order)")
+  r = await J('GET', `/clash/${B}/${A}/friends`, t1); ok(r.s === 200 && r.j.friends.length === 1 && r.j.friends[0].winner === B && r.j.friends[0].avatar_seed === 'preset-grin', "friends' votes on the pair (either order)")
 
   // latest wins
   r = await J('POST', '/votes', t2, { votes: [{ a: B, b: A, winner: A, createdAt: new Date().toISOString() }] })
@@ -100,6 +104,7 @@ try {
   await J('POST', '/votes', t1, { votes: [{ a: pairs[1][0], b: pairs[1][1], winner: pairs[1][1] }] })
   await J('POST', '/votes', t2, { votes: [{ a: pairs[1][0], b: pairs[1][1], winner: pairs[1][0] }] })
   r = await J('GET', '/me/taste', t1); ok(r.j.friends[0].shared === 3 && r.j.friends[0].match === 67, `taste match = agreement on shared pairs (got ${r.j.friends[0].match}%)`)
+  ok(r.j.friends[0].avatar_seed === 'preset-grin' && r.j.friends[0].google_avatar === null, 'taste list carries the friend avatar_seed (legacy preset mapped)')
 
   // stats: per-country only with >= 5
   for (let i = 0; i < 5; i++) {

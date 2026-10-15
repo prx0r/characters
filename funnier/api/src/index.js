@@ -4,7 +4,10 @@ import { cors } from 'hono/cors'
 import { getCookie, setCookie, deleteCookie } from 'hono/cookie'
 import { createRemoteJWKSet, jwtVerify, SignJWT } from 'jose'
 
+// legacy preset ids (v1 profiles); each maps to a deterministic avatar seed 'preset-<id>'
 export const AVATARS = ['grin', 'deadpan', 'wink', 'shock', 'smirk', 'cool', 'nerd', 'tash', 'sleepy', 'tongue', 'monocle', 'clown']
+const SEED = /^[A-Za-z0-9_-]{1,40}$/ // avatar seed: the client renders a mascot from it (mascot-avatars)
+export const seedOf = (u) => (u?.avatar_seed && SEED.test(u.avatar_seed) ? u.avatar_seed : u?.avatar_id && AVATARS.includes(u.avatar_id) ? 'preset-' + u.avatar_id : null)
 const ORIGINS = ['https://prx0r.github.io', 'https://funnier.si', 'https://www.funnier.si']
 const LOCAL = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/
 const COOKIE = 'funnier_session'
@@ -54,12 +57,12 @@ const auth = async (c, next) => {
   if (!u) return c.json({ error: 'unauthorized' }, 401)
   c.set('user', u); await next()
 }
-const pub = (u) => u && ({ username: u.username || null, avatar_id: u.avatar_id || null, google_avatar: u.avatar_id ? null : u.google_avatar || null })
+const pub = (u) => u && ({ username: u.username || null, avatar_seed: seedOf(u), google_avatar: seedOf(u) ? null : u.google_avatar || null })
 const self = (u) => ({
-  id: u.id, email: u.email, name: u.name, google_avatar: u.google_avatar, username: u.username, avatar_id: u.avatar_id,
+  id: u.id, email: u.email, name: u.name, google_avatar: u.google_avatar, username: u.username, avatar_seed: seedOf(u),
   birth_year: u.birth_year, country: u.country, sex_at_birth: u.sex_at_birth, created_at: u.created_at,
 })
-const needsProfile = (u) => !u.username || !u.avatar_id || !u.birth_year || !u.country || !u.sex_at_birth
+const needsProfile = (u) => !u.username || !seedOf(u) || !u.birth_year || !u.country || !u.sex_at_birth
 const sorted = (a, b) => (a < b ? [a, b] : [b, a])
 const now = () => new Date().toISOString()
 function code(n = 8) {
@@ -106,7 +109,8 @@ app.get('/me', auth, (c) => { const u = c.get('user'); return c.json({ user: sel
 app.put('/me/profile', auth, async (c) => {
   const u = c.get('user'), b = (await body(c)) || {}, set = {}, errs = {}
   if ('username' in b) { const v = String(b.username ?? '').trim(); if (!USERNAME.test(v)) errs.username = '3 to 20 letters, numbers or _'; else set.username = v }
-  if ('avatar_id' in b) { if (!AVATARS.includes(b.avatar_id)) errs.avatar_id = 'pick one of the preset avatars'; else set.avatar_id = b.avatar_id }
+  if ('avatar_seed' in b) { const v = String(b.avatar_seed ?? '').trim(); if (!SEED.test(v)) errs.avatar_seed = '1 to 40 letters, numbers, _ or -'; else set.avatar_seed = v }
+  else if ('avatar_id' in b) { if (!AVATARS.includes(b.avatar_id)) errs.avatar_id = 'pick one of the preset avatars'; else set.avatar_seed = 'preset-' + b.avatar_id } // legacy clients
   if ('birth_year' in b) {
     const y = Number(b.birth_year), max = new Date().getUTCFullYear() - 13
     if (!Number.isInteger(y) || y < 1900) errs.birth_year = 'enter a year between 1900 and ' + max
@@ -176,7 +180,7 @@ app.get('/clash/:a/:b/friends', auth, async (c) => {
   const u = c.get('user'), { a: ra, b: rb } = c.req.param()
   if (!CLIP.test(ra) || !CLIP.test(rb)) return c.json({ error: 'bad_clip' }, 400)
   const [a, b] = sorted(ra, rb)
-  const r = await c.env.DB.prepare(`SELECT u.username, u.avatar_id, u.google_avatar, v.winner, v.created_at FROM friends f
+  const r = await c.env.DB.prepare(`SELECT u.username, u.avatar_id, u.avatar_seed, u.google_avatar, v.winner, v.created_at FROM friends f
     JOIN votes v ON v.user_id = f.friend_id AND v.a = ? AND v.b = ? JOIN users u ON u.id = f.friend_id WHERE f.user_id = ? ORDER BY v.created_at DESC LIMIT 50`).bind(a, b, u.id).all()
   return c.json({ friends: (r.results || []).map((x) => ({ ...pub(x), winner: x.winner })) })
 })
@@ -203,7 +207,7 @@ app.get('/invites/:code', async (c) => {
   const k = c.req.param('code')
   if (!/^[A-Za-z0-9]{4,16}$/.test(k)) return c.json({ error: 'not_found' }, 404)
   const DB = c.env.DB
-  const inv = await DB.prepare('SELECT i.*, u.username, u.avatar_id, u.google_avatar FROM invites i JOIN users u ON u.id = i.inviter_id WHERE i.code = ?').bind(k).first()
+  const inv = await DB.prepare('SELECT i.*, u.username, u.avatar_id, u.avatar_seed, u.google_avatar FROM invites i JOIN users u ON u.id = i.inviter_id WHERE i.code = ?').bind(k).first()
   if (!inv) return c.json({ error: 'not_found' }, 404)
   const me = await currentUser(c), mine = me && me.id === inv.inviter_id
   let open_id = null, friends = false
@@ -225,7 +229,7 @@ app.post('/invites/:code/voted', async (c) => {
 
 app.post('/invites/:code/accept', auth, async (c) => {
   const u = c.get('user'), k = c.req.param('code'), b = (await body(c)) || {}, DB = c.env.DB
-  const inv = await DB.prepare('SELECT i.inviter_id, u.username, u.avatar_id, u.google_avatar FROM invites i JOIN users u ON u.id = i.inviter_id WHERE i.code = ?').bind(k).first()
+  const inv = await DB.prepare('SELECT i.inviter_id, u.username, u.avatar_id, u.avatar_seed, u.google_avatar FROM invites i JOIN users u ON u.id = i.inviter_id WHERE i.code = ?').bind(k).first()
   if (!inv) return c.json({ error: 'not_found' }, 404)
   if (inv.inviter_id === u.id) return c.json({ error: 'own_invite' }, 400)
   const t = now(), stmts = [
@@ -241,7 +245,7 @@ app.get('/me/invites', auth, async (c) => {
   const u = c.get('user'), DB = c.env.DB
   const r = await DB.prepare(`SELECT i.code, i.clash_a, i.clash_b, i.pick, i.created_at, COUNT(o.id) AS opens, COALESCE(SUM(o.voted), 0) AS voted
     FROM invites i LEFT JOIN invite_opens o ON o.code = i.code WHERE i.inviter_id = ? GROUP BY i.code ORDER BY i.created_at DESC LIMIT 50`).bind(u.id).all()
-  const who = await DB.prepare(`SELECT o.code, o.voted, o.opened_at, us.username, us.avatar_id, us.google_avatar FROM invite_opens o
+  const who = await DB.prepare(`SELECT o.code, o.voted, o.opened_at, us.username, us.avatar_id, us.avatar_seed, us.google_avatar FROM invite_opens o
     JOIN invites i ON i.code = o.code JOIN users us ON us.id = o.opener_user_id WHERE i.inviter_id = ? ORDER BY o.opened_at DESC LIMIT 200`).bind(u.id).all()
   const by = {}
   for (const w of who.results || []) (by[w.code] = by[w.code] || []).push({ ...pub(w), voted: !!w.voted, opened_at: w.opened_at })
@@ -252,7 +256,7 @@ app.get('/me/invites', auth, async (c) => {
 
 app.get('/me/taste', auth, async (c) => {
   const u = c.get('user')
-  const r = await c.env.DB.prepare(`SELECT f.friend_id, us.username, us.avatar_id, us.google_avatar, f.created_at AS since,
+  const r = await c.env.DB.prepare(`SELECT f.friend_id, us.username, us.avatar_id, us.avatar_seed, us.google_avatar, f.created_at AS since,
       COUNT(v2.a) AS shared, COALESCE(SUM(CASE WHEN v1.winner = v2.winner THEN 1 ELSE 0 END), 0) AS agree
     FROM friends f JOIN users us ON us.id = f.friend_id
     LEFT JOIN votes v1 ON v1.user_id = f.user_id

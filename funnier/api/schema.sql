@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS users (
   name TEXT,
   google_avatar TEXT,
   username TEXT UNIQUE COLLATE NOCASE,
-  avatar_id TEXT,
+  avatar_id TEXT,      -- legacy preset id (v1); superseded by avatar_seed
+  avatar_seed TEXT,    -- seed the client renders a mascot avatar from (max 40, [A-Za-z0-9_-])
   birth_year INTEGER,
   country TEXT,
   sex_at_birth TEXT CHECK (sex_at_birth IS NULL OR sex_at_birth IN ('male', 'female', 'skip')),

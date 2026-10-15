@@ -1,4 +1,5 @@
 import { BrowserOAuthClient } from '@atproto/oauth-client-browser'
+import { renderAvatar, PALETTES } from 'mascot-avatars' // MIT, (c) 2026 s1dashu / Ato Augustine — see site/credits.html
 
 const COLLECTION = 'io.github.prx0r.funnier.vote'
 const BASE = new URL('.', location.href).href.replace(/#.*$/, '')
@@ -1638,44 +1639,66 @@ async function openInvite(code) {
   } catch { return false }
 }
 
-// ---------- avatars: 12 illustrated faces, drawn inline ----------
-const AVATARS = {
-  grin: { bg: '#e8102e', f: '#ffd9b8', e: 'dot', m: 'grin' }, deadpan: { bg: '#3a3a46', f: '#f1c9a5', e: 'line', m: 'flat' },
-  wink: { bg: '#f5c76b', f: '#e0a77d', e: 'wink', m: 'smile' }, shock: { bg: '#8fe3ff', f: '#ffe0c2', e: 'wide', m: 'o' },
-  smirk: { bg: '#7b5cff', f: '#c68b62', e: 'dot', m: 'smirk' }, cool: { bg: '#1d1d24', f: '#8d5a3b', e: 'shades', m: 'smile' },
-  nerd: { bg: '#2bb673', f: '#ffd9b8', e: 'glasses', m: 'smile' }, tash: { bg: '#ff7a45', f: '#f1c9a5', e: 'dot', m: 'tash' },
-  sleepy: { bg: '#5b6cff', f: '#e8b48f', e: 'sleepy', m: 'flat' }, tongue: { bg: '#ff4fa3', f: '#ffe0c2', e: 'wink', m: 'tongue' },
-  monocle: { bg: '#0e7c86', f: '#f6d3b3', e: 'monocle', m: 'smirk' }, clown: { bg: '#f3f1ec', f: '#fff6ea', e: 'dot', m: 'grin', nose: 1 },
+// ---------- avatars: one seed -> one mascot (mascot-avatars, bundled, MIT) ----------
+// The seed is all we store (users.avatar_seed). Species + palette are derived from it here so the same
+// seed always draws the same animal; v1 preset ids map to the seed 'preset-<id>'.
+const AV_SPECIES = ['cat', 'bear', 'bunny', 'bird', 'dog', 'frog', 'penguin', 'mouse']
+const AV_NAMES = { cat: 'Cat', bear: 'Bear', bunny: 'Bunny', bird: 'Bird', dog: 'Dog', frog: 'Frog', penguin: 'Penguin', mouse: 'Mouse' }
+const AV_PALETTES = PALETTES.filter((p) => p.name !== 'Slate').map((p) => p.name) // no grey-on-grey: comedy wants colour
+const AV_LEGACY = ['grin', 'deadpan', 'wink', 'shock', 'smirk', 'cool', 'nerd', 'tash', 'sleepy', 'tongue', 'monocle', 'clown']
+const SEED_RE = /^[A-Za-z0-9_-]{1,40}$/
+function avHash(str) { let h = 2166136261; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619) } h ^= h >>> 15; h = Math.imul(h, 2246822507); return (h ^ (h >>> 13)) >>> 0 }
+const avLook = (seed) => { const h = avHash(String(seed)); return { species: AV_SPECIES[h % AV_SPECIES.length], palette: AV_PALETTES[Math.floor(h / AV_SPECIES.length) % AV_PALETTES.length] } }
+const seedOf = (u) => (u?.avatar_seed && SEED_RE.test(u.avatar_seed) ? u.avatar_seed : u?.avatar_id && AV_LEGACY.includes(u.avatar_id) ? 'preset-' + u.avatar_id : null)
+const AV_CACHE = new Map()
+function seedSVG(seed) {
+  if (!seed || !SEED_RE.test(seed)) return SILHOUETTE
+  let svg = AV_CACHE.get(seed)
+  if (!svg) {
+    svg = renderAvatar({ seed, ...avLook(seed) }).replace(/<svg xmlns="http:\/\/www\.w3\.org\/2000\/svg"([^>]*?) width="\d+" height="\d+">/, '<svg xmlns="http://www.w3.org/2000/svg"$1 class="avsvg" aria-hidden="true" focusable="false">')
+    if (AV_CACHE.size > 300) AV_CACHE.clear()
+    AV_CACHE.set(seed, svg)
+  }
+  return svg
 }
-const AVATAR_NAMES = { grin: 'Big grin', deadpan: 'Deadpan', wink: 'Wink', shock: 'Shocked', smirk: 'Smirk', cool: 'Too cool', nerd: 'Nerd', tash: 'Moustache', sleepy: 'Sleepy', tongue: 'Cheeky', monocle: 'Monocle', clown: 'Clown' }
-function avatarSVG(id) {
-  const a = AVATARS[id]; if (!a) return SILHOUETTE
-  const k = '#1b1b22', eyes = {
-    dot: `<circle cx="25" cy="33" r="2.6" fill="${k}"/><circle cx="39" cy="33" r="2.6" fill="${k}"/>`,
-    line: `<path d="M21 33h8M35 33h8" stroke="${k}" stroke-width="2.6" stroke-linecap="round"/>`,
-    wink: `<circle cx="25" cy="33" r="2.6" fill="${k}"/><path d="M35 34q4-4 8 0" stroke="${k}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`,
-    wide: `<circle cx="25" cy="32" r="5" fill="#fff" stroke="${k}" stroke-width="1.6"/><circle cx="39" cy="32" r="5" fill="#fff" stroke="${k}" stroke-width="1.6"/><circle cx="25" cy="32" r="2" fill="${k}"/><circle cx="39" cy="32" r="2" fill="${k}"/>`,
-    shades: `<rect x="18" y="29" width="12" height="7" rx="3" fill="${k}"/><rect x="34" y="29" width="12" height="7" rx="3" fill="${k}"/><path d="M30 31h4" stroke="${k}" stroke-width="2"/>`,
-    glasses: `<circle cx="25" cy="33" r="5.4" fill="none" stroke="${k}" stroke-width="2"/><circle cx="39" cy="33" r="5.4" fill="none" stroke="${k}" stroke-width="2"/><path d="M30.4 33h3.2" stroke="${k}" stroke-width="2"/><circle cx="25" cy="33" r="1.8" fill="${k}"/><circle cx="39" cy="33" r="1.8" fill="${k}"/>`,
-    sleepy: `<path d="M21 33q4 3 8 0M35 33q4 3 8 0" stroke="${k}" stroke-width="2.4" fill="none" stroke-linecap="round"/><text x="45" y="22" font-size="9" font-family="sans-serif" font-weight="700" fill="${k}">z</text>`,
-    monocle: `<circle cx="25" cy="33" r="2.6" fill="${k}"/><circle cx="39" cy="33" r="5.6" fill="rgba(255,255,255,.35)" stroke="#c9a227" stroke-width="2"/><circle cx="39" cy="33" r="2.2" fill="${k}"/><path d="M44 37q2 6-1 12" stroke="#c9a227" stroke-width="1.2" fill="none"/>`,
-  }[a.e]
-  const mouth = {
-    grin: `<path d="M23 42q9 10 18 0z" fill="${k}"/><path d="M25 43h14" stroke="#fff" stroke-width="2"/>`,
-    flat: `<path d="M26 45h12" stroke="${k}" stroke-width="2.6" stroke-linecap="round"/>`,
-    smile: `<path d="M25 43q7 6 14 0" stroke="${k}" stroke-width="2.6" fill="none" stroke-linecap="round"/>`,
-    o: `<ellipse cx="32" cy="46" rx="3.6" ry="4.4" fill="${k}"/>`,
-    smirk: `<path d="M27 45q7 1 12-4" stroke="${k}" stroke-width="2.6" fill="none" stroke-linecap="round"/>`,
-    tongue: `<path d="M25 43q7 6 14 0" stroke="${k}" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M33 46q3 6 6 0z" fill="#ff5c7a"/>`,
-    tash: `<path d="M26 47q6 3 12 0" stroke="${k}" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M32 41c-3-3-9-2-11 2 4-1 7 0 11 1 4-1 7-2 11-1-2-4-8-5-11-2z" fill="#5a3218"/>`,
-  }[a.m]
-  return `<svg class="avsvg" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="${a.bg}"/>${a.nose ? '<path d="M14 26q-6-12 6-14 2 8 0 14zM50 26q6-12-6-14-2 8 0 14z" fill="#ff7a45"/>' : ''}<circle cx="32" cy="36" r="19" fill="${a.f}"/>${eyes}${mouth}${a.nose ? '<circle cx="32" cy="39" r="3.6" fill="#e8102e"/>' : ''}</svg>`
+// a fresh seed whose look (species + palette) differs from the last few rolls, so every reroll visibly changes
+const AV_RECENT = []
+function newSeed() {
+  const abc = 'abcdefghijkmnopqrstuvwxyz23456789'
+  for (let tries = 0; ; tries++) {
+    const r = crypto.getRandomValues(new Uint8Array(10)), seed = [...r].map((x) => abc[x % abc.length]).join('')
+    const l = avLook(seed), key = l.species + '/' + l.palette, last = AV_RECENT[AV_RECENT.length - 1] || ''
+    if (tries < 40 && (AV_RECENT.includes(key) || last.split('/')[0] === l.species)) continue
+    AV_RECENT.push(key); if (AV_RECENT.length > 12) AV_RECENT.shift()
+    return seed
+  }
 }
 function avatarHTML(u) {
-  if (u?.avatar_id && AVATARS[u.avatar_id]) return `<span class="av">${avatarSVG(u.avatar_id)}</span>`
+  const seed = seedOf(u)
+  if (seed) return `<span class="av">${seedSVG(seed)}</span>`
   if (u?.google_avatar && /^https:\/\//.test(u.google_avatar)) return `<span class="av"><img src="${esc(u.google_avatar)}" alt="" referrerpolicy="no-referrer" loading="lazy"></span>`
   return `<span class="av sil">${SILHOUETTE}</span>`
 }
+const DICE = '<svg viewBox="0 0 24 24" aria-hidden="true" class="dicesvg"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="8.5" cy="8.5" r="1.6" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.6" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.6" fill="currentColor"/></svg>'
+// the reroller: one big avatar + a Reroll button; returns { get seed() } and wires itself into `root`
+function avatarRoller(root, start) {
+  let seed = start && SEED_RE.test(start) ? start : newSeed(), busy = 0
+  const big = root.querySelector('.avbig'), cap = root.querySelector('.avcap'), btn = root.querySelector('[data-av="reroll"]')
+  const paint = () => { big.innerHTML = seedSVG(seed); if (cap) cap.textContent = AV_NAMES[avLook(seed).species] || '' ; big.setAttribute('aria-label', `Your avatar: ${AV_NAMES[avLook(seed).species] || 'mascot'}`) }
+  paint()
+  btn.onclick = () => {
+    seed = newSeed()
+    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
+    clearTimeout(busy)
+    if (still) { paint(); return }
+    big.classList.remove('roll'); void big.offsetWidth; big.classList.add('roll')
+    btn.classList.remove('spin'); void btn.offsetWidth; btn.classList.add('spin')
+    busy = setTimeout(paint, 170) // swap at the squash, mid-spin
+  }
+  return { get seed() { return seed } }
+}
+const rollerHTML = (label = 'Reroll') => `<div class="avroll"><div class="avbig" role="img"></div><div class="avside"><span class="avcap"></span><button type="button" class="avbtn" data-av="reroll">${DICE}<span>${label}</span></button><small class="muted">Every roll is a new one-off.</small></div></div>`
+
 const ADJ = ['Deadpan', 'Punchy', 'Snarky', 'Giggly', 'Sly', 'Witty', 'Cheeky', 'Zany', 'Dry', 'Absurd', 'Silly', 'Smug', 'Wry', 'Goofy']
 const ANI = ['Duck', 'Panda', 'Otter', 'Llama', 'Badger', 'Moose', 'Gecko', 'Walrus', 'Ferret', 'Toucan', 'Yak', 'Heron', 'Lemur', 'Puffin']
 const pickR = (a) => a[Math.floor(Math.random() * a.length)]
@@ -1690,10 +1713,10 @@ function openOnboarding() {
   sh.innerHTML = `<div class="sheetcard" role="dialog" aria-modal="true" aria-labelledby="obh">
     <button type="button" class="sheetx" data-ob="close" aria-label="Close">×</button>
     <h2 id="obh">${first ? 'Make it yours' : 'Your profile'}</h2>
-    <p class="muted">${first ? 'Pick a name and a face your friends will see.' : 'Your name and face are what friends see.'}</p>
+    <p class="muted">${first ? 'Pick a name and roll a mascot. That\u2019s what friends see.' : 'Your name and mascot are what friends see.'}</p>
     <form id="obform" novalidate>
-      <label class="obl">Username<span class="obrow"><input id="obuser" maxlength="20" autocomplete="off" spellcheck="false" value="${esc(u.username || funnyName())}"><button type="button" class="obdice" data-ob="dice" aria-label="Suggest another name">🎲</button></span><small class="oberr" data-err="username"></small></label>
-      <fieldset class="obl"><legend>Avatar</legend><div class="obav">${Object.keys(AVATARS).map((id, i) => `<label title="${AVATAR_NAMES[id]}"><input type="radio" name="obav" value="${id}" ${(u.avatar_id || 'grin') === id ? 'checked' : ''}><span>${avatarSVG(id)}</span></label>`).join('')}</div><small class="oberr" data-err="avatar_id"></small></fieldset>
+      <label class="obl">Username<span class="obrow"><input id="obuser" maxlength="20" autocomplete="off" spellcheck="false" value="${esc(u.username || funnyName())}"><button type="button" class="obdice" data-ob="dice" aria-label="Reroll name" title="Reroll name">${DICE}</button></span><small class="oberr" data-err="username"></small></label>
+      <fieldset class="obl"><legend>Avatar</legend>${rollerHTML()}<small class="oberr" data-err="avatar_seed"></small></fieldset>
       <div class="obstats"><p class="obwhy"><b>Unlock your stats.</b> These power country and age splits (“58% of 25–34s in the UK picked Seinfeld”). They are never shown on your profile or to anyone else.</p>
         <label class="obl">Country<select id="obcc">${ccOptions(u.country || ccGuess())}</select><small class="oberr" data-err="country"></small></label>
         <label class="obl">Year of birth<input id="obyear" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="e.g. 1994" value="${u.birth_year || ''}"><small class="oberr" data-err="birth_year"></small></label>
@@ -1707,11 +1730,12 @@ function openOnboarding() {
   sh.onclick = (e) => { if (e.target === sh) close() }
   sh.querySelectorAll('[data-ob="close"]').forEach((b) => (b.onclick = close))
   sh.querySelector('[data-ob="dice"]').onclick = () => { sh.querySelector('#obuser').value = funnyName() }
+  const roller = avatarRoller(sh.querySelector('.avroll'), seedOf(u))
   sh.querySelector('#obform').onsubmit = async (e) => {
     e.preventDefault()
     sh.querySelectorAll('.oberr').forEach((x) => (x.textContent = ''))
     const val = (q) => sh.querySelector(q)?.value?.trim() || ''
-    const body = { username: val('#obuser'), avatar_id: sh.querySelector('input[name=obav]:checked')?.value }
+    const body = { username: val('#obuser'), avatar_seed: roller.seed }
     const cc = val('#obcc'), yr = val('#obyear'), sx = sh.querySelector('input[name=obsex]:checked')?.value
     if (cc) body.country = cc
     if (yr) { const y = Number(yr); if (!Number.isInteger(y) || y < 1900 || y > new Date().getFullYear()) { sh.querySelector('[data-err=birth_year]').textContent = 'Enter a four-digit year.'; return } body.birth_year = y }
@@ -1727,11 +1751,32 @@ function openOnboarding() {
     }
     if (!r?.ok) {
       const f = r?.j?.fields || {}
-      for (const [k, m] of Object.entries(f)) { const el = sh.querySelector(`[data-err="${k}"]`); if (el) el.textContent = k === 'username' && /taken/.test(m) ? 'That name\u2019s taken. Try another (🎲).' : m }
+      for (const [k, m] of Object.entries(f)) { const el = sh.querySelector(`[data-err="${k}"]`); if (el) el.textContent = k === 'username' && /taken/.test(m) ? 'That name\u2019s taken. Reroll or try another.' : m }
       if (!Object.keys(f).length) sh.querySelector('[data-err=form]').textContent = 'Couldn\u2019t save right now. Please try again.'
       return
     }
     USER = r.j.user; close(); paintUser(); paintProfilePage(); toast(first ? `Welcome, ${USER.username}.` : 'Profile saved.')
+  }
+}
+
+// ---------- change avatar: the same reroller on its own ----------
+function openAvatarSheet() {
+  const sh = $('#sheet'); if (!sh || !USER) return
+  sh.innerHTML = `<div class="sheetcard avsheet" role="dialog" aria-modal="true" aria-labelledby="avh">
+    <button type="button" class="sheetx" data-ob="close" aria-label="Close">×</button>
+    <h2 id="avh">Change avatar</h2><p class="muted">Roll until one feels like you.</p>
+    ${rollerHTML()}<p class="oberr big" data-err="form"></p>
+    <div class="obact"><button type="button" class="dhbtn" data-ob="save">Keep this one</button><button type="button" class="dhghost" data-ob="close">Cancel</button></div></div>`
+  sh.hidden = false
+  const close = () => { sh.hidden = true; sh.innerHTML = '' }
+  sh.onclick = (e) => { if (e.target === sh) close() }
+  sh.querySelectorAll('[data-ob="close"]').forEach((b) => (b.onclick = close))
+  const roller = avatarRoller(sh.querySelector('.avroll'), seedOf(USER))
+  sh.querySelector('[data-ob="save"]').onclick = async (e) => {
+    const btn = e.currentTarget; btn.disabled = true
+    const r = await api('/me/profile', { method: 'PUT', body: { avatar_seed: roller.seed } }).catch(() => null); btn.disabled = false
+    if (!r?.ok) { sh.querySelector('[data-err=form]').textContent = 'Couldn\u2019t save right now. Please try again.'; return }
+    USER = r.j.user; close(); paintUser(); paintProfilePage(); toast('New look saved.')
   }
 }
 
@@ -1740,13 +1785,14 @@ async function paintProfilePage() {
   const el = $('#profileview'); if (!el || $('#v-profile')?.hidden) return
   if (!signedIn()) { el.innerHTML = `<div class="pf"><h2>Your profile</h2><p class="empty">Sign in with Google from the account menu to add friends and compare your taste.</p></div>`; return }
   const u = USER
-  el.innerHTML = `<div class="pf"><div class="pfhead">${avatarHTML(u)}<div><h2>${esc(u.username || 'New comic fan')}</h2><p class="muted small">${esc(u.email || '')}</p></div><button type="button" class="dhghost" id="pfedit">Edit profile</button></div>
+  el.innerHTML = `<div class="pf"><div class="pfhead"><button type="button" class="pfav" id="pfav" aria-label="Change avatar" title="Change avatar">${avatarHTML(u)}<span class="pfavdice">${DICE}</span></button><div><h2>${esc(u.username || 'New comic fan')}</h2><p class="muted small">${esc(u.email || '')}</p></div><span class="pfbtns"><button type="button" class="dhghost" id="pfavbtn">Change avatar</button><button type="button" class="dhghost" id="pfedit">Edit profile</button></span></div>
     <div class="kpis pfk"><div class="kpi"><b id="pk-sent">–</b><span>clashes shared</span></div><div class="kpi"><b id="pk-open">–</b><span>opened by friends</span></div><div class="kpi"><b id="pk-voted">–</b><span>friends voted</span></div><div class="kpi"><b id="pk-fr">–</b><span>friends</span></div></div>
     <h3>Taste match</h3><div id="pftaste" class="pflist"><p class="muted">Loading…</p></div>
     <h3>Invites you sent</h3><div id="pfinv" class="pflist"><p class="muted">Loading…</p></div>
     <div class="pfpriv"><h3>Only you see this</h3><p class="muted small">${[u.birth_year ? 'Born ' + u.birth_year : null, u.country ? ccName(u.country) : null, { male: 'Male', female: 'Female', skip: 'Prefer not to say' }[u.sex_at_birth] || null].filter(Boolean).map(esc).join(' · ') || 'No stats details yet. Add them in Edit profile to unlock country and age splits.'}</p>
       <p class="hdata"><a class="btn ghost" href="privacy.html" target="_blank" rel="noopener">Privacy</a><button type="button" class="btn danger" id="pfdel">Delete my account</button></p></div></div>`
   el.querySelector('#pfedit').onclick = openOnboarding
+  el.querySelector('#pfav').onclick = el.querySelector('#pfavbtn').onclick = openAvatarSheet
   el.querySelector('#pfdel').onclick = deleteAccount
   const [inv, taste] = await Promise.all([api('/me/invites').catch(() => null), api('/me/taste').catch(() => null)])
   if (!document.body.contains(el)) return
@@ -1779,10 +1825,10 @@ function paintMenu() {
   const m = $('#usermenu'); if (!m) return
   const lane = `<div class="um-sec um-row"><span>Lineup</span><span id="lanebox"></span></div>`
   const adv = `<details class="um-adv"><summary>Advanced</summary><div class="um-sec">${bskyHTML()}</div></details>`
-  const legal = `<p class="um-legal"><a href="privacy.html" target="_blank" rel="noopener">Privacy</a> · <a href="terms.html" target="_blank" rel="noopener">Terms</a></p>`
+  const legal = `<p class="um-legal"><a href="privacy.html" target="_blank" rel="noopener">Privacy</a> · <a href="terms.html" target="_blank" rel="noopener">Terms</a> · <a href="credits.html" target="_blank" rel="noopener">Credits</a></p>`
   if (signedIn()) {
     m.innerHTML = `<div class="um-sec um-me">${avatarHTML(USER)}<div><b>${esc(USER.username || USER.name || 'You')}</b><small>${esc(USER.email || '')}</small></div></div>
-      <div class="um-sec"><button type="button" class="um-item" data-um="profile">Your profile</button><button type="button" class="um-item" data-um="history">History</button>${USER.username ? '' : '<button type="button" class="um-item gold" data-um="edit">Finish your profile</button>'}</div>
+      <div class="um-sec"><button type="button" class="um-item" data-um="profile">Your profile</button><button type="button" class="um-item" data-um="history">History</button><button type="button" class="um-item" data-um="avatar">Change avatar</button>${USER.username ? '' : '<button type="button" class="um-item gold" data-um="edit">Finish your profile</button>'}</div>
       ${lane}<div class="um-sec"><button type="button" class="um-item" data-um="signout">Sign out</button></div>${adv}
       <div class="um-sec"><button type="button" class="um-del" data-um="delete">Delete my account</button>${legal}</div>`
   } else {
@@ -1798,6 +1844,7 @@ function paintMenu() {
     if (k === 'history') { showTab('you'); youSub('history') }
     else if (k === 'profile') { showTab('profile'); paintProfilePage() }
     else if (k === 'edit') openOnboarding()
+    else if (k === 'avatar') openAvatarSheet()
     else if (k === 'signout') signOut()
     else if (k === 'delete') deleteAccount()
   }))
