@@ -434,7 +434,7 @@ function slideHTML(a, b, n, first) {
       <div class="faceoff">${faceCard(a, 'L')}<span class="vsx">VS</span>${faceCard(b, 'R')}</div>
       <div class="introfoot"></div>
     </div>
-    <div class="theatre">${scr(a, 'L')}${scr(b, 'R')}<button class="skipclip" type="button" data-act="skipclip" aria-label="Not funny: skip to clip two">Not funny → #2</button></div>
+    <div class="theatre">${scr(a, 'L')}${scr(b, 'R')}<div class="peek" aria-hidden="true"><span class="pkimg" ${b.media === 'youtube' ? `style="background-image:url(${thumb(b.id)})"` : ''}></span><span class="pkcap"><b>#2</b> ${esc(b.comic)}</span></div></div>
     <div class="ballot"><p class="bq">Which was funnier?</p><div class="picks">${shot(a, 'L')}${shot(b, 'R')}</div>
       <div class="audiofb" role="group" aria-label="Sound level feedback"><span>Sound off?</span>${[['L', '#1'], ['R', '#2']].map(([sd, n]) => `<button type="button" data-aud="${sd}" data-k="loud">${n} too loud</button><button type="button" data-aud="${sd}" data-k="quiet">${n} too quiet</button>`).join('')}</div>
       <div class="count"><i></i></div><p class="hint">Tap one, or ← / →. No pick in 3s = pass.</p>
@@ -453,10 +453,10 @@ function setStage(s) {
   if (cur?.el) cur.el.dataset.stage = s
   document.body.classList.toggle('in-theatre', s === 'left' || s === 'right')
   if (s !== 'left' && s !== 'right') soundPill(false)
-  const label = s === 'left' ? 'Not funny → #2' : s === 'right' ? 'Not funny → vote' : ''
-  const aria = s === 'left' ? 'Not funny: skip to clip two' : 'Not funny: skip to the vote'
-  const sk = q('.skipclip'); if (sk && label) { sk.textContent = label; sk.setAttribute('aria-label', aria) }
-  const cb = $('#skipbtn'); if (cb) { cb.hidden = !label; if (label) { cb.textContent = label; cb.setAttribute('aria-label', aria) } }
+  if (s === 'right') { // the peek now previews the ballot, not clip two
+    const pk = q('.peek'); if (pk) pk.innerHTML = '<span class="pkimg pkvote">Which was funnier?</span><span class="pkcap"><b>Vote</b></span>'
+  }
+  paintRail()
   updateChrome()
 }
 function stopScreening() {
@@ -502,18 +502,23 @@ function finishSlide(host, oldEl) {
   if (!oldEl) { host.querySelectorAll('.slide').forEach((x) => x !== el && x.remove()); return }
   if (reduced()) { oldEl.remove(); return }
   el.classList.add('enter'); void el.offsetWidth
-  oldEl.classList.add('leave'); el.classList.remove('enter')
+  const th = oldEl.querySelector('.theatre')
+  if (th && (oldEl.dataset.stage === 'left' || oldEl.dataset.stage === 'right')) {
+    th.style.transition = 'transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s'
+    th.style.transform = `translate3d(0,${-innerHeight}px,0)`; th.style.opacity = '0'
+    oldEl.dataset.stage = 'leaving'; oldEl.classList.add('leave-fade')
+  } else oldEl.classList.add('leave')
+  el.classList.remove('enter')
   setTimeout(() => oldEl.remove(), 520)
 }
 function bindSlide(el) {
   el.querySelector('.intro').onclick = () => { if (stage === 'intro') { userStarted = true; startClip('L') } }
   el.querySelectorAll('.pick').forEach((x) => (x.onclick = (e) => { e.stopPropagation(); vote(x.dataset.side) }))
   el.querySelectorAll('.shield').forEach((sh) => (sh.onclick = () => {
+    if (now() - dragEndAt < 400) return // the tail of a swipe, not a tap
     if (tapRevealed) { tapRevealed = false; return } // chrome was hidden: this tap only brings it back
     screens[sh.closest('.screen').dataset.side]?.toggle()
   }))
-  const sk = el.querySelector('.skipclip')
-  if (sk) sk.onclick = (e) => { e.stopPropagation(); skipClip() }
   el.querySelectorAll('[data-aud]').forEach((bt) => (bt.onclick = (e) => {
     e.stopPropagation()
     pauseBallot('Countdown paused. Pick when you\u2019re ready.')
@@ -592,7 +597,7 @@ function pass() {
   goNext(null); paintHistory()
 }
 
-// swipe up / wheel / ArrowUp / PageDown / "Next clash": leave this screening at any stage
+// swipe up / wheel / ArrowUp / PageDown / S / the rail's Skip: leave this screening at any stage
 function skipClash() {
   if (!current || moving || stage === 'done' || stage === 'idle') return goNext(null)
   const [a, b] = current, sg = signals()
@@ -656,34 +661,185 @@ async function vote(side) {
 const arenaOn = () => !$('#v-arena')?.hidden
 document.addEventListener('keydown', (e) => {
   if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName) || !arenaOn()) return
+  if (e.metaKey || e.ctrlKey || e.altKey) return
   if ((e.key === 'ArrowRight' || e.key === 'n' || e.key === 'N') && (stage === 'left' || stage === 'right')) { e.preventDefault(); skipClip() }
   else if (e.key === 'ArrowLeft') vote('L')
   else if (e.key === 'ArrowRight') vote('R')
-  else if (e.key === 'ArrowUp' || e.key === 'PageDown') { e.preventDefault(); skipClash() }
+  else if (e.key === 'ArrowUp' || e.key === 'PageDown' || e.key === 's' || e.key === 'S') { e.preventDefault(); skipClash() }
+  else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFullscreen() }
   else if ((e.key === ' ' || e.key === 'Enter') && stage === 'intro' && e.target === document.body) { e.preventDefault(); userStarted = true; startClip('L') }
 })
+// ---------- gestures: drag up = next clash, drag left = the opponent. The stage follows the finger (transforms only). ----------
+let dragEndAt = 0, committing = false
+const isClip = () => stage === 'left' || stage === 'right'
+function dragLayer() { // what moves under the finger on a vertical drag
+  if (!cur?.el) return null
+  return cur.el.querySelector(isClip() ? '.theatre' : stage === 'intro' ? '.intro' : '.ballot') || cur.el
+}
+function setPull(p, armedUp) { // the next face-off card rising from the bottom
+  const pn = $('#pullnext'); if (!pn) return
+  if (p == null) { pn.style.transition = 'transform .35s cubic-bezier(.2,.9,.3,1),opacity .3s'; pn.style.transform = ''; pn.style.opacity = ''; pn.classList.remove('armed'); return }
+  pn.style.transition = 'none'
+  pn.style.transform = `translate3d(-50%,${Math.round((1 - Math.min(1, p)) * 100)}%,0)`
+  pn.style.opacity = String(Math.min(1, p * 1.6)); pn.classList.toggle('armed', !!armedUp)
+}
 function bindGestures() {
   const stageEl = $('#stage'); if (!stageEl) return
-  let y0 = null, x0 = null, t0 = 0
-  const start = (e) => { const t = e.touches?.[0]; if (!t) return; y0 = t.clientY; x0 = t.clientX; t0 = now() }
-  const end = (e) => {
-    const t = e.changedTouches?.[0]; if (!t || y0 == null) return
-    const dy = t.clientY - y0, dx = t.clientX - x0; y0 = null
-    if (dy < -60 && Math.abs(dy) > 1.5 * Math.abs(dx) && now() - t0 < 800) skipClash()
-    else if (dx < -60 && Math.abs(dx) > 1.5 * Math.abs(dy) && now() - t0 < 800 && (stage === 'left' || stage === 'right')) { tapRevealed = false; skipClip() }
+  let x0 = 0, y0 = 0, t0 = 0, lx = 0, ly = 0, lt = 0, vx = 0, vy = 0, axis = null, active = false, raf = 0, dx = 0, dy = 0
+  let tgt = null, scr = null, peek = null
+  const H = () => innerHeight || 800, W = () => innerWidth || 800
+  const rubber = (d, lim) => (d * 0.9) / (1 + Math.abs(d) / (lim * 1.4)) // more resistance the further you pull
+  const clear = (els) => els.forEach((x) => { if (x) { x.style.transition = ''; x.style.transform = ''; x.style.opacity = '' } })
+  const spring = (els) => {
+    els.forEach((x) => { if (x) { x.style.transition = 'transform .38s cubic-bezier(.2,.9,.3,1.15),opacity .3s'; x.style.transform = ''; x.style.opacity = '' } })
+    setTimeout(() => els.forEach((x) => x && (x.style.transition = '')), 420)
   }
-  // the theatre and its transparent shields sit over the iframe, so swipes land here and not in YouTube
-  document.addEventListener('touchstart', (e) => { if (arenaOn() && e.target.closest?.('#stage')) start(e) }, { passive: true })
-  document.addEventListener('touchend', (e) => { if (arenaOn() && e.target.closest?.('#stage')) end(e) }, { passive: true })
+  const paint = () => {
+    raf = 0
+    if (axis === 'y' && tgt) {
+      const up = Math.min(0, dy), off = rubber(up, H())
+      tgt.style.transform = `translate3d(0,${off}px,0)`
+      setPull(-up / (H() * 0.25), -up > H() * 0.25)
+    } else if (axis === 'x' && scr) {
+      const l = Math.min(0, dx), off = rubber(l, W())
+      scr.style.transform = `translate3d(${off}px,0,0)`
+      if (peek) peek.style.transform = `translate3d(${Math.max(-peek.offsetWidth - 24, off * 0.7)}px,-50%,0)`
+    }
+  }
+  const begin = (t) => { x0 = lx = t.clientX; y0 = ly = t.clientY; t0 = lt = now(); vx = vy = 0; axis = null; active = true; dx = dy = 0 }
+  stageEl.addEventListener('touchstart', (e) => {
+    if (!arenaOn() || !screeningActive() || committing || moving || e.touches.length > 1) { active = false; return }
+    begin(e.touches[0])
+  }, { passive: true })
+  stageEl.addEventListener('touchmove', (e) => {
+    if (!active) return
+    const t = e.touches[0]; if (!t) return
+    const n = now(), dt = Math.max(1, n - lt)
+    vx = 0.7 * vx + 0.3 * ((t.clientX - lx) / dt); vy = 0.7 * vy + 0.3 * ((t.clientY - ly) / dt); lx = t.clientX; ly = t.clientY; lt = n
+    dx = t.clientX - x0; dy = t.clientY - y0
+    if (!axis) {
+      if (Math.hypot(dx, dy) < 10) return
+      if (dy < 0 && -dy > 1.2 * Math.abs(dx)) axis = 'y'
+      else if (dx < 0 && -dx > 1.2 * Math.abs(dy) && isClip()) axis = 'x'
+      else { axis = 'none'; return }
+      if (!reduced()) {
+        if (axis === 'y') { tgt = dragLayer(); if (tgt) tgt.style.transition = 'none' }
+        else { scr = cur?.el?.querySelector('.screen.big'); peek = cur?.el?.querySelector('.peek'); [scr, peek].forEach((x) => x && (x.style.transition = 'none')) }
+      }
+    }
+    if (axis === 'none') return
+    if (e.cancelable) e.preventDefault()
+    if (!reduced() && !raf) raf = requestAnimationFrame(paint)
+  }, { passive: false })
+  const end = () => {
+    if (!active) return
+    active = false
+    if (raf) { cancelAnimationFrame(raf); raf = 0 }
+    if (!axis || axis === 'none') return
+    dragEndAt = now(); tapRevealed = false
+    const fast = (v, d) => v < -0.55 && d < -40
+    if (axis === 'y') {
+      const go = -dy > H() * 0.25 || fast(vy, dy)
+      const el = tgt; tgt = null
+      if (go) {
+        setPull(null)
+        // the layer keeps its offset; the leaving slide (or theatre) carries on from there
+        skipClash()
+      } else { spring([el]); setPull(null) }
+    } else if (axis === 'x') {
+      const go = -dx > W() * 0.25 || fast(vx, dx)
+      const s1 = scr, pk = peek; scr = peek = null
+      if (!go) { spring([s1, pk]); return }
+      if (reduced() || !s1) { clear([s1, pk]); skipClip(); return }
+      committing = true
+      s1.style.transition = 'transform .28s cubic-bezier(.3,.7,.2,1)'; s1.style.transform = `translate3d(${-W()}px,0,0)`
+      if (pk) { pk.style.transition = 'transform .28s cubic-bezier(.3,.7,.2,1),opacity .28s'; pk.style.transform = `translate3d(${-(W() + pk.offsetWidth) / 2}px,-50%,0)` }
+      setTimeout(() => {
+        committing = false
+        skipClip()
+        if (pk) pk.style.opacity = '0'
+        requestAnimationFrame(() => { clear([s1]); setTimeout(() => clear([pk]), 320) })
+      }, 270)
+    }
+  }
+  stageEl.addEventListener('touchend', end, { passive: true })
+  stageEl.addEventListener('touchcancel', () => { if (!active) return; active = false; spring([tgt, scr, peek]); setPull(null); tgt = scr = peek = null }, { passive: true })
+  // wheel (mouse or trackpad, either direction, as before): one notch-burst = one skip
   let acc = 0, accT = 0
   stageEl.addEventListener('wheel', (e) => {
-    if (!arenaOn()) return
+    if (!arenaOn() || !screeningActive()) return
     e.preventDefault()
     if (now() - accT > 400) acc = 0
     acc += Math.abs(e.deltaY); accT = now()
     if (acc > 120) { acc = -1e9; skipClash(); setTimeout(() => (acc = 0), 900) }
   }, { passive: false })
-  $('#nextclash').onclick = (e) => { e.stopPropagation(); skipClash() }
+  const gs = $('#gskip'); if (gs) gs.onclick = (e) => { e.stopPropagation(); skipClash() }
+  const go = $('#gopp'); if (go) go.onclick = (e) => { e.stopPropagation(); skipClip() }
+}
+// the right-edge rail: faint glyphs. One gentle pulse on the very first screening ever, then near-invisible unless the mouse moves.
+let railT = null
+function paintRail() {
+  const r = $('#gest'); if (!r) return
+  r.dataset.stage = stage
+  const o = $('#gopp')
+  if (o) {
+    o.hidden = !isClip()
+    o.setAttribute('aria-label', stage === 'right' ? 'Skip to the vote (swipe left, N)' : 'Watch the opponent (swipe left, N)')
+    o.title = stage === 'right' ? 'To the vote (swipe left)' : 'Opponent (swipe left)'
+  }
+  if (stage === 'left' && !LS.get('gestHinted', false)) {
+    LS.set('gestHinted', true)
+    if (!reduced()) { r.classList.add('pulse'); clearTimeout(railT); railT = setTimeout(() => r.classList.remove('pulse'), 3200) }
+  }
+}
+
+// ---------- fullscreen: the whole screening (intro, both clips, ballot) in the Fullscreen API; CSS pseudo-fullscreen on iPhone ----------
+let fsPseudo = false, escBusy = false
+const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement || null
+const fsNative = () => { const de = document.documentElement; return !!(document.fullscreenEnabled || document.webkitFullscreenEnabled) && !!(de.requestFullscreen || de.webkitRequestFullscreen) }
+const fsOn = () => !!fsEl() || fsPseudo
+const FS_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>'
+const FS_EXIT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>'
+function paintFs() {
+  const on = fsOn()
+  document.body.classList.toggle('fs', on); document.body.classList.toggle('fs-pseudo', fsPseudo && !fsEl())
+  const b = $('#fsbtn'); if (!b) return
+  b.innerHTML = on ? FS_EXIT : FS_ICON; b.setAttribute('aria-pressed', String(on))
+  b.setAttribute('aria-label', on ? 'Exit fullscreen (F)' : 'Fullscreen (F)'); b.title = on ? 'Exit fullscreen (F)' : 'Fullscreen (F)'
+}
+async function enterNative() {
+  const de = document.documentElement
+  try { await (de.requestFullscreen ? de.requestFullscreen({ navigationUI: 'hide' }) : de.webkitRequestFullscreen()); fsPseudo = false; return true } catch { return false }
+}
+function fsTip() {
+  if (LS.get('fsTip', false) || (typeof navigator !== 'undefined' && navigator.standalone)) return
+  LS.set('fsTip', true); toast('Tip: Share → Add to Home Screen gives Funnier the whole screen.')
+}
+async function setFullscreen(on) {
+  LS.set('fs', !!on)
+  if (on) {
+    if (fsNative()) { if (!fsEl() && !(await enterNative())) fsPseudo = true }
+    else { fsPseudo = true; fsTip() }
+  } else {
+    fsPseudo = false
+    if (fsEl()) { try { await (document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen()) } catch {} }
+  }
+  paintFs(); showChrome()
+}
+function toggleFullscreen() { return setFullscreen(!fsOn()) }
+function bindFullscreen() {
+  const b = $('#fsbtn'); if (b) b.onclick = (e) => { e.stopPropagation(); toggleFullscreen() }
+  const onChange = () => { if (!fsEl() && !fsPseudo) LS.set('fs', false); paintFs() } // Esc out of real fullscreen = preference off
+  document.addEventListener('fullscreenchange', onChange); document.addEventListener('webkitfullscreenchange', onChange)
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') escBusy = menuOpen() || !($('#sheet')?.hidden ?? true) }, { capture: true })
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && fsPseudo && !fsEl() && !escBusy) setFullscreen(false) })
+  if (LS.get('fs', false)) { // remembered: lay out fullscreen now; real fullscreen needs a gesture, so take the first one
+    fsPseudo = true; paintFs()
+    if (fsNative()) {
+      const up = () => { removeEventListener('pointerdown', up, true); removeEventListener('keydown', up, true); if (LS.get('fs', false) && !fsEl()) enterNative().then(paintFs) }
+      addEventListener('pointerdown', up, true); addEventListener('keydown', up, true)
+    }
+  } else paintFs()
 }
 
 // ---------- charts ----------
@@ -947,7 +1103,8 @@ function showChrome(ms = HIDE_AFTER_MS) {
   if (chromeHidden) setChromeHidden(false)
   if (screeningActive()) scheduleHide(ms); else clearTimeout(chromeT)
 }
-let wasActive = false
+let wasActive = false, railWakeT = null
+function wakeRail() { document.body.classList.add('rail-on'); clearTimeout(railWakeT); railWakeT = setTimeout(() => document.body.classList.remove('rail-on'), HIDE_AFTER_MS) }
 function updateChrome() {
   const sb = $('#sharebtn'); if (sb) sb.hidden = !current || !arenaOn()
   const act = screeningActive()
@@ -960,7 +1117,7 @@ function bindChrome() {
   addEventListener('pointermove', (e) => {
     if (e.pointerType && e.pointerType !== 'mouse') return
     nearTop = e.clientY <= TOP_ZONE
-    if (screeningActive()) showChrome()
+    if (screeningActive()) { showChrome(); wakeRail() }
   }, { passive: true })
   document.addEventListener('mouseleave', () => (nearTop = false))
   // touch/pen: the first tap while the menu is hidden only reveals it (the shield then skips play/pause)
@@ -972,7 +1129,6 @@ function bindChrome() {
   document.addEventListener('focusin', (e) => { if (e.target.closest?.('#chrome, #brand')) showChrome() })
   document.addEventListener('keydown', (e) => { if (e.key === 'Tab') showChrome() })
   const sb = $('#sharebtn'); if (sb) sb.onclick = (e) => { e.stopPropagation(); shareCurrent() }
-  const kb = $('#skipbtn'); if (kb) kb.onclick = (e) => { e.stopPropagation(); skipClip() }
   document.addEventListener('pointerdown', () => { soundOK = true }, { capture: true, passive: true })
   document.addEventListener('keydown', () => { soundOK = true }, { capture: true })
   const sp = $('#soundbtn'); if (sp) sp.onclick = (e) => { e.stopPropagation(); soundOn() }
@@ -1702,6 +1858,6 @@ function tabs() {
     const D = dailyFor(dayStr())
     if (D && !dailyMine(D.date) && LS.get('dailyAuto', '') !== D.date && !/^#(comic|history)/.test(location.hash)) { LS.set('dailyAuto', D.date); pendingClash = { a: D.a, b: D.b, pick: null, daily: D.date } }
   }
-  bindGestures(); bindChrome(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); paintDaily(); window._route()
+  bindGestures(); bindChrome(); bindFullscreen(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); paintDaily(); window._route()
   initAuth(); initAccount()
 })()

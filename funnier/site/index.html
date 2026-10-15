@@ -21,6 +21,7 @@
     <button data-tab="you">Your model</button>
   </nav>
   <div class="usr">
+    <button id="fsbtn" class="fsbtn" type="button" aria-pressed="false" aria-label="Fullscreen (F)" title="Fullscreen (F)"></button>
     <button id="userbtn" class="userbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Your account"></button>
     <div id="usermenu" class="usermenu" role="menu" hidden></div>
   </div>
@@ -29,7 +30,12 @@
 <main>
   <section class="view" id="v-arena">
     <div id="daily" class="dailyhero" hidden></div>
-    <div id="arena"><div id="stage" tabindex="-1" aria-live="polite"></div><button id="nextclash" class="nextclash" aria-label="Next clash">Next clash ↑</button><div class="why" id="why"></div></div>
+    <div id="arena"><div id="stage" tabindex="-1" aria-live="polite"></div><div class="why" id="why"></div></div>
+    <div id="gest" class="gest" role="group" aria-label="Screening gestures">
+      <button type="button" id="gskip" class="gbtn gskip" aria-label="Skip this clash (swipe up, S)" title="Skip (swipe up)"><span class="gl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></span><span class="t">Skip</span></button>
+      <button type="button" id="gopp" class="gbtn gopp" aria-label="Watch the opponent (swipe left, N)" title="Opponent (swipe left)" hidden><span class="gl"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span><span class="t">Opponent</span></button>
+    </div>
+    <div id="pullnext" class="pullnext" aria-hidden="true"><span class="pnvs">VS</span><span class="pnt"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>Next clash</span></div>
     <div id="soundpill" class="soundpill" hidden><button type="button" id="soundbtn">🔊 Tap for sound</button></div>
   </section>
 
