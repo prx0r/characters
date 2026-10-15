@@ -1,0 +1,44 @@
+{
+  "slug": "zeus-sky-sovereign",
+  "name": "Zeus, Sky Sovereign",
+  "affect_derived": {
+    "arousal": 0.5,
+    "valence": 0.1,
+    "power": 0.68,
+    "evidence": {
+      "fear": [],
+      "power": [
+        "hierarchy",
+        "king",
+        "law",
+        "ledger"
+      ],
+      "warmth": [],
+      "spike": []
+    }
+  },
+  "mary": {
+    "pred_rate_delta": 0.02,
+    "pred_volume_db": 0.0,
+    "pitch_direction": "flat"
+  },
+  "signature": {
+    "emotion": "neutral",
+    "cue": "[neutral]",
+    "from_misinterpretation": "Treats every complaint as a petition from a smaller god"
+  },
+  "modulator_cycle": [
+    "smug",
+    "drunk_on_power"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pace_texture": "measured",
+    "pitch_band": "mid",
+    "signature_recipe": null,
+    "starting_modulator": "smug"
+  },
+  "why": "fear=- power=['hierarchy', 'king', 'law', 'ledger'] warmth=- spikes=-",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

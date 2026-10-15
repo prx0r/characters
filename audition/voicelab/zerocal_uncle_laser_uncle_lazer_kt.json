@@ -1,0 +1,95 @@
+{
+  "set": "uncle_lazer_kt",
+  "comedian": "uncle_laser",
+  "condition": "zero-calibration (text profile + population priors only; never heard their audio)",
+  "profile_archetype": "bisociation",
+  "emotion_acc": 0.278,
+  "wpm_mae": 57.7,
+  "n_beats": 9,
+  "rows": [
+    {
+      "seg": "s0",
+      "pred_emo": "neutral",
+      "true_emo": "mock_indignant",
+      "match_score": 0.0,
+      "gen_wpm": 143.1,
+      "act_wpm": 78.0,
+      "wpm_err": 65.2
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "sarcastic",
+      "true_emo": "sarcastic",
+      "match_score": 1.0,
+      "gen_wpm": 188.8,
+      "act_wpm": 61.4,
+      "wpm_err": 127.4
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "gleeful",
+      "true_emo": "sarcastic",
+      "match_score": 0.0,
+      "gen_wpm": 136.0,
+      "act_wpm": 176.1,
+      "wpm_err": -40.1
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "manic",
+      "true_emo": "sarcastic",
+      "match_score": 0.0,
+      "gen_wpm": 208.4,
+      "act_wpm": 181.3,
+      "wpm_err": 27.1
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "manic",
+      "true_emo": "sarcastic",
+      "match_score": 0.0,
+      "gen_wpm": 208.3,
+      "act_wpm": 148.4,
+      "wpm_err": 59.9
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "sarcastic",
+      "true_emo": "sarcastic",
+      "match_score": 1.0,
+      "gen_wpm": 219.2,
+      "act_wpm": 183.8,
+      "wpm_err": 35.4
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "sarcastic",
+      "true_emo": "mock_indignant",
+      "match_score": 0.5,
+      "gen_wpm": 139.6,
+      "act_wpm": 87.9,
+      "wpm_err": 51.7
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "manic",
+      "true_emo": "mock_indignant",
+      "match_score": 0.0,
+      "gen_wpm": 186.2,
+      "act_wpm": 152.1,
+      "wpm_err": 34.1
+    },
+    {
+      "seg": "s8",
+      "pred_emo": "manic",
+      "true_emo": "mock_indignant",
+      "match_score": 0.0,
+      "gen_wpm": 170.7,
+      "act_wpm": 92.4,
+      "wpm_err": 78.3
+    }
+  ],
+  "wav": "/home/box/zerocal_uncle_laser_uncle_lazer_kt.wav",
+  "cost_note": "jev ~$0.0001 + fish free",
+  "at": "2026-10-14T18:18:27Z"
+}

@@ -1,0 +1,79 @@
+{
+  "title": "minute_v1_kappa_kyle",
+  "method": "blind-spot material -> ari kt704 arc -> kid voice",
+  "blind_spots_aimed": [
+    "bowing is not a business model",
+    "pickles are an insult, not payment"
+  ],
+  "misinterpretation_rule": "Treats every interaction as a transaction denominated in cucumbers",
+  "beats": [
+    {
+      "seg": 0,
+      "label": "gleeful",
+      "text": "So that's nine from him, one from you, and if I nail this, the whole building owes me. Bow back. I dare you.",
+      "recipe": {
+        "temp": 0.92,
+        "speed": 0.9,
+        "cue": "[delighted]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 1,
+      "label": "manic",
+      "text": "I'm Kappa Kyle, and I'm auditioning! Which means you owe me a cucumber for my time.",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.75,
+        "cue": "[excited]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 2,
+      "label": "sarcastic",
+      "text": "I keep a ledger. Everyone who hears me talk owes exactly one cucumber. It's in the bylaws.",
+      "recipe": {
+        "temp": 0.65,
+        "speed": 0.8,
+        "cue": "[excited]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 3,
+      "label": "mock_indignant",
+      "text": "Dave from 3B still hasn't paid, and now YOU'RE looking at me like HE does \u2014 like the debt isn't real.",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 0.79,
+        "cue": "[frustrated]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 4,
+      "label": "gleeful",
+      "text": "So that's nine from him, one from you, and if I nail this, the whole building owes me. Bow back. I dare you.",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.56,
+        "cue": "[delighted]",
+        "vol": 0.0
+      }
+    }
+  ],
+  "out": "voicelab/written/minute_v1_kappa_kyle.wav",
+  "verify_match": 0.95,
+  "unsaid": [
+    "kappa",
+    "kyle",
+    "dave",
+    "3b",
+    "\u2014"
+  ],
+  "laugh_events": 0,
+  "duration_ms": 45426,
+  "pitch_std": 4.73,
+  "elapsed_s": 32.5
+}

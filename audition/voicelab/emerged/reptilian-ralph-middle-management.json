@@ -1,0 +1,45 @@
+{
+  "slug": "reptilian-ralph-middle-management",
+  "name": "Reptilian Ralph, Middle Management",
+  "affect_derived": {
+    "arousal": 0.46,
+    "valence": 0.05,
+    "power": 0.58,
+    "evidence": {
+      "fear": [],
+      "power": [
+        "bloodline",
+        "control",
+        "hierarchy"
+      ],
+      "warmth": [],
+      "spike": [
+        "flustered"
+      ]
+    }
+  },
+  "mary": {
+    "pred_rate_delta": -0.03,
+    "pred_volume_db": -0.3,
+    "pitch_direction": "flat"
+  },
+  "signature": {
+    "emotion": "neutral",
+    "cue": "[neutral]",
+    "from_misinterpretation": "Treats moral criticism as a workflow improvement request"
+  },
+  "modulator_cycle": [
+    "relaxed",
+    "smug"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pace_texture": "measured with micro-spikes",
+    "pitch_band": "mid",
+    "signature_recipe": null,
+    "starting_modulator": "relaxed"
+  },
+  "why": "fear=- power=['bloodline', 'control', 'hierarchy'] warmth=- spikes=['flustered']",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

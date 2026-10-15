@@ -1,0 +1,1743 @@
+{
+ "words": [
+  {
+   "text": "I",
+   "start": 0.0,
+   "end": 0.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 0.5,
+   "end": 1.0,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "in",
+   "start": 1.0,
+   "end": 1.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Upstate",
+   "start": 1.5,
+   "end": 2.0,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "New",
+   "start": 2.0,
+   "end": 2.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "York",
+   "start": 2.5,
+   "end": 2.95,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "in",
+   "start": 2.95,
+   "end": 3.4,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "a",
+   "start": 3.4,
+   "end": 3.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "small",
+   "start": 3.86,
+   "end": 4.31,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "town",
+   "start": 4.31,
+   "end": 4.76,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 4.76,
+   "end": 4.99,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 4.99,
+   "end": 5.22,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 5.22,
+   "end": 5.46,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "standing",
+   "start": 5.46,
+   "end": 5.69,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "in",
+   "start": 5.69,
+   "end": 5.92,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "front",
+   "start": 5.92,
+   "end": 6.34,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "of",
+   "start": 6.34,
+   "end": 6.76,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "a",
+   "start": 6.76,
+   "end": 7.18,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "drug",
+   "start": 7.18,
+   "end": 7.6,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "store",
+   "start": 7.6,
+   "end": 8.02,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "And",
+   "start": 8.02,
+   "end": 8.14,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "in",
+   "start": 8.14,
+   "end": 8.26,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 8.26,
+   "end": 8.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "window",
+   "start": 8.38,
+   "end": 8.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "of",
+   "start": 8.5,
+   "end": 8.62,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 8.62,
+   "end": 8.78,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "drug",
+   "start": 8.78,
+   "end": 8.93,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "store",
+   "start": 8.93,
+   "end": 9.09,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "they",
+   "start": 9.09,
+   "end": 9.24,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "had",
+   "start": 9.24,
+   "end": 9.4,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "a",
+   "start": 9.4,
+   "end": 10.13,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "wheelchair",
+   "start": 10.13,
+   "end": 10.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "on",
+   "start": 10.86,
+   "end": 11.58,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "display",
+   "start": 11.58,
+   "end": 12.31,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "in",
+   "start": 12.31,
+   "end": 13.04,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 13.04,
+   "end": 13.49,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "window",
+   "start": 13.49,
+   "end": 13.94,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Is",
+   "start": 13.94,
+   "end": 14.4,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "that",
+   "start": 14.4,
+   "end": 14.85,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "really",
+   "start": 14.85,
+   "end": 15.3,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "an",
+   "start": 15.3,
+   "end": 17.09,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "impulse",
+   "start": 17.09,
+   "end": 18.88,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "purchase",
+   "start": 18.88,
+   "end": 20.66,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 20.66,
+   "end": 22.45,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "should",
+   "start": 22.45,
+   "end": 24.24,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "get",
+   "start": 24.24,
+   "end": 24.93,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "a",
+   "start": 24.93,
+   "end": 25.62,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "wheelchair",
+   "start": 25.62,
+   "end": 26.3,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "That",
+   "start": 26.3,
+   "end": 26.99,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "would",
+   "start": 26.99,
+   "end": 27.68,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "really",
+   "start": 27.68,
+   "end": 29.07,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "help",
+   "start": 29.07,
+   "end": 30.46,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "with",
+   "start": 30.46,
+   "end": 31.84,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "my",
+   "start": 31.84,
+   "end": 33.23,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "paralysis",
+   "start": 33.23,
+   "end": 34.62,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Then",
+   "start": 34.72,
+   "end": 34.91,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 34.91,
+   "end": 35.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "wouldn't",
+   "start": 35.1,
+   "end": 35.3,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "have",
+   "start": 35.3,
+   "end": 35.49,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "to",
+   "start": 35.49,
+   "end": 35.68,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "drag",
+   "start": 35.68,
+   "end": 36.74,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "myself",
+   "start": 36.74,
+   "end": 37.8,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "everywhere",
+   "start": 37.8,
+   "end": 38.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 38.86,
+   "end": 39.92,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "go",
+   "start": 39.92,
+   "end": 40.98,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "like",
+   "start": 40.98,
+   "end": 41.16,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I've",
+   "start": 41.16,
+   "end": 41.34,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "been",
+   "start": 41.34,
+   "end": 41.52,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "doing",
+   "start": 41.52,
+   "end": 41.7,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "for",
+   "start": 41.7,
+   "end": 41.88,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "10",
+   "start": 41.88,
+   "end": 42.48,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "years",
+   "start": 42.48,
+   "end": 43.08,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "since",
+   "start": 43.08,
+   "end": 43.68,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "my",
+   "start": 43.68,
+   "end": 44.28,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 44.28,
+   "end": 44.88,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "were",
+   "start": 44.88,
+   "end": 45.3,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "blown",
+   "start": 45.3,
+   "end": 45.73,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "off",
+   "start": 45.73,
+   "end": 46.15,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "at",
+   "start": 46.15,
+   "end": 46.58,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 46.58,
+   "end": 47.0,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "marathon",
+   "start": 47.0,
+   "end": 50.32,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Okay",
+   "start": 50.32,
+   "end": 53.65,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Okay",
+   "start": 53.65,
+   "end": 56.97,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "A",
+   "start": 56.97,
+   "end": 60.3,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "bunch",
+   "start": 60.3,
+   "end": 63.62,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "of",
+   "start": 63.6,
+   "end": 64.24,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "fucking",
+   "start": 64.24,
+   "end": 64.87,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "hypocrites",
+   "start": 64.87,
+   "end": 65.51,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "apparently",
+   "start": 65.51,
+   "end": 66.14,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Because",
+   "start": 66.14,
+   "end": 66.78,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "let",
+   "start": 66.78,
+   "end": 66.98,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "me",
+   "start": 66.98,
+   "end": 67.19,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "point",
+   "start": 67.19,
+   "end": 67.39,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "some",
+   "start": 67.39,
+   "end": 67.6,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "out",
+   "start": 67.6,
+   "end": 67.8,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "to",
+   "start": 67.8,
+   "end": 68.07,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "you",
+   "start": 68.07,
+   "end": 68.34,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Let",
+   "start": 68.34,
+   "end": 68.62,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "me",
+   "start": 68.62,
+   "end": 68.89,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "point",
+   "start": 68.89,
+   "end": 69.16,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "some",
+   "start": 69.16,
+   "end": 69.77,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "fucking",
+   "start": 69.77,
+   "end": 70.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "motherfuckers",
+   "start": 70.38,
+   "end": 70.98,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "You're",
+   "start": 70.98,
+   "end": 71.59,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "just",
+   "start": 71.59,
+   "end": 72.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "like",
+   "start": 72.2,
+   "end": 72.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "seconds",
+   "start": 72.86,
+   "end": 73.51,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "ago",
+   "start": 73.51,
+   "end": 74.17,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "laughing",
+   "start": 74.17,
+   "end": 74.82,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "at",
+   "start": 74.82,
+   "end": 75.48,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "a",
+   "start": 75.48,
+   "end": 75.79,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "man",
+   "start": 75.79,
+   "end": 76.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "with",
+   "start": 76.1,
+   "end": 76.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "no",
+   "start": 76.42,
+   "end": 76.73,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 76.73,
+   "end": 77.04,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "crawling",
+   "start": 77.04,
+   "end": 77.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "on",
+   "start": 77.38,
+   "end": 77.73,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 77.73,
+   "end": 78.07,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "ground",
+   "start": 78.07,
+   "end": 78.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "You're",
+   "start": 78.42,
+   "end": 78.76,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "just",
+   "start": 78.76,
+   "end": 79.53,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 79.53,
+   "end": 80.3,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "then",
+   "start": 80.3,
+   "end": 81.06,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "at",
+   "start": 81.06,
+   "end": 81.83,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 81.83,
+   "end": 82.6,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "end",
+   "start": 82.6,
+   "end": 82.8,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "you're",
+   "start": 82.8,
+   "end": 83.01,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "like",
+   "start": 83.01,
+   "end": 83.21,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "oh",
+   "start": 83.21,
+   "end": 83.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "but",
+   "start": 83.42,
+   "end": 83.62,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "not",
+   "start": 83.62,
+   "end": 84.28,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "those",
+   "start": 84.28,
+   "end": 84.94,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "particular",
+   "start": 84.94,
+   "end": 85.6,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legless",
+   "start": 85.6,
+   "end": 86.26,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "people",
+   "start": 86.26,
+   "end": 86.92,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Nooo",
+   "start": 86.96,
+   "end": 89.98,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "We",
+   "start": 90.0,
+   "end": 90.28,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "thought",
+   "start": 90.28,
+   "end": 90.57,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "you",
+   "start": 90.57,
+   "end": 90.85,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "meant",
+   "start": 90.85,
+   "end": 91.14,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "just",
+   "start": 91.14,
+   "end": 91.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "some",
+   "start": 91.42,
+   "end": 91.68,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "asshole",
+   "start": 91.68,
+   "end": 91.94,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "with",
+   "start": 91.94,
+   "end": 92.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "a",
+   "start": 92.2,
+   "end": 92.46,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "child",
+   "start": 92.46,
+   "end": 92.72,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "of",
+   "start": 92.72,
+   "end": 93.41,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "a",
+   "start": 93.41,
+   "end": 94.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "disease",
+   "start": 94.1,
+   "end": 94.78,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "who",
+   "start": 94.78,
+   "end": 95.47,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "deserves",
+   "start": 95.47,
+   "end": 96.16,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "to",
+   "start": 96.16,
+   "end": 96.63,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "be",
+   "start": 96.63,
+   "end": 97.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "laughed",
+   "start": 97.1,
+   "end": 97.56,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "at",
+   "start": 97.56,
+   "end": 98.03,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Not",
+   "start": 98.03,
+   "end": 98.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "one",
+   "start": 98.5,
+   "end": 99.34,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "of",
+   "start": 99.34,
+   "end": 100.18,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "those",
+   "start": 100.18,
+   "end": 101.02,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Now",
+   "start": 101.02,
+   "end": 101.86,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "we're",
+   "start": 101.86,
+   "end": 102.7,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "laughing",
+   "start": 102.7,
+   "end": 103.03,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "at",
+   "start": 103.03,
+   "end": 103.36,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "all",
+   "start": 103.36,
+   "end": 103.7,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legless",
+   "start": 103.7,
+   "end": 104.03,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "people",
+   "start": 104.03,
+   "end": 104.36,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "equally",
+   "start": 104.36,
+   "end": 105.13,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "However",
+   "start": 105.13,
+   "end": 105.9,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "you",
+   "start": 105.9,
+   "end": 106.66,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "lost",
+   "start": 106.66,
+   "end": 107.43,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "your",
+   "start": 107.43,
+   "end": 108.2,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 108.2,
+   "end": 109.44,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Ha",
+   "start": 109.44,
+   "end": 110.67,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "ha",
+   "start": 110.67,
+   "end": 111.91,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "ha",
+   "start": 111.91,
+   "end": 113.14,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "You",
+   "start": 113.14,
+   "end": 114.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "haven't",
+   "start": 114.38,
+   "end": 115.82,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 115.82,
+   "end": 117.27,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "and",
+   "start": 117.27,
+   "end": 118.71,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "weave",
+   "start": 118.71,
+   "end": 120.16,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 120.16,
+   "end": 121.6,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 124.56,
+   "end": 124.96,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "have",
+   "start": 124.96,
+   "end": 125.37,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 125.37,
+   "end": 125.77,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 125.77,
+   "end": 126.18,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "have",
+   "start": 126.18,
+   "end": 126.58,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "two",
+   "start": 126.58,
+   "end": 126.96,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 126.96,
+   "end": 127.34,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "two",
+   "start": 127.34,
+   "end": 127.72,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "fucking",
+   "start": 127.72,
+   "end": 128.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 128.1,
+   "end": 128.48,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "that's",
+   "start": 128.48,
+   "end": 129.0,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 129.0,
+   "end": 129.52,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "maximum",
+   "start": 129.52,
+   "end": 130.04,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "amount",
+   "start": 130.04,
+   "end": 130.56,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 130.56,
+   "end": 131.08,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "fucking",
+   "start": 131.08,
+   "end": 131.55,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "love",
+   "start": 131.55,
+   "end": 132.02,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "having",
+   "start": 132.02,
+   "end": 132.48,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "two",
+   "start": 132.48,
+   "end": 132.95,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 132.95,
+   "end": 133.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 133.42,
+   "end": 133.87,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "fucking",
+   "start": 133.87,
+   "end": 134.32,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "love",
+   "start": 134.32,
+   "end": 134.78,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 134.78,
+   "end": 135.23,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 135.23,
+   "end": 135.68,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "wouldn't",
+   "start": 135.68,
+   "end": 135.9,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "like",
+   "start": 135.9,
+   "end": 136.12,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "having",
+   "start": 136.12,
+   "end": 136.34,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "no",
+   "start": 136.34,
+   "end": 136.56,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "legs",
+   "start": 136.56,
+   "end": 136.78,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 136.78,
+   "end": 136.91,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "really",
+   "start": 136.91,
+   "end": 137.04,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "don't",
+   "start": 137.04,
+   "end": 137.18,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "think",
+   "start": 137.18,
+   "end": 137.31,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 137.31,
+   "end": 137.44,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "would",
+   "start": 137.44,
+   "end": 137.77,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "like",
+   "start": 137.77,
+   "end": 138.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 138.1,
+   "end": 138.42,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 138.42,
+   "end": 138.75,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "think",
+   "start": 138.75,
+   "end": 139.08,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 139.08,
+   "end": 139.22,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 139.22,
+   "end": 139.36,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "suck",
+   "start": 139.36,
+   "end": 139.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "I",
+   "start": 139.5,
+   "end": 139.64,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "think",
+   "start": 139.64,
+   "end": 139.78,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 139.78,
+   "end": 140.02,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "was",
+   "start": 140.02,
+   "end": 140.25,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "suck",
+   "start": 140.25,
+   "end": 140.49,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "shit",
+   "start": 140.49,
+   "end": 140.72,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "out",
+   "start": 140.72,
+   "end": 140.96,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "of",
+   "start": 140.96,
+   "end": 141.24,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "the",
+   "start": 141.24,
+   "end": 141.53,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "balls",
+   "start": 141.53,
+   "end": 141.81,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "of",
+   "start": 141.81,
+   "end": 142.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Christ",
+   "start": 142.1,
+   "end": 142.38,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "It's",
+   "start": 142.38,
+   "end": 143.23,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "an",
+   "start": 143.23,
+   "end": 144.08,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "old",
+   "start": 144.08,
+   "end": 144.94,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "Southern",
+   "start": 144.94,
+   "end": 145.79,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "expression",
+   "start": 145.79,
+   "end": 146.64,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it's",
+   "start": 146.64,
+   "end": 147.1,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "not",
+   "start": 147.1,
+   "end": 147.57,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "used",
+   "start": 147.57,
+   "end": 148.03,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "like",
+   "start": 148.03,
+   "end": 148.5,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "it",
+   "start": 148.5,
+   "end": 148.96,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "used",
+   "start": 148.96,
+   "end": 149.66,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  },
+  {
+   "text": "to",
+   "start": 149.66,
+   "end": 150.35,
+   "type": "word",
+   "speaker_id": "speaker_0"
+  }
+ ],
+ "text": "I was in Upstate New York in a small town and I was standing in front of a drug store And in the window of the drug store they had a wheelchair on display in the window Is that really an impulse purchase I should get a wheelchair That would really help with my paralysis Then I wouldn't have to drag myself everywhere I go like I've been doing for 10 years since my legs were blown off at the marathon Okay Okay A bunch of fucking hypocrites apparently Because let me point some out to you Let me point some fucking motherfuckers You're just like seconds ago laughing at a man with no legs crawling on the ground You're just and then at the end you're like oh but not those particular legless people Nooo We thought you meant just some asshole with a child of a disease who deserves to be laughed at Not one of those Now we're laughing at all legless people equally However you lost your legs Ha ha ha You haven't legs and weave legs I have legs I have two legs two fucking legs that's the maximum amount I fucking love having two legs I fucking love it I wouldn't like having no legs I really don't think I would like it I think it was suck I think it was suck shit out of the balls of Christ It's an old Southern expression it's not used like it used to",
+ "source": "/home/box/louis_sets/series/louis_04_qALqXrAS9Ug.m4a",
+ "note": "louis series, 150s window"
+}

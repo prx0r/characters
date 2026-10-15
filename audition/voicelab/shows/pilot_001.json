@@ -1,0 +1,123 @@
+{
+  "name": "pilot_001",
+  "acts": [
+    {
+      "act": 1,
+      "character": "Dracula (pickles engine)",
+      "wav": "/tmp/opencode/characters/audition/voicelab/shows/act1_dracula.wav",
+      "beats": [
+        {
+          "beat": 0,
+          "p_laugh": 0.61,
+          "crowd": "CROWD"
+        },
+        {
+          "beat": 1,
+          "p_laugh": 0.28,
+          "crowd": "silence"
+        },
+        {
+          "beat": 2,
+          "p_laugh": 0.42,
+          "crowd": "chuckle"
+        }
+      ],
+      "mean_p": 0.437,
+      "crowd_events": 1,
+      "duration_ms": 26775,
+      "pitch_std": 9.9,
+      "verify_source": 1.0,
+      "judge_score": 0.606
+    },
+    {
+      "act": 3,
+      "character": "Blip (kam engine)",
+      "wav": "/tmp/opencode/characters/audition/voicelab/shows/act3_blip.wav",
+      "beats": [
+        {
+          "beat": 0,
+          "p_laugh": 0.69,
+          "crowd": "CROWD"
+        },
+        {
+          "beat": 1,
+          "p_laugh": 0.28,
+          "crowd": "silence"
+        },
+        {
+          "beat": 2,
+          "p_laugh": 0.2,
+          "crowd": "silence"
+        }
+      ],
+      "mean_p": 0.39,
+      "crowd_events": 1,
+      "duration_ms": 66742,
+      "pitch_std": 7.0,
+      "verify_source": 0.952,
+      "judge_score": 0.559
+    },
+    {
+      "act": 2,
+      "character": "Joker (casey engine)",
+      "wav": "/tmp/opencode/characters/audition/voicelab/shows/act2_joker.wav",
+      "beats": [
+        {
+          "beat": 0,
+          "p_laugh": 0.15,
+          "crowd": "silence"
+        },
+        {
+          "beat": 1,
+          "p_laugh": 0.61,
+          "crowd": "CROWD"
+        },
+        {
+          "beat": 2,
+          "p_laugh": 0.29,
+          "crowd": "silence"
+        },
+        {
+          "beat": 3,
+          "p_laugh": 0.43,
+          "crowd": "chuckle"
+        },
+        {
+          "beat": 4,
+          "p_laugh": 0.31,
+          "crowd": "silence"
+        },
+        {
+          "beat": 5,
+          "p_laugh": 0.35,
+          "crowd": "silence"
+        }
+      ],
+      "mean_p": 0.357,
+      "crowd_events": 1,
+      "duration_ms": 98011,
+      "pitch_std": 9.25,
+      "verify_source": 0.905,
+      "judge_score": 0.521
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "character": "Dracula (pickles engine)",
+      "judge_score": 0.606
+    },
+    {
+      "rank": 2,
+      "character": "Blip (kam engine)",
+      "judge_score": 0.559
+    },
+    {
+      "rank": 3,
+      "character": "Joker (casey engine)",
+      "judge_score": 0.521
+    }
+  ],
+  "judge_stack": "laugh_model_v3 mean P (0.7) + verify (0.3); dpv stats logged",
+  "at": "2026-10-15T13:32:55Z"
+}

@@ -1,0 +1,51 @@
+{
+  "wav": "/tmp/opencode/characters/audition/voicelab/riffchains/joker_casey_riffchain__joker.wav",
+  "riffs": [
+    {
+      "i": 0,
+      "grain": "quick_riff",
+      "text": "Yeah, the treatment. Sure. Great program. Top-tier program. I filled out the forms with my feelings.",
+      "gap_ms": 350
+    },
+    {
+      "i": 1,
+      "grain": "quick_riff",
+      "text": "They call it 'exposure therapy.' So I exposed them. To the DARK. Managerial dark. Q4 dark.",
+      "gap_ms": 350
+    },
+    {
+      "i": 2,
+      "grain": "micro_tag",
+      "text": "My therapist says the darkness is 'not a symptom \u2014 a brand.'",
+      "gap_ms": 500
+    },
+    {
+      "i": 3,
+      "grain": "quick_riff",
+      "text": "I've been monetizing my episodes. Two episodes this quarter. Strongest Q3 since the ferry incident.",
+      "gap_ms": 350
+    },
+    {
+      "i": 4,
+      "grain": "full_riff",
+      "text": "The Bat doesn't get it. He keeps asking what I WANT. I want the spreadsheet to stop making sense. That's not a crime, that's ACCOUNTING REFORM.",
+      "gap_ms": 600
+    },
+    {
+      "i": 5,
+      "grain": "micro_tag",
+      "text": "Same time next week, Denise. Bring the clipboard. I'll bring the void.",
+      "gap_ms": 500
+    }
+  ],
+  "world": "joker",
+  "verify_match": 0.969,
+  "unsaid": [
+    "top-tier",
+    "\u2014",
+    "ferry"
+  ],
+  "duration_ms": 53315,
+  "note": "casey five-stage riff chain; grain recipes from trigger-rate data",
+  "rating": null
+}

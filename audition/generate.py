@@ -12,12 +12,14 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import os
 import random
 import re
 from pathlib import Path
 
-POGPET = Path("/root/pogpet")
-FREAKS = Path("/root/characters/freaks")
+_HERE = Path(__file__).parent
+POGPET = Path(os.getenv("POGPET_DIR", "/root/pogpet"))
+FREAKS = Path(os.getenv("FREAKS_DIR", str(_HERE.parent / "freaks")))
 
 CHARACTER_VERSION = "v1-p0"
 
@@ -215,11 +217,14 @@ def tts_base_rate(character: dict) -> str:
 
 def _kt_prior_ops() -> dict:
     """Kill Tony operator lifts (hypotheses, not proof). Missing file = no bias."""
-    try:
-        d = json.load(open("/root/characters/theory/killtony-priors.json"))
-        return {op: v.get("train_lift", 0) for op, v in d.get("operator_priors", {}).items()}
-    except Exception:
-        return {}
+    for cand in (Path(__file__).parent.parent / "theory" / "killtony-priors.json",
+                 Path("/root/characters/theory/killtony-priors.json")):
+        try:
+            d = json.load(open(cand))
+            return {op: v.get("train_lift", 0) for op, v in d.get("operator_priors", {}).items()}
+        except Exception:
+            continue
+    return {}
 
 
 def _prior_text(recent: list[dict]) -> str:
@@ -421,7 +426,8 @@ _MODS = None
 def load_modulators() -> dict:
     global _MODS
     if _MODS is None:
-        _MODS = _load_json(Path("/root/characters/audition/modulators.json")) or {}
+        local = Path(__file__).parent / "modulators.json"
+        _MODS = _load_json(local) or _load_json(Path("/root/characters/audition/modulators.json")) or {}
     return _MODS
 
 
@@ -447,7 +453,7 @@ def seed_modulators(character: dict) -> list[str]:
     rng = (character.get("raw", {}) or {}).get("philosophy", {}).get("modulator_range", [])
     if rng:
         return [m for m in rng if m in load_modulators()] or list(load_modulators())
-    ov = _load_json(Path("/root/characters/audition/seeds/nolan_seed.json")) or {}
+    ov = _load_json(Path(__file__).parent / "seeds" / "nolan_seed.json") or {}
     if character["id"] == "no_nose_nolan" and ov.get("modulator_range"):
         return [m for m in ov["modulator_range"] if m in load_modulators()]
     return list(load_modulators())
@@ -475,7 +481,7 @@ def generate_minute(character_id: str, recent: list[dict], strategy: dict,
     if explore or (not any(scored.values()) and not any(mod_scores.values())):
         kt = _kt_prior_ops()
         operator = rng.choice(([o for o in OPERATORS if kt.get(o, 0) > 0] + OPERATORS) if (kt and explore) else OPERATORS)
-        modulator, mod_explore = rng.choice(mod_range), True
+        modulator, mod_explore = (rng.choice(mod_range) if mod_range else "relaxed"), True
     else:
         best = max(scored.values())
         op_cands = [op for op, s in scored.items() if s == best] or OPERATORS

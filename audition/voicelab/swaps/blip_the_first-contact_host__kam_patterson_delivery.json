@@ -1,0 +1,43 @@
+{
+  "character": "Blip the First-Contact Host",
+  "comedian_delivery": "kam_patterson",
+  "voice": "spongebob",
+  "collision": "gleeful barrel-through diplomacy: every alien custom misread as compliment",
+  "verify_match": 0.952,
+  "duration_ms": 21551,
+  "beats": [
+    {
+      "seg": 0,
+      "label": "gleeful",
+      "text": "Earth hospitality! Sit down! You flew HOW far? That's nothing! I once walked to the fridge!",
+      "recipe": {
+        "cue": "[delighted]",
+        "temp": 0.8,
+        "vol": 0.0,
+        "speed": 1.31
+      }
+    },
+    {
+      "seg": 1,
+      "label": "gleeful",
+      "text": "So your species communicates through WHAT? Mind-melding? That's adorable. We use WORDS. Mostly.",
+      "recipe": {
+        "cue": "[delighted]",
+        "temp": 0.8,
+        "vol": 0.0,
+        "speed": 1.31
+      }
+    },
+    {
+      "seg": 2,
+      "label": "gleeful",
+      "text": "He says the invasion fleet is parked outside. PARKED! Double-parked! Classic you guys!",
+      "recipe": {
+        "cue": "[delighted]",
+        "temp": 0.8,
+        "vol": 0.0,
+        "speed": 1.31
+      }
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "test": "kt715_nashville zero-shot render",
+  "state": "ari profile + speed_scale=0.67 (kt704 converged)",
+  "summary": {
+    "emotion_acc": 0.273,
+    "wpm_mae": 91.7,
+    "var_mae": 1.83
+  },
+  "rows": [
+    {
+      "seg": "s0",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "match": false,
+      "match_score": 0.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 1.94,
+      "gen_wpm": 148.0,
+      "act_wpm": 115.2,
+      "wpm_err": 32.8,
+      "gen_var": 2.95,
+      "act_var": 4.84,
+      "var_err": -1.89,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-0-fish.mp3"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "match": false,
+      "match_score": 0.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.2,
+      "gen_wpm": 174.9,
+      "act_wpm": 78.0,
+      "wpm_err": 96.9,
+      "gen_var": 6.6,
+      "act_var": 7.05,
+      "var_err": -0.45,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-1-fish.mp3"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "match": true,
+      "match_score": 1.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 1.92,
+      "gen_wpm": 207.7,
+      "act_wpm": 87.4,
+      "wpm_err": 120.3,
+      "gen_var": 2.75,
+      "act_var": 6.49,
+      "var_err": -3.74,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-2-fish.mp3"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "match": true,
+      "match_score": 1.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.03,
+      "gen_wpm": 198.0,
+      "act_wpm": 80.3,
+      "wpm_err": 117.7,
+      "gen_var": 2.94,
+      "act_var": 4.98,
+      "var_err": -2.04,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-3-fish.mp3"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "embarrassed",
+      "true_emo": "neutral",
+      "match": false,
+      "match_score": 0.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.09,
+      "gen_wpm": 216.9,
+      "act_wpm": 84.5,
+      "wpm_err": 132.4,
+      "gen_var": 2.77,
+      "act_var": 4.69,
+      "var_err": -1.92,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-4-fish.mp3"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "match": true,
+      "match_score": 1.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.01,
+      "gen_wpm": 179.5,
+      "act_wpm": 121.0,
+      "wpm_err": 58.5,
+      "gen_var": 4.17,
+      "act_var": 4.27,
+      "var_err": -0.1,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-5-fish.mp3"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "mock_indignant",
+      "true_emo": "neutral",
+      "match": false,
+      "match_score": 0.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.19,
+      "gen_wpm": 180.8,
+      "act_wpm": 64.5,
+      "wpm_err": 116.3,
+      "gen_var": 2.42,
+      "act_var": 5.65,
+      "var_err": -3.23,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-6-fish.mp3"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "mock_indignant",
+      "true_emo": "neutral",
+      "match": false,
+      "match_score": 0.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.4,
+      "gen_wpm": 151.8,
+      "act_wpm": 58.0,
+      "wpm_err": 93.8,
+      "gen_var": 3.85,
+      "act_var": 5.0,
+      "var_err": -1.15,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-7-fish.mp3"
+    },
+    {
+      "seg": "s8",
+      "pred_emo": "manic",
+      "true_emo": "neutral",
+      "match": false,
+      "match_score": 0.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.57,
+      "gen_wpm": 185.8,
+      "act_wpm": 107.8,
+      "wpm_err": 78.0,
+      "gen_var": 3.64,
+      "act_var": 6.08,
+      "var_err": -2.44,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-8-fish.mp3"
+    },
+    {
+      "seg": "s9",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "match": false,
+      "match_score": 0.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.33,
+      "gen_wpm": 229.7,
+      "act_wpm": 91.2,
+      "wpm_err": 138.5,
+      "gen_var": 4.33,
+      "act_var": 5.95,
+      "var_err": -1.62,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-9-fish.mp3"
+    },
+    {
+      "seg": "s10",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "match": false,
+      "match_score": 0.0,
+      "true_all": [
+        "neutral"
+      ],
+      "pace": 2.36,
+      "gen_wpm": 127.6,
+      "act_wpm": 103.8,
+      "wpm_err": 23.8,
+      "gen_var": 4.51,
+      "act_var": 6.09,
+      "var_err": -1.58,
+      "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r0-10-fish.mp3"
+    }
+  ],
+  "elapsed_s": 68.1,
+  "at": "2026-10-14T17:24:40Z"
+}

@@ -1,0 +1,58 @@
+{
+  "pack": "reptilian-ralph-middle-management",
+  "stencil": "sir_winston_pickles_sir_winston_pickles_1",
+  "voice": "roast",
+  "voice_id": "4805c450f3e84faaa16f2cf9690fbd90",
+  "beats": [
+    {
+      "seg": 0,
+      "label": "deadpan",
+      "text": "I'm Reptilian Ralph, Middle Management! Seven-foot shape-shifting reptilian stuck in middle management of the global takeover!",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 1.47,
+        "cue": "",
+        "vol": 0.0
+      },
+      "file": "/tmp/opencode/characters/audition/audio/swap-reptilian-ralph-middle-management-sir_winston_pickles_sir_winston_pickles_1-0-fish.mp3"
+    },
+    {
+      "seg": 1,
+      "label": "deadpan",
+      "text": "eyes slit vertically on camera whenever he gets excited or lies about quarterly earnings.",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 1.25,
+        "cue": "",
+        "vol": 0.0
+      },
+      "file": "/tmp/opencode/characters/audition/audio/swap-reptilian-ralph-middle-management-sir_winston_pickles_sir_winston_pickles_1-1-fish.mp3"
+    },
+    {
+      "seg": 2,
+      "label": "deadpan",
+      "text": "They say own monstrousness \u2014 and I still can't get my the annual employee wellness award!",
+      "recipe": {
+        "temp": 0.57,
+        "speed": 1.0,
+        "cue": "",
+        "vol": 0.0
+      },
+      "file": "/tmp/opencode/characters/audition/audio/swap-reptilian-ralph-middle-management-sir_winston_pickles_sir_winston_pickles_1-2-fish.mp3"
+    }
+  ],
+  "out": "/tmp/opencode/characters/audition/voicelab/swaps/reptilian-ralph-middle-management__sir_winston_pickles_sir_winston_pickles_1__roast.wav",
+  "verify_match": 0.913,
+  "unsaid": [
+    "seven-foot",
+    "shape-shifting",
+    "eyes",
+    "\u2014"
+  ],
+  "laugh_events": 0,
+  "duration_ms": 16875,
+  "pitch_std": 5.6,
+  "elapsed_s": 18.3,
+  "note": "delivery=KT stencil, material=pack persona, voice=card",
+  "at": "2026-10-14T18:47:41Z"
+}

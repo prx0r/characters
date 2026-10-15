@@ -1,0 +1,68 @@
+{
+  "set": "sir_winston_pickles_2",
+  "misses": [
+    {
+      "seg": 0,
+      "emotion": "deadpan",
+      "wpm_err": 20.3,
+      "var_st": 6.52,
+      "var_err_vs_real": -0.07,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": -0.15,
+          "why": "too fast vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 1,
+      "emotion": "deadpan",
+      "wpm_err": -10.3,
+      "var_st": 5.69,
+      "var_err_vs_real": -0.9,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 2,
+      "emotion": "deadpan",
+      "wpm_err": 15.3,
+      "var_st": 7.3,
+      "var_err_vs_real": 0.71,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": -0.15,
+          "why": "too fast vs his timing"
+        }
+      ]
+    }
+  ],
+  "miss_count": 3,
+  "segment_count": 3,
+  "prior_updates": {
+    "deadpan": {
+      "n": 3,
+      "mean_wpm_err": 8.4,
+      "mean_var_err": -0.09,
+      "suggest_speed_delta": -0.06,
+      "suggest_temp_delta": -0.0
+    }
+  },
+  "theory_notes": [],
+  "real_prosody": {
+    "pitch_var": 6.59,
+    "thirds_var": [
+      5.78,
+      4.282,
+      5.353
+    ]
+  },
+  "at": "2026-10-14T12:59:47Z"
+}

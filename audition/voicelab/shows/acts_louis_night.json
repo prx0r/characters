@@ -1,0 +1,20 @@
+[
+  {
+    "act": 1,
+    "character": "Louis CK (his actual set, his clone)",
+    "set_json": "swaps/louis_roadrage_act.json",
+    "voice": "fb015415ebf141999fc882baa0e0834c",
+    "real_set": "louis_roadrage",
+    "window": [
+      121.8,
+      239.8
+    ],
+    "gt_set": "louis_roadrage"
+  },
+  {
+    "act": 2,
+    "character": "Dracula (pickles engine)",
+    "set_json": "swaps/dracula__pickles_set_mapping.json",
+    "voice": "04e9ab898fb44ccd9b7ac2357439d6ec"
+  }
+]

@@ -1,0 +1,61 @@
+{
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 51.62,
+   "emotion": "deadpan",
+   "emotion_intensity": 0.7,
+   "vocal": {
+    "energy": 0.6,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "pseudo-GT from acoustic wpm heuristic (norm has no gemini)"
+   }
+  },
+  {
+   "t0": 53.32,
+   "t1": 95.58,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.7,
+   "vocal": {
+    "energy": 0.6,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "pseudo-GT from acoustic wpm heuristic (norm has no gemini)"
+   }
+  },
+  {
+   "t0": 96.8,
+   "t1": 110.44,
+   "emotion": "manic",
+   "emotion_intensity": 0.7,
+   "vocal": {
+    "energy": 0.6,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "pseudo-GT from acoustic wpm heuristic (norm has no gemini)"
+   }
+  },
+  {
+   "t0": 112.02,
+   "t1": 119.98,
+   "emotion": "manic",
+   "emotion_intensity": 0.7,
+   "vocal": {
+    "energy": 0.6,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "pseudo-GT from acoustic wpm heuristic (norm has no gemini)"
+   }
+  }
+ ],
+ "_meta": "acoustic-heuristic GT for norm; not gemini"
+}

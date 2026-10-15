@@ -1,0 +1,51 @@
+{
+  "calibrated_on": "kt704_passport",
+  "tested": "kt715_ep715",
+  "accuracy": 0.143,
+  "rows": [
+    {
+      "seg": "s0",
+      "pred": "neutral",
+      "true": "neutral",
+      "match": true
+    },
+    {
+      "seg": "s1",
+      "pred": "neutral",
+      "true": "embarrassed",
+      "match": false
+    },
+    {
+      "seg": "s2",
+      "pred": "neutral",
+      "true": "embarrassed",
+      "match": false
+    },
+    {
+      "seg": "s3",
+      "pred": "neutral",
+      "true": "mock_indignant",
+      "match": false
+    },
+    {
+      "seg": "s4",
+      "pred": "sarcastic",
+      "true": "gleeful",
+      "match": false
+    },
+    {
+      "seg": "s5",
+      "pred": "sarcastic",
+      "true": "manic",
+      "match": false
+    },
+    {
+      "seg": "s6",
+      "pred": "sarcastic",
+      "true": "manic",
+      "match": false
+    }
+  ],
+  "errors_used": 16,
+  "at": "2026-10-14T15:35:40Z"
+}

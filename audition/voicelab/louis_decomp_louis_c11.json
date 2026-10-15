@@ -1,0 +1,90 @@
+{
+  "set": "louis_c11",
+  "cost_usd": 0.000124362,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "My kids go to a public school in New York City and they all right send your kids there the",
+      "technique": "audience_address",
+      "wpm": 127.4,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "teacher's amazed me because I don't know this is the worst thing about this country to me ",
+      "technique": "sincere_claim",
+      "wpm": 198.5,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "I don't recommend clapping at anything You'll regret it at the end of the thing In a democ",
+      "technique": "sincere_claim",
+      "wpm": 132.1,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "and in this country the people that do that they're fucking losers They're just rock botto",
+      "technique": "escalation",
+      "wpm": 81.0,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "it but they keep doing it New people are teaching every day knowing how shitty it is They ",
+      "technique": "escalation",
+      "wpm": 189.8,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "make children no math Wow Do they want to know math No they don't want to know it You need",
+      "technique": "escalation",
+      "wpm": 121.3,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "exploding sexually and beating the shit out of each other Who are these children Just what",
+      "technique": "escalation",
+      "wpm": 76.8,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "much do I get paid about ten dollars every four years What if",
+      "technique": "deadpan_drop",
+      "wpm": 57.5,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "I get really good at it What happens Nothing Nothing happens Nobody notices and you get fi",
+      "technique": "escalation",
+      "wpm": 119.7,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "My daughter is learning about Greek mythology and she's asking me questions about it I'm g",
+      "technique": "escalation",
+      "wpm": 613.0,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "escalation": 6,
+    "sincere_claim": 2,
+    "audience_address": 1,
+    "deadpan_drop": 1
+  },
+  "laugh_by_technique": {
+    "escalation": 6,
+    "sincere_claim": 2,
+    "audience_address": 1,
+    "deadpan_drop": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

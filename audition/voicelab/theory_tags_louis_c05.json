@@ -1,0 +1,107 @@
+{
+  "set": "louis_c05",
+  "cost_usd": 0.000125034,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Ladies and gentlemen Louis C K Thank",
+      "garden_path": 0.36,
+      "identity_contradiction": 0.18,
+      "surprise": 0.69,
+      "escalation": 0.11,
+      "pause_before": 0,
+      "wpm_dev": -55.5,
+      "laugh_near": true
+    },
+    {
+      "seg": "s1",
+      "text": "stop stop Hi it's a little early for that Well",
+      "garden_path": 0.34,
+      "identity_contradiction": 0.26,
+      "surprise": 1.8,
+      "escalation": 0.17,
+      "pause_before": 19.42,
+      "wpm_dev": -34.2,
+      "laugh_near": true
+    },
+    {
+      "seg": "s2",
+      "text": "thank you very much for being here This is the 40th year of this show'",
+      "garden_path": 0.26,
+      "identity_contradiction": 0.32,
+      "surprise": 0.76,
+      "escalation": 0.21,
+      "pause_before": 0.0,
+      "wpm_dev": 26.1,
+      "laugh_near": true
+    },
+    {
+      "seg": "s3",
+      "text": "born in 1967 and so I grew up in the 70s So I'm not racist However I d",
+      "garden_path": 0.81,
+      "identity_contradiction": 0.71,
+      "surprise": 1.94,
+      "escalation": 0.47,
+      "pause_before": 0.0,
+      "wpm_dev": -32.0,
+      "laugh_near": true
+    },
+    {
+      "seg": "s4",
+      "text": "mild racism It's the best I could do coming out of the 70s because tha",
+      "garden_path": 0.58,
+      "identity_contradiction": 0.69,
+      "surprise": 1.74,
+      "escalation": 0.58,
+      "pause_before": 0.0,
+      "wpm_dev": 43.9,
+      "laugh_near": true
+    },
+    {
+      "seg": "s5",
+      "text": "Hey you interrupted me I was saying something racist Why did you But I",
+      "garden_path": 0.57,
+      "identity_contradiction": 0.56,
+      "surprise": 1.08,
+      "escalation": 0.41,
+      "pause_before": 0.12,
+      "wpm_dev": 10.2,
+      "laugh_near": true
+    },
+    {
+      "seg": "s6",
+      "text": "like if I go to a pizza place I've never been to before and it's run b",
+      "garden_path": 0.58,
+      "identity_contradiction": 0.48,
+      "surprise": 1.02,
+      "escalation": 0.39,
+      "pause_before": 0.0,
+      "wpm_dev": 7.1,
+      "laugh_near": true
+    },
+    {
+      "seg": "s7",
+      "text": "You don't usually see that four -black women run in a piece of place U",
+      "garden_path": 0.52,
+      "identity_contradiction": 0.41,
+      "surprise": 0.5,
+      "escalation": 0.35,
+      "pause_before": 1.26,
+      "wpm_dev": 32.8,
+      "laugh_near": true
+    },
+    {
+      "seg": "s8",
+      "text": "to treat me and the doctor's from China or India I'll think well good ",
+      "garden_path": 0.55,
+      "identity_contradiction": 0.34,
+      "surprise": 0.36,
+      "escalation": 0.34,
+      "pause_before": 0.0,
+      "wpm_dev": 1.3,
+      "laugh_near": true
+    }
+  ],
+  "laugh_correlations": {},
+  "at": "2026-10-15T11:54:17Z"
+}

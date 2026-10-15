@@ -1,0 +1,107 @@
+{
+  "set": "louis_c01",
+  "cost_usd": 0.000130746,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Ladies and gentlemen Louis C Dane Well",
+      "garden_path": 0.21,
+      "identity_contradiction": 0.08,
+      "surprise": 0.66,
+      "escalation": 0.1,
+      "pause_before": 0,
+      "wpm_dev": -83.5,
+      "laugh_near": true
+    },
+    {
+      "seg": "s1",
+      "text": "you very much Well well one Thank you That is very OK That's very That",
+      "garden_path": 0.18,
+      "identity_contradiction": 0.13,
+      "surprise": 1.02,
+      "escalation": 0.14,
+      "pause_before": 17.8,
+      "wpm_dev": -22.7,
+      "laugh_near": true
+    },
+    {
+      "seg": "s2",
+      "text": "nice I hope somebody does that for you someday I don't know I don't kn",
+      "garden_path": 0.26,
+      "identity_contradiction": 0.23,
+      "surprise": 1.75,
+      "escalation": 0.52,
+      "pause_before": 0.06,
+      "wpm_dev": 227.4,
+      "laugh_near": true
+    },
+    {
+      "seg": "s3",
+      "text": "is fair okay That is fair okay That is fair okay That is fair okay Tha",
+      "garden_path": 0.66,
+      "identity_contradiction": 0.3,
+      "surprise": 1.87,
+      "escalation": 0.36,
+      "pause_before": 0.0,
+      "wpm_dev": 23.2,
+      "laugh_near": true
+    },
+    {
+      "seg": "s4",
+      "text": "I am hungry I'm a little hungry I mean I feel hungry I think that's wh",
+      "garden_path": 0.43,
+      "identity_contradiction": 0.31,
+      "surprise": 1.84,
+      "escalation": 0.32,
+      "pause_before": 0.0,
+      "wpm_dev": -19.8,
+      "laugh_near": true
+    },
+    {
+      "seg": "s5",
+      "text": "Here's a real thing I don't have third world hunger I have first world",
+      "garden_path": 0.41,
+      "identity_contradiction": 0.37,
+      "surprise": 0.97,
+      "escalation": 0.65,
+      "pause_before": 0.08,
+      "wpm_dev": -39.9,
+      "laugh_near": true
+    },
+    {
+      "seg": "s6",
+      "text": "offensive I'm starving I haven't eaten since two I'm starving don't sa",
+      "garden_path": 0.38,
+      "identity_contradiction": 0.52,
+      "surprise": 0.64,
+      "escalation": 0.81,
+      "pause_before": 0.0,
+      "wpm_dev": -17.5,
+      "laugh_near": true
+    },
+    {
+      "seg": "s7",
+      "text": "right now I'm like literally starving to death It's like annoying I ha",
+      "garden_path": 0.66,
+      "identity_contradiction": 0.31,
+      "surprise": 1.43,
+      "escalation": 0.57,
+      "pause_before": 0.0,
+      "wpm_dev": -38.9,
+      "laugh_near": true
+    },
+    {
+      "seg": "s8",
+      "text": "kids but there is no more joyful feeling in the human experience than ",
+      "garden_path": 0.51,
+      "identity_contradiction": 0.15,
+      "surprise": 1.23,
+      "escalation": 0.26,
+      "pause_before": 0.0,
+      "wpm_dev": -28.2,
+      "laugh_near": true
+    }
+  ],
+  "laugh_correlations": {},
+  "at": "2026-10-15T11:51:10Z"
+}

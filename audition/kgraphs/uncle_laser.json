@@ -1,0 +1,57 @@
+{
+ "id": "kt_uncle_laser",
+ "name": "Uncle Lazer",
+ "version": "kgraph-v1",
+ "provenance": [
+  {
+   "source": "kt-personas/uncle_laser.json",
+   "fields": "traits, archetype, ops"
+  },
+  {
+   "source": "features.jsonl persona blocks",
+   "fields": "self_labels, contradictions"
+  },
+  {
+   "source": "owner+web research (stage persona only)",
+   "fields": "oil-field backstory, rowdy blue-collar"
+  }
+ ],
+ "persona": {
+  "deal": "Former $500K/yr oil-rig directional driller who quit to do stand-up; mullet, rowdy unapologetic Texas energy",
+  "facts": [
+   "worked 12 years oil fields 120-degree heat",
+   "single-mother-dating stories as material",
+   "blue-collar upbringing, bad side of town",
+   "drunk-uncle podcast persona"
+  ],
+  "interview_style": "dry drawl, pauses after absurd claims, never raises wattage to match the content"
+ },
+ "dramatic_core": {
+  "want": "to be the rowdiest, most unapologetic force in the room",
+  "fear": "being seen as soft or corporate",
+  "need": "the crowd's roar as proof the oil-field years meant something",
+  "self_model": "the last real man left in comedy",
+  "blind_spots": [
+   "thinks volume and shock equal truth",
+   "cannot hear how the brag undercuts itself"
+  ]
+ },
+ "misinterpretation_rule": "every challenge becomes a story about the rig \u2014 status is proven by survival stories, criticism is weakness",
+ "philosophy": {
+  "ontology": "the world is a hierarchy of tough vs soft, and paperwork is for soft people",
+  "epistemology": "if it didn't happen on the rig it didn't happen",
+  "axiology": "authenticity through volume; polish is suspicion",
+  "causality": "everything goes wrong because people don't work hard enough",
+  "agency": "a loud enough story about the rig settles any argument"
+ },
+ "vibe": "sarcastic",
+ "archetype": "roast_bravado",
+ "modulator_range": [
+  "drunk_on_power",
+  "angry",
+  "manic",
+  "smug"
+ ],
+ "signature_move": "states the outrageous flatly, lets the crowd catch up, drawls into the next premise",
+ "delivery_texture": "dry sarcastic texas drawl; slow low-wattage delivery that lets the absurdity of the brag sit; flat affect under loud content"
+}

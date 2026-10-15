@@ -1,0 +1,128 @@
+{
+  "stencil_id": "ari_matti_kt704_passport",
+  "performer": "ari_matti",
+  "source_set": "kt704_passport",
+  "voice_slot": "[SLOT \u2014 clone or card]",
+  "note": "delivery score: recipes+structure. material (text) is one payload; swap for world material keeping beat types.",
+  "segments": [
+    {
+      "seg": 0,
+      "emotion": "gleeful",
+      "recipe": {
+        "temp": 0.92,
+        "speed": 0.9,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 170.0,
+        "target_wpm": 169.1,
+        "var_st": 2.75,
+        "score": 3.72
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "gleeful"
+      }
+    },
+    {
+      "seg": 1,
+      "emotion": "manic",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.75,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 144.1,
+        "target_wpm": 160.7,
+        "var_st": 5.24,
+        "score": 11.73
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "manic"
+      }
+    },
+    {
+      "seg": 2,
+      "emotion": "sarcastic",
+      "recipe": {
+        "temp": 0.65,
+        "speed": 0.8,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 160.7,
+        "target_wpm": 156.4,
+        "var_st": 4.75,
+        "score": 2.94
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "sarcastic"
+      }
+    },
+    {
+      "seg": 3,
+      "emotion": "mock_indignant",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 0.79,
+        "cue": "[frustrated]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 134.9,
+        "target_wpm": 138.3,
+        "var_st": 6.03,
+        "score": 2.51
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "mock_indignant"
+      }
+    },
+    {
+      "seg": 4,
+      "emotion": "gleeful",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.56,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 111.3,
+        "target_wpm": 124.5,
+        "var_st": 4.24,
+        "score": 12.01
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "gleeful"
+      }
+    }
+  ],
+  "delivery_vector": {
+    "mean_wpm": 144.2,
+    "mean_var": 4.6,
+    "mean_temp": 0.83,
+    "mean_speed": 0.76,
+    "emotion_mix": [
+      "gleeful",
+      "manic",
+      "mock_indignant",
+      "sarcastic"
+    ],
+    "n_segments": 5
+  },
+  "avg_score": 6.58
+}

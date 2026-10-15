@@ -1,0 +1,15 @@
+{
+  "n": 241,
+  "crowd_loo_acc": 0.797,
+  "base": 0.813,
+  "importances": {
+    "wpm": 0.241,
+    "setup_words": 0.228,
+    "n_beats": 0.181,
+    "punch_words": 0.16,
+    "punch_density": 0.138,
+    "reframes": 0.052,
+    "contrasts": 0.0
+  },
+  "note": "delivery features -> crowd_ord>=4; LOO on killtony-features.jsonl"
+}

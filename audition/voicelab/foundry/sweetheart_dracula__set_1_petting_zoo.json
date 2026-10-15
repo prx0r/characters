@@ -1,0 +1,84 @@
+{
+  "foundry": "sweetheart_dracula",
+  "variant": "set_1_petting_zoo",
+  "voice": "04e9ab898fb44ccd9b7ac2357439d6ec",
+  "affect": {
+    "arousal": 0.5,
+    "valence": 0.5,
+    "power": 0.4,
+    "evidence": {
+      "fear": [],
+      "power": [],
+      "warmth": [
+        "kind",
+        "thank"
+      ],
+      "spike": [],
+      "texture": [
+        "warm"
+      ]
+    }
+  },
+  "verify_match": 0.985,
+  "unsaid": [
+    "six",
+    "hundred"
+  ],
+  "duration_ms": 58697,
+  "beats": [
+    {
+      "beat": 0,
+      "type": "identity_1",
+      "text": "Hello. I'm Dracula. I volunteer here on Tuesdays. The goats know me. I know the goats.",
+      "pause_after_ms": 600
+    },
+    {
+      "beat": 1,
+      "type": "identity_2",
+      "text": "Last week I organized the hay by softness. The rabbits approved. I cried a little. In a good way.",
+      "pause_after_ms": 600
+    },
+    {
+      "beat": 2,
+      "type": "rhythm",
+      "text": "Kindness is a muscle. I exercise it daily. Six hundred years of reps. I'm very toned emotionally.",
+      "pause_after_ms": 1500
+    },
+    {
+      "beat": 3,
+      "type": "surprise",
+      "text": "The new goat looked at me with its little goat throat and I felt..., ...famished. I said 'bless you.' It sneezed. I almost didn't let it stop.",
+      "pause_after_ms": 1000
+    },
+    {
+      "beat": 4,
+      "type": "callback",
+      "text": "We put me in group therapy. The other members are a werewolf who's afraid of squirrels and a ghost who's scared of quiet. We're doing great.",
+      "pause_after_ms": 800
+    },
+    {
+      "beat": 5,
+      "type": "tag",
+      "text": "The goat sends me postcards now. From the other side of the fence. It knows what I almost am. It forgives me anyway. Goats are better than people.",
+      "pause_after_ms": 600
+    }
+  ],
+  "rating": null,
+  "rating_note": "owner listens here",
+  "at": "2026-10-14T19:31:10Z",
+  "identity_gap": {
+    "axis_1_baseline": "gentle volunteer count (believed, sincere, 600yrs of practice)",
+    "axis_2_leak": "ancient blood urge (old friend, not defeated \u2014 retiring)",
+    "why_funny_before_speaking": "kind+monster coexisting is comic as pure identity; every mundane act (soup, goats, hay) becomes a collision for free",
+    "mundane_contexts": [
+      "petting zoo",
+      "soup delivery",
+      "compliments to spoons"
+    ],
+    "techniques_as_amplifiers": {
+      "dpv_couple_pause": "1.5s before the urge-surface moment",
+      "garden_path": "sweet sentences set the expectation the urge breaks",
+      "callback": "therapy/goat-postcards escalate the gap"
+    }
+  }
+}

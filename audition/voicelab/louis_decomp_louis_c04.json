@@ -1,0 +1,90 @@
+{
+  "set": "louis_c04",
+  "cost_usd": 0.000119742,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Thank you very much thanks everybody Hello Nice to be here How are you doing Good I'm good",
+      "technique": "audience_address",
+      "wpm": 95.5,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "broke Anybody else broke You ever get so broke that the bank starts charging you money for",
+      "technique": "audience_address",
+      "wpm": 91.2,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "broke man Bank called me up to like high We're calling because you don't have enough money",
+      "technique": "literalize",
+      "wpm": 156.8,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "that I find my funds to be grossly insufficient Thanks for calling Why are you mad at me I",
+      "technique": "literalize",
+      "wpm": 90.5,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "How is this something I'm doing to you She's like sir you only have $20 That's not enough ",
+      "technique": "self_deprecation",
+      "wpm": 203.5,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "my life is shitty So they charge me they charge me $15 that's how much it costs to only ha",
+      "technique": "self_deprecation",
+      "wpm": 105.7,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "And here's the fucked up part now I only have five What did I pay the $20 to the $15 for i",
+      "technique": "escalation",
+      "wpm": 126.6,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "to have I paid the fucking money where's my 20 bucks That's like going to the movies you p",
+      "technique": "escalation",
+      "wpm": 179.3,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "fucker You didn't pay for a movie You ever have negative money as depressing as me looking",
+      "technique": "literalize",
+      "wpm": 79.7,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "ten That means I don't even have no money now I wish I did I wish I didn't have anything I",
+      "technique": "escalation",
+      "wpm": 132.2,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "literalize": 3,
+    "escalation": 3,
+    "audience_address": 2,
+    "self_deprecation": 2
+  },
+  "laugh_by_technique": {
+    "literalize": 3,
+    "escalation": 3,
+    "audience_address": 2,
+    "self_deprecation": 2
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

@@ -1,0 +1,90 @@
+{
+  "voice": "roast",
+  "segments": [
+    {
+      "seg": 0,
+      "fix": 0,
+      "recipe": {
+        "temp": 0.73,
+        "speed": 0.89,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "match": 0.943,
+      "unsaid": [
+        "clapping",
+        "capitol",
+        "and"
+      ],
+      "hallucinated": [
+        "capital"
+      ],
+      "heard": "Dude, I go to Seattle. I'm hyped. I'm ready to get off the plane. I watched saving private Ryan back to back three times. I'm ready to shoot somebody. Let's crap storm the capital.",
+      "file": "/tmp/opencode/characters/audition/audio/vf-roast-0-0-fish.mp3"
+    },
+    {
+      "seg": 1,
+      "fix": 1,
+      "recipe": {
+        "temp": 0.72,
+        "speed": 0.66,
+        "cue": "[sarcastic]",
+        "vol": 0.0
+      },
+      "match": 0.973,
+      "unsaid": [
+        "in"
+      ],
+      "hallucinated": [
+        "hadn't"
+      ],
+      "heard": "crap. And then I get to Seattle, everybody walks around. Every crap I met had like green hair. Every conversation I hadn't Seattle, they were all like, you know, America is built on a racist agenda.",
+      "file": "/tmp/opencode/characters/audition/audio/vf-roast-1-1-fish.mp3"
+    },
+    {
+      "seg": 2,
+      "fix": 1,
+      "recipe": {
+        "temp": 0.68,
+        "speed": 0.7,
+        "cue": "[angry]",
+        "vol": 0.0
+      },
+      "match": 0.889,
+      "unsaid": [
+        "in",
+        "kiev",
+        "ungrateful"
+      ],
+      "hallucinated": [
+        "and",
+        "key",
+        "view",
+        "grateful"
+      ],
+      "heard": "Who gives a crap? You're here on the winning side. If you don't like America, go check out Ukraine. Try to get an oatmeal latte and downtown key view on grateful crap.",
+      "file": "/tmp/opencode/characters/audition/audio/vf-roast-2-1-fish.mp3"
+    },
+    {
+      "seg": 3,
+      "fix": 0,
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.68,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "match": 0.842,
+      "unsaid": [
+        "clapping",
+        "your"
+      ],
+      "hallucinated": [
+        "a"
+      ],
+      "heard": "If you don't like America, give me a passport.",
+      "file": "/tmp/opencode/characters/audition/audio/vf-roast-3-0-fish.mp3"
+    }
+  ],
+  "avg_match": 0.912
+}

@@ -1,0 +1,103 @@
+{
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 49.8,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.76,
+   "vocal": {
+    "energy": 0.76,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=190 laugh_near=True"
+   }
+  },
+  {
+   "t0": 49.8,
+   "t1": 61.0,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.64,
+   "vocal": {
+    "energy": 0.64,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=161 laugh_near=True"
+   }
+  },
+  {
+   "t0": 61.0,
+   "t1": 68.2,
+   "emotion": "gleeful",
+   "emotion_intensity": 1.0,
+   "vocal": {
+    "energy": 1.0,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=262 laugh_near=True"
+   }
+  },
+  {
+   "t0": 68.2,
+   "t1": 88.8,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.3,
+   "vocal": {
+    "energy": 0.3,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=76 laugh_near=True"
+   }
+  },
+  {
+   "t0": 88.8,
+   "t1": 111.4,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.81,
+   "vocal": {
+    "energy": 0.81,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=204 laugh_near=True"
+   }
+  },
+  {
+   "t0": 111.4,
+   "t1": 113.8,
+   "emotion": "gleeful",
+   "emotion_intensity": 0.85,
+   "vocal": {
+    "energy": 0.85,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=211 laugh_near=True"
+   }
+  },
+  {
+   "t0": 113.8,
+   "t1": 119.0,
+   "emotion": "sarcastic",
+   "emotion_intensity": 0.76,
+   "vocal": {
+    "energy": 0.76,
+    "pace": "normal",
+    "pitch_shift": "flat"
+   },
+   "comedy": {
+    "note": "AM-laugh GT: wpm=190 laugh_near=True"
+   }
+  }
+ ],
+ "_meta": "AM-acoustic-laugh GT (4-12Hz detector)"
+}

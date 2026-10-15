@@ -1,0 +1,29 @@
+{
+  "comedian": "kam_patterson",
+  "zero_shot_mae": 74.6,
+  "after_adapt_mae": 33.6,
+  "actual": {
+    "wpm": 209.9,
+    "var_st": 5.43
+  },
+  "persona_prior_wpm": 221.9,
+  "segments": [
+    {
+      "seg": 0,
+      "emotion": "manic",
+      "pred_wpm": 255,
+      "real_wpm": 224.9,
+      "gen_wpm": 299.5,
+      "err": 74.6,
+      "gen_var": 3.03,
+      "file": "/tmp/opencode/characters/audition/audio/zs-kam_patterson-0-fish.mp3",
+      "speed": 1.56,
+      "cue": "[excited]",
+      "temp": 0.85,
+      "err2": 33.6,
+      "gen2_wpm": 258.5,
+      "speed2": 1.17
+    }
+  ],
+  "note": "delivery predicted from person priors only; tested vs real clip"
+}

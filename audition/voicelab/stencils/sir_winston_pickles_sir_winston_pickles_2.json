@@ -1,0 +1,83 @@
+{
+  "stencil_id": "sir_winston_pickles_sir_winston_pickles_2",
+  "performer": "sir_winston_pickles",
+  "source_set": "sir_winston_pickles_2",
+  "voice_slot": "[SLOT \u2014 clone or card]",
+  "note": "delivery score: recipes+structure. material (text) is one payload; swap for world material keeping beat types.",
+  "segments": [
+    {
+      "seg": 0,
+      "emotion": "deadpan",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.5,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 68.1,
+        "target_wpm": 47.8,
+        "var_st": 6.52,
+        "score": 45.15
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "deadpan"
+      }
+    },
+    {
+      "seg": 1,
+      "emotion": "deadpan",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.92,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 168.3,
+        "target_wpm": 178.6,
+        "var_st": 5.69,
+        "score": 7.54
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "deadpan"
+      }
+    },
+    {
+      "seg": 2,
+      "emotion": "deadpan",
+      "recipe": {
+        "temp": 0.45,
+        "speed": 0.5,
+        "cue": "",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 69.8,
+        "target_wpm": 54.5,
+        "var_st": 7.3,
+        "score": 31.87
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "deadpan"
+      }
+    }
+  ],
+  "delivery_vector": {
+    "mean_wpm": 102.1,
+    "mean_var": 6.5,
+    "mean_temp": 0.45,
+    "mean_speed": 0.64,
+    "emotion_mix": [
+      "deadpan"
+    ],
+    "n_segments": 3
+  },
+  "avg_score": 28.19
+}

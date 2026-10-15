@@ -1,0 +1,182 @@
+{
+  "set": "kt704_passport",
+  "beats": 4,
+  "accuracy": 0.75,
+  "baseline": 0.25,
+  "beats_baseline": true,
+  "cost_usd": 7.077e-05,
+  "elapsed_s": 1.0,
+  "results": [
+    {
+      "seg": "s0",
+      "text": "What I love about Texas is that you guys are, like, proud to",
+      "pred_emo": "gleeful",
+      "true_emo": "gleeful",
+      "match": true,
+      "conf": 0.54,
+      "pred_pace": 1.63,
+      "real_wpm": 336.0
+    },
+    {
+      "seg": "s1",
+      "text": "hyped. I'm ready to get off the plane. I watched Saving Priv",
+      "pred_emo": "manic",
+      "true_emo": "manic",
+      "match": true,
+      "conf": 0.75,
+      "pred_pace": 2.33,
+      "real_wpm": 352.0
+    },
+    {
+      "seg": "s2",
+      "text": "[censored] I met had, like, green hair. [laughing] Every con",
+      "pred_emo": "mock_indignant",
+      "true_emo": "sarcastic",
+      "match": false,
+      "conf": 0.91,
+      "pred_pace": 2.56,
+      "real_wpm": 356.0
+    },
+    {
+      "seg": "s3",
+      "text": "go check out Ukraine. Try to get an oatmeal latte in downtow",
+      "pred_emo": "mock_indignant",
+      "true_emo": "mock_indignant",
+      "match": true,
+      "conf": 0.91,
+      "pred_pace": 2.74,
+      "real_wpm": 228.0
+    }
+  ],
+  "answers_raw": {
+    "s0_emo": {
+      "type": "choice",
+      "choice": "gleeful",
+      "probabilities": {
+        "manic": 0.03,
+        "gleeful": 0.6,
+        "deadpan": 0,
+        "sarcastic": 0.26,
+        "mock_indignant": 0.01,
+        "neutral": 0.1,
+        "defiant": 0,
+        "embarrassed": 0
+      },
+      "confidence": 0.54
+    },
+    "s0_pace": {
+      "type": "score",
+      "score": 1.63,
+      "legend": {
+        "0": "slow measured",
+        "1": "conversational",
+        "2": "fast energetic",
+        "3": "rapid-fire"
+      },
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.41,
+        "2": 0.52,
+        "3": 0.06
+      },
+      "confidence": 0.51
+    },
+    "s1_emo": {
+      "type": "choice",
+      "choice": "manic",
+      "probabilities": {
+        "manic": 0.78,
+        "gleeful": 0.21,
+        "deadpan": 0,
+        "sarcastic": 0,
+        "mock_indignant": 0.01,
+        "neutral": 0,
+        "defiant": 0,
+        "embarrassed": 0
+      },
+      "confidence": 0.75
+    },
+    "s1_pace": {
+      "type": "score",
+      "score": 2.33,
+      "legend": {
+        "0": "slow measured",
+        "1": "conversational",
+        "2": "fast energetic",
+        "3": "rapid-fire"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.65,
+        "3": 0.34
+      },
+      "confidence": 0.65
+    },
+    "s2_emo": {
+      "type": "choice",
+      "choice": "mock_indignant",
+      "probabilities": {
+        "manic": 0.02,
+        "gleeful": 0.03,
+        "deadpan": 0,
+        "sarcastic": 0.02,
+        "mock_indignant": 0.92,
+        "neutral": 0,
+        "defiant": 0.01,
+        "embarrassed": 0
+      },
+      "confidence": 0.91
+    },
+    "s2_pace": {
+      "type": "score",
+      "score": 2.56,
+      "legend": {
+        "0": "slow measured",
+        "1": "conversational",
+        "2": "fast energetic",
+        "3": "rapid-fire"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.44,
+        "3": 0.56
+      },
+      "confidence": 0.56
+    },
+    "s3_emo": {
+      "type": "choice",
+      "choice": "mock_indignant",
+      "probabilities": {
+        "manic": 0.03,
+        "gleeful": 0.04,
+        "deadpan": 0,
+        "sarcastic": 0,
+        "mock_indignant": 0.92,
+        "neutral": 0,
+        "defiant": 0.01,
+        "embarrassed": 0
+      },
+      "confidence": 0.91
+    },
+    "s3_pace": {
+      "type": "score",
+      "score": 2.74,
+      "legend": {
+        "0": "slow measured",
+        "1": "conversational",
+        "2": "fast energetic",
+        "3": "rapid-fire"
+      },
+      "probabilities": {
+        "0": 0,
+        "1": 0,
+        "2": 0.26,
+        "3": 0.74
+      },
+      "confidence": 0.74
+    }
+  },
+  "at": "2026-10-14T15:11:53Z"
+}

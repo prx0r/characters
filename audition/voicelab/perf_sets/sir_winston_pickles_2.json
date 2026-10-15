@@ -1,0 +1,55 @@
+{
+  "performer": "sir_winston_pickles",
+  "set": "sir_winston_pickles_2",
+  "voice": "100e10e7c5464a10b5120a01ade115a2",
+  "segments": [
+    {
+      "seg": 0,
+      "emotion": "deadpan",
+      "rid": "a7638e537a",
+      "temp": 0.45,
+      "speed": 0.5,
+      "cue": "[excited]",
+      "vol": 0.0,
+      "wpm": 68.1,
+      "var_st": 6.52,
+      "duration_ms": 6164,
+      "score": 45.15,
+      "target_wpm": 47.8,
+      "file": "/tmp/opencode/characters/audition/audio/ps-sir_winston_pickles_2-0-a7638e537a-fish.mp3"
+    },
+    {
+      "seg": 1,
+      "emotion": "deadpan",
+      "rid": "4788002386",
+      "temp": 0.45,
+      "speed": 0.92,
+      "cue": "[excited]",
+      "vol": 0.0,
+      "wpm": 168.3,
+      "var_st": 5.69,
+      "duration_ms": 7131,
+      "score": 7.54,
+      "target_wpm": 178.6,
+      "file": "/tmp/opencode/characters/audition/audio/ps-sir_winston_pickles_2-1-4788002386-fish.mp3"
+    },
+    {
+      "seg": 2,
+      "emotion": "deadpan",
+      "rid": "4bf963a077",
+      "temp": 0.45,
+      "speed": 0.5,
+      "cue": "",
+      "vol": 0.0,
+      "wpm": 69.8,
+      "var_st": 7.3,
+      "duration_ms": 11180,
+      "score": 31.87,
+      "target_wpm": 54.5,
+      "file": "/tmp/opencode/characters/audition/audio/ps-sir_winston_pickles_2-2-4bf963a077-fish.mp3"
+    }
+  ],
+  "out": "/tmp/opencode/characters/audition/voicelab/perf_sets/sir_winston_pickles_2.wav",
+  "total_ms": 24346,
+  "at": "2026-10-14T12:56:56Z"
+}

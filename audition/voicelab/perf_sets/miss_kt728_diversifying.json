@@ -1,0 +1,89 @@
+{
+  "set": "kt728_diversifying",
+  "misses": [
+    {
+      "seg": 0,
+      "emotion": "neutral",
+      "wpm_err": -0.4,
+      "var_st": 3.39,
+      "var_err_vs_real": -1.55,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": 0.1,
+          "why": "flatter than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 2,
+      "emotion": "sarcastic",
+      "wpm_err": 26.6,
+      "var_st": 4.71,
+      "var_err_vs_real": -0.23,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": -0.15,
+          "why": "too fast vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 5,
+      "emotion": "defiant",
+      "wpm_err": 16.7,
+      "var_st": 5.31,
+      "var_err_vs_real": 0.37,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": -0.15,
+          "why": "too fast vs his timing"
+        }
+      ]
+    }
+  ],
+  "miss_count": 3,
+  "segment_count": 5,
+  "prior_updates": {
+    "neutral": {
+      "n": 1,
+      "mean_wpm_err": -0.4,
+      "mean_var_err": -1.55,
+      "suggest_speed_delta": 0.0,
+      "suggest_temp_delta": -0.08
+    },
+    "sarcastic": {
+      "n": 2,
+      "mean_wpm_err": 15.6,
+      "mean_var_err": -0.12,
+      "suggest_speed_delta": -0.1,
+      "suggest_temp_delta": -0.01
+    },
+    "mock_indignant": {
+      "n": 1,
+      "mean_wpm_err": -3.7,
+      "mean_var_err": 0.29,
+      "suggest_speed_delta": 0.02,
+      "suggest_temp_delta": 0.01
+    },
+    "defiant": {
+      "n": 1,
+      "mean_wpm_err": 16.7,
+      "mean_var_err": 0.37,
+      "suggest_speed_delta": -0.11,
+      "suggest_temp_delta": 0.02
+    }
+  },
+  "theory_notes": [],
+  "real_prosody": {
+    "pitch_var": 4.943,
+    "thirds_var": [
+      4.709,
+      4.868,
+      5.08
+    ]
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

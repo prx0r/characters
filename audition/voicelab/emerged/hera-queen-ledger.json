@@ -1,0 +1,43 @@
+{
+  "slug": "hera-queen-ledger",
+  "name": "Hera, Queen Ledger",
+  "affect_derived": {
+    "arousal": 0.5,
+    "valence": 0.1,
+    "power": 0.61,
+    "evidence": {
+      "fear": [],
+      "power": [
+        "debt",
+        "ledger",
+        "queen"
+      ],
+      "warmth": [],
+      "spike": []
+    }
+  },
+  "mary": {
+    "pred_rate_delta": 0.02,
+    "pred_volume_db": 0.0,
+    "pitch_direction": "flat"
+  },
+  "signature": {
+    "emotion": "neutral",
+    "cue": "[neutral]",
+    "from_misinterpretation": "Treats every apology as an admission of a larger undocumented debt"
+  },
+  "modulator_cycle": [
+    "relaxed",
+    "smug"
+  ],
+  "delivery_spec": {
+    "baseline_tempo": "conversational",
+    "pace_texture": "measured",
+    "pitch_band": "mid",
+    "signature_recipe": null,
+    "starting_modulator": "relaxed"
+  },
+  "why": "fear=- power=['debt', 'ledger', 'queen'] warmth=- spikes=-",
+  "note": "delivery EMERGES from the character graph; comedians were only calibration for the mapping rules (MARY + archetypes)",
+  "at": "2026-10-14T18:30:30Z"
+}

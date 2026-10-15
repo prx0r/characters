@@ -1,0 +1,960 @@
+{
+  "set": "louis_roadrage",
+  "clone": "fb015415ebf141999fc882baa0e0834c",
+  "bounds": {
+    "emotion_acc": 0.6,
+    "wpm_mae": 20.0,
+    "var_mae": 1.5
+  },
+  "history": [
+    {
+      "round": 1,
+      "emotion_acc": 0.188,
+      "wpm_mae": 36.9,
+      "var_mae": 1.23,
+      "cost_usd": 0.000120036,
+      "rows": [
+        {
+          "seg": "s0",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic",
+            "manic"
+          ],
+          "pace": 0.44,
+          "gen_wpm": 118.9,
+          "act_wpm": 171.1,
+          "wpm_err": -52.2,
+          "gen_var": 5.2,
+          "act_var": 7.5,
+          "var_err": -2.3,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r1-0-fish.mp3"
+        },
+        {
+          "seg": "s1",
+          "pred_emo": "embarrassed",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic",
+            "manic"
+          ],
+          "pace": 0.98,
+          "gen_wpm": 166.0,
+          "act_wpm": 167.6,
+          "wpm_err": -1.6,
+          "gen_var": 5.72,
+          "act_var": 6.47,
+          "var_err": -0.75,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r1-1-fish.mp3"
+        },
+        {
+          "seg": "s2",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.41,
+          "gen_wpm": 196.7,
+          "act_wpm": 213.7,
+          "wpm_err": -17.0,
+          "gen_var": 4.46,
+          "act_var": 6.61,
+          "var_err": -2.15,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r1-2-fish.mp3"
+        },
+        {
+          "seg": "s3",
+          "pred_emo": "embarrassed",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.26,
+          "gen_wpm": 188.0,
+          "act_wpm": 182.5,
+          "wpm_err": 5.5,
+          "gen_var": 6.54,
+          "act_var": 7.31,
+          "var_err": -0.77,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r1-3-fish.mp3"
+        },
+        {
+          "seg": "s4",
+          "pred_emo": "deadpan",
+          "true_emo": "deadpan",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "deadpan",
+            "manic",
+            "manic"
+          ],
+          "pace": 1.25,
+          "gen_wpm": 143.6,
+          "act_wpm": 156.3,
+          "wpm_err": -12.7,
+          "gen_var": 5.43,
+          "act_var": 6.5,
+          "var_err": -1.07,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r1-4-fish.mp3"
+        },
+        {
+          "seg": "s5",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.5,
+          "true_all": [
+            "manic",
+            "deadpan"
+          ],
+          "pace": 1.06,
+          "gen_wpm": 182.4,
+          "act_wpm": 94.8,
+          "wpm_err": 87.6,
+          "gen_var": 4.85,
+          "act_var": 6.79,
+          "var_err": -1.94,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r1-5-fish.mp3"
+        },
+        {
+          "seg": "s6",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.08,
+          "gen_wpm": 165.3,
+          "act_wpm": 276.3,
+          "wpm_err": -111.0,
+          "gen_var": 6.32,
+          "act_var": 6.85,
+          "var_err": -0.53,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r1-6-fish.mp3"
+        },
+        {
+          "seg": "s7",
+          "pred_emo": "sarcastic",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic"
+          ],
+          "pace": 1.01,
+          "gen_wpm": 202.8,
+          "act_wpm": 195.4,
+          "wpm_err": 7.4,
+          "gen_var": 5.46,
+          "act_var": 5.78,
+          "var_err": -0.32,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r1-7-fish.mp3"
+        }
+      ],
+      "speed_scale": 1.043
+    },
+    {
+      "round": 2,
+      "emotion_acc": 0.188,
+      "wpm_mae": 51.8,
+      "var_mae": 0.88,
+      "cost_usd": 0.000126462,
+      "rows": [
+        {
+          "seg": "s0",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic",
+            "manic"
+          ],
+          "pace": 0.42,
+          "gen_wpm": 129.8,
+          "act_wpm": 171.1,
+          "wpm_err": -41.3,
+          "gen_var": 6.48,
+          "act_var": 7.5,
+          "var_err": -1.02,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r2-0-fish.mp3"
+        },
+        {
+          "seg": "s1",
+          "pred_emo": "embarrassed",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic",
+            "manic"
+          ],
+          "pace": 0.92,
+          "gen_wpm": 177.0,
+          "act_wpm": 167.6,
+          "wpm_err": 9.4,
+          "gen_var": 5.51,
+          "act_var": 6.47,
+          "var_err": -0.96,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r2-1-fish.mp3"
+        },
+        {
+          "seg": "s2",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.5,
+          "gen_wpm": 299.9,
+          "act_wpm": 213.7,
+          "wpm_err": 86.2,
+          "gen_var": 5.75,
+          "act_var": 6.61,
+          "var_err": -0.86,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r2-2-fish.mp3"
+        },
+        {
+          "seg": "s3",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.26,
+          "gen_wpm": 190.4,
+          "act_wpm": 182.5,
+          "wpm_err": 7.9,
+          "gen_var": 6.1,
+          "act_var": 7.31,
+          "var_err": -1.21,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r2-3-fish.mp3"
+        },
+        {
+          "seg": "s4",
+          "pred_emo": "deadpan",
+          "true_emo": "deadpan",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "deadpan",
+            "manic",
+            "manic"
+          ],
+          "pace": 1.24,
+          "gen_wpm": 167.6,
+          "act_wpm": 156.3,
+          "wpm_err": 11.3,
+          "gen_var": 6.55,
+          "act_var": 6.5,
+          "var_err": 0.05,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r2-4-fish.mp3"
+        },
+        {
+          "seg": "s5",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.5,
+          "true_all": [
+            "manic",
+            "deadpan"
+          ],
+          "pace": 1.12,
+          "gen_wpm": 237.2,
+          "act_wpm": 94.8,
+          "wpm_err": 142.4,
+          "gen_var": 5.24,
+          "act_var": 6.79,
+          "var_err": -1.55,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r2-5-fish.mp3"
+        },
+        {
+          "seg": "s6",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.25,
+          "gen_wpm": 175.2,
+          "act_wpm": 276.3,
+          "wpm_err": -101.1,
+          "gen_var": 5.67,
+          "act_var": 6.85,
+          "var_err": -1.18,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r2-6-fish.mp3"
+        },
+        {
+          "seg": "s7",
+          "pred_emo": "sarcastic",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic"
+          ],
+          "pace": 1.46,
+          "gen_wpm": 180.8,
+          "act_wpm": 195.4,
+          "wpm_err": -14.6,
+          "gen_var": 5.57,
+          "act_var": 5.78,
+          "var_err": -0.21,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r2-7-fish.mp3"
+        }
+      ],
+      "speed_scale": 0.966
+    },
+    {
+      "round": 3,
+      "emotion_acc": 0.188,
+      "wpm_mae": 35.7,
+      "var_mae": 1.08,
+      "cost_usd": 0.000126462,
+      "rows": [
+        {
+          "seg": "s0",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic",
+            "manic"
+          ],
+          "pace": 0.52,
+          "gen_wpm": 149.4,
+          "act_wpm": 171.1,
+          "wpm_err": -21.7,
+          "gen_var": 5.64,
+          "act_var": 7.5,
+          "var_err": -1.86,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r3-0-fish.mp3"
+        },
+        {
+          "seg": "s1",
+          "pred_emo": "embarrassed",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic",
+            "manic"
+          ],
+          "pace": 0.96,
+          "gen_wpm": 148.9,
+          "act_wpm": 167.6,
+          "wpm_err": -18.7,
+          "gen_var": 5.03,
+          "act_var": 6.47,
+          "var_err": -1.44,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r3-1-fish.mp3"
+        },
+        {
+          "seg": "s2",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.45,
+          "gen_wpm": 195.7,
+          "act_wpm": 213.7,
+          "wpm_err": -18.0,
+          "gen_var": 5.9,
+          "act_var": 6.61,
+          "var_err": -0.71,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r3-2-fish.mp3"
+        },
+        {
+          "seg": "s3",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.29,
+          "gen_wpm": 165.6,
+          "act_wpm": 182.5,
+          "wpm_err": -16.9,
+          "gen_var": 5.93,
+          "act_var": 7.31,
+          "var_err": -1.38,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r3-3-fish.mp3"
+        },
+        {
+          "seg": "s4",
+          "pred_emo": "deadpan",
+          "true_emo": "deadpan",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "deadpan",
+            "manic",
+            "manic"
+          ],
+          "pace": 1.32,
+          "gen_wpm": 159.3,
+          "act_wpm": 156.3,
+          "wpm_err": 3.0,
+          "gen_var": 6.29,
+          "act_var": 6.5,
+          "var_err": -0.21,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r3-4-fish.mp3"
+        },
+        {
+          "seg": "s5",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.5,
+          "true_all": [
+            "manic",
+            "deadpan"
+          ],
+          "pace": 1.15,
+          "gen_wpm": 190.0,
+          "act_wpm": 94.8,
+          "wpm_err": 95.2,
+          "gen_var": 4.46,
+          "act_var": 6.79,
+          "var_err": -2.33,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r3-5-fish.mp3"
+        },
+        {
+          "seg": "s6",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.27,
+          "gen_wpm": 171.3,
+          "act_wpm": 276.3,
+          "wpm_err": -105.0,
+          "gen_var": 7.01,
+          "act_var": 6.85,
+          "var_err": 0.16,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r3-6-fish.mp3"
+        },
+        {
+          "seg": "s7",
+          "pred_emo": "sarcastic",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic"
+          ],
+          "pace": 1.17,
+          "gen_wpm": 188.2,
+          "act_wpm": 195.4,
+          "wpm_err": -7.2,
+          "gen_var": 5.19,
+          "act_var": 5.78,
+          "var_err": -0.59,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r3-7-fish.mp3"
+        }
+      ],
+      "speed_scale": 0.995
+    },
+    {
+      "round": 4,
+      "emotion_acc": 0.188,
+      "wpm_mae": 37.6,
+      "var_mae": 1.07,
+      "cost_usd": 0.000126588,
+      "rows": [
+        {
+          "seg": "s0",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic",
+            "manic"
+          ],
+          "pace": 0.46,
+          "gen_wpm": 120.2,
+          "act_wpm": 171.1,
+          "wpm_err": -50.9,
+          "gen_var": 5.94,
+          "act_var": 7.5,
+          "var_err": -1.56,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r4-0-fish.mp3"
+        },
+        {
+          "seg": "s1",
+          "pred_emo": "embarrassed",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic",
+            "manic"
+          ],
+          "pace": 0.95,
+          "gen_wpm": 164.6,
+          "act_wpm": 167.6,
+          "wpm_err": -3.0,
+          "gen_var": 5.19,
+          "act_var": 6.47,
+          "var_err": -1.28,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r4-1-fish.mp3"
+        },
+        {
+          "seg": "s2",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.52,
+          "gen_wpm": 240.1,
+          "act_wpm": 213.7,
+          "wpm_err": 26.4,
+          "gen_var": 4.94,
+          "act_var": 6.61,
+          "var_err": -1.67,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r4-2-fish.mp3"
+        },
+        {
+          "seg": "s3",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.25,
+          "gen_wpm": 182.5,
+          "act_wpm": 182.5,
+          "wpm_err": 0.0,
+          "gen_var": 6.54,
+          "act_var": 7.31,
+          "var_err": -0.77,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r4-3-fish.mp3"
+        },
+        {
+          "seg": "s4",
+          "pred_emo": "deadpan",
+          "true_emo": "deadpan",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "deadpan",
+            "manic",
+            "manic"
+          ],
+          "pace": 1.33,
+          "gen_wpm": 138.1,
+          "act_wpm": 156.3,
+          "wpm_err": -18.2,
+          "gen_var": 5.82,
+          "act_var": 6.5,
+          "var_err": -0.68,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r4-4-fish.mp3"
+        },
+        {
+          "seg": "s5",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.5,
+          "true_all": [
+            "manic",
+            "deadpan"
+          ],
+          "pace": 1.12,
+          "gen_wpm": 195.9,
+          "act_wpm": 94.8,
+          "wpm_err": 101.1,
+          "gen_var": 5.11,
+          "act_var": 6.79,
+          "var_err": -1.68,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r4-5-fish.mp3"
+        },
+        {
+          "seg": "s6",
+          "pred_emo": "deadpan",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic",
+            "manic"
+          ],
+          "pace": 1.21,
+          "gen_wpm": 176.2,
+          "act_wpm": 276.3,
+          "wpm_err": -100.1,
+          "gen_var": 6.03,
+          "act_var": 6.85,
+          "var_err": -0.82,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r4-6-fish.mp3"
+        },
+        {
+          "seg": "s7",
+          "pred_emo": "sarcastic",
+          "true_emo": "manic",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "manic"
+          ],
+          "pace": 1.05,
+          "gen_wpm": 196.7,
+          "act_wpm": 195.4,
+          "wpm_err": 1.3,
+          "gen_var": 5.9,
+          "act_var": 5.78,
+          "var_err": 0.12,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-louis_roadrage-r4-7-fish.mp3"
+        }
+      ],
+      "speed_scale": 1.007
+    }
+  ],
+  "errors": [
+    {
+      "seg": "s0",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 0.44,
+      "wpm_err": -52.2,
+      "var_err": -2.3,
+      "note": "pred deadpan/pace0.4; actual manic wpm 171.1 var 7.5; gen was 118.9/5.2"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "embarrassed",
+      "true_emo": "manic",
+      "pace": 0.98,
+      "wpm_err": -1.6,
+      "var_err": -0.75,
+      "note": "pred embarrassed/pace1.0; actual manic wpm 167.6 var 6.47; gen was 166.0/5.72"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.41,
+      "wpm_err": -17.0,
+      "var_err": -2.15,
+      "note": "pred deadpan/pace1.4; actual manic wpm 213.7 var 6.61; gen was 196.7/4.46"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "embarrassed",
+      "true_emo": "manic",
+      "pace": 1.26,
+      "wpm_err": 5.5,
+      "var_err": -0.77,
+      "note": "pred embarrassed/pace1.3; actual manic wpm 182.5 var 7.31; gen was 188.0/6.54"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "deadpan",
+      "true_emo": "deadpan",
+      "pace": 1.25,
+      "wpm_err": -12.7,
+      "var_err": -1.07,
+      "note": "pred deadpan/pace1.2; actual deadpan wpm 156.3 var 6.5; gen was 143.6/5.43"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.06,
+      "wpm_err": 87.6,
+      "var_err": -1.94,
+      "note": "pred deadpan/pace1.1; actual manic wpm 94.8 var 6.79; gen was 182.4/4.85"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.08,
+      "wpm_err": -111.0,
+      "var_err": -0.53,
+      "note": "pred deadpan/pace1.1; actual manic wpm 276.3 var 6.85; gen was 165.3/6.32"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "sarcastic",
+      "true_emo": "manic",
+      "pace": 1.01,
+      "wpm_err": 7.4,
+      "var_err": -0.32,
+      "note": "pred sarcastic/pace1.0; actual manic wpm 195.4 var 5.78; gen was 202.8/5.46"
+    },
+    {
+      "seg": "s0",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 0.42,
+      "wpm_err": -41.3,
+      "var_err": -1.02,
+      "note": "pred deadpan/pace0.4; actual manic wpm 171.1 var 7.5; gen was 129.8/6.48"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "embarrassed",
+      "true_emo": "manic",
+      "pace": 0.92,
+      "wpm_err": 9.4,
+      "var_err": -0.96,
+      "note": "pred embarrassed/pace0.9; actual manic wpm 167.6 var 6.47; gen was 177.0/5.51"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.5,
+      "wpm_err": 86.2,
+      "var_err": -0.86,
+      "note": "pred deadpan/pace1.5; actual manic wpm 213.7 var 6.61; gen was 299.9/5.75"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.26,
+      "wpm_err": 7.9,
+      "var_err": -1.21,
+      "note": "pred deadpan/pace1.3; actual manic wpm 182.5 var 7.31; gen was 190.4/6.1"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "deadpan",
+      "true_emo": "deadpan",
+      "pace": 1.24,
+      "wpm_err": 11.3,
+      "var_err": 0.05,
+      "note": "pred deadpan/pace1.2; actual deadpan wpm 156.3 var 6.5; gen was 167.6/6.55"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.12,
+      "wpm_err": 142.4,
+      "var_err": -1.55,
+      "note": "pred deadpan/pace1.1; actual manic wpm 94.8 var 6.79; gen was 237.2/5.24"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.25,
+      "wpm_err": -101.1,
+      "var_err": -1.18,
+      "note": "pred deadpan/pace1.2; actual manic wpm 276.3 var 6.85; gen was 175.2/5.67"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "sarcastic",
+      "true_emo": "manic",
+      "pace": 1.46,
+      "wpm_err": -14.6,
+      "var_err": -0.21,
+      "note": "pred sarcastic/pace1.5; actual manic wpm 195.4 var 5.78; gen was 180.8/5.57"
+    },
+    {
+      "seg": "s0",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 0.52,
+      "wpm_err": -21.7,
+      "var_err": -1.86,
+      "note": "pred deadpan/pace0.5; actual manic wpm 171.1 var 7.5; gen was 149.4/5.64"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "embarrassed",
+      "true_emo": "manic",
+      "pace": 0.96,
+      "wpm_err": -18.7,
+      "var_err": -1.44,
+      "note": "pred embarrassed/pace1.0; actual manic wpm 167.6 var 6.47; gen was 148.9/5.03"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.45,
+      "wpm_err": -18.0,
+      "var_err": -0.71,
+      "note": "pred deadpan/pace1.4; actual manic wpm 213.7 var 6.61; gen was 195.7/5.9"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.29,
+      "wpm_err": -16.9,
+      "var_err": -1.38,
+      "note": "pred deadpan/pace1.3; actual manic wpm 182.5 var 7.31; gen was 165.6/5.93"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "deadpan",
+      "true_emo": "deadpan",
+      "pace": 1.32,
+      "wpm_err": 3.0,
+      "var_err": -0.21,
+      "note": "pred deadpan/pace1.3; actual deadpan wpm 156.3 var 6.5; gen was 159.3/6.29"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.15,
+      "wpm_err": 95.2,
+      "var_err": -2.33,
+      "note": "pred deadpan/pace1.1; actual manic wpm 94.8 var 6.79; gen was 190.0/4.46"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.27,
+      "wpm_err": -105.0,
+      "var_err": 0.16,
+      "note": "pred deadpan/pace1.3; actual manic wpm 276.3 var 6.85; gen was 171.3/7.01"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "sarcastic",
+      "true_emo": "manic",
+      "pace": 1.17,
+      "wpm_err": -7.2,
+      "var_err": -0.59,
+      "note": "pred sarcastic/pace1.2; actual manic wpm 195.4 var 5.78; gen was 188.2/5.19"
+    },
+    {
+      "seg": "s0",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 0.46,
+      "wpm_err": -50.9,
+      "var_err": -1.56,
+      "note": "pred deadpan/pace0.5; actual manic wpm 171.1 var 7.5; gen was 120.2/5.94"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "embarrassed",
+      "true_emo": "manic",
+      "pace": 0.95,
+      "wpm_err": -3.0,
+      "var_err": -1.28,
+      "note": "pred embarrassed/pace0.9; actual manic wpm 167.6 var 6.47; gen was 164.6/5.19"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.52,
+      "wpm_err": 26.4,
+      "var_err": -1.67,
+      "note": "pred deadpan/pace1.5; actual manic wpm 213.7 var 6.61; gen was 240.1/4.94"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.25,
+      "wpm_err": 0.0,
+      "var_err": -0.77,
+      "note": "pred deadpan/pace1.2; actual manic wpm 182.5 var 7.31; gen was 182.5/6.54"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "deadpan",
+      "true_emo": "deadpan",
+      "pace": 1.33,
+      "wpm_err": -18.2,
+      "var_err": -0.68,
+      "note": "pred deadpan/pace1.3; actual deadpan wpm 156.3 var 6.5; gen was 138.1/5.82"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.12,
+      "wpm_err": 101.1,
+      "var_err": -1.68,
+      "note": "pred deadpan/pace1.1; actual manic wpm 94.8 var 6.79; gen was 195.9/5.11"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "deadpan",
+      "true_emo": "manic",
+      "pace": 1.21,
+      "wpm_err": -100.1,
+      "var_err": -0.82,
+      "note": "pred deadpan/pace1.2; actual manic wpm 276.3 var 6.85; gen was 176.2/6.03"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "sarcastic",
+      "true_emo": "manic",
+      "pace": 1.05,
+      "wpm_err": 1.3,
+      "var_err": 0.12,
+      "note": "pred sarcastic/pace1.1; actual manic wpm 195.4 var 5.78; gen was 196.7/5.9"
+    }
+  ],
+  "converged": false,
+  "note": "Jev transcript->delivery->fish->vs actual; same clone voice",
+  "at": "2026-10-14T16:30:23Z"
+}

@@ -1,0 +1,1285 @@
+{
+  "rule": "n>=2 sets; anchors; trait+op+delivery(wpm/punch) score; crowd_ord prior only",
+  "anchors": {
+    "sir_winston_pickles": "villain_dracula",
+    "ari_matti": "mock_indignant_engine",
+    "casey_rocket": "chaos_gremlin"
+  },
+  "targets": {
+    "villain_dracula": {
+      "need": "evil aristocrat: controlled menace, dark charisma",
+      "owner_note": "mr pickle archetype (sir_winston_pickles proved)",
+      "top_matches": [
+        {
+          "performer": "sir_winston_pickles",
+          "sets": 3,
+          "deep": 5,
+          "persona_traits": [
+            "plays absurdist",
+            "plays other",
+            "plays shock_humor"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": "villain_dracula",
+          "score": 1.81,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.56,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 112.62,
+            "punch_words": 15.63,
+            "punch_density": 0.17,
+            "crowd_ord": 3.5
+          },
+          "crowd_ord_prior": 3.5
+        },
+        {
+          "performer": "offender",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays crime",
+            "plays storytelling"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.57,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.43,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 180.59,
+            "punch_words": 4.0,
+            "punch_density": 0.08,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 1.5
+        },
+        {
+          "performer": "mason_bird",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays sex",
+            "plays sports"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 3.21,
+          "op_hit": 0,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 121.96,
+            "punch_words": 6.5,
+            "punch_density": 0.11,
+            "crowd_ord": 2.5
+          },
+          "crowd_ord_prior": 2.5
+        },
+        {
+          "performer": "tommy_tickles",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays relationships",
+            "plays sex"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 2.93,
+          "op_hit": 0,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 108.63,
+            "punch_words": 1.5,
+            "punch_density": 0.05,
+            "crowd_ord": 3.5
+          },
+          "crowd_ord_prior": 3.5
+        },
+        {
+          "performer": "dedrick_flynn",
+          "sets": 5,
+          "deep": 0,
+          "persona_traits": [
+            "plays observational",
+            "plays race",
+            "plays storytelling"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 2.79,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.42,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 159.55,
+            "punch_words": 15.43,
+            "punch_density": 0.2,
+            "crowd_ord": 3.2
+          },
+          "crowd_ord_prior": 3.2
+        }
+      ]
+    },
+    "chaos_gremlin": {
+      "need": "unhinged id: manic spikes, physical chaos",
+      "owner_note": "casey engine (manic/deadpan swing)",
+      "top_matches": [
+        {
+          "performer": "jack_shaw",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays religion",
+            "plays relationships",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 5.08,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 191.79,
+            "punch_words": 11.5,
+            "punch_density": 0.12,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "david_jolly",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays observational",
+            "plays family",
+            "plays self_deprecation"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 5.02,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.54,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 184.6,
+            "punch_words": 12.21,
+            "punch_density": 0.37,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "martin_phillips",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays disability",
+            "plays politics",
+            "plays sex"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.99,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 187.47,
+            "punch_words": 18.33,
+            "punch_density": 0.23,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 4.0
+        },
+        {
+          "performer": "cam_patterson",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays race",
+            "plays politics",
+            "plays drugs"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.86,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.47,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 214.79,
+            "punch_words": 13.07,
+            "punch_density": 0.28,
+            "crowd_ord": 3.67
+          },
+          "crowd_ord_prior": 3.67
+        },
+        {
+          "performer": "liv_taylor",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays family",
+            "plays sex"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.83,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.56,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 173.37,
+            "punch_words": 13.88,
+            "punch_density": 0.28,
+            "crowd_ord": 2.0
+          },
+          "crowd_ord_prior": 2.0
+        }
+      ]
+    },
+    "mock_indignant_engine": {
+      "need": "spiky offense comedian: grievance velocity",
+      "owner_note": "ari engine (exact-word calibrated)",
+      "top_matches": [
+        {
+          "performer": "uncle_laser",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays sex",
+            "plays storytelling",
+            "plays dating"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.94,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 223.04,
+            "punch_words": 9.74,
+            "punch_density": 0.41,
+            "crowd_ord": 3.25
+          },
+          "crowd_ord_prior": 3.25
+        },
+        {
+          "performer": "cameron_frisk",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays relationships",
+            "plays family",
+            "plays insult_humor"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.69,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 205.04,
+            "punch_words": 8.37,
+            "punch_density": 0.2,
+            "crowd_ord": 3.0
+          },
+          "crowd_ord_prior": 3.0
+        },
+        {
+          "performer": "ari_matti",
+          "sets": 4,
+          "deep": 4,
+          "persona_traits": [
+            "plays observational",
+            "plays sex",
+            "plays relationships"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": "mock_indignant_engine",
+          "score": 0.42,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.53,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 105.77,
+            "punch_words": 12.51,
+            "punch_density": 0.2,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 4.0
+        },
+        {
+          "performer": "jack_shaw",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays religion",
+            "plays relationships",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.41,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 191.79,
+            "punch_words": 11.5,
+            "punch_density": 0.12,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "mason_bird",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays sex",
+            "plays sports"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 2.96,
+          "op_hit": 1,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 121.96,
+            "punch_words": 6.5,
+            "punch_density": 0.11,
+            "crowd_ord": 2.5
+          },
+          "crowd_ord_prior": 2.5
+        }
+      ]
+    },
+    "deadpan_cryptkeeper": {
+      "need": "flat eerie narrator: stillness as threat",
+      "owner_note": "",
+      "top_matches": [
+        {
+          "performer": "mason_bird",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays sex",
+            "plays sports"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 4.42,
+          "op_hit": 1,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 121.96,
+            "punch_words": 6.5,
+            "punch_density": 0.11,
+            "crowd_ord": 2.5
+          },
+          "crowd_ord_prior": 2.5
+        },
+        {
+          "performer": "tommy_tickles",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays relationships",
+            "plays sex"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 4.14,
+          "op_hit": 1,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 108.63,
+            "punch_words": 1.5,
+            "punch_density": 0.05,
+            "crowd_ord": 3.5
+          },
+          "crowd_ord_prior": 3.5
+        },
+        {
+          "performer": "offender",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays crime",
+            "plays storytelling"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.36,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.43,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 180.59,
+            "punch_words": 4.0,
+            "punch_density": 0.08,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 1.5
+        },
+        {
+          "performer": "juanita",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays lgbtq",
+            "plays work",
+            "plays observational"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 3.34,
+          "op_hit": 1,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 127.87,
+            "punch_words": 25.17,
+            "punch_density": 0.24,
+            "crowd_ord": 2.5
+          },
+          "crowd_ord_prior": 2.5
+        },
+        {
+          "performer": "dedrick_flynn",
+          "sets": 5,
+          "deep": 0,
+          "persona_traits": [
+            "plays observational",
+            "plays race",
+            "plays storytelling"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 2.6,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.42,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 159.55,
+            "punch_words": 15.43,
+            "punch_density": 0.2,
+            "crowd_ord": 3.2
+          },
+          "crowd_ord_prior": 3.2
+        }
+      ]
+    },
+    "ice_sovereign": {
+      "need": "cold authority: level highness, zero warmth",
+      "owner_note": "",
+      "top_matches": [
+        {
+          "performer": "offender",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays crime",
+            "plays storytelling"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.47,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.43,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 180.59,
+            "punch_words": 4.0,
+            "punch_density": 0.08,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 1.5
+        },
+        {
+          "performer": "mason_bird",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays sex",
+            "plays sports"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 3.31,
+          "op_hit": 0,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 121.96,
+            "punch_words": 6.5,
+            "punch_density": 0.11,
+            "crowd_ord": 2.5
+          },
+          "crowd_ord_prior": 2.5
+        },
+        {
+          "performer": "tommy_tickles",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays relationships",
+            "plays sex"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 3.03,
+          "op_hit": 0,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 108.63,
+            "punch_words": 1.5,
+            "punch_density": 0.05,
+            "crowd_ord": 3.5
+          },
+          "crowd_ord_prior": 3.5
+        },
+        {
+          "performer": "dedrick_flynn",
+          "sets": 5,
+          "deep": 0,
+          "persona_traits": [
+            "plays observational",
+            "plays race",
+            "plays storytelling"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 2.71,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.42,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 159.55,
+            "punch_words": 15.43,
+            "punch_density": 0.2,
+            "crowd_ord": 3.2
+          },
+          "crowd_ord_prior": 3.2
+        },
+        {
+          "performer": "uncle_lazer",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays sex",
+            "plays relationships"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 2.68,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 160.8,
+            "punch_words": 7.41,
+            "punch_density": 0.19,
+            "crowd_ord": 2.33
+          },
+          "crowd_ord_prior": 2.33
+        }
+      ]
+    },
+    "warm_mother": {
+      "need": "safety with command: still pitch, breathing volume",
+      "owner_note": "",
+      "top_matches": [
+        {
+          "performer": "uncle_lazer",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays sex",
+            "plays relationships"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.88,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 160.8,
+            "punch_words": 7.41,
+            "punch_density": 0.19,
+            "crowd_ord": 2.33
+          },
+          "crowd_ord_prior": 2.33
+        },
+        {
+          "performer": "aaron_belisle",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays disability",
+            "plays self_deprecation",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.31,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.44,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 121.69,
+            "punch_words": 8.83,
+            "punch_density": 0.06,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 4.0
+        },
+        {
+          "performer": "mason_bird",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays sex",
+            "plays sports"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 3.31,
+          "op_hit": 0,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 121.96,
+            "punch_words": 6.5,
+            "punch_density": 0.11,
+            "crowd_ord": 2.5
+          },
+          "crowd_ord_prior": 2.5
+        },
+        {
+          "performer": "jack_shaw",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays religion",
+            "plays relationships",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.23,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 191.79,
+            "punch_words": 11.5,
+            "punch_density": 0.12,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "hans_kim",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays politics",
+            "plays race",
+            "plays meta"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.18,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.54,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 115.65,
+            "punch_words": 9.78,
+            "punch_density": 0.22,
+            "crowd_ord": 3.0
+          },
+          "crowd_ord_prior": 3.0
+        }
+      ]
+    },
+    "whimsical_fae": {
+      "need": "level float: high, even, airy",
+      "owner_note": "",
+      "top_matches": [
+        {
+          "performer": "jack_shaw",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays religion",
+            "plays relationships",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 5.0,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 191.79,
+            "punch_words": 11.5,
+            "punch_density": 0.12,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "uncle_lazer",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays sex",
+            "plays relationships"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.85,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 160.8,
+            "punch_words": 7.41,
+            "punch_density": 0.19,
+            "crowd_ord": 2.33
+          },
+          "crowd_ord_prior": 2.33
+        },
+        {
+          "performer": "cameron_frisk",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays relationships",
+            "plays family",
+            "plays insult_humor"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.73,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 205.04,
+            "punch_words": 8.37,
+            "punch_density": 0.2,
+            "crowd_ord": 3.0
+          },
+          "crowd_ord_prior": 3.0
+        },
+        {
+          "performer": "uncle_laser",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays sex",
+            "plays storytelling",
+            "plays dating"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.35,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 223.04,
+            "punch_words": 9.74,
+            "punch_density": 0.41,
+            "crowd_ord": 3.25
+          },
+          "crowd_ord_prior": 3.25
+        },
+        {
+          "performer": "liv_taylor",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays family",
+            "plays sex"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.05,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.56,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 173.37,
+            "punch_words": 13.88,
+            "punch_density": 0.28,
+            "crowd_ord": 2.0
+          },
+          "crowd_ord_prior": 2.0
+        }
+      ]
+    },
+    "hype_host": {
+      "need": "crowd engine: fast, wide, loud, inclusive",
+      "owner_note": "",
+      "top_matches": [
+        {
+          "performer": "jack_shaw",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays religion",
+            "plays relationships",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.83,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 191.79,
+            "punch_words": 11.5,
+            "punch_density": 0.12,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "martin_phillips",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays disability",
+            "plays politics",
+            "plays sex"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.74,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 187.47,
+            "punch_words": 18.33,
+            "punch_density": 0.23,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 4.0
+        },
+        {
+          "performer": "cam_patterson",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays race",
+            "plays politics",
+            "plays drugs"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.69,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.47,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 214.79,
+            "punch_words": 13.07,
+            "punch_density": 0.28,
+            "crowd_ord": 3.67
+          },
+          "crowd_ord_prior": 3.67
+        },
+        {
+          "performer": "david_jolly",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays observational",
+            "plays family",
+            "plays self_deprecation"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.68,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.54,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 184.6,
+            "punch_words": 12.21,
+            "punch_density": 0.37,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "liv_taylor",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays family",
+            "plays sex"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.45,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.56,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 173.37,
+            "punch_words": 13.88,
+            "punch_density": 0.28,
+            "crowd_ord": 2.0
+          },
+          "crowd_ord_prior": 2.0
+        }
+      ]
+    },
+    "sage_narrator": {
+      "need": "trusted thread-holder: mid, even, present",
+      "owner_note": "",
+      "top_matches": [
+        {
+          "performer": "uncle_lazer",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays sex",
+            "plays relationships"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.91,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 160.8,
+            "punch_words": 7.41,
+            "punch_density": 0.19,
+            "crowd_ord": 2.33
+          },
+          "crowd_ord_prior": 2.33
+        },
+        {
+          "performer": "jack_shaw",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays religion",
+            "plays relationships",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.44,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 191.79,
+            "punch_words": 11.5,
+            "punch_density": 0.12,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "cameron_frisk",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays relationships",
+            "plays family",
+            "plays insult_humor"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.17,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 205.04,
+            "punch_words": 8.37,
+            "punch_density": 0.2,
+            "crowd_ord": 3.0
+          },
+          "crowd_ord_prior": 3.0
+        },
+        {
+          "performer": "aaron_belisle",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays disability",
+            "plays self_deprecation",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.1,
+          "op_hit": 0,
+          "top_op": "double_interpret",
+          "top_share": 0.44,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 121.69,
+            "punch_words": 8.83,
+            "punch_density": 0.06,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 4.0
+        },
+        {
+          "performer": "mason_bird",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays sex",
+            "plays sports"
+          ],
+          "persona_archetype": "literalise",
+          "anchored_to": null,
+          "score": 3.1,
+          "op_hit": 0,
+          "top_op": "literalize",
+          "top_share": 0.4,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 121.96,
+            "punch_words": 6.5,
+            "punch_density": 0.11,
+            "crowd_ord": 2.5
+          },
+          "crowd_ord_prior": 2.5
+        }
+      ]
+    },
+    "trickster": {
+      "need": "wordplay gremlin-light: reversal hunger",
+      "owner_note": "",
+      "top_matches": [
+        {
+          "performer": "offender",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays shock_humor",
+            "plays crime",
+            "plays storytelling"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.98,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.43,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 180.59,
+            "punch_words": 4.0,
+            "punch_density": 0.08,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 1.5
+        },
+        {
+          "performer": "david_jolly",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays observational",
+            "plays family",
+            "plays self_deprecation"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.14,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.54,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 184.6,
+            "punch_words": 12.21,
+            "punch_density": 0.37,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        },
+        {
+          "performer": "martin_phillips",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays disability",
+            "plays politics",
+            "plays sex"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 4.0,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 187.47,
+            "punch_words": 18.33,
+            "punch_density": 0.23,
+            "crowd_ord": 4.0
+          },
+          "crowd_ord_prior": 4.0
+        },
+        {
+          "performer": "liv_taylor",
+          "sets": 2,
+          "deep": 0,
+          "persona_traits": [
+            "plays self_deprecation",
+            "plays family",
+            "plays sex"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.95,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.56,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 173.37,
+            "punch_words": 13.88,
+            "punch_density": 0.28,
+            "crowd_ord": 2.0
+          },
+          "crowd_ord_prior": 2.0
+        },
+        {
+          "performer": "jack_shaw",
+          "sets": 3,
+          "deep": 0,
+          "persona_traits": [
+            "plays religion",
+            "plays relationships",
+            "plays politics"
+          ],
+          "persona_archetype": "bisociation",
+          "anchored_to": null,
+          "score": 3.91,
+          "op_hit": 1,
+          "top_op": "double_interpret",
+          "top_share": 0.5,
+          "trait_hits": [],
+          "delivery": {
+            "wpm": 191.79,
+            "punch_words": 11.5,
+            "punch_density": 0.12,
+            "crowd_ord": 3.33
+          },
+          "crowd_ord_prior": 3.33
+        }
+      ]
+    }
+  },
+  "unassigned": [
+    "william_montgomery",
+    "rick_diaz",
+    "pat_o_neill",
+    "liv_taylor",
+    "kam_patterson",
+    "juanita",
+    "isaac_kane_brown",
+    "hans_kim",
+    "fiona_collie",
+    "dedrick_flynn",
+    "david_lucas",
+    "collin_sledge",
+    "colin_sledge"
+  ]
+}

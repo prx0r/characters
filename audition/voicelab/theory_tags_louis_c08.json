@@ -1,0 +1,118 @@
+{
+  "set": "louis_c08",
+  "cost_usd": 0.000138138,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Give it up for Mr Nui C J Hello everybody How are you",
+      "garden_path": 0.1,
+      "identity_contradiction": 0.08,
+      "surprise": 0.37,
+      "escalation": 0.07,
+      "pause_before": 0,
+      "wpm_dev": -69.9,
+      "laugh_near": true
+    },
+    {
+      "seg": "s1",
+      "text": "Good I've been doing well I had a good day today I went to the movies ",
+      "garden_path": 0.69,
+      "identity_contradiction": 0.15,
+      "surprise": 0.52,
+      "escalation": 0.26,
+      "pause_before": 0.0,
+      "wpm_dev": 24.0,
+      "laugh_near": true
+    },
+    {
+      "seg": "s2",
+      "text": "families So you shouldn't download movies on the internet and I though",
+      "garden_path": 0.78,
+      "identity_contradiction": 0.54,
+      "surprise": 2.35,
+      "escalation": 0.68,
+      "pause_before": 0.0,
+      "wpm_dev": -15.5,
+      "laugh_near": true
+    },
+    {
+      "seg": "s3",
+      "text": "I went to the park today I like going to the park because I get matche",
+      "garden_path": 0.5,
+      "identity_contradiction": 0.22,
+      "surprise": 1.47,
+      "escalation": 0.18,
+      "pause_before": 0.0,
+      "wpm_dev": -17.1,
+      "laugh_near": true
+    },
+    {
+      "seg": "s4",
+      "text": "no drinking It has a picture of like a martini glass with a lion throu",
+      "garden_path": 0.6,
+      "identity_contradiction": 0.19,
+      "surprise": 1.18,
+      "escalation": 0.33,
+      "pause_before": 0.0,
+      "wpm_dev": 18.4,
+      "laugh_near": true
+    },
+    {
+      "seg": "s5",
+      "text": "So yeah my wife and I got in a big fight",
+      "garden_path": 0.34,
+      "identity_contradiction": 0.16,
+      "surprise": 2.02,
+      "escalation": 0.81,
+      "pause_before": 0.82,
+      "wpm_dev": 117.0,
+      "laugh_near": true
+    },
+    {
+      "seg": "s6",
+      "text": "because she says I don't listen to her and I don't But it's not becaus",
+      "garden_path": 0.52,
+      "identity_contradiction": 0.53,
+      "surprise": 1.52,
+      "escalation": 0.71,
+      "pause_before": 12.96,
+      "wpm_dev": -34.0,
+      "laugh_near": true
+    },
+    {
+      "seg": "s7",
+      "text": "to God she sucks at it When she starts telling a story it immediately ",
+      "garden_path": 0.29,
+      "identity_contradiction": 0.62,
+      "surprise": 0.59,
+      "escalation": 0.72,
+      "pause_before": 0.0,
+      "wpm_dev": -20.2,
+      "laugh_near": true
+    },
+    {
+      "seg": "s8",
+      "text": "try because I love her when she starts talking I'm like I'm locked in ",
+      "garden_path": 0.42,
+      "identity_contradiction": 0.69,
+      "surprise": 0.19,
+      "escalation": 0.48,
+      "pause_before": 0.0,
+      "wpm_dev": -0.7,
+      "laugh_near": true
+    },
+    {
+      "seg": "s9",
+      "text": "college and not when she went to Antioch and I had to transfer because",
+      "garden_path": 0.51,
+      "identity_contradiction": 0.37,
+      "surprise": 1.23,
+      "escalation": 0.4,
+      "pause_before": 0.0,
+      "wpm_dev": -2.1,
+      "laugh_near": true
+    }
+  ],
+  "laugh_correlations": {},
+  "at": "2026-10-15T11:56:44Z"
+}

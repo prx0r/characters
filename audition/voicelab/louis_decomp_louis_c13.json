@@ -1,0 +1,92 @@
+{
+  "set": "louis_c13",
+  "cost_usd": 0.00012138,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "I have two kids I try to be a better person around my kids I really do I try to change my ",
+      "technique": "sincere_claim",
+      "wpm": 142.9,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "me like I have a rule that I don't curse around my kids it's a rule it does happen you kno",
+      "technique": "self_deprecation",
+      "wpm": 220.9,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "soup and I said here's your fucking soup You can see how that was a tough situation",
+      "technique": "self_deprecation",
+      "wpm": 60.9,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "You're supposed to teach your kids right from wrong I don't know it's confusing you know S",
+      "technique": "sincere_claim",
+      "wpm": 157.2,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "I'm not raising my kids religiously because I don't feel like it Just get up on a Sunday f",
+      "technique": "escalation",
+      "wpm": 134.0,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "But my kids you know they're living in the world and there's a lot of religion in the worl",
+      "technique": "sincere_claim",
+      "wpm": 244.7,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "religions in the world and they're all equal but the Christians are the main one That's wh",
+      "technique": "literalize",
+      "wpm": 124.0,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "when you meet them Because they won the world And it's true It's true We love to tell each",
+      "technique": "literalize",
+      "wpm": 123.6,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "won everything a long time ago If you don't believe me let me ask you a question What year",
+      "technique": "audience_address",
+      "wpm": 131.5,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "human race I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry 2017 It's",
+      "technique": "audience_address",
+      "wpm": 75.0,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "sincere_claim": 3,
+    "self_deprecation": 2,
+    "literalize": 2,
+    "audience_address": 2,
+    "escalation": 1
+  },
+  "laugh_by_technique": {
+    "sincere_claim": 3,
+    "self_deprecation": 2,
+    "literalize": 2,
+    "audience_address": 2,
+    "escalation": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

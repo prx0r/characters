@@ -1,0 +1,94 @@
+{
+  "target_wpm": 289.6,
+  "text": "Who gives a crap? You're here on the winning side. [chuckling] If you don't like America, go check out Ukraine. Try to get an oatmeal latte in downtown Kiev, you ungrateful crap.",
+  "best": {
+    "wpm": 282.7,
+    "duration_ms": 6791,
+    "p90_p10_db": 42.0,
+    "std_semitones": 7.45,
+    "median_hz": 146.8,
+    "name": "paced_plain",
+    "temp": 0.7,
+    "speed": 1.5645596974608322,
+    "wpm_err": 6.9
+  },
+  "board": [
+    {
+      "name": "base_no_cues",
+      "wpm": 185.1,
+      "duration_ms": 10370,
+      "p90_p10_db": 44.9,
+      "std_semitones": 6.75,
+      "median_hz": 145.5,
+      "temp": 0.7,
+      "speed": 1.0
+    },
+    {
+      "wpm": 282.7,
+      "duration_ms": 6791,
+      "p90_p10_db": 42.0,
+      "std_semitones": 7.45,
+      "median_hz": 146.8,
+      "name": "paced_plain",
+      "temp": 0.7,
+      "speed": 1.5645596974608322,
+      "wpm_err": 6.9
+    },
+    {
+      "wpm": 276.3,
+      "duration_ms": 6948,
+      "p90_p10_db": 38.2,
+      "std_semitones": 5.76,
+      "median_hz": 200.0,
+      "name": "cues_mid",
+      "temp": 0.75,
+      "speed": 1.5645596974608322,
+      "wpm_err": 13.3
+    },
+    {
+      "wpm": 282.7,
+      "duration_ms": 6791,
+      "p90_p10_db": 36.9,
+      "std_semitones": 5.65,
+      "median_hz": 207.8,
+      "name": "cues_hot",
+      "temp": 0.85,
+      "speed": 1.5645596974608322,
+      "wpm_err": 6.9
+    },
+    {
+      "wpm": 241.8,
+      "duration_ms": 7941,
+      "p90_p10_db": 42.7,
+      "std_semitones": 4.5,
+      "median_hz": 271.2,
+      "name": "cues_max",
+      "temp": 0.95,
+      "speed": 1.5645596974608322,
+      "wpm_err": 47.8
+    },
+    {
+      "wpm": 272.2,
+      "duration_ms": 7053,
+      "p90_p10_db": 43.2,
+      "std_semitones": 5.81,
+      "median_hz": 160.0,
+      "name": "cues_sarcastic",
+      "temp": 0.75,
+      "speed": 1.5645596974608322,
+      "wpm_err": 17.4
+    },
+    {
+      "wpm": 260.7,
+      "duration_ms": 7366,
+      "p90_p10_db": 30.5,
+      "std_semitones": 6.2,
+      "median_hz": 134.5,
+      "name": "temp_ladder",
+      "temp": 0.9,
+      "speed": 1.6427876823338738,
+      "wpm_err": 28.9
+    }
+  ],
+  "at": "2026-10-14T09:43:03Z"
+}

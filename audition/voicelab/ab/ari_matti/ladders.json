@@ -1,0 +1,200 @@
+{
+  "performer": "ari_matti",
+  "probe": "Audiences always ask me about the schedule. I tell them the schedule is a suggestion. Last week the schedule showed up at my door and I offered it a seat. It declined. Now we meet Thursdays, formally, and nobody moves first.",
+  "note": "DNA: sarcastic measured setups -> mock-indignant/manic spikes, pitch spikes, temp mid. Bands: pitch_var 4.2-5.5st, med ~187Hz.",
+  "rendered_at": "2026-10-14T09:14:25Z",
+  "variants": [
+    {
+      "variant": "v1_spike_arc",
+      "temperature": 0.65,
+      "beats": [
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v1_spike_arc-audience-fish.mp3",
+          "duration_ms": 2977,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "83fb1e36f35a420bd10929ab97ecfe5c37c0270584af1a37975e5acdc75935fe",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v1_spike_arc-itellt-fish.mp3",
+          "duration_ms": 2899,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "d4008f5b8fbc59eed4e245bd0d9ee1eff8920fd0e0cc20b8371a589d9e5bbfa1",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v1_spike_arc-lastwee-fish.mp3",
+          "duration_ms": 4362,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "e0512c75a8a7d4ac7f6e54ed8adc9e46eaf37bcff7dc5f7ff91e760c2b71502c",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v1_spike_arc-itdecli-fish.mp3",
+          "duration_ms": 940,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "b569439feacaf7041df85e3b3f8dce5d7db0811f301e5a0844c91bbc7be9ab89",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v1_spike_arc-nowwem-fish.mp3",
+          "duration_ms": 5119,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "d4e2e53d344ec080adf3f96096942299b5e3554ca238aa35e0f52b65deefbc46",
+          "model": "s2.1-pro-free",
+          "directed": false
+        }
+      ],
+      "total_ms": 16297,
+      "file": "/tmp/opencode/characters/audition/voicelab/ab/ari_matti/v1_spike_arc.wav"
+    },
+    {
+      "variant": "v2_dry_hot",
+      "temperature": 0.6,
+      "beats": [
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v2_dry_hot-audience-fish.mp3",
+          "duration_ms": 3108,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "e4695254207190e71114488a6bb688e740ee6883bd77494bf490778fa5a81085",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v2_dry_hot-itellt-fish.mp3",
+          "duration_ms": 2664,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "e326974756bcf44f04407bcd4e803bcdbcf7723602d1bb94cf71a98ed9659f14",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v2_dry_hot-lastwee-fish.mp3",
+          "duration_ms": 3761,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "9ed6c43bfe5499d2b59e1434982ca920faf117d9907f43468df6257f15ebc762",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v2_dry_hot-itdecli-fish.mp3",
+          "duration_ms": 1018,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "97b45ce04d371884557d286f845c9c1348e1cbe413fd505c1e2336739b26331a",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v2_dry_hot-nowwem-fish.mp3",
+          "duration_ms": 5981,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "f42c73070046361f045ab1453c59e509eb44daeacaf2e4e637179ab5ac69fea3",
+          "model": "s2.1-pro-free",
+          "directed": false
+        }
+      ],
+      "total_ms": 16532,
+      "file": "/tmp/opencode/characters/audition/voicelab/ab/ari_matti/v2_dry_hot.wav"
+    },
+    {
+      "variant": "v3_explode",
+      "temperature": 0.75,
+      "beats": [
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v3_explode-audience-fish.mp3",
+          "duration_ms": 2847,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "32d404815cd2e89c758efc0afed82d156a453499d0440c5991bdcae4b2de62ea",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v3_explode-itellt-fish.mp3",
+          "duration_ms": 2481,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "6817aa9c4be8bff804f6b3148d5b9f45e4885c8f2e4f353b8308abe88de70a27",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v3_explode-lastwee-fish.mp3",
+          "duration_ms": 3474,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "be8c335c84770e62403c8023f6f13ca77a459613e8d63a236429549be69f9ca8",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v3_explode-itdecli-fish.mp3",
+          "duration_ms": 992,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "1953a9d78b4b6e070ca0bf3198c2fd35ba9164e02fad3f92dec77c2582622d12",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v3_explode-nowwem-fish.mp3",
+          "duration_ms": 5642,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "24d0ea2a2dc9400c830884d1fecba6972f228e34b7234ba412f4a05e26828281",
+          "model": "s2.1-pro-free",
+          "directed": false
+        }
+      ],
+      "total_ms": 15436,
+      "file": "/tmp/opencode/characters/audition/voicelab/ab/ari_matti/v3_explode.wav"
+    },
+    {
+      "variant": "v4_control",
+      "temperature": 0.7,
+      "beats": [
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v4_control-audience-fish.mp3",
+          "duration_ms": 3317,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "8217627d937d0aff513b979cb0148f9b38607637f3a15bd29fadf59d389e311f",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v4_control-isasug-fish.mp3",
+          "duration_ms": 2559,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "d6ef59450e72677d3b793d02cc64ac661cc58e7c6fff36b21e05a65e1be3a78c",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v4_control-showedu-fish.mp3",
+          "duration_ms": 4440,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "f54b47c55bb204034e3b569f955caf2a07a40b1760db087a7754a322db05e715",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v4_control-itdecli-fish.mp3",
+          "duration_ms": 1645,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "834286711d0bc26eacd38900f383f61b99fcd5dfffceeb383dd59aa71d330c3f",
+          "model": "s2.1-pro-free",
+          "directed": false
+        },
+        {
+          "path": "/tmp/opencode/characters/audition/audio/ab-ari_matti-v4_control-nobodym-fish.mp3",
+          "duration_ms": 4048,
+          "provenance": "fish-tts:s2.1-pro-free+ffprobe",
+          "sha256": "8de106e94beb7942323e56cf4c10403eed87e01ed3fdf5b2ecd57327876c2e35",
+          "model": "s2.1-pro-free",
+          "directed": false
+        }
+      ],
+      "total_ms": 16009,
+      "file": "/tmp/opencode/characters/audition/voicelab/ab/ari_matti/v4_control.wav"
+    }
+  ]
+}

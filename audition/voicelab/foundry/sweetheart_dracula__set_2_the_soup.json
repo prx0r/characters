@@ -1,0 +1,84 @@
+{
+  "foundry": "sweetheart_dracula",
+  "variant": "set_2_the_soup",
+  "voice": "04e9ab898fb44ccd9b7ac2357439d6ec",
+  "affect": {
+    "arousal": 0.5,
+    "valence": 0.5,
+    "power": 0.4,
+    "evidence": {
+      "fear": [],
+      "power": [],
+      "warmth": [
+        "kind",
+        "thank"
+      ],
+      "spike": [],
+      "texture": [
+        "warm"
+      ]
+    }
+  },
+  "verify_match": 0.984,
+  "unsaid": [
+    "two-sided",
+    "five-star"
+  ],
+  "duration_ms": 56999,
+  "beats": [
+    {
+      "beat": 0,
+      "type": "identity_1",
+      "text": "I bring soup to my neighbors. Homemade. I list the ingredients so they know what they're trusting.",
+      "pause_after_ms": 600
+    },
+    {
+      "beat": 1,
+      "type": "identity_2",
+      "text": "Item one: pumpkin. Item two: more pumpkin. Item three is where it gets honest.",
+      "pause_after_ms": 600
+    },
+    {
+      "beat": 2,
+      "type": "rhythm",
+      "text": "I've lived six centuries. You learn to feed people. It's the only immortal skill worth having.",
+      "pause_after_ms": 1500
+    },
+    {
+      "beat": 3,
+      "type": "surprise",
+      "text": "The honest ingredient is that I can smell their blood through the walls. Through THREE walls, Karen. That's not kindness. That's a floor plan.",
+      "pause_after_ms": 1000
+    },
+    {
+      "beat": 4,
+      "type": "callback",
+      "text": "But I still bring the soup! Because the soup is real! The monster just walks alongside it! We carpool!",
+      "pause_after_ms": 800
+    },
+    {
+      "beat": 5,
+      "type": "tag",
+      "text": "Karen moved. She said the soup was lovely. She said the sniffing was 'a lot.' Fair. Growth is two-sided. I left her a casserole at the new place. She didn't call the police. That's a five-star review.",
+      "pause_after_ms": 600
+    }
+  ],
+  "rating": null,
+  "rating_note": "owner listens here",
+  "at": "2026-10-14T19:31:59Z",
+  "identity_gap": {
+    "axis_1_baseline": "gentle volunteer count (believed, sincere, 600yrs of practice)",
+    "axis_2_leak": "ancient blood urge (old friend, not defeated \u2014 retiring)",
+    "why_funny_before_speaking": "kind+monster coexisting is comic as pure identity; every mundane act (soup, goats, hay) becomes a collision for free",
+    "mundane_contexts": [
+      "petting zoo",
+      "soup delivery",
+      "compliments to spoons"
+    ],
+    "techniques_as_amplifiers": {
+      "dpv_couple_pause": "1.5s before the urge-surface moment",
+      "garden_path": "sweet sentences set the expectation the urge breaks",
+      "callback": "therapy/goat-postcards escalate the gap"
+    }
+  }
+}

@@ -1,0 +1,1092 @@
+{
+  "id": "real_kt704_passport",
+  "source": "/home/box/ari_matti_sets/shorts/kt704_passport_short.mp4",
+  "duration_ms": 59773,
+  "ingested_at": "2026-10-14T14:15:31Z",
+  "words": [
+    {
+      "text": "What",
+      "start": 0.0,
+      "end": 0.23,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 0.23,
+      "end": 0.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "love",
+      "start": 0.46,
+      "end": 0.7,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "about",
+      "start": 0.7,
+      "end": 0.93,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Texas",
+      "start": 0.93,
+      "end": 1.16,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "is",
+      "start": 1.16,
+      "end": 1.59,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "that",
+      "start": 1.59,
+      "end": 2.02,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you",
+      "start": 2.02,
+      "end": 2.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "guys",
+      "start": 2.46,
+      "end": 2.89,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "are",
+      "start": 2.89,
+      "end": 3.32,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "like",
+      "start": 3.32,
+      "end": 3.78,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "proud",
+      "start": 3.78,
+      "end": 4.25,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 4.25,
+      "end": 4.71,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "be",
+      "start": 4.71,
+      "end": 5.18,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "American",
+      "start": 5.18,
+      "end": 5.64,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "And",
+      "start": 5.64,
+      "end": 6.01,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 6.01,
+      "end": 6.38,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "love",
+      "start": 6.38,
+      "end": 6.76,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "that",
+      "start": 6.76,
+      "end": 7.13,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "energy",
+      "start": 7.13,
+      "end": 7.5,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "because",
+      "start": 7.5,
+      "end": 7.72,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 7.72,
+      "end": 7.93,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "first",
+      "start": 7.93,
+      "end": 8.15,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "time",
+      "start": 8.15,
+      "end": 8.36,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 8.36,
+      "end": 8.58,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "came",
+      "start": 8.58,
+      "end": 8.86,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 8.86,
+      "end": 9.13,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "America",
+      "start": 9.13,
+      "end": 9.41,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 9.41,
+      "end": 9.68,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "went",
+      "start": 9.68,
+      "end": 9.96,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 9.96,
+      "end": 10.53,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Seattle",
+      "start": 10.53,
+      "end": 11.1,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Very",
+      "start": 11.1,
+      "end": 11.66,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "different",
+      "start": 11.66,
+      "end": 12.23,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "vibe",
+      "start": 12.23,
+      "end": 12.8,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Dude",
+      "start": 12.8,
+      "end": 13.2,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 13.2,
+      "end": 13.59,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "go",
+      "start": 13.59,
+      "end": 13.99,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 13.99,
+      "end": 14.38,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Seattle",
+      "start": 14.38,
+      "end": 14.78,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I'm",
+      "start": 14.78,
+      "end": 15.03,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "hyped",
+      "start": 15.03,
+      "end": 15.28,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I'm",
+      "start": 15.28,
+      "end": 15.52,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "ready",
+      "start": 15.52,
+      "end": 15.77,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 15.77,
+      "end": 16.02,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "go",
+      "start": 16.02,
+      "end": 16.22,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "off",
+      "start": 16.22,
+      "end": 16.42,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 16.42,
+      "end": 16.62,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "plane",
+      "start": 16.62,
+      "end": 16.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 16.82,
+      "end": 17.02,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "watch",
+      "start": 17.02,
+      "end": 17.38,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "saving",
+      "start": 17.38,
+      "end": 17.74,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "pride",
+      "start": 17.74,
+      "end": 18.1,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Ryan",
+      "start": 18.1,
+      "end": 18.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Back",
+      "start": 18.46,
+      "end": 18.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 18.82,
+      "end": 19.24,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "back",
+      "start": 19.24,
+      "end": 19.67,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "three",
+      "start": 19.67,
+      "end": 20.09,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "times",
+      "start": 20.09,
+      "end": 20.52,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I'm",
+      "start": 20.52,
+      "end": 20.94,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "ready",
+      "start": 20.94,
+      "end": 21.36,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 21.36,
+      "end": 21.78,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "shoot",
+      "start": 21.78,
+      "end": 22.2,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "somebody",
+      "start": 22.2,
+      "end": 22.62,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Let's",
+      "start": 22.62,
+      "end": 23.04,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "f**king",
+      "start": 23.04,
+      "end": 23.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "storm",
+      "start": 23.46,
+      "end": 23.89,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 23.89,
+      "end": 24.31,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "capital",
+      "start": 24.31,
+      "end": 24.74,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "and",
+      "start": 24.74,
+      "end": 25.16,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "sh**",
+      "start": 25.16,
+      "end": 25.49,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "And",
+      "start": 25.49,
+      "end": 25.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "then",
+      "start": 25.82,
+      "end": 26.16,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 26.16,
+      "end": 26.49,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "get",
+      "start": 26.49,
+      "end": 26.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 26.82,
+      "end": 27.37,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Seattle",
+      "start": 27.37,
+      "end": 27.92,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "everybody",
+      "start": 27.92,
+      "end": 28.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "walks",
+      "start": 28.46,
+      "end": 29.01,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "around",
+      "start": 29.01,
+      "end": 29.56,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Every",
+      "start": 30.02,
+      "end": 30.27,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "time",
+      "start": 30.27,
+      "end": 30.52,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 30.52,
+      "end": 30.76,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "had",
+      "start": 30.76,
+      "end": 31.01,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "like",
+      "start": 31.01,
+      "end": 31.26,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "green",
+      "start": 31.26,
+      "end": 32.0,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "hair",
+      "start": 32.0,
+      "end": 32.73,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "every",
+      "start": 32.73,
+      "end": 33.47,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "conversation",
+      "start": 33.47,
+      "end": 34.2,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "I",
+      "start": 34.2,
+      "end": 34.94,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "had",
+      "start": 34.94,
+      "end": 35.17,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "in",
+      "start": 35.17,
+      "end": 35.4,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Seattle",
+      "start": 35.4,
+      "end": 35.62,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "they",
+      "start": 35.62,
+      "end": 35.85,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "were",
+      "start": 35.85,
+      "end": 36.08,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "all",
+      "start": 36.08,
+      "end": 36.36,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "like",
+      "start": 36.36,
+      "end": 36.64,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "You",
+      "start": 36.64,
+      "end": 36.92,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "know",
+      "start": 36.92,
+      "end": 37.2,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "America",
+      "start": 37.2,
+      "end": 37.48,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "is",
+      "start": 37.48,
+      "end": 37.84,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "built",
+      "start": 37.84,
+      "end": 38.2,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "on",
+      "start": 38.2,
+      "end": 38.56,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 38.56,
+      "end": 38.92,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "racist",
+      "start": 38.92,
+      "end": 39.28,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "agenda",
+      "start": 39.28,
+      "end": 39.76,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Who",
+      "start": 39.76,
+      "end": 40.24,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "gives",
+      "start": 40.24,
+      "end": 40.72,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "a",
+      "start": 40.72,
+      "end": 41.2,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "f**k",
+      "start": 41.2,
+      "end": 41.68,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "You're",
+      "start": 41.68,
+      "end": 42.01,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "here",
+      "start": 42.01,
+      "end": 42.34,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "on",
+      "start": 42.34,
+      "end": 42.66,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "the",
+      "start": 42.66,
+      "end": 42.99,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "winning",
+      "start": 42.99,
+      "end": 43.32,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "side",
+      "start": 43.34,
+      "end": 43.63,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "If",
+      "start": 43.63,
+      "end": 43.92,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you",
+      "start": 43.92,
+      "end": 44.2,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "don't",
+      "start": 44.2,
+      "end": 44.49,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "like",
+      "start": 44.49,
+      "end": 44.78,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "America",
+      "start": 44.78,
+      "end": 45.32,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "go",
+      "start": 45.32,
+      "end": 45.86,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "check",
+      "start": 45.86,
+      "end": 46.4,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "out",
+      "start": 46.4,
+      "end": 46.94,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Ukraine",
+      "start": 46.94,
+      "end": 47.48,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Try",
+      "start": 47.5,
+      "end": 47.7,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "to",
+      "start": 47.7,
+      "end": 47.89,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "get",
+      "start": 47.89,
+      "end": 48.09,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "an",
+      "start": 48.09,
+      "end": 48.28,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "old",
+      "start": 48.28,
+      "end": 48.48,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "meal",
+      "start": 48.48,
+      "end": 49.12,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "latte",
+      "start": 49.12,
+      "end": 49.75,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "in",
+      "start": 49.75,
+      "end": 50.39,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "downtown",
+      "start": 50.39,
+      "end": 51.02,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "Kiev",
+      "start": 51.02,
+      "end": 51.66,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "You",
+      "start": 51.66,
+      "end": 52.36,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "are",
+      "start": 52.36,
+      "end": 53.06,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "grateful",
+      "start": 53.06,
+      "end": 53.76,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "If",
+      "start": 53.76,
+      "end": 54.46,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "you",
+      "start": 54.46,
+      "end": 55.16,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "don't",
+      "start": 55.16,
+      "end": 55.49,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "like",
+      "start": 55.49,
+      "end": 55.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "America",
+      "start": 55.82,
+      "end": 56.16,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "give",
+      "start": 56.16,
+      "end": 56.49,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "me",
+      "start": 56.49,
+      "end": 56.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "your",
+      "start": 56.82,
+      "end": 56.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    },
+    {
+      "text": "passport",
+      "start": 56.82,
+      "end": 56.82,
+      "type": "word",
+      "speaker_id": "speaker_0"
+    }
+  ],
+  "laugh_events": [],
+  "punch_candidates": [],
+  "delivery": {
+    "wpm": 147.6,
+    "pitch_std": 5.45,
+    "median_hz": 205.1,
+    "dyn_db": 23.4,
+    "centroid": 1739.0
+  },
+  "profile": {
+    "performer": "ari_matti",
+    "crowd_history": [
+      {
+        "crowd_ord": 4,
+        "golden": false,
+        "praise": 5,
+        "n_beats": 15,
+        "words": 137
+      },
+      {
+        "crowd_ord": 4,
+        "golden": false,
+        "praise": 5,
+        "n_beats": 17,
+        "words": 188
+      },
+      {
+        "crowd_ord": 4,
+        "golden": false,
+        "praise": 5,
+        "n_beats": 27,
+        "words": 219
+      },
+      {
+        "crowd_ord": 4,
+        "golden": false,
+        "praise": 5,
+        "n_beats": 15,
+        "words": 125
+      }
+    ]
+  },
+  "audio_copy": "/tmp/opencode/characters/audition/voicelab/dataset/real_kt704_passport.wav",
+  "verdict": null,
+  "verdict_note": "",
+  "rubric": {
+    "parts": {
+      "pace": 0.769,
+      "laugh_density": 0.0,
+      "crowd_prior": 0.8
+    },
+    "composite": 0.523,
+    "laugh_rate_per_10s": 0.0,
+    "note": "same rubric for real + generated; verify only on generated"
+  }
+}

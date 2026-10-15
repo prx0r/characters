@@ -1,0 +1,118 @@
+{
+  "set": "louis_c03",
+  "cost_usd": 0.000147966,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "I thought I had COVID about three times I'm one of those idiots I was ",
+      "garden_path": 0.26,
+      "identity_contradiction": 0.25,
+      "surprise": 0.74,
+      "escalation": 0.33,
+      "pause_before": 0,
+      "wpm_dev": -9.6,
+      "laugh_near": true
+    },
+    {
+      "seg": "s1",
+      "text": "know that's I can't do pain That's why I could never be a cop I couldn",
+      "garden_path": 0.22,
+      "identity_contradiction": 0.17,
+      "surprise": 0.84,
+      "escalation": 0.53,
+      "pause_before": 0.0,
+      "wpm_dev": -31.0,
+      "laugh_near": true
+    },
+    {
+      "seg": "s2",
+      "text": "main problem by the way with the whole defund the police idea What abo",
+      "garden_path": 0.39,
+      "identity_contradiction": 0.22,
+      "surprise": 1.85,
+      "escalation": 0.67,
+      "pause_before": 0.0,
+      "wpm_dev": -41.1,
+      "laugh_near": true
+    },
+    {
+      "seg": "s3",
+      "text": "protests in New York and now we have protesters that just live here Th",
+      "garden_path": 0.34,
+      "identity_contradiction": 0.15,
+      "surprise": 1.46,
+      "escalation": 0.49,
+      "pause_before": 0.0,
+      "wpm_dev": -28.2,
+      "laugh_near": true
+    },
+    {
+      "seg": "s4",
+      "text": "holding a little piece of cardboard and it's with a sharpie that said ",
+      "garden_path": 0.31,
+      "identity_contradiction": 0.2,
+      "surprise": 1.7,
+      "escalation": 0.79,
+      "pause_before": 0.0,
+      "wpm_dev": 221.0,
+      "laugh_near": true
+    },
+    {
+      "seg": "s5",
+      "text": "don't think it's going to do it It doesn't feel like that's going to r",
+      "garden_path": 0.28,
+      "identity_contradiction": 0.18,
+      "surprise": 0.89,
+      "escalation": 0.17,
+      "pause_before": 0.0,
+      "wpm_dev": -52.1,
+      "laugh_near": true
+    },
+    {
+      "seg": "s6",
+      "text": "I think I thought it was good how young people got out there and they ",
+      "garden_path": 0.53,
+      "identity_contradiction": 0.26,
+      "surprise": 1.37,
+      "escalation": 0.25,
+      "pause_before": 0.02,
+      "wpm_dev": -23.7,
+      "laugh_near": true
+    },
+    {
+      "seg": "s7",
+      "text": "just some of it which is a weird form of discrimination but there are ",
+      "garden_path": 0.61,
+      "identity_contradiction": 0.6,
+      "surprise": 1.64,
+      "escalation": 0.51,
+      "pause_before": 0.0,
+      "wpm_dev": -26.3,
+      "laugh_near": true
+    },
+    {
+      "seg": "s8",
+      "text": "discriminates against ugly people they do and it's awful I mean I'd ra",
+      "garden_path": 0.52,
+      "identity_contradiction": 0.39,
+      "surprise": 1.88,
+      "escalation": 0.76,
+      "pause_before": 0.0,
+      "wpm_dev": 1.6,
+      "laugh_near": true
+    },
+    {
+      "seg": "s9",
+      "text": "we don't like your face just don't like it so no one's gonna I'm going",
+      "garden_path": 0.41,
+      "identity_contradiction": 0.34,
+      "surprise": 1.37,
+      "escalation": 0.33,
+      "pause_before": 0.0,
+      "wpm_dev": -10.5,
+      "laugh_near": true
+    }
+  ],
+  "laugh_correlations": {},
+  "at": "2026-10-15T11:52:49Z"
+}

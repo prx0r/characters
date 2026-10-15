@@ -1,0 +1,65 @@
+{
+  "character": "Grimble the Toll-Keeper",
+  "comedian_delivery": "ari_matti",
+  "voice": "narrator",
+  "collision": "status_reversal: the bridge is HIS, the app stole it; grievance velocity",
+  "verify_match": 0.928,
+  "duration_ms": 33071,
+  "beats": [
+    {
+      "seg": 0,
+      "label": "gleeful",
+      "text": "I am Grimble. I collect the toll. I have ALWAYS collected the toll.",
+      "recipe": {
+        "temp": 0.92,
+        "speed": 0.9,
+        "cue": "[delighted]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 1,
+      "label": "manic",
+      "text": "There's an app now. An APP. You tap it and the bridge just... opens. For FREE.",
+      "recipe": {
+        "temp": 0.85,
+        "speed": 0.75,
+        "cue": "[excited]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 2,
+      "label": "sarcastic",
+      "text": "Four hundred years of troll-work and a startup put me out. A startup! With hoodies!",
+      "recipe": {
+        "temp": 0.65,
+        "speed": 0.8,
+        "cue": "[excited]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 3,
+      "label": "mock_indignant",
+      "text": "My bridge. MY bridge. They put a QR code on my bridge. On my FACE of the bridge.",
+      "recipe": {
+        "temp": 0.95,
+        "speed": 0.79,
+        "cue": "[frustrated]",
+        "vol": 0.0
+      }
+    },
+    {
+      "seg": 4,
+      "label": "gleeful",
+      "text": "Download the app, they said. I downloaded it. It asked for a REVIEW. I gave it one star. It UNMATCHED me.",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.56,
+        "cue": "[delighted]",
+        "vol": 0.0
+      }
+    }
+  ]
+}

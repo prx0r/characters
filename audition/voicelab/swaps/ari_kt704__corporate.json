@@ -1,0 +1,33 @@
+{
+  "variant": "corporate",
+  "note": "underdog employee grievances, same velocity",
+  "subs": [
+    [
+      "Texas",
+      "the Denver branch"
+    ],
+    [
+      "American",
+      "company-loyal"
+    ],
+    [
+      "America",
+      "the company"
+    ],
+    [
+      "Seattle",
+      "the Portland office"
+    ],
+    [
+      "Saving Private Ryan",
+      "the Q3 war-room footage"
+    ],
+    [
+      "Capitol",
+      "headquarters"
+    ]
+  ],
+  "verify_match": 0.931,
+  "duration_ms": 38661,
+  "rating": null
+}

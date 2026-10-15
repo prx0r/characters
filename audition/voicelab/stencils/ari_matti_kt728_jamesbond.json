@@ -1,0 +1,106 @@
+{
+  "stencil_id": "ari_matti_kt728_jamesbond",
+  "performer": "ari_matti",
+  "source_set": "kt728_jamesbond",
+  "voice_slot": "[SLOT \u2014 clone or card]",
+  "note": "delivery score: recipes+structure. material (text) is one payload; swap for world material keeping beat types.",
+  "segments": [
+    {
+      "seg": 0,
+      "emotion": "sarcastic",
+      "recipe": {
+        "temp": 0.65,
+        "speed": 1.28,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 193.3,
+        "target_wpm": 196.9,
+        "var_st": 3.01,
+        "score": 3.74
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "sarcastic"
+      }
+    },
+    {
+      "seg": 1,
+      "emotion": "gleeful",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.96,
+        "cue": "[delighted]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 138.1,
+        "target_wpm": 132.0,
+        "var_st": 6.08,
+        "score": 5.44
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "gleeful"
+      }
+    },
+    {
+      "seg": 2,
+      "emotion": "neutral",
+      "recipe": {
+        "temp": 0.72,
+        "speed": 0.63,
+        "cue": "[neutral]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 97.5,
+        "target_wpm": 92.7,
+        "var_st": 5.51,
+        "score": 5.83
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "neutral"
+      }
+    },
+    {
+      "seg": 5,
+      "emotion": "gleeful",
+      "recipe": {
+        "temp": 0.8,
+        "speed": 0.69,
+        "cue": "[excited]",
+        "vol": 0.0
+      },
+      "beat": {
+        "wpm": 170.2,
+        "target_wpm": 208.7,
+        "var_st": 3.38,
+        "score": 20.87
+      },
+      "material_slot": {
+        "text": "",
+        "swappable": true,
+        "beat_label": "gleeful"
+      }
+    }
+  ],
+  "delivery_vector": {
+    "mean_wpm": 149.8,
+    "mean_var": 4.5,
+    "mean_temp": 0.74,
+    "mean_speed": 0.89,
+    "emotion_mix": [
+      "gleeful",
+      "neutral",
+      "sarcastic"
+    ],
+    "n_segments": 4
+  },
+  "avg_score": 8.97
+}

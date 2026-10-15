@@ -1,0 +1,124 @@
+{
+  "set": "kt715_walking",
+  "misses": [
+    {
+      "seg": 0,
+      "emotion": "neutral",
+      "wpm_err": -9.2,
+      "var_st": 4.8,
+      "var_err_vs_real": 0.57,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 1,
+      "emotion": "sarcastic",
+      "wpm_err": -4.4,
+      "var_st": 6.76,
+      "var_err_vs_real": 2.53,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": -0.1,
+          "why": "wilder than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 2,
+      "emotion": "mock_indignant",
+      "wpm_err": 1.7,
+      "var_st": 5.27,
+      "var_err_vs_real": 1.04,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": -0.1,
+          "why": "wilder than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 3,
+      "emotion": "gleeful",
+      "wpm_err": -8.6,
+      "var_st": 4.72,
+      "var_err_vs_real": 0.49,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 4,
+      "emotion": "deadpan",
+      "wpm_err": 0.1,
+      "var_st": 6.5,
+      "var_err_vs_real": 2.27,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": -0.1,
+          "why": "wilder than his real voice"
+        }
+      ]
+    }
+  ],
+  "miss_count": 5,
+  "segment_count": 5,
+  "prior_updates": {
+    "neutral": {
+      "n": 1,
+      "mean_wpm_err": -9.2,
+      "mean_var_err": 0.57,
+      "suggest_speed_delta": 0.06,
+      "suggest_temp_delta": 0.03
+    },
+    "sarcastic": {
+      "n": 1,
+      "mean_wpm_err": -4.4,
+      "mean_var_err": 2.53,
+      "suggest_speed_delta": 0.03,
+      "suggest_temp_delta": 0.13
+    },
+    "mock_indignant": {
+      "n": 1,
+      "mean_wpm_err": 1.7,
+      "mean_var_err": 1.04,
+      "suggest_speed_delta": -0.01,
+      "suggest_temp_delta": 0.05
+    },
+    "gleeful": {
+      "n": 1,
+      "mean_wpm_err": -8.6,
+      "mean_var_err": 0.49,
+      "suggest_speed_delta": 0.06,
+      "suggest_temp_delta": 0.02
+    },
+    "deadpan": {
+      "n": 1,
+      "mean_wpm_err": 0.1,
+      "mean_var_err": 2.27,
+      "suggest_speed_delta": -0.0,
+      "suggest_temp_delta": 0.11
+    }
+  },
+  "theory_notes": [],
+  "real_prosody": {
+    "pitch_var": 4.229,
+    "thirds_var": [
+      4.43,
+      3.498,
+      3.854
+    ]
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

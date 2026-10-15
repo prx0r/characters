@@ -1,0 +1,1244 @@
+{
+  "set": "kt715_nashville",
+  "clone": "dbeb1d68566245e2b857617b830e8031",
+  "bounds": {
+    "emotion_acc": 0.6,
+    "wpm_mae": 20.0,
+    "var_mae": 1.5
+  },
+  "history": [
+    {
+      "round": 1,
+      "emotion_acc": 0.273,
+      "wpm_mae": 152.4,
+      "var_mae": 2.18,
+      "cost_usd": 0.000145362,
+      "rows": [
+        {
+          "seg": "s0",
+          "pred_emo": "gleeful",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2,
+          "gen_wpm": 199.4,
+          "act_wpm": 115.2,
+          "wpm_err": 84.2,
+          "gen_var": 3.84,
+          "act_var": 4.84,
+          "var_err": -1.0,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-0-fish.mp3"
+        },
+        {
+          "seg": "s1",
+          "pred_emo": "sarcastic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.24,
+          "gen_wpm": 194.9,
+          "act_wpm": 78.0,
+          "wpm_err": 116.9,
+          "gen_var": 4.28,
+          "act_var": 7.05,
+          "var_err": -2.77,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-1-fish.mp3"
+        },
+        {
+          "seg": "s2",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.98,
+          "gen_wpm": 221.4,
+          "act_wpm": 87.4,
+          "wpm_err": 134.0,
+          "gen_var": 2.73,
+          "act_var": 6.49,
+          "var_err": -3.76,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-2-fish.mp3"
+        },
+        {
+          "seg": "s3",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.02,
+          "gen_wpm": 240.5,
+          "act_wpm": 80.3,
+          "wpm_err": 160.2,
+          "gen_var": 3.61,
+          "act_var": 4.98,
+          "var_err": -1.37,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-3-fish.mp3"
+        },
+        {
+          "seg": "s4",
+          "pred_emo": "embarrassed",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.05,
+          "gen_wpm": 299.0,
+          "act_wpm": 84.5,
+          "wpm_err": 214.5,
+          "gen_var": 3.29,
+          "act_var": 4.69,
+          "var_err": -1.4,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-4-fish.mp3"
+        },
+        {
+          "seg": "s5",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.03,
+          "gen_wpm": 215.6,
+          "act_wpm": 121.0,
+          "wpm_err": 94.6,
+          "gen_var": 4.83,
+          "act_var": 4.27,
+          "var_err": 0.56,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-5-fish.mp3"
+        },
+        {
+          "seg": "s6",
+          "pred_emo": "mock_indignant",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.23,
+          "gen_wpm": 250.3,
+          "act_wpm": 64.5,
+          "wpm_err": 185.8,
+          "gen_var": 2.23,
+          "act_var": 5.65,
+          "var_err": -3.42,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-6-fish.mp3"
+        },
+        {
+          "seg": "s7",
+          "pred_emo": "mock_indignant",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.44,
+          "gen_wpm": 251.5,
+          "act_wpm": 58.0,
+          "wpm_err": 193.5,
+          "gen_var": 3.2,
+          "act_var": 5.0,
+          "var_err": -1.8,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-7-fish.mp3"
+        },
+        {
+          "seg": "s8",
+          "pred_emo": "manic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.62,
+          "gen_wpm": 326.0,
+          "act_wpm": 107.8,
+          "wpm_err": 218.2,
+          "gen_var": 3.33,
+          "act_var": 6.08,
+          "var_err": -2.75,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-8-fish.mp3"
+        },
+        {
+          "seg": "s9",
+          "pred_emo": "sarcastic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.36,
+          "gen_wpm": 275.1,
+          "act_wpm": 91.2,
+          "wpm_err": 183.9,
+          "gen_var": 3.17,
+          "act_var": 5.95,
+          "var_err": -2.78,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-9-fish.mp3"
+        },
+        {
+          "seg": "s10",
+          "pred_emo": "gleeful",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.35,
+          "gen_wpm": 194.4,
+          "act_wpm": 103.8,
+          "wpm_err": 90.6,
+          "gen_var": 3.68,
+          "act_var": 6.09,
+          "var_err": -2.41,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r1-10-fish.mp3"
+        }
+      ],
+      "speed_scale": 0.4
+    },
+    {
+      "round": 2,
+      "emotion_acc": 0.364,
+      "wpm_mae": 22.9,
+      "var_mae": 2.13,
+      "cost_usd": 0.000154266,
+      "rows": [
+        {
+          "seg": "s0",
+          "pred_emo": "gleeful",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.72,
+          "gen_wpm": 87.3,
+          "act_wpm": 115.2,
+          "wpm_err": -27.9,
+          "gen_var": 4.76,
+          "act_var": 4.84,
+          "var_err": -0.08,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-0-fish.mp3"
+        },
+        {
+          "seg": "s1",
+          "pred_emo": "sarcastic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.98,
+          "gen_wpm": 86.2,
+          "act_wpm": 78.0,
+          "wpm_err": 8.2,
+          "gen_var": 3.89,
+          "act_var": 7.05,
+          "var_err": -3.16,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-1-fish.mp3"
+        },
+        {
+          "seg": "s2",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.55,
+          "gen_wpm": 89.6,
+          "act_wpm": 87.4,
+          "wpm_err": 2.2,
+          "gen_var": 2.56,
+          "act_var": 6.49,
+          "var_err": -3.93,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-2-fish.mp3"
+        },
+        {
+          "seg": "s3",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.57,
+          "gen_wpm": 107.3,
+          "act_wpm": 80.3,
+          "wpm_err": 27.0,
+          "gen_var": 3.85,
+          "act_var": 4.98,
+          "var_err": -1.13,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-3-fish.mp3"
+        },
+        {
+          "seg": "s4",
+          "pred_emo": "embarrassed",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.69,
+          "gen_wpm": 119.2,
+          "act_wpm": 84.5,
+          "wpm_err": 34.7,
+          "gen_var": 3.5,
+          "act_var": 4.69,
+          "var_err": -1.19,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-4-fish.mp3"
+        },
+        {
+          "seg": "s5",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.76,
+          "gen_wpm": 94.5,
+          "act_wpm": 121.0,
+          "wpm_err": -26.5,
+          "gen_var": 4.81,
+          "act_var": 4.27,
+          "var_err": 0.54,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-5-fish.mp3"
+        },
+        {
+          "seg": "s6",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.08,
+          "gen_wpm": 94.3,
+          "act_wpm": 64.5,
+          "wpm_err": 29.8,
+          "gen_var": 2.44,
+          "act_var": 5.65,
+          "var_err": -3.21,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-6-fish.mp3"
+        },
+        {
+          "seg": "s7",
+          "pred_emo": "mock_indignant",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.37,
+          "gen_wpm": 94.4,
+          "act_wpm": 58.0,
+          "wpm_err": 36.4,
+          "gen_var": 3.55,
+          "act_var": 5.0,
+          "var_err": -1.45,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-7-fish.mp3"
+        },
+        {
+          "seg": "s8",
+          "pred_emo": "manic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.49,
+          "gen_wpm": 120.3,
+          "act_wpm": 107.8,
+          "wpm_err": 12.5,
+          "gen_var": 2.78,
+          "act_var": 6.08,
+          "var_err": -3.3,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-8-fish.mp3"
+        },
+        {
+          "seg": "s9",
+          "pred_emo": "embarrassed",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.2,
+          "gen_wpm": 106.6,
+          "act_wpm": 91.2,
+          "wpm_err": 15.4,
+          "gen_var": 3.08,
+          "act_var": 5.95,
+          "var_err": -2.87,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-9-fish.mp3"
+        },
+        {
+          "seg": "s10",
+          "pred_emo": "gleeful",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.04,
+          "gen_wpm": 72.8,
+          "act_wpm": 103.8,
+          "wpm_err": -31.0,
+          "gen_var": 3.54,
+          "act_var": 6.09,
+          "var_err": -2.55,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r2-10-fish.mp3"
+        }
+      ],
+      "speed_scale": 0.4
+    },
+    {
+      "round": 3,
+      "emotion_acc": 0.273,
+      "wpm_mae": 25.8,
+      "var_mae": 2.17,
+      "cost_usd": 0.000154182,
+      "rows": [
+        {
+          "seg": "s0",
+          "pred_emo": "gleeful",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.69,
+          "gen_wpm": 89.8,
+          "act_wpm": 115.2,
+          "wpm_err": -25.4,
+          "gen_var": 4.27,
+          "act_var": 4.84,
+          "var_err": -0.57,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-0-fish.mp3"
+        },
+        {
+          "seg": "s1",
+          "pred_emo": "sarcastic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.02,
+          "gen_wpm": 89.8,
+          "act_wpm": 78.0,
+          "wpm_err": 11.8,
+          "gen_var": 3.57,
+          "act_var": 7.05,
+          "var_err": -3.48,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-1-fish.mp3"
+        },
+        {
+          "seg": "s2",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.4,
+          "gen_wpm": 107.1,
+          "act_wpm": 87.4,
+          "wpm_err": 19.7,
+          "gen_var": 2.01,
+          "act_var": 6.49,
+          "var_err": -4.48,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-2-fish.mp3"
+        },
+        {
+          "seg": "s3",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.5,
+          "gen_wpm": 92.8,
+          "act_wpm": 80.3,
+          "wpm_err": 12.5,
+          "gen_var": 3.75,
+          "act_var": 4.98,
+          "var_err": -1.23,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-3-fish.mp3"
+        },
+        {
+          "seg": "s4",
+          "pred_emo": "embarrassed",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.53,
+          "gen_wpm": 118.1,
+          "act_wpm": 84.5,
+          "wpm_err": 33.6,
+          "gen_var": 3.3,
+          "act_var": 4.69,
+          "var_err": -1.39,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-4-fish.mp3"
+        },
+        {
+          "seg": "s5",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.56,
+          "gen_wpm": 98.0,
+          "act_wpm": 121.0,
+          "wpm_err": -23.0,
+          "gen_var": 4.67,
+          "act_var": 4.27,
+          "var_err": 0.4,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-5-fish.mp3"
+        },
+        {
+          "seg": "s6",
+          "pred_emo": "sarcastic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.91,
+          "gen_wpm": 94.3,
+          "act_wpm": 64.5,
+          "wpm_err": 29.8,
+          "gen_var": 3.12,
+          "act_var": 5.65,
+          "var_err": -2.53,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-6-fish.mp3"
+        },
+        {
+          "seg": "s7",
+          "pred_emo": "mock_indignant",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.29,
+          "gen_wpm": 119.6,
+          "act_wpm": 58.0,
+          "wpm_err": 61.6,
+          "gen_var": 3.27,
+          "act_var": 5.0,
+          "var_err": -1.73,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-7-fish.mp3"
+        },
+        {
+          "seg": "s8",
+          "pred_emo": "manic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.38,
+          "gen_wpm": 127.0,
+          "act_wpm": 107.8,
+          "wpm_err": 19.2,
+          "gen_var": 2.99,
+          "act_var": 6.08,
+          "var_err": -3.09,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-8-fish.mp3"
+        },
+        {
+          "seg": "s9",
+          "pred_emo": "sarcastic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.13,
+          "gen_wpm": 109.1,
+          "act_wpm": 91.2,
+          "wpm_err": 17.9,
+          "gen_var": 3.25,
+          "act_var": 5.95,
+          "var_err": -2.7,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-9-fish.mp3"
+        },
+        {
+          "seg": "s10",
+          "pred_emo": "gleeful",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.03,
+          "gen_wpm": 74.3,
+          "act_wpm": 103.8,
+          "wpm_err": -29.5,
+          "gen_var": 3.77,
+          "act_var": 6.09,
+          "var_err": -2.32,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r3-10-fish.mp3"
+        }
+      ],
+      "speed_scale": 0.4
+    },
+    {
+      "round": 4,
+      "emotion_acc": 0.364,
+      "wpm_mae": 26.2,
+      "var_mae": 2.34,
+      "cost_usd": 0.000154098,
+      "rows": [
+        {
+          "seg": "s0",
+          "pred_emo": "gleeful",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.65,
+          "gen_wpm": 88.5,
+          "act_wpm": 115.2,
+          "wpm_err": -26.7,
+          "gen_var": 6.19,
+          "act_var": 4.84,
+          "var_err": 1.35,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-0-fish.mp3"
+        },
+        {
+          "seg": "s1",
+          "pred_emo": "sarcastic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.01,
+          "gen_wpm": 77.2,
+          "act_wpm": 78.0,
+          "wpm_err": -0.8,
+          "gen_var": 4.17,
+          "act_var": 7.05,
+          "var_err": -2.88,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-1-fish.mp3"
+        },
+        {
+          "seg": "s2",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.51,
+          "gen_wpm": 92.1,
+          "act_wpm": 87.4,
+          "wpm_err": 4.7,
+          "gen_var": 2.14,
+          "act_var": 6.49,
+          "var_err": -4.35,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-2-fish.mp3"
+        },
+        {
+          "seg": "s3",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.53,
+          "gen_wpm": 100.7,
+          "act_wpm": 80.3,
+          "wpm_err": 20.4,
+          "gen_var": 3.16,
+          "act_var": 4.98,
+          "var_err": -1.82,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-3-fish.mp3"
+        },
+        {
+          "seg": "s4",
+          "pred_emo": "embarrassed",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.68,
+          "gen_wpm": 125.4,
+          "act_wpm": 84.5,
+          "wpm_err": 40.9,
+          "gen_var": 3.34,
+          "act_var": 4.69,
+          "var_err": -1.35,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-4-fish.mp3"
+        },
+        {
+          "seg": "s5",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 1.69,
+          "gen_wpm": 92.6,
+          "act_wpm": 121.0,
+          "wpm_err": -28.4,
+          "gen_var": 3.78,
+          "act_var": 4.27,
+          "var_err": -0.49,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-5-fish.mp3"
+        },
+        {
+          "seg": "s6",
+          "pred_emo": "neutral",
+          "true_emo": "neutral",
+          "match": true,
+          "match_score": 1.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.08,
+          "gen_wpm": 100.4,
+          "act_wpm": 64.5,
+          "wpm_err": 35.9,
+          "gen_var": 3.24,
+          "act_var": 5.65,
+          "var_err": -2.41,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-6-fish.mp3"
+        },
+        {
+          "seg": "s7",
+          "pred_emo": "mock_indignant",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.28,
+          "gen_wpm": 115.6,
+          "act_wpm": 58.0,
+          "wpm_err": 57.6,
+          "gen_var": 3.28,
+          "act_var": 5.0,
+          "var_err": -1.72,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-7-fish.mp3"
+        },
+        {
+          "seg": "s8",
+          "pred_emo": "manic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.38,
+          "gen_wpm": 129.2,
+          "act_wpm": 107.8,
+          "wpm_err": 21.4,
+          "gen_var": 2.52,
+          "act_var": 6.08,
+          "var_err": -3.56,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-8-fish.mp3"
+        },
+        {
+          "seg": "s9",
+          "pred_emo": "sarcastic",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.1,
+          "gen_wpm": 111.0,
+          "act_wpm": 91.2,
+          "wpm_err": 19.8,
+          "gen_var": 3.01,
+          "act_var": 5.95,
+          "var_err": -2.94,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-9-fish.mp3"
+        },
+        {
+          "seg": "s10",
+          "pred_emo": "gleeful",
+          "true_emo": "neutral",
+          "match": false,
+          "match_score": 0.0,
+          "true_all": [
+            "neutral"
+          ],
+          "pace": 2.06,
+          "gen_wpm": 72.2,
+          "act_wpm": 103.8,
+          "wpm_err": -31.6,
+          "gen_var": 3.27,
+          "act_var": 6.09,
+          "var_err": -2.82,
+          "wav": "/tmp/opencode/characters/audition/audio/jl-kt715_nashville-r4-10-fish.mp3"
+        }
+      ],
+      "speed_scale": 0.4
+    }
+  ],
+  "errors": [
+    {
+      "seg": "s0",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "pace": 2,
+      "wpm_err": 84.2,
+      "var_err": -1.0,
+      "note": "pred gleeful/pace2.0; actual neutral wpm 115.2 var 4.84; gen was 199.4/3.84"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "pace": 2.24,
+      "wpm_err": 116.9,
+      "var_err": -2.77,
+      "note": "pred sarcastic/pace2.2; actual neutral wpm 78.0 var 7.05; gen was 194.9/4.28"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.98,
+      "wpm_err": 134.0,
+      "var_err": -3.76,
+      "note": "pred neutral/pace2.0; actual neutral wpm 87.4 var 6.49; gen was 221.4/2.73"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 2.02,
+      "wpm_err": 160.2,
+      "var_err": -1.37,
+      "note": "pred neutral/pace2.0; actual neutral wpm 80.3 var 4.98; gen was 240.5/3.61"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "embarrassed",
+      "true_emo": "neutral",
+      "pace": 2.05,
+      "wpm_err": 214.5,
+      "var_err": -1.4,
+      "note": "pred embarrassed/pace2.0; actual neutral wpm 84.5 var 4.69; gen was 299.0/3.29"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 2.03,
+      "wpm_err": 94.6,
+      "var_err": 0.56,
+      "note": "pred neutral/pace2.0; actual neutral wpm 121.0 var 4.27; gen was 215.6/4.83"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "mock_indignant",
+      "true_emo": "neutral",
+      "pace": 2.23,
+      "wpm_err": 185.8,
+      "var_err": -3.42,
+      "note": "pred mock_indignant/pace2.2; actual neutral wpm 64.5 var 5.65; gen was 250.3/2.23"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "mock_indignant",
+      "true_emo": "neutral",
+      "pace": 2.44,
+      "wpm_err": 193.5,
+      "var_err": -1.8,
+      "note": "pred mock_indignant/pace2.4; actual neutral wpm 58.0 var 5.0; gen was 251.5/3.2"
+    },
+    {
+      "seg": "s8",
+      "pred_emo": "manic",
+      "true_emo": "neutral",
+      "pace": 2.62,
+      "wpm_err": 218.2,
+      "var_err": -2.75,
+      "note": "pred manic/pace2.6; actual neutral wpm 107.8 var 6.08; gen was 326.0/3.33"
+    },
+    {
+      "seg": "s9",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "pace": 2.36,
+      "wpm_err": 183.9,
+      "var_err": -2.78,
+      "note": "pred sarcastic/pace2.4; actual neutral wpm 91.2 var 5.95; gen was 275.1/3.17"
+    },
+    {
+      "seg": "s10",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "pace": 2.35,
+      "wpm_err": 90.6,
+      "var_err": -2.41,
+      "note": "pred gleeful/pace2.4; actual neutral wpm 103.8 var 6.09; gen was 194.4/3.68"
+    },
+    {
+      "seg": "s0",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "pace": 1.72,
+      "wpm_err": -27.9,
+      "var_err": -0.08,
+      "note": "pred gleeful/pace1.7; actual neutral wpm 115.2 var 4.84; gen was 87.3/4.76"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "pace": 1.98,
+      "wpm_err": 8.2,
+      "var_err": -3.16,
+      "note": "pred sarcastic/pace2.0; actual neutral wpm 78.0 var 7.05; gen was 86.2/3.89"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.55,
+      "wpm_err": 2.2,
+      "var_err": -3.93,
+      "note": "pred neutral/pace1.6; actual neutral wpm 87.4 var 6.49; gen was 89.6/2.56"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.57,
+      "wpm_err": 27.0,
+      "var_err": -1.13,
+      "note": "pred neutral/pace1.6; actual neutral wpm 80.3 var 4.98; gen was 107.3/3.85"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "embarrassed",
+      "true_emo": "neutral",
+      "pace": 1.69,
+      "wpm_err": 34.7,
+      "var_err": -1.19,
+      "note": "pred embarrassed/pace1.7; actual neutral wpm 84.5 var 4.69; gen was 119.2/3.5"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.76,
+      "wpm_err": -26.5,
+      "var_err": 0.54,
+      "note": "pred neutral/pace1.8; actual neutral wpm 121.0 var 4.27; gen was 94.5/4.81"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 2.08,
+      "wpm_err": 29.8,
+      "var_err": -3.21,
+      "note": "pred neutral/pace2.1; actual neutral wpm 64.5 var 5.65; gen was 94.3/2.44"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "mock_indignant",
+      "true_emo": "neutral",
+      "pace": 2.37,
+      "wpm_err": 36.4,
+      "var_err": -1.45,
+      "note": "pred mock_indignant/pace2.4; actual neutral wpm 58.0 var 5.0; gen was 94.4/3.55"
+    },
+    {
+      "seg": "s8",
+      "pred_emo": "manic",
+      "true_emo": "neutral",
+      "pace": 2.49,
+      "wpm_err": 12.5,
+      "var_err": -3.3,
+      "note": "pred manic/pace2.5; actual neutral wpm 107.8 var 6.08; gen was 120.3/2.78"
+    },
+    {
+      "seg": "s9",
+      "pred_emo": "embarrassed",
+      "true_emo": "neutral",
+      "pace": 2.2,
+      "wpm_err": 15.4,
+      "var_err": -2.87,
+      "note": "pred embarrassed/pace2.2; actual neutral wpm 91.2 var 5.95; gen was 106.6/3.08"
+    },
+    {
+      "seg": "s10",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "pace": 2.04,
+      "wpm_err": -31.0,
+      "var_err": -2.55,
+      "note": "pred gleeful/pace2.0; actual neutral wpm 103.8 var 6.09; gen was 72.8/3.54"
+    },
+    {
+      "seg": "s0",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "pace": 1.69,
+      "wpm_err": -25.4,
+      "var_err": -0.57,
+      "note": "pred gleeful/pace1.7; actual neutral wpm 115.2 var 4.84; gen was 89.8/4.27"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "pace": 2.02,
+      "wpm_err": 11.8,
+      "var_err": -3.48,
+      "note": "pred sarcastic/pace2.0; actual neutral wpm 78.0 var 7.05; gen was 89.8/3.57"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.4,
+      "wpm_err": 19.7,
+      "var_err": -4.48,
+      "note": "pred neutral/pace1.4; actual neutral wpm 87.4 var 6.49; gen was 107.1/2.01"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.5,
+      "wpm_err": 12.5,
+      "var_err": -1.23,
+      "note": "pred neutral/pace1.5; actual neutral wpm 80.3 var 4.98; gen was 92.8/3.75"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "embarrassed",
+      "true_emo": "neutral",
+      "pace": 1.53,
+      "wpm_err": 33.6,
+      "var_err": -1.39,
+      "note": "pred embarrassed/pace1.5; actual neutral wpm 84.5 var 4.69; gen was 118.1/3.3"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.56,
+      "wpm_err": -23.0,
+      "var_err": 0.4,
+      "note": "pred neutral/pace1.6; actual neutral wpm 121.0 var 4.27; gen was 98.0/4.67"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "pace": 1.91,
+      "wpm_err": 29.8,
+      "var_err": -2.53,
+      "note": "pred sarcastic/pace1.9; actual neutral wpm 64.5 var 5.65; gen was 94.3/3.12"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "mock_indignant",
+      "true_emo": "neutral",
+      "pace": 2.29,
+      "wpm_err": 61.6,
+      "var_err": -1.73,
+      "note": "pred mock_indignant/pace2.3; actual neutral wpm 58.0 var 5.0; gen was 119.6/3.27"
+    },
+    {
+      "seg": "s8",
+      "pred_emo": "manic",
+      "true_emo": "neutral",
+      "pace": 2.38,
+      "wpm_err": 19.2,
+      "var_err": -3.09,
+      "note": "pred manic/pace2.4; actual neutral wpm 107.8 var 6.08; gen was 127.0/2.99"
+    },
+    {
+      "seg": "s9",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "pace": 2.13,
+      "wpm_err": 17.9,
+      "var_err": -2.7,
+      "note": "pred sarcastic/pace2.1; actual neutral wpm 91.2 var 5.95; gen was 109.1/3.25"
+    },
+    {
+      "seg": "s10",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "pace": 2.03,
+      "wpm_err": -29.5,
+      "var_err": -2.32,
+      "note": "pred gleeful/pace2.0; actual neutral wpm 103.8 var 6.09; gen was 74.3/3.77"
+    },
+    {
+      "seg": "s0",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "pace": 1.65,
+      "wpm_err": -26.7,
+      "var_err": 1.35,
+      "note": "pred gleeful/pace1.6; actual neutral wpm 115.2 var 4.84; gen was 88.5/6.19"
+    },
+    {
+      "seg": "s1",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "pace": 2.01,
+      "wpm_err": -0.8,
+      "var_err": -2.88,
+      "note": "pred sarcastic/pace2.0; actual neutral wpm 78.0 var 7.05; gen was 77.2/4.17"
+    },
+    {
+      "seg": "s2",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.51,
+      "wpm_err": 4.7,
+      "var_err": -4.35,
+      "note": "pred neutral/pace1.5; actual neutral wpm 87.4 var 6.49; gen was 92.1/2.14"
+    },
+    {
+      "seg": "s3",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.53,
+      "wpm_err": 20.4,
+      "var_err": -1.82,
+      "note": "pred neutral/pace1.5; actual neutral wpm 80.3 var 4.98; gen was 100.7/3.16"
+    },
+    {
+      "seg": "s4",
+      "pred_emo": "embarrassed",
+      "true_emo": "neutral",
+      "pace": 1.68,
+      "wpm_err": 40.9,
+      "var_err": -1.35,
+      "note": "pred embarrassed/pace1.7; actual neutral wpm 84.5 var 4.69; gen was 125.4/3.34"
+    },
+    {
+      "seg": "s5",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 1.69,
+      "wpm_err": -28.4,
+      "var_err": -0.49,
+      "note": "pred neutral/pace1.7; actual neutral wpm 121.0 var 4.27; gen was 92.6/3.78"
+    },
+    {
+      "seg": "s6",
+      "pred_emo": "neutral",
+      "true_emo": "neutral",
+      "pace": 2.08,
+      "wpm_err": 35.9,
+      "var_err": -2.41,
+      "note": "pred neutral/pace2.1; actual neutral wpm 64.5 var 5.65; gen was 100.4/3.24"
+    },
+    {
+      "seg": "s7",
+      "pred_emo": "mock_indignant",
+      "true_emo": "neutral",
+      "pace": 2.28,
+      "wpm_err": 57.6,
+      "var_err": -1.72,
+      "note": "pred mock_indignant/pace2.3; actual neutral wpm 58.0 var 5.0; gen was 115.6/3.28"
+    },
+    {
+      "seg": "s8",
+      "pred_emo": "manic",
+      "true_emo": "neutral",
+      "pace": 2.38,
+      "wpm_err": 21.4,
+      "var_err": -3.56,
+      "note": "pred manic/pace2.4; actual neutral wpm 107.8 var 6.08; gen was 129.2/2.52"
+    },
+    {
+      "seg": "s9",
+      "pred_emo": "sarcastic",
+      "true_emo": "neutral",
+      "pace": 2.1,
+      "wpm_err": 19.8,
+      "var_err": -2.94,
+      "note": "pred sarcastic/pace2.1; actual neutral wpm 91.2 var 5.95; gen was 111.0/3.01"
+    },
+    {
+      "seg": "s10",
+      "pred_emo": "gleeful",
+      "true_emo": "neutral",
+      "pace": 2.06,
+      "wpm_err": -31.6,
+      "var_err": -2.82,
+      "note": "pred gleeful/pace2.1; actual neutral wpm 103.8 var 6.09; gen was 72.2/3.27"
+    }
+  ],
+  "converged": false,
+  "note": "Jev transcript->delivery->fish->vs actual; same clone voice",
+  "at": "2026-10-14T16:34:22Z"
+}

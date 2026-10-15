@@ -2,5 +2,11 @@
 .venv/
 __pycache__/
 *.pyc
+
+# voice lab audio (recipes/JSONs stay tracked)
+audition/voicelab/**/*.wav
+audition/voicelab/**/*.mp3
+
+# external datasets (README stays tracked)
 theory/datasets/*/
 !theory/datasets/README.md

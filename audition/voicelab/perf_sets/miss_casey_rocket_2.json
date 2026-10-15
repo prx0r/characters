@@ -1,0 +1,110 @@
+{
+  "set": "casey_rocket_2",
+  "misses": [
+    {
+      "seg": 0,
+      "emotion": "gleeful",
+      "wpm_err": 16.6,
+      "var_st": 3.18,
+      "var_err_vs_real": -0.94,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": -0.15,
+          "why": "too fast vs his timing"
+        }
+      ]
+    },
+    {
+      "seg": 1,
+      "emotion": "manic",
+      "wpm_err": -0.2,
+      "var_st": 5.6,
+      "var_err_vs_real": 1.48,
+      "proposed_fixes": [
+        {
+          "knob": "temp",
+          "delta": -0.1,
+          "why": "wilder than his real voice"
+        }
+      ]
+    },
+    {
+      "seg": 2,
+      "emotion": "deadpan",
+      "wpm_err": -22.2,
+      "var_st": 3.56,
+      "var_err_vs_real": -0.56,
+      "proposed_fixes": [
+        {
+          "knob": "speed",
+          "delta": 0.15,
+          "why": "too slow vs his timing"
+        }
+      ]
+    }
+  ],
+  "miss_count": 3,
+  "segment_count": 6,
+  "prior_updates": {
+    "gleeful": {
+      "n": 1,
+      "mean_wpm_err": 16.6,
+      "mean_var_err": -0.94,
+      "suggest_speed_delta": -0.11,
+      "suggest_temp_delta": -0.05
+    },
+    "manic": {
+      "n": 2,
+      "mean_wpm_err": -0.7,
+      "mean_var_err": 0.87,
+      "suggest_speed_delta": 0.0,
+      "suggest_temp_delta": 0.04
+    },
+    "deadpan": {
+      "n": 2,
+      "mean_wpm_err": -13.5,
+      "mean_var_err": -0.2,
+      "suggest_speed_delta": 0.09,
+      "suggest_temp_delta": -0.01
+    },
+    "sarcastic": {
+      "n": 1,
+      "mean_wpm_err": -4.0,
+      "mean_var_err": 0.33,
+      "suggest_speed_delta": 0.03,
+      "suggest_temp_delta": 0.02
+    }
+  },
+  "theory_notes": [
+    {
+      "note": "casey laugh corpus loaded",
+      "n_laughs": 50,
+      "delivery_stats": {
+        "riff_type_counts": {
+          "bit": 153,
+          "micro_tag": 156,
+          "full_riff": 213,
+          "quick_riff": 181
+        },
+        "laugh_pattern_counts": {
+          "none": 435,
+          "mid_sentence": 117,
+          "overlap": 92,
+          "after": 59
+        },
+        "mean_pause": 5.47,
+        "laugh_mid_sentence_pct": 16.6
+      }
+    }
+  ],
+  "real_prosody": {
+    "pitch_var": 4.122,
+    "thirds_var": [
+      3.713,
+      4.597,
+      3.733
+    ]
+  },
+  "at": "2026-10-14T12:59:48Z"
+}

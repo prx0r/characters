@@ -2,18 +2,25 @@
 
 Env: FISH_API_KEY in audition/.env. AUDITION_TTS=fish to opt in.
 Directions ride inside the text (Drama 3 / s2 bracket syntax) — no schema change.
+
+Per-beat path (compose_set.py): each delivery.json beat renders separately
+with its own [emotion] cue + [emphasis] on the punch word, then stitches with
+exact pause_after_ms silence — the timing contract becomes real audio.
 """
 from __future__ import annotations
 
+import base64
 import hashlib
 import json
 import os
+import re
 import subprocess
 import urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).parent
 AUDIO_DIR = HERE / "audio"
+AUDIO_DIR.mkdir(exist_ok=True)
 API = "https://api.fish.audio/v1/tts"
 
 SIGNATURE_DIRECTIONS = {
@@ -32,6 +39,147 @@ SIGNATURE_DIRECTIONS = {
 PAIRED_TAGS = ("<whisper>", "<emphasis>", "<soft>", "<fast>", "<slow>",
                "<stress>", "<forceful>")
 
+# delivery.json beat.performance.expression -> S2 bracket cue (docs: 64 emotions).
+# empty string = no cue (neutral beats stay clean).
+EXPRESSION_TAGS = {
+    "deadpan": "[indifferent]",
+    "neutral": "",
+    "annoyed": "[frustrated]",
+    "confused": "[confused]",
+    "grin": "[delighted]",
+    "surprised": "[surprised]",
+    "smug": "[proud]",
+    "paranoid": "[anxious]",
+    "angry": "[angry]",
+    "sad": "[sad]",
+    "manic": "[excited]",
+    "panicked": "[nervous]",
+    "subservient": "[embarrassed]",
+    "exhausted": "[tired]",
+    "whisper": "[whispering]",
+}
+
+_TAG_RE = re.compile(
+    r"\[(?:happy|sad|angry|excited|calm|nervous|confident|surprised|satisfied|"
+    r"delighted|scared|worried|upset|frustrated|depressed|empathetic|embarrassed|"
+    r"disgusted|moved|proud|relaxed|grateful|curious|sarcastic|disdainful|unhappy|"
+    r"anxious|hysterical|indifferent|uncertain|doubtful|confused|disappointed|regretful|"
+    r"guilty|ashamed|jealous|envious|hopeful|optimistic|pessimistic|nostalgic|lonely|"
+    r"bored|contemptuous|sympathetic|compassionate|determined|resigned|whispering|soft tone|"
+    r"in a hurry tone|shouting|screaming|emphasis|sigh|laugh|chuckle|groan|"
+    r"[^\[\]]{0,80})\]|</?(?:whisper|emphasis|soft|fast|slow|stress|forceful)>",
+    re.IGNORECASE)
+
+
+def _load_env() -> None:
+    envf = HERE / ".env"
+    if not envf.exists():
+        return
+    for line in envf.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, _, v = line.partition("=")
+            os.environ.setdefault(k.strip(), v.strip())
+
+
+def strip_directions(text: str) -> str:
+    """Remove bracket cues and word tags — for edge-tts/piper fallback paths."""
+    return _TAG_RE.sub("", text).strip()
+
+
+def expression_cue(expression: str, modulator: str = "") -> str:
+    """Beat expression -> bracket cue; falls back to modulator signature bracket."""
+    cue = EXPRESSION_TAGS.get((expression or "").lower(), "")
+    if cue:
+        return cue
+    if modulator and modulator in SIGNATURE_DIRECTIONS:
+        return f"[{SIGNATURE_DIRECTIONS[modulator]}]"
+    return ""
+
+
+def emphasize_last(text: str) -> str:
+    """Wrap the final word in [emphasis] — punch/closer hold."""
+    w = text.rstrip().split()
+    if len(w) < 2:
+        return text
+    tail = w[-1].rstrip(".,!?;:")
+    punct = w[-1][len(tail):]
+    w[-1] = f"[emphasis]{tail}{punct}"
+    return " ".join(w)
+
+
+def render_beat(audition_id: str, beat: dict, voice: str | None = None,
+                modulator: str = "", mod: dict | None = None, paid: bool = False,
+                emphasis: bool = True, references: list[dict] | None = None,
+                vibe: str = "", pronunciation: list[dict] | None = None) -> dict:
+    """One beat -> one fish call with its own cue + punch emphasis + prosody.
+
+    beat: delivery.json beat dict (text, performance.expression, type,
+    speech.emphasis/pace). emphasis applied on punchline/tag/closer when
+    speech.emphasis >= 0.8 or type is a punch family. prosody.speed from
+    beat pace; volume nudge by beat type; temperature from character vibe.
+    """
+    _load_env()
+    text = (beat.get("text") or "").strip()
+    if not text:
+        raise RuntimeError("empty beat text")
+    expr = ((beat.get("performance") or {}).get("expression") or "").strip()
+    cue = expression_cue(expr, modulator or "")
+    emph = float(((beat.get("speech") or {}).get("emphasis")) or 0.0)
+    btype = (beat.get("type") or "")
+    if emphasis and (emph >= 0.8 or btype in ("punchline", "closer", "tag")):
+        text = emphasize_last(text)
+    directed = f"{cue} {text}".strip() if cue else text
+    bid = beat.get("id") or "b0"
+    return synthesize_fish(f"{audition_id}-{bid}", directed, voice=voice,
+                           modulator=modulator or "neutral", mod=mod, paid=paid,
+                           direction=False, references=references,
+                           temperature=temperature_for(vibe),
+                           prosody=prosody_for_beat(beat),
+                           pronunciation=pronunciation)  # cue per beat
+
+
+def silence_wav(ms: int, out: Path | None = None) -> Path:
+    """Exact silence via ffmpeg anullsrc (24k mono to match edge/fish mp3 decode)."""
+    ms = max(0, int(ms))
+    out = out or (AUDIO_DIR / f"silence-{ms}.wav")
+    if out.exists() and out.stat().st_size > 100:
+        return out
+    dur = f"{ms / 1000.0:.3f}"
+    r = subprocess.run(
+        ["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono",
+         "-t", dur, "-c:a", "pcm_s16le", str(out)],
+        capture_output=True, timeout=30)
+    if r.returncode != 0 or not out.exists():
+        raise RuntimeError(f"silence gen failed: {r.stderr.decode()[:200]}")
+    return out
+
+
+def stitch_wav(parts: list[Path], out: Path) -> Path:
+    """Concat wav/mp3 parts into one wav via ffmpeg concat demuxer."""
+    lst = out.with_suffix(".txt")
+    lst.write_text("".join(f"file '{p.resolve()}'\n" for p in parts))
+    r = subprocess.run(
+        ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
+         "-c:a", "pcm_s16le", str(out)],
+        capture_output=True, timeout=120)
+    lst.unlink(missing_ok=True)
+    if r.returncode != 0 or not out.exists():
+        raise RuntimeError(f"stitch failed: {r.stderr.decode()[:200]}")
+    return out
+
+
+def zero_shot_refs(wav_paths: list[Path], texts: list[str] | None = None) -> list[dict]:
+    """Candidate wavs -> TTSRequest.references payload (zero-shot cloning)."""
+    refs = []
+    for i, p in enumerate(wav_paths):
+        refs.append({
+            "audio": base64.b64encode(p.read_bytes()).decode(),
+            "format": "wav",
+            "text": (texts[i] if texts and i < len(texts) else None),
+        })
+    return refs
+
 
 def _ffprobe_ms(path: Path) -> int | None:
     try:
@@ -49,12 +197,13 @@ def estimate_ms(text: str, pauses_ms: int = 0) -> int:
 
 
 def get_key() -> str | None:
+    _load_env()
     return os.getenv("FISH_API_KEY") or None
 
 
 def model_for(paid: bool = False) -> str:
-    if paid and os.getenv("FISH_PAID", "") == "1":
-        return "drama-3"
+    """ALWAYS s2.1-pro-free ($0). Paid models (drama-3) are hard-removed until
+    the owner explicitly re-enables them — do not add paid paths here."""
     return "s2.1-pro-free"
 
 
@@ -97,13 +246,28 @@ def wrap_text(text: str, modulator: str, mod: dict | None = None,
 
 
 def _request(text: str, reference_id: str | None, model: str,
-             fmt: str = "mp3", timeout: int = 120) -> bytes:
+             fmt: str = "mp3", timeout: int = 120,
+             references: list[dict] | None = None,
+             temperature: float | None = None,
+             prosody: dict | None = None,
+             top_p: float | None = None,
+             pronunciation: list[dict] | None = None) -> bytes:
     key = get_key()
     if not key:
         raise RuntimeError("FISH_API_KEY missing (audition/.env)")
     body: dict = {"text": text, "format": fmt}
     if reference_id:
         body["reference_id"] = reference_id
+    if references:
+        body["references"] = references
+    if temperature is not None:
+        body["temperature"] = max(0.0, min(1.0, float(temperature)))
+    if top_p is not None:
+        body["top_p"] = max(0.0, min(1.0, float(top_p)))
+    if prosody:
+        body["prosody"] = prosody
+    if pronunciation:
+        body["pronunciation_dictionary"] = pronunciation
     req = urllib.request.Request(
         API, data=json.dumps(body).encode(),
         headers={"Authorization": f"Bearer {key}",
@@ -113,17 +277,150 @@ def _request(text: str, reference_id: str | None, model: str,
         return r.read()
 
 
+# beat pace token -> prosody.speed multiplier (API range 0.5-2.0)
+PACE_SPEED = {"slow": 0.8, "normal": 1.0, "fast": 1.2, "rapid_fire": 1.45,
+              "dragging": 0.65}
+# beat type -> volume nudge in dB (punches up, setups level)
+TYPE_VOLUME_DB = {"punchline": 1.5, "closer": 2.0, "tag": 1.0,
+                  "setup": 0.0, "premise": 0.0, "escalation": 1.0}
+
+
+def prosody_for_beat(beat: dict) -> dict:
+    """Beat delivery params -> API prosody block (speed + volume)."""
+    pace = ((beat.get("speech") or {}).get("pace") or "normal").lower()
+    btype = (beat.get("type") or "setup").lower()
+    p = {"speed": PACE_SPEED.get(pace, 1.0),
+         "volume": TYPE_VOLUME_DB.get(btype, 0.0)}
+    return p
+
+
+def pron_dict(entries: dict[str, str]) -> list[dict]:
+    """{word: replacement} -> inline pronunciation dictionary payload."""
+    items = [{"key": k, "value": v, "case_sensitive": False}
+             for k, v in list(entries.items())[:5000]]
+    return [{"items": items}] if items else []
+
+
+# vibe -> TTS expressiveness. Deadpan = low temp (consistent, flat);
+# manic = high temp (varied). Judge loop calibrated these bands.
+VIBE_TEMPERATURE = {
+    "deadpan": 0.35, "sad": 0.4, "exhausted": 0.4, "relaxed": 0.5,
+    "smug": 0.55, "paranoid": 0.6, "neutral": 0.6,
+    "sarcastic": 0.65, "angry": 0.7,
+    "manic": 0.9, "gleeful": 0.85, "panicked": 0.8,
+}
+
+
+def temperature_for(vibe: str) -> float | None:
+    return VIBE_TEMPERATURE.get((vibe or "").lower())
+
+
+def mary_prosody(modulator: str) -> dict | None:
+    """MARY emotion-module predictions for a modulator (human-speech prior).
+    precedence: measured cue_tempo > MARY > defaults. MARY supplies
+    pitch_direction (valence) which we cannot measure on TTS."""
+    try:
+        m = json.loads((HERE / "voicelab" / "mary_model.json").read_text())
+        return m["modulators"].get(modulator)
+    except Exception:
+        return None
+
+
+def valence_direction(modulator: str) -> str:
+    """Pitch-direction hint from valence (MARY accent-shape rule):
+    valence<0 falling, >0 rising. Maps to fish pitch_shift language."""
+    mp = mary_prosody(modulator)
+    return (mp or {}).get("pitch_direction", "flat")
+
+
+def voice_for_pack(slug: str) -> tuple[str | None, list[dict] | None]:
+    """Pack slug -> (reference_id, zero-shot references) from voice.fish pick."""
+    try:
+        c = json.loads((HERE.parent / "freaks" / slug / "character.json").read_text())
+    except Exception:
+        return None, None
+    fish = ((c.get("voice") or {}).get("fish")) or {}
+    if fish.get("reference_id"):
+        return fish["reference_id"], None
+    wav_rel = fish.get("wav")
+    if wav_rel:
+        wav = HERE.parent / wav_rel
+        if wav.exists():
+            return None, zero_shot_refs([wav], [fish.get("reference_text") or None])
+    return None, None
+
+
+# Tone markers carry SEMANTIC tempo (S2 docs): these are how fish "thinks"
+# about pace — not a speed knob. Measured intrinsic factors in cue_tempo.json.
+TONE_TEMPO = {
+    "[in a hurry tone]": 1.25,
+    "[shouting]": 1.10,
+    "[calm]": 0.85,
+    "[soft tone]": 0.88,
+    "[whispering]": 0.80,
+}
+
+
+def tempo_via_prompt(target_mult: float, base_cue: str = "") -> tuple[str, float]:
+    """Map a tempo multiplier to (cue_string, clean_zone_speed).
+
+    The engine delivers tempo three ways, in priority order:
+      1. emotion cue's intrinsic tempo (cue_tempo factors)
+      2. tone marker (semantic pace: hurry/calm/whisper)
+      3. prosody.speed ONLY in fish's clean zone 0.92-1.08 (no pitch artifact)
+    Never a post-stretch. Never outside the clean zone.
+    """
+    try:
+        ct = json.loads((HERE / "voicelab" / "cue_tempo.json").read_text())["factors"]
+    except Exception:
+        ct = {}
+    cue_f = ct.get(base_cue, 1.0) if base_cue else 1.0
+    residual = target_mult / max(cue_f, 0.5)
+    tone = ""
+    if residual >= 1.12:
+        tone = "[in a hurry tone]"
+    elif residual <= 0.88:
+        tone = "[calm]" if residual > 0.7 else "[whispering]"
+    tone_f = TONE_TEMPO.get(tone, 1.0)
+    speed = max(0.92, min(1.08, residual / tone_f))
+    cues = " ".join(c for c in (base_cue, tone) if c)
+    return cues, round(speed, 2)
+
+
 def synthesize_fish(audition_id: str, text: str, voice: str | None = None,
                     modulator: str = "", mod: dict | None = None,
-                    paid: bool = False, direction: bool = True) -> dict:
+                    paid: bool = False, direction: bool = True,
+                    references: list[dict] | None = None,
+                    temperature: float | None = None,
+                    prosody: dict | None = None,
+                    pronunciation: list[dict] | None = None) -> dict:
     model = model_for(paid=paid)
     directed = wrap_text(text, modulator or "neutral", mod, direction=direction)
     ref = voice or os.getenv("FISH_VOICE_ID") or None
+    # tempo via PROMPTING (owner rule): decompose speed target into
+    # emotion-cue intrinsic tempo + tone marker + clean-zone speed.
+    # Fish delivers the pace; nothing is stretched in post.
+    desired_speed = (prosody or {}).get("speed")
+    fish_prosody = dict(prosody) if prosody else None
+    if desired_speed is not None and not (0.92 <= float(desired_speed) <= 1.08):
+        import re as _re
+        m = _re.search(r"\[[^\]]+\]", directed)
+        base_cue = m.group(0) if m else ""
+        tone, clean_speed = tempo_via_prompt(float(desired_speed), base_cue)
+        # prepend only the NEW tone marker (keep emotion cue in place)
+        tone_new = [t for t in TONE_TEMPO if t in tone and t not in directed]
+        if tone_new:
+            directed = f"{tone_new[0]} {directed}"
+        if fish_prosody is None:
+            fish_prosody = {}
+        fish_prosody["speed"] = clean_speed
     out = AUDIO_DIR / f"{audition_id}-fish.mp3"
     if out.exists():
         out.unlink()
     try:
-        data = _request(directed, ref, model)
+        data = _request(directed, ref, model, references=references,
+                        temperature=temperature, prosody=fish_prosody,
+                        pronunciation=pronunciation)
     except Exception as e:
         raise RuntimeError(f"fish tts ({model}) failed: {str(e)[:200]}")
     if len(data) < 2000:
@@ -132,8 +429,10 @@ def synthesize_fish(audition_id: str, text: str, voice: str | None = None,
     dur = _ffprobe_ms(out) or estimate_ms(directed)
     return {"path": str(out), "duration_ms": dur,
             "provenance": f"fish-tts:{model}" + ("+direction" if direction else "")
+                          + ("+prompted-tempo" if fish_prosody and desired_speed
+                             and not (0.92 <= float(desired_speed) <= 1.08) else "")
                           + ("+ffprobe" if _ffprobe_ms(out) else "+estimated"),
-            "sha256": hashlib.sha256(data).hexdigest(),
+            "sha256": hashlib.sha256(out.read_bytes()).hexdigest(),
             "model": model, "directed": direction}
 
 

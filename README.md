@@ -1,5 +1,8 @@
 # characters — Freaktown Character Foundry
 
+> **Engine layer map: `docs/ENGINE-MAP.md`** (delivery engine, funniness judge, theory corpus, characters — the canonical index)
+
+
 Bulk-generated, theoretically-accurate character packs in standardised
 Freaktown Character Pack v1 format (`docs/CHARACTER_PACK.md` in freaktown).
 

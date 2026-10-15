@@ -1,0 +1,90 @@
+{
+  "set": "louis_c03",
+  "cost_usd": 0.000131418,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "I thought I had COVID about three times I'm one of those idiots I was like I think I have ",
+      "technique": "self_deprecation",
+      "wpm": 204.9,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "know that's I can't do pain That's why I could never be a cop I couldn't walk around with ",
+      "technique": "self_deprecation",
+      "wpm": 161.9,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "main problem by the way with the whole defund the police idea What about people that want ",
+      "technique": "escalation",
+      "wpm": 135.6,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "protests in New York and now we have protesters that just live here They're not out of pro",
+      "technique": "sincere_claim",
+      "wpm": 165.0,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "holding a little piece of cardboard and it's with a sharpie that said abolish billionaires",
+      "technique": "escalation",
+      "wpm": 646.0,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "don't think it's going to do it It doesn't feel like that's going to result in Jeff Bezos ",
+      "technique": "deadpan_drop",
+      "wpm": 121.5,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "I think I thought it was good how young people got out there and they expressed themselves",
+      "technique": "sincere_claim",
+      "wpm": 172.9,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "just some of it which is a weird form of discrimination but there are groups that are disc",
+      "technique": "sincere_claim",
+      "wpm": 170.8,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "discriminates against ugly people they do and it's awful I mean I'd rather be discriminate",
+      "technique": "escalation",
+      "wpm": 226.6,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "we don't like your face just don't like it so no one's gonna I'm going to put it on the ba",
+      "technique": "self_deprecation",
+      "wpm": 203.7,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "self_deprecation": 3,
+    "escalation": 3,
+    "sincere_claim": 3,
+    "deadpan_drop": 1
+  },
+  "laugh_by_technique": {
+    "self_deprecation": 3,
+    "escalation": 3,
+    "sincere_claim": 3,
+    "deadpan_drop": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

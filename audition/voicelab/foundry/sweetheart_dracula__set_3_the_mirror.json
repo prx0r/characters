@@ -1,0 +1,86 @@
+{
+  "foundry": "sweetheart_dracula",
+  "variant": "set_3_the_mirror",
+  "voice": "04e9ab898fb44ccd9b7ac2357439d6ec",
+  "affect": {
+    "arousal": 0.5,
+    "valence": 0.5,
+    "power": 0.4,
+    "evidence": {
+      "fear": [],
+      "power": [],
+      "warmth": [
+        "kind",
+        "thank"
+      ],
+      "spike": [],
+      "texture": [
+        "warm"
+      ]
+    }
+  },
+  "verify_match": 0.973,
+  "unsaid": [
+    "six",
+    "hundred",
+    "winked",
+    "compliment"
+  ],
+  "duration_ms": 68231,
+  "beats": [
+    {
+      "beat": 0,
+      "type": "identity_1",
+      "text": "You know what's underrated? Compliments. I give them freely. 'Nice coat.' 'Lovely teeth.' 'Great posture for a mortal.'",
+      "pause_after_ms": 600
+    },
+    {
+      "beat": 1,
+      "type": "identity_2",
+      "text": "I'm working on it. The kindness. Every day. Six hundred years of practice and I still surprise myself.",
+      "pause_after_ms": 600
+    },
+    {
+      "beat": 2,
+      "type": "rhythm",
+      "text": "My therapist says I should acknowledge the urge without becoming it. I said, 'doc, I've BEEN it. For centuries. I'm auditioning for something else.'",
+      "pause_after_ms": 1500
+    },
+    {
+      "beat": 3,
+      "type": "surprise",
+      "text": "And then I saw my reflection in the spoon. And the reflection winked FIRST., I didn't tell my therapist that part. She has a nice face. I don't want to worry her.",
+      "pause_after_ms": 1000
+    },
+    {
+      "beat": 4,
+      "type": "callback",
+      "text": "So now I compliment the reflection too. 'Nice coat.' It says nothing back. That's progress. Monologues are just compliments with nowhere to land.",
+      "pause_after_ms": 800
+    },
+    {
+      "beat": 5,
+      "type": "tag",
+      "text": "Being good is a practice, not a destination. The destination is probably a blood bank. But the practice! The practice is soup and goats and compliments to spoons. See you Tuesday.",
+      "pause_after_ms": 600
+    }
+  ],
+  "rating": null,
+  "rating_note": "owner listens here",
+  "at": "2026-10-14T19:34:56Z",
+  "identity_gap": {
+    "axis_1_baseline": "gentle volunteer count (believed, sincere, 600yrs of practice)",
+    "axis_2_leak": "ancient blood urge (old friend, not defeated \u2014 retiring)",
+    "why_funny_before_speaking": "kind+monster coexisting is comic as pure identity; every mundane act (soup, goats, hay) becomes a collision for free",
+    "mundane_contexts": [
+      "petting zoo",
+      "soup delivery",
+      "compliments to spoons"
+    ],
+    "techniques_as_amplifiers": {
+      "dpv_couple_pause": "1.5s before the urge-surface moment",
+      "garden_path": "sweet sentences set the expectation the urge breaks",
+      "callback": "therapy/goat-postcards escalate the gap"
+    }
+  }
+}

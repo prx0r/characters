@@ -1,0 +1,79 @@
+{
+  "set": "louis_c02",
+  "cost_usd": 0.000107898,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "The other day and we're listening to NPR We always listen to NPR because we're better than",
+      "technique": "self_deprecation",
+      "wpm": 143.2,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "kept using this phrase They kept saying 9 -11 deniers They kept saying that 9 -11 deniers ",
+      "technique": "literalize",
+      "wpm": 169.3,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "oh I thought they were saying 911 deniers Yeah she thought they meant nine people who just",
+      "technique": "literalize",
+      "wpm": 81.1,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "11 bullshit Stay a small fringe group really there's only nine of them But they still got ",
+      "technique": "literalize",
+      "wpm": 119.2,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "the 9 -11 deniers They're outside of the White House It goes 10 -12 -13 It's now it We are",
+      "technique": "literalize",
+      "wpm": 81.4,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "the 9 -11 We know that 11 is a bullshit number",
+      "technique": "literalize",
+      "wpm": 53.7,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "on the people by the man Why do we have 11 When we have 13 and 14 and 15 16",
+      "technique": "literalize",
+      "wpm": 74.3,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "17 My fucking 18 and 19 but we do not have a one team What happens 18 and 19 but we do not",
+      "technique": "literalize",
+      "wpm": 128.8,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "one -team The government took one -team and replaced it with some bullshit called a limit ",
+      "technique": "literalize",
+      "wpm": 52.0,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "literalize": 8,
+    "self_deprecation": 1
+  },
+  "laugh_by_technique": {
+    "literalize": 8,
+    "self_deprecation": 1
+  },
+  "n": 9,
+  "laugh_rate": 1.0
+}

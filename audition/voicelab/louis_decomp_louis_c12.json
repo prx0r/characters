@@ -1,0 +1,92 @@
+{
+  "set": "louis_c12",
+  "cost_usd": 0.000136164,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "I was watching YouTube today especially one of the ads that comes on before the video I wa",
+      "technique": "sincere_claim",
+      "wpm": 126.6,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "hard on that ad they trained a cheetah to run alongside a Jeep Cherokee and you're at home",
+      "technique": "escalation",
+      "wpm": 131.3,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "Anyway the ad was a PSA It was an anti -smoking message It was a Puerto Rican man with a h",
+      "technique": "escalation",
+      "wpm": 175.6,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "And my mother smoked I don't know what you're talking about I don't know what you're talki",
+      "technique": "escalation",
+      "wpm": 1356.7,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "you First thought I had was why does he still have an accent It's coming",
+      "technique": "literalize",
+      "wpm": 58.0,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "out It feels like if you bypass the mouth you shouldn't have an accent anymore Does the ma",
+      "technique": "literalize",
+      "wpm": 105.9,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "Is that just how air sounds coming out of this does he fart with an accent Zeng yor and pa",
+      "technique": "literalize",
+      "wpm": 98.5,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "Anyway after he had I watched the video that I was looking for which was a scene from a mo",
+      "technique": "absurd_confession",
+      "wpm": 249.1,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "-mo right Matt Damon great performance he plays a very complicated young man wearing a tig",
+      "technique": "deadpan_drop",
+      "wpm": 111.0,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "with Goodwill Hunting Matt Damon also wrote the movie okay So he basically sat down and he",
+      "technique": "literalize",
+      "wpm": 123.3,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "literalize": 4,
+    "escalation": 3,
+    "sincere_claim": 1,
+    "absurd_confession": 1,
+    "deadpan_drop": 1
+  },
+  "laugh_by_technique": {
+    "literalize": 4,
+    "escalation": 3,
+    "sincere_claim": 1,
+    "absurd_confession": 1,
+    "deadpan_drop": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

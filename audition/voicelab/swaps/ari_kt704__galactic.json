@@ -1,0 +1,33 @@
+{
+  "variant": "galactic",
+  "note": "ari grievance engine in fleet-bureaucracy world",
+  "subs": [
+    [
+      "Texas",
+      "the Outer Rim"
+    ],
+    [
+      "American",
+      "Alliance-affiliated"
+    ],
+    [
+      "America",
+      "the Alliance"
+    ],
+    [
+      "Seattle",
+      "Zeta-7 Station"
+    ],
+    [
+      "Saving Private Ryan",
+      "the Nebula War footage"
+    ],
+    [
+      "Capitol",
+      "Fleet Headquarters"
+    ]
+  ],
+  "verify_match": 0.92,
+  "duration_ms": 42187,
+  "rating": null
+}
