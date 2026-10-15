@@ -512,13 +512,9 @@ body.in-theatre .dailyhero{visibility:hidden}
 .obl input:not([type=radio]),.obl select{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 12px;font:inherit;font-size:15px;font-weight:500;width:100%}
 .obrow{display:flex;gap:6px}
 .obdice{flex:none;width:44px;border:1px solid var(--line)!important;border-radius:10px;font-size:18px}
-.obav{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
-.obav label,.obseg label{cursor:pointer}
-.obav input,.obseg input{position:absolute;opacity:0;pointer-events:none}
-.obav span{display:block;border-radius:50%;padding:2px;border:2px solid transparent;transition:transform .15s,border-color .15s}
-.obav span svg{width:100%;height:auto;display:block;border-radius:50%}
-.obav input:checked+span{border-color:var(--gold);transform:scale(1.06)}
-.obav input:focus-visible+span,.obseg input:focus-visible+span{outline:2px solid var(--red)}
+.obseg label{cursor:pointer}
+.obseg input{position:absolute;opacity:0;pointer-events:none}
+.obseg input:focus-visible+span{outline:2px solid var(--red)}
 .obstats{border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
 .obwhy{font-size:13px;color:var(--muted);margin:0 0 12px;line-height:1.45}
 .obwhy b{color:var(--text)}
@@ -556,7 +552,7 @@ body.in-theatre .dailyhero{visibility:hidden}
 .pfhead .av{width:72px;height:72px}
 .pfhead h2{font-family:var(--display);font-weight:400;font-size:44px;margin:0;line-height:1}
 .pfhead p{margin:4px 0 0}
-.pfhead button{margin-left:auto}
+.pfbtns{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
 .pf h3{margin:28px 0 10px;font-size:18px}
 .pflist{display:flex;flex-direction:column;gap:8px}
 .pfrow{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px;flex-wrap:wrap}
@@ -567,7 +563,7 @@ body.in-theatre .dailyhero{visibility:hidden}
 .pfppl{display:flex;gap:2px;margin-left:auto}
 .pfpriv{margin-top:30px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
 .pfpriv h3{margin:0 0 6px}
-@media (max-width:640px){ .obav{grid-template-columns:repeat(4,1fr)} .sheetcard{padding:20px 16px 14px} .pfhead button{margin-left:0} }
+@media (max-width:640px){ .sheetcard{padding:20px 16px 14px} .pfbtns{margin-left:0} }
 
 /* ===== gestures: swipe up = next clash, swipe left = the opponent. Faint right-edge rail, no buttons on the theatre ===== */
 .slide.leave-fade{opacity:0}
@@ -620,3 +616,30 @@ body.fs.chrome-hidden .brand{opacity:.4}
   .gest,.pullnext,.peek,.brand,.gbtn .gl{transition:none!important}
   .gest.pulse .gskip svg,.gest.pulse .gopp svg{animation:none}
 }
+
+/* ===== v2 avatars: one seeded mascot + reroll ===== */
+.obdice{display:grid;place-items:center;color:var(--text)}
+.obdice .dicesvg{width:20px;height:20px}
+.obdice:hover{color:var(--gold)}
+.avroll{display:flex;align-items:center;gap:20px}
+.avbig{width:160px;height:160px;flex:none;border-radius:38px;overflow:hidden;background:#23232d;box-shadow:0 18px 50px -18px #000,0 0 0 1px rgba(255,255,255,.08);transform-origin:50% 85%}
+.avbig svg{width:100%;height:100%;display:block}
+.avbig.roll{animation:avroll .52s cubic-bezier(.3,1.4,.4,1)}
+@keyframes avroll{0%{transform:none}28%{transform:scale(1.08,.8) rotate(-8deg)}33%{transform:scale(.85,1.05) rotate(180deg)}62%{transform:scale(1.04,.96) rotate(350deg)}100%{transform:rotate(360deg)}}
+.avside{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.avcap{font-family:var(--display);font-size:28px;line-height:1;color:var(--text);letter-spacing:.02em}
+.avbtn{display:inline-flex;align-items:center;gap:8px;background:var(--text);color:#0b0b0e;font-weight:700;font-size:15px;padding:10px 18px 10px 14px;border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.8);transition:transform .15s,background .15s}
+.avbtn:hover{background:var(--gold)}
+.avbtn:active{transform:scale(.95)}
+.avbtn .dicesvg{width:20px;height:20px}
+.avbtn.spin .dicesvg{animation:dicespin .5s cubic-bezier(.3,1.3,.5,1)}
+@keyframes dicespin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.avside small{font-size:12px;font-weight:500}
+.avsheet .avroll{margin:6px 0 10px}
+.pfav{position:relative;padding:0;border-radius:50%;line-height:0}
+.pfav .pfavdice{position:absolute;right:-2px;bottom:-2px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--text);color:#0b0b0e;box-shadow:0 0 0 3px var(--bg);transition:transform .2s}
+.pfav .pfavdice svg{width:16px;height:16px}
+.pfav:hover .pfavdice,.pfav:focus-visible .pfavdice{transform:rotate(90deg) scale(1.08)}
+.pfav:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+@media (max-width:640px){ .avroll{flex-direction:column;text-align:center} .avside{align-items:center} }
+@media (prefers-reduced-motion:reduce){ .avbig.roll,.avbtn.spin .dicesvg{animation:none} .pfav .pfavdice{transition:none} }
