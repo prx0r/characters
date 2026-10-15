@@ -51,29 +51,29 @@ async function initAuth() {
   paintAuth()
 }
 
-function paintAuth() {
-  const box = $('#auth')
-  if (me) {
-    box.innerHTML = `<span class="who">@${esc(me.handle)}</span><button id="signout" class="ghost">Sign out</button>`
-    $('#signout').onclick = async () => { try { await client.revoke(me.did) } catch {} me = null; agent = null; paintAuth(); paintBanner() }
-  } else {
-    box.innerHTML = `<form id="signin"><input id="handle" placeholder="you.bsky.social" autocomplete="username" required><button>Sign in with Bluesky</button></form>`
-    $('#signin').onsubmit = async (e) => {
-      e.preventDefault()
-      const h = $('#handle').value.trim().replace(/^@/, '')
-      if (!h) return
-      try { await client.signIn(h, { scope: 'atproto transition:generic' }) }
-      catch (err) { toast('Sign-in failed: ' + (err.message || err)) }
-    }
-  }
-  paintBanner()
+// Bluesky publishing is an advanced, opt-in extra that lives inside the account menu (hidden by default)
+function bskyHTML() {
+  if (me) return `<p class="um-note">Publishing picks to Bluesky as <b>@${esc(me.handle)}</b>.</p><button type="button" class="um-link" id="bskyout">Stop publishing to Bluesky</button>`
+  return `<form id="bskyin" class="um-bsky"><input id="handle" placeholder="you.bsky.social" autocomplete="username" required aria-label="Bluesky handle"><button>Connect</button></form><p class="um-note">Also writes each pick as a public record in your own Bluesky account.</p>`
 }
+function bindBsky(root) {
+  const o = root.querySelector('#bskyout')
+  if (o) o.onclick = async () => { try { await client.revoke(me.did) } catch {} me = null; agent = null; paintAuth() }
+  const f = root.querySelector('#bskyin')
+  if (f) f.onsubmit = async (e) => {
+    e.preventDefault()
+    const h = root.querySelector('#handle').value.trim().replace(/^@/, '')
+    if (!h || !client) return
+    try { await client.signIn(h, { scope: 'atproto transition:generic' }) }
+    catch (err) { toast('Bluesky sign-in failed: ' + (err.message || err)) }
+  }
+}
+function paintAuth() { paintUser() }
 
 function paintBanner() {
+  const b = $('#banner'); if (!b) return
   const q = LS.get('queue', [])
-  const b = $('#banner')
-  if (me) b.innerHTML = q.length ? `Publishing ${q.length} pick(s)…` : `Your picks count on the global chart.`
-  else b.innerHTML = `Your picks train your own model on this device. <b>Sign in with Bluesky</b> to count them on the global chart too${q.length ? ` (${q.length} waiting)` : ''}.`
+  b.textContent = me && q.length ? `Publishing ${q.length} pick(s) to Bluesky…` : ''
 }
 
 async function publish(v) {
@@ -271,7 +271,7 @@ function loadYT() {
 // effective = clamp(clip.vol (editorial, default 100) + your local offset from "Too loud"/"Too quiet") x your volume slider
 const AUD_STEP = 15
 const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x))
-function userVol() { const v = Number(LS.get('vol', 100)); return Number.isFinite(v) ? clamp(v, 0, 100) : 100 }
+function userVol() { return 100 } // no master slider: per-clip editorial vol + your too-loud/quiet offsets only
 function audioMap() { const m = LS.get('audio', {}); return m && typeof m === 'object' && !Array.isArray(m) ? m : {} }
 function clipVol(c) {
   const base = c?.vol != null && c.vol !== '' && Number.isFinite(Number(c.vol)) ? clamp(Number(c.vol), 0, 100) : 100
@@ -285,6 +285,15 @@ function audioFeedback(clip, kind) {
   r.off = clamp((Number(r.off) || 0) + (kind === 'loud' ? -AUD_STEP : AUD_STEP), -60, 30)
   r.at = new Date().toISOString(); m[clip.id] = r; LS.set('audio', m)
   toast(kind === 'loud' ? `Noted. ${clip.comic} plays ${AUD_STEP}% quieter next time.` : `Noted. ${clip.comic} plays a little louder next time (up to full volume).`)
+}
+// ---------- sound: never wait for a tap. Start muted when the browser refuses sound, one pill to unmute ----------
+let soundOK = false // set by any tap/keypress this visit: later clips play with sound
+const soundAllowed = () => soundOK || !!(typeof navigator !== 'undefined' && navigator.userActivation?.hasBeenActive)
+function soundPill(on) { const p = $('#soundpill'); if (p) p.hidden = !on }
+function soundOn() {
+  soundOK = true; LS.set('interacted', true); soundPill(false)
+  const s = stage === 'left' ? screens.L : stage === 'right' ? screens.R : null
+  s?.unmute()
 }
 class Screen {
   constructor(side, clip, hostId) { this.side = side; this.clip = clip; this.hostId = hostId; this.started = false; this.ready = new Promise((res) => (this._ready = res)) }
@@ -318,17 +327,32 @@ class Screen {
   async play() {
     await this.ready; if (this.dead) return
     this.started = true; this.wantPlay = true; this.applyVol()
-    if (this.a) { try { await this.a.play() } catch { toast('Tap the screen to start the sound') } return }
+    const muted = !soundAllowed()
+    if (this.a) {
+      this.a.muted = muted
+      try { await this.a.play() } catch { this.a.muted = true; try { await this.a.play() } catch {} }
+      if (this.a.muted) soundPill(true)
+      return
+    }
+    try { muted ? this.p.mute() : this.p.unMute() } catch {}
+    if (muted) soundPill(true)
     this.p.playVideo()
-    setTimeout(() => { // autoplay with sound refused: play muted and say so
+    setTimeout(() => { // autoplay with sound refused: play muted, one "Tap for sound" pill
       if (this.dead || !this.wantPlay) return // paused or skipped since: don't restart it behind the next clip
       const st = this.p?.getPlayerState?.()
-      if (st !== 1 && st !== 3) { this.p.mute(); this.p.playVideo(); toast('Started muted. Tap the screen for sound.') }
-    }, 1800)
+      if (st !== 1 && st !== 3) { try { this.p.mute(); this.p.playVideo() } catch {} soundPill(true) }
+      else if (this.p?.isMuted?.()) soundPill(true)
+    }, 1500)
+  }
+  unmute() {
+    try {
+      if (this.a) { this.a.muted = false; if (this.a.paused && this.wantPlay) this.a.play().catch(() => {}) }
+      else { this.p?.unMute?.(); this.applyVol(); if (this.wantPlay && !this.playing()) this.p?.playVideo?.() }
+    } catch {}
   }
   toggle() { // tap on the gesture layer: unmute, play/pause
-    if (this.a) { this.a.paused ? this.a.play().catch(() => {}) : this.a.pause(); return }
-    try { if (this.p?.isMuted?.()) { this.p.unMute(); this.applyVol(); if (!this.playing()) this.p.playVideo(); return } } catch {}
+    if (this.a) { if (this.a.muted) { soundOn(); return } this.a.paused ? this.a.play().catch(() => {}) : this.a.pause(); return }
+    try { if (this.p?.isMuted?.()) { soundOn(); return } } catch {}
     this.playing() ? this.pause() : this.p?.playVideo?.()
   }
   // called every tick: accumulates real seconds watched, notices seeks back (replay) and jumps ahead (skip)
@@ -389,9 +413,10 @@ function faceCard(c, side) {
   return `<div class="face ${side}"><div class="fpic">${img}</div>
     <div class="ftext"><b>${esc(c.comic)}${chip(c)}</b><span>${esc(P.tagline || c.title || '')}</span><em>${r ? r + ' crowd rating' : 'Unrated'}</em></div></div>`
 }
-function modeLabel() {
-  if (current?.mode === 'daily') return dailyFor(current.daily)?.title || 'Daily clash'
-  return current?.mode === 'shared' && sharedRound?.pick ? 'A friend picked one. Do you agree?' : MODES[current?.mode]?.[0] || ''
+// the only label above the cards: who challenged you (shared links). Everything else stays quiet.
+function introLine() {
+  if (current?.mode !== 'shared') return ''
+  return `<span class="challenge">${sharedRound?.pick ? 'A friend challenged you. Do you agree?' : 'A friend sent you this clash'}</span>`
 }
 function slideHTML(a, b, n, first) {
   const shot = (c, side) => `<button class="pick ${side}" data-side="${side}" aria-label="${esc(c.comic)} was funnier">
@@ -403,22 +428,21 @@ function slideHTML(a, b, n, first) {
       <div class="prog"><i></i></div></div>`
   return `<div class="slide" data-n="${n}">
     <div class="intro">
-      <div class="introbar"><span class="kicker"><i class="dot"></i>${current?.mode === 'daily' ? 'Daily clash' : 'Tonight\'s screening'}</span>${modeLabel() ? `<span class="modepill">${esc(modeLabel())}</span>` : ''}</div>
+      <div class="introbar">${introLine()}</div>
       <div class="faceoff">${faceCard(a, 'L')}<span class="vsx">VS</span>${faceCard(b, 'R')}</div>
-      <div class="introfoot">${first ? `<button class="play" data-act="start">▶ Start the show</button>` : `<p class="tapskip">Tap to skip the intro</p>`}</div>
+      <div class="introfoot"></div>
     </div>
     <div class="theatre">${scr(a, 'L')}${scr(b, 'R')}<button class="skipclip" type="button" data-act="skipclip" aria-label="Not funny: skip to clip two">Not funny → #2</button></div>
     <div class="ballot"><p class="bq">Which was funnier?</p><div class="picks">${shot(a, 'L')}${shot(b, 'R')}</div>
       <div class="audiofb" role="group" aria-label="Sound level feedback"><span>Sound off?</span>${[['L', '#1'], ['R', '#2']].map(([sd, n]) => `<button type="button" data-aud="${sd}" data-k="loud">${n} too loud</button><button type="button" data-aud="${sd}" data-k="quiet">${n} too quiet</button>`).join('')}</div>
       <div class="count"><i></i></div><p class="hint">Tap one, or ← / →. No pick in 3s = pass.</p>
-      <p class="friendres" aria-live="polite"></p>
-      <button class="sharex" type="button" data-act="share">Share this clash ↗</button></div>
+      <p class="friendres" aria-live="polite"></p></div>
   </div>`
 }
 
 function laneSelect() {
-  const box = $('#lanebox')
-  box.innerHTML = `<select id="lane">${[['human', 'Human comics'], ['ai', 'AI comics'], ['mixed', 'Human vs AI']].map(([k, l]) => `<option value="${k}" ${LANE === k ? 'selected' : ''}>${l}</option>`).join('')}</select>`
+  const box = $('#lanebox'); if (!box) return
+  box.innerHTML = `<select id="lane" aria-label="Lineup">${[['human', 'Human comics'], ['ai', 'AI comics'], ['mixed', 'Human vs AI']].map(([k, l]) => `<option value="${k}" ${LANE === k ? 'selected' : ''}>${l}</option>`).join('')}</select>`
   $('#lane').onchange = (e) => { LANE = e.target.value; LS.set('lane', LANE); goNext(null) }
 }
 
@@ -426,6 +450,7 @@ function setStage(s) {
   stage = s
   if (cur?.el) cur.el.dataset.stage = s
   document.body.classList.toggle('in-theatre', s === 'left' || s === 'right')
+  if (s !== 'left' && s !== 'right') soundPill(false)
   const label = s === 'left' ? 'Not funny → #2' : s === 'right' ? 'Not funny → vote' : ''
   const aria = s === 'left' ? 'Not funny: skip to clip two' : 'Not funny: skip to the vote'
   const sk = q('.skipclip'); if (sk && label) { sk.textContent = label; sk.setAttribute('aria-label', aria) }
@@ -446,7 +471,6 @@ function mountScreening(first, oldEl) {
   const host = $('#stage')
   if (!host) return
   if (!current) {
-    $('#roundtag').textContent = 'Intermission'
     const msg = LANE === 'ai' ? 'The AI comics are still in rehearsal. Their first sets premiere here soon.' : LANE === 'mixed' ? 'Human vs AI opens when the first AI sets premiere.' : "You've seen every clash on the bill. New shorts arrive daily."
     host.querySelectorAll('.slide').forEach((x) => x !== oldEl && x.remove())
     host.insertAdjacentHTML('beforeend', `<div class="slide empty-slide"><p class="empty">${msg}</p></div>`)
@@ -454,7 +478,6 @@ function mountScreening(first, oldEl) {
     return
   }
   const [a, b] = current, n = ++nScreen
-  $('#roundtag').textContent = "Tonight's double feature"
   const pL = MODEL ? sig(MODEL.score(a.id) + traitScore(a) - MODEL.score(b.id) - traitScore(b)) : 0.5
   prediction = { p: pL, side: pL >= 0.5 ? 'L' : 'R' }
   host.insertAdjacentHTML('beforeend', slideHTML(a, b, n, first))
@@ -469,7 +492,7 @@ function mountScreening(first, oldEl) {
   el.classList.add('show-title')
   later(() => el.classList.add('show-L'), reduced() ? 0 : 500)
   later(() => el.classList.add('show-R'), reduced() ? 0 : 1200)
-  if (!first || userStarted) later(() => stage === 'intro' && cur?.el === el && startClip('L'), INTRO_MS)
+  later(() => stage === 'intro' && cur?.el === el && startClip('L'), INTRO_MS) // never wait for a tap
   paintDaily()
 }
 function finishSlide(host, oldEl) {
@@ -487,8 +510,6 @@ function bindSlide(el) {
     if (tapRevealed) { tapRevealed = false; return } // chrome was hidden: this tap only brings it back
     screens[sh.closest('.screen').dataset.side]?.toggle()
   }))
-  const sx = el.querySelector('.sharex')
-  if (sx) sx.onclick = (e) => { e.stopPropagation(); shareCurrent() }
   const sk = el.querySelector('.skipclip')
   if (sk) sk.onclick = (e) => { e.stopPropagation(); skipClip() }
   el.querySelectorAll('[data-aud]').forEach((bt) => (bt.onclick = (e) => {
@@ -626,7 +647,7 @@ async function vote(side) {
   if (agent) {
     try { await publish(v) }
     catch { LS.set('queue', [...LS.get('queue', []), v]); toast('Saved. It\u2019ll publish when Bluesky responds.') }
-  } else LS.set('queue', [...LS.get('queue', []), v])
+  } else LS.set('queue', [...LS.get('queue', []), v].slice(-300))
   MODEL = fitLocal(); TRAITS = fitTraits()
   paintBanner(); paintYou(); paintDaily(); paintHistory()
 }
@@ -916,7 +937,7 @@ function scheduleHide(ms) {
   chromeT = setTimeout(function hide() {
     if (!screeningActive()) return setChromeHidden(false)
     const hdr = $('#chrome'), focused = hdr && hdr.querySelector(':focus-visible')
-    if (nearTop || focused || $('#auth input') === document.activeElement) { chromeT = setTimeout(hide, 600); return }
+    if (nearTop || focused || menuOpen()) { chromeT = setTimeout(hide, 600); return }
     setChromeHidden(true)
   }, ms)
 }
@@ -950,11 +971,10 @@ function bindChrome() {
   document.addEventListener('keydown', (e) => { if (e.key === 'Tab') showChrome() })
   const sb = $('#sharebtn'); if (sb) sb.onclick = (e) => { e.stopPropagation(); shareCurrent() }
   const kb = $('#skipbtn'); if (kb) kb.onclick = (e) => { e.stopPropagation(); skipClip() }
-  const vr = $('#vol')
-  if (vr) {
-    vr.value = String(userVol())
-    vr.oninput = () => { LS.set('vol', clamp(Math.round(Number(vr.value) || 0), 0, 100)); Object.values(screens).forEach((x) => x.applyVol()); showChrome() }
-  }
+  document.addEventListener('pointerdown', () => { soundOK = true }, { capture: true, passive: true })
+  document.addEventListener('keydown', () => { soundOK = true }, { capture: true })
+  const sp = $('#soundbtn'); if (sp) sp.onclick = (e) => { e.stopPropagation(); soundOn() }
+  bindUser()
 }
 
 // ---------- share a clash: #clash/<clipA>/<clipB>&pick=a|b, no backend ----------
@@ -1039,10 +1059,10 @@ function topicPairs() {
 function dailyFor(date) {
   if (!DAY_RE.test(String(date || ''))) return null
   const e = DAILY.find((x) => x && x.date === date && BYID[x.a] && BYID[x.b] && x.a !== x.b)
-  if (e) return { date, title: e.title || `Today's clash: ${e.topic || 'comedy'} jokes`, blurb: e.blurb || '', a: e.a, b: e.b, topic: e.topic || '', editorial: true }
+  if (e) return { date, title: e.title || '', blurb: e.blurb || '', a: e.a, b: e.b, topic: e.topic || '', editorial: true }
   const P = topicPairs(); if (!P.length) return null
   const p = P[hashStr(date) % P.length]
-  return { date, title: `Today's clash: ${p.topic} jokes`, blurb: `Two takes on ${p.topic}. Which one lands?`, a: p.a, b: p.b, topic: p.topic, editorial: false }
+  return { date, title: '', blurb: `Two takes on ${p.topic}. Which one lands?`, a: p.a, b: p.b, topic: p.topic, editorial: false }
 }
 function dailyFields(v) {
   if (!v || !DAY_RE.test(String(v.daily || ''))) return {}
@@ -1081,23 +1101,17 @@ function paintDaily() {
   if (!D) { el.hidden = true; el.innerHTML = ''; return }
   const A = BYID[D.a], B = BYID[D.b], mine = dailyMine(D.date)
   const playing = current?.mode === 'daily' && current.daily === D.date && ['intro', 'left', 'right', 'vote'].includes(stage)
-  const pic = (c) => `<span class="dhpic">${c.media === 'youtube' ? `<img src="${thumb(esc(c.id))}" alt="" loading="lazy" decoding="async">` : ''}</span>`
   el.hidden = false
-  el.innerHTML = `<div class="dhinner">
-    <div class="dhpics" aria-hidden="true">${pic(A)}<i>VS</i>${pic(B)}</div>
-    <div class="dhtext"><span class="eyebrow">Daily clash · next in <span class="dhcount">${untilNext()}</span></span>
-      <b>${esc(D.title)}</b><span class="dhsub">${esc(A.comic)} vs ${esc(B.comic)}${D.blurb ? ' · ' + esc(D.blurb) : ''}</span>
-      ${mine ? `<span class="dhres">You picked ${esc(String(BYID[mine.winner]?.comic || '').replace(/\.$/, ''))}. ${worldLine(D)}</span>` : ''}</div>
-    <div class="dhact">${playing ? '<span class="dhnow"><i class="dot"></i>Now playing</span>'
-      : mine ? `<button type="button" class="dhbtn" data-dh="share">Send to a friend ↗</button><button type="button" class="dhghost" data-dh="play">Rewatch</button>`
-        : `<button type="button" class="dhbtn" data-dh="play">▶ Play today\u2019s clash</button>`}</div></div>
-    ${mine && !ccPref() && !LS.get('ccAsked', false) ? ccAskHTML() : ''}`
+  el.classList.toggle('playing', playing)
+  el.innerHTML = `<div class="dhinner" title="${esc(A.comic)} vs ${esc(B.comic)}${D.blurb ? ' · ' + esc(D.blurb) : ''}">
+    <i class="dot" aria-hidden="true"></i><b class="dhtitle">Daily Clash${D.title ? `<span>: ${esc(D.title)}</span>` : ''}</b>
+    <span class="dhcount" aria-label="Next daily clash in">${untilNext()}</span>
+    ${playing ? '' : mine ? `<button type="button" class="dhghost" data-dh="share">Share ↗</button>` : `<button type="button" class="dhbtn" data-dh="play">Play</button>`}</div>`
   el.querySelectorAll('[data-dh]').forEach((b) => (b.onclick = (e) => {
     e.stopPropagation()
     if (b.dataset.dh === 'play') playDaily()
     else holdWhile(() => shareClash(A, B, mine.winner === A.id ? 'a' : 'b'))
   }))
-  bindCcAsk(el)
   if (!dailyTimer) dailyTimer = setInterval(() => {
     if (dayStr() !== dailyDay) return paintDaily() // midnight: a new clash
     const c = document.querySelector('#daily .dhcount'); if (c) c.textContent = untilNext()
@@ -1142,7 +1156,7 @@ function scheduleAdvance(ms) { clearTimeout(advT); advT = setTimeout(() => { adv
 async function holdWhile(fn) {
   const h = { adv: false, intro: false, play: null, el: cur?.el }
   if (advT) { clearTimeout(advT); advT = null; h.adv = true }
-  else if (stage === 'intro') { clearTimers(); h.intro = userStarted || !cur?.el?.querySelector('[data-act="start"]') }
+  else if (stage === 'intro') { clearTimers(); h.intro = true }
   else if (stage === 'left' || stage === 'right') { const s = screens[stage === 'left' ? 'L' : 'R']; if (s?.playing?.()) { s.pause(); h.play = s } }
   else if (stage === 'vote' && armed) pauseBallot('Countdown paused. Pick when you\u2019re ready.')
   try { await fn() } catch {} finally {
@@ -1304,6 +1318,37 @@ function youSub(k) {
   if (YOUSUB === 'history') paintHistory()
 }
 
+// ---------- account menu: one round icon top-right ----------
+const SILHOUETTE = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="4.2" fill="currentColor"/><path d="M3.8 21c.9-4.4 4.2-6.6 8.2-6.6s7.3 2.2 8.2 6.6" fill="currentColor"/></svg>'
+const menuOpen = () => !!$('#usermenu') && !$('#usermenu').hidden
+function setMenu(open) {
+  const m = $('#usermenu'), b = $('#userbtn'); if (!m || !b) return
+  m.hidden = !open; b.setAttribute('aria-expanded', String(open))
+  if (open) { paintMenu(); showChrome() }
+}
+function paintUser() {
+  const b = $('#userbtn'); if (!b) return
+  b.innerHTML = SILHOUETTE
+  if (menuOpen()) paintMenu()
+}
+function paintMenu() {
+  const m = $('#usermenu'); if (!m) return
+  m.innerHTML = `<div class="um-sec"><button type="button" class="um-google" disabled>Sign in with Google <small>coming soon</small></button>
+      <p class="um-note">Sync your picks, add friends and see how your taste matches theirs.</p></div>
+    <div class="um-sec um-row"><span>Lineup</span><span id="lanebox"></span></div>
+    <div class="um-sec"><button type="button" class="um-item" data-um="history">History</button></div>
+    <details class="um-adv"><summary>Advanced</summary><div class="um-sec">${bskyHTML()}</div></details>`
+  laneSelect(); bindBsky(m)
+  m.querySelectorAll('[data-um]').forEach((x) => (x.onclick = () => { setMenu(false); if (x.dataset.um === 'history') { showTab('you'); youSub('history') } }))
+}
+function bindUser() {
+  const b = $('#userbtn'); if (!b) return
+  b.onclick = (e) => { e.stopPropagation(); setMenu(!menuOpen()) }
+  document.addEventListener('click', (e) => { if (menuOpen() && !e.target.closest?.('.usr')) setMenu(false) })
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuOpen()) { setMenu(false); b.focus() } })
+  paintUser()
+}
+
 // ---------- utils ----------
 function esc(s) { return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])) }
 let tt
@@ -1348,6 +1393,6 @@ function tabs() {
     const D = dailyFor(dayStr())
     if (D && !dailyMine(D.date) && LS.get('dailyAuto', '') !== D.date && !/^#(comic|history)/.test(location.hash)) { LS.set('dailyAuto', D.date); pendingClash = { a: D.a, b: D.b, pick: null, daily: D.date } }
   }
-  laneSelect(); bindGestures(); bindChrome(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); paintDaily(); window._route()
+  bindGestures(); bindChrome(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); paintDaily(); window._route()
   initAuth()
 })()

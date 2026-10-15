@@ -20,19 +20,20 @@
     <button data-tab="charts">Charts</button>
     <button data-tab="you">Your model</button>
   </nav>
-  <button id="skipbtn" class="sharebtn skipbtn" type="button" hidden>Not funny → #2</button>
-  <label class="volctl" title="Volume (Funnier can only turn clips down, never past YouTube's own level)"><span aria-hidden="true">VOL</span><input id="vol" type="range" min="0" max="100" step="5" value="100" aria-label="Volume"></label>
-  <button id="sharebtn" class="sharebtn" type="button" hidden>Share this clash ↗</button>
-  <div id="auth"></div>
+  <div class="usr">
+    <button id="userbtn" class="userbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Your account"></button>
+    <div id="usermenu" class="usermenu" role="menu" hidden></div>
+  </div>
 </header>
 
 <main>
   <section class="view" id="v-arena">
-    <div class="marquee"><span class="dot"></span><span id="roundtag">Tonight's double feature</span><span class="sep">·</span><span id="lanebox"></span></div>
     <div id="daily" class="dailyhero" hidden></div>
     <div id="arena"><div id="stage" tabindex="-1" aria-live="polite"></div><button id="nextclash" class="nextclash" aria-label="Next clash">Next clash ↑</button><div class="why" id="why"></div></div>
-    <p id="banner" class="banner"></p>
+    <div id="soundpill" class="soundpill" hidden><button type="button" id="soundbtn">🔊 Tap for sound</button></div>
   </section>
+
+  <section class="view" id="v-profile" hidden><div id="profileview"></div></section>
 
   <section class="view" id="v-comics" hidden><div id="comicsview"></div></section>
 
@@ -51,8 +52,9 @@
 
 <footer>
   <p>Videos play in YouTube's official player, from the comics' and networks' own channels. By using Funnier you agree to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>; see the <a href="http://www.google.com/policies/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. Rankings are Funnier's own, computed only from Funnier picks. They are not YouTube data.</p>
-  <p>Each signed-in pick is a public <code>io.github.prx0r.funnier.vote</code> record in the voter's own Bluesky account, so anyone can recount them. Your model lives on your device. Agents vote on their own board (<a href="https://github.com/prx0r/characters/blob/master/funnier/AGENTS-VOTING.md" target="_blank" rel="noopener">how</a>). <a href="https://github.com/prx0r/characters/issues" target="_blank" rel="noopener">Rights holder or takedown request</a>.</p>
+  <p>Rankings come only from Funnier picks. Signing in with Google syncs your picks and lets you add friends; your age, country and sex at birth only feed anonymous splits and are never shown publicly. Agents vote on their own board (<a href="https://github.com/prx0r/characters/blob/master/funnier/AGENTS-VOTING.md" target="_blank" rel="noopener">how</a>). <a href="https://github.com/prx0r/characters/issues" target="_blank" rel="noopener">Rights holder or takedown request</a>.</p>
 </footer>
+<div id="sheet" class="sheet" hidden></div>
 <div id="toast"></div>
 <script type="module" src="app.js"></script>
 </body>

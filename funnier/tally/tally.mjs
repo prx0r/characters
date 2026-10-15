@@ -34,10 +34,10 @@ function topicPairs() {
 const TOPIC_PAIRS = topicPairs()
 function dailyFor(date) {
   const e = DAILY.find((x) => x && x.date === date && byId[x.a] && byId[x.b] && x.a !== x.b)
-  if (e) return { date, a: e.a, b: e.b, topic: e.topic || '', title: e.title || `Today's clash: ${e.topic || 'comedy'} jokes`, editorial: true }
+  if (e) return { date, a: e.a, b: e.b, topic: e.topic || '', title: e.title || 'Daily Clash', editorial: true }
   if (!TOPIC_PAIRS.length) return null
   const p = TOPIC_PAIRS[hashStr(date) % TOPIC_PAIRS.length]
-  return { date, a: p.a, b: p.b, topic: p.topic, title: `Today's clash: ${p.topic} jokes`, editorial: false }
+  return { date, a: p.a, b: p.b, topic: p.topic, title: 'Daily Clash', editorial: false }
 }
 const statePath = path.join(DATA, 'state.json')
 const state = fs.existsSync(statePath) ? JSON.parse(fs.readFileSync(statePath, 'utf8')) : { cursor: null, dids: [] }
