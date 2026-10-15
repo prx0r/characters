@@ -24,7 +24,16 @@ REPO = HERE.parent
 FREAKS = REPO / "freaks"
 sys.path.insert(0, str(HERE))
 
-import fish_tts  # noqa: E402
+import fish_tts
+
+def laugh_p(est_wpm, pos, hist, pause=1.0, dur=15.0):
+    try:
+        import pickle, numpy as np
+        m = pickle.loads((HERE / 'voicelab' / 'laugh_model_v3.pkl').read_bytes())
+        x = np.array([[est_wpm/60, pause, dur, pos, hist]])
+        return float(m['model'].predict_proba(x)[0, 1])
+    except Exception:
+        return 0.5  # noqa: E402
 
 
 def _load_env() -> None:
@@ -106,6 +115,8 @@ def compose(slug: str, tts: str = "auto", modulator: str | None = None,
                            "duration_ms": r["duration_ms"],
                            "provenance": r["provenance"]})
         import random
+        if 'laugh_hist' not in dir():
+            laugh_hist = 0.0
         pause = int(b.get("pause_after_ms", 600) or 600)
         nxt = beats[beats.index(b) + 1] if b is not beats[-1] else {}
         ntype = (nxt.get("type") or "")
@@ -113,7 +124,13 @@ def compose(slug: str, tts: str = "auto", modulator: str | None = None,
         # STRATEGIC COUPLING: pause ~1.5s before punch/closer (pros extend
         # 41% before high-surprise; amateur 27%; our old 500ms = amateur)
         if ntype in ("punchline", "closer"):
-            pause = max(pause, 1500)
+            # adaptive dpv coupling: pros extend pauses +41% before high
+            # surprise; scale by laugh model P for this arc position
+            import os as _os
+            _p = laugh_p(est_wpm=180, pos=(beats.index(b)+1)/max(len(beats),1),
+                         hist=laugh_hist)
+            pause = max(pause, int(1000 + 600 * _p))
+            laugh_hist = min(10, laugh_hist + 0.5) * 0.9
         elif ntype == "tag":
             pause = max(pause, 1000)
         # pause variability (r=0.35 with votes): jitter gaps +-25% deterministically
