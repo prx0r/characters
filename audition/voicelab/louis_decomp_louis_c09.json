@@ -1,0 +1,96 @@
+{
+  "set": "louis_c09",
+  "cost_usd": 0.000116214,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "I was in Upstate New York in a small town and I was standing in front of a drug store And ",
+      "technique": "deadpan_drop",
+      "wpm": 156.9,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "an impulse purchase I should get a wheelchair That would really help",
+      "technique": "absurd_confession",
+      "wpm": 47.5,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "with my paralysis Then I wouldn't have to drag myself everywhere I go like I've been doing",
+      "technique": "self_deprecation",
+      "wpm": 97.0,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "blown off at the marathon Okay Okay A",
+      "technique": "self_deprecation",
+      "wpm": 32.0,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "bunch of fucking hypocrites apparently Because let me point some out to you Let me point s",
+      "technique": "audience_address",
+      "wpm": 102.8,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "a man with no legs crawling on the ground You're just and then at the end you're like oh b",
+      "technique": "audience_address",
+      "wpm": 107.6,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "We thought you meant just some asshole with a child of a disease who deserves to be laughe",
+      "technique": "audience_address",
+      "wpm": 122.9,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "However you lost your legs Ha ha ha You haven't legs and weave",
+      "technique": "callback",
+      "wpm": 51.9,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "legs I have legs I have two legs two fucking legs that's the maximum amount I fucking love",
+      "technique": "escalation",
+      "wpm": 99.5,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "I wouldn't like having no legs I really don't think I would like it I think it was suck I ",
+      "technique": "sincere_claim",
+      "wpm": 170.6,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "audience_address": 3,
+    "self_deprecation": 2,
+    "deadpan_drop": 1,
+    "absurd_confession": 1,
+    "callback": 1,
+    "escalation": 1,
+    "sincere_claim": 1
+  },
+  "laugh_by_technique": {
+    "audience_address": 3,
+    "self_deprecation": 2,
+    "deadpan_drop": 1,
+    "absurd_confession": 1,
+    "callback": 1,
+    "escalation": 1,
+    "sincere_claim": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

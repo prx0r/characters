@@ -1,0 +1,79 @@
+{
+  "set": "louis_c05",
+  "cost_usd": 0.000110208,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Ladies and gentlemen Louis C K Thank",
+      "technique": "audience_address",
+      "wpm": 24.9,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "stop stop Hi it's a little early for that Well",
+      "technique": "audience_address",
+      "wpm": 67.0,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "thank you very much for being here This is the 40th year of this show's existence and this",
+      "technique": "audience_address",
+      "wpm": 188.3,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "born in 1967 and so I grew up in the 70s So I'm not racist However I do have",
+      "technique": "absurd_confession",
+      "wpm": 75.0,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "mild racism It's the best I could do coming out of the 70s because that was a very racist ",
+      "technique": "absurd_confession",
+      "wpm": 223.9,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "Hey you interrupted me I was saying something racist Why did you But I so I have mild raci",
+      "technique": "absurd_confession",
+      "wpm": 159.6,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "like if I go to a pizza place I've never been to before and it's run by four black women I",
+      "technique": "absurd_confession",
+      "wpm": 152.2,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "You don't usually see that four -black women run in a piece of place Unless it's called fo",
+      "technique": "absurd_confession",
+      "wpm": 204.3,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "to treat me and the doctor's from China or India I'll think well good good Good Good more ",
+      "technique": "absurd_confession",
+      "wpm": 142.1,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "absurd_confession": 6,
+    "audience_address": 3
+  },
+  "laugh_by_technique": {
+    "absurd_confession": 6,
+    "audience_address": 3
+  },
+  "n": 9,
+  "laugh_rate": 1.0
+}

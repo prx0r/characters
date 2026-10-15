@@ -1,0 +1,94 @@
+{
+  "set": "louis_c08",
+  "cost_usd": 0.000121506,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Give it up for Mr Nui C J Hello everybody How are you",
+      "technique": "audience_address",
+      "wpm": 50.0,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "Good I've been doing well I had a good day today I went to the movies And you know before ",
+      "technique": "sincere_claim",
+      "wpm": 232.4,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "families So you shouldn't download movies on the internet and I thought holy shit I have n",
+      "technique": "literalize",
+      "wpm": 155.2,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "I went to the park today I like going to the park because I get matched to be without my w",
+      "technique": "absurd_confession",
+      "wpm": 152.0,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "no drinking It has a picture of like a martini glass with a lion through it Are those real",
+      "technique": "literalize",
+      "wpm": 225.6,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "So yeah my wife and I got in a big fight",
+      "technique": "sincere_claim",
+      "wpm": 383.7,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "because she says I don't listen to her and I don't But it's not because I don't love her b",
+      "technique": "self_deprecation",
+      "wpm": 119.8,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "to God she sucks at it When she starts telling a story it immediately turns into She takes",
+      "technique": "escalation",
+      "wpm": 147.0,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "try because I love her when she starts talking I'm like I'm locked in I'm going to listen ",
+      "technique": "self_deprecation",
+      "wpm": 185.1,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "college and not when she went to Antioch and I had to transfer because of that guy that go",
+      "technique": "literalize",
+      "wpm": 177.5,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "literalize": 3,
+    "sincere_claim": 2,
+    "self_deprecation": 2,
+    "audience_address": 1,
+    "absurd_confession": 1,
+    "escalation": 1
+  },
+  "laugh_by_technique": {
+    "literalize": 3,
+    "sincere_claim": 2,
+    "self_deprecation": 2,
+    "audience_address": 1,
+    "absurd_confession": 1,
+    "escalation": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

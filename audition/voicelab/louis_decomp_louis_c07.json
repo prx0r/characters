@@ -1,0 +1,90 @@
+{
+  "set": "louis_c07",
+  "cost_usd": 0.000138936,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "Thank you very much Thank you",
+      "technique": "audience_address",
+      "wpm": 23.1,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "Hi everybody It's nice to be here Nice to see you all It is It's nice It's funny to see yo",
+      "technique": "absurd_confession",
+      "wpm": 299.4,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "mothers and here you are You're not mad are you Did you all get together Cause you're mad ",
+      "technique": "absurd_confession",
+      "wpm": 139.7,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm sorry I'm ",
+      "technique": "self_deprecation",
+      "wpm": 994.7,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "don't really relate to it that much because I don't have a lot of fucking swords And every",
+      "technique": "literalize",
+      "wpm": 173.5,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "-edged sword because you could win or you could lose Hey the football game was on That's a",
+      "technique": "literalize",
+      "wpm": 123.0,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "Mel's his two when you're not watching that even single -edge swords are a double -edge sw",
+      "technique": "literalize",
+      "wpm": 90.2,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "it but the other head is kind of flat and really cut well It's kind of a double -edge swor",
+      "technique": "literalize",
+      "wpm": 309.4,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "what it's all about That's what it's all about That's what it's all about That's what it's",
+      "technique": "literalize",
+      "wpm": 236.5,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "clever I uh you ever feel like you're going to fart and then instead you shit on your fath",
+      "technique": "absurd_confession",
+      "wpm": 115.1,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "literalize": 5,
+    "absurd_confession": 3,
+    "audience_address": 1,
+    "self_deprecation": 1
+  },
+  "laugh_by_technique": {
+    "literalize": 5,
+    "absurd_confession": 3,
+    "audience_address": 1,
+    "self_deprecation": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

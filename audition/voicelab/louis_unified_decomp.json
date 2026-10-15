@@ -1,0 +1,38 @@
+{
+  "clips": [
+    "louis_c01",
+    "louis_c02",
+    "louis_c03",
+    "louis_c04",
+    "louis_c05",
+    "louis_c06",
+    "louis_c07",
+    "louis_c08",
+    "louis_c09",
+    "louis_c10",
+    "louis_c11",
+    "louis_c12",
+    "louis_c13"
+  ],
+  "technique_freq": {
+    "literalize": 30,
+    "escalation": 24,
+    "self_deprecation": 20,
+    "audience_address": 17,
+    "sincere_claim": 17,
+    "absurd_confession": 13,
+    "deadpan_drop": 4,
+    "callback": 2
+  },
+  "laugh_by_technique": {
+    "literalize": 30,
+    "escalation": 24,
+    "self_deprecation": 20,
+    "audience_address": 17,
+    "sincere_claim": 17,
+    "absurd_confession": 13,
+    "deadpan_drop": 4,
+    "callback": 2
+  },
+  "total_beats": 127
+}

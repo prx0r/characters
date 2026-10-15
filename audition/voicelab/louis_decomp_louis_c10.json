@@ -1,0 +1,92 @@
+{
+  "set": "louis_c10",
+  "cost_usd": 0.000120876,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "about their mothers I was watching a football game one time and his guy scored a bunch of ",
+      "technique": "literalize",
+      "wpm": 192.0,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "game from heaven tonight and I wanted to be there to say leave your mother alone how dare ",
+      "technique": "escalation",
+      "wpm": 131.3,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "finished with your fucking kids Even after your dad you still have to go What are their fu",
+      "technique": "escalation",
+      "wpm": 100.6,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "mother alone She did her job alone she did her job she raised you and it killed her I mean",
+      "technique": "escalation",
+      "wpm": 138.8,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "what you want your mom to be just in heaven Wheeeee This poor woman the angels are like we",
+      "technique": "literalize",
+      "wpm": 168.6,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "you can't fucking hear me why People die it means they did their jobs and you should forge",
+      "technique": "sincere_claim",
+      "wpm": 177.0,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "You know when you see an old couple and they've been married for like 60 years you know th",
+      "technique": "audience_address",
+      "wpm": 171.3,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "have you been married 60 years Oh Oh Ah Isn't that automatically wonderful How do you know",
+      "technique": "self_deprecation",
+      "wpm": 85.3,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "I'm sorry I'm I'm a piece of shit But let's just say this is a happy couple okay",
+      "technique": "self_deprecation",
+      "wpm": 69.9,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "They love each other they've been married for 60 years That's longer than most people real",
+      "technique": "sincere_claim",
+      "wpm": 184.3,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "escalation": 3,
+    "literalize": 2,
+    "sincere_claim": 2,
+    "self_deprecation": 2,
+    "audience_address": 1
+  },
+  "laugh_by_technique": {
+    "escalation": 3,
+    "literalize": 2,
+    "sincere_claim": 2,
+    "self_deprecation": 2,
+    "audience_address": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}

@@ -1,0 +1,90 @@
+{
+  "set": "louis_c06",
+  "cost_usd": 0.000125076,
+  "rows": [
+    {
+      "seg": "s0",
+      "text": "I'd like to be a better person I would I'd like to be a better person and I think I'm gett",
+      "technique": "self_deprecation",
+      "wpm": 118.4,
+      "laugh": true
+    },
+    {
+      "seg": "s1",
+      "text": "you start finding out like let me give you an example before I was I rented a car a couple",
+      "technique": "self_deprecation",
+      "wpm": 255.1,
+      "laugh": true
+    },
+    {
+      "seg": "s2",
+      "text": "car give him your thing with the mileage you got to get on a bus and then go to your termi",
+      "technique": "self_deprecation",
+      "wpm": 263.9,
+      "laugh": true
+    },
+    {
+      "seg": "s3",
+      "text": "there You know I kind of on the plane And once I was on the plane and I had a little momen",
+      "technique": "absurd_confession",
+      "wpm": 210.0,
+      "laugh": true
+    },
+    {
+      "seg": "s4",
+      "text": "I think I was like you can't do that You have to return it to this location and then get l",
+      "technique": "self_deprecation",
+      "wpm": 175.6,
+      "laugh": true
+    },
+    {
+      "seg": "s5",
+      "text": "that place where it is And he was like oh Jesus man all right we'll get it And he that was",
+      "technique": "self_deprecation",
+      "wpm": 116.9,
+      "laugh": true
+    },
+    {
+      "seg": "s6",
+      "text": "I could do this every time every time I run into a car because of course they want you to ",
+      "technique": "escalation",
+      "wpm": 167.2,
+      "laugh": true
+    },
+    {
+      "seg": "s7",
+      "text": "drive a car till you don't want it just get out of it while it's moving and just walk away",
+      "technique": "escalation",
+      "wpm": 200.1,
+      "laugh": true
+    },
+    {
+      "seg": "s8",
+      "text": "It's now your problem But see this is a terrible realization because you should act in a w",
+      "technique": "sincere_claim",
+      "wpm": 151.2,
+      "laugh": true
+    },
+    {
+      "seg": "s9",
+      "text": "And most people kind of don't care most people are very selfish most people don't give a s",
+      "technique": "sincere_claim",
+      "wpm": 178.1,
+      "laugh": true
+    }
+  ],
+  "technique_freq": {
+    "self_deprecation": 5,
+    "escalation": 2,
+    "sincere_claim": 2,
+    "absurd_confession": 1
+  },
+  "laugh_by_technique": {
+    "self_deprecation": 5,
+    "escalation": 2,
+    "sincere_claim": 2,
+    "absurd_confession": 1
+  },
+  "n": 10,
+  "laugh_rate": 1.0
+}
