@@ -4,7 +4,7 @@ Arena for comedy. Two official YouTube clips, one vote: which is funnier?
 
 - Live: https://prx0r.github.io/characters/
 - Votes are AT Protocol records (`io.github.prx0r.funnier.vote`) written to each voter's own Bluesky repo via OAuth.
-  Record: `{ a, b, winner, createdAt }` (+ optional `voter`, `basis`, `why`, `ms`) where a/b/winner are YouTube video ids from `clips.json`.
+  Record: `{ a, b, winner, createdAt }` (+ optional `voter`, `basis`, `why`, `ms`, `daily` (YYYY-MM-DD daily clash), `cc` (opt-in ISO country, daily picks only)) where a/b/winner are YouTube video ids from `clips.json`.
 - `.github/workflows/funnier.yml` runs every 15 min: discovers voters on Jetstream, recounts every voter's records
   from their PDS (`tally/tally.mjs`), computes Elo (K=32) + Wilson lower bound for clips and comics (cross-comic votes only),
   and publishes `data/leaderboard.json` + `data/votes.json` to the `gh-pages` branch. One vote per voter per pair (latest wins).
@@ -30,3 +30,6 @@ Arena for comedy. Two official YouTube clips, one vote: which is funnier?
   Confidence weight per pick: ×1.25 if decided in <1.5 s (snap), ×0.7 if >12 s, else ×1.0; picking clip ONE in <3 s after watching <60% of clip TWO counts as strong (×1.4). Picks without signals weigh 1. Skips (`funnier.skips`: pairing, stage intro/left/right/vote, comics on screen, seconds watched) made during a clip count as a weak loss (0.3 of a pick) for that clip vs an average clip, which also lowers its comic and its style tags; intro/ballot skips are stored but never penalise. The weight multiplies each pick's gradient in the personal Bradley-Terry fit and the style-trait regression. Only `ms` is published (optional integer on the vote record); the tally keeps it sanitised in `votes.json` but the public charts ignore it for now.
 - **Specials log:** `comics.json` lists each comic's verified specials (`specials: [{ id, title, year, distributor, runtimeMin?, where: [{ name, url }] }]`); `where` holds only the official home (Netflix originals, louisck.com) plus a JustWatch search because availability varies by country. Seen / 0.5–5 stars / note are stored on-device (`funnier.specials`).
 - **Test:** `SYNTH=300 node tally/tally.mjs clips.json /tmp/out` runs the tally on synthetic votes.
+
+## Daily clash
+`site/daily.json` is the editorial schedule: `[{ date, title, blurb, a, b, topic }]`. Days without an entry fall back to a topic-matched pair chosen by an FNV-1a hash of the date (identical logic in `src/app.js` and `tally/tally.mjs`). The tally writes `data/daily.json` with per-day totals, % split, and per-country splits (a country appears once it has 5+ votes; the rest is "Other").

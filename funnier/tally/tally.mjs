@@ -10,6 +10,35 @@ const DATA = path.join(OUT, 'data')
 fs.mkdirSync(DATA, { recursive: true })
 const clips = JSON.parse(fs.readFileSync(CLIPS_PATH, 'utf8')).filter((c) => c.status !== 'removed')
 const byId = Object.fromEntries(clips.map((c) => [c.id, c]))
+const DAY_RE = /^\d{4}-\d{2}-\d{2}$/
+// daily clash schedule: <out>/daily.json (published copy), else funnier/site/daily.json next to clips.json. Missing = fallback only.
+const DAILY = (() => {
+  for (const p of [process.env.DAILY_PATH, path.join(OUT, 'daily.json'), path.join(path.dirname(CLIPS_PATH), 'site', 'daily.json')].filter(Boolean)) {
+    try { const d = JSON.parse(fs.readFileSync(p, 'utf8')); if (Array.isArray(d)) return d } catch {}
+  }
+  return []
+})()
+// MUST match dailyFor() in src/app.js: same clip order, same FNV-1a hash
+function hashStr(s) { let h = 2166136261; for (const ch of String(s)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0 } return h >>> 0 }
+function topicPairs() {
+  const cs = [...clips].sort((x, y) => (x.id < y.id ? -1 : x.id > y.id ? 1 : 0)), out = []
+  for (let i = 0; i < cs.length; i++) for (let j = i + 1; j < cs.length; j++) {
+    const A = cs[i], B = cs[j]
+    if (A.kind !== B.kind) continue
+    const tb = Array.isArray(B.topics) ? B.topics : []
+    const shared = (Array.isArray(A.topics) ? A.topics : []).filter((t) => tb.includes(t)).sort()
+    if (shared.length) out.push({ a: A.id, b: B.id, topic: shared[0] })
+  }
+  return out
+}
+const TOPIC_PAIRS = topicPairs()
+function dailyFor(date) {
+  const e = DAILY.find((x) => x && x.date === date && byId[x.a] && byId[x.b] && x.a !== x.b)
+  if (e) return { date, a: e.a, b: e.b, topic: e.topic || '', title: e.title || `Today's clash: ${e.topic || 'comedy'} jokes`, editorial: true }
+  if (!TOPIC_PAIRS.length) return null
+  const p = TOPIC_PAIRS[hashStr(date) % TOPIC_PAIRS.length]
+  return { date, a: p.a, b: p.b, topic: p.topic, title: `Today's clash: ${p.topic} jokes`, editorial: false }
+}
 const statePath = path.join(DATA, 'state.json')
 const state = fs.existsSync(statePath) ? JSON.parse(fs.readFileSync(statePath, 'utf8')) : { cursor: null, dids: [] }
 const dids = new Set(state.dids)
@@ -84,7 +113,7 @@ for (const did of dids) {
       if (!t || t > Date.now() + 5 * 60e3) continue
       const k = [v.a, v.b].sort().join('|')
       const prev = latest.get(k)
-      if (!prev || t > Date.parse(prev.createdAt)) latest.set(k, { uri: r.uri, did, a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt, voter: v.voter === 'agent' ? 'agent' : 'human', model: typeof v.model === 'string' ? v.model.slice(0, 80) : undefined, why: typeof v.why === 'string' ? v.why.slice(0, 40) : undefined, ms: Number.isInteger(v.ms) && v.ms >= 0 && v.ms <= 3600000 ? v.ms : undefined })
+      if (!prev || t > Date.parse(prev.createdAt)) latest.set(k, { uri: r.uri, did, a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt, voter: v.voter === 'agent' ? 'agent' : 'human', model: typeof v.model === 'string' ? v.model.slice(0, 80) : undefined, why: typeof v.why === 'string' ? v.why.slice(0, 40) : undefined, ms: Number.isInteger(v.ms) && v.ms >= 0 && v.ms <= 3600000 ? v.ms : undefined, daily: typeof v.daily === 'string' && DAY_RE.test(v.daily) ? v.daily : undefined, cc: typeof v.cc === 'string' && /^[A-Z]{2}$/.test(v.cc) ? v.cc : undefined })
     }
     if (latest.size) {
       const vs = [...latest.values()]
@@ -103,6 +132,15 @@ if (process.env.SYNTH) { // test: true strengths Norm>Louis>Rock>Seinfeld
     const p = 1 / (1 + Math.exp(-(tr[a.comic] - tr[b.comic])))
     if (i < 7) voters.push({ did: 'synth' + i, handle: 'synth' + i, kind: i % 3 ? 'human' : 'agent', votes: 0 })
     votes.push({ did: 'synth' + (i % 7), voter: i % 3 ? 'human' : 'agent', a: a.id, b: b.id, winner: Math.random() < p ? a.id : b.id, ms: Math.round(500 + Math.random() * 15000), createdAt: new Date().toISOString() })
+  }
+  // synthetic daily-clash votes: ~40% of SYNTH, spread over the scheduled days up to today, most with an opt-in country
+  const today = new Date(Date.now() + 14 * 3600e3).toISOString().slice(0, 10)
+  const days = [...new Set([...DAILY.map((d) => d && d.date).filter((d) => DAY_RE.test(d || '') && d <= today), today])]
+  const CCS = ['US', 'US', 'US', 'GB', 'GB', 'KH', 'KH', 'DE', 'IN', 'BR', 'JP', 'FR', undefined, undefined]
+  for (let i = 0; i < Math.round(0.4 * +process.env.SYNTH); i++) {
+    const D = dailyFor(days[i % days.length]); if (!D) break
+    const A = byId[D.a], Bc = byId[D.b], p = 1 / (1 + Math.exp(-((tr[A.comic] || 0) - (tr[Bc.comic] || 0) + 0.3)))
+    votes.push({ did: 'synthd' + i, voter: 'human', a: D.a, b: D.b, winner: Math.random() < p ? D.a : D.b, daily: D.date, cc: i % 50 === 7 ? 'IS' : CCS[i % CCS.length], ms: Math.round(500 + Math.random() * 9000), createdAt: new Date().toISOString() })
   }
 }
 votes.sort((x, y) => Date.parse(x.createdAt) - Date.parse(y.createdAt))
@@ -222,6 +260,27 @@ for (const vt of voters) {
   tasteIndex.push({ did: vt.did, handle: vt.handle, kind: vt.kind, votes: mine.length, top: prof[0]?.comic })
 }
 fs.writeFileSync(path.join(TASTE_DIR, 'index.json'), JSON.stringify(tasteIndex))
+// ---------- Daily clash results: totals, % split, per-country splits (>= 5 votes, rest = Other) ----------
+const MIN_CC = 5
+const pct = (x, n) => (n ? Math.round((1000 * x) / n) / 10 : 0)
+const dailyDates = new Set(DAILY.map((d) => d && d.date).filter((d) => DAY_RE.test(d || '')))
+for (const v of votes) if (v.daily) dailyDates.add(v.daily)
+const nowDay = new Date(Date.now() + 14 * 3600e3).toISOString().slice(0, 10) // latest local date anywhere on Earth
+const dailyOut = { updated: board.updated, minCountry: MIN_CC, days: {} }
+for (const date of [...dailyDates].filter((d) => d <= nowDay).sort().slice(-90)) {
+  const D = dailyFor(date); if (!D) continue
+  const k = [D.a, D.b].sort().join('|')
+  const vs = votes.filter((v) => v.daily === date && [v.a, v.b].sort().join('|') === k)
+  const split = (arr) => { const a = arr.filter((v) => v.winner === D.a).length, n = arr.length; return { total: n, aVotes: a, bVotes: n - a, pctA: pct(a, n), pctB: n ? Math.round((100 - pct(a, n)) * 10) / 10 : 0 } }
+  const byCc = {}
+  for (const v of vs) if (v.cc) (byCc[v.cc] = byCc[v.cc] || []).push(v)
+  const countries = [], rest = []
+  for (const [cc, arr] of Object.entries(byCc)) { if (arr.length >= MIN_CC) countries.push({ cc, ...split(arr) }); else rest.push(...arr) }
+  countries.sort((x, y) => y.total - x.total || (x.cc < y.cc ? -1 : 1))
+  dailyOut.days[date] = { date, a: D.a, b: D.b, topic: D.topic, title: D.title, editorial: D.editorial, ...split(vs), countries, other: split(rest), noCountry: vs.filter((v) => !v.cc).length }
+}
+fs.writeFileSync(path.join(DATA, 'daily.json'), JSON.stringify(dailyOut))
+console.log('daily results', Object.keys(dailyOut.days).length, 'days')
 fs.writeFileSync(path.join(DATA, 'leaderboard.json'), JSON.stringify(board, null, 1))
 fs.writeFileSync(path.join(DATA, 'votes.json'), JSON.stringify({ updated: board.updated, voters, votes }, null, 1))
 state.dids = [...dids]

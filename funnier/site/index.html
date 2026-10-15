@@ -29,6 +29,7 @@
 <main>
   <section class="view" id="v-arena">
     <div class="marquee"><span class="dot"></span><span id="roundtag">Tonight's double feature</span><span class="sep">·</span><span id="lanebox"></span></div>
+    <div id="daily" class="dailyhero" hidden></div>
     <div id="arena"><div id="stage" tabindex="-1" aria-live="polite"></div><button id="nextclash" class="nextclash" aria-label="Next clash">Next clash ↑</button><div class="why" id="why"></div></div>
     <p id="banner" class="banner"></p>
   </section>
@@ -42,7 +43,10 @@
     <h3 class="shelf">Top shorts</h3><div id="clips" class="rail"></div>
   </section>
 
-  <section class="view" id="v-you" hidden><div id="you"></div></section>
+  <section class="view" id="v-you" hidden>
+    <div class="subnav" role="tablist" aria-label="Your model and history"><button type="button" role="tab" data-sub="model" class="on" aria-selected="true">Your model</button><button type="button" role="tab" data-sub="history" aria-selected="false">History</button></div>
+    <div id="you"></div><div id="hist" hidden></div>
+  </section>
 </main>
 
 <footer>

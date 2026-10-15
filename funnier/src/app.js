@@ -9,7 +9,7 @@ const LS = {
   set: (k, v) => localStorage.setItem('funnier.' + k, JSON.stringify(v)),
 }
 
-let CLIPS = [], BYID = {}, BOARD = null, PAIRS = [], COMICS = {}, PUBVOTES = []
+let CLIPS = [], BYID = {}, BOARD = null, PAIRS = [], COMICS = {}, PUBVOTES = [], DAILY = [], DAILYRES = null
 let LANE = LS.get('lane', 'human'), BOARDKIND = 'all'
 const SHORT_MAX = 75 // seconds of each clip we screen when the clip is longer
 let client = null, agent = null, me = null
@@ -23,6 +23,11 @@ async function loadData() {
   try { COMICS = (await (await fetch('comics.json', { cache: 'no-cache' })).json()).comics || {} } catch { COMICS = {} }
   try { PUBVOTES = (await (await fetch('data/votes.json', { cache: 'no-cache' })).json()).votes || [] } catch { PUBVOTES = [] }
   try { PAIRS = (await (await fetch('data/pairs.json', { cache: 'no-cache' })).json()).pairs || [] } catch { PAIRS = [] }
+  try { const d = await (await fetch('daily.json', { cache: 'no-cache' })).json(); DAILY = Array.isArray(d) ? d : [] } catch { DAILY = [] }
+  await loadDailyResults()
+}
+async function loadDailyResults() {
+  try { const r = await fetch('data/daily.json', { cache: 'no-cache' }); const d = r && r.ok !== false ? await r.json() : null; DAILYRES = d && typeof d === 'object' ? d : null } catch { DAILYRES = null }
 }
 
 // ---------- auth (AT Protocol OAuth) ----------
@@ -75,7 +80,7 @@ async function publish(v) {
   const res = await agent.fetchHandler('/xrpc/com.atproto.repo.createRecord', {
     method: 'POST', headers: { 'content-type': 'application/json' },
     body: JSON.stringify({ repo: me.did, collection: COLLECTION,
-      record: { $type: COLLECTION, a: v.a, b: v.b, winner: v.winner, voter: 'human', basis: v.basis || 'watched', ...(v.why ? { why: v.why } : {}), ...(Number.isInteger(v.decisionMs) ? { ms: v.decisionMs } : {}), createdAt: v.createdAt } }),
+      record: { $type: COLLECTION, a: v.a, b: v.b, winner: v.winner, voter: 'human', basis: v.basis || 'watched', ...(v.why ? { why: v.why } : {}), ...(Number.isInteger(v.decisionMs) ? { ms: v.decisionMs } : {}), ...dailyFields(v), createdAt: v.createdAt } }),
   })
   if (!res.ok) throw new Error('createRecord ' + res.status + ' ' + (await res.text()))
 }
@@ -236,6 +241,8 @@ const MODES = {
   training: ['Training the crowd chart', pickTraining],
   explore: ['Exploring something new', pickExplore],
   shared: ['A friend shared this clash', () => null],
+  daily: ['Daily clash', () => null],
+  rewatch: ['Rewatching from your history', () => null],
 }
 function pickPair() {
   const n = LS.get('votes', []).length
@@ -382,7 +389,10 @@ function faceCard(c, side) {
   return `<div class="face ${side}"><div class="fpic">${img}</div>
     <div class="ftext"><b>${esc(c.comic)}${chip(c)}</b><span>${esc(P.tagline || c.title || '')}</span><em>${r ? r + ' crowd rating' : 'Unrated'}</em></div></div>`
 }
-function modeLabel() { return current?.mode === 'shared' && sharedRound?.pick ? 'A friend picked one. Do you agree?' : MODES[current?.mode]?.[0] || '' }
+function modeLabel() {
+  if (current?.mode === 'daily') return dailyFor(current.daily)?.title || 'Daily clash'
+  return current?.mode === 'shared' && sharedRound?.pick ? 'A friend picked one. Do you agree?' : MODES[current?.mode]?.[0] || ''
+}
 function slideHTML(a, b, n, first) {
   const shot = (c, side) => `<button class="pick ${side}" data-side="${side}" aria-label="${esc(c.comic)} was funnier">
       <span class="pimg" ${c.media === 'youtube' ? `style="background-image:url(${thumb(c.id)})"` : ''}></span>
@@ -393,7 +403,7 @@ function slideHTML(a, b, n, first) {
       <div class="prog"><i></i></div></div>`
   return `<div class="slide" data-n="${n}">
     <div class="intro">
-      <div class="introbar"><span class="kicker"><i class="dot"></i>Tonight's screening</span>${modeLabel() ? `<span class="modepill">${esc(modeLabel())}</span>` : ''}</div>
+      <div class="introbar"><span class="kicker"><i class="dot"></i>${current?.mode === 'daily' ? 'Daily clash' : 'Tonight\'s screening'}</span>${modeLabel() ? `<span class="modepill">${esc(modeLabel())}</span>` : ''}</div>
       <div class="faceoff">${faceCard(a, 'L')}<span class="vsx">VS</span>${faceCard(b, 'R')}</div>
       <div class="introfoot">${first ? `<button class="play" data-act="start">▶ Start the show</button>` : `<p class="tapskip">Tap to skip the intro</p>`}</div>
     </div>
@@ -423,7 +433,7 @@ function setStage(s) {
   updateChrome()
 }
 function stopScreening() {
-  clearInterval(tick); tick = null; clearTimers()
+  clearInterval(tick); tick = null; clearTimers(); clearTimeout(advT); advT = null
   Object.values(screens).forEach((s) => s.destroy()); screens = {}; armed = false; armedAt = 0
   document.body.classList.remove('in-theatre')
 }
@@ -460,6 +470,7 @@ function mountScreening(first, oldEl) {
   later(() => el.classList.add('show-L'), reduced() ? 0 : 500)
   later(() => el.classList.add('show-R'), reduced() ? 0 : 1200)
   if (!first || userStarted) later(() => stage === 'intro' && cur?.el === el && startClip('L'), INTRO_MS)
+  paintDaily()
 }
 function finishSlide(host, oldEl) {
   const el = host.lastElementChild
@@ -502,7 +513,7 @@ function skipClip() {
   const side = stage === 'left' ? 'L' : 'R', sc = screens[side]; if (!sc) return false
   sc.track(); sc.skipped = true; sc.pause()
   const c = sc.clip, [a, b] = current
-  const rec = { a: a.id, b: b.id, stage: side === 'L' ? 'left-skip' : 'right-skip', comics: [c.comic], comic: c.comic, clip: c.id,
+  const rec = { a: a.id, b: b.id, stage: side === 'L' ? 'left-skip' : 'right-skip', comics: [c.comic], comic: c.comic, clip: c.id, ...(current.daily ? { daily: current.daily } : {}),
     style: Array.isArray(c.style) ? c.style : [], watchedSec: Math.round(10 * (sc.watched || 0)) / 10, at: new Date().toISOString() }
   LS.set('skips', [...LS.get('skips', []), rec].slice(-500))
   try { MODEL = fitLocal(); TRAITS = fitTraits() } catch {}
@@ -552,10 +563,10 @@ function pass() {
   if (!current) return
   const [a, b] = current
   armed = false
-  LS.set('passes', [...LS.get('passes', []), { a: a.id, b: b.id, ...signals(), at: new Date().toISOString() }].slice(-300))
+  LS.set('passes', [...LS.get('passes', []), { a: a.id, b: b.id, ...signals(), ...(current.daily ? { daily: current.daily } : {}), at: new Date().toISOString() }].slice(-300))
   LS.set('skipped', [...LS.get('skipped', []), pairKey(a.id, b.id)].slice(-500)); bumpSeen(a.id, b.id)
   toast('No pick, so it\u2019s a pass. Neither comic loses anything.')
-  goNext(null)
+  goNext(null); paintHistory()
 }
 
 // swipe up / wheel / ArrowUp / PageDown / "Next clash": leave this screening at any stage
@@ -565,12 +576,12 @@ function skipClash() {
   const on = stage === 'left' ? [a] : stage === 'right' ? [b] : stage === 'vote' ? [a, b] : []
   const sc = stage === 'left' ? screens.L : stage === 'right' ? screens.R : null
   const rec = { a: a.id, b: b.id, stage, comics: on.map((c) => c.comic), clip: sc ? sc.clip.id : null,
-    watchedSec: sc ? Math.round(10 * (sc.watched || 0)) / 10 : 0, ...sg, at: new Date().toISOString() }
+    watchedSec: sc ? Math.round(10 * (sc.watched || 0)) / 10 : 0, ...sg, ...(current.daily ? { daily: current.daily } : {}), at: new Date().toISOString() }
   if (stage === 'vote' && armedAt) rec.decisionMs = Math.round(now() - armedAt)
   LS.set('skips', [...LS.get('skips', []), rec].slice(-500))
   LS.set('skipped', [...LS.get('skipped', []), pairKey(a.id, b.id)].slice(-500)); bumpSeen(a.id, b.id)
   if (sc) { MODEL = fitLocal(); TRAITS = fitTraits(); paintYou() }
-  goNext(null)
+  goNext(null); paintHistory()
 }
 function goNext() {
   if (moving) return
@@ -588,49 +599,36 @@ async function vote(side) {
   const decisionMs = armedAt && !sharedDuringBallot ? Math.max(0, Math.round(now() - armedAt)) : undefined
   const sg = signals()
   const v = { a: a.id, b: b.id, winner: side === 'L' ? a.id : b.id, voter: 'human', basis: 'watched', mode: current.mode, decisionMs, ...sg, createdAt: new Date().toISOString() }
+  if (current.mode === 'daily' && DAY_RE.test(String(current.daily || ''))) v.daily = current.daily
   v.weight = voteWeight(v)
   q(`.pick.${side}`)?.classList.add('won')
   bumpSeen(a.id, b.id)
   const fl = friendLine(a, b, v.winner)
-  if (fl) { const fe = q('.friendres'); if (fe) { fe.textContent = fl.text; fe.classList.add('on', fl.agree ? 'agree' : 'disagree') } }
-  const pre = fl ? fl.text + ' ' : ''
+  if (fl) { v.friend = fl.agree ? 'agree' : 'disagree'; const fe = q('.friendres'); if (fe) { fe.textContent = fl.text; fe.classList.add('on', fl.agree ? 'agree' : 'disagree') } }
+  if (v.daily) loadDailyResults().then(() => { paintDaily(); const w = $('#why .rcworld'); const D = dailyFor(v.daily); if (w && D) w.innerHTML = worldLine(D) }).catch(() => {})
   // the watch minimum still applies: both clips at least ~30s (or to the end)
   const okL = screens.L?.skipped || screens.L?.enough(), okR = screens.R?.skipped || screens.R?.enough()
   if (!(okL && okR) || (screens.L?.skipped && screens.R?.skipped)) {
     LS.set('partials', [...LS.get('partials', []), v].slice(-300))
-    toast(pre + 'Noted, but it only counts when both clips were watched for 30s or to the end.')
-    askWhy(v, true)
-    later(() => goNext(null), fl ? 2400 : 700)
+    toast('It only counts when both clips were watched for 30s or to the end.')
+    askWhy(v, true, fl)
+    scheduleAdvance(fl ? 2400 : v.daily ? 1600 : 700)
+    paintDaily(); paintHistory()
     return
   }
-  LS.set('votes', [...LS.get('votes', []), v])
+  // latest pick per pair counts (same rule as the public tally), so a rewatch replaces the old pick
+  LS.set('votes', [...LS.get('votes', []).filter((x) => !x || pairKey(x.a, x.b) !== pairKey(a.id, b.id)), v])
   const preds = LS.get('preds', []); preds.push({ p: prediction.p, hit: prediction.side === side }); LS.set('preds', preds.slice(-200))
   const dur = LS.get('dur', {}); dur[a.id] = screens.L.dur(); dur[b.id] = screens.R.dur(); LS.set('dur', dur)
-  const w = BYID[v.winner]
   const guess = MODEL && MODEL.n >= 3 ? (prediction.side === side ? ' Your model called it.' : ' Your model guessed the other one.') : ''
-  later(() => goNext(null), fl ? 2400 : reduced() ? 300 : 900)
-  askWhy(v)
+  scheduleAdvance(fl ? 2400 : v.daily ? 1600 : reduced() ? 300 : 900)
+  askWhy(v, false, fl, guess.trim())
   if (agent) {
-    try { await publish(v); toast(pre || `${w.comic} takes it.${guess}`) }
-    catch { LS.set('queue', [...LS.get('queue', []), v]); toast(`${pre}Saved. It'll publish when Bluesky responds.${guess}`) }
-  } else { LS.set('queue', [...LS.get('queue', []), v]); toast(pre || `${w.comic} takes it.${guess}`) }
+    try { await publish(v) }
+    catch { LS.set('queue', [...LS.get('queue', []), v]); toast('Saved. It\u2019ll publish when Bluesky responds.') }
+  } else LS.set('queue', [...LS.get('queue', []), v])
   MODEL = fitLocal(); TRAITS = fitTraits()
-  paintBanner(); paintYou()
-}
-const WHY = ['Smarter', 'Weirder', 'Darker', 'Better delivery', 'More relatable', 'Better payoff']
-let whyT
-function askWhy(v, shareOnly) {
-  const box = $('#why'); if (!box) return
-  box.innerHTML = `${shareOnly ? '' : `<span>Why was it funnier?</span>${WHY.map((w) => `<button data-why>${w}</button>`).join('')}`}<button class="whyshare" type="button">Share this clash ↗</button>`
-  box.classList.add('on'); clearTimeout(whyT); whyT = setTimeout(() => box.classList.remove('on'), 5000)
-  const ws = box.querySelector('.whyshare')
-  if (ws) ws.onclick = (e) => { e.stopPropagation(); clearTimeout(whyT); whyT = setTimeout(() => box.classList.remove('on'), 1500); shareClash(BYID[v.a], BYID[v.b], v.winner === v.a ? 'a' : 'b') }
-  box.querySelectorAll('button[data-why]').forEach((b) => (b.onclick = () => {
-    const votes = LS.get('votes', []); const last = votes[votes.length - 1]
-    if (last && last.createdAt === v.createdAt) { last.why = b.textContent; LS.set('votes', votes) }
-    const q2 = LS.get('queue', []); const lq = q2.find((x) => x.createdAt === v.createdAt); if (lq) { lq.why = b.textContent; LS.set('queue', q2) }
-    box.classList.remove('on'); toast('Noted. Your model will use that.')
-  }))
+  paintBanner(); paintYou(); paintDaily(); paintHistory()
 }
 const arenaOn = () => !$('#v-arena')?.hidden
 document.addEventListener('keydown', (e) => {
@@ -966,14 +964,18 @@ function parseClash(h) {
   const m = String(h || '').match(/^#clash\/([^/&?]+)\/([^/&?]+)(?:[&?]pick=([ab]))?/)
   if (!m) return null
   const d = (x) => { try { return decodeURIComponent(x) } catch { return x } }
-  return { a: d(m[1]), b: d(m[2]), pick: m[3] || null }
+  const rewatch = /[&?]from=history\b/.test(String(h))
+  return { a: d(m[1]), b: d(m[2]), pick: rewatch ? null : m[3] || null, rewatch }
 }
 function takeClash() {
   const sh = pendingClash; pendingClash = null
   if (!sh) return null
   const A = BYID[sh.a], B = BYID[sh.b]
   if (!A || !B || sh.a === sh.b) { setTimeout(() => toast('That clash is no longer on the bill, so here is tonight\u2019s instead.'), 400); return null }
-  const pair = [A, B]; pair.mode = 'shared'
+  const pair = [A, B]
+  if (sh.daily) { pair.mode = 'daily'; pair.daily = sh.daily; sharedRound = null; return pair }
+  if (sh.rewatch) { pair.mode = 'rewatch'; sharedRound = null; return pair }
+  pair.mode = 'shared'
   sharedRound = { ...sh, key: pairKey(sh.a, sh.b) }
   return pair
 }
@@ -1017,6 +1019,291 @@ async function shareClash(a, b, pick) {
   else toast('Copy this link: ' + url)
 }
 
+// ---------- daily clash: site/daily.json editorial schedule, deterministic topic-matched fallback ----------
+// The fallback MUST match tally/tally.mjs (same clip order, same hash) so results line up with what people saw.
+const pad2 = (n) => String(n).padStart(2, '0')
+const DAY_RE = /^\d{4}-\d{2}-\d{2}$/
+function dayStr(d = new Date()) { return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}` }
+function hashStr(s) { let h = 2166136261; for (const ch of String(s)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0 } return h >>> 0 }
+function topicPairs() {
+  const cs = [...CLIPS].sort((x, y) => (x.id < y.id ? -1 : x.id > y.id ? 1 : 0)), out = []
+  for (let i = 0; i < cs.length; i++) for (let j = i + 1; j < cs.length; j++) {
+    const A = cs[i], B = cs[j]
+    if (A.kind !== B.kind) continue
+    const tb = Array.isArray(B.topics) ? B.topics : []
+    const shared = (Array.isArray(A.topics) ? A.topics : []).filter((t) => tb.includes(t)).sort()
+    if (shared.length) out.push({ a: A.id, b: B.id, topic: shared[0] })
+  }
+  return out
+}
+function dailyFor(date) {
+  if (!DAY_RE.test(String(date || ''))) return null
+  const e = DAILY.find((x) => x && x.date === date && BYID[x.a] && BYID[x.b] && x.a !== x.b)
+  if (e) return { date, title: e.title || `Today's clash: ${e.topic || 'comedy'} jokes`, blurb: e.blurb || '', a: e.a, b: e.b, topic: e.topic || '', editorial: true }
+  const P = topicPairs(); if (!P.length) return null
+  const p = P[hashStr(date) % P.length]
+  return { date, title: `Today's clash: ${p.topic} jokes`, blurb: `Two takes on ${p.topic}. Which one lands?`, a: p.a, b: p.b, topic: p.topic, editorial: false }
+}
+function dailyFields(v) {
+  if (!v || !DAY_RE.test(String(v.daily || ''))) return {}
+  const cc = ccOn()
+  return { daily: v.daily, ...(cc ? { cc } : {}) } // country only with daily-clash picks, only when opted in (checked at publish time)
+}
+function dailyMine(date) { return [...LS.get('votes', []), ...LS.get('partials', [])].filter((v) => v && v.daily === date).sort((x, y) => Date.parse(x.createdAt) - Date.parse(y.createdAt)).pop() || null }
+function untilNext() {
+  const n = new Date(), next = new Date(n.getFullYear(), n.getMonth(), n.getDate() + 1)
+  const m = Math.max(0, Math.round((next - n) / 60000)), h = Math.floor(m / 60)
+  return h ? `${h}h ${pad2(m % 60)}m` : `${m}m`
+}
+// "The world says X% / Y%" (+ your country's split when it has enough votes), from data/daily.json
+function worldLine(D) {
+  const day = DAILYRES?.days?.[D.date]
+  if (!day || !(day.total > 0)) return 'The world\u2019s split appears soon. Results update every 15 min.'
+  const flip = day.a !== D.a
+  const pa = flip ? day.pctB : day.pctA, pb = flip ? day.pctA : day.pctB
+  const A = BYID[D.a], B = BYID[D.b]
+  let s = `The world says ${esc(A?.comic || 'one')} ${pa}% / ${esc(B?.comic || 'two')} ${pb}% (${day.total} vote${day.total === 1 ? '' : 's'}).`
+  const cc = ccOn(), row = cc && Array.isArray(day.countries) ? day.countries.find((c) => c.cc === cc) : null
+  if (row) s += ` ${esc(ccName(cc))}: ${flip ? row.pctB : row.pctA}% / ${flip ? row.pctA : row.pctB}%.`
+  else if (cc) s += ` ${esc(ccName(cc))} shows once it has 5 votes.`
+  return s
+}
+function playDaily() {
+  const D = dailyFor(dayStr()); if (!D) return
+  pendingClash = { a: D.a, b: D.b, pick: null, daily: D.date }
+  userStarted = true
+  showTab('arena'); moving = false; goNext(null)
+}
+let dailyTimer = null, dailyDay = null
+function paintDaily() {
+  const el = $('#daily'); if (!el) return
+  const D = dailyFor(dayStr()); dailyDay = D?.date || dayStr()
+  if (!D) { el.hidden = true; el.innerHTML = ''; return }
+  const A = BYID[D.a], B = BYID[D.b], mine = dailyMine(D.date)
+  const playing = current?.mode === 'daily' && current.daily === D.date && ['intro', 'left', 'right', 'vote'].includes(stage)
+  const pic = (c) => `<span class="dhpic">${c.media === 'youtube' ? `<img src="${thumb(esc(c.id))}" alt="" loading="lazy" decoding="async">` : ''}</span>`
+  el.hidden = false
+  el.innerHTML = `<div class="dhinner">
+    <div class="dhpics" aria-hidden="true">${pic(A)}<i>VS</i>${pic(B)}</div>
+    <div class="dhtext"><span class="eyebrow">Daily clash · next in <span class="dhcount">${untilNext()}</span></span>
+      <b>${esc(D.title)}</b><span class="dhsub">${esc(A.comic)} vs ${esc(B.comic)}${D.blurb ? ' · ' + esc(D.blurb) : ''}</span>
+      ${mine ? `<span class="dhres">You picked ${esc(String(BYID[mine.winner]?.comic || '').replace(/\.$/, ''))}. ${worldLine(D)}</span>` : ''}</div>
+    <div class="dhact">${playing ? '<span class="dhnow"><i class="dot"></i>Now playing</span>'
+      : mine ? `<button type="button" class="dhbtn" data-dh="share">Send to a friend ↗</button><button type="button" class="dhghost" data-dh="play">Rewatch</button>`
+        : `<button type="button" class="dhbtn" data-dh="play">▶ Play today\u2019s clash</button>`}</div></div>
+    ${mine && !ccPref() && !LS.get('ccAsked', false) ? ccAskHTML() : ''}`
+  el.querySelectorAll('[data-dh]').forEach((b) => (b.onclick = (e) => {
+    e.stopPropagation()
+    if (b.dataset.dh === 'play') playDaily()
+    else holdWhile(() => shareClash(A, B, mine.winner === A.id ? 'a' : 'b'))
+  }))
+  bindCcAsk(el)
+  if (!dailyTimer) dailyTimer = setInterval(() => {
+    if (dayStr() !== dailyDay) return paintDaily() // midnight: a new clash
+    const c = document.querySelector('#daily .dhcount'); if (c) c.textContent = untilNext()
+  }, 30000)
+}
+
+// ---------- country (opt-in only; preselected from navigator.language's region, never geo-IP) ----------
+const CC_LIST = 'AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW'.split(' ')
+let ccNames = null
+function ccName(c) {
+  try { ccNames = ccNames || new Intl.DisplayNames([navigator.language || 'en', 'en'], { type: 'region' }); return ccNames.of(c) || c } catch { return c }
+}
+function ccPref() { const x = LS.get('cc', null); return x && typeof x === 'object' && CC_LIST.includes(x.code) ? x : null }
+function ccOn() { const p = ccPref(); return p && p.on ? p.code : null }
+function ccGuess() { const m = String(navigator.language || '').match(/[-_]([A-Za-z]{2})(?:$|[-_])/); const c = m?.[1]?.toUpperCase(); return c && CC_LIST.includes(c) ? c : '' }
+function ccOptions(sel) {
+  return `<option value="">Choose a country</option>` + CC_LIST.map((c) => [c, ccName(c)]).sort((x, y) => x[1].localeCompare(y[1]))
+    .map(([c, n]) => `<option value="${c}" ${c === sel ? 'selected' : ''}>${esc(n)}</option>`).join('')
+}
+function ccAskHTML() {
+  return `<div class="ccask" role="group" aria-label="Daily clash map"><span>Add your country to the daily clash map?</span>
+    <select class="ccsel" aria-label="Your country">${ccOptions(ccGuess())}</select>
+    <button type="button" class="dhbtn small" data-cc="yes">Add</button><button type="button" class="dhghost small" data-cc="no">No thanks</button>
+    <small>Sent only with your daily-clash picks. Remove it any time in Your model → History.</small></div>`
+}
+function bindCcAsk(root) {
+  root.querySelectorAll('[data-cc]').forEach((b) => (b.onclick = (e) => {
+    e.stopPropagation()
+    LS.set('ccAsked', true)
+    if (b.dataset.cc === 'yes') {
+      const code = root.querySelector('.ccsel')?.value
+      if (!code) { LS.set('ccAsked', false); return toast('Pick a country first, or tap No thanks.') }
+      LS.set('cc', { code, on: true, at: new Date().toISOString() }); toast(`Added ${ccName(code)}. Your daily picks now count on the map.`)
+    } else toast('No problem. Your country stays off.')
+    paintDaily(); paintHistory()
+  }))
+}
+
+// ---------- share without losing your place: auto-advance / intro / playback wait while the share sheet is open ----------
+let advT = null
+function scheduleAdvance(ms) { clearTimeout(advT); advT = setTimeout(() => { advT = null; goNext(null) }, ms) }
+async function holdWhile(fn) {
+  const h = { adv: false, intro: false, play: null, el: cur?.el }
+  if (advT) { clearTimeout(advT); advT = null; h.adv = true }
+  else if (stage === 'intro') { clearTimers(); h.intro = userStarted || !cur?.el?.querySelector('[data-act="start"]') }
+  else if (stage === 'left' || stage === 'right') { const s = screens[stage === 'left' ? 'L' : 'R']; if (s?.playing?.()) { s.pause(); h.play = s } }
+  else if (stage === 'vote' && armed) pauseBallot('Countdown paused. Pick when you\u2019re ready.')
+  try { await fn() } catch {} finally {
+    if (h.adv && cur?.el === h.el) scheduleAdvance(500)
+    else if (h.intro && stage === 'intro' && cur?.el === h.el) later(() => stage === 'intro' && cur?.el === h.el && startClip('L'), 900)
+    else if (h.play && !h.play.dead) h.play.play()
+  }
+}
+
+// ---------- after-vote result card: result, world split (daily), "Send to a friend", why-chips ----------
+const WHY = ['Smarter', 'Weirder', 'Darker', 'Better delivery', 'More relatable', 'Better payoff']
+let whyT
+function askWhy(v, shareOnly, fl, guess) {
+  const box = $('#why'); if (!box) return
+  const A = BYID[v.a], B = BYID[v.b], W = BYID[v.winner]
+  const D = v.daily ? dailyFor(v.daily) : null
+  box.innerHTML = `<p class="rchead"><b>${shareOnly ? 'Noted, but it didn\u2019t count' : esc(W?.comic || '') + ' takes it.'}</b>${!shareOnly && guess ? `<span class="muted">${esc(guess)}</span>` : ''}${fl ? `<span class="${fl.agree ? 'agree' : 'disagree'}">${esc(fl.text)}</span>` : ''}</p>
+    ${D ? `<p class="rcworld">${worldLine(D)}</p>` : ''}
+    <button class="whyshare rcsend" type="button">Send to a friend — see if they agree ↗</button>
+    ${shareOnly ? '' : `<div class="rcwhy"><span>Why was it funnier?</span>${WHY.map((w) => `<button type="button" data-why>${w}</button>`).join('')}</div>`}`
+  let sharing = false
+  const hideIn = (ms) => { clearTimeout(whyT); whyT = setTimeout(() => { if (!sharing) box.classList.remove('on') }, ms) }
+  box.classList.add('on'); hideIn(5000)
+  box.onpointerenter = () => clearTimeout(whyT); box.onpointerleave = () => hideIn(2500)
+  box.onfocusin = () => clearTimeout(whyT)
+  const ws = box.querySelector('.rcsend')
+  if (ws) ws.onclick = async (e) => {
+    e.stopPropagation(); sharing = true; clearTimeout(whyT)
+    await holdWhile(() => shareClash(A, B, v.winner === v.a ? 'a' : 'b'))
+    sharing = false; hideIn(1500)
+  }
+  box.querySelectorAll('button[data-why]').forEach((b) => (b.onclick = (e) => {
+    e.stopPropagation()
+    const votes = LS.get('votes', []); const last = votes.find((x) => x.createdAt === v.createdAt)
+    if (last) { last.why = b.textContent; LS.set('votes', votes) }
+    const q2 = LS.get('queue', []); const lq = q2.find((x) => x.createdAt === v.createdAt); if (lq) { lq.why = b.textContent; LS.set('queue', q2) }
+    box.classList.remove('on'); toast('Noted. Your model will use that.'); paintHistory()
+  }))
+}
+
+// ---------- history: everything you did, from this device's own logs ----------
+let HFILTER = 'all', YOUSUB = 'model'
+const arr = (x) => (Array.isArray(x) ? x : [])
+function historyEntries() {
+  const E = [], ok = (v) => v && typeof v.a === 'string' && typeof v.b === 'string'
+  for (const v of arr(LS.get('votes', []))) if (ok(v)) E.push({ kind: 'pick', t: v.createdAt, v, counted: true })
+  for (const v of arr(LS.get('partials', []))) if (ok(v)) E.push({ kind: 'pick', t: v.createdAt, v, counted: false })
+  for (const p of arr(LS.get('passes', []))) if (ok(p)) E.push({ kind: 'skip', sub: 'pass', t: p.at, v: p })
+  const nf = []
+  for (const s of arr(LS.get('skips', []))) { if (!ok(s)) continue; if (s.stage === 'left-skip' || s.stage === 'right-skip') nf.push(s); else E.push({ kind: 'skip', sub: 'clash', t: s.at, v: s }) }
+  for (const s of nf) { // a "Not funny" skip belongs to the clash it happened in (the pick, pass or skip that followed)
+    const k = pairKey(s.a, s.b), ts = Date.parse(s.at)
+    const host = E.filter((e) => e.v && pairKey(e.v.a, e.v.b) === k && Date.parse(e.t) >= ts && Date.parse(e.t) - ts < 20 * 60e3).sort((x, y) => Date.parse(x.t) - Date.parse(y.t))[0]
+    if (host) (host.nf = host.nf || []).push(s); else E.push({ kind: 'skip', sub: 'notfunny', t: s.at, v: s, nf: [s] })
+  }
+  const specs = allSpecials()
+  for (const [id, m] of Object.entries(spGet())) { const s = specs.find((x) => x.id === id); if (s && m && (m.seen || m.stars || m.note)) E.push({ kind: 'special', t: m.at, s, m }) }
+  return E.filter((e) => e.t && !isNaN(Date.parse(e.t))).sort((x, y) => Date.parse(y.t) - Date.parse(x.t))
+}
+function dayLabel(t) {
+  const d = new Date(t), k = dayStr(d), today = dayStr(), y = new Date(); y.setDate(y.getDate() - 1)
+  if (k === today) return 'Today'
+  if (k === dayStr(y)) return 'Yesterday'
+  try { return d.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short', year: d.getFullYear() === new Date().getFullYear() ? undefined : 'numeric' }) } catch { return k }
+}
+const secs = (x) => (Number.isFinite(x) && x > 0 ? `${Math.round(x)}s` : '0s')
+const hhmm = (t) => { try { return new Date(t).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }) } catch { return '' } }
+function clashRow(e, i) {
+  const v = e.v, A = BYID[v.a], B = BYID[v.b], win = e.kind === 'pick' ? v.winner : null
+  const ws = { L: v.leftWatchedSec, R: v.rightWatchedSec }
+  if (e.sub === 'clash' || e.sub === 'notfunny') { if (v.clip === v.a && ws.L == null) ws.L = v.watchedSec; if (v.clip === v.b && ws.R == null) ws.R = v.watchedSec }
+  const th = (c, id, side) => `<span class="hth${win === id ? ' won' : ''}${win && win !== id ? ' lost' : ''}"><span class="hpic">${!c || c.media === 'youtube' ? `<img loading="lazy" decoding="async" src="${thumb(esc(id))}" alt="">` : ''}</span>
+    <b>${esc(c?.comic || 'Retired clip')}</b><small>${ws[side] != null ? 'watched ' + secs(ws[side]) : '&nbsp;'}</small></span>`
+  const stg = { intro: 'Skipped at the intro', left: 'Skipped during #1', right: 'Skipped during #2', vote: 'Skipped the ballot', done: 'Moved on' }
+  const W = BYID[win]
+  const what = e.kind === 'pick' ? `Picked <b>${esc(W?.comic || '?')}</b>${e.counted ? '' : ' <span class="hmuted">· didn\u2019t count (under 30s)</span>'}`
+    : e.sub === 'pass' ? 'Pass <span class="hmuted">· no pick in 3s</span>'
+      : e.sub === 'notfunny' ? '\u201cNot funny\u201d skip' : (stg[v.stage] || 'Skipped')
+  const chips = []
+  if (v.daily) chips.push(`<span class="hchip daily">Daily clash</span>`)
+  if (v.why) chips.push(`<span class="hchip">${esc(v.why)}</span>`)
+  if (Number.isFinite(v.decisionMs)) chips.push(`<span class="hchip">decided in ${(v.decisionMs / 1000).toFixed(1)}s</span>`)
+  if (v.friend) chips.push(`<span class="hchip ${v.friend === 'agree' ? 'agree' : 'disagree'}">${v.friend === 'agree' ? 'Agreed with your friend' : 'Disagreed with your friend'}</span>`)
+  for (const s of e.nf || []) chips.push(`<span class="hchip nf">\u201cNot funny\u201d on #${s.stage === 'left-skip' ? 1 : 2}${s.comic ? ' · ' + esc(s.comic) : ''}</span>`)
+  const live = A && B
+  return `<li class="hrow"><div class="hpair">${th(A, v.a, 'L')}<i>vs</i>${th(B, v.b, 'R')}</div>
+    <div class="hmeta"><p class="hwhat">${what}<span class="htime">${hhmm(e.t)}</span></p>${chips.length ? `<p class="hchips">${chips.join('')}</p>` : ''}
+    ${live ? `<p class="hacts"><a class="hbtn" href="#clash/${encodeURIComponent(v.a)}/${encodeURIComponent(v.b)}&from=history">Rewatch</a><button type="button" class="hbtn send" data-hshare="${i}" title="Send to a friend — see if they agree">Share ↗</button></p>` : ''}</div></li>`
+}
+function specialRow(e) {
+  const { s, m } = e
+  return `<li class="hrow sprow"><span class="hsp" style="background:linear-gradient(160deg,hsl(${hue(s.id)} 70% 22%) 0%,#0b0b0e 75%)">${esc(String(s.year || ''))}</span>
+    <div class="hmeta"><p class="hwhat"><a href="#comic/${esc(slugOf(e.s.comic))}"><b>${esc(s.title)}</b></a> <span class="hmuted">· ${esc(s.comic)}</span><span class="htime">${hhmm(e.t)}</span></p>
+    <p class="hchips">${m.seen ? '<span class="hchip">Seen</span>' : ''}${m.stars ? `<span class="hchip gold">★ ${m.stars}</span>` : ''}${m.note ? `<span class="hchip">“${esc(String(m.note).slice(0, 60))}”</span>` : ''}</p></div></li>`
+}
+function paintHistory() {
+  const el = $('#hist'); if (!el) return
+  const all = historyEntries()
+  const F = { all: () => true, picks: (e) => e.kind === 'pick', skips: (e) => e.kind === 'skip', specials: (e) => e.kind === 'special' }
+  const list = all.filter(F[HFILTER] || F.all)
+  const n = (k) => all.filter(F[k]).length
+  let html = `<div class="head"><h2>History</h2></div>
+    <div class="lanes hfilters" role="group" aria-label="Filter history">${[['all', 'All'], ['picks', 'Picks'], ['skips', 'Skips'], ['specials', 'Specials']].map(([k, l]) => `<button type="button" data-hf="${k}" class="${HFILTER === k ? 'on' : ''}" aria-pressed="${HFILTER === k}">${l} <small>${n(k)}</small></button>`).join('')}</div>`
+  if (!list.length) html += `<p class="empty">${all.length ? 'Nothing here under this filter yet.' : 'Your screenings, picks, skips and specials show up here, newest first. Everything stays on this device.'}</p>`
+  else {
+    let day = null
+    html += '<div class="hdays">'
+    list.forEach((e, i) => {
+      const d = dayLabel(e.t)
+      if (d !== day) { html += `${day ? '</ul>' : ''}<h3 class="hday">${esc(d)}</h3><ul class="hlist">`; day = d }
+      html += e.kind === 'special' ? specialRow(e) : clashRow(e, i)
+    })
+    html += '</ul></div>'
+  }
+  const p = ccPref()
+  html += `<div class="hsettings"><h3>Your data</h3>
+    <label class="cctoggle"><input type="checkbox" id="ccon" ${p?.on ? 'checked' : ''}> Add my country to daily clash picks</label>
+    <select id="ccpick" aria-label="Your country" ${p?.on ? '' : 'disabled'}>${ccOptions(p?.code || ccGuess())}</select>
+    <p class="muted small">Off unless you turn it on. When on, only your daily-clash picks carry a two-letter country code. Nothing is detected from your location.</p>
+    <p class="hdata"><button type="button" class="btn" id="hexport">Export my data</button><button type="button" class="btn danger" id="hclear">Clear history</button></p>
+    <p class="muted small">History lives only in this browser. Clearing it resets your taste model here; picks already published to Bluesky stay published.</p></div>`
+  el.innerHTML = html
+  el.querySelectorAll('[data-hf]').forEach((b) => (b.onclick = () => { HFILTER = b.dataset.hf; paintHistory() }))
+  el.querySelectorAll('[data-hshare]').forEach((b) => (b.onclick = () => {
+    const e = list[+b.dataset.hshare]; if (!e) return
+    const A = BYID[e.v.a], B = BYID[e.v.b], pick = e.kind === 'pick' ? (e.v.winner === e.v.a ? 'a' : e.v.winner === e.v.b ? 'b' : null) : null
+    shareClash(A, B, pick)
+  }))
+  const cb = el.querySelector('#ccon'), cs = el.querySelector('#ccpick')
+  if (cb) cb.onchange = () => {
+    LS.set('ccAsked', true)
+    if (cb.checked) { if (!cs.value) { cs.disabled = false; cb.checked = false; return toast('Choose your country, then tick the box.') } LS.set('cc', { code: cs.value, on: true, at: new Date().toISOString() }) }
+    else { try { localStorage.removeItem('funnier.cc') } catch {} toast('Country removed. Future picks won\u2019t include it.') }
+    paintHistory(); paintDaily()
+  }
+  if (cs) { cs.disabled = false; cs.onchange = () => { if (ccPref()?.on && cs.value) LS.set('cc', { code: cs.value, on: true, at: new Date().toISOString() }); else if (cs.value && !cb.checked) { cb.checked = true; cb.onchange() } } }
+  el.querySelector('#hexport').onclick = exportData
+  el.querySelector('#hclear').onclick = clearHistory
+}
+function exportData() {
+  const data = {}
+  try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith('funnier.')) { try { data[k.slice(8)] = JSON.parse(localStorage.getItem(k)) } catch { data[k.slice(8)] = localStorage.getItem(k) } } } } catch {}
+  const blob = new Blob([JSON.stringify({ kind: 'funnier.local-data', version: 1, exported: new Date().toISOString(), data }, null, 2)], { type: 'application/json' })
+  try { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `funnier-data-${dayStr()}.json`; document.body.appendChild(a); a.click(); a.remove() } catch { toast('Download blocked by the browser.') }
+}
+const HISTORY_KEYS = ['votes', 'partials', 'passes', 'skips', 'skipped', 'seen', 'shown', 'preds', 'dur', 'specials', 'dailyAuto']
+function clearHistory() {
+  let ok = false
+  try { ok = window.confirm('Clear your Funnier history on this device?\n\nThis removes your picks, passes, skips and specials log, and resets your taste model here. Picks already published to Bluesky stay published.') } catch { ok = false }
+  if (!ok) return
+  for (const k of HISTORY_KEYS) { try { localStorage.removeItem('funnier.' + k) } catch {} }
+  MODEL = fitLocal(); TRAITS = fitTraits()
+  paintHistory(); paintYou(); paintDaily(); toast('History cleared.')
+}
+function youSub(k) {
+  YOUSUB = k === 'history' ? 'history' : 'model'
+  document.querySelectorAll('[data-sub]').forEach((b) => { const on = b.dataset.sub === YOUSUB; b.classList.toggle('on', on); b.setAttribute('aria-selected', String(on)) })
+  const y = $('#you'), h = $('#hist'); if (y) y.hidden = YOUSUB !== 'model'; if (h) h.hidden = YOUSUB !== 'history'
+  if (YOUSUB === 'history') paintHistory()
+}
+
 // ---------- utils ----------
 function esc(s) { return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])) }
 let tt
@@ -1039,11 +1326,13 @@ function tabs() {
     show('arena'); showChrome(2500)
     if (wasAway && (stage === 'left' || stage === 'right')) screens[stage === 'left' ? 'L' : 'R']?.play()
   }
+  document.querySelectorAll('[data-sub]').forEach((b) => (b.onclick = () => youSub(b.dataset.sub)))
   document.querySelectorAll('[data-tab]').forEach((b) => (b.onclick = (e) => { e.preventDefault(); if (b.dataset.tab === 'comics') location.hash = 'comics'; show(b.dataset.tab) }))
   const route = () => {
     const sh = parseClash(location.hash)
-    if (sh) { pendingClash = sh; history.replaceState(null, '', location.pathname + location.search); show('arena'); if (CLIPS.length) goNext(null); return }
+    if (sh) { pendingClash = sh; if (sh.rewatch) userStarted = true; history.replaceState(null, '', location.pathname + location.search); show('arena'); if (CLIPS.length) { moving = false; goNext(null) } return }
     if (/^#comic/.test(location.hash)) { show('comics'); paintComics() }
+    if (/^#history/.test(location.hash)) { show('you'); youSub('history') }
   }
   addEventListener('hashchange', route)
   show('arena'); window._route = route
@@ -1055,6 +1344,10 @@ function tabs() {
   MODEL = fitLocal(); TRAITS = fitTraits()
   const sh = parseClash(location.hash)
   if (sh) { pendingClash = sh; history.replaceState(null, '', location.pathname + location.search) }
-  laneSelect(); bindGestures(); bindChrome(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); window._route()
+  else { // the day's first visit opens on the daily clash (once a day, and not if you've already voted on it)
+    const D = dailyFor(dayStr())
+    if (D && !dailyMine(D.date) && LS.get('dailyAuto', '') !== D.date && !/^#(comic|history)/.test(location.hash)) { LS.set('dailyAuto', D.date); pendingClash = { a: D.a, b: D.b, pick: null, daily: D.date } }
+  }
+  laneSelect(); bindGestures(); bindChrome(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); paintDaily(); window._route()
   initAuth()
 })()
