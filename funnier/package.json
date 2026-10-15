@@ -1,0 +1,7 @@
+{
+  "name": "funnier",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "esbuild src/app.js --bundle --format=esm --minify --target=es2022 --outfile=site/app.js && cp clips.json site/clips.json" },
+  "devDependencies": { "@atproto/oauth-client-browser": "^0.5.9", "esbuild": "^0.28.2" }
+}

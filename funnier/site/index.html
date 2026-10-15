@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Funnier: two comics, one vote</title>
+<meta name="description" content="Watch two stand-up clips. Vote for the funnier one. Rankings for the funniest comics and clips, built on open Bluesky votes.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo">F</span><div><h1>Funnier</h1><p>Two clips. One vote. Who's funnier?</p></div></div>
+  <div id="auth"></div>
+</header>
+<nav>
+  <button data-tab="arena">Arena</button>
+  <button data-tab="comics">Funniest comics</button>
+  <button data-tab="clips">Funniest clips</button>
+  <button data-tab="you">Your taste</button>
+</nav>
+<p id="banner"></p>
+<main>
+  <section class="view" id="v-arena"><div id="arena"></div></section>
+  <section class="view" id="v-comics" hidden><p class="muted boardmeta"></p><div id="comics"></div></section>
+  <section class="view" id="v-clips" hidden><p class="muted boardmeta"></p><div id="clips"></div></section>
+  <section class="view" id="v-you" hidden><div id="you"></div></section>
+</main>
+<footer>
+  <p>Videos play in YouTube's official player, from the comics' and networks' own channels. By using Funnier you agree to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>; see the <a href="http://www.google.com/policies/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+  <p>Rankings are Funnier's own, computed only from Funnier votes. They are not YouTube data. Each vote is a public <code>io.github.prx0r.funnier.vote</code> record in the voter's own Bluesky account, so anyone can recount them. Funnier stores nothing else about you; your device keeps your local votes. <a href="https://github.com/prx0r/characters/issues" target="_blank" rel="noopener">Rights holder or takedown request</a>.</p>
+</footer>
+<div id="toast"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
