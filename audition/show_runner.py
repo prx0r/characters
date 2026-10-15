@@ -66,7 +66,30 @@ def perform(act: dict) -> dict:
     fish_tts.stitch_wav(parts, wav)
     m = voice_judge.measure(wav)
     mean_p = sum(b["p_laugh"] for b in beat_log) / len(beat_log)
+    # REAL-audio acts: measured laugh density (AM events) beats prediction
+    measured = None
+    if act.get("real_set"):
+        evf = HERE / "voicelab" / "am_events" / f"{act['real_set']}.json"
+        if evf.exists():
+            ev = json.loads(evf.read_text())
+            win = act.get("window")  # [t0,t1] in source-clip time
+            if win:
+                ev = [e for e in ev if win[0] <= e[0] <= win[1]]
+            dur_s = (m["duration_ms"] or 60000) / 1000
+            measured = round(len(ev) / max(dur_s / 10, 0.1), 2)  # laughs/10s (AM)
+            # GT laugh-near fraction (audio-derived via beat pipeline) —
+            # AM detector undercounts on some audio; take the max
+            gtf = act.get("gt_set")
+            if gtf:
+                gp = HERE.parent / "theory/killtony-minutes" / f"{gtf}_gemini.gemini.json"
+                if gp.exists():
+                    segs = json.loads(gp.read_text())["segments"]
+                    ln = sum(1 for s in segs if "laugh_near=True" in
+                             (s.get("comedy") or {}).get("note", ""))
+                    if segs:
+                        measured = max(measured, round(ln / len(segs), 2))
     return {"act": act["act"], "character": act["character"], "wav": str(wav),
+            "measured_laughs_per_10s": measured,
             "beats": beat_log, "mean_p": round(mean_p, 3),
             "crowd_events": total_crowd, "duration_ms": m["duration_ms"],
             "pitch_std": m["pitch"].get("std_semitones"),
@@ -87,7 +110,12 @@ def main():
         print(f"ACT {act['act']}: {act['character']}")
         r = perform(act)
         # composite judge score: mean P (crowd) + verify (words survived) - length penalty noise
-        score = round(r["mean_p"] * 0.7 + (r.get("verify_source") or 0.85) * 0.3, 3)
+        if r.get("measured_laughs_per_10s") is not None:
+            # real set: density vs corpus mean 1.2/10s, capped at 1.0
+            dens = min(1.0, r["measured_laughs_per_10s"] / 1.2)
+            score = round(dens * 0.7 + (r.get("verify_source") or 0.85) * 0.3, 3)
+        else:
+            score = round(r["mean_p"] * 0.7 + (r.get("verify_source") or 0.85) * 0.3, 3)
         r["judge_score"] = score
         print(f"  -> meanP={r['mean_p']} crowd_events={r['crowd_events']} "
               f"verify={r.get('verify_source')} JUDGE={score}\n")
