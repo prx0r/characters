@@ -66,6 +66,12 @@
             "type": "string",
             "maxLength": 40,
             "description": "Optional one-tap reason the winner was funnier (e.g. Smarter, Weirder, Darker, Better delivery, More relatable, Better payoff)."
+          },
+          "ms": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3600000,
+            "description": "Optional: milliseconds from when the vote buttons appeared to the pick (a confidence signal). Stored for future modelling; not used in public charts yet."
           }
         }
       }

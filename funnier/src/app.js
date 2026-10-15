@@ -75,7 +75,7 @@ async function publish(v) {
   const res = await agent.fetchHandler('/xrpc/com.atproto.repo.createRecord', {
     method: 'POST', headers: { 'content-type': 'application/json' },
     body: JSON.stringify({ repo: me.did, collection: COLLECTION,
-      record: { $type: COLLECTION, a: v.a, b: v.b, winner: v.winner, voter: 'human', basis: v.basis || 'watched', ...(v.why ? { why: v.why } : {}), createdAt: v.createdAt } }),
+      record: { $type: COLLECTION, a: v.a, b: v.b, winner: v.winner, voter: 'human', basis: v.basis || 'watched', ...(v.why ? { why: v.why } : {}), ...(Number.isInteger(v.decisionMs) ? { ms: v.decisionMs } : {}), createdAt: v.createdAt } }),
   })
   if (!res.ok) throw new Error('createRecord ' + res.status + ' ' + (await res.text()))
 }
@@ -95,6 +95,25 @@ const SCALE = 400 / Math.LN10
 const LATE_NIGHT = /coco|letterman|tonight|late/i
 function bumpSeen(...ids) { const s = LS.get('seen', {}); ids.forEach((i) => (s[i] = (s[i] || 0) + 1)); LS.set('seen', s) }
 
+// ---------- implicit signals -> confidence weight per pick ----------
+// decisionMs runs from the moment the Funnier buttons appear to the click.
+// <1.5s = snap pick (x1.25), >12s = hesitant (x0.7), otherwise x1.0.
+// Picking clip ONE in under 3s while less than 60% of clip TWO was watched = strong (x1.4): you didn't need the rest.
+// Old picks without signals keep weight 1.
+const SNAP_MS = 1500, SLOW_MS = 12000
+function voteWeight(v) {
+  const ms = v && v.decisionMs
+  if (!Number.isFinite(ms)) return 1
+  let w = ms < SNAP_MS ? 1.25 : ms > SLOW_MS ? 0.7 : 1
+  if (v.winner === v.a && ms < 3000 && Number.isFinite(v.rightFrac) && v.rightFrac < 0.6) w = Math.max(w, 1.4)
+  return w
+}
+
+// Skips: leaving during a comic's clip = weak negative (SKIP_W = 0.3 of a pick) for that clip, its comic and its style tags.
+// Skips during the intro or the ballot, and 3-second passes, are stored but never penalise anyone.
+const SKIP_W = 0.3
+function clipSkips() { const a = LS.get('skips', []); return (Array.isArray(a) ? a : []).filter((k) => k && (k.stage === 'left' || k.stage === 'right') && BYID[k.clip]) }
+
 // ---------- your model: personal hierarchical Bradley-Terry, prior = crowd chart ----------
 function fitLocal() {
   const votes = LS.get('votes', []).filter((v) => BYID[v.a] && BYID[v.b])
@@ -103,6 +122,7 @@ function fitLocal() {
   const comics = [...new Set(CLIPS.map((c) => c.comic))]
   const r = Object.fromEntries(comics.map((k) => [k, g[k] || 0]))
   const o = Object.fromEntries(CLIPS.map((c) => [c.id, 0]))
+  const skips = clipSkips()
   const bouts = {}
   for (const v of votes) { bouts[v.a] = (bouts[v.a] || 0) + 1; bouts[v.b] = (bouts[v.b] || 0) + 1 }
   for (let t = 0; t < 250; t++) {
@@ -111,8 +131,13 @@ function fitLocal() {
     for (const v of votes) {
       const A = BYID[v.a], B = BYID[v.b]
       const W = v.winner === v.a ? A : B, L = W === A ? B : A
-      const p = sig((r[L.comic] + o[L.id]) - (r[W.comic] + o[W.id]))
+      const p = voteWeight(v) * sig((r[L.comic] + o[L.id]) - (r[W.comic] + o[W.id]))
       gr[W.comic] += p; gr[L.comic] -= p; go[W.id] += p; go[L.id] -= p
+    }
+    for (const sk of skips) { // skipped mid-clip: a weak loss (0.3 of a pick) for that clip vs an average clip
+      const C = BYID[sk.clip]; if (!C) continue
+      const p = SKIP_W * sig(r[C.comic] + o[C.id])
+      gr[C.comic] -= p; go[C.id] -= p
     }
     for (const k of comics) r[k] += 0.08 * gr[k]
     for (const c of CLIPS) o[c.id] += 0.08 * go[c.id]
@@ -137,10 +162,11 @@ function fitTraits() {
   const votes = LS.get('votes', []).filter((v) => BYID[v.a] && BYID[v.b])
   const w = Object.fromEntries(STYLES.map((t) => [t, 0])), n = {}
   const x = (c) => Object.fromEntries(STYLES.map((t) => [t, (c.style || []).includes(t) ? 1 : 0]))
-  const data = votes.map((v) => { const A = x(BYID[v.a]), B = x(BYID[v.b]); const d = {}; STYLES.forEach((t) => { d[t] = A[t] - B[t]; if (d[t]) n[t] = (n[t] || 0) + 1 }); return { d, y: v.winner === v.a ? 1 : 0 } })
+  const data = votes.map((v) => { const A = x(BYID[v.a]), B = x(BYID[v.b]); const d = {}; STYLES.forEach((t) => { d[t] = A[t] - B[t]; if (d[t]) n[t] = (n[t] || 0) + 1 }); return { d, y: v.winner === v.a ? 1 : 0, k: voteWeight(v) } })
+  for (const sk of clipSkips()) { const X = x(BYID[sk.clip]); if (STYLES.some((t) => X[t])) data.push({ d: X, y: 0, k: SKIP_W }) }
   for (let it = 0; it < 300; it++) {
     const g = Object.fromEntries(STYLES.map((t) => [t, -0.6 * w[t]]))
-    for (const { d, y } of data) { const p = sig(STYLES.reduce((s, t) => s + w[t] * d[t], 0)); STYLES.forEach((t) => (g[t] += (y - p) * d[t])) }
+    for (const { d, y, k } of data) { const p = sig(STYLES.reduce((s, t) => s + w[t] * d[t], 0)); STYLES.forEach((t) => (g[t] += k * (y - p) * d[t])) }
     STYLES.forEach((t) => (w[t] += 0.1 * g[t]))
   }
   return { w, n }
@@ -223,155 +249,325 @@ function loadYT() {
   return ytReady
 }
 class Screen {
-  constructor(side, clip) { this.side = side; this.clip = clip; this.started = false; this.ready = new Promise((res) => (this._ready = res)) }
+  constructor(side, clip, hostId) { this.side = side; this.clip = clip; this.hostId = hostId; this.started = false; this.ready = new Promise((res) => (this._ready = res)) }
   async mount() {
-    const c = this.clip, host = $('#p' + this.side)
+    const c = this.clip, host = document.getElementById(this.hostId)
     this.start = c.start || 0
+    if (!host) return
     if (c.media === 'audio') {
       host.innerHTML = `<audio preload="auto" controls src="${esc(c.src)}"></audio>`
       this.a = host.querySelector('audio')
       this.a.onloadedmetadata = () => this._ready()
+      this.a.onended = () => (this.ended = true)
       return
     }
     const YT = await loadYT()
-    {
-      const res = this._ready
-      this.p = new YT.Player('p' + this.side, {
-        host: 'https://www.youtube-nocookie.com', videoId: c.id,
-        playerVars: { rel: 0, playsinline: 1, start: this.start, controls: 1 },
-        events: { onReady: () => res(), onStateChange: (e) => { if (e.data === 0) this.ended = true } },
-      })
-    }
+    if (this.dead || !document.getElementById(this.hostId)) return
+    const res = this._ready
+    this.p = new YT.Player(this.hostId, {
+      host: 'https://www.youtube-nocookie.com', videoId: c.id,
+      playerVars: { rel: 0, playsinline: 1, start: this.start, controls: 1, modestbranding: 1 },
+      events: { onReady: () => res(), onStateChange: (e) => { if (e.data === 0) this.ended = true } },
+    })
   }
   dur() { const d = this.a ? this.a.duration : this.p?.getDuration?.(); return d || this.clip.sec || 0 }
   end() { const d = this.dur(); return this.clip.end || (d ? Math.min(d, this.start + SHORT_MAX) : this.start + SHORT_MAX) }
   t() { return this.a ? this.a.currentTime : this.p?.getCurrentTime?.() || 0 }
   playing() { return this.a ? !this.a.paused : this.p?.getPlayerState?.() === 1 }
   progress() { const s = this.start, e = this.end(); return Math.max(0, Math.min(1, (this.t() - s) / Math.max(1, e - s))) }
-  done() { return this.ended || this.t() >= this.end() - 0.3 }
+  done() { return this.ended || (this.started && this.t() >= this.end() - 0.3) }
   async play() {
-    await this.ready; this.started = true
+    await this.ready; if (this.dead) return
+    this.started = true
     if (this.a) { try { await this.a.play() } catch { toast('Tap the screen to start the sound') } return }
     this.p.playVideo()
     setTimeout(() => { // autoplay with sound refused: play muted and say so
-      const st = this.p.getPlayerState?.()
-      if (st !== 1 && st !== 3) { this.p.mute(); this.p.playVideo(); toast('Your browser started it muted. Tap the screen for sound.') }
+      if (this.dead) return
+      const st = this.p?.getPlayerState?.()
+      if (st !== 1 && st !== 3) { this.p.mute(); this.p.playVideo(); toast('Started muted. Tap the screen for sound.') }
     }, 1800)
   }
-  pause() { this.a ? this.a.pause() : this.p?.pauseVideo?.() }
-  destroy() { try { this.p?.destroy?.() } catch {} }
+  toggle() { // tap on the gesture layer: unmute, play/pause
+    if (this.a) { this.a.paused ? this.a.play().catch(() => {}) : this.a.pause(); return }
+    try { if (this.p?.isMuted?.()) { this.p.unMute(); if (!this.playing()) this.p.playVideo(); return } } catch {}
+    this.playing() ? this.pause() : this.p?.playVideo?.()
+  }
+  // called every tick: accumulates real seconds watched, notices seeks back (replay) and jumps ahead (skip)
+  track() {
+    this.watched = this.watched || 0; this.replays = this.replays || 0
+    let t = 0, on = false
+    try { t = this.t(); on = this.playing() } catch { return }
+    if (!Number.isFinite(t)) return
+    if (this.lastT == null) { if (on) this.lastT = t; return } // start tracking at first real playback
+    const d = t - this.lastT
+    if (on && d > 0 && d < 2) this.watched += d
+    if (d < -2) this.replays++
+    if (d > 5) this.jumped = true
+    this.lastT = t
+  }
+  screened() { return Math.max(1, this.end() - this.start) }
+  // the watch minimum: min(30s, 80% of what we screen), or the clip played to its end
+  enough() { return this.ended || (this.watched || 0) >= Math.min(30, 0.8 * this.screened()) - 0.5 || (this.started && this.t() >= this.end() - 0.3 && (this.watched || 0) > 3 && !this.jumped) }
+  pause() { try { this.a ? this.a.pause() : this.p?.pauseVideo?.() } catch {} }
+  destroy() { this.dead = true; try { this.a?.pause() } catch {} try { this.p?.destroy?.() } catch {} }
 }
 
-// ---------- the screening ----------
-let screens = {}, phase = 'idle', tick = null, armed = false, prediction = null
-function chip(c) { return c.kind === 'ai' ? '<span class="chip ai">AI</span>' : '' }
-function screenHTML(c, side) {
-  return `<div class="screen ${side} idle" id="s${side}">
-    <div class="frame"><div id="p${side}"></div><div class="cover"><span class="ph">${side === 'L' ? 'ONE' : 'TWO'}</span></div></div>
-    <div class="label"><span class="side">${side === 'L' ? '1' : '2'}</span>
-      <div class="meta"><h3>${esc(c.comic)}${chip(c)}</h3><p>${esc(c.title)} · ${esc(c.channel || '')}</p></div>
-      <span class="status" id="st${side}">${side === 'L' ? 'Up first' : 'Up next'}</span></div>
-    <div class="prog"><i id="pg${side}"></i></div></div>`
+// ---------- the screening: intro face-off -> clip ONE full screen -> clip TWO -> 3s ballot ----------
+// stages: intro | left | right | vote | done
+const VOTE_MS = 3000, INTRO_MS = 2500
+let screens = {}, stage = 'idle', tick = null, armed = false, armedAt = 0, prediction = null
+let cur = null, nScreen = 0, timers = [], userStarted = false, moving = false
+const now = () => (typeof performance !== 'undefined' ? performance.now() : Date.now())
+const later = (f, ms) => { const t = setTimeout(f, ms); timers.push(t); return t }
+const clearTimers = () => { timers.forEach(clearTimeout); timers = [] }
+const q = (sel) => cur?.el?.querySelector(sel) || null
+const reduced = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches
+function signals() {
+  // what the screening tells us about this pick, without asking
+  const L = screens.L, R = screens.R, out = {}
+  if (!L || !R) return out
+  const r1 = (x) => Math.round(x * 10) / 10
+  out.leftWatchedSec = r1(L.watched || 0); out.rightWatchedSec = r1(R.watched || 0)
+  try { out.rightFrac = Math.round(100 * Math.min(1, (R.watched || 0) / R.screened())) / 100 } catch {}
+  out.replayed = (L.replays || 0) + (R.replays || 0) > 0
+  out.skippedAhead = !!(L.jumped || R.jumped)
+  return out
 }
+function chip(c) { return c.kind === 'ai' ? '<span class="chip ai">AI</span>' : '' }
+function crowdOf(comic) { const c = BOARD?.boards?.all?.comics?.find((x) => x.comic === comic && x.bouts); return c ? Math.round(c.elo) : null }
+function faceCard(c, side) {
+  const P = COMICS[c.comic] || {}, img = P.photo || (c.media === 'youtube' ? thumb(c.id) : ''), r = crowdOf(c.comic)
+  return `<div class="face ${side}"><div class="fimg" ${img ? `style="background-image:url(${esc(img)})"` : ''}></div>
+    <div class="ftext"><b>${esc(c.comic)}${chip(c)}</b><span>${esc(P.tagline || c.title || '')}</span><em>${r ? r + ' crowd rating' : 'Unrated'}</em></div></div>`
+}
+function slideHTML(a, b, n, first) {
+  const shot = (c, side) => `<button class="pick ${side}" data-side="${side}" aria-label="${esc(c.comic)} was funnier">
+      <span class="pimg" ${c.media === 'youtube' ? `style="background-image:url(${thumb(c.id)})"` : ''}></span>
+      <span class="pname">${esc(c.comic)}</span><span class="logo">FUNNIER</span></button>`
+  const scr = (c, side) => `<div class="screen ${side} small" data-side="${side}">
+      <div class="frame"><div id="p${side}${n}"></div><div class="shield" aria-hidden="true"></div></div>
+      <div class="label"><span class="side">${side === 'L' ? '1' : '2'}</span><div class="meta"><h3>${esc(c.comic)}${chip(c)}</h3><p>${esc(c.title)} · ${esc(c.channel || '')}</p></div></div>
+      <div class="prog"><i></i></div></div>`
+  return `<div class="slide" data-n="${n}">
+    <div class="intro">
+      <div class="titlecard"><span class="eyebrow">${esc(MODES[current.mode]?.[0] || '')}</span><h2>Tonight's<br>screening</h2></div>
+      <div class="faceoff">${faceCard(a, 'L')}<span class="vsx">VS</span>${faceCard(b, 'R')}</div>
+      ${first ? `<button class="play" data-act="start">▶ Start the show</button>` : `<p class="tapskip">Tap to skip the intro</p>`}
+    </div>
+    <div class="theatre">${scr(a, 'L')}${scr(b, 'R')}</div>
+    <div class="ballot"><p class="bq">Which was funnier?</p><div class="picks">${shot(a, 'L')}${shot(b, 'R')}</div>
+      <div class="count"><i></i></div><p class="hint">Tap one, or ← / →. No pick in 3s = pass.</p></div>
+  </div>`
+}
+
 function laneSelect() {
   const box = $('#lanebox')
   box.innerHTML = `<select id="lane">${[['human', 'Human comics'], ['ai', 'AI comics'], ['mixed', 'Human vs AI']].map(([k, l]) => `<option value="${k}" ${LANE === k ? 'selected' : ''}>${l}</option>`).join('')}</select>`
-  $('#lane').onchange = (e) => { LANE = e.target.value; LS.set('lane', LANE); newRound(phase !== 'idle') }
+  $('#lane').onchange = (e) => { LANE = e.target.value; LS.set('lane', LANE); goNext(null) }
 }
 
-function newRound(autoplay) {
-  clearInterval(tick); Object.values(screens).forEach((s) => s.destroy()); screens = {}; armed = false
+function setStage(s) {
+  stage = s
+  if (cur?.el) cur.el.dataset.stage = s
+  document.body.classList.toggle('in-theatre', s === 'left' || s === 'right')
+}
+function stopScreening() {
+  clearInterval(tick); tick = null; clearTimers()
+  Object.values(screens).forEach((s) => s.destroy()); screens = {}; armed = false; armedAt = 0
+  document.body.classList.remove('in-theatre')
+}
+
+// builds the next screening; when `old` is given, the old one slides up and away (TikTok-style)
+function newRound(first) { mountScreening(first, null) }
+function mountScreening(first, oldEl) {
   current = pickPair()
-  const el = $('#arena')
+  const host = $('#stage')
+  if (!host) return
   if (!current) {
     $('#roundtag').textContent = 'Intermission'
-    el.innerHTML = `<p class="empty">${LANE === 'ai' ? 'The AI comics are still in rehearsal. Their first sets premiere here soon.' : LANE === 'mixed' ? 'Human vs AI opens when the first AI sets premiere.' : "You've seen every double feature on the bill. New shorts arrive daily."}</p>`
+    const msg = LANE === 'ai' ? 'The AI comics are still in rehearsal. Their first sets premiere here soon.' : LANE === 'mixed' ? 'Human vs AI opens when the first AI sets premiere.' : "You've seen every clash on the bill. New shorts arrive daily."
+    host.querySelectorAll('.slide').forEach((x) => x !== oldEl && x.remove())
+    host.insertAdjacentHTML('beforeend', `<div class="slide empty-slide"><p class="empty">${msg}</p></div>`)
+    finishSlide(host, oldEl); cur = { el: host.lastElementChild, n: ++nScreen }; setStage('done')
     return
   }
-  const [a, b] = current
+  const [a, b] = current, n = ++nScreen
   $('#roundtag').textContent = MODES[current.mode][0]
   const pL = MODEL ? sig(MODEL.score(a.id) + traitScore(a) - MODEL.score(b.id) - traitScore(b)) : 0.5
   prediction = { p: pL, side: pL >= 0.5 ? 'L' : 'R' }
-  el.innerHTML = `<div class="theater"><div class="screens">${screenHTML(a, 'L')}${screenHTML(b, 'R')}</div>
-    ${autoplay ? '' : `<div class="start"><div class="inner"><h2>Tonight's<br>double feature</h2><p>Two shorts, back to back. Then you pick the funnier one.</p><button class="play" id="go">▶ Start the show</button></div></div>`}</div>
-    <div class="verdict" id="verdict">
-      <button class="fbtn L" data-side="L">← FUNNIER</button>
-      <div class="mid"><span class="vs">or</span><button id="replay">Replay</button><button id="skip">Skip pair</button></div>
-      <button class="fbtn R" data-side="R">FUNNIER →</button></div>
-    <p class="hint" id="hint"></p><div class="why" id="why"></div>`
-  el.querySelectorAll('.fbtn').forEach((x) => (x.onclick = () => vote(x.dataset.side)))
-  $('#skip').onclick = () => { LS.set('skipped', [...LS.get('skipped', []), pairKey(a.id, b.id)]); bumpSeen(a.id, b.id); newRound(true) }
-  $('#replay').onclick = () => { screens.R?.pause(); screens.L.p?.seekTo?.(screens.L.start, true); if (screens.L.a) screens.L.a.currentTime = screens.L.start; screens.L.ended = false; phase = 'L'; screens.L.play() }
-  screens = { L: new Screen('L', a), R: new Screen('R', b) }
+  host.insertAdjacentHTML('beforeend', slideHTML(a, b, n, first))
+  const el = host.lastElementChild
+  cur = { el, n, a, b }
+  finishSlide(host, oldEl)
+  screens = { L: new Screen('L', a, 'pL' + n), R: new Screen('R', b, 'pR' + n) }
   screens.L.mount(); screens.R.mount()
-  phase = 'ready'
-  const go = () => { $('.start')?.remove(); phase = 'L'; screens.L.play(); runTick() }
-  if (autoplay) go(); else $('#go').onclick = go
+  setStage('intro')
+  bindSlide(el)
+  // the face-off: title card, then ONE flashes in, then TWO
+  el.classList.add('show-title')
+  later(() => el.classList.add('show-L'), reduced() ? 0 : 500)
+  later(() => el.classList.add('show-R'), reduced() ? 0 : 1200)
+  if (!first || userStarted) later(() => stage === 'intro' && cur?.el === el && startClip('L'), INTRO_MS)
+}
+function finishSlide(host, oldEl) {
+  const el = host.lastElementChild
+  if (!oldEl) { host.querySelectorAll('.slide').forEach((x) => x !== el && x.remove()); return }
+  if (reduced()) { oldEl.remove(); return }
+  el.classList.add('enter'); void el.offsetWidth
+  oldEl.classList.add('leave'); el.classList.remove('enter')
+  setTimeout(() => oldEl.remove(), 520)
+}
+function bindSlide(el) {
+  el.querySelector('.intro').onclick = () => { if (stage === 'intro') { userStarted = true; startClip('L') } }
+  el.querySelectorAll('.pick').forEach((x) => (x.onclick = (e) => { e.stopPropagation(); vote(x.dataset.side) }))
+  el.querySelectorAll('.shield').forEach((sh) => (sh.onclick = () => screens[sh.closest('.screen').dataset.side]?.toggle()))
 }
 
-function setLive(side) {
+function startClip(side) {
+  if (!cur || !screens[side]) return
+  clearTimers()
+  setStage(side === 'L' ? 'left' : 'right')
+  bumpShown(screens[side].clip.comic)
   for (const s of ['L', 'R']) {
-    const el = $('#s' + s); if (!el) continue
-    el.classList.toggle('live', s === side); el.classList.toggle('idle', s !== side)
+    const sc = cur.el.querySelector(`.screen.${s}`)
+    sc?.classList.toggle('big', s === side); sc?.classList.toggle('small', s !== side)
+    sc?.classList.toggle('gone', side === 'R' && s === 'L')
   }
+  if (side === 'R') screens.L.pause()
+  screens[side].play()
+  runTick()
 }
 function runTick() {
   clearInterval(tick)
   tick = setInterval(() => {
-    const L = screens.L, R = screens.R; if (!L || !R) return
+    const L = screens.L, R = screens.R; if (!L || !R || !cur) return
     for (const s of ['L', 'R']) {
-      const sc = screens[s], pg = $('#pg' + s), st = $('#st' + s)
-      if (pg) pg.style.width = (sc.started ? 100 * sc.progress() : 0) + '%'
-      if (sc.playing()) $('#s' + s + ' .cover')?.classList.add('gone')
-      if (st) st.textContent = sc.playing() ? 'Now playing' : sc.started && sc.done() ? 'Seen' : sc.started ? 'Paused' : s === 'L' ? 'Up first' : 'Up next'
+      const sc = screens[s]; sc.track()
+      const pg = cur.el.querySelector(`.screen.${s} .prog i`)
+      if (pg) pg.style.transform = `scaleX(${sc.started ? sc.progress() : 0})`
     }
-    // whichever screen is actually playing is the live one (user may click around)
-    if (R.playing()) { phase = 'R'; setLive('R') } else if (L.playing()) { phase = 'L'; setLive('L') }
-    if (phase === 'L' && L.done()) { L.pause(); phase = 'R'; setLive('R'); R.play() }
-    if (phase === 'R' && R.done()) R.pause()
-    // the verdict arrives partway through the second short
-    const secR = R.started ? R.t() - R.start : 0
-    if (!armed && R.started && (R.progress() >= 0.4 || secR >= 20 || R.done())) {
-      armed = true; $('#verdict')?.classList.add('on'); $('#hint').textContent = 'Use ← or → on your keyboard, too.'
-    }
+    // keyboard focus gets swallowed by the YouTube iframe: take it back
+    const ae = document.activeElement
+    if (ae && ae.tagName === 'IFRAME') { try { ae.blur() } catch {} $('#stage')?.focus?.({ preventScroll: true }) }
+    if (stage === 'left' && L.done()) { L.pause(); startClip('R') }
+    else if (stage === 'right' && R.done()) { R.pause(); startVote() }
   }, 250)
 }
+function startVote() {
+  clearInterval(tick); tick = null
+  setStage('vote')
+  armed = true; armedAt = now() // decision time runs from the moment the FUNNIER logos appear
+  const bar = q('.count i')
+  if (bar) { bar.style.transition = 'none'; bar.style.transform = 'scaleX(1)'; void bar.offsetWidth; bar.style.transition = `transform ${VOTE_MS}ms linear`; bar.style.transform = 'scaleX(0)' }
+  later(() => { if (stage === 'vote' && armed) pass() }, VOTE_MS + 60)
+}
+function pass() {
+  if (!current) return
+  const [a, b] = current
+  armed = false
+  LS.set('passes', [...LS.get('passes', []), { a: a.id, b: b.id, ...signals(), at: new Date().toISOString() }].slice(-300))
+  LS.set('skipped', [...LS.get('skipped', []), pairKey(a.id, b.id)].slice(-500)); bumpSeen(a.id, b.id)
+  toast('No pick, so it\u2019s a pass. Neither comic loses anything.')
+  goNext(null)
+}
+
+// swipe up / wheel / ArrowUp / PageDown / "Next clash": leave this screening at any stage
+function skipClash() {
+  if (!current || moving || stage === 'done' || stage === 'idle') return goNext(null)
+  const [a, b] = current, sg = signals()
+  const on = stage === 'left' ? [a] : stage === 'right' ? [b] : stage === 'vote' ? [a, b] : []
+  const sc = stage === 'left' ? screens.L : stage === 'right' ? screens.R : null
+  const rec = { a: a.id, b: b.id, stage, comics: on.map((c) => c.comic), clip: sc ? sc.clip.id : null,
+    watchedSec: sc ? Math.round(10 * (sc.watched || 0)) / 10 : 0, ...sg, at: new Date().toISOString() }
+  if (stage === 'vote' && armedAt) rec.decisionMs = Math.round(now() - armedAt)
+  LS.set('skips', [...LS.get('skips', []), rec].slice(-500))
+  LS.set('skipped', [...LS.get('skipped', []), pairKey(a.id, b.id)].slice(-500)); bumpSeen(a.id, b.id)
+  if (sc) { MODEL = fitLocal(); TRAITS = fitTraits(); paintYou() }
+  goNext(null)
+}
+function goNext() {
+  if (moving) return
+  moving = true; setTimeout(() => (moving = false), 650)
+  const oldEl = cur?.el || null
+  stopScreening()
+  mountScreening(false, oldEl)
+}
+function bumpShown(comic) { const s = LS.get('shown', {}); s[comic] = (s[comic] || 0) + 1; LS.set('shown', s) }
 
 async function vote(side) {
-  if (!current || !armed) return
+  if (!current || !armed || stage !== 'vote') return
+  armed = false; setStage('done')
   const [a, b] = current
-  const v = { a: a.id, b: b.id, winner: side === 'L' ? a.id : b.id, voter: 'human', basis: 'watched', mode: current.mode, createdAt: new Date().toISOString() }
+  const decisionMs = armedAt ? Math.max(0, Math.round(now() - armedAt)) : undefined
+  const sg = signals()
+  const v = { a: a.id, b: b.id, winner: side === 'L' ? a.id : b.id, voter: 'human', basis: 'watched', mode: current.mode, decisionMs, ...sg, createdAt: new Date().toISOString() }
+  v.weight = voteWeight(v)
+  q(`.pick.${side}`)?.classList.add('won')
+  bumpSeen(a.id, b.id)
+  // the watch minimum still applies: both clips at least ~30s (or to the end)
+  if (!(screens.L?.enough() && screens.R?.enough())) {
+    LS.set('partials', [...LS.get('partials', []), v].slice(-300))
+    toast('Noted, but it only counts when both clips were watched for 30s or to the end.')
+    later(() => goNext(null), 700)
+    return
+  }
   LS.set('votes', [...LS.get('votes', []), v])
   const preds = LS.get('preds', []); preds.push({ p: prediction.p, hit: prediction.side === side }); LS.set('preds', preds.slice(-200))
-  // remember lengths for your model's length preference
   const dur = LS.get('dur', {}); dur[a.id] = screens.L.dur(); dur[b.id] = screens.R.dur(); LS.set('dur', dur)
-  bumpSeen(a.id, b.id)
   const w = BYID[v.winner]
   const guess = MODEL && MODEL.n >= 3 ? (prediction.side === side ? ' Your model called it.' : ' Your model guessed the other one.') : ''
+  later(() => goNext(null), reduced() ? 300 : 900)
+  askWhy(v)
   if (agent) {
     try { await publish(v); toast(`${w.comic} takes it.${guess}`) }
     catch { LS.set('queue', [...LS.get('queue', []), v]); toast(`Saved. It'll publish when Bluesky responds.${guess}`) }
   } else { LS.set('queue', [...LS.get('queue', []), v]); toast(`${w.comic} takes it.${guess}`) }
   MODEL = fitLocal(); TRAITS = fitTraits()
-  paintBanner(); paintYou(); newRound(true); askWhy(v)
+  paintBanner(); paintYou()
 }
 const WHY = ['Smarter', 'Weirder', 'Darker', 'Better delivery', 'More relatable', 'Better payoff']
 let whyT
 function askWhy(v) {
   const box = $('#why'); if (!box) return
   box.innerHTML = `<span>Why was it funnier?</span>${WHY.map((w) => `<button>${w}</button>`).join('')}`
-  box.classList.add('on'); clearTimeout(whyT); whyT = setTimeout(() => box.classList.remove('on'), 9000)
+  box.classList.add('on'); clearTimeout(whyT); whyT = setTimeout(() => box.classList.remove('on'), 5000)
   box.querySelectorAll('button').forEach((b) => (b.onclick = () => {
     const votes = LS.get('votes', []); const last = votes[votes.length - 1]
     if (last && last.createdAt === v.createdAt) { last.why = b.textContent; LS.set('votes', votes) }
-    const q = LS.get('queue', []); const lq = q.find((x) => x.createdAt === v.createdAt); if (lq) { lq.why = b.textContent; LS.set('queue', q) }
+    const q2 = LS.get('queue', []); const lq = q2.find((x) => x.createdAt === v.createdAt); if (lq) { lq.why = b.textContent; LS.set('queue', q2) }
     box.classList.remove('on'); toast('Noted. Your model will use that.')
   }))
 }
+const arenaOn = () => !$('#v-arena')?.hidden
 document.addEventListener('keydown', (e) => {
-  if (e.target.tagName === 'INPUT') return
-  if (e.key === 'ArrowLeft') vote('L'); if (e.key === 'ArrowRight') vote('R')
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName) || !arenaOn()) return
+  if (e.key === 'ArrowLeft') vote('L')
+  else if (e.key === 'ArrowRight') vote('R')
+  else if (e.key === 'ArrowUp' || e.key === 'PageDown') { e.preventDefault(); skipClash() }
+  else if ((e.key === ' ' || e.key === 'Enter') && stage === 'intro' && e.target === document.body) { e.preventDefault(); userStarted = true; startClip('L') }
 })
+function bindGestures() {
+  const stageEl = $('#stage'); if (!stageEl) return
+  let y0 = null, x0 = null, t0 = 0
+  const start = (e) => { const t = e.touches?.[0]; if (!t) return; y0 = t.clientY; x0 = t.clientX; t0 = now() }
+  const end = (e) => {
+    const t = e.changedTouches?.[0]; if (!t || y0 == null) return
+    const dy = t.clientY - y0, dx = t.clientX - x0; y0 = null
+    if (dy < -60 && Math.abs(dy) > 1.5 * Math.abs(dx) && now() - t0 < 800) skipClash()
+  }
+  // the theatre and its transparent shields sit over the iframe, so swipes land here and not in YouTube
+  document.addEventListener('touchstart', (e) => { if (arenaOn() && e.target.closest?.('#stage')) start(e) }, { passive: true })
+  document.addEventListener('touchend', (e) => { if (arenaOn() && e.target.closest?.('#stage')) end(e) }, { passive: true })
+  let acc = 0, accT = 0
+  stageEl.addEventListener('wheel', (e) => {
+    if (!arenaOn()) return
+    e.preventDefault()
+    if (now() - accT > 400) acc = 0
+    acc += Math.abs(e.deltaY); accT = now()
+    if (acc > 120) { acc = -1e9; skipClash(); setTimeout(() => (acc = 0), 900) }
+  }, { passive: false })
+  $('#nextclash').onclick = (e) => { e.stopPropagation(); skipClash() }
+}
 
 // ---------- charts ----------
 const thumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
@@ -450,15 +646,96 @@ function paintProfile(el, name) {
     <div class="cols"><div><h3>About</h3><p class="${P.bio ? '' : 'muted'}">${P.bio ? esc(P.bio) : 'Profile coming soon. Bio, influences and specials will live here.'}</p>
       ${Object.entries(P.links || {}).map(([k, u]) => `<a class="btn ghost" href="${esc(u)}" target="_blank" rel="noopener">${esc(k)}</a>`).join(' ')}</div>
       <div><h3>Head-to-head</h3>${Object.keys(st.h2h).length ? `<div class="bars">${Object.entries(st.h2h).map(([o, r]) => `<div class="barrow"><span>vs ${esc(o)}</span><div class="track"><i style="left:0;width:${(100 * r.w) / r.n}%"></i></div><span class="v">${Math.round((100 * r.w) / r.n)}% · ${r.n}</span></div>`).join('')}</div>` : '<p class="muted">No matchups yet. Every pick involving this comic shows up here.</p>'}</div></div>
+    ${specialsHTML(P.specials)}
     <h3 class="shelf">Best-rated shorts</h3><div class="rail">${st.rated.map(({ c, r }, i) => clipTile(c, r ? i : null, r ? Math.round(r.elo) : c.channel)).join('')}</div>`
+  bindSpecials(el)
   scrollTo({ top: 0 })
+}
+
+// ---------- specials: Letterboxd-style log, kept on this device ----------
+const SPK = 'specials'
+const spGet = () => { const x = LS.get(SPK, {}); return x && typeof x === 'object' ? x : {} }
+const spMine = (id) => spGet()[id] || {}
+function spSet(id, patch) {
+  const all = spGet(), cur = { ...(all[id] || {}), ...patch, at: new Date().toISOString() }
+  if (!cur.seen && !cur.stars && !cur.note) delete all[id]; else all[id] = cur
+  LS.set(SPK, all)
+}
+function allSpecials() { return Object.entries(COMICS).flatMap(([comic, p]) => (Array.isArray(p?.specials) ? p.specials : []).map((s) => ({ ...s, comic }))) }
+function specialsSeen() { const ids = new Set(allSpecials().map((s) => s.id)), m = spGet(); return Object.keys(m).filter((id) => ids.has(id) && m[id].seen).length }
+const hue = (s) => [...String(s)].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7)
+function starsHTML(n) {
+  return `<div class="stars" role="radiogroup" aria-label="Your rating">${[1, 2, 3, 4, 5].map((i) => {
+    const f = n >= i ? 'full' : n >= i - 0.5 ? 'half' : ''
+    return `<button class="st ${f}" data-star="${i}" aria-label="${i} star${i > 1 ? 's' : ''}">★</button>` }).join('')}</div>`
+}
+function specialCard(s) {
+  const m = spMine(s.id), h = hue(s.id)
+  return `<article class="sp${m.seen ? ' seen' : ''}" data-sp="${esc(s.id)}">
+    <div class="spart" style="background:linear-gradient(160deg,hsl(${h} 70% 22%) 0%,#0b0b0e 75%)">
+      <span class="spyear">${esc(s.year)}</span>
+      <b>${esc(s.title)}</b>
+      <span class="spdist">${esc(s.distributor || '')}${s.runtimeMin ? ' · ' + s.runtimeMin + ' min' : ''}</span>
+      ${m.stars ? `<span class="spmine">★ ${m.stars}</span>` : ''}
+    </div>
+    <div class="spact">
+      <button class="seenbtn${m.seen ? ' on' : ''}" data-act="seen" aria-pressed="${!!m.seen}">${m.seen ? '✓ Seen' : '+ Seen'}</button>
+      ${starsHTML(m.stars || 0)}
+      <button class="notebtn${m.note ? ' on' : ''}" data-act="note" aria-label="Note">✎</button>
+    </div>
+    <div class="spnote" ${m.note ? '' : 'hidden'}><textarea maxlength="280" rows="2" placeholder="A line for future you…">${esc(m.note || '')}</textarea></div>
+    <div class="splinks">${(s.where || []).map((w) => `<a href="${esc(w.url)}" target="_blank" rel="noopener">${esc(w.name)}</a>`).join('')}</div>
+  </article>`
+}
+function specialsHTML(list) {
+  if (!Array.isArray(list) || !list.length) return ''
+  const sorted = [...list].sort((a, b) => (a.year || 0) - (b.year || 0))
+  return `<div class="sphead"><h3 class="shelf">Specials</h3><span class="muted" id="spsum">${spSummary(list)}</span></div>
+    <div class="spgrid">${sorted.map(specialCard).join('')}</div>
+    <p class="muted small">Your log stays on this device. Availability varies by country, so "Where to watch" opens a search.</p>`
+}
+function spSummary(list) {
+  const m = spGet(), seen = list.filter((s) => m[s.id]?.seen).length, rated = list.map((s) => m[s.id]?.stars).filter((x) => x > 0)
+  const avg = rated.length ? (rated.reduce((a, b) => a + b, 0) / rated.length).toFixed(1) : null
+  return `${seen}/${list.length} seen${avg ? ` · your avg ★ ${avg}` : ''}`
+}
+function bindSpecials(root) {
+  const grid = root.querySelector('.spgrid'); if (!grid) return
+  const list = () => [...grid.querySelectorAll('.sp')].map((x) => allSpecials().find((s) => s.id === x.dataset.sp)).filter(Boolean)
+  const repaint = (id, focusNote) => {
+    const s = allSpecials().find((x) => x.id === id), old = grid.querySelector(`.sp[data-sp="${CSS.escape(id)}"]`)
+    if (!s || !old) return
+    old.outerHTML = specialCard(s)
+    const sum = root.querySelector('#spsum'); if (sum) sum.textContent = spSummary(list())
+    if (focusNote) grid.querySelector(`.sp[data-sp="${CSS.escape(id)}"] textarea`)?.focus()
+    paintYou()
+  }
+  grid.onclick = (e) => {
+    const card = e.target.closest('.sp'); if (!card) return
+    const id = card.dataset.sp, m = spMine(id), star = e.target.closest('[data-star]'), act = e.target.closest('[data-act]')?.dataset.act
+    if (star) {
+      const i = +star.dataset.star, r = star.getBoundingClientRect()
+      let n = e.clientX && e.clientX < r.left + r.width / 2 ? i - 0.5 : i // tap the left half for a half star
+      if (n === m.stars) n = 0 // tap your rating again to clear it
+      spSet(id, { stars: n, seen: n > 0 ? true : m.seen }); return repaint(id)
+    }
+    if (act === 'seen') { spSet(id, { seen: !m.seen, ...(m.seen ? { stars: 0 } : {}) }); return repaint(id) }
+    if (act === 'note') { const box = card.querySelector('.spnote'); box.hidden = !box.hidden; if (!box.hidden) box.querySelector('textarea').focus() }
+  }
+  let nt
+  grid.oninput = (e) => {
+    if (e.target.tagName !== 'TEXTAREA') return
+    const id = e.target.closest('.sp').dataset.sp, val = e.target.value.slice(0, 280)
+    clearTimeout(nt); nt = setTimeout(() => { spSet(id, { note: val }); e.target.closest('.sp').querySelector('.notebtn')?.classList.toggle('on', !!val) }, 300)
+  }
 }
 
 // ---------- your model ----------
 function paintYou() {
   const el = $('#you'), votes = LS.get('votes', [])
   if (!votes.length) {
-    el.innerHTML = `<h2>Your model</h2><p class="empty">Every pick trains a small model of your sense of humour, right here on your device.<br>Watch a double feature to start it.</p>`
+    const ns = specialsSeen()
+    el.innerHTML = `<h2>Your model</h2><p class="empty">Every pick trains a small model of your sense of humour, right here on your device.<br>Watch a double feature to start it.</p>${ns ? `<p class="sure">${ns} special${ns === 1 ? '' : 's'} seen · <a href="#comics">log more in Comics</a></p>` : ''}`
     return
   }
   MODEL = MODEL || fitLocal()
@@ -490,8 +767,10 @@ function paintYou() {
       <div class="kpi"><b>${esc(comics[0].k.split(' ').slice(-1)[0])}</b><span>your top comic so far</span></div>
       <div class="kpi"><b>${new Set(votes.flatMap((v) => [v.a, v.b])).size}</b><span>shorts seen</span></div>
     </div>
+    ${sureLine(votes)}
     ${(() => { const h = humourType(); return h ? `<div class="type"><span class="eyebrow">Your humour type</span><b>${h.name}</b><p>${h.line}${h.also ? ` With a streak of <i>${h.also}</i>.` : ''}</p></div>` : `<div class="type"><span class="eyebrow">Your humour type</span><b>Still reading you…</b><p>A few more picks across different styles and it will name your type.</p></div>` })()}
     <h3>Styles you laugh at</h3><div class="bars">${STYLES.map((t) => { const x = TRAITS.w[t] || 0, wd = Math.min(50, Math.abs(x) * 40); return `<div class="barrow"><span>${t}</span><div class="track center"><i style="left:${x >= 0 ? 50 : 50 - wd}%;width:${wd}%"></i></div><span class="v">${(TRAITS.n[t] || 0) < 2 ? 'learning' : (x > 0 ? '+' : '') + x.toFixed(2)}</span></div>` }).join('')}</div>
+    ${skipLists()}
     <h3>Comics, as your model sees them</h3><p class="muted">It starts from the crowd chart and moves toward your picks.</p><div class="bars">${bars}</div>
     <h3>What it's learning about you</h3><div class="bars">
       ${trait('Longer bits', longW, longN, 'longer', 'shorter')}
@@ -511,6 +790,28 @@ function paintYou() {
   }).catch(() => {})
 }
 
+function skipLists() {
+  const shown = LS.get('shown', {}) || {}, sk = {}
+  for (const k of clipSkips()) { const c = BYID[k.clip].comic; sk[c] = (sk[c] || 0) + 1 }
+  const comics = Object.keys(shown).filter((c) => shown[c] > 0)
+  if (!comics.length) return ''
+  const most = comics.filter((c) => sk[c]).map((c) => ({ c, r: Math.min(1, sk[c] / shown[c]), n: sk[c] })).sort((a, b) => b.r - a.r || b.n - a.n).slice(0, 3)
+  const never = comics.filter((c) => !sk[c] && shown[c] >= 2).sort((a, b) => shown[b] - shown[a]).slice(0, 3)
+  if (!most.length && !never.length) return ''
+  const li = (arr) => arr.length ? arr.join('') : '<li class="muted">Nobody yet</li>'
+  return `<div class="skipcols"><div><h3>Most skipped</h3><ul>${li(most.map((m) => `<li><b>${esc(m.c)}</b><span>${m.n} skip${m.n === 1 ? '' : 's'} · ${Math.round(100 * m.r)}% of their clips</span></li>`))}</ul></div>
+    <div><h3>Never skip</h3><ul>${li(never.map((c) => `<li><b>${esc(c)}</b><span>watched ${shown[c]} times, never skipped</span></li>`))}</ul></div></div>`
+}
+function sureLine(votes) {
+  const ms = votes.map((v) => v.decisionMs).filter((x) => Number.isFinite(x) && x >= 0).sort((a, b) => a - b)
+  const ns = specialsSeen()
+  const sp = `<span>${ns} special${ns === 1 ? '' : 's'} seen</span>`
+  if (!ms.length) return `<p class="sure"><b>How sure you were</b><span>timing starts with your next pick</span>${sp}</p>`
+  const med = ms.length % 2 ? ms[(ms.length - 1) / 2] : (ms[ms.length / 2 - 1] + ms[ms.length / 2]) / 2
+  const snap = Math.round((100 * ms.filter((x) => x < SNAP_MS).length) / ms.length)
+  return `<p class="sure"><b>How sure you were</b><span>median ${(med / 1000).toFixed(1)}s to decide</span><span>${snap}% snap picks (under ${SNAP_MS / 1000}s)</span>${sp}</p>`
+}
+
 // ---------- utils ----------
 function esc(s) { return String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])) }
 let tt
@@ -520,6 +821,7 @@ function tabs() {
     document.querySelectorAll('nav [data-tab]').forEach((b) => b.classList.toggle('on', b.dataset.tab === id))
     document.querySelectorAll('section.view').forEach((s) => (s.hidden = s.id !== 'v-' + id))
     if (id !== 'arena') Object.values(screens).forEach((s) => s.pause())
+    document.body.classList.toggle('in-theatre', id === 'arena' && (stage === 'left' || stage === 'right'))
     scrollTo({ top: 0 })
   }
   document.querySelectorAll('[data-tab]').forEach((b) => (b.onclick = (e) => { e.preventDefault(); if (b.dataset.tab === 'comics') location.hash = 'comics'; show(b.dataset.tab) }))
@@ -532,6 +834,6 @@ function tabs() {
   tabs()
   await loadData()
   MODEL = fitLocal(); TRAITS = fitTraits()
-  laneSelect(); newRound(false); paintBoards(); paintYou(); paintComics(); paintBanner(); window._route()
+  laneSelect(); bindGestures(); newRound(true); paintBoards(); paintYou(); paintComics(); paintBanner(); window._route()
   initAuth()
 })()

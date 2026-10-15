@@ -84,7 +84,7 @@ for (const did of dids) {
       if (!t || t > Date.now() + 5 * 60e3) continue
       const k = [v.a, v.b].sort().join('|')
       const prev = latest.get(k)
-      if (!prev || t > Date.parse(prev.createdAt)) latest.set(k, { uri: r.uri, did, a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt, voter: v.voter === 'agent' ? 'agent' : 'human', model: typeof v.model === 'string' ? v.model.slice(0, 80) : undefined, why: typeof v.why === 'string' ? v.why.slice(0, 40) : undefined })
+      if (!prev || t > Date.parse(prev.createdAt)) latest.set(k, { uri: r.uri, did, a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt, voter: v.voter === 'agent' ? 'agent' : 'human', model: typeof v.model === 'string' ? v.model.slice(0, 80) : undefined, why: typeof v.why === 'string' ? v.why.slice(0, 40) : undefined, ms: Number.isInteger(v.ms) && v.ms >= 0 && v.ms <= 3600000 ? v.ms : undefined })
     }
     if (latest.size) {
       const vs = [...latest.values()]
@@ -102,7 +102,7 @@ if (process.env.SYNTH) { // test: true strengths Norm>Louis>Rock>Seinfeld
     if (a.id === b.id) continue
     const p = 1 / (1 + Math.exp(-(tr[a.comic] - tr[b.comic])))
     if (i < 7) voters.push({ did: 'synth' + i, handle: 'synth' + i, kind: i % 3 ? 'human' : 'agent', votes: 0 })
-    votes.push({ did: 'synth' + (i % 7), voter: i % 3 ? 'human' : 'agent', a: a.id, b: b.id, winner: Math.random() < p ? a.id : b.id, createdAt: new Date().toISOString() })
+    votes.push({ did: 'synth' + (i % 7), voter: i % 3 ? 'human' : 'agent', a: a.id, b: b.id, winner: Math.random() < p ? a.id : b.id, ms: Math.round(500 + Math.random() * 15000), createdAt: new Date().toISOString() })
   }
 }
 votes.sort((x, y) => Date.parse(x.createdAt) - Date.parse(y.createdAt))
