@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T03:12:32.879Z",
+ "updated": "2026-10-16T03:24:38.091Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -3140,6 +3140,1176 @@
     {
      "id": "-8fThZWnxdM",
      "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PO9yyS367p4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_hYkjHm05As",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f3PJF0YE-x4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_rabQNrVE_g",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eMopGzM1rrU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ane_aAqMo4s",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AEFPKrXkfPg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YVysr9LIzPk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bqGBRDRaB4A",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tQD1QJGCDRw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Od_s2CMeWWE",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ciiszhKOqO0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "28vas-3WmUg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-jaqBRsTQgI",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s6X0Qqxx3f0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8ljkuu02bRQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wBBZBlpSa0c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "F3V6Jg4rUMQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4f9FXJZD-7k",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c3iFfwRQn2c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wSBUHqxUvg4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "u1zeekn3zUc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FqGc5Utx88Y",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "936jpnTkm9g",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QLDtTcM1ZRM",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "im9_YDXqvOw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IESe2fkzxaA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5B63AENfC14",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TBq77c3oMXU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "caObUaz7oOc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "koSiuJRoOmg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "U8g5v__EepA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v_fX7IE6vYc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ek0mP-FCcik",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gjJUPE-lR5Y",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bGc1sJeENNI",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RIJavth0a9c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PTzC0twXZnU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-3U4-mv5_08",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vxe_wo8mv8A",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "441c3FKWYJo",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kkwB76o-3Go",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nuLFH7DrQIk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-GmalfC_loM",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tArmHN4j3qQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1ZpGLbGwyh4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WWERzwbobOk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ux2z8CFVEMg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dapocWEfczQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1OnMgpkNk58",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xp7AyEP1jtQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UhjfxZHOT_o",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YIrylYDKoGA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zywIR_ZFLts",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yI02o7dJc1Y",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SzpVE5ixAG8",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "V1PQg43qDGk",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IT-sBagXbT0",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wNF_cZ6DsCo",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9AqeGogHetw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C--4udLexFI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0eUbnkVFQuE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-LlydlYTcsI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-7ygE5gDFpI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GjHBK2-ikdQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qApUEH0oe_U",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vGs8e9MZWNk",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1aXt8qmhsZM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6ZD17i3N42k",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4ZMf2n3gFzk",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PdFB7q89_3U",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XLGzFQg_1xc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i3TBNkbftGQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hmr-NRCbnus",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "o3LKXMsw6N8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SLEqH00nQac",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FUs-lbkqlKs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rYKEsRvDG7M",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vFbWgDfUfqs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YLYDP9S2nQY",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WQyF099TKM8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mXGWNkFajlw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "O1eKLltGLt0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wADkhFfqZZE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WTgppUX3pHc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "P8xwW4VHWMw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KcC0FJQSMsI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i-62r3VWfhc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "grm3YUKmmhs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4XF2erWA4XQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oe8T03d079g",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xq_QqC2Nkqo",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Amxd6UVWQI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "roRtGd4HMpg",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zuLrBLxbLxw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CItCd7TKwMI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RTrCBcrFMCI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3l09rmSs9p0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IzF2w0-8UNA",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0GCsekb8kNI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IN9Knn7_5JA",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6i7-JrMznyE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "h9WC6P7rab0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNI7SAVlz-Q",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yj40dwEEmj8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xrJh2hO5dMM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0720ucDf9JY",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vbLf9Ixf7Z8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sePS8-J0zaM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Z96K-OvdPI4",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R37zkizucPU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "M7rm47VIxtw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rXURLOOupHc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hO_bbvd2g-s",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d-DTWb_2ubE",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MEYbL1-62Zk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s9zTJ763IO0",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Oseqh7SMIvo",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Fv67QgVSqkk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OtpJzZJ-BNM",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Pt9F1ADNfsg",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ywica8-Z7kc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p21sXizj4u0",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dTa91FbehKU",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oKMIc9L8MoY",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNv0vOpEJtw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zPLQlZvDzbk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XkXNzm_Abkw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uXdtafGdIVM",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-yBZ6EMnC2c",
+     "comic": "Norm Macdonald",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -6288,6 +7458,1176 @@
      "hi": null,
      "wins": 0,
      "bouts": 0
+    },
+    {
+     "id": "PO9yyS367p4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_hYkjHm05As",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f3PJF0YE-x4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_rabQNrVE_g",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eMopGzM1rrU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ane_aAqMo4s",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AEFPKrXkfPg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YVysr9LIzPk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bqGBRDRaB4A",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tQD1QJGCDRw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Od_s2CMeWWE",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ciiszhKOqO0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "28vas-3WmUg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-jaqBRsTQgI",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s6X0Qqxx3f0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8ljkuu02bRQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wBBZBlpSa0c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "F3V6Jg4rUMQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4f9FXJZD-7k",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c3iFfwRQn2c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wSBUHqxUvg4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "u1zeekn3zUc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FqGc5Utx88Y",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "936jpnTkm9g",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QLDtTcM1ZRM",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "im9_YDXqvOw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IESe2fkzxaA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5B63AENfC14",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TBq77c3oMXU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "caObUaz7oOc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "koSiuJRoOmg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "U8g5v__EepA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v_fX7IE6vYc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ek0mP-FCcik",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gjJUPE-lR5Y",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bGc1sJeENNI",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RIJavth0a9c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PTzC0twXZnU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-3U4-mv5_08",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vxe_wo8mv8A",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "441c3FKWYJo",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kkwB76o-3Go",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nuLFH7DrQIk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-GmalfC_loM",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tArmHN4j3qQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1ZpGLbGwyh4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WWERzwbobOk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ux2z8CFVEMg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dapocWEfczQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1OnMgpkNk58",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xp7AyEP1jtQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UhjfxZHOT_o",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YIrylYDKoGA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zywIR_ZFLts",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yI02o7dJc1Y",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SzpVE5ixAG8",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "V1PQg43qDGk",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IT-sBagXbT0",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wNF_cZ6DsCo",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9AqeGogHetw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C--4udLexFI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0eUbnkVFQuE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-LlydlYTcsI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-7ygE5gDFpI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GjHBK2-ikdQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qApUEH0oe_U",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vGs8e9MZWNk",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1aXt8qmhsZM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6ZD17i3N42k",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4ZMf2n3gFzk",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PdFB7q89_3U",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XLGzFQg_1xc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i3TBNkbftGQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hmr-NRCbnus",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "o3LKXMsw6N8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SLEqH00nQac",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FUs-lbkqlKs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rYKEsRvDG7M",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vFbWgDfUfqs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YLYDP9S2nQY",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WQyF099TKM8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mXGWNkFajlw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "O1eKLltGLt0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wADkhFfqZZE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WTgppUX3pHc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "P8xwW4VHWMw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KcC0FJQSMsI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i-62r3VWfhc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "grm3YUKmmhs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4XF2erWA4XQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oe8T03d079g",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xq_QqC2Nkqo",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Amxd6UVWQI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "roRtGd4HMpg",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zuLrBLxbLxw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CItCd7TKwMI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RTrCBcrFMCI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3l09rmSs9p0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IzF2w0-8UNA",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0GCsekb8kNI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IN9Knn7_5JA",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6i7-JrMznyE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "h9WC6P7rab0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNI7SAVlz-Q",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yj40dwEEmj8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xrJh2hO5dMM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0720ucDf9JY",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vbLf9Ixf7Z8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sePS8-J0zaM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Z96K-OvdPI4",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R37zkizucPU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "M7rm47VIxtw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rXURLOOupHc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hO_bbvd2g-s",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d-DTWb_2ubE",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MEYbL1-62Zk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s9zTJ763IO0",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Oseqh7SMIvo",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Fv67QgVSqkk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OtpJzZJ-BNM",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Pt9F1ADNfsg",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ywica8-Z7kc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p21sXizj4u0",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dTa91FbehKU",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oKMIc9L8MoY",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNv0vOpEJtw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zPLQlZvDzbk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XkXNzm_Abkw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uXdtafGdIVM",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-yBZ6EMnC2c",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
     }
    ]
   },
@@ -9426,6 +11766,1176 @@
     {
      "id": "-8fThZWnxdM",
      "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PO9yyS367p4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_hYkjHm05As",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f3PJF0YE-x4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_rabQNrVE_g",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eMopGzM1rrU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ane_aAqMo4s",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AEFPKrXkfPg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YVysr9LIzPk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bqGBRDRaB4A",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tQD1QJGCDRw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Od_s2CMeWWE",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ciiszhKOqO0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "28vas-3WmUg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-jaqBRsTQgI",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s6X0Qqxx3f0",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8ljkuu02bRQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wBBZBlpSa0c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "F3V6Jg4rUMQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4f9FXJZD-7k",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c3iFfwRQn2c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wSBUHqxUvg4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "u1zeekn3zUc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FqGc5Utx88Y",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "936jpnTkm9g",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QLDtTcM1ZRM",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "im9_YDXqvOw",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IESe2fkzxaA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5B63AENfC14",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TBq77c3oMXU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "caObUaz7oOc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "koSiuJRoOmg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "U8g5v__EepA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v_fX7IE6vYc",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ek0mP-FCcik",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gjJUPE-lR5Y",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bGc1sJeENNI",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RIJavth0a9c",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PTzC0twXZnU",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-3U4-mv5_08",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vxe_wo8mv8A",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "441c3FKWYJo",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kkwB76o-3Go",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nuLFH7DrQIk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-GmalfC_loM",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tArmHN4j3qQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1ZpGLbGwyh4",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WWERzwbobOk",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ux2z8CFVEMg",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dapocWEfczQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1OnMgpkNk58",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xp7AyEP1jtQ",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UhjfxZHOT_o",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YIrylYDKoGA",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zywIR_ZFLts",
+     "comic": "Chris Rock",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yI02o7dJc1Y",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SzpVE5ixAG8",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "V1PQg43qDGk",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IT-sBagXbT0",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wNF_cZ6DsCo",
+     "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9AqeGogHetw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C--4udLexFI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0eUbnkVFQuE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-LlydlYTcsI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-7ygE5gDFpI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GjHBK2-ikdQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qApUEH0oe_U",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vGs8e9MZWNk",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1aXt8qmhsZM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6ZD17i3N42k",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4ZMf2n3gFzk",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PdFB7q89_3U",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XLGzFQg_1xc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i3TBNkbftGQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hmr-NRCbnus",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "o3LKXMsw6N8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SLEqH00nQac",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FUs-lbkqlKs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rYKEsRvDG7M",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vFbWgDfUfqs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YLYDP9S2nQY",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WQyF099TKM8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mXGWNkFajlw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "O1eKLltGLt0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wADkhFfqZZE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WTgppUX3pHc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "P8xwW4VHWMw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KcC0FJQSMsI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i-62r3VWfhc",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "grm3YUKmmhs",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4XF2erWA4XQ",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oe8T03d079g",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xq_QqC2Nkqo",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Amxd6UVWQI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "roRtGd4HMpg",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zuLrBLxbLxw",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CItCd7TKwMI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RTrCBcrFMCI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3l09rmSs9p0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IzF2w0-8UNA",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0GCsekb8kNI",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IN9Knn7_5JA",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6i7-JrMznyE",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "h9WC6P7rab0",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNI7SAVlz-Q",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yj40dwEEmj8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xrJh2hO5dMM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0720ucDf9JY",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vbLf9Ixf7Z8",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sePS8-J0zaM",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Z96K-OvdPI4",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R37zkizucPU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "M7rm47VIxtw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rXURLOOupHc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hO_bbvd2g-s",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d-DTWb_2ubE",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MEYbL1-62Zk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "s9zTJ763IO0",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Oseqh7SMIvo",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Fv67QgVSqkk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OtpJzZJ-BNM",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Pt9F1ADNfsg",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ywica8-Z7kc",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p21sXizj4u0",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dTa91FbehKU",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oKMIc9L8MoY",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNv0vOpEJtw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zPLQlZvDzbk",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XkXNzm_Abkw",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uXdtafGdIVM",
+     "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-yBZ6EMnC2c",
+     "comic": "Norm Macdonald",
      "elo": 1500,
      "lo": null,
      "hi": null,

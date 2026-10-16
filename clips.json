@@ -20,7 +20,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "talk-show",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "gN02rRbOlUE",
@@ -46,7 +47,8 @@
   "setting": "chat",
   "format": "horizontal",
   "t_start": 1169,
-  "t_source": "title-anchor"
+  "t_source": "title-anchor",
+  "carrier": "licensed"
  },
  {
   "id": "OwlxYYtqHfc",
@@ -69,7 +71,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "EF-cw9bsLKs",
@@ -90,7 +93,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "talk-show",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "-skA4GhVX7k",
@@ -112,7 +116,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "own"
  },
  {
   "id": "hoYUX3gqZs4",
@@ -134,7 +139,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "own"
  },
  {
   "id": "IbEMYaXVEjw",
@@ -158,7 +164,8 @@
   "special_ref": "louis-sorry",
   "special_id": "louis-c-k-sorry-transcript",
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "own"
  },
  {
   "id": "vd8DfFp5ono",
@@ -180,7 +187,8 @@
   "special_ref": "louis-back-to-the-garden",
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "own"
  },
  {
   "id": "nyuQjNCpqEI",
@@ -202,7 +210,8 @@
   "special_ref": "louis-back-to-the-garden",
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "own"
  },
  {
   "id": "UdCpgrF6Txw",
@@ -225,7 +234,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "own"
  },
  {
   "id": "GQ1vEb8d0UE",
@@ -245,7 +255,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "own"
  },
  {
   "id": "5XchZEx2SP0",
@@ -267,7 +278,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "own"
  },
  {
   "id": "IwuarzMMHAg",
@@ -289,7 +301,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "ckkXo5J6fWo",
@@ -312,7 +325,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "story",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "s4Df4L6lAgs",
@@ -338,7 +352,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "HfYzlSNHapA",
@@ -360,7 +375,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "m2k7YKvmqQg",
@@ -384,7 +400,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "story",
-  "format": "vertical"
+  "format": "vertical",
+  "carrier": "licensed"
  },
  {
   "id": "xnUWpegM9oY",
@@ -406,7 +423,8 @@
   "special_ref": "rock-tamborine",
   "special_id": "chris-rock-tamborine-transcript",
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "5bbKnj1-mR0",
@@ -430,7 +448,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "t_start": 1588,
-  "t_source": "title-anchor"
+  "t_source": "title-anchor",
+  "carrier": "licensed"
  },
  {
   "id": "dUzaSm0aAKw",
@@ -452,7 +471,8 @@
   "special_ref": null,
   "special_id": null,
   "setting": "stand-up",
-  "format": "horizontal"
+  "format": "horizontal",
+  "carrier": "licensed"
  },
  {
   "id": "KkXpKF4b5yA",
@@ -476,7 +496,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "t_start": 1998,
-  "t_source": "title-anchor"
+  "t_source": "title-anchor",
+  "carrier": "licensed"
  },
  {
   "id": "tDolNU89SXI",
@@ -500,7 +521,8 @@
   "tagsSource": "draft",
   "format": "horizontal",
   "special_ref": "mn-out-to-lunch",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "ypfsxnFOfj0",
@@ -523,7 +545,8 @@
   "tagsSource": "draft",
   "format": "horizontal",
   "special_ref": "mn-out-to-lunch",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "prE48-cwRwo",
@@ -545,7 +568,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-out-to-lunch",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "3cTetNq0w2g",
@@ -568,7 +592,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-out-to-lunch",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "3o-sDcvYQmE",
@@ -591,7 +616,8 @@
   "tagsSource": "draft",
   "format": "horizontal",
   "special_ref": "mn-soup-to-nuts",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "WDDzutbkG3I",
@@ -614,7 +640,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-soup-to-nuts",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "9tzB8xKcSNc",
@@ -637,7 +664,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-soup-to-nuts",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "BZZI233ptDQ",
@@ -660,7 +688,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-soup-to-nuts",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "pBzNeaOTed0",
@@ -683,7 +712,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-soup-to-nuts",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "NTwzrjRZFxY",
@@ -706,7 +736,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-soup-to-nuts",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "oMNoEdQHdXg",
@@ -729,7 +760,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-none-too-pleased",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "45AIWTWkM7A",
@@ -752,7 +784,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": "mn-none-too-pleased",
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "TnCRitTRjck",
@@ -775,7 +808,8 @@
   "tagsSource": "draft",
   "format": "horizontal",
   "special_ref": null,
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "Og9LzOARLjI",
@@ -798,7 +832,8 @@
   "tagsSource": "draft",
   "format": "horizontal",
   "special_ref": null,
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "svwzD0JT9eM",
@@ -820,7 +855,8 @@
   "tagsSource": "draft",
   "format": "horizontal",
   "special_ref": null,
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "XpVJ9vK2ZII",
@@ -842,7 +878,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": null,
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "oDr3Y2JIh6k",
@@ -865,7 +902,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": null,
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "aA6Ia43MW_w",
@@ -887,7 +925,8 @@
   "tagsSource": "draft",
   "format": "vertical",
   "special_ref": null,
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "NhnS0dUacJs",
@@ -910,7 +949,8 @@
   "tagsSource": "draft",
   "format": "horizontal",
   "special_ref": null,
-  "special_id": null
+  "special_id": null,
+  "carrier": "own"
  },
  {
   "id": "7f0ZFu0iMqs",
@@ -930,7 +970,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "ayP1_wWvcvk",
@@ -950,7 +991,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "O6-E2tvLpyc",
@@ -970,7 +1012,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "zNjYfz-qk9k",
@@ -990,7 +1033,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "gCPlwd9ePhE",
@@ -1010,7 +1054,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "udLWVzmk5sI",
@@ -1030,7 +1075,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "nXavCUcL7NY",
@@ -1050,7 +1096,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "hmqXxzemRis",
@@ -1070,7 +1117,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "UkRAI4eWFhQ",
@@ -1090,7 +1138,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "QBr30J_vuEg",
@@ -1110,7 +1159,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "j7OE-p8QfDo",
@@ -1136,7 +1186,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2023,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "9fDdyzt_CFY",
@@ -1162,7 +1213,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2022,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "yzFmHUXDL9Y",
@@ -1187,7 +1239,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "723xrxG12GE",
@@ -1213,7 +1266,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2022,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "Jh1GwzuYkek",
@@ -1238,7 +1292,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "DpcBAJ3eMK8",
@@ -1258,7 +1313,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "FVVQXj6Ymso",
@@ -1278,7 +1334,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "DcLeSQECCLQ",
@@ -1298,7 +1355,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "nQDBwPTZvDw",
@@ -1324,7 +1382,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2022,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "bNpggSlk6S0",
@@ -1345,7 +1404,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2022,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "7qde2ieLXIk",
@@ -1365,7 +1425,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "bfkVV22QqKw",
@@ -1385,7 +1446,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "4dve41SHnKE",
@@ -1406,7 +1468,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "sd2Qc_--UOA",
@@ -1432,7 +1495,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "0nXq7ptrQ4Q",
@@ -1453,7 +1517,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "2RE4mGM5RuY",
@@ -1474,7 +1539,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2019,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "9we8zFqR17o",
@@ -1495,7 +1561,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2019,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "oS9I8LBqM6c",
@@ -1516,7 +1583,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2019,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "HXtHOjH4xMU",
@@ -1541,7 +1609,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2009
+  "year": 2009,
+  "carrier": "own"
  },
  {
   "id": "mxmCFcpA7ls",
@@ -1567,7 +1636,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2006,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "ce0WTzmZ6po",
@@ -1593,7 +1663,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2006,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "R8VlUFpqCqU",
@@ -1618,7 +1689,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2006
+  "year": 2006,
+  "carrier": "own"
  },
  {
   "id": "xSQhmiHxSV0",
@@ -1638,7 +1710,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "EKgOsvu2F8Q",
@@ -1658,7 +1731,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "Q5ZoFL6PdpQ",
@@ -1678,7 +1752,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "2u2aA8l9_5Y",
@@ -1703,7 +1778,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "mVlf7FSzaWQ",
@@ -1723,7 +1799,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "ZC6QCuGWuGA",
@@ -1743,7 +1820,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "m3zEa9eVG_M",
@@ -1763,7 +1841,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "DMbwbIGrHZc",
@@ -1783,7 +1862,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "2HbARCCxDlE",
@@ -1803,7 +1883,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "HRJUVRuCfho",
@@ -1823,7 +1904,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "kXj6G6bgSNQ",
@@ -1848,7 +1930,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "BZCLgj5CZd0",
@@ -1868,7 +1951,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "9RvSb3hmUI8",
@@ -1893,7 +1977,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "yAAYd2GdQzY",
@@ -1913,7 +1998,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "7yW-DDGGEaI",
@@ -1933,7 +2019,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "rqRJg009qSo",
@@ -1953,7 +2040,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "nBfK-vNdaPE",
@@ -1973,7 +2061,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "VAwIZXdVBLY",
@@ -1993,7 +2082,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "vw0vombCVQI",
@@ -2013,7 +2103,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "Oe1QTlc5Ps0",
@@ -2033,7 +2124,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "4idoOYl_kKQ",
@@ -2053,7 +2145,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "nXPzhEqvMzY",
@@ -2073,7 +2166,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "38_EOKjrGiY",
@@ -2093,7 +2187,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "vedSB6mQte8",
@@ -2113,7 +2208,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "bnuWmpRxGTY",
@@ -2133,7 +2229,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "UmvY_fESA88",
@@ -2153,7 +2250,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "fK1QDSNYO9M",
@@ -2173,7 +2271,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "bq7fc37dLh0",
@@ -2193,7 +2292,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "64swsnak9Zs",
@@ -2213,7 +2313,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "Pv-DZS8mQuI",
@@ -2233,7 +2334,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "S7MjG6lm1Tc",
@@ -2253,7 +2355,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "0WaLIvswZMk",
@@ -2273,7 +2376,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "p8acCq5Xkjo",
@@ -2293,7 +2397,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "XlKJyhOuuBc",
@@ -2313,7 +2418,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "f3Qp1g3oVqc",
@@ -2333,7 +2439,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "2uP25vDGn6w",
@@ -2353,7 +2460,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "D5DpARagsl0",
@@ -2373,7 +2481,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "GXLdHfs2T-8",
@@ -2398,7 +2507,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "hvxfVTRS7ls",
@@ -2418,7 +2528,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "QkAY5e0q8do",
@@ -2438,7 +2549,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "uYi77GN1px8",
@@ -2463,7 +2575,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "BYslql7xwmA",
@@ -2483,7 +2596,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "9Daz-Og7oJI",
@@ -2508,7 +2622,8 @@
   "special_id": null,
   "setting": "talk-show",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "IBLYUxyRNxE",
@@ -2528,7 +2643,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "J8izyEhlpJI",
@@ -2548,7 +2664,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "f9PNgz2tyIo",
@@ -2568,7 +2685,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "2N4Nj5LYvqY",
@@ -2589,7 +2707,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2026,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "Kj9RSAUgxmI",
@@ -2609,7 +2728,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "hKehEWZm724",
@@ -2629,7 +2749,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "epP8N6law78",
@@ -2649,7 +2770,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "_QbgsKUeMuo",
@@ -2669,7 +2791,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "7c3BZnJZwI4",
@@ -2689,7 +2812,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "R5bz1q84130",
@@ -2709,7 +2833,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2026
+  "year": 2026,
+  "carrier": "own"
  },
  {
   "id": "aai-L72cTcE",
@@ -2729,7 +2854,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "zIQe3Btqpy8",
@@ -2749,7 +2875,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "fVDyYJVyYv0",
@@ -2769,7 +2896,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "Zv9NWSzLG0c",
@@ -2789,7 +2917,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "AN64Murli44",
@@ -2809,7 +2938,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "AMMgLrJ3vhI",
@@ -2829,7 +2959,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "KDRz3CaN6Vs",
@@ -2854,7 +2985,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "-27mpXhKTfQ",
@@ -2874,7 +3006,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "y6fB7Chaw7M",
@@ -2894,7 +3027,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "lvdqOvNQ4ow",
@@ -2914,7 +3048,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "d5-0Fi9fWYQ",
@@ -2934,7 +3069,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "EQ3vQuMg1mI",
@@ -2954,7 +3090,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "YL06Vq_8cFA",
@@ -2974,7 +3111,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "cLChc2C6bqc",
@@ -2994,7 +3132,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "G4UMa-0YUYY",
@@ -3014,7 +3153,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "3cHJPZF1NRw",
@@ -3034,7 +3174,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "rtdY11u_ilI",
@@ -3059,7 +3200,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "MJN8Un8naOE",
@@ -3084,7 +3226,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "RIKMay9XRPE",
@@ -3104,7 +3247,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "ZmF_gLkYTQ0",
@@ -3124,7 +3268,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "K-S7vJZJBe0",
@@ -3149,7 +3294,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "W3UiBV8jSD0",
@@ -3174,7 +3320,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "N9Evs3mKw90",
@@ -3194,7 +3341,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "7UrrIGJNVZ4",
@@ -3214,7 +3362,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "rtCNWxETizk",
@@ -3240,7 +3389,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2025,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "2-GMOb1JSRA",
@@ -3265,7 +3415,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "QFTerNaqwck",
@@ -3285,7 +3436,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "bvfcLdJUymg",
@@ -3310,7 +3462,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "mhGY5wms-kg",
@@ -3330,7 +3483,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "6Mt8ofVzNik",
@@ -3350,7 +3504,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "cskpC0-mF2o",
@@ -3375,7 +3530,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "oHgeAv9WWwA",
@@ -3395,7 +3551,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "3u-xPACxirI",
@@ -3415,7 +3572,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "QhZWwbp7aa8",
@@ -3440,7 +3598,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "om-8vRN0y_E",
@@ -3465,7 +3624,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "Y5HS8xa-9vg",
@@ -3490,7 +3650,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2025
+  "year": 2025,
+  "carrier": "own"
  },
  {
   "id": "QqpM12SdHq8",
@@ -3515,7 +3676,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "TB9_IBQ2ZtY",
@@ -3535,7 +3697,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "2mJxjyVml4Y",
@@ -3555,7 +3718,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "Bbk3pVE8bks",
@@ -3580,7 +3744,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "Zoq9jW2TXdA",
@@ -3605,7 +3770,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "3mfp-om_zWM",
@@ -3630,7 +3796,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "RxMPpvSRirM",
@@ -3655,7 +3822,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "369TjcSTFGU",
@@ -3675,7 +3843,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "2fl5rzSSNFQ",
@@ -3700,7 +3869,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "JrLW3SabarM",
@@ -3725,7 +3895,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "XizObk-Rte0",
@@ -3750,7 +3921,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "dVkIjO5qHGM",
@@ -3775,7 +3947,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "K797TOcBBv4",
@@ -3800,7 +3973,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "3ttcCK32clg",
@@ -3825,7 +3999,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "HjM7apAbjOM",
@@ -3850,7 +4025,8 @@
   "special_id": null,
   "setting": "talk-show",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "WbT4d56HgsE",
@@ -3870,7 +4046,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "FnG-CGLKAss",
@@ -3895,7 +4072,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "0jgC_Fabo6U",
@@ -3920,7 +4098,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "K0Dhxk2qfgQ",
@@ -3940,7 +4119,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "mQ5kN2WqbKk",
@@ -3960,7 +4140,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "bxzr5807yR8",
@@ -3985,7 +4166,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "b0SbOCL0v-o",
@@ -4005,7 +4187,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "7Ap7hG3Yzp0",
@@ -4030,7 +4213,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "5wLkj8f1320",
@@ -4050,7 +4234,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "XRGY7-KZfCE",
@@ -4075,7 +4260,8 @@
   "special_id": null,
   "setting": "talk-show",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "Cl2nmW96inI",
@@ -4100,7 +4286,8 @@
   "special_id": null,
   "setting": "talk-show",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "E8sJS87JZKY",
@@ -4120,7 +4307,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "hWKO6x0hcu0",
@@ -4140,7 +4328,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "bg_5T_uU3WI",
@@ -4165,7 +4354,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "yRPoQ8RoYno",
@@ -4190,7 +4380,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "N9_kbIQ9vGs",
@@ -4215,7 +4406,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "TVVDoCyDLxo",
@@ -4235,7 +4427,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "rtHgCM3bqJE",
@@ -4260,7 +4453,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "TqIqP3v09uo",
@@ -4285,7 +4479,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "ZL_ZI_Qyhno",
@@ -4310,7 +4505,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "WNWBsBollBo",
@@ -4330,7 +4526,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "JegZ9W4fjsc",
@@ -4355,7 +4552,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "TIKz8JNQKIw",
@@ -4380,7 +4578,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "nvyNgrtppvc",
@@ -4405,7 +4604,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "asewBsD1qw4",
@@ -4425,7 +4625,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "3q_751OykJo",
@@ -4445,7 +4646,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "UKmIy3XFN-4",
@@ -4465,7 +4667,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "ebDF6r2sxW8",
@@ -4485,7 +4688,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "B1dgo9wqVus",
@@ -4505,7 +4709,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "J_Fm-oOXhYY",
@@ -4525,7 +4730,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "2dxPgkZhQQA",
@@ -4545,7 +4751,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "VovyHBwcctU",
@@ -4565,7 +4772,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "SQ7j5glcrM4",
@@ -4585,7 +4793,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "KUFbKIUBYwg",
@@ -4605,7 +4814,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "iyoadCGOvFo",
@@ -4625,7 +4835,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "msYHvzImoT4",
@@ -4645,7 +4856,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "Myj_T0XL9Hg",
@@ -4665,7 +4877,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "-isGsmQdiCo",
@@ -4690,7 +4903,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "c-VrGKUjv5Y",
@@ -4710,7 +4924,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "kCmw2X5F4mI",
@@ -4730,7 +4945,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "m9ouqOXQ_uc",
@@ -4756,7 +4972,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2024,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "HMAmeVaIX2M",
@@ -4781,7 +4998,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "gbh7bSsFE7Y",
@@ -4801,7 +5019,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "-6qISjhJCaE",
@@ -4826,7 +5045,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "pkN8SNxg4PY",
@@ -4846,7 +5066,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "9c-YCgtjIy8",
@@ -4866,7 +5087,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "WepSp0jYxBQ",
@@ -4886,7 +5108,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "ICuhqZk4ACY",
@@ -4906,7 +5129,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "pjq1Gc1ttlY",
@@ -4926,7 +5150,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2024
+  "year": 2024,
+  "carrier": "own"
  },
  {
   "id": "DYcS2JXg9YA",
@@ -4951,7 +5176,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "KwxvPlv5JV0",
@@ -4971,7 +5197,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "J3rzLBmk7QY",
@@ -4996,7 +5223,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "WiVCRXnW8vQ",
@@ -5016,7 +5244,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "KE4xGtaXmLs",
@@ -5036,7 +5265,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "CKyhr_7gPf4",
@@ -5061,7 +5291,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "APss6JGIAcU",
@@ -5081,7 +5312,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "c9HJMv9ceY4",
@@ -5106,7 +5338,8 @@
   "special_id": null,
   "setting": "talk-show",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "RvHghfnmAXs",
@@ -5126,7 +5359,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "SjOtoadkkz8",
@@ -5146,7 +5380,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "taegy3NueOQ",
@@ -5166,7 +5401,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "ygre3SjB44A",
@@ -5186,7 +5422,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "xW2Wa4s2zZc",
@@ -5206,7 +5443,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "Io6_xqTTBZY",
@@ -5226,7 +5464,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "Ia6S5cKcyvo",
@@ -5246,7 +5485,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "EMwJItg9fIE",
@@ -5266,7 +5506,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "jxbtVAqTBxk",
@@ -5286,7 +5527,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "ENz79DRLHRU",
@@ -5311,7 +5553,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "HyTFEsp8GyA",
@@ -5336,7 +5579,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "ddlbXkG9RPU",
@@ -5356,7 +5600,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "hfqmmvoH4GI",
@@ -5381,7 +5626,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "YFy-KlSkfU8",
@@ -5401,7 +5647,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "JMUJf_q4kbw",
@@ -5421,7 +5668,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "9fKp2G99INU",
@@ -5441,7 +5689,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "4Su69yOZuN4",
@@ -5461,7 +5710,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "8EVqqRRLu5I",
@@ -5481,7 +5731,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "A6oF1FjY-lQ",
@@ -5501,7 +5752,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "GHgqf16DsZg",
@@ -5521,7 +5773,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "IH2mssOPm-c",
@@ -5541,7 +5794,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "dYxcWv7_5pE",
@@ -5561,7 +5815,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "4pWMmgUInWo",
@@ -5581,7 +5836,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "H7Mm9_CSmGo",
@@ -5601,7 +5857,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "KQexPI9qpqU",
@@ -5626,7 +5883,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "oMrB3ofwPx8",
@@ -5646,7 +5904,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "8ir0--BcSrc",
@@ -5666,7 +5925,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "QqGOngSglmM",
@@ -5686,7 +5946,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "rQ-iJLloEic",
@@ -5706,7 +5967,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "QPl_8ybEQJ0",
@@ -5726,7 +5988,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "-VJegwS6Z2k",
@@ -5746,7 +6009,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "I1CUBp55YEs",
@@ -5766,7 +6030,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "t6BPvtxl38o",
@@ -5786,7 +6051,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "BGdcM4JxhEs",
@@ -5806,7 +6072,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "c5yuLPTHTb8",
@@ -5831,7 +6098,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "yP-vyBbtva8",
@@ -5851,7 +6119,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "5aDph5C9ZBg",
@@ -5876,7 +6145,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "ly-ceTssHJ8",
@@ -5896,7 +6166,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "3dPYELKsdqU",
@@ -5916,7 +6187,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "Rmfsijg997s",
@@ -5936,7 +6208,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "-EM_kiQ8X5M",
@@ -5956,7 +6229,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "C0w_4TrthM4",
@@ -5976,7 +6250,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "qZ31UHX7ghw",
@@ -5996,7 +6271,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "oLpzeqhGUTU",
@@ -6016,7 +6292,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "VjqjQn0986A",
@@ -6041,7 +6318,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "4Lxoj1lWuVQ",
@@ -6061,7 +6339,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "dMhCziYWnU0",
@@ -6081,7 +6360,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "QW7ShRnN5_k",
@@ -6107,7 +6387,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2023,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "FEBM3UZviJk",
@@ -6127,7 +6408,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "dhqXf4SENEc",
@@ -6147,7 +6429,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "791Rg6w026M",
@@ -6172,7 +6455,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "uR46ixsS-XI",
@@ -6192,7 +6476,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "qv7OZ_fHWVk",
@@ -6212,7 +6497,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "vSqPWVl6qLY",
@@ -6232,7 +6518,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "gFFm7STk5hs",
@@ -6252,7 +6539,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "QGXlqAOk9NQ",
@@ -6272,7 +6560,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "0Bq8edgkaC8",
@@ -6292,7 +6581,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "lXFA1v6Ofmw",
@@ -6312,7 +6602,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "JhFnihowfJc",
@@ -6332,7 +6623,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "b9tN_AB-S04",
@@ -6352,7 +6644,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "mIxACZL4BPU",
@@ -6372,7 +6665,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "XAgRNl_k6DE",
@@ -6392,7 +6686,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "9Hh2BlGx9fo",
@@ -6417,7 +6712,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "6Q2zXEtofTk",
@@ -6437,7 +6733,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "fuFLNHX6HIQ",
@@ -6457,7 +6754,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "X9cHdegN6DI",
@@ -6482,7 +6780,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "pNJwToooo2E",
@@ -6502,7 +6801,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "3lx6_aopgb0",
@@ -6527,7 +6827,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "5vJTL94c0QI",
@@ -6552,7 +6853,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2023
+  "year": 2023,
+  "carrier": "own"
  },
  {
   "id": "C3zz-GE25O4",
@@ -6572,7 +6874,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "7tb1k2Ak6EM",
@@ -6592,7 +6895,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "TbNNAXRNKF0",
@@ -6612,7 +6916,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "UQcypt8GB8A",
@@ -6632,7 +6937,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "8OGJcfprEvE",
@@ -6652,7 +6958,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "LNJ8kxQSMYQ",
@@ -6672,7 +6979,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "yw6s4o2xHQM",
@@ -6692,7 +7000,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "QYE9103PDJ8",
@@ -6717,7 +7026,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "VMPx8cm0qAw",
@@ -6743,7 +7053,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2022,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "OISbPfOoPwg",
@@ -6768,7 +7079,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "tGX5lwY1eIE",
@@ -6788,7 +7100,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "DIxy7W9eM8E",
@@ -6814,7 +7127,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2022,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "UHwVaYpzY24",
@@ -6840,7 +7154,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2022,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "3INmWhQ83jk",
@@ -6865,7 +7180,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "H7ddfcz-1Lg",
@@ -6891,7 +7207,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2022,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "LM4kzfiJdu4",
@@ -6911,7 +7228,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "wTlXAl6PjIU",
@@ -6936,7 +7254,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "gVIWyGzAOBk",
@@ -6956,7 +7275,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "hJ5oCY7qY1k",
@@ -6981,7 +7301,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "Ldcgdwq6xwg",
@@ -7001,7 +7322,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "9dwhstCjCxw",
@@ -7021,7 +7343,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "f-f6WgO7ons",
@@ -7046,7 +7369,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2022
+  "year": 2022,
+  "carrier": "own"
  },
  {
   "id": "i2z4_AVyfyA",
@@ -7071,7 +7395,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "sWbdnZeBDnA",
@@ -7097,7 +7422,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "YORpOtP6R0M",
@@ -7122,7 +7448,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "miIVRqU5WMc",
@@ -7147,7 +7474,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "EyX3IEIfVIE",
@@ -7172,7 +7500,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "v-_owN6O678",
@@ -7197,7 +7526,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "_GOebANEiDU",
@@ -7222,7 +7552,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "horizontal",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "2fmw7EhEG0Q",
@@ -7248,7 +7579,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "2xckAehFc2M",
@@ -7274,7 +7606,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "-9ckWEsK1jo",
@@ -7299,7 +7632,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "ZEn9OTRNk5I",
@@ -7325,7 +7659,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "EwtBIr3-L-Q",
@@ -7351,7 +7686,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "T7TPvupWuk4",
@@ -7376,7 +7712,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "lzTiz2YCE_0",
@@ -7402,7 +7739,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2021,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "EfAU2H2I4Xs",
@@ -7427,7 +7765,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "QG2sU6X-DT8",
@@ -7452,7 +7791,8 @@
   "special_id": null,
   "setting": "stand-up",
   "format": "vertical",
-  "year": 2021
+  "year": 2021,
+  "carrier": "own"
  },
  {
   "id": "vdP-WWLdoTw",
@@ -7478,7 +7818,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2020,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "EcSH5EEV50c",
@@ -7504,7 +7845,8 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2020,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
  },
  {
   "id": "-8fThZWnxdM",
@@ -7530,6 +7872,3310 @@
   "setting": "stand-up",
   "format": "horizontal",
   "year": 2009,
-  "needsCut": true
+  "needsCut": true,
+  "carrier": "own"
+ },
+ {
+  "id": "PO9yyS367p4",
+  "comic": "Chris Rock",
+  "title": "Chris Rock talks about Tupac - Bigger & Blacker (1999)",
+  "channel": "Funniest Stand-Up",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 60,
+  "dur": 60,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": "chris-rock-bigger-blacker-1999-full-transcript",
+  "special_ref": "rock-bigger-blacker",
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 1999,
+  "transcript_offset": {
+   "char_offset": 29602,
+   "phrase": "tupac",
+   "frac_through": 0.7062
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "_hYkjHm05As",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Bigger And Blacker 1999",
+  "channel": "pouya",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 117,
+  "dur": 117,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock (celebrity)"
+  ],
+  "special_id": "chris-rock-bigger-blacker-1999-full-transcript",
+  "special_ref": "rock-bigger-blacker",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 1999,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "f3PJF0YE-x4",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Black People VS. Niggaz (Bring the Pain 1996)",
+  "channel": "SatiricalGameReviews",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 493,
+  "dur": 493,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "black",
+   "people"
+  ],
+  "special_id": "chris-rock-bring-pain-transcript",
+  "special_ref": "rock-bring-the-pain",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "transcript_offset": {
+   "char_offset": 13841,
+   "phrase": "black people",
+   "frac_through": 0.3307
+  },
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "_rabQNrVE_g",
+  "comic": "Chris Rock",
+  "title": "Chris Rock talks about gang mentality - Never Scared (2004)",
+  "channel": "Funniest Stand-Up",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 60,
+  "dur": 60,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": "chris-rock-never-scared-2004-full-transcript",
+  "special_ref": "rock-never-scared",
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2004,
+  "transcript_offset": {
+   "char_offset": 24198,
+   "phrase": "gang mentality",
+   "frac_through": 0.3858
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "eMopGzM1rrU",
+  "comic": "Chris Rock",
+  "title": "Chris Rock – “Never Scared” (2004) | Marriage, Relationships & The Truth Nobody Wants to Hear",
+  "channel": "Culture Clip",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 261,
+  "dur": 261,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chrisrockcomedy",
+   "standuplegend",
+   "chrisrock2023",
+   "comedyspecials"
+  ],
+  "special_id": "chris-rock-never-scared-2004-full-transcript",
+  "special_ref": "rock-never-scared",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2004,
+  "transcript_offset": {
+   "char_offset": 44891,
+   "phrase": "marriage",
+   "frac_through": 0.7157
+  },
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "ane_aAqMo4s",
+  "comic": "Chris Rock",
+  "title": "\"I Love Rap Music\" - Chris Rock: Never Scared (2004)",
+  "channel": "Oga Funny",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 252,
+  "dur": 252,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock",
+   "kevin hart",
+   "standup comedy",
+   "comedy"
+  ],
+  "special_id": "chris-rock-never-scared-2004-full-transcript",
+  "special_ref": "rock-never-scared",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2004,
+  "transcript_offset": {
+   "char_offset": 5808,
+   "phrase": "love rap music",
+   "frac_through": 0.0926
+  },
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "AEFPKrXkfPg",
+  "comic": "Chris Rock",
+  "title": "Chris Rock: Never Scared 2004",
+  "channel": "The Miller Network",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 148,
+  "dur": 148,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": "chris-rock-never-scared-2004-full-transcript",
+  "special_ref": "rock-never-scared",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2004,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "YVysr9LIzPk",
+  "comic": "Chris Rock",
+  "title": "Chris Rock SNL Monologue \"President Trump is in the hospital from COVID, My heart goes out to COVID\"",
+  "channel": "Official Willy2.0",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 17,
+  "dur": 17,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": "chris-rock-snl-monologue-2020-transcript",
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "horizontal",
+  "year": 2020,
+  "transcript_offset": {
+   "char_offset": 476,
+   "phrase": "hospital from covid",
+   "frac_through": 0.074
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "bqGBRDRaB4A",
+  "comic": "Chris Rock",
+  "title": "Chris Rock TAMBORINE 2018  Teachers are lying to your high school kids",
+  "channel": "Director Kenzo",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 143,
+  "dur": 143,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": "chris-rock-tamborine-transcript",
+  "special_ref": "rock-tamborine",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "transcript_offset": {
+   "char_offset": 4747,
+   "phrase": "high school",
+   "frac_through": 0.1218
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "tQD1QJGCDRw",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Tamborine: Cops and Bad Apples",
+  "channel": "Blessings4All",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 174,
+  "dur": 174,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock",
+   "tambourine",
+   "live stand up",
+   "bad apples and cops"
+  ],
+  "special_id": "chris-rock-tamborine-transcript",
+  "special_ref": "rock-tamborine",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "transcript_offset": {
+   "char_offset": 2388,
+   "phrase": "bad apples",
+   "frac_through": 0.0613
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "Od_s2CMeWWE",
+  "comic": "Chris Rock",
+  "title": "Chris Rock on Will Smith slap",
+  "channel": "HAVE-CTRL",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 60,
+  "dur": 60,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2023,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "ciiszhKOqO0",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Stand Up Micheal Jackson joke",
+  "channel": "wmalliencefilms",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 252,
+  "dur": 252,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "hits",
+   "on"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "28vas-3WmUg",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Women Don't Like Nice Guys",
+  "channel": "Just For Laughs",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 486,
+  "dur": 486,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "chris rock",
+   "chris rock (celebrity)",
+   "just for laughs"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2014,
+  "needsCut": true,
+  "carrier": "licensed"
+ },
+ {
+  "id": "-jaqBRsTQgI",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Married People and Soulmates",
+  "channel": "mnemoniccourier",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 287,
+  "dur": 287,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris3"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2011,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "s6X0Qqxx3f0",
+  "comic": "Chris Rock",
+  "title": "Chris Rock-Never Scared-Married Life",
+  "channel": "metallmanutza13",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 210,
+  "dur": 210,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "marriage",
+   "married"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2008,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "8ljkuu02bRQ",
+  "comic": "Chris Rock",
+  "title": "Chris Rock and Steve Martin opening at OSCARS 92nd Academy Awards",
+  "channel": "Mad Games",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 299,
+  "dur": 299,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock",
+   "steve martin",
+   "oscars",
+   "academy awards"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "awards-show",
+  "format": "horizontal",
+  "year": 2020,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "wBBZBlpSa0c",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Kill The Messenger   Job vs  Career",
+  "channel": "O J",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 278,
+  "dur": 278,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2013,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "F3V6Jg4rUMQ",
+  "comic": "Chris Rock",
+  "title": "Chris Rock: Kill The Messenger",
+  "channel": "mheishiro",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 118,
+  "dur": 118,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "kill",
+   "the"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2011,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "4f9FXJZD-7k",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Kill The Messenger Safari",
+  "channel": "PREMIERPRONLINE",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 66,
+  "dur": 66,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "cr",
+   "safari",
+   "lg"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "c3iFfwRQn2c",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Defending Rap Music",
+  "channel": "Fanatical Comedy",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 285,
+  "dur": 285,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "content",
+   "mpmt",
+   "fanatical",
+   "custom playlists"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2021,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "wSBUHqxUvg4",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Kill the Messenger Neighbors",
+  "channel": "Kyriakoscash",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 59,
+  "dur": 59,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "kill",
+   "the"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "u1zeekn3zUc",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Kill the Messenger - Context of the word/ No Doubt",
+  "channel": "kingofraytown",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 152,
+  "dur": 152,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "gwen",
+   "stefani"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "FqGc5Utx88Y",
+  "comic": "Chris Rock",
+  "title": "Chris Rock   Gas",
+  "channel": "BulletMagnet88",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 129,
+  "dur": 129,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "gas"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "936jpnTkm9g",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Kill the Messenger Rap Music",
+  "channel": "Kyriakoscash",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 59,
+  "dur": 59,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "kill",
+   "the"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "QLDtTcM1ZRM",
+  "comic": "Chris Rock",
+  "title": "Chris Rock: Kill The Messenger - Half Hour Lunch Break",
+  "channel": "KillTheMessengerDVD",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 64,
+  "dur": 64,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "comedy",
+   "stand up"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "im9_YDXqvOw",
+  "comic": "Chris Rock",
+  "title": "Chris Rock: Kill the Messenger",
+  "channel": "TheJoCoTv",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 150,
+  "dur": 150,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock:",
+   "kill",
+   "the"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "IESe2fkzxaA",
+  "comic": "Chris Rock",
+  "title": "Chris Rock: Kill The Messenger - No Doubt",
+  "channel": "KillTheMessengerDVD",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 53,
+  "dur": 53,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "comedy"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "5B63AENfC14",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Kill the Messenger On",
+  "channel": "Al g",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 62,
+  "dur": 62,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "kill",
+   "the"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "TBq77c3oMXU",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Entertainment",
+  "channel": "Galmeister",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 153,
+  "dur": 153,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2008,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "caObUaz7oOc",
+  "comic": "Chris Rock",
+  "title": "Chris Rock's Opening Monologue - 77th Annual Academy Awards (2005)",
+  "channel": "James Johnson",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 564,
+  "dur": 564,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "jude law",
+   "sean penn",
+   "academy awards",
+   "chris rock"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "awards-show",
+  "format": "horizontal",
+  "year": 2016,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "koSiuJRoOmg",
+  "comic": "Chris Rock",
+  "title": "Chris rock destroys will smith",
+  "channel": "VIP BARBERS",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 355,
+  "dur": 355,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2023,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "U8g5v__EepA",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - The word faggot & rap music",
+  "channel": "SusanO89",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 301,
+  "dur": 301,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock",
+   "stand up comedy",
+   "rap",
+   "faggot"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "v_fX7IE6vYc",
+  "comic": "Chris Rock",
+  "title": "Chris Rock ROASTS Sylvester Stallone",
+  "channel": "Doctor Decisive",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 26,
+  "dur": 26,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "awards-show",
+  "format": "vertical",
+  "year": 2025,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "Ek0mP-FCcik",
+  "comic": "Chris Rock",
+  "title": "Chris rock stand up - George bush don't give a fuck",
+  "channel": "Edge Turner",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 82,
+  "dur": 82,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "vevo",
+   "klarity",
+   "eyecoin",
+   "mysterytales"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2017,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "gjJUPE-lR5Y",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Bigger & Blacker Hilary Clinton",
+  "channel": "CarnalMischief",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 128,
+  "dur": 128,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "bigger",
+   "blacker"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2011,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "bGc1sJeENNI",
+  "comic": "Chris Rock",
+  "title": "Chris Rock_Who is the Biggest Liar",
+  "channel": "Bandhari",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 329,
+  "dur": 329,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2021,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "RIJavth0a9c",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Relationships are hard",
+  "channel": "JAMESORELLI",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 273,
+  "dur": 273,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2019,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "PTzC0twXZnU",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Bigger & Blacker - Aids Test",
+  "channel": "CarnalMischief",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 115,
+  "dur": 115,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "bigger",
+   "blacker"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2011,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "-3U4-mv5_08",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - old black men",
+  "channel": "timand2037",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 113,
+  "dur": 113,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock",
+   "old black men"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2012,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "vxe_wo8mv8A",
+  "comic": "Chris Rock",
+  "title": "Chris Rock, Bigger and Blacker - Aids",
+  "channel": "Zirnevis",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 223,
+  "dur": 223,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2025,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "441c3FKWYJo",
+  "comic": "Chris Rock",
+  "title": "Chris Rock-relationships",
+  "channel": "B. K. Rouzaud",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 232,
+  "dur": 232,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "kkwB76o-3Go",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Black people hate white people",
+  "channel": "incultinfo",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 23,
+  "dur": 23,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock",
+   "comedy show",
+   "hbo",
+   "entertainment"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "nuLFH7DrQIk",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Bigger & Blacker: \"yea, I got a gut...\"",
+  "channel": "bsm413",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 23,
+  "dur": 23,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "bigger",
+   "blacker"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "-GmalfC_loM",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Biggest Liars [Leg]",
+  "channel": "lubehring",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 143,
+  "dur": 143,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "tArmHN4j3qQ",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Michael Jackson",
+  "channel": "vipertom15",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 252,
+  "dur": 252,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "stand-up",
+   "michael"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2008,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "1ZpGLbGwyh4",
+  "comic": "Chris Rock",
+  "title": "Chris Rock on greasy Jermaine Jackson",
+  "channel": "Real Reviews",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 57,
+  "dur": 57,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock",
+   "never scared",
+   "2004",
+   "jermaine jackson"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2017,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "WWERzwbobOk",
+  "comic": "Chris Rock",
+  "title": "Chris Rock-Never Scared Clip: Legalizing Drugs",
+  "channel": "Nbaulch10is",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 246,
+  "dur": 246,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chrisrock",
+   "comedy",
+   "funny",
+   "chris"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2006,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "Ux2z8CFVEMg",
+  "comic": "Chris Rock",
+  "title": "Chris Rock on Politics -- A Message To Liberals & Conservatives!",
+  "channel": "BeyondTheSpectrum08",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 60,
+  "dur": 60,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2014,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "dapocWEfczQ",
+  "comic": "Chris Rock",
+  "title": "Chris Rock Never Scared - Worship Money",
+  "channel": "Bash-Shell",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 142,
+  "dur": 142,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "never",
+   "scared"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "1OnMgpkNk58",
+  "comic": "Chris Rock",
+  "title": "Chris Rock-Never Scared-Drugs",
+  "channel": "metallmanutza13",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 167,
+  "dur": 167,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "never",
+   "scared"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2008,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "xp7AyEP1jtQ",
+  "comic": "Chris Rock",
+  "title": "CHRIS ROCK_ABOUT RAP MUSIC",
+  "channel": "Bandhari",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 273,
+  "dur": 273,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2021,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "UhjfxZHOT_o",
+  "comic": "Chris Rock",
+  "title": "Chris Rock: The War On Terror",
+  "channel": "Jerry Culp",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 270,
+  "dur": 270,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris rock",
+   "war on terror",
+   "democrats",
+   "republicans"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "YIrylYDKoGA",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Never Scared",
+  "channel": "WitsApp",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 44,
+  "dur": 44,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "jokes",
+   "humor",
+   "chris rock",
+   "just for laughs"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2023,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "zywIR_ZFLts",
+  "comic": "Chris Rock",
+  "title": "Chris Rock - Women's Platonic Friends",
+  "channel": "saneb",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 262,
+  "dur": 262,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "chris",
+   "rock",
+   "bring",
+   "the"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2011,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "yI02o7dJc1Y",
+  "comic": "Jerry Seinfeld",
+  "title": "Jerry Seinfeld 23 Hours To Kill  - it is what it is",
+  "channel": "Other Khalil",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 82,
+  "dur": 82,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "effects",
+   "after",
+   "cs"
+  ],
+  "special_id": "jerry-seinfeld-23-hours-to-kill-transcript",
+  "special_ref": "jerry-23-hours",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "transcript_offset": {
+   "char_offset": 476,
+   "phrase": "what",
+   "frac_through": 0.0111
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "SzpVE5ixAG8",
+  "comic": "Jerry Seinfeld",
+  "title": "Jerry Seinfeld performs at the Gershwin Prize for Paul McCartney",
+  "channel": "infomisa",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 312,
+  "dur": 312,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "news",
+   "politics",
+   "entertainment",
+   "blogs"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "awards-show",
+  "format": "horizontal",
+  "year": 2012,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "V1PQg43qDGk",
+  "comic": "Jerry Seinfeld",
+  "title": "When Wives Complain That Their Husbands Don't Listen - Jerry Seinfeld#shorts#marriagecomedy#comedian",
+  "channel": "ConventionalComics",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 47,
+  "dur": 47,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2023,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "IT-sBagXbT0",
+  "comic": "Jerry Seinfeld",
+  "title": "jerry seinfeld on florida drivers (2)",
+  "channel": "jjeerryy100",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 58,
+  "dur": 58,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "jde",
+   "jdeproductions",
+   "jerry",
+   "seinfeld"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2009,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "wNF_cZ6DsCo",
+  "comic": "Jerry Seinfeld",
+  "title": "1980's Stand Up Comedy  \"Jerry Seinfeld\"",
+  "channel": "A Blast from the Past",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 436,
+  "dur": 436,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "1980's",
+   "stand",
+   "up",
+   "comedy"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "9AqeGogHetw",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K. - Gay Marriage, Ewan McGregor (한글자막) (Shameless, 2007, HBO)",
+  "channel": "JB2031",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 226,
+  "dur": 226,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "shameless",
+   "gay marriage",
+   "ewan mcgregor"
+  ],
+  "special_id": "louis-c-k-shameless-2007-full-transcript",
+  "special_ref": "louis-shameless",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2007,
+  "transcript_offset": {
+   "char_offset": 19828,
+   "phrase": "ewan mcgregor",
+   "frac_through": 0.4092
+  },
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "C--4udLexFI",
+  "comic": "Louis C.K.",
+  "title": "LOUIS CK - 2007 - SHAMELESS - TALKS ABOUT HIS DAUGHTER",
+  "channel": "The Destress Network",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 272,
+  "dur": 272,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": "louis-c-k-shameless-2007-full-transcript",
+  "special_ref": "louis-shameless",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2007,
+  "transcript_offset": {
+   "char_offset": 34357,
+   "phrase": "daughter",
+   "frac_through": 0.709
+  },
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "0eUbnkVFQuE",
+  "comic": "Louis C.K.",
+  "title": "Louis CK - The spiral [Shameless (2007)]",
+  "channel": "dovenol",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 43,
+  "dur": 43,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c k",
+   "fat people",
+   "thin people"
+  ],
+  "special_id": "louis-c-k-shameless-2007-full-transcript",
+  "special_ref": "louis-shameless",
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2007,
+  "transcript_offset": {
+   "char_offset": 21626,
+   "phrase": "spiral",
+   "frac_through": 0.4463
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "-LlydlYTcsI",
+  "comic": "Louis C.K.",
+  "title": "Louis CK 2015 - SNL Monologue, greek subs ( ελληνικοί υπότιτλοι)",
+  "channel": "stand up comedy with greek subs",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 521,
+  "dur": 521,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "κωμωδία"
+  ],
+  "special_id": "louis-c-k-snl-monologue-2015-transcript",
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "horizontal",
+  "year": 2015,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "-7ygE5gDFpI",
+  "comic": "Louis C.K.",
+  "title": "For the 1000th Time: I'm Sorry | Louis CK 🤣😂🤣",
+  "channel": "Stranger Bible Comedy",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 57,
+  "dur": 57,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis ck",
+   "comedy",
+   "stand up",
+   "louis ck podcast"
+  ],
+  "special_id": "louis-c-k-sorry-transcript",
+  "special_ref": "louis-sorry",
+  "setting": "stand-up",
+  "format": "vertical",
+  "transcript_offset": {
+   "char_offset": 129,
+   "phrase": "time",
+   "frac_through": 0.0029
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "GjHBK2-ikdQ",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K. Explains Why God Needs a 5-Minute Press Conference",
+  "channel": "Lumetra Comedy",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 523,
+  "dur": 523,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis ck",
+   "louis c.k.",
+   "louis ck comedy",
+   "louis c.k. comedy"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2026,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "qApUEH0oe_U",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K. on Bill Maher Throwing Him a Rope | 2026 Mark Twain Prize",
+  "channel": "The Kennedy Center",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 78,
+  "dur": 78,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "the kennedy center",
+   "kennedy center",
+   "john f kennedy center for the performing arts",
+   "performing arts"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "awards-show",
+  "format": "horizontal",
+  "year": 2026,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "vGs8e9MZWNk",
+  "comic": "Louis C.K.",
+  "title": "Louis CK - Of Course But Maybe - Oczywiście, ale może jednak [pl]",
+  "channel": "standapy.angielski",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 256,
+  "dur": 256,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2013,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "1aXt8qmhsZM",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K Live Comedy Special : Weddings || Louis C.K",
+  "channel": "Mr Louis",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 568,
+  "dur": 568,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k",
+   "louis c.k live comedy special",
+   "weddings",
+   "louis ck"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2020,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "6ZD17i3N42k",
+  "comic": "Louis C.K.",
+  "title": "How You Like Them Apples?",
+  "channel": "Louis C.K. - Topic",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 406,
+  "dur": 406,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "sorry",
+   "how you like them apples?"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2022,
+  "needsCut": true,
+  "carrier": "own"
+ },
+ {
+  "id": "4ZMf2n3gFzk",
+  "comic": "Louis C.K.",
+  "title": "Why I Got Divorced | Louis CK 😂🤣😂",
+  "channel": "Stranger Bible Comedy",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 60,
+  "dur": 60,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis ck",
+   "comedy",
+   "stand up",
+   "louis ck divorce"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2026,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "PdFB7q89_3U",
+  "comic": "Louis C.K.",
+  "title": "Louis CK Everything is amazing & Nobody is happy",
+  "channel": "Marjo Duiveman",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 350,
+  "dur": 350,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis",
+   "ck",
+   "everthing",
+   "is"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "horizontal",
+  "year": 2011,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "XLGzFQg_1xc",
+  "comic": "Louis C.K.",
+  "title": "Louis CK  Of Course But Maybe - Oh My God",
+  "channel": "Mitch Lake",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 256,
+  "dur": 256,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis ck",
+   "louie ck",
+   "oh my god",
+   "real keeping"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2013,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "i3TBNkbftGQ",
+  "comic": "Louis C.K.",
+  "title": "Everybody Has Their Time",
+  "channel": "Louis C.K. - Topic",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 87,
+  "dur": 87,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "oh my god",
+   "everybody has their time"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2022,
+  "carrier": "own"
+ },
+ {
+  "id": "hmr-NRCbnus",
+  "comic": "Louis C.K.",
+  "title": "Louis CK: Homeless guy at Port Authority bus terminal",
+  "channel": "drpenfield",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 182,
+  "dur": 182,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louie",
+   "louis ck",
+   "louie (comedian)",
+   "louis c.k."
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2014,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "o3LKXMsw6N8",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K Live Comedy Special : Introduction || Louis C.K",
+  "channel": "Mr Louis",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 478,
+  "dur": 478,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "introduction",
+   "louis c.k",
+   "louis c.k live comedy special",
+   "louis ck"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2020,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "SLEqH00nQac",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K.-Shameless \"Ewan McGregor\" Clip",
+  "channel": "shofish",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 81,
+  "dur": 81,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "comedy",
+   "comedian",
+   "ewan",
+   "mcgregor"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "FUs-lbkqlKs",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K. Shameless clip",
+  "channel": "Lemmy101m",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 151,
+  "dur": 151,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis",
+   "c.k.",
+   "shameless"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "rYKEsRvDG7M",
+  "comic": "Louis C.K.",
+  "title": "Louis CK on friends that start conversations that you don't wanna have Shameless",
+  "channel": "Petr Petrov",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 80,
+  "dur": 80,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "louis ck net worth",
+   "louis ck youtube",
+   "louis ck quotes"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2015,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "vFbWgDfUfqs",
+  "comic": "Louis C.K.",
+  "title": "Louis CK - Why I Hate People",
+  "channel": "Stand-Up Spot",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 51,
+  "dur": 51,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "shameless",
+   "comedy",
+   "shorts"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2023,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "YLYDP9S2nQY",
+  "comic": "Louis C.K.",
+  "title": "Louis CK -  Scrubbing In a Shower  I Louis c k  2017",
+  "channel": "LOUIS CK 2017",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 593,
+  "dur": 593,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis ck",
+   "comedian",
+   "stand up",
+   "louis ck stand up"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2017,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "WQyF099TKM8",
+  "comic": "Louis C.K.",
+  "title": "Dial Phones?! Louis CK",
+  "channel": "Patrick Reed",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 68,
+  "dur": 68,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2017,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "mXGWNkFajlw",
+  "comic": "Louis C.K.",
+  "title": "40 Louis CK did not impress Joe Pesci   2016",
+  "channel": "full hp",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 227,
+  "dur": 227,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "приколы",
+   "лучшие приколы",
+   "авто приколы",
+   "coub"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2016,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "O1eKLltGLt0",
+  "comic": "Louis C.K.",
+  "title": "Louis CK's Marijuana Mistake",
+  "channel": "Gary Enwards",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 239,
+  "dur": 239,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis",
+   "louis ck",
+   "ck",
+   "funny"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2017,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "wADkhFfqZZE",
+  "comic": "Louis C.K.",
+  "title": "Louis CK - Clifford The Big Red Dog",
+  "channel": "Mr. Rogers",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 153,
+  "dur": 153,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2023,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "WTgppUX3pHc",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K. — Beacon Theater (2011) — start a show / first class / selfishness  **edited PG version**",
+  "channel": "DanHackenjos PianOriginal",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 599,
+  "dur": 599,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2023,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "P8xwW4VHWMw",
+  "comic": "Louis C.K.",
+  "title": "Louis CK   Selfish",
+  "channel": "Tony Nardo",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 598,
+  "dur": 598,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2016,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "KcC0FJQSMsI",
+  "comic": "Louis C.K.",
+  "title": "😂 I’m NOT Racist, But… 😂💀😂 | Saturday Night Live w/ Louis C.K.",
+  "channel": "Comedy Clips Central",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 36,
+  "dur": 36,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "vertical",
+  "year": 2025,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "i-62r3VWfhc",
+  "comic": "Louis C.K.",
+  "title": "Louis CK - Im half dead // Je suis à moitié mort (VOSTFR)",
+  "channel": "Julien Noyer",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 271,
+  "dur": 271,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis ck",
+   "français",
+   "france"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2015,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "grm3YUKmmhs",
+  "comic": "Louis C.K.",
+  "title": "Louis CK and the Child Molester Paradox",
+  "channel": "Scottness",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 239,
+  "dur": 239,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "funny",
+   "rare",
+   "best",
+   "howard"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "horizontal",
+  "year": 2015,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "4XF2erWA4XQ",
+  "comic": "Louis C.K.",
+  "title": "My Audition to SNL | Louis CK 😂🤣😂",
+  "channel": "Stranger Bible Comedy",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 150,
+  "dur": 150,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis ck",
+   "comedy",
+   "stand up",
+   "louis ck podcast"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2025,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "oe8T03d079g",
+  "comic": "Louis C.K.",
+  "title": "Louis CK - Fountains and Pedophiles // Fontaines et Pédophiles (VOSTFR)",
+  "channel": "Julien Noyer",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 253,
+  "dur": 253,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2015,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "xq_QqC2Nkqo",
+  "comic": "Louis C.K.",
+  "title": "Intro / Dead People",
+  "channel": "Louis C.K. - Topic",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 149,
+  "dur": 149,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "hilarious",
+   "intro / dead people"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2025,
+  "carrier": "own"
+ },
+ {
+  "id": "6Amxd6UVWQI",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K. \"Simpler Times\" - 10/1/08",
+  "channel": "Inflatable Conan",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 531,
+  "dur": 531,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "conan",
+   "o'brien"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "horizontal",
+  "year": 2014,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "roRtGd4HMpg",
+  "comic": "Louis C.K.",
+  "title": "Other People's Kids",
+  "channel": "Louis C.K. - Topic",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 498,
+  "dur": 498,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "hilarious",
+   "other people's kids"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2025,
+  "needsCut": true,
+  "carrier": "own"
+ },
+ {
+  "id": "zuLrBLxbLxw",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K - Cunt & Nigger",
+  "channel": "JhonnyC323",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 301,
+  "dur": 301,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis",
+   "c.k",
+   "cunt",
+   "nigger"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "CItCd7TKwMI",
+  "comic": "Louis C.K.",
+  "title": "Louis CK Hilarious Part 7 The Way We Talk11",
+  "channel": "Petr Petrov",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 531,
+  "dur": 531,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "louis ck net worth",
+   "louis ck youtube",
+   "louis ck quotes"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2015,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "RTrCBcrFMCI",
+  "comic": "Louis C.K.",
+  "title": "Louis CK - Boys vs Girls",
+  "channel": "DeanMotion",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 179,
+  "dur": 179,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis",
+   "ck",
+   "boys",
+   "vs"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2010,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "3l09rmSs9p0",
+  "comic": "Louis C.K.",
+  "title": "Processing Shame",
+  "channel": "Louis C.K. - Topic",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 207,
+  "dur": 207,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis c.k.",
+   "chewed up",
+   "processing shame"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2022,
+  "needsCut": true,
+  "carrier": "own"
+ },
+ {
+  "id": "IzF2w0-8UNA",
+  "comic": "Louis C.K.",
+  "title": "Louis C.K. - Growing Up in Newton & Dealing With Bullies",
+  "channel": "Real Life Comedy Bible",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 66,
+  "dur": 66,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "stand up comedy shorts",
+   "relatable comedy",
+   "viral comedy shorts",
+   "everyday humor"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2026,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "0GCsekb8kNI",
+  "comic": "Louis C.K.",
+  "title": "Louis CK Reveals the Drunk Phone Calls Between LBJ and Jackie Kennedy",
+  "channel": "Operation Monkeywrench",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 39,
+  "dur": 39,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2023,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "IN9Knn7_5JA",
+  "comic": "Louis C.K.",
+  "title": "“on the off chance that hopefully you’re into that” – Louis C.K. on girls who say no but want you to",
+  "channel": "Dingo Lover",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 124,
+  "dur": 124,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2023,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "6i7-JrMznyE",
+  "comic": "Louis C.K.",
+  "title": "Louis CK MSG \"Pilot's Last Day\"",
+  "channel": "Sean's Lawn",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 38,
+  "dur": 38,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louieckmsg",
+   "louisckmsg",
+   "louisck",
+   "louiemsg"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2015,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "h9WC6P7rab0",
+  "comic": "Louis C.K.",
+  "title": "28 Louis CK on Why Farts Are Funny",
+  "channel": "full hp",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 87,
+  "dur": 87,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "приколы",
+   "лучшие приколы",
+   "авто приколы",
+   "coub"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2016,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "WNI7SAVlz-Q",
+  "comic": "Louis C.K.",
+  "title": "Louis CK: Sicko Mode",
+  "channel": "1791",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 486,
+  "dur": 486,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis ck",
+   "bill burr",
+   "funny"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2019,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "yj40dwEEmj8",
+  "comic": "Louis C.K.",
+  "title": "12 Louis CK   Stealing Tampons",
+  "channel": "full hp",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 236,
+  "dur": 236,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "приколы",
+   "лучшие приколы",
+   "авто приколы",
+   "coub"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2016,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "xrJh2hO5dMM",
+  "comic": "Louis C.K.",
+  "title": "“Folks, why are you giving your money to Donald Trump?” (Louis C.K.)",
+  "channel": "Roman Bernard",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 66,
+  "dur": 66,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "donald trump (organization leader)",
+   "louie (tv program)",
+   "louis c.k. (tv writer)",
+   "politics (tv genre)"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2015,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "0720ucDf9JY",
+  "comic": "Louis C.K.",
+  "title": "Melania Trump - Louis CK - Racism",
+  "channel": "c2prusa",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 162,
+  "dur": 162,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "christopher prusa",
+   "prusa comedy",
+   "prusa",
+   "comedy"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2017,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "vbLf9Ixf7Z8",
+  "comic": "Louis C.K.",
+  "title": "Louis CK Ghostbusters",
+  "channel": "Owen Fitzgerald",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 32,
+  "dur": 32,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "frankie",
+   "boyle",
+   "ghostbusters",
+   "louis"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2019,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "sePS8-J0zaM",
+  "comic": "Louis C.K.",
+  "title": "Louis C. K. At #InnerCircle with Bill de Blasio",
+  "channel": "Azi Paybarah",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 37,
+  "dur": 37,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "awards-show",
+  "format": "horizontal",
+  "year": 2015,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "Z96K-OvdPI4",
+  "comic": "Louis C.K.",
+  "title": "37 Louis CK   Smelly Mexicans",
+  "channel": "full hp",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 141,
+  "dur": 141,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "приколы",
+   "лучшие приколы",
+   "авто приколы",
+   "coub"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2016,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "R37zkizucPU",
+  "comic": "Louis C.K.",
+  "title": "Louis CK honors George Carlin",
+  "channel": "Bromista5",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 599,
+  "dur": 599,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "louis",
+   "ck",
+   "louisck",
+   "george"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "awards-show",
+  "format": "horizontal",
+  "year": 2011,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "M7rm47VIxtw",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald talks about George Washington - Hitler's Dog, Gossip & Trickery (2017)",
+  "channel": "Funniest Stand-Up",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 60,
+  "dur": 60,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": "norm-macdonald-hitlers-dog-gossip-trickery-2017-full-transcript",
+  "special_ref": "norm-hitlers-dog",
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2017,
+  "transcript_offset": {
+   "char_offset": 3026,
+   "phrase": "george washington",
+   "frac_through": 0.0759
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "rXURLOOupHc",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald SUICIDE JOKE 😅😂 : Hitler's Dog, Gossip & Trickery (2017) Netflix",
+  "channel": "Varax Nation",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 60,
+  "dur": 60,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "comedy",
+   "comedy central",
+   "netflix",
+   "john mulaney:"
+  ],
+  "special_id": "norm-macdonald-hitlers-dog-gossip-trickery-2017-full-transcript",
+  "special_ref": "norm-hitlers-dog",
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2017,
+  "transcript_offset": {
+   "char_offset": 8144,
+   "phrase": "suicide",
+   "frac_through": 0.2044
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "hO_bbvd2g-s",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald on Wikipedia 😂😅: Hitler's Dog, Gossip & Trickery (2017) Netflix",
+  "channel": "Varax Nation",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 60,
+  "dur": 60,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "comedy",
+   "comedy central",
+   "netflix",
+   "john mulaney:"
+  ],
+  "special_id": "norm-macdonald-hitlers-dog-gossip-trickery-2017-full-transcript",
+  "special_ref": "norm-hitlers-dog",
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2017,
+  "transcript_offset": {
+   "char_offset": 16909,
+   "phrase": "wikipedia",
+   "frac_through": 0.4243
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "d-DTWb_2ubE",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald Has No OPINIONS 😂 : Hitler's Dog, Gossip & Trickery (2017)",
+  "channel": "Varax Nation",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 58,
+  "dur": 58,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "comedy",
+   "comedy central",
+   "netflix",
+   "john mulaney:"
+  ],
+  "special_id": "norm-macdonald-hitlers-dog-gossip-trickery-2017-full-transcript",
+  "special_ref": "norm-hitlers-dog",
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2017,
+  "transcript_offset": {
+   "char_offset": 5142,
+   "phrase": "has",
+   "frac_through": 0.129
+  },
+  "carrier": "unofficial"
+ },
+ {
+  "id": "MEYbL1-62Zk",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald Most Brutal Jokes as the Weekend Update Host",
+  "channel": "Norm Macdonald Video Archive",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 560,
+  "dur": 560,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "norm macdonald",
+   "best of norm",
+   "stand up",
+   "norm macdonald live"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "horizontal",
+  "year": 2023,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "s9zTJ763IO0",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald On Hitler Having A Dog... #funny #comedy #jokes #standupcomedy #comedian #shorts",
+  "channel": "LaughTrackofLife",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 68,
+  "dur": 68,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2025,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "Oseqh7SMIvo",
+  "comic": "Norm Macdonald",
+  "title": "Norm MacDonald - Professor of Logic Joke",
+  "channel": "Alex Shifrin",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 240,
+  "dur": 240,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "norm",
+   "macdonald",
+   "norm macdonald",
+   "conan"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2016,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "Fv67QgVSqkk",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald - Swedish German Joke",
+  "channel": "cool guy",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 296,
+  "dur": 296,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "andy richter",
+   "the swedish german",
+   "norm macdonald",
+   "norm macdonald live"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "horizontal",
+  "year": 2017,
+  "needsCut": true,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "OtpJzZJ-BNM",
+  "comic": "Norm Macdonald",
+  "title": "Norm MacDonald on Women Drivers #normmacdonaldsnl #snl #normmacdonald",
+  "channel": "TheNormExperience",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 42,
+  "dur": 42,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "vertical",
+  "year": 2024,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "Pt9F1ADNfsg",
+  "comic": "Norm Macdonald",
+  "title": "I’ve watched this clip an unhealthy amount of times- Norm Macdonald- SNL",
+  "channel": "Chairman of the Bored",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 61,
+  "dur": 61,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "horizontal",
+  "year": 2021,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "ywica8-Z7kc",
+  "comic": "Norm Macdonald",
+  "title": "Norm Forgets His Own Joke 🤣🪂🫠 | Norm Macdonald on David Letterman  #comedy #funny #shorts",
+  "channel": "Joke LOL",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 54,
+  "dur": 54,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "norm macdonald",
+   "david letterman",
+   "lol",
+   "haha"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "vertical",
+  "year": 2024,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "p21sXizj4u0",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald tells story about Writer on Rosanne Show",
+  "channel": "Norm Shorts",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 57,
+  "dur": 57,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "talk-show",
+  "format": "vertical",
+  "year": 2022,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "dTa91FbehKU",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald - Sarcastic Accent",
+  "channel": "Reverof Reign",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 159,
+  "dur": 159,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2023,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "oKMIc9L8MoY",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald - Complications/Bruise",
+  "channel": "Fanatical Comedy",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 145,
+  "dur": 145,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "content",
+   "mpmt",
+   "20z",
+   "roaring"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2020,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "WNv0vOpEJtw",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald - Hitler's Dog",
+  "channel": "P4RADIGM",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 147,
+  "dur": 147,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2022,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "zPLQlZvDzbk",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald - Ox",
+  "channel": "Fanatical Comedy",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 105,
+  "dur": 105,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "content",
+   "mpmt",
+   "fanatical",
+   "entertainment"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2022,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "XkXNzm_Abkw",
+  "comic": "Norm Macdonald",
+  "title": "\"You ever just Lie for no reason?\" Norm Macdonald",
+  "channel": "Norm Shorts",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 51,
+  "dur": 51,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2022,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "uXdtafGdIVM",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald on Germany",
+  "channel": "Ray “PODAN” Dorschner",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 142,
+  "dur": 142,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [
+   "norm macdonald",
+   "standup",
+   "stand-up",
+   "comedy"
+  ],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "horizontal",
+  "year": 2018,
+  "carrier": "unofficial"
+ },
+ {
+  "id": "-yBZ6EMnC2c",
+  "comic": "Norm Macdonald",
+  "title": "Were you expecting a joke?",
+  "channel": "Norm Clipdonald",
+  "kind": "human",
+  "media": "youtube",
+  "sec": 22,
+  "dur": 22,
+  "checked": "2026-10-16",
+  "style": [],
+  "topics": [],
+  "tagsSource": "draft-auto",
+  "draftTags": [],
+  "special_id": null,
+  "special_ref": null,
+  "setting": "stand-up",
+  "format": "vertical",
+  "year": 2022,
+  "carrier": "unofficial"
  }
 ]
