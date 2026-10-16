@@ -1,6 +1,6 @@
 # Funnier
 
-Arena for comedy. Two official YouTube clips, one vote: which is funnier?
+Arena for comedy. Two YouTube clips, one vote: which is funnier?
 
 - Live: https://www.funnier.si/ (Cloudflare Worker `funnier-web` proxying https://prx0r.github.io/characters/; the apex 301s to www). API: https://api.funnier.si
 - Votes are AT Protocol records (`io.github.prx0r.funnier.vote`) written to each voter's own Bluesky repo via OAuth.
@@ -8,8 +8,11 @@ Arena for comedy. Two official YouTube clips, one vote: which is funnier?
 - `.github/workflows/funnier.yml` runs every 15 min: discovers voters on Jetstream, recounts every voter's records
   from their PDS (`tally/tally.mjs`), computes Elo (K=32) + Wilson lower bound for clips and comics (cross-comic votes only),
   and publishes `data/leaderboard.json` + `data/votes.json` to the `gh-pages` branch. One vote per voter per pair (latest wins).
-- Clips: official channels only (comic's own, Netflix Is A Joke, Team Coco, Letterman, Tonight Show). Embedded with the
-  official player; nothing downloaded. Add clips to `clips.json`.
+- Clips: any embeddable YouTube upload of a stand-up set (decided 2026-10-16), official or not, embedded with YouTube's
+  own player; nothing downloaded. Each clip has `carrier`: `own` (the comic's channel or "<Comic> - Topic"), `licensed`
+  (Netflix / Netflix Is A Joke, Comedy Central, JFL, HBO, Team Coco, late-night shows, SNL, Kill Tony; list in
+  `channels.json` `licensedCarriers`) or `unofficial` (everything else). Add clips to `clips.json`.
+- Unofficial uploads are embedded via YouTube's player; rights holders can request removal; dead embeds are pruned daily.
 - Build frontend: `npm i && npm run build` (bundles `src/app.js` -> `site/app.js`).
 
 ## Algorithms (v2)
@@ -70,6 +73,12 @@ Arena for comedy. Two official YouTube clips, one vote: which is funnier?
 
 ## Mark Normand (added 2026-10-16, no characters2 data)
 - Official channel `@marknormand` (UCGmMFJB36GBXTgaLtfGd6Jg) is on the `channels.json` allowlist. 19 oEmbed-verified uploads from it in `clips.json`: the full *Out To Lunch* special (long-form, needsCut) plus stand-up clips and Shorts, labelled with their special in the title (`special_ref` mn-out-to-lunch / mn-soup-to-nuts / mn-none-too-pleased) where the upload title says so. Specials in comics.json verified against tuesdayspod.com, IMDb and Netflix: Still Got It (2014), Don't Be Yourself (2017, Comedy Central), Out To Lunch (2020, YouTube), Soup to Nuts (2023, Netflix), None Too Pleased (2026, Netflix). No "Come Together (2024)" special was found. With no theory data, struct_sim uses his style/topic tags only, and the crowd rating does the rest.
+
+## characters2 corpus merge (2026-10-16, characters2@953dddc)
+- Chris Rock, Louis C.K., Jerry Seinfeld and Norm Macdonald clips from characters2 `corpus/clips.json`, mostly unofficial uploads, every one oEmbed-checked (embeddable and alive) on import. Mapping: corpus `format` -> `setting` (stand-up / talk-show / awards-show), `format` = vertical|horizontal (oEmbed shape + `/shorts` probe), raw keywords -> `draftTags` (style/topics left empty), `needsCut` when > 180s with no start, `special_id` kept from the corpus and `special_ref` mapped to our comics.json special, `transcript_offset {char_offset, phrase, frac_through}` kept where characters2 located the bit in the special's transcript.
+- Non-stand-up uploads (interviews, podcasts, news segments, commentary, sitcom scenes, trailers) are not imported.
+- Dedup: exact id; same `special_id` with `frac_through` within ±0.03 (same bit); or same normalised title (comic name, punctuation, "full", "HD", years stripped) with duration within ±5s. The kept clip prefers own > licensed > unofficial, then the longer one, and an already-live clip always stays. Duplicates are left out of `clips.json` (so they never pair) and recorded with `dup_of` in `tools/dupes.json`.
+- Re-running `tools/import-theory.mjs` re-derives `special_id`/`special_ref` from titles and would overwrite the corpus-provided ones; keep that in mind before re-importing.
 
 ## Comic photos
 Portraits are rights-cleared files from Wikimedia Commons (CC BY, CC BY-SA, CC0 or public domain only), committed resized/cropped under `site/img/` with `photo`, `photoCredit`, `photoLicense`, `photoLicenseUrl`, `photoSource` (the Commons file page) and `photoNote` in comics.json. They show on the Comics cards (object-fit cover, `object-position: center 20%`) and the profile hero with a small attribution line, and are listed in credits.html. A comic without a photo falls back to a YouTube thumbnail.
