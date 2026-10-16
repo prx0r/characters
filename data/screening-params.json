@@ -1,6 +1,6 @@
 {
  "version": "screen-1-default",
- "generated": "2026-10-16T14:23:56.728Z",
+ "generated": "2026-10-16T15:34:51.111Z",
  "apply": false,
  "gate": {
   "passed": false,
@@ -19,12 +19,12 @@
   "coldTraining": 0.55,
   "coldExplore": 0.45,
   "snapMult": 1.25,
-  "slowMult": 0.7,
+  "slowMult": 0.85,
   "strongMult": 1.4,
   "skipLoss": 0.3,
   "clipSkipLoss": 0.4,
   "snapMs": 1500,
-  "slowMs": 12000,
+  "slowMs": 7000,
   "simStyle": 0.25,
   "simOps": 0.25,
   "simTopic": 0.15,
@@ -37,8 +37,8 @@
   "capDesktopSec": 150,
   "minWindowSec": 30,
   "introMs": 2500,
-  "ballotMs": 7000,
-  "ballotResumeMs": 2500
+  "ballotMs": 10000,
+  "ballotResumeMs": 3000
  },
  "defaults": {
   "pairCloseUnc": 0.4,
@@ -50,12 +50,12 @@
   "coldTraining": 0.55,
   "coldExplore": 0.45,
   "snapMult": 1.25,
-  "slowMult": 0.7,
+  "slowMult": 0.85,
   "strongMult": 1.4,
   "skipLoss": 0.3,
   "clipSkipLoss": 0.4,
   "snapMs": 1500,
-  "slowMs": 12000,
+  "slowMs": 7000,
   "simStyle": 0.25,
   "simOps": 0.25,
   "simTopic": 0.15,
@@ -68,8 +68,8 @@
   "capDesktopSec": 150,
   "minWindowSec": 30,
   "introMs": 2500,
-  "ballotMs": 7000,
-  "ballotResumeMs": 2500
+  "ballotMs": 10000,
+  "ballotResumeMs": 3000
  },
  "bounds": {
   "pairCloseUnc": [
@@ -109,7 +109,7 @@
    1.6
   ],
   "slowMult": [
-   0.4,
+   0.6,
    1
   ],
   "strongMult": [
@@ -129,8 +129,8 @@
    3000
   ],
   "slowMs": [
-   6000,
-   20000
+   5000,
+   9500
   ],
   "simStyle": [
    0.05,
