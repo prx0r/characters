@@ -1,0 +1,77 @@
+{
+  "canonical": {
+    "text_laugh": "unified_laugh_model.pkl",
+    "delivery_laugh": "am_delivery_model.pkl",
+    "laugh_type": "laugh_type_model.pkl",
+    "physics": "/home/box/comedy-audio/learned_physics.json"
+  },
+  "models": {
+    "am_delivery_model.pkl": {
+      "size_kb": 14024,
+      "modified": 1792168899.9687107
+    },
+    "audio_laugh_track_model.pkl": {
+      "size_kb": 125,
+      "modified": 1792133165.4865878
+    },
+    "delivery_aware_model.pkl": {
+      "size_kb": 223,
+      "modified": 1792167751.8270276
+    },
+    "laugh_model.pkl": {
+      "size_kb": 102,
+      "modified": 1792092752.7757807
+    },
+    "laugh_model_combined.pkl": {
+      "size_kb": 121,
+      "modified": 1792116387.7402966
+    },
+    "laugh_model_v2.pkl": {
+      "size_kb": 129,
+      "modified": 1792092752.7797806
+    },
+    "laugh_model_v3.pkl": {
+      "size_kb": 154,
+      "modified": 1792092752.7797806
+    },
+    "laugh_model_v4.pkl": {
+      "size_kb": 120,
+      "modified": 1792115708.974011
+    },
+    "laugh_model_v5.pkl": {
+      "size_kb": 238,
+      "modified": 1792118862.3855994
+    },
+    "laugh_track_model.pkl": {
+      "size_kb": 126,
+      "modified": 1792132806.9416752
+    },
+    "laugh_type_model.pkl": {
+      "size_kb": 754,
+      "modified": 1792136015.485561
+    },
+    "prosody_laugh_model.pkl": {
+      "size_kb": 79,
+      "modified": 1792129314.1651022
+    },
+    "smile_laugh_model.pkl": {
+      "size_kb": 3587,
+      "modified": 1792126584.9913247
+    },
+    "unified_laugh_model.pkl": {
+      "size_kb": 6347,
+      "modified": 1792127091.5903852
+    }
+  },
+  "notes": {
+    "unified_laugh_model.pkl": "SMILE text model AUC 0.979 on 3.8K examples",
+    "am_delivery_model.pkl": "Delivery-aware model AUC 0.564 cross-comedian on 5674 windows",
+    "prosody_laugh_model.pkl": "Prosody model AUC 1.000 on 20K (feature leakage, do not use)",
+    "delivery_aware_model.pkl": "KT beats model, small dataset (103 beats), superseded by am_delivery",
+    "smile_laugh_model.pkl": "Older SMILE model, superseded by unified",
+    "laugh_model.pkl through v5.pkl": "Legacy text models, superseded by unified",
+    "laugh_track_model.pkl": "Legacy track model, superseded by unified",
+    "audio_laugh_track_model.pkl": "Legacy audio track model",
+    "laugh_model_combined.pkl": "Legacy combined model"
+  }
+}
