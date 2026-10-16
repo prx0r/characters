@@ -1,5 +1,6 @@
 import { BrowserOAuthClient } from '@atproto/oauth-client-browser'
 import { renderAvatar, PALETTES } from 'mascot-avatars' // MIT, (c) 2026 s1dashu / Ato Augustine — see site/credits.html
+import { structSim } from './structsim.js' // shared with tally/tally.mjs (characters2 §4a)
 
 // Laugh button, crowd-laugh particles and the "Crowd laughs" toggle are switched OFF for now. The code (and the
 // /laughs API + the laugh terms in the taste model) stays in place; nothing laugh-related renders or calls the API
@@ -14,7 +15,7 @@ const LS = {
   set: (k, v) => localStorage.setItem('funnier.' + k, JSON.stringify(v)),
 }
 
-let CLIPS = [], BYID = {}, BOARD = null, PAIRS = [], COMICS = {}, PUBVOTES = [], DAILY = [], DAILYRES = null
+let CLIPS = [], BYID = {}, BOARD = null, PAIRS = [], COMICS = {}, PUBVOTES = [], DAILY = [], DAILYRES = null, THEORY = {}
 let LANE = LS.get('lane', 'human'), BOARDKIND = 'all'
 const SHORT_MAX = 75 // seconds of each clip we screen when the clip is longer
 // ---------- clip length fairness ----------
@@ -55,6 +56,7 @@ async function loadData() {
   try { COMICS = (await (await fetch('comics.json', { cache: 'no-cache' })).json()).comics || {} } catch { COMICS = {} }
   try { PUBVOTES = (await (await fetch('data/votes.json', { cache: 'no-cache' })).json()).votes || [] } catch { PUBVOTES = [] }
   try { PAIRS = (await (await fetch('data/pairs.json', { cache: 'no-cache' })).json()).pairs || [] } catch { PAIRS = [] }
+  try { THEORY = (await (await fetch('theory.json', { cache: 'no-cache' })).json()) || {} } catch { THEORY = {} }
   try { const d = await (await fetch('daily.json', { cache: 'no-cache' })).json(); DAILY = Array.isArray(d) ? d : [] } catch { DAILY = [] }
   await loadDailyResults()
 }
@@ -256,13 +258,16 @@ function openPair(a, b) {
 function pool() { return CLIPS.filter((c) => LANE === 'mixed' || c.kind === LANE) }
 const shuffle = (a) => a.map((x) => [Math.random(), x]).sort((p, q) => p[0] - q[0]).map((p) => p[1])
 
+const pairSim = (a, b) => structSim(a, b, THEORY, { pairing: true })
 function pickForYou() {
   // your model's favourite unseen matchup: its top clip vs the clip it knows least about
   const P = pool(); if (P.length < 2) return null
   const fy = (c) => MODEL.score(c.id) + traitScore(c) + 0.3 * Math.random()
   const top = [...P].sort((x, y) => fy(y) - fy(x))
   for (const a of top.slice(0, 6)) {
-    const opp = P.filter((b) => b.comic !== a.comic && openPair(a.id, b.id)).sort((x, y) => (MODEL.bouts[x.id] || 0) - (MODEL.bouts[y.id] || 0) || Math.random() - 0.5)
+    // its opponent: structurally kindred (same kind of funny) and still little-known to your model
+    const os = (b) => pairSim(a, b) - 0.08 * (MODEL.bouts[b.id] || 0) + 0.2 * Math.random()
+    const opp = P.filter((b) => b.comic !== a.comic && openPair(a.id, b.id)).map((b) => [os(b), b]).sort((x, y) => y[0] - x[0]).map((x) => x[1])
     if (opp.length) return [a, opp[0]]
   }
   return null
@@ -281,7 +286,8 @@ function pickExplore() {
     const opts = P.filter((b) => openPair(a.id, b.id))
     if (!opts.length) continue
     const cross = opts.filter((b) => b.comic !== a.comic)
-    return [a, (cross.length ? cross : opts)[0]]
+    // least-seen clip vs a kindred opponent from another comic (struct_sim + a little chance)
+    return [a, (cross.length ? cross : opts).map((b) => [pairSim(a, b) + 0.35 * Math.random(), b]).sort((x, y) => y[0] - x[0])[0][1]]
   }
   return null
 }

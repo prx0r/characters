@@ -3,6 +3,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { bitAt, bitsInWindow, posAt } from '../tally/bitmap.mjs'
+import { structSim, structParts } from '../src/structsim.js'
 const arg = (k) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null }
 const C2 = path.resolve(arg('--c2') || process.env.CHARACTERS2 || '../../characters2')
 const fails = [], ok = (c, m) => { if (!c) fails.push(m); console.log((c ? 'PASS ' : 'FAIL ') + m) }
@@ -26,4 +27,17 @@ if (fs.existsSync(bp) && norm?.t_start != null) {
   ok(bitsInWindow(norm, sp, bits, 12, 12).length === 1, 'time map: a zero-length window gives the bit that was playing')
   ok(bitsInWindow({ ...norm, t_start: null }, sp, bits, 0, 30).length === 0, 'time map: no t_start -> no bits (falls back to special level)')
 } else console.log('SKIP time-map checks (no characters2 clone or no t_start)')
+// struct_sim (§4a)
+{
+  const H = clips.filter((c) => c.kind === 'human'), all = []
+  for (let i = 0; i < H.length; i++) for (let j = i + 1; j < H.length; j++) { const x = structSim(H[i], H[j], T), y = structSim(H[j], H[i], T); all.push(x); if (Math.abs(x - y) > 1e-9) { ok(false, 'struct_sim symmetric'); break } }
+  ok(all.every((x) => x >= 0 && x <= 1), `struct_sim in [0,1] over ${all.length} pairs (min ${Math.min(...all)}, max ${Math.max(...all)})`)
+  const [n1, n2] = H.filter((c) => c.comic === 'Norm Macdonald')
+  const pp = structParts(n1, n2, T, { pairing: true })
+  ok(pp.arch == null && pp.ops == null && pp.sty == null, 'pairing: same-comic pairs drop comic-level traits (identical by construction)')
+  ok(structParts(n1, n2, T).ops === 1, 'recommendation: same comic keeps comic-level operator match')
+  const L = H.find((c) => c.comic === 'Louis C.K.' && !c.special_id), R = H.find((c) => c.comic === 'Chris Rock' && !c.special_id), J = H.find((c) => c.comic === 'Jerry Seinfeld' && !c.special_id)
+  ok(structParts(L, J, T).ops > structParts(L, R, T).ops, 'operator lift tells comics apart (Louis~Seinfeld closer than Louis~Rock on ops)')
+  ok(structSim({ comic: 'X', style: ['dark'] }, { comic: 'Y', style: ['dark'] }, {}) === 1 && structSim({ comic: 'X' }, { comic: 'Y' }, {}) === 0, 'no theory: falls back to tags; nothing known -> 0')
+}
 console.log(fails.length ? `${fails.length} FAILED` : 'ALL PASS'); process.exit(fails.length ? 1 : 0)

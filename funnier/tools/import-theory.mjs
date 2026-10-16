@@ -3,7 +3,7 @@
 //   node tools/import-theory.mjs [--c2 <path to a prx0r/characters2 clone>]   (default ../../characters2, or $CHARACTERS2)
 // Writes:
 //   site/theory.json  compact, public: per-comic archetype, mary coords (only when measured numerically), energy,
-//                     punchline hold, measured operator priors (top 5), stylometry, laugh-density summary; plus a
+//                     punchline hold, measured operator priors (all non-zero), stylometry, laugh-density summary; plus a
 //                     per-special block for the specials our clips are matched to (duration, stylometry, laugh density,
 //                     operator mix over its bits). NO bit text, NO transcripts, NO per-bit rows: those stay offline.
 //   clips.json        adds special_id (characters2 special slug, or null), special_ref (our comics.json special id,
@@ -48,7 +48,7 @@ for (const name of wanted) {
     mary: maryNum(g?.engine?.mary_coords),
     energy: Number.isFinite(g?.identity?.profile?.energy) ? g.identity.profile.energy : null,
     holdMs: Number.isFinite(g?.identity?.profile?.punchline_hold_ms) ? g.identity.profile.punchline_hold_ms : null,
-    ops: topOps(OPS[slug]?.normalized_priors), // measured on the comic's transcripts (operator_frequency.json)
+    ops: topOps(OPS[slug]?.normalized_priors, 15), // measured on the comic's transcripts (operator_frequency.json), all non-zero operators
     sty: Object.fromEntries(STY_KEYS.map((k) => [k, r3(s?.[k])])),
     laugh: ld.length ? { mean: r3(mean(ld.map((x) => x.mean_laugh_pred))), p90: r3(mean(ld.map((x) => x.p90_laugh_pred))), hot: r3(mean(ld.map((x) => x.hot_unit_frac))), specials: ld.length } : null,
   }
@@ -58,6 +58,9 @@ const styScale = Object.fromEntries(STY_KEYS.map((k) => {
   const v = Object.values(STY).map((s) => s?.[k]).filter(Number.isFinite), m = mean(v)
   return [k, { mean: r3(m), sd: r3(Math.sqrt(mean(v.map((x) => (x - m) ** 2))) || 1) }]
 }))
+
+// roster mean operator mix (all 18 comics): struct_sim compares each mix's lift over this, since every comic leans on split_knowledge
+const opsMean = Object.fromEntries(OPERATORS.map((o) => [o, r3(mean(Object.values(OPS).map((x) => +x?.normalized_priors?.[o] || 0)))]))
 
 // ---------- special join (§2 method 1: the title names the special) ----------
 const STOP = new Set('the a an of and or to in on at for with from my your his her our their is are was be it its this that how why what when who live special clip part pt full best stand up standup comedy netflix is joke outtake'.split(' '))
@@ -124,7 +127,7 @@ for (const c of clips) {
     const tot = Object.values(opc).reduce((s, x) => s + x, 0) || 1
     specials[c.special_id] = {
       comic: c.comic, title: m.title, ref: m.ref, durSec: dur.sec, durSource: dur.source, bits: bits.length,
-      ops: topOps(Object.fromEntries(Object.entries(opc).map(([o, n]) => [o, n / tot]))),
+      ops: topOps(Object.fromEntries(Object.entries(opc).map(([o, n]) => [o, n / tot])), 15),
       sty: ps ? Object.fromEntries(STY_KEYS.map((k) => [k, r3(ps[k])])) : null,
       laugh: ld ? { mean: r3(ld.mean_laugh_pred), p90: r3(ld.p90_laugh_pred), hot: r3(ld.hot_unit_frac) } : null,
     }
@@ -134,7 +137,7 @@ let head = ''; try { head = fs.readFileSync(path.join(C2, '.git', 'HEAD'), 'utf8
 const out = {
   _note: 'Derived from prx0r/characters2 (theory/comedians/*/comedian-graph.json, theory/transcripts/ml/{stylometry,operator_frequency,laugh_density}.json and bits_annotated op counts). Regenerate with node tools/import-theory.mjs. Archetype/energy/hold are characters2 hypotheses (7 comics have graphs); ops/stylometry/laugh are measured on transcripts. No transcript text is included.',
   source: { repo: 'prx0r/characters2', commit: head.slice(0, 7) || null, imported: new Date().toISOString().slice(0, 10) },
-  operators: OPERATORS, styScale, comics, specials,
+  operators: OPERATORS, opsMean, styScale, comics, specials,
 }
 fs.writeFileSync('site/theory.json', JSON.stringify(out))
 fs.writeFileSync('clips.json', JSON.stringify(clips, null, 1) + '\n')

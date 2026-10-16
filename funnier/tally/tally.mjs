@@ -3,6 +3,7 @@
 // Usage: node tally.mjs <clips.json> <outdir>
 import fs from 'node:fs'
 import path from 'node:path'
+import { structSim } from '../src/structsim.js'
 
 const COLLECTION = 'io.github.prx0r.funnier.vote'
 const [, , CLIPS_PATH, OUT] = process.argv
@@ -50,6 +51,13 @@ function cleanSignals(x) {
   for (const k of SIG_BOOL) if (x[k] === true) o[k] = true
   return Object.keys(o).length ? o : undefined
 }
+// characters2 theory base (tools/import-theory.mjs): <out>/theory.json (published copy), else funnier/site/theory.json. Missing = struct_sim from tags only.
+const THEORY = (() => {
+  for (const p of [process.env.THEORY_PATH, path.join(OUT, 'theory.json'), path.join(path.dirname(CLIPS_PATH), 'site', 'theory.json')].filter(Boolean)) {
+    try { const t = JSON.parse(fs.readFileSync(p, 'utf8')); if (t && t.comics) return t } catch {}
+  }
+  return {}
+})()
 const statePath = path.join(DATA, 'state.json')
 const state = fs.existsSync(statePath) ? JSON.parse(fs.readFileSync(statePath, 'utf8')) : { cursor: null, dids: [] }
 const dids = new Set(state.dids)
@@ -219,7 +227,9 @@ const board = {
   agents: voters.filter((v) => v.kind === 'agent').map(({ handle, model, votes }) => ({ handle, model, votes })),
 }
 // ---------- Active sampling: which pairs teach us the most ----------
-// score = closeness of ratings x combined uncertainty, plus a floor for under-sampled clips; same length band only.
+// score = (0.4 closeness x uncertainty + 0.3 freshness + 0.3 struct_sim) x unseen x cross-comic (characters2 §4a):
+// pairs that are both competitively even AND structurally kindred ("same kind of funny, who does it better").
+// The length band stays a hard rule (pairs only within a band).
 const band = (c) => (c.sec == null ? null : c.sec < 120 ? 'short' : c.sec < 480 ? 'mid' : 'long')
 const allBoard = board.boards.all
 const stat = Object.fromEntries(allBoard.clips.map((c) => [c.id, c]))
@@ -238,7 +248,8 @@ for (let i = 0; i < clips.length; i++) for (let j = i + 1; j < clips.length; j++
   const fresh = 1 / (1 + Math.min(sa.bouts, sb.bouts) / 10)
   const seen = 1 / (1 + (pairCount[A.id + '|' + Bc.id] || pairCount[Bc.id + '|' + A.id] || 0))
   const cross = A.comic !== Bc.comic ? 1.25 : 1
-  pairs.push({ a: A.id, b: Bc.id, kind: A.kind, w: Math.round(1000 * (0.5 * close * unc + 0.5 * fresh) * seen * cross) / 1000 })
+  const st = structSim(A, Bc, THEORY, { pairing: true })
+  pairs.push({ a: A.id, b: Bc.id, kind: A.kind, s: st, w: Math.round(1000 * (0.4 * close * unc + 0.3 * fresh + 0.3 * st) * seen * cross) / 1000 })
 }
 pairs.sort((x, y) => y.w - x.w)
 fs.writeFileSync(path.join(DATA, 'pairs.json'), JSON.stringify({ updated: board.updated, explore: 0.2, pairs }))
