@@ -1,5 +1,24 @@
 {
- "updated": "2026-10-16T15:34:50.989Z",
- "voters": [],
- "votes": []
+ "updated": "2026-10-16T16:11:12.861Z",
+ "voters": [
+  {
+   "did": "d1:669d69ab2d1b054b",
+   "handle": null,
+   "kind": "human",
+   "votes": 1,
+   "source": "d1"
+  }
+ ],
+ "votes": [
+  {
+   "did": "d1:669d69ab2d1b054b",
+   "voter": "human",
+   "source": "d1",
+   "a": "IbEMYaXVEjw",
+   "b": "n3LMSflEN54",
+   "winner": "n3LMSflEN54",
+   "createdAt": "2026-10-15T23:21:23.418Z",
+   "ms": 2495
+  }
+ ]
 }
