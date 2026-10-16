@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T02:46:08.992Z",
+ "updated": "2026-10-16T03:12:32.879Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -43,6 +43,14 @@
     },
     {
      "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Casey Rocket",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -404,6 +412,2733 @@
     },
     {
      "id": "NhnS0dUacJs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7f0ZFu0iMqs",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ayP1_wWvcvk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "O6-E2tvLpyc",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zNjYfz-qk9k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gCPlwd9ePhE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "udLWVzmk5sI",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nXavCUcL7NY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hmqXxzemRis",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UkRAI4eWFhQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QBr30J_vuEg",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "j7OE-p8QfDo",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9fDdyzt_CFY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yzFmHUXDL9Y",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "723xrxG12GE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Jh1GwzuYkek",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DpcBAJ3eMK8",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FVVQXj6Ymso",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DcLeSQECCLQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nQDBwPTZvDw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bNpggSlk6S0",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7qde2ieLXIk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bfkVV22QqKw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4dve41SHnKE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sd2Qc_--UOA",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0nXq7ptrQ4Q",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2RE4mGM5RuY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9we8zFqR17o",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oS9I8LBqM6c",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HXtHOjH4xMU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mxmCFcpA7ls",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ce0WTzmZ6po",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R8VlUFpqCqU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xSQhmiHxSV0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EKgOsvu2F8Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Q5ZoFL6PdpQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2u2aA8l9_5Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mVlf7FSzaWQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZC6QCuGWuGA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m3zEa9eVG_M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DMbwbIGrHZc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2HbARCCxDlE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HRJUVRuCfho",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kXj6G6bgSNQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BZCLgj5CZd0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9RvSb3hmUI8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yAAYd2GdQzY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7yW-DDGGEaI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rqRJg009qSo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nBfK-vNdaPE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VAwIZXdVBLY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vw0vombCVQI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Oe1QTlc5Ps0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4idoOYl_kKQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nXPzhEqvMzY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "38_EOKjrGiY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vedSB6mQte8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bnuWmpRxGTY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UmvY_fESA88",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fK1QDSNYO9M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bq7fc37dLh0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "64swsnak9Zs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Pv-DZS8mQuI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "S7MjG6lm1Tc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0WaLIvswZMk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p8acCq5Xkjo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XlKJyhOuuBc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f3Qp1g3oVqc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2uP25vDGn6w",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "D5DpARagsl0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GXLdHfs2T-8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hvxfVTRS7ls",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QkAY5e0q8do",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uYi77GN1px8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BYslql7xwmA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9Daz-Og7oJI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IBLYUxyRNxE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J8izyEhlpJI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f9PNgz2tyIo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2N4Nj5LYvqY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Kj9RSAUgxmI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hKehEWZm724",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "epP8N6law78",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_QbgsKUeMuo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7c3BZnJZwI4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R5bz1q84130",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aai-L72cTcE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zIQe3Btqpy8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fVDyYJVyYv0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zv9NWSzLG0c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AN64Murli44",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AMMgLrJ3vhI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KDRz3CaN6Vs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-27mpXhKTfQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "y6fB7Chaw7M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lvdqOvNQ4ow",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d5-0Fi9fWYQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EQ3vQuMg1mI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YL06Vq_8cFA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cLChc2C6bqc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "G4UMa-0YUYY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3cHJPZF1NRw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtdY11u_ilI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MJN8Un8naOE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RIKMay9XRPE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZmF_gLkYTQ0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K-S7vJZJBe0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "W3UiBV8jSD0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N9Evs3mKw90",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7UrrIGJNVZ4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtCNWxETizk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-GMOb1JSRA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QFTerNaqwck",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bvfcLdJUymg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mhGY5wms-kg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Mt8ofVzNik",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cskpC0-mF2o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oHgeAv9WWwA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3u-xPACxirI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QhZWwbp7aa8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "om-8vRN0y_E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Y5HS8xa-9vg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QqpM12SdHq8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TB9_IBQ2ZtY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2mJxjyVml4Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Bbk3pVE8bks",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zoq9jW2TXdA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3mfp-om_zWM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RxMPpvSRirM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "369TjcSTFGU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2fl5rzSSNFQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JrLW3SabarM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XizObk-Rte0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dVkIjO5qHGM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K797TOcBBv4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3ttcCK32clg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HjM7apAbjOM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WbT4d56HgsE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FnG-CGLKAss",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0jgC_Fabo6U",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K0Dhxk2qfgQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mQ5kN2WqbKk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bxzr5807yR8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b0SbOCL0v-o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7Ap7hG3Yzp0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5wLkj8f1320",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XRGY7-KZfCE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Cl2nmW96inI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "E8sJS87JZKY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hWKO6x0hcu0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bg_5T_uU3WI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yRPoQ8RoYno",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N9_kbIQ9vGs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TVVDoCyDLxo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtHgCM3bqJE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TqIqP3v09uo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZL_ZI_Qyhno",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNWBsBollBo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JegZ9W4fjsc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TIKz8JNQKIw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nvyNgrtppvc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "asewBsD1qw4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3q_751OykJo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UKmIy3XFN-4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ebDF6r2sxW8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "B1dgo9wqVus",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J_Fm-oOXhYY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2dxPgkZhQQA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VovyHBwcctU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SQ7j5glcrM4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KUFbKIUBYwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "iyoadCGOvFo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "msYHvzImoT4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Myj_T0XL9Hg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-isGsmQdiCo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c-VrGKUjv5Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kCmw2X5F4mI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m9ouqOXQ_uc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HMAmeVaIX2M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gbh7bSsFE7Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-6qISjhJCaE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pkN8SNxg4PY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9c-YCgtjIy8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WepSp0jYxBQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ICuhqZk4ACY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pjq1Gc1ttlY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DYcS2JXg9YA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KwxvPlv5JV0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J3rzLBmk7QY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WiVCRXnW8vQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KE4xGtaXmLs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CKyhr_7gPf4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "APss6JGIAcU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c9HJMv9ceY4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RvHghfnmAXs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SjOtoadkkz8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "taegy3NueOQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ygre3SjB44A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xW2Wa4s2zZc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Io6_xqTTBZY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ia6S5cKcyvo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EMwJItg9fIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jxbtVAqTBxk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ENz79DRLHRU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HyTFEsp8GyA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ddlbXkG9RPU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hfqmmvoH4GI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YFy-KlSkfU8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JMUJf_q4kbw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9fKp2G99INU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4Su69yOZuN4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8EVqqRRLu5I",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "A6oF1FjY-lQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GHgqf16DsZg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IH2mssOPm-c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dYxcWv7_5pE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4pWMmgUInWo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H7Mm9_CSmGo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KQexPI9qpqU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oMrB3ofwPx8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8ir0--BcSrc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QqGOngSglmM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rQ-iJLloEic",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QPl_8ybEQJ0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-VJegwS6Z2k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "I1CUBp55YEs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "t6BPvtxl38o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BGdcM4JxhEs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c5yuLPTHTb8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yP-vyBbtva8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5aDph5C9ZBg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ly-ceTssHJ8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3dPYELKsdqU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Rmfsijg997s",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-EM_kiQ8X5M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C0w_4TrthM4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qZ31UHX7ghw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oLpzeqhGUTU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VjqjQn0986A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4Lxoj1lWuVQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dMhCziYWnU0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QW7ShRnN5_k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FEBM3UZviJk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dhqXf4SENEc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "791Rg6w026M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uR46ixsS-XI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qv7OZ_fHWVk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vSqPWVl6qLY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gFFm7STk5hs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QGXlqAOk9NQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0Bq8edgkaC8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lXFA1v6Ofmw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JhFnihowfJc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b9tN_AB-S04",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mIxACZL4BPU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XAgRNl_k6DE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9Hh2BlGx9fo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Q2zXEtofTk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fuFLNHX6HIQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "X9cHdegN6DI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pNJwToooo2E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3lx6_aopgb0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5vJTL94c0QI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C3zz-GE25O4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7tb1k2Ak6EM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TbNNAXRNKF0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UQcypt8GB8A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8OGJcfprEvE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LNJ8kxQSMYQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yw6s4o2xHQM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QYE9103PDJ8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VMPx8cm0qAw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OISbPfOoPwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tGX5lwY1eIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DIxy7W9eM8E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UHwVaYpzY24",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3INmWhQ83jk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H7ddfcz-1Lg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LM4kzfiJdu4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wTlXAl6PjIU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gVIWyGzAOBk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hJ5oCY7qY1k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ldcgdwq6xwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9dwhstCjCxw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f-f6WgO7ons",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i2z4_AVyfyA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sWbdnZeBDnA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YORpOtP6R0M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "miIVRqU5WMc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EyX3IEIfVIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v-_owN6O678",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_GOebANEiDU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2fmw7EhEG0Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2xckAehFc2M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-9ckWEsK1jo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZEn9OTRNk5I",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EwtBIr3-L-Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "T7TPvupWuk4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lzTiz2YCE_0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EfAU2H2I4Xs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QG2sU6X-DT8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vdP-WWLdoTw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EcSH5EEV50c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-8fThZWnxdM",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -456,6 +3191,14 @@
      "hi": null,
      "wins": 0,
      "bouts": 0
+    },
+    {
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
     }
    ],
    "clips": [
@@ -812,6 +3555,2733 @@
     },
     {
      "id": "NhnS0dUacJs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7f0ZFu0iMqs",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ayP1_wWvcvk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "O6-E2tvLpyc",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zNjYfz-qk9k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gCPlwd9ePhE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "udLWVzmk5sI",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nXavCUcL7NY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hmqXxzemRis",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UkRAI4eWFhQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QBr30J_vuEg",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "j7OE-p8QfDo",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9fDdyzt_CFY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yzFmHUXDL9Y",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "723xrxG12GE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Jh1GwzuYkek",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DpcBAJ3eMK8",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FVVQXj6Ymso",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DcLeSQECCLQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nQDBwPTZvDw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bNpggSlk6S0",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7qde2ieLXIk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bfkVV22QqKw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4dve41SHnKE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sd2Qc_--UOA",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0nXq7ptrQ4Q",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2RE4mGM5RuY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9we8zFqR17o",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oS9I8LBqM6c",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HXtHOjH4xMU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mxmCFcpA7ls",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ce0WTzmZ6po",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R8VlUFpqCqU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xSQhmiHxSV0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EKgOsvu2F8Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Q5ZoFL6PdpQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2u2aA8l9_5Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mVlf7FSzaWQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZC6QCuGWuGA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m3zEa9eVG_M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DMbwbIGrHZc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2HbARCCxDlE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HRJUVRuCfho",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kXj6G6bgSNQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BZCLgj5CZd0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9RvSb3hmUI8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yAAYd2GdQzY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7yW-DDGGEaI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rqRJg009qSo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nBfK-vNdaPE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VAwIZXdVBLY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vw0vombCVQI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Oe1QTlc5Ps0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4idoOYl_kKQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nXPzhEqvMzY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "38_EOKjrGiY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vedSB6mQte8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bnuWmpRxGTY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UmvY_fESA88",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fK1QDSNYO9M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bq7fc37dLh0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "64swsnak9Zs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Pv-DZS8mQuI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "S7MjG6lm1Tc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0WaLIvswZMk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p8acCq5Xkjo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XlKJyhOuuBc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f3Qp1g3oVqc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2uP25vDGn6w",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "D5DpARagsl0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GXLdHfs2T-8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hvxfVTRS7ls",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QkAY5e0q8do",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uYi77GN1px8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BYslql7xwmA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9Daz-Og7oJI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IBLYUxyRNxE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J8izyEhlpJI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f9PNgz2tyIo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2N4Nj5LYvqY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Kj9RSAUgxmI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hKehEWZm724",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "epP8N6law78",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_QbgsKUeMuo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7c3BZnJZwI4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R5bz1q84130",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aai-L72cTcE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zIQe3Btqpy8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fVDyYJVyYv0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zv9NWSzLG0c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AN64Murli44",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AMMgLrJ3vhI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KDRz3CaN6Vs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-27mpXhKTfQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "y6fB7Chaw7M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lvdqOvNQ4ow",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d5-0Fi9fWYQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EQ3vQuMg1mI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YL06Vq_8cFA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cLChc2C6bqc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "G4UMa-0YUYY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3cHJPZF1NRw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtdY11u_ilI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MJN8Un8naOE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RIKMay9XRPE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZmF_gLkYTQ0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K-S7vJZJBe0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "W3UiBV8jSD0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N9Evs3mKw90",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7UrrIGJNVZ4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtCNWxETizk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-GMOb1JSRA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QFTerNaqwck",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bvfcLdJUymg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mhGY5wms-kg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Mt8ofVzNik",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cskpC0-mF2o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oHgeAv9WWwA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3u-xPACxirI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QhZWwbp7aa8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "om-8vRN0y_E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Y5HS8xa-9vg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QqpM12SdHq8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TB9_IBQ2ZtY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2mJxjyVml4Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Bbk3pVE8bks",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zoq9jW2TXdA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3mfp-om_zWM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RxMPpvSRirM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "369TjcSTFGU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2fl5rzSSNFQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JrLW3SabarM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XizObk-Rte0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dVkIjO5qHGM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K797TOcBBv4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3ttcCK32clg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HjM7apAbjOM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WbT4d56HgsE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FnG-CGLKAss",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0jgC_Fabo6U",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K0Dhxk2qfgQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mQ5kN2WqbKk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bxzr5807yR8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b0SbOCL0v-o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7Ap7hG3Yzp0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5wLkj8f1320",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XRGY7-KZfCE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Cl2nmW96inI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "E8sJS87JZKY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hWKO6x0hcu0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bg_5T_uU3WI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yRPoQ8RoYno",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N9_kbIQ9vGs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TVVDoCyDLxo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtHgCM3bqJE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TqIqP3v09uo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZL_ZI_Qyhno",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNWBsBollBo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JegZ9W4fjsc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TIKz8JNQKIw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nvyNgrtppvc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "asewBsD1qw4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3q_751OykJo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UKmIy3XFN-4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ebDF6r2sxW8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "B1dgo9wqVus",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J_Fm-oOXhYY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2dxPgkZhQQA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VovyHBwcctU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SQ7j5glcrM4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KUFbKIUBYwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "iyoadCGOvFo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "msYHvzImoT4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Myj_T0XL9Hg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-isGsmQdiCo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c-VrGKUjv5Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kCmw2X5F4mI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m9ouqOXQ_uc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HMAmeVaIX2M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gbh7bSsFE7Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-6qISjhJCaE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pkN8SNxg4PY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9c-YCgtjIy8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WepSp0jYxBQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ICuhqZk4ACY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pjq1Gc1ttlY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DYcS2JXg9YA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KwxvPlv5JV0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J3rzLBmk7QY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WiVCRXnW8vQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KE4xGtaXmLs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CKyhr_7gPf4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "APss6JGIAcU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c9HJMv9ceY4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RvHghfnmAXs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SjOtoadkkz8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "taegy3NueOQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ygre3SjB44A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xW2Wa4s2zZc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Io6_xqTTBZY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ia6S5cKcyvo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EMwJItg9fIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jxbtVAqTBxk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ENz79DRLHRU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HyTFEsp8GyA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ddlbXkG9RPU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hfqmmvoH4GI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YFy-KlSkfU8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JMUJf_q4kbw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9fKp2G99INU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4Su69yOZuN4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8EVqqRRLu5I",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "A6oF1FjY-lQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GHgqf16DsZg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IH2mssOPm-c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dYxcWv7_5pE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4pWMmgUInWo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H7Mm9_CSmGo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KQexPI9qpqU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oMrB3ofwPx8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8ir0--BcSrc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QqGOngSglmM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rQ-iJLloEic",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QPl_8ybEQJ0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-VJegwS6Z2k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "I1CUBp55YEs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "t6BPvtxl38o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BGdcM4JxhEs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c5yuLPTHTb8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yP-vyBbtva8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5aDph5C9ZBg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ly-ceTssHJ8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3dPYELKsdqU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Rmfsijg997s",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-EM_kiQ8X5M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C0w_4TrthM4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qZ31UHX7ghw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oLpzeqhGUTU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VjqjQn0986A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4Lxoj1lWuVQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dMhCziYWnU0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QW7ShRnN5_k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FEBM3UZviJk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dhqXf4SENEc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "791Rg6w026M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uR46ixsS-XI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qv7OZ_fHWVk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vSqPWVl6qLY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gFFm7STk5hs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QGXlqAOk9NQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0Bq8edgkaC8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lXFA1v6Ofmw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JhFnihowfJc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b9tN_AB-S04",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mIxACZL4BPU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XAgRNl_k6DE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9Hh2BlGx9fo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Q2zXEtofTk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fuFLNHX6HIQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "X9cHdegN6DI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pNJwToooo2E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3lx6_aopgb0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5vJTL94c0QI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C3zz-GE25O4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7tb1k2Ak6EM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TbNNAXRNKF0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UQcypt8GB8A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8OGJcfprEvE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LNJ8kxQSMYQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yw6s4o2xHQM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QYE9103PDJ8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VMPx8cm0qAw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OISbPfOoPwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tGX5lwY1eIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DIxy7W9eM8E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UHwVaYpzY24",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3INmWhQ83jk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H7ddfcz-1Lg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LM4kzfiJdu4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wTlXAl6PjIU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gVIWyGzAOBk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hJ5oCY7qY1k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ldcgdwq6xwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9dwhstCjCxw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f-f6WgO7ons",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i2z4_AVyfyA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sWbdnZeBDnA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YORpOtP6R0M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "miIVRqU5WMc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EyX3IEIfVIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v-_owN6O678",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_GOebANEiDU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2fmw7EhEG0Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2xckAehFc2M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-9ckWEsK1jo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZEn9OTRNk5I",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EwtBIr3-L-Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "T7TPvupWuk4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lzTiz2YCE_0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EfAU2H2I4Xs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QG2sU6X-DT8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vdP-WWLdoTw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EcSH5EEV50c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-8fThZWnxdM",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -864,6 +6334,14 @@
      "hi": null,
      "wins": 0,
      "bouts": 0
+    },
+    {
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
     }
    ],
    "clips": [
@@ -1220,6 +6698,2733 @@
     },
     {
      "id": "NhnS0dUacJs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7f0ZFu0iMqs",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ayP1_wWvcvk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "O6-E2tvLpyc",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zNjYfz-qk9k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gCPlwd9ePhE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "udLWVzmk5sI",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nXavCUcL7NY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hmqXxzemRis",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UkRAI4eWFhQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QBr30J_vuEg",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "j7OE-p8QfDo",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9fDdyzt_CFY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yzFmHUXDL9Y",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "723xrxG12GE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Jh1GwzuYkek",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DpcBAJ3eMK8",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FVVQXj6Ymso",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DcLeSQECCLQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nQDBwPTZvDw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bNpggSlk6S0",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7qde2ieLXIk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bfkVV22QqKw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4dve41SHnKE",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sd2Qc_--UOA",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0nXq7ptrQ4Q",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2RE4mGM5RuY",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9we8zFqR17o",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oS9I8LBqM6c",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HXtHOjH4xMU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mxmCFcpA7ls",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ce0WTzmZ6po",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R8VlUFpqCqU",
+     "comic": "Louis C.K.",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xSQhmiHxSV0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EKgOsvu2F8Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Q5ZoFL6PdpQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2u2aA8l9_5Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mVlf7FSzaWQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZC6QCuGWuGA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m3zEa9eVG_M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DMbwbIGrHZc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2HbARCCxDlE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HRJUVRuCfho",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kXj6G6bgSNQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BZCLgj5CZd0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9RvSb3hmUI8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yAAYd2GdQzY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7yW-DDGGEaI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rqRJg009qSo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nBfK-vNdaPE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VAwIZXdVBLY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vw0vombCVQI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Oe1QTlc5Ps0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4idoOYl_kKQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nXPzhEqvMzY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "38_EOKjrGiY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vedSB6mQte8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bnuWmpRxGTY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UmvY_fESA88",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fK1QDSNYO9M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bq7fc37dLh0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "64swsnak9Zs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Pv-DZS8mQuI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "S7MjG6lm1Tc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0WaLIvswZMk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p8acCq5Xkjo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XlKJyhOuuBc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f3Qp1g3oVqc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2uP25vDGn6w",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "D5DpARagsl0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GXLdHfs2T-8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hvxfVTRS7ls",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QkAY5e0q8do",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uYi77GN1px8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BYslql7xwmA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9Daz-Og7oJI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IBLYUxyRNxE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J8izyEhlpJI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f9PNgz2tyIo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2N4Nj5LYvqY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Kj9RSAUgxmI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hKehEWZm724",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "epP8N6law78",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_QbgsKUeMuo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7c3BZnJZwI4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "R5bz1q84130",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aai-L72cTcE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zIQe3Btqpy8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fVDyYJVyYv0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zv9NWSzLG0c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AN64Murli44",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AMMgLrJ3vhI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KDRz3CaN6Vs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-27mpXhKTfQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "y6fB7Chaw7M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lvdqOvNQ4ow",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d5-0Fi9fWYQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EQ3vQuMg1mI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YL06Vq_8cFA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cLChc2C6bqc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "G4UMa-0YUYY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3cHJPZF1NRw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtdY11u_ilI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MJN8Un8naOE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RIKMay9XRPE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZmF_gLkYTQ0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K-S7vJZJBe0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "W3UiBV8jSD0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N9Evs3mKw90",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7UrrIGJNVZ4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtCNWxETizk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-GMOb1JSRA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QFTerNaqwck",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bvfcLdJUymg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mhGY5wms-kg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Mt8ofVzNik",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cskpC0-mF2o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oHgeAv9WWwA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3u-xPACxirI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QhZWwbp7aa8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "om-8vRN0y_E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Y5HS8xa-9vg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QqpM12SdHq8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TB9_IBQ2ZtY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2mJxjyVml4Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Bbk3pVE8bks",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zoq9jW2TXdA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3mfp-om_zWM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RxMPpvSRirM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "369TjcSTFGU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2fl5rzSSNFQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JrLW3SabarM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XizObk-Rte0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dVkIjO5qHGM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K797TOcBBv4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3ttcCK32clg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HjM7apAbjOM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WbT4d56HgsE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FnG-CGLKAss",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0jgC_Fabo6U",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "K0Dhxk2qfgQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mQ5kN2WqbKk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bxzr5807yR8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b0SbOCL0v-o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7Ap7hG3Yzp0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5wLkj8f1320",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XRGY7-KZfCE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Cl2nmW96inI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "E8sJS87JZKY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hWKO6x0hcu0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bg_5T_uU3WI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yRPoQ8RoYno",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N9_kbIQ9vGs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TVVDoCyDLxo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rtHgCM3bqJE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TqIqP3v09uo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZL_ZI_Qyhno",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WNWBsBollBo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JegZ9W4fjsc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TIKz8JNQKIw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nvyNgrtppvc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "asewBsD1qw4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3q_751OykJo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UKmIy3XFN-4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ebDF6r2sxW8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "B1dgo9wqVus",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J_Fm-oOXhYY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2dxPgkZhQQA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VovyHBwcctU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SQ7j5glcrM4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KUFbKIUBYwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "iyoadCGOvFo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "msYHvzImoT4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Myj_T0XL9Hg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-isGsmQdiCo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c-VrGKUjv5Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kCmw2X5F4mI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m9ouqOXQ_uc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HMAmeVaIX2M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gbh7bSsFE7Y",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-6qISjhJCaE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pkN8SNxg4PY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9c-YCgtjIy8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WepSp0jYxBQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ICuhqZk4ACY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pjq1Gc1ttlY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DYcS2JXg9YA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KwxvPlv5JV0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "J3rzLBmk7QY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WiVCRXnW8vQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KE4xGtaXmLs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CKyhr_7gPf4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "APss6JGIAcU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c9HJMv9ceY4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RvHghfnmAXs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SjOtoadkkz8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "taegy3NueOQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ygre3SjB44A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xW2Wa4s2zZc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Io6_xqTTBZY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ia6S5cKcyvo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EMwJItg9fIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jxbtVAqTBxk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ENz79DRLHRU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HyTFEsp8GyA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ddlbXkG9RPU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hfqmmvoH4GI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YFy-KlSkfU8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JMUJf_q4kbw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9fKp2G99INU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4Su69yOZuN4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8EVqqRRLu5I",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "A6oF1FjY-lQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GHgqf16DsZg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IH2mssOPm-c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dYxcWv7_5pE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4pWMmgUInWo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H7Mm9_CSmGo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KQexPI9qpqU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oMrB3ofwPx8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8ir0--BcSrc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QqGOngSglmM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rQ-iJLloEic",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QPl_8ybEQJ0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-VJegwS6Z2k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "I1CUBp55YEs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "t6BPvtxl38o",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "BGdcM4JxhEs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "c5yuLPTHTb8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yP-vyBbtva8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5aDph5C9ZBg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ly-ceTssHJ8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3dPYELKsdqU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Rmfsijg997s",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-EM_kiQ8X5M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C0w_4TrthM4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qZ31UHX7ghw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oLpzeqhGUTU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VjqjQn0986A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4Lxoj1lWuVQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dMhCziYWnU0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QW7ShRnN5_k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FEBM3UZviJk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dhqXf4SENEc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "791Rg6w026M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uR46ixsS-XI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qv7OZ_fHWVk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vSqPWVl6qLY",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gFFm7STk5hs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QGXlqAOk9NQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0Bq8edgkaC8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lXFA1v6Ofmw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JhFnihowfJc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b9tN_AB-S04",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mIxACZL4BPU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XAgRNl_k6DE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9Hh2BlGx9fo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6Q2zXEtofTk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fuFLNHX6HIQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "X9cHdegN6DI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pNJwToooo2E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3lx6_aopgb0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5vJTL94c0QI",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "C3zz-GE25O4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7tb1k2Ak6EM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TbNNAXRNKF0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UQcypt8GB8A",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8OGJcfprEvE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LNJ8kxQSMYQ",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yw6s4o2xHQM",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QYE9103PDJ8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "VMPx8cm0qAw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OISbPfOoPwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tGX5lwY1eIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DIxy7W9eM8E",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UHwVaYpzY24",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3INmWhQ83jk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H7ddfcz-1Lg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LM4kzfiJdu4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wTlXAl6PjIU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gVIWyGzAOBk",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hJ5oCY7qY1k",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ldcgdwq6xwg",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9dwhstCjCxw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "f-f6WgO7ons",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "i2z4_AVyfyA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sWbdnZeBDnA",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YORpOtP6R0M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "miIVRqU5WMc",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EyX3IEIfVIE",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v-_owN6O678",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "_GOebANEiDU",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2fmw7EhEG0Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2xckAehFc2M",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-9ckWEsK1jo",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZEn9OTRNk5I",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EwtBIr3-L-Q",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "T7TPvupWuk4",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "lzTiz2YCE_0",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EfAU2H2I4Xs",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QG2sU6X-DT8",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vdP-WWLdoTw",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EcSH5EEV50c",
+     "comic": "Mark Normand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-8fThZWnxdM",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
