@@ -19,6 +19,9 @@
   "Mark Normand": [
    "mark normand",
    "normand"
+  ],
+  "Casey Rocket": [
+   "casey rocket"
   ]
  },
  "channels": [
@@ -59,6 +62,17 @@
    "id": "UCGmMFJB36GBXTgaLtfGd6Jg",
    "owner": "Mark Normand",
    "assume": "Mark Normand"
+  },
+  {
+   "name": "Casey Rocket",
+   "id": "UCe4B7qdCr1POcqrng3Tdcsw",
+   "owner": "Casey Rocket",
+   "assume": "Casey Rocket"
+  },
+  {
+   "name": "Kill Tony",
+   "id": "UCwzCMiicL-hBUzyjWiJaseg",
+   "owner": "Kill Tony"
   }
  ]
 }
