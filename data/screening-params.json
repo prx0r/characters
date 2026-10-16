@@ -1,0 +1,225 @@
+{
+ "version": "screen-1-default",
+ "generated": "2026-10-16T05:40:39.061Z",
+ "apply": false,
+ "gate": {
+  "passed": false,
+  "required": 500,
+  "sessions": 0,
+  "reason": "only 0 logged sessions with a known policy (need 500)",
+  "heldout": null
+ },
+ "params": {
+  "pairCloseUnc": 0.4,
+  "pairFresh": 0.3,
+  "pairStruct": 0.3,
+  "mixForyou": 0.4,
+  "mixTraining": 0.4,
+  "mixExplore": 0.2,
+  "coldTraining": 0.55,
+  "coldExplore": 0.45,
+  "snapMult": 1.25,
+  "slowMult": 0.7,
+  "strongMult": 1.4,
+  "skipLoss": 0.3,
+  "clipSkipLoss": 0.4,
+  "snapMs": 1500,
+  "slowMs": 12000,
+  "simStyle": 0.25,
+  "simOps": 0.25,
+  "simTopic": 0.15,
+  "simSty": 0.15,
+  "simArch": 0.15,
+  "simMary": 0.05,
+  "watchGateSec": 30,
+  "watchGateFrac": 0.8,
+  "capMobileSec": 75,
+  "capDesktopSec": 150,
+  "minWindowSec": 30,
+  "introMs": 2500,
+  "ballotMs": 7000,
+  "ballotResumeMs": 2500
+ },
+ "defaults": {
+  "pairCloseUnc": 0.4,
+  "pairFresh": 0.3,
+  "pairStruct": 0.3,
+  "mixForyou": 0.4,
+  "mixTraining": 0.4,
+  "mixExplore": 0.2,
+  "coldTraining": 0.55,
+  "coldExplore": 0.45,
+  "snapMult": 1.25,
+  "slowMult": 0.7,
+  "strongMult": 1.4,
+  "skipLoss": 0.3,
+  "clipSkipLoss": 0.4,
+  "snapMs": 1500,
+  "slowMs": 12000,
+  "simStyle": 0.25,
+  "simOps": 0.25,
+  "simTopic": 0.15,
+  "simSty": 0.15,
+  "simArch": 0.15,
+  "simMary": 0.05,
+  "watchGateSec": 30,
+  "watchGateFrac": 0.8,
+  "capMobileSec": 75,
+  "capDesktopSec": 150,
+  "minWindowSec": 30,
+  "introMs": 2500,
+  "ballotMs": 7000,
+  "ballotResumeMs": 2500
+ },
+ "bounds": {
+  "pairCloseUnc": [
+   0.05,
+   1
+  ],
+  "pairFresh": [
+   0.05,
+   1
+  ],
+  "pairStruct": [
+   0.05,
+   1
+  ],
+  "mixForyou": [
+   0.1,
+   0.8
+  ],
+  "mixTraining": [
+   0.1,
+   0.8
+  ],
+  "mixExplore": [
+   0.1,
+   0.6
+  ],
+  "coldTraining": [
+   0.2,
+   0.8
+  ],
+  "coldExplore": [
+   0.2,
+   0.8
+  ],
+  "snapMult": [
+   1,
+   1.6
+  ],
+  "slowMult": [
+   0.4,
+   1
+  ],
+  "strongMult": [
+   1,
+   2
+  ],
+  "skipLoss": [
+   0.1,
+   0.6
+  ],
+  "clipSkipLoss": [
+   0.1,
+   0.7
+  ],
+  "snapMs": [
+   800,
+   3000
+  ],
+  "slowMs": [
+   6000,
+   20000
+  ],
+  "simStyle": [
+   0.05,
+   0.5
+  ],
+  "simOps": [
+   0.05,
+   0.5
+  ],
+  "simTopic": [
+   0.05,
+   0.4
+  ],
+  "simSty": [
+   0.05,
+   0.4
+  ],
+  "simArch": [
+   0.05,
+   0.4
+  ],
+  "simMary": [
+   0,
+   0.2
+  ],
+  "watchGateSec": [
+   20,
+   45
+  ],
+  "watchGateFrac": [
+   0.6,
+   0.95
+  ],
+  "capMobileSec": [
+   45,
+   150
+  ],
+  "capDesktopSec": [
+   75,
+   300
+  ],
+  "minWindowSec": [
+   30,
+   60
+  ],
+  "introMs": [
+   1500,
+   4000
+  ],
+  "ballotMs": [
+   5000,
+   10000
+  ],
+  "ballotResumeMs": [
+   1500,
+   4000
+  ]
+ },
+ "proposal": {
+  "pairCloseUnc": 0.4,
+  "pairFresh": 0.3,
+  "pairStruct": 0.3,
+  "mixForyou": 0.4,
+  "mixTraining": 0.4,
+  "mixExplore": 0.2
+ },
+ "report": {
+  "sessions": 0,
+  "train": 0,
+  "heldout": 0,
+  "modes": {},
+  "notIdentifiable": [
+   "snapMult",
+   "slowMult",
+   "strongMult",
+   "skipLoss",
+   "clipSkipLoss",
+   "snapMs",
+   "slowMs",
+   "sim*",
+   "watchGateSec",
+   "watchGateFrac",
+   "capMobileSec",
+   "capDesktopSec",
+   "minWindowSec",
+   "introMs",
+   "ballotMs",
+   "ballotResumeMs"
+  ],
+  "note": "These never varied in the logs; they stay at their defaults until a randomised exploration policy logs variation."
+ }
+}
