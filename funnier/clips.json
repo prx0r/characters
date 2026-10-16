@@ -17,7 +17,9 @@
   "topics": [
    "animals"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "gN02rRbOlUE",
@@ -38,7 +40,11 @@
    "opinions"
   ],
   "tagsSource": "draft",
-  "dur": 63
+  "dur": 63,
+  "special_ref": "norm-nothing-special",
+  "special_id": "norm-macdonald-nothing-special-transcript",
+  "t_start": 1169,
+  "t_source": "title-anchor"
  },
  {
   "id": "OwlxYYtqHfc",
@@ -58,7 +64,9 @@
   "topics": [
    "death"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "EF-cw9bsLKs",
@@ -76,7 +84,9 @@
    "one-liners"
   ],
   "topics": [],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "-skA4GhVX7k",
@@ -95,7 +105,9 @@
   "topics": [
    "pandemic"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "hoYUX3gqZs4",
@@ -114,7 +126,9 @@
   "topics": [
    "pandemic"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "IbEMYaXVEjw",
@@ -135,7 +149,9 @@
   "topics": [],
   "tagsSource": "draft",
   "dur": 404,
-  "needsCut": true
+  "needsCut": true,
+  "special_ref": "louis-sorry",
+  "special_id": "louis-c-k-sorry-transcript"
  },
  {
   "id": "vd8DfFp5ono",
@@ -154,7 +170,9 @@
   "topics": [
    "society"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": "louis-back-to-the-garden",
+  "special_id": null
  },
  {
   "id": "nyuQjNCpqEI",
@@ -173,7 +191,9 @@
   "topics": [
    "religion"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": "louis-back-to-the-garden",
+  "special_id": null
  },
  {
   "id": "UdCpgrF6Txw",
@@ -193,7 +213,9 @@
    "travel",
    "animals"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "GQ1vEb8d0UE",
@@ -210,7 +232,9 @@
    "observational"
   ],
   "topics": [],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "5XchZEx2SP0",
@@ -229,7 +253,9 @@
   "topics": [
    "politics"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "IwuarzMMHAg",
@@ -248,7 +274,9 @@
   "topics": [
    "everyday"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "ckkXo5J6fWo",
@@ -268,7 +296,9 @@
   "topics": [
    "family"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "s4Df4L6lAgs",
@@ -291,7 +321,9 @@
   ],
   "tagsSource": "draft",
   "dur": 218,
-  "needsCut": true
+  "needsCut": true,
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "HfYzlSNHapA",
@@ -310,7 +342,9 @@
   "topics": [
    "everyday"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "m2k7YKvmqQg",
@@ -331,7 +365,9 @@
    "career"
   ],
   "tagsSource": "draft",
-  "dur": 46
+  "dur": 46,
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "xnUWpegM9oY",
@@ -350,7 +386,9 @@
   "topics": [
    "family"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": "rock-tamborine",
+  "special_id": "chris-rock-tamborine-transcript"
  },
  {
   "id": "5bbKnj1-mR0",
@@ -369,7 +407,11 @@
   "topics": [
    "religion"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": "rock-tamborine",
+  "special_id": "chris-rock-tamborine-transcript",
+  "t_start": 1588,
+  "t_source": "title-anchor"
  },
  {
   "id": "dUzaSm0aAKw",
@@ -388,7 +430,9 @@
   "topics": [
    "relationships"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": null,
+  "special_id": null
  },
  {
   "id": "KkXpKF4b5yA",
@@ -407,6 +451,10 @@
   "topics": [
    "relationships"
   ],
-  "tagsSource": "draft"
+  "tagsSource": "draft",
+  "special_ref": "rock-tamborine",
+  "special_id": "chris-rock-tamborine-transcript",
+  "t_start": 1998,
+  "t_source": "title-anchor"
  }
 ]
