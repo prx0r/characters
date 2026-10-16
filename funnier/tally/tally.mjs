@@ -25,7 +25,7 @@ function topicPairs() {
   const cs = [...clips].sort((x, y) => (x.id < y.id ? -1 : x.id > y.id ? 1 : 0)), out = []
   for (let i = 0; i < cs.length; i++) for (let j = i + 1; j < cs.length; j++) {
     const A = cs[i], B = cs[j]
-    if (A.kind !== B.kind) continue
+    if (A.kind !== B.kind || A.comic === B.comic) continue // daily fallback: two different comics
     const tb = Array.isArray(B.topics) ? B.topics : []
     const shared = (Array.isArray(A.topics) ? A.topics : []).filter((t) => tb.includes(t)).sort()
     if (shared.length) out.push({ a: A.id, b: B.id, topic: shared[0] })
@@ -227,7 +227,7 @@ const board = {
   agents: voters.filter((v) => v.kind === 'agent').map(({ handle, model, votes }) => ({ handle, model, votes })),
 }
 // ---------- Active sampling: which pairs teach us the most ----------
-// score = (0.4 closeness x uncertainty + 0.3 freshness + 0.3 struct_sim) x unseen x cross-comic (characters2 §4a):
+// score = (0.4 closeness x uncertainty + 0.3 freshness + 0.3 struct_sim) x unseen (characters2 §4a), cross-comic pairs only:
 // pairs that are both competitively even AND structurally kindred ("same kind of funny, who does it better").
 // The length band stays a hard rule (pairs only within a band).
 const band = (c) => (c.sec == null ? null : c.sec < 120 ? 'short' : c.sec < 480 ? 'mid' : 'long')
@@ -239,6 +239,7 @@ const pairs = []
 for (let i = 0; i < clips.length; i++) for (let j = i + 1; j < clips.length; j++) {
   const A = clips[i], Bc = clips[j]
   if (A.kind !== Bc.kind) continue // lanes: human vs human, ai vs ai (a "mixed" lane samples across)
+  if (A.comic === Bc.comic) continue // hard rule: a clash is always two different comics (struct_sim only ranks across comics)
   const ba = band(A), bb = band(Bc)
   if (ba && bb && ba !== bb) continue
   const sa = stat[A.id], sb = stat[Bc.id]
@@ -247,9 +248,8 @@ for (let i = 0; i < clips.length; i++) for (let j = i + 1; j < clips.length; j++
   const unc = (wa + wb) / 800
   const fresh = 1 / (1 + Math.min(sa.bouts, sb.bouts) / 10)
   const seen = 1 / (1 + (pairCount[A.id + '|' + Bc.id] || pairCount[Bc.id + '|' + A.id] || 0))
-  const cross = A.comic !== Bc.comic ? 1.25 : 1
   const st = structSim(A, Bc, THEORY, { pairing: true })
-  pairs.push({ a: A.id, b: Bc.id, kind: A.kind, s: st, w: Math.round(1000 * (0.4 * close * unc + 0.3 * fresh + 0.3 * st) * seen * cross) / 1000 })
+  pairs.push({ a: A.id, b: Bc.id, kind: A.kind, s: st, w: Math.round(1000 * (0.4 * close * unc + 0.3 * fresh + 0.3 * st) * seen) / 1000 })
 }
 pairs.sort((x, y) => y.w - x.w)
 fs.writeFileSync(path.join(DATA, 'pairs.json'), JSON.stringify({ updated: board.updated, explore: 0.2, pairs }))

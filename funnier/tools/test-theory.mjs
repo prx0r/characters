@@ -11,7 +11,15 @@ const raw = fs.readFileSync('site/theory.json', 'utf8'), T = JSON.parse(raw), cl
 ok(raw.length < 40000, `theory.json is compact (${(raw.length / 1024).toFixed(1)} KB)`)
 ok(!/"(text|setup|punch_candidate|bit_id)"/.test(raw), 'theory.json carries no bit text or bit rows')
 const comicsInClips = [...new Set(clips.map((c) => c.comic))]
-ok(comicsInClips.every((c) => T.comics[c]?.ops && T.comics[c]?.sty), 'every comic in clips.json has operator priors + stylometry')
+const COMICS = JSON.parse(fs.readFileSync('site/comics.json', 'utf8')).comics
+const c2has = (name) => fs.existsSync(path.join(C2, 'theory/transcripts/bits_annotated', COMICS[name]?.slug || '-'))
+ok(comicsInClips.filter(c2has).every((c) => T.comics[c]?.ops && T.comics[c]?.sty), 'every comic characters2 covers has operator priors + stylometry')
+const bare = comicsInClips.filter((c) => !T.comics[c])
+if (bare.length) { // no theory data (e.g. Mark Normand): struct_sim degrades to tags, never throws, never NaN
+  const x = clips.find((c) => c.comic === bare[0]), y = clips.find((c) => c.comic !== bare[0] && T.comics[c.comic])
+  const v = structSim(x, y, T, { pairing: true }), p = structParts(x, y, T)
+  ok(Number.isFinite(v) && v >= 0 && v <= 1 && p.ops == null && p.arch == null && p.style != null, `no theory data for ${bare.join(', ')}: struct_sim falls back to tags (${v})`)
+}
 ok(clips.every((c) => 'special_id' in c), 'every clip has special_id (null when the title names no known special)')
 ok(clips.filter((c) => c.special_id).every((c) => T.specials[c.special_id]?.durSec > 0), 'every matched special has a duration')
 ok(clips.filter((c) => /outtake/i.test(c.title)).every((c) => c.special_id === null), 'outtakes are never mapped into a special')
