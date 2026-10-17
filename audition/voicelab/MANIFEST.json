@@ -3,7 +3,8 @@
     "text_laugh": "unified_laugh_model.pkl",
     "delivery_laugh": "am_delivery_model.pkl",
     "laugh_type": "laugh_type_model.pkl",
-    "physics": "/home/box/comedy-audio/learned_physics.json"
+    "physics": "/home/box/comedy-audio/learned_physics.json",
+    "delivery_engine": "audition/delivery_engine.py"
   },
   "models": {
     "am_delivery_model.pkl": {
@@ -56,11 +57,14 @@
     },
     "smile_laugh_model.pkl": {
       "size_kb": 3587,
-      "modified": 1792126584.9913247
+      "modified": 1792126584.9913247,
+      "note": "SMILE-Next, AUC 0.979 on SMILE test split only (same-distribution)"
     },
     "unified_laugh_model.pkl": {
       "size_kb": 6347,
-      "modified": 1792127091.5903852
+      "modified": 1792127091.5903852,
+      "note": "AUC 0.832 (was falsely claimed 0.979 \u2014 that number belongs to smile_laugh_model)",
+      "auc_actual": 0.832
     },
     "prosody200_heldout_model.pkl": {
       "size_kb": 63,

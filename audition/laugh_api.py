@@ -29,6 +29,8 @@ except ImportError:
     sys.path.insert(0, str(Path(__file__).parent))
     from realtime_laughter import LaughterEngine, LaughEvent, SetStats
 
+import numpy as np
+
 
 class LaughEngine:
     """Simple API for laugh prediction and rendering."""

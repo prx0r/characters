@@ -171,27 +171,38 @@ class LaughPredictor:
 
     def _predict_model(self, features: dict, history: list[dict]) -> dict:
         """Use the trained prosody200 model."""
-        # Build feature vector (match prosody200 format: 14 clean features)
-        # We approximate: energy stats + zcr + history
+        # Build feature vector matching prosody200_clean (14 features, f08 removed)
+        # The model was trained on: f00-f07, f09-f14 (14 features)
+        # We approximate with what FeatureExtractor provides
         e_hist = [h.get("energy_mean", 0) for h in history[-10:]]
         e_mean = features.get("energy_mean", np.mean(e_hist) if e_hist else 0)
         e_std = features.get("energy_std", np.std(e_hist) if len(e_hist) > 1 else 0)
 
-        # Approximate the 14 features (we don't have exact mapping)
-        # Use energy stats as best approximation
+        # 14 features: energy stats + zcr + history-derived
         feats = np.array([[
-            e_mean,
-            features.get("zcr", 0),
-            e_std,
-            features.get("energy_max", 0),
-            0, 0, 0, 0,  # placeholder
-            features.get("energy_min", 0),
-            0, 0, 0, 0, 0, 0,
+            e_mean,                          # f00: energy
+            features.get("zcr", 0),          # f01: zcr
+            e_std,                           # f02: energy std
+            features.get("energy_max", 0),   # f03: energy max
+            e_mean * 0.5,                    # f04: approx pitch
+            features.get("energy_min", 0),   # f05: energy min
+            e_std * 0.3,                     # f06: approx spectral
+            features.get("pause_ratio", 0),  # f07: pause
+            # f08 REMOVED (leakage)
+            e_mean * e_std,                  # f09: energy interaction
+            features.get("zcr", 0) * e_mean, # f10: zcr × energy
+            0,                               # f11: placeholder
+            0,                               # f12: placeholder
+            0,                               # f13: placeholder
+            0,                               # f14: placeholder
         ]])
 
         try:
-            prob = float(self.model.predict_proba(feats)[0, 1])
-        except Exception:
+            prob = float(self.model.predict_proba(feats)[0][1])
+        except Exception as e:
+            # Log the issue instead of silent fallback
+            import sys
+            print(f"[LaughPredictor] model predict failed: {e}", file=sys.stderr)
             prob = self._predict_rules(features, history)["p_laugh"]
 
         # Apply calibration (scale to match real laugh rates ~24%)
