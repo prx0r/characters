@@ -1,24 +1,5 @@
 {
- "updated": "2026-10-17T22:09:57.685Z",
- "voters": [
-  {
-   "did": "d1:669d69ab2d1b054b",
-   "handle": null,
-   "kind": "human",
-   "votes": 1,
-   "source": "d1"
-  }
- ],
- "votes": [
-  {
-   "did": "d1:669d69ab2d1b054b",
-   "voter": "human",
-   "source": "d1",
-   "a": "IbEMYaXVEjw",
-   "b": "n3LMSflEN54",
-   "winner": "n3LMSflEN54",
-   "createdAt": "2026-10-15T23:21:23.418Z",
-   "ms": 2495
-  }
- ]
+ "updated": "2026-10-17T22:24:25.250Z",
+ "voters": [],
+ "votes": []
 }
