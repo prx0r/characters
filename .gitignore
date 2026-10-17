@@ -10,3 +10,10 @@ audition/voicelab/**/*.mp3
 # external datasets (README stays tracked)
 theory/datasets/*/
 !theory/datasets/README.md
+audition/index/shorts_discovery_state.json
+audition/index/big_names_state.json
+audition/index/.shorts_done
+audition/index/.finalized
+.env.cookies
+.sources_done
+audition/voicelab/prosody200_heldout_model.pkl

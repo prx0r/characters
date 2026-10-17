@@ -1,8 +1,7 @@
 #!/bin/bash
 # Watches sources_queue.json for new @handles and harvests their shorts.
 # Idempotent (R2 exists-checks + .sources_done marker).
-cd /root/patala-audition
-export YTDLP_EXTRA="--remote-components ejs:github"
+cd "$(dirname "$(readlink -f "$0")")"
 LOG=/tmp/opencode/harvest_web.log
 while true; do
   if [ -f sources_queue.json ]; then

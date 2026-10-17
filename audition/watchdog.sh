@@ -19,21 +19,12 @@ ensure() {
 while true; do
   ensure status_server "status_server.py --port 3781" \
       "cd /root/patala-audition && exec python3 status_server.py --port 3781"
-  ensure watcher "sources_watcher.sh" \
-      "cd /root/patala-audition && exec bash sources_watcher.sh"
+  ensure runner "runner_agent[.]py" \
+      "cd /root/patala-audition && exec bash overnight_shorts.sh"
 
   if ! grep -q "all rounds done" /tmp/opencode/agent.log 2>/dev/null; then
     ensure agent "discovery_agent.sh" \
         "cd /root/patala-audition && exec bash discovery_agent.sh"
-  fi
-  if ! grep -q '"__complete__": true' \
-      /root/patala-audition/index/big_names_state.json 2>/dev/null; then
-    ensure big_names "big_names_harvest.py" \
-        "cd /root/patala-audition && exec python3 big_names_harvest.py"
-  fi
-  if [ ! -f /root/patala-audition/index/.shorts_done ]; then
-    ensure longtail "uk_shorts_discovery.py" \
-        "cd /root/patala-audition && exec python3 uk_shorts_discovery.py --max-names 1200"
   fi
   if [ ! -f /root/patala-audition/index/.finalized ]; then
     ensure finalize "finalize.sh" \
