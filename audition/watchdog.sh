@@ -3,7 +3,7 @@
 # Restarts any dead component; logs every action. Safe: all components are
 # idempotent (exists-checks + markers), so restarts never double-write.
 cd /root/patala-audition
-export YTDLP_EXTRA="--remote-components ejs:github"
+export YTDLP_EXTRA="--remote-components ejs:github --sleep-requests 1 --min-sleep-interval 3 --max-sleep-interval 8"
 LOG=/tmp/opencode/watchdog.log
 say() { echo "$(date -Is) $*" >> "$LOG"; }
 
@@ -33,7 +33,7 @@ while true; do
   fi
   if [ ! -f /root/patala-audition/index/.shorts_done ]; then
     ensure longtail "uk_shorts_discovery.py" \
-        "cd /root/patala-audition && export YTDLP_EXTRA='--remote-components ejs:github' && exec python3 uk_shorts_discovery.py --max-names 1200"
+        "cd /root/patala-audition && exec python3 uk_shorts_discovery.py --max-names 1200"
   fi
   if [ ! -f /root/patala-audition/index/.finalized ]; then
     ensure finalize "finalize.sh" \

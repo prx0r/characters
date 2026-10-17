@@ -10,7 +10,8 @@ import json, os, sys, tempfile, time
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from uk_shorts_discovery import yt_search_shorts, s3, slugify, R2_BUCKET  # noqa: E402
+from uk_shorts_discovery import (yt_search_shorts, asr_fallback,  # noqa: E402
+                                 s3, slugify, R2_BUCKET)
 import yt_captions  # noqa: E402
 
 HERE = Path(__file__).parent
@@ -62,7 +63,7 @@ BIG_NAMES = [
 
 def harvest(name: str) -> int:
     cslug = slugify(name)
-    seen, n = set(), 0
+    seen, n, asr_budget = set(), 0, 4
     results = yt_search_shorts(f"{name} stand up", 15) + \
         yt_search_shorts(f"{name}", 8)
     for r in results:
@@ -88,6 +89,9 @@ def harvest(name: str) -> int:
                 cap = yt_captions.fetch_captions(vid, td)
             except Exception:
                 cap = None
+            if not cap and asr_budget > 0:
+                asr_budget -= 1
+                cap = asr_fallback(vid, td)
         if not cap:
             continue
         data = {"id": vid, "url": f"https://www.youtube.com/watch?v={vid}",

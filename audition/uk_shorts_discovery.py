@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import boto3
+import cf_asr
 import yt_captions
 
 HERE = Path(__file__).parent
@@ -83,9 +84,31 @@ def yt_search_shorts(query: str, n: int) -> list[dict]:
     return out
 
 
+def asr_fallback(vid: str, td: str):
+    """Download audio for a captionless short and ASR it. None on failure."""
+    try:
+        cmd = ["yt-dlp", "-x", "--audio-format", "wav",
+               "-o", str(Path(td) / f"{vid}.%(ext)s")]
+        if Path(COOKIES).exists():
+            cmd += ["--cookies", COOKIES]
+        cmd += shlex.split(os.environ.get("YTDLP_EXTRA", ""))
+        cmd += [f"https://www.youtube.com/watch?v={vid}"]
+        subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        wavs = sorted(Path(td).glob(f"{vid}*.wav"))
+        if not wavs:
+            return None
+        d = cf_asr.transcribe(wavs[0])
+        if not d.get("words"):
+            return None
+        return {"transcript": d["text"], "words": d["words"], "method": d["asr"]}
+    except Exception:
+        return None
+
+
 def harvest(name: str, shorts: list[dict], state: dict) -> int:
     cslug = slugify(name)
     n = 0
+    asr_budget = 4
     for s in shorts:
         if not s["id"] or (s.get("duration") or 0) > 185:
             continue
@@ -101,6 +124,9 @@ def harvest(name: str, shorts: list[dict], state: dict) -> int:
                 cap = yt_captions.fetch_captions(s["id"], td)
             except Exception:
                 cap = None
+            if not cap and asr_budget > 0:
+                asr_budget -= 1
+                cap = asr_fallback(s["id"], td)
         if not cap:
             continue
         data = {"id": s["id"], "url": f"https://www.youtube.com/watch?v={s['id']}",
