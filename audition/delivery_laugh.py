@@ -34,45 +34,48 @@ MECH_BASE = {
 # These are learned from dpv research + our corpus analysis
 
 def dpv_coupling_effect(pause_s: float, baseline_pause: float = 0.6) -> float:
-    """dpv coupling: longer pause before surprise = more laugh.
+    """dpv coupling: pause before surprise.
 
-    Pros: extend pause 41.2% before surprise.
-    Amateurs: extend 27.4%.
-    Optimal pause before punchline: ~1.5-2.5s.
-    Too short (<0.5s): audience doesn't process surprise.
-    Too long (>4s): tension dissipates.
+    REAL DATA (5702 events from 5 AM specials):
+    - 95% of beats have pause < 100ms (continuous speech)
+    - Longer pauses slightly REDUCE laugh rate (0.239 → 0.176)
+    - dpv's "41.2% extension" is RELATIVE to comedian's own baseline,
+      not absolute seconds
+
+    This function is now a WEAK effect based on actual data.
     """
+    # Real data shows pause has minimal/negative effect
+    # Keep small effect for theory compatibility
     if pause_s < 0.3:
-        return -0.15  # too fast, no time to process
-    elif pause_s < 0.8:
-        return -0.05  # slightly fast
-    elif pause_s < 1.5:
-        return 0.05   # okay
+        return 0.0    # normal (most beats are here)
+    elif pause_s < 1.0:
+        return -0.02  # slight reduction
     elif pause_s < 2.5:
-        return 0.15   # optimal (dpv sweet spot)
-    elif pause_s < 3.5:
-        return 0.10   # good, slight tension
+        return -0.05  # noticeable reduction
     else:
-        return -0.05  # too long, tension dissipates
+        return -0.08  # long pause = tension dies
 
 
 def pace_effect(wps: float, target_wps: float = 2.7) -> float:
-    """Pace effect: matching target pace helps, too fast/slow hurts.
+    """Pace effect based on REAL DATA.
 
-    Too fast: audience can't follow setup.
-    Too slow: energy dies.
+    REAL DATA (5702 events):
+    - wps 0-1.5: laugh rate 0.186
+    - wps 1.5-2.5: laugh rate 0.214
+    - wps 2.5-3.5: laugh rate 0.240
+    - wps 3.5+: laugh rate 0.314
+
+    FASTER = MORE LAUGHS (opposite of common assumption).
     """
-    ratio = wps / max(target_wps, 0.1)
-    if ratio < 0.5:
-        return -0.10  # way too slow
-    elif ratio < 0.8:
-        return -0.03  # slightly slow
-    elif ratio < 1.3:
-        return 0.05   # on target
-    elif ratio < 1.8:
-        return -0.03  # slightly fast
+    # Match the real data curve
+    if wps < 1.5:
+        return -0.05  # slow = less laughter
+    elif wps < 2.5:
+        return 0.0
+    elif wps < 3.5:
+        return 0.03
     else:
-        return -0.10  # way too fast
+        return 0.08  # fast = more laughter (real data)
 
 
 def energy_variation_effect(e_std: float) -> float:
