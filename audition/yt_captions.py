@@ -7,9 +7,12 @@ Usage:
   python3 yt_captions.py --test VIDEO_ID     # print first words + method
 """
 from __future__ import annotations
-import glob, json, os, subprocess, sys
+import glob, json, os, shlex, subprocess, sys
 
-COOKIES = "/home/box/Downloads/cookies.txt"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+COOKIES = (os.path.join(_HERE, ".env.cookies")
+           if os.path.exists(os.path.join(_HERE, ".env.cookies"))
+           else "/home/box/Downloads/cookies.txt")
 
 
 def _run(cmd: list[str], timeout: int = 90) -> subprocess.CompletedProcess:
@@ -23,6 +26,7 @@ def _ytdlp_subs(video_id: str, tmpdir: str, manual: bool) -> list[str]:
            f"https://youtube.com/watch?v={video_id}", "--no-playlist"]
     if os.path.exists(COOKIES):
         cmd += ["--cookies", COOKIES]
+    cmd += shlex.split(os.environ.get("YTDLP_EXTRA", ""))
     _run(cmd)
     return sorted(glob.glob(os.path.join(tmpdir, f"{video_id}*.json3")))
 

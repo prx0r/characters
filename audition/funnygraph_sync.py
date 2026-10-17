@@ -13,16 +13,17 @@ Usage:
   python3 funnygraph_sync.py --no-enrich     # skip yt-dlp metadata (uses cache only)
 """
 from __future__ import annotations
-import argparse, json, os, subprocess, time
+import argparse, json, os, shlex, subprocess, time
 from pathlib import Path
 
 HERE = Path(__file__).parent
 INDEX = HERE / "index" / "uk_comedy_index.jsonl"
 CACHE = HERE / "index" / "yt_meta_cache.json"
-FG = Path("/tmp/funnygraph")
+FG = Path(os.environ.get("FUNNYGRAPH_DIR", "/tmp/funnygraph"))
 YT = FG / "data" / "youtube"
 PROPOSED = FG / "uk_clips_proposed"
-COOKIES = "/home/box/Downloads/cookies.txt"
+COOKIES = str(HERE / ".env.cookies") if (HERE / ".env.cookies").exists() else \
+    "/home/box/Downloads/cookies.txt"
 
 SLUG_FIXES = {
     "marcus-brigstock": "marcus-brigstocke",
@@ -67,6 +68,7 @@ def enrich(vid: str, cache: dict) -> dict | None:
            f"https://youtube.com/watch?v={vid}"]
     if Path(COOKIES).exists():
         cmd += ["--cookies", COOKIES]
+    cmd += shlex.split(os.environ.get("YTDLP_EXTRA", ""))
     try:
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
         if r.returncode != 0 or not r.stdout.strip():

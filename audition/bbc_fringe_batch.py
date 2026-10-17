@@ -105,13 +105,27 @@ def process(ep: dict, force: bool = False) -> dict:
 
 
 def main():
-    argv = [a for a in sys.argv[1:] if not a.startswith("-")]
-    force = "--force" in sys.argv
+    args = sys.argv[1:]
+    force = "--force" in args
     ids = None
-    for a in sys.argv[1:]:
+    rest: list[str] = []
+    i = 0
+    while i < len(args):
+        a = args[i]
+        if a == "--ids" and i + 1 < len(args):
+            ids = [s.strip().lower() for s in args[i + 1].split(",") if s.strip()]
+            i += 2
+            continue
         if a.startswith("--ids="):
             ids = [s.strip().lower() for s in a.split("=", 1)[1].split(",") if s.strip()]
-    url = argv[0] if argv else "https://podcasts.files.bbci.co.uk/p0jl6yys.rss"
+            i += 1
+            continue
+        if a == "--force":
+            i += 1
+            continue
+        rest.append(a)
+        i += 1
+    url = rest[0] if rest else "https://podcasts.files.bbci.co.uk/p0jl6yys.rss"
     eps = parse_feed(url)
     if ids:
         eps = [e for e in eps if any(k in e["title"].lower() for k in ids)]

@@ -183,6 +183,10 @@ def transcribe(path: str | Path) -> dict:
                 "asr": "cloudflare-whisper",
                 "note": "laughter extracted from transcript 'ha ha' runs (StandUp4AI-style)"};
     except Exception as e:
+        if os.environ.get("CF_ASR_NO_FALLBACK"):
+            print(f"cf whisper failed ({str(e)[:120]}); no fallback (CF_ASR_NO_FALLBACK)",
+                  flush=True)
+            raise
         print(f"cf whisper failed ({str(e)[:120]}); local tiny fallback", flush=True)
         import array
         import numpy as np

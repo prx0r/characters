@@ -22,7 +22,9 @@ R2_ENDPOINT = "https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com
 R2_KEY = "36c9d71d3defa6b43f53536bdc6f65f3"
 R2_SECRET = "c55689c3f176e4b839a7fb93861778960ed1020ba6253decec11538e7b187691"
 R2_BUCKET = "comedy-specials"
-COOKIES = "/home/box/Downloads/cookies.txt"
+COOKIES = str(Path(__file__).parent / ".env.cookies") \
+    if (Path(__file__).parent / ".env.cookies").exists() \
+    else "/home/box/Downloads/cookies.txt"
 
 s3 = boto3.client("s3", endpoint_url=R2_ENDPOINT,
                   aws_access_key_id=R2_KEY, aws_secret_access_key=R2_SECRET,
