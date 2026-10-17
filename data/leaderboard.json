@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T17:34:19.659Z",
+ "updated": "2026-10-17T17:55:04.312Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 1,
@@ -43,6 +43,478 @@
     },
     {
      "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Shane Gillis",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dave Chappelle",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bill Hicks",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bert Kreischer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Richard Pryor",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kevin Hart",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Nate Bargatze",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Adam Sandler",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Billy Connolly",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Brian Regan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dick Gregory",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Lewis Black",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sam Froum",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Uncle Lazer",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -3752,6 +4224,1680 @@
     {
      "id": "wNF_cZ6DsCo",
      "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qDO6HV6xTmI",
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7W33HRc1A6c",
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JjR_m88xtUY",
+     "comic": "Shane Gillis",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wZXoErL2124",
+     "comic": "Dave Chappelle",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JhkZMxgPxXU",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aiqKK4ysI7g",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eWrKf5ik1i4",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qEfR1Mz2j_w",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vHgca_fb3TU",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "78Puggk5MCA",
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "U1H913UqQ6w",
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bO9QIBcxR6c",
+     "comic": "Bill Hicks",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IueXtzdC6kA",
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cF8MpK-yK5o",
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GAmvYDknyWA",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KFDjLEU6dfo",
+     "comic": "Bert Kreischer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Txp8B4ek_kk",
+     "comic": "Richard Pryor",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DiFq_nk8pE0",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9IzDbNFDdP4",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "x1sQkEfAdfY",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hxBzR6iZ0hE",
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EuPDb9r4Gqw",
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xXkuP_Rx8M0",
+     "comic": "Kevin Hart",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XY9h-0x1Oao",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wY5-8kvMEh0",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pQ7m5BMkf2A",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wka-o2V71CM",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r7drK5-sMns",
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HPH0HgotIE4",
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cpbplNlSo4w",
+     "comic": "Nate Bargatze",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "liIPcSOL6LI",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2aRj7RsJxV0",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SEb-sXmcMLE",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4GGyQNMPDkk",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nfbIPOi7AF4",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eJCMjJwIGxY",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JlXNGprnjYs",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kuRnN7l5dbw",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WOYh-KfB7s8",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "q0jQPfiLiWg",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0rR9IaXH1M0",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "L-98RjrmqO4",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1oyKVAjISmI",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KX5Z-HpHH9g",
+     "comic": "Adam Sandler",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "t7nsAMwl1T4",
+     "comic": "Billy Connolly",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QWzYaZDK6Is",
+     "comic": "Brian Regan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8OPOWwR3GNs",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "B6Y7KQXHh58",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-4LUjBLmfMM",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ej5FwzhUDcM",
+     "comic": "Dick Gregory",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kTPsoX9OLFA",
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YdXKs3e0ll4",
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kUH34iqK7cI",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zmwv3Ujwpac",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uXF-xbMguMc",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7WlwumGkSec",
+     "comic": "Lewis Black",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FO-LVTdNEqA",
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tfan5MacmsI",
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "y9pAv-z2ens",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1jdeqKte98g",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "trrb9FDfuGo",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "o_F2xwlrT_8",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LgrMi7KgNW8",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XPKD7Q6qyA8",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-GNtSBmsfM",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "stOVIcr273A",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YqfBeyze_Fs",
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1VcdnqH0PJc",
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "isNRZJ6icwc",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FlqbgEM56t8",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bRb-Uu-ImNY",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8rE5PSLJOYY",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xU-zhajzad4",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5A-F9qu6c_4",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Cg5Epz-c33U",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N7KSkrPbjWc",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OygryYFYv1Y",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fwgYdC9TahQ",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "USp-LBxVcGk",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QLetzVj9zTg",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-_wRk7rc66E",
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bdc5FKfcOGY",
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PXALIB4iat8",
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eoEzpUrfwt4",
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kzHdCl5XGtc",
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v7G4Q_2QKV4",
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LKhPDlkkfsQ",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Sk9CC9aqsxk",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oDtzT6Po3CQ",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-yMLLNwatU",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cLLMx-fpLPM",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p5QV-ReEnIY",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qJrMbIbbO3o",
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bH1Fj8dWb9A",
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "g2dxPV1KPUc",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d8SGxKBIpjk",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "liGeqle6Eto",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WzkOGV1xPio",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NnkLcJkMj3U",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IjfPbTDjS_Q",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m73IsA9G7Mg",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eaRlkin5pQA",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gKF3H7i3G9w",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Q6xZGn3jWzs",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CwJabCEpsnc",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fqOKV_AKESk",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "iAz9eirkMiM",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "12Q-Ks93-ds",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RMPbwYMUNbM",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MsZBYtnopZk",
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HQal4uHs2Q4",
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fVcErhvm8dg",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "E0CmJIlAQ-E",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AbZSPxsL1gQ",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TxSHJyVZ3tk",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cF3VN4n28pA",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qZ3eeOyDmDU",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rpo20wuhC6Q",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "viwQyhTbd4Y",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6zLVFrxVm28",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1y7HYMaQI30",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IfDf2FFy4RU",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JJlcV4cdhvM",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qnYQ9aJ5K9c",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xAAKiThPKFM",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wVIi-NppvJo",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2qwo8XfRsBM",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jkoPePFHEEA",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "11f4ZN9WMwA",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UIx9zAMcLtc",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YcCM60uuwU0",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "I-RKD86UGFY",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XBPYETSATqU",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ng3m997NIUA",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "My8Z1OULy6w",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QjbF63-FjKw",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b_-pJIqw_8E",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "n95T8aCbD5Y",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2m0nbMZW3QA",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aO402gOm4BA",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ud4rsr9VZs0",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AJPSda_F5QM",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r_n1NcVM78I",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jA0OqrSltNQ",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NVUOTqf97Lo",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2JhxKZkvUJk",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kZng2dYWP6Q",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gB61nu2p6Uo",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vJ7MzBdNLmM",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Fr7HR-i4XfI",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dS3X98IHmmU",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "X2B9LNkio7w",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AIyRtUUuQIo",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3EXXIn0tIPc",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XkqRYoBq3hs",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kql6zMNgLkU",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZD4m4HN9aeg",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vWFq2T5j390",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-W1ZeVR9ZiQ",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "04Qx2FEhohs",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UEZjVi3WHr4",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5G6sWzsH-Vw",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8d9vkyPTyuw",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r18N9ouh_m4",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EoBmRJdDW2A",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IC751vSFqV0",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H8bXyqy4P40",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dZgl8upfqmQ",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JrVv60X9THk",
+     "comic": "Sam Froum",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4DIPhGb3674",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dwdqoE8GG_8",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6oSJnReeDr0",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jNzFqnRw7QQ",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RUe9am-s6Oc",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3DC8ZqGLFzw",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LXheg9EyIV0",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "j_AOsPS2KUQ",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2PVro5vmDck",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "knkYHcvpk5k",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yxFvT0zTWb4",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kK56b4Vw8jo",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dQIDD7h-iEU",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nAAe5XSfoPA",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WEm3MKwWZnw",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zp6H4Ajn8Rs",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NN3xASDMwO8",
+     "comic": "Uncle Lazer",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -4363,6 +6509,478 @@
      "bouts": 0
     },
     {
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Shane Gillis",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dave Chappelle",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bill Hicks",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bert Kreischer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Richard Pryor",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kevin Hart",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Nate Bargatze",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Adam Sandler",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Billy Connolly",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Brian Regan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dick Gregory",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Lewis Black",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sam Froum",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -8065,6 +10683,1680 @@
     {
      "id": "wNF_cZ6DsCo",
      "comic": "Jerry Seinfeld",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qDO6HV6xTmI",
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7W33HRc1A6c",
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JjR_m88xtUY",
+     "comic": "Shane Gillis",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wZXoErL2124",
+     "comic": "Dave Chappelle",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JhkZMxgPxXU",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aiqKK4ysI7g",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eWrKf5ik1i4",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qEfR1Mz2j_w",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vHgca_fb3TU",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "78Puggk5MCA",
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "U1H913UqQ6w",
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bO9QIBcxR6c",
+     "comic": "Bill Hicks",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IueXtzdC6kA",
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cF8MpK-yK5o",
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GAmvYDknyWA",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KFDjLEU6dfo",
+     "comic": "Bert Kreischer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Txp8B4ek_kk",
+     "comic": "Richard Pryor",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DiFq_nk8pE0",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9IzDbNFDdP4",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "x1sQkEfAdfY",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hxBzR6iZ0hE",
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EuPDb9r4Gqw",
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xXkuP_Rx8M0",
+     "comic": "Kevin Hart",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XY9h-0x1Oao",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wY5-8kvMEh0",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pQ7m5BMkf2A",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wka-o2V71CM",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r7drK5-sMns",
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HPH0HgotIE4",
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cpbplNlSo4w",
+     "comic": "Nate Bargatze",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "liIPcSOL6LI",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2aRj7RsJxV0",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SEb-sXmcMLE",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4GGyQNMPDkk",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nfbIPOi7AF4",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eJCMjJwIGxY",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JlXNGprnjYs",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kuRnN7l5dbw",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WOYh-KfB7s8",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "q0jQPfiLiWg",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0rR9IaXH1M0",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "L-98RjrmqO4",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1oyKVAjISmI",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KX5Z-HpHH9g",
+     "comic": "Adam Sandler",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "t7nsAMwl1T4",
+     "comic": "Billy Connolly",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QWzYaZDK6Is",
+     "comic": "Brian Regan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8OPOWwR3GNs",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "B6Y7KQXHh58",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-4LUjBLmfMM",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ej5FwzhUDcM",
+     "comic": "Dick Gregory",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kTPsoX9OLFA",
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YdXKs3e0ll4",
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kUH34iqK7cI",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zmwv3Ujwpac",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uXF-xbMguMc",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7WlwumGkSec",
+     "comic": "Lewis Black",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FO-LVTdNEqA",
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tfan5MacmsI",
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "y9pAv-z2ens",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1jdeqKte98g",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "trrb9FDfuGo",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "o_F2xwlrT_8",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LgrMi7KgNW8",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XPKD7Q6qyA8",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-GNtSBmsfM",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "stOVIcr273A",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YqfBeyze_Fs",
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1VcdnqH0PJc",
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "isNRZJ6icwc",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FlqbgEM56t8",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bRb-Uu-ImNY",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8rE5PSLJOYY",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xU-zhajzad4",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5A-F9qu6c_4",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Cg5Epz-c33U",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N7KSkrPbjWc",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OygryYFYv1Y",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fwgYdC9TahQ",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "USp-LBxVcGk",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QLetzVj9zTg",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-_wRk7rc66E",
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bdc5FKfcOGY",
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PXALIB4iat8",
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eoEzpUrfwt4",
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kzHdCl5XGtc",
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v7G4Q_2QKV4",
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LKhPDlkkfsQ",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Sk9CC9aqsxk",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oDtzT6Po3CQ",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-yMLLNwatU",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cLLMx-fpLPM",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p5QV-ReEnIY",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qJrMbIbbO3o",
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bH1Fj8dWb9A",
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "g2dxPV1KPUc",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d8SGxKBIpjk",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "liGeqle6Eto",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WzkOGV1xPio",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NnkLcJkMj3U",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IjfPbTDjS_Q",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m73IsA9G7Mg",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eaRlkin5pQA",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gKF3H7i3G9w",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Q6xZGn3jWzs",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CwJabCEpsnc",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fqOKV_AKESk",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "iAz9eirkMiM",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "12Q-Ks93-ds",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RMPbwYMUNbM",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MsZBYtnopZk",
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HQal4uHs2Q4",
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fVcErhvm8dg",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "E0CmJIlAQ-E",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AbZSPxsL1gQ",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TxSHJyVZ3tk",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cF3VN4n28pA",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qZ3eeOyDmDU",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rpo20wuhC6Q",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "viwQyhTbd4Y",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6zLVFrxVm28",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1y7HYMaQI30",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IfDf2FFy4RU",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JJlcV4cdhvM",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qnYQ9aJ5K9c",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xAAKiThPKFM",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wVIi-NppvJo",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2qwo8XfRsBM",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jkoPePFHEEA",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "11f4ZN9WMwA",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UIx9zAMcLtc",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YcCM60uuwU0",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "I-RKD86UGFY",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XBPYETSATqU",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ng3m997NIUA",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "My8Z1OULy6w",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QjbF63-FjKw",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b_-pJIqw_8E",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "n95T8aCbD5Y",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2m0nbMZW3QA",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aO402gOm4BA",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ud4rsr9VZs0",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AJPSda_F5QM",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r_n1NcVM78I",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jA0OqrSltNQ",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NVUOTqf97Lo",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2JhxKZkvUJk",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kZng2dYWP6Q",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gB61nu2p6Uo",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vJ7MzBdNLmM",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Fr7HR-i4XfI",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dS3X98IHmmU",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "X2B9LNkio7w",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AIyRtUUuQIo",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3EXXIn0tIPc",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XkqRYoBq3hs",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kql6zMNgLkU",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZD4m4HN9aeg",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vWFq2T5j390",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-W1ZeVR9ZiQ",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "04Qx2FEhohs",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UEZjVi3WHr4",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5G6sWzsH-Vw",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8d9vkyPTyuw",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r18N9ouh_m4",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EoBmRJdDW2A",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IC751vSFqV0",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H8bXyqy4P40",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dZgl8upfqmQ",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JrVv60X9THk",
+     "comic": "Sam Froum",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4DIPhGb3674",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dwdqoE8GG_8",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6oSJnReeDr0",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jNzFqnRw7QQ",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RUe9am-s6Oc",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3DC8ZqGLFzw",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LXheg9EyIV0",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "j_AOsPS2KUQ",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2PVro5vmDck",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "knkYHcvpk5k",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yxFvT0zTWb4",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kK56b4Vw8jo",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dQIDD7h-iEU",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nAAe5XSfoPA",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WEm3MKwWZnw",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zp6H4Ajn8Rs",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NN3xASDMwO8",
+     "comic": "Uncle Lazer",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -8682,6 +12974,478 @@
      "hi": null,
      "wins": 0,
      "bouts": 0
+    },
+    {
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Shane Gillis",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dave Chappelle",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bill Hicks",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Bert Kreischer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Richard Pryor",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kevin Hart",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Nate Bargatze",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Adam Sandler",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Billy Connolly",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Brian Regan",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dick Gregory",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Lewis Black",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sam Froum",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
     }
    ],
    "clips": [
@@ -12936,6 +17700,1680 @@
     {
      "id": "-yBZ6EMnC2c",
      "comic": "Norm Macdonald",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qDO6HV6xTmI",
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7W33HRc1A6c",
+     "comic": "George Carlin",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JjR_m88xtUY",
+     "comic": "Shane Gillis",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wZXoErL2124",
+     "comic": "Dave Chappelle",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JhkZMxgPxXU",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aiqKK4ysI7g",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eWrKf5ik1i4",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qEfR1Mz2j_w",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vHgca_fb3TU",
+     "comic": "John Mulaney",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "78Puggk5MCA",
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "U1H913UqQ6w",
+     "comic": "Stewart Lee",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bO9QIBcxR6c",
+     "comic": "Bill Hicks",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IueXtzdC6kA",
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cF8MpK-yK5o",
+     "comic": "Mitch Hedberg",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GAmvYDknyWA",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KFDjLEU6dfo",
+     "comic": "Bert Kreischer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Txp8B4ek_kk",
+     "comic": "Richard Pryor",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "DiFq_nk8pE0",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "9IzDbNFDdP4",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "x1sQkEfAdfY",
+     "comic": "Eddie Izzard",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "hxBzR6iZ0hE",
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EuPDb9r4Gqw",
+     "comic": "Ron White",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xXkuP_Rx8M0",
+     "comic": "Kevin Hart",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XY9h-0x1Oao",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wY5-8kvMEh0",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "pQ7m5BMkf2A",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wka-o2V71CM",
+     "comic": "Ali Wong",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r7drK5-sMns",
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HPH0HgotIE4",
+     "comic": "Michael Che",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cpbplNlSo4w",
+     "comic": "Nate Bargatze",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "liIPcSOL6LI",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2aRj7RsJxV0",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SEb-sXmcMLE",
+     "comic": "Sarah Silverman",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4GGyQNMPDkk",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nfbIPOi7AF4",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eJCMjJwIGxY",
+     "comic": "Steven Wright",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JlXNGprnjYs",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kuRnN7l5dbw",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WOYh-KfB7s8",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "q0jQPfiLiWg",
+     "comic": "Taylor Tomlinson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0rR9IaXH1M0",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "L-98RjrmqO4",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1oyKVAjISmI",
+     "comic": "Jim Jefferies",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "KX5Z-HpHH9g",
+     "comic": "Adam Sandler",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "t7nsAMwl1T4",
+     "comic": "Billy Connolly",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QWzYaZDK6Is",
+     "comic": "Brian Regan",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8OPOWwR3GNs",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "B6Y7KQXHh58",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-4LUjBLmfMM",
+     "comic": "Demetri Martin",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ej5FwzhUDcM",
+     "comic": "Dick Gregory",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kTPsoX9OLFA",
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YdXKs3e0ll4",
+     "comic": "Drew Michael",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kUH34iqK7cI",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "zmwv3Ujwpac",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "uXF-xbMguMc",
+     "comic": "Dylan Moran",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "7WlwumGkSec",
+     "comic": "Lewis Black",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FO-LVTdNEqA",
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "tfan5MacmsI",
+     "comic": "Patton Oswalt",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "y9pAv-z2ens",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1jdeqKte98g",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "trrb9FDfuGo",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "o_F2xwlrT_8",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LgrMi7KgNW8",
+     "comic": "Pablo Francisco",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XPKD7Q6qyA8",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-GNtSBmsfM",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "stOVIcr273A",
+     "comic": "Catherine Cohen",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YqfBeyze_Fs",
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1VcdnqH0PJc",
+     "comic": "Ray Romano",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "isNRZJ6icwc",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FlqbgEM56t8",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bRb-Uu-ImNY",
+     "comic": "Tom Segura",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8rE5PSLJOYY",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xU-zhajzad4",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5A-F9qu6c_4",
+     "comic": "Vir Das",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Cg5Epz-c33U",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "N7KSkrPbjWc",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "OygryYFYv1Y",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fwgYdC9TahQ",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "USp-LBxVcGk",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QLetzVj9zTg",
+     "comic": "Orion Levine",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-_wRk7rc66E",
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bdc5FKfcOGY",
+     "comic": "Ari Matti",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PXALIB4iat8",
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eoEzpUrfwt4",
+     "comic": "Byron Trimble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kzHdCl5XGtc",
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "v7G4Q_2QKV4",
+     "comic": "Celeste Barber",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LKhPDlkkfsQ",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Sk9CC9aqsxk",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "oDtzT6Po3CQ",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2-yMLLNwatU",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cLLMx-fpLPM",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "p5QV-ReEnIY",
+     "comic": "Curtis Cook",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qJrMbIbbO3o",
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bH1Fj8dWb9A",
+     "comic": "Danilo Gentili",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "g2dxPV1KPUc",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "d8SGxKBIpjk",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "liGeqle6Eto",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WzkOGV1xPio",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NnkLcJkMj3U",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IjfPbTDjS_Q",
+     "comic": "Earl Skakel",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "m73IsA9G7Mg",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "eaRlkin5pQA",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gKF3H7i3G9w",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Q6xZGn3jWzs",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CwJabCEpsnc",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fqOKV_AKESk",
+     "comic": "Eli Matthewson",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "iAz9eirkMiM",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "12Q-Ks93-ds",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RMPbwYMUNbM",
+     "comic": "Franco Escamilla",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "MsZBYtnopZk",
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HQal4uHs2Q4",
+     "comic": "Hannah Magy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "fVcErhvm8dg",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "E0CmJIlAQ-E",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AbZSPxsL1gQ",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TxSHJyVZ3tk",
+     "comic": "Jeremiah Watkins",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "cF3VN4n28pA",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qZ3eeOyDmDU",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rpo20wuhC6Q",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "viwQyhTbd4Y",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6zLVFrxVm28",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "1y7HYMaQI30",
+     "comic": "Jenny Zigrino",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IfDf2FFy4RU",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JJlcV4cdhvM",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qnYQ9aJ5K9c",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "xAAKiThPKFM",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wVIi-NppvJo",
+     "comic": "Jerron Horton",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2qwo8XfRsBM",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jkoPePFHEEA",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "11f4ZN9WMwA",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UIx9zAMcLtc",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "YcCM60uuwU0",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "I-RKD86UGFY",
+     "comic": "Jiaoying Summers",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XBPYETSATqU",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ng3m997NIUA",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "My8Z1OULy6w",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "QjbF63-FjKw",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "b_-pJIqw_8E",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "n95T8aCbD5Y",
+     "comic": "Kenny Sebastian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2m0nbMZW3QA",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "aO402gOm4BA",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Ud4rsr9VZs0",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AJPSda_F5QM",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r_n1NcVM78I",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jA0OqrSltNQ",
+     "comic": "Liz Glazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NVUOTqf97Lo",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2JhxKZkvUJk",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kZng2dYWP6Q",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "gB61nu2p6Uo",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vJ7MzBdNLmM",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Fr7HR-i4XfI",
+     "comic": "Mario Barth",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dS3X98IHmmU",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "X2B9LNkio7w",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "AIyRtUUuQIo",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3EXXIn0tIPc",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "XkqRYoBq3hs",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kql6zMNgLkU",
+     "comic": "Nick Murphy",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ZD4m4HN9aeg",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "vWFq2T5j390",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "-W1ZeVR9ZiQ",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "04Qx2FEhohs",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "UEZjVi3WHr4",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "5G6sWzsH-Vw",
+     "comic": "Rahul Subramanian",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8d9vkyPTyuw",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "r18N9ouh_m4",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "EoBmRJdDW2A",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IC751vSFqV0",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "H8bXyqy4P40",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dZgl8upfqmQ",
+     "comic": "Ross Noble",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JrVv60X9THk",
+     "comic": "Sam Froum",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "4DIPhGb3674",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dwdqoE8GG_8",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "6oSJnReeDr0",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jNzFqnRw7QQ",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RUe9am-s6Oc",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3DC8ZqGLFzw",
+     "comic": "Sarah Tiana",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "LXheg9EyIV0",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "j_AOsPS2KUQ",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "2PVro5vmDck",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "knkYHcvpk5k",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "yxFvT0zTWb4",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "kK56b4Vw8jo",
+     "comic": "Sam Biru",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "dQIDD7h-iEU",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "nAAe5XSfoPA",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "WEm3MKwWZnw",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Zp6H4Ajn8Rs",
+     "comic": "Tommy Tiernan",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "NN3xASDMwO8",
+     "comic": "Uncle Lazer",
      "elo": 1500,
      "lo": null,
      "hi": null,
