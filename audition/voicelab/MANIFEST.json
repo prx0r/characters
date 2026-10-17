@@ -94,6 +94,25 @@
         14
       ],
       "note": "AUC 0.862 \u2014 NO leakage (removed high-correlation features)"
+    },
+    "delivery_enhanced_model.pkl": {
+      "auc": 0.474,
+      "validation": "GroupKFold by comedian",
+      "n_beats": 185,
+      "n_comedians": 5,
+      "features": [
+        "wps",
+        "pause",
+        "dur",
+        "pos",
+        "hist",
+        "f0_std",
+        "centroid",
+        "rms_std",
+        "mfcc1",
+        "onset"
+      ],
+      "note": "Timing + audio features (f0, centroid, mfcc, onset)"
     }
   },
   "notes": {
