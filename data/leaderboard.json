@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T21:07:41.029Z",
+ "updated": "2026-10-17T21:25:54.838Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 1,
@@ -131,14 +131,6 @@
     },
     {
      "comic": "Eddie Izzard",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Ron White",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -1643,6 +1635,14 @@
     },
     {
      "comic": "Lenny Bruce",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ron White",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -5531,15 +5531,6 @@
      "bouts": 0
     },
     {
-     "id": "WepSp0jYxBQ",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ICuhqZk4ACY",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -6548,15 +6539,6 @@
      "bouts": 0
     },
     {
-     "id": "EwtBIr3-L-Q",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "T7TPvupWuk4",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -6585,15 +6567,6 @@
     },
     {
      "id": "QG2sU6X-DT8",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "vdP-WWLdoTw",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -7324,24 +7297,6 @@
     {
      "id": "x1sQkEfAdfY",
      "comic": "Eddie Izzard",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hxBzR6iZ0hE",
-     "comic": "Ron White",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EuPDb9r4Gqw",
-     "comic": "Ron White",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -9347,15 +9302,6 @@
      "bouts": 0
     },
     {
-     "id": "ABml9AvVXQ4",
-     "comic": "Les Dawson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "KMQOYUVyHwU",
      "comic": "Les Dawson",
      "elo": 1500,
@@ -10220,15 +10166,6 @@
      "bouts": 0
     },
     {
-     "id": "JA0BXcIeN0w",
-     "comic": "Lee Hurst",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "3Kows6Tzz6k",
      "comic": "Lee Hurst",
      "elo": 1500,
@@ -10321,24 +10258,6 @@
     {
      "id": "ImJ9b-EfkJg",
      "comic": "Daniel Kitson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "XpTmjt3Sd9c",
-     "comic": "Byron Trimble",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "klps41AX9a8",
-     "comic": "Byron Trimble",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -10752,15 +10671,6 @@
     },
     {
      "id": "cOv-jL0ZOtE",
-     "comic": "Chic Murray",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "fVmIEgZMz6c",
      "comic": "Chic Murray",
      "elo": 1500,
      "lo": 1500,
@@ -17484,15 +17394,6 @@
     },
     {
      "id": "eN79YjRLh40",
-     "comic": "Nick Offerman",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "6ul1Fgg2jmw",
      "comic": "Nick Offerman",
      "elo": 1500,
      "lo": 1500,
@@ -22450,14 +22351,6 @@
      "bouts": 0
     },
     {
-     "comic": "Ron White",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Kevin Hart",
      "elo": 1500,
      "lo": 1500,
@@ -23955,6 +23848,14 @@
     },
     {
      "comic": "Lenny Bruce",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ron White",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -27843,15 +27744,6 @@
      "bouts": 0
     },
     {
-     "id": "WepSp0jYxBQ",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ICuhqZk4ACY",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -28860,15 +28752,6 @@
      "bouts": 0
     },
     {
-     "id": "EwtBIr3-L-Q",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "T7TPvupWuk4",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -28897,15 +28780,6 @@
     },
     {
      "id": "QG2sU6X-DT8",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "vdP-WWLdoTw",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -29636,24 +29510,6 @@
     {
      "id": "x1sQkEfAdfY",
      "comic": "Eddie Izzard",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hxBzR6iZ0hE",
-     "comic": "Ron White",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EuPDb9r4Gqw",
-     "comic": "Ron White",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -31659,15 +31515,6 @@
      "bouts": 0
     },
     {
-     "id": "ABml9AvVXQ4",
-     "comic": "Les Dawson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "KMQOYUVyHwU",
      "comic": "Les Dawson",
      "elo": 1500,
@@ -32532,15 +32379,6 @@
      "bouts": 0
     },
     {
-     "id": "JA0BXcIeN0w",
-     "comic": "Lee Hurst",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "3Kows6Tzz6k",
      "comic": "Lee Hurst",
      "elo": 1500,
@@ -32633,24 +32471,6 @@
     {
      "id": "ImJ9b-EfkJg",
      "comic": "Daniel Kitson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "XpTmjt3Sd9c",
-     "comic": "Byron Trimble",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "klps41AX9a8",
-     "comic": "Byron Trimble",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -33064,15 +32884,6 @@
     },
     {
      "id": "cOv-jL0ZOtE",
-     "comic": "Chic Murray",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "fVmIEgZMz6c",
      "comic": "Chic Murray",
      "elo": 1500,
      "lo": 1500,
@@ -39796,15 +39607,6 @@
     },
     {
      "id": "eN79YjRLh40",
-     "comic": "Nick Offerman",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "6ul1Fgg2jmw",
      "comic": "Nick Offerman",
      "elo": 1500,
      "lo": 1500,
@@ -44770,14 +44572,6 @@
      "bouts": 0
     },
     {
-     "comic": "Ron White",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Kevin Hart",
      "elo": 1500,
      "lo": null,
@@ -46275,6 +46069,14 @@
     },
     {
      "comic": "Lenny Bruce",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Ron White",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -50074,15 +49876,6 @@
      "bouts": 0
     },
     {
-     "id": "WepSp0jYxBQ",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ICuhqZk4ACY",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -51091,15 +50884,6 @@
      "bouts": 0
     },
     {
-     "id": "EwtBIr3-L-Q",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "T7TPvupWuk4",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -51128,15 +50912,6 @@
     },
     {
      "id": "QG2sU6X-DT8",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "vdP-WWLdoTw",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -52506,24 +52281,6 @@
     {
      "id": "x1sQkEfAdfY",
      "comic": "Eddie Izzard",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hxBzR6iZ0hE",
-     "comic": "Ron White",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EuPDb9r4Gqw",
-     "comic": "Ron White",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -54529,15 +54286,6 @@
      "bouts": 0
     },
     {
-     "id": "ABml9AvVXQ4",
-     "comic": "Les Dawson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "KMQOYUVyHwU",
      "comic": "Les Dawson",
      "elo": 1500,
@@ -55402,15 +55150,6 @@
      "bouts": 0
     },
     {
-     "id": "JA0BXcIeN0w",
-     "comic": "Lee Hurst",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "3Kows6Tzz6k",
      "comic": "Lee Hurst",
      "elo": 1500,
@@ -55503,24 +55242,6 @@
     {
      "id": "ImJ9b-EfkJg",
      "comic": "Daniel Kitson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "XpTmjt3Sd9c",
-     "comic": "Byron Trimble",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "klps41AX9a8",
-     "comic": "Byron Trimble",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -55934,15 +55655,6 @@
     },
     {
      "id": "cOv-jL0ZOtE",
-     "comic": "Chic Murray",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "fVmIEgZMz6c",
      "comic": "Chic Murray",
      "elo": 1500,
      "lo": null,
@@ -62666,15 +62378,6 @@
     },
     {
      "id": "eN79YjRLh40",
-     "comic": "Nick Offerman",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "6ul1Fgg2jmw",
      "comic": "Nick Offerman",
      "elo": 1500,
      "lo": null,
