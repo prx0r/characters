@@ -42,15 +42,23 @@ def _ok_name(s: str) -> str | None:
 
 
 _LIVE_AT_RE = re.compile(r"\s+\b(?:LIVE|Live|live)\b\s+(?:at|from)\b.*$")
-_BAD_CH_RE = re.compile(r"\b(club|comedy|stand|live|tv|channel|presents|shows?|official)\b",
-                        re.I)
+_CLUB_NAME_RE = re.compile(r"\b(club|stand|live|tv|channel|presents|shows?|official|"
+                           r"music|podcast)\b", re.I)
+_CLUB_HANDLE_RE = re.compile(r"club|standup|live|presents", re.I)
 
 
-def _channel_fallback(ch: str) -> str | None:
-    """Channel display name as comedian (solo channels), rejecting clubs."""
+def _channel_fallback(ch: str, handle: str = "") -> str | None:
+    """Channel display name as comedian; rejects clubs/venues.
+
+    Solo channels often end in 'Comedy' (e.g. 'Jake Lambert Comedy') so only
+    club/venue hints disqualify; the handle is a second signal.
+    """
     c = (ch or "").strip()
-    if not c or c.startswith("@") or _BAD_CH_RE.search(c):
+    if not c or c.startswith("@"):
         return None
+    if _CLUB_NAME_RE.search(c) or _CLUB_HANDLE_RE.search(handle or ""):
+        return None
+    c = re.sub(r"\s+comedy$", "", c, flags=re.I).strip()
     return _ok_name(c)
 
 
@@ -73,6 +81,30 @@ def parse_name(title: str) -> str | None:
             if cand:
                 return cand
     return None
+
+
+_display_cache: dict[str, str | None] = {}
+
+
+def resolve_channel_display(vid: str) -> str | None:
+    """Video id -> channel display name (cached per video)."""
+    if vid in _display_cache:
+        return _display_cache[vid]
+    name = None
+    cmd = ["yt-dlp", "--skip-download", "--print", "%(channel)s", "--no-warnings",
+           f"https://www.youtube.com/watch?v={vid}"]
+    if Path(COOKIES).exists():
+        cmd += ["--cookies", COOKIES]
+    cmd += shlex.split(os.environ.get("YTDLP_EXTRA", ""))
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        out = (r.stdout or "").strip().splitlines()
+        if r.returncode == 0 and out and out[0]:
+            name = out[0]
+    except Exception:
+        pass
+    _display_cache[vid] = name
+    return name
 
 
 def list_shorts(channel: str, cap: int) -> list[dict]:
@@ -105,6 +137,13 @@ def main():
     shorts = list_shorts(args.channel, args.max)
     print(f"{args.channel}: {len(shorts)} entries", flush=True)
 
+    chan_fallback = args.fallback_name
+    if not chan_fallback and shorts and (shorts[0].get("channel") or "").startswith("@"):
+        disp = resolve_channel_display(shorts[0]["id"])
+        chan_fallback = _channel_fallback(disp or "", handle=args.channel)
+    if chan_fallback:
+        print(f"  solo-channel fallback name: {chan_fallback}", flush=True)
+
     stats = {"done": 0, "exists": 0, "nocap": 0, "noname": 0, "small": 0}
     for i, s in enumerate(shorts):
         vid = s["id"]
@@ -112,8 +151,8 @@ def main():
         if dur and dur > 185:
             stats["small"] += 1
             continue
-        name = parse_name(s["title"]) or args.fallback_name or \
-            _channel_fallback(s.get("channel") or "")
+        name = parse_name(s["title"]) or chan_fallback or \
+            _channel_fallback(s.get("channel") or "", handle=args.channel)
         if not name:
             stats["noname"] += 1
             continue

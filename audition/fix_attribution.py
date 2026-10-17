@@ -7,41 +7,16 @@ moves the object to the correct comedian folder when it changed.
 Usage: python3 fix_attribution.py [--limit N]
 """
 from __future__ import annotations
-import argparse, json, os, shlex, subprocess
+import argparse, json, os, sys
 from pathlib import Path
 
 import boto3
 
-import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from shorts_harvest import parse_name, _channel_fallback, s3, slugify, R2_BUCKET  # noqa: E402
+from shorts_harvest import (parse_name, _channel_fallback, resolve_channel_display,  # noqa: E402
+                            s3, slugify, R2_BUCKET)
 
 HERE = Path(__file__).parent
-COOKIES = str(HERE / ".env.cookies") if (HERE / ".env.cookies").exists() else \
-    "/home/box/Downloads/cookies.txt"
-
-_display_cache: dict[str, str | None] = {}
-
-
-def channel_display(handle: str, vid: str) -> str | None:
-    """Resolve @handle -> display name using one of its videos."""
-    if handle in _display_cache:
-        return _display_cache[handle]
-    name = None
-    cmd = ["yt-dlp", "--skip-download", "--print", "%(channel)s",
-           "--no-warnings", f"https://www.youtube.com/watch?v={vid}"]
-    if Path(COOKIES).exists():
-        cmd += ["--cookies", COOKIES]
-    cmd += shlex.split(os.environ.get("YTDLP_EXTRA", ""))
-    try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-        out = (r.stdout or "").strip().splitlines()
-        if r.returncode == 0 and out and out[0]:
-            name = out[0]
-    except Exception:
-        pass
-    _display_cache[handle] = name
-    return name
 
 
 def main():
@@ -68,10 +43,10 @@ def main():
         ch = d.get("channel") or ""
         new = parse_name(d.get("title") or "")
         if not new and ch.startswith("@"):
-            disp = channel_display(ch, d.get("id") or "")
-            new = _channel_fallback(disp or "")
+            disp = resolve_channel_display(d.get("id") or "")
+            new = _channel_fallback(disp or "", handle=ch)
         if not new and not ch.startswith("@"):
-            new = _channel_fallback(ch)
+            new = _channel_fallback(ch, handle=ch)
         old = d.get("comedian") or ""
         if not new or slugify(new) == slugify(old):
             stats["left"] += 1
