@@ -1,13 +1,13 @@
-"""Train word-level laugh model on ChuckleNet (48 videos, 791-dim WavLM+prosody).
+"""Train word-level laugh model on ChuckleNet — FAST version.
 
-This is the real audio model we've been missing. 791 features per word
-(WavLM speech embeddings + prosody), word-level laughter labels.
+Uses LogisticRegression (fast) instead of GradientBoosting (slow).
+791 WavLM+prosody features, 48 videos, 39944 words.
 
 Usage:
   python3 train_chucklenet.py
 """
 from __future__ import annotations
-import json, pickle, sys
+import pickle, sys, time
 from pathlib import Path
 import numpy as np
 
@@ -31,7 +31,6 @@ def load_all_videos() -> tuple[np.ndarray, np.ndarray, list[str]]:
         feat = np.load(fpath)
         labels = np.load(label_path)
 
-        # Match lengths
         n = min(len(feat), len(labels))
         all_X.append(feat[:n])
         all_y.append(labels[:n])
@@ -39,18 +38,16 @@ def load_all_videos() -> tuple[np.ndarray, np.ndarray, list[str]]:
 
     X = np.concatenate(all_X, axis=0)
     y = np.concatenate(all_y)
-
-    # Clean NaN/inf
     X = np.nan_to_num(X, nan=0.0, posinf=0.0, neginf=0.0)
-
     return X, y, all_vids
 
 
-def train(X, y, videos):
-    """Train with GroupKFold by video."""
-    from sklearn.ensemble import GradientBoostingClassifier
+def train_fast(X, y, videos):
+    """Train with LogisticRegression — fast, handles high dimensions."""
+    from sklearn.linear_model import LogisticRegression
     from sklearn.model_selection import GroupKFold, cross_val_predict
     from sklearn.metrics import roc_auc_score, average_precision_score, brier_score_loss
+    from sklearn.preprocessing import StandardScaler
 
     unique_vids = list(set(videos))
     n_splits = min(10, len(unique_vids))
@@ -60,35 +57,44 @@ def train(X, y, videos):
     print(f"Laugh rate: {y.mean()*100:.1f}%")
     print(f"Features: {X.shape[1]} dims")
 
-    # Subsample for speed (791 features × 50K words is heavy)
-    if len(y) > 20000:
-        idx = np.random.RandomState(42).choice(len(y), 20000, replace=False)
+    # Subsample for speed
+    if len(y) > 10000:
+        rng = np.random.RandomState(42)
+        idx = rng.choice(len(y), 10000, replace=False)
         X = X[idx]
         y = y[idx]
         videos = [videos[i] for i in idx]
-        print(f"Subsampled to 20000 words")
+        print(f"Subsampled to 10000 words")
 
-    model = GradientBoostingClassifier(
-        n_estimators=100, max_depth=4, random_state=42, subsample=0.8
-    )
+    # Scale features
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
 
-    y_prob = cross_val_predict(model, X, y, cv=gkf, groups=np.array(videos),
+    # Use SGD classifier — much faster for high-dimensional data
+    from sklearn.linear_model import SGDClassifier
+    model = SGDClassifier(loss="log_loss", max_iter=200, random_state=42)
+
+    t0 = time.time()
+    y_prob = cross_val_predict(model, X_scaled, y, cv=gkf, groups=np.array(videos),
                                method="predict_proba")[:, 1]
+    elapsed = time.time() - t0
 
     auc = roc_auc_score(y, y_prob)
     pr_auc = average_precision_score(y, y_prob)
     brier = brier_score_loss(y, y_prob)
 
-    print(f"\nChuckleNet (GroupKFold by video):")
+    print(f"\nChuckleNet LogisticRegression (GroupKFold by video):")
     print(f"  AUROC:  {auc:.3f}")
     print(f"  PR-AUC: {pr_auc:.3f}")
     print(f"  Brier:  {brier:.3f}")
+    print(f"  Time:   {elapsed:.1f}s")
 
     # Fit on all
-    model.fit(X, y)
+    model.fit(X_scaled, y)
 
     return {
         "model": model,
+        "scaler": scaler,
         "auc": round(auc, 3),
         "pr_auc": round(pr_auc, 3),
         "brier": round(brier, 3),
@@ -99,15 +105,14 @@ def train(X, y, videos):
 
 
 if __name__ == "__main__":
-    print("Loading ChuckleNet...")
+    print("Loading ChuckleNet...", flush=True)
     X, y, videos = load_all_videos()
-    print(f"Loaded {len(y)} words from {len(set(videos))} videos")
+    print(f"Loaded {len(y)} words from {len(set(videos))} videos", flush=True)
 
-    print("\nTraining...")
-    result = train(X, y, videos)
+    print("\nTraining (LogisticRegression)...", flush=True)
+    result = train_fast(X, y, videos)
 
-    # Save
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT, "wb") as f:
         pickle.dump(result, f)
-    print(f"\nSaved to {OUT}")
+    print(f"\nSaved to {OUT}", flush=True)
