@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JokeEvent",
+  "description": "Structured joke representation produced by the semantic interpreter. NOT a laugh prediction — this is what the joke MEANS. Prediction happens separately.",
+  "type": "object",
+  "required": ["joke_id", "transcript", "mechanism", "setup", "expected", "reveal", "confidence_in_interpretation"],
+  "properties": {
+    "joke_id": {"type": "string"},
+    "beat_id": {"type": "string", "description": "Beat identifier from delivery.json"},
+    "transcript": {"type": "string", "description": "The utterance being analyzed"},
+    "context": {
+      "type": "object",
+      "properties": {
+        "prior_setup": {"type": "string", "description": "Earlier setup this joke builds on"},
+        "callback_target": {"type": "string", "description": "What this joke is calling back to"},
+        "character_context": {"type": "string", "description": "Relevant character graph facts"}
+      }
+    },
+    "mechanism": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "setup_punchline", "misdirection", "escalation", "callback",
+          "self_deprecation", "deadpan", "anti_humor", "sarcasm",
+          "absurdism", "blue_humor", "status_reversal",
+          "identity_contradiction", "incongruity", "benign_violation",
+          "garden_path", "double_interpret", "split_knowledge",
+          "expose_self_blindness", "displacement", "not_a_joke"
+        ]
+      },
+      "description": "Comedic mechanisms at work"
+    },
+    "setup": {"type": "string", "description": "What the comedian establishes"},
+    "expected": {"type": "string", "description": "What the audience expects"},
+    "reveal": {"type": "string", "description": "What actually happens"},
+    "character_conflict": {
+      "type": "string",
+      "description": "How the joke conflicts with character identity (if applicable)"
+    },
+    "irony_detected": {"type": "boolean"},
+    "literal_meaning": {"type": "string"},
+    "intended_meaning": {"type": "string"},
+    "confidence_in_interpretation": {
+      "type": "number", "minimum": 0, "maximum": 1,
+      "description": "How confident the interpreter is in this reading. LOW = report uncertainty, do not fabricate."
+    },
+    "uncertainty_reason": {
+      "type": "string",
+      "description": "If confidence < 0.7, why the interpreter is unsure"
+    }
+  }
+}

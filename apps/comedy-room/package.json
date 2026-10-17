@@ -1,0 +1,17 @@
+{
+  "name": "room-sense-live",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI-native performance lab for comedians",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "deploy:backend": "gcloud run deploy room-sense-live-backend --source . --region us-central1 --project room-sense-live --allow-unauthenticated --set-env-vars GEMINI_API_KEY=$GEMINI_API_KEY",
+    "deploy:frontend": "firebase deploy --only hosting --project room-sense-live",
+    "deploy": "npm run deploy:frontend && npm run deploy:backend"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Sense Live</title>
+    <meta name="description"
+        content="AI-native performance lab — rehearse your set in front of a virtual audience that reacts in real time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- ═══════════════════ Mode Navigation ═══════════════════ -->
+    <nav class="mode-nav" id="mode-nav">
+        <div class="mode-pill">
+            <button class="mode-btn active" data-mode="performance" id="mode-btn-performance">
+                <span class="mode-icon">🎤</span>
+                <span class="mode-label">Performance</span>
+            </button>
+            <button class="mode-btn" data-mode="compare" id="mode-btn-compare">
+                <span class="mode-icon">⚡</span>
+                <span class="mode-label">Compare</span>
+            </button>
+            <button class="mode-btn" data-mode="analysis" id="mode-btn-analysis">
+                <span class="mode-icon">👥</span>
+                <span class="mode-label">Analysis</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════ PERFORMANCE MODE ═══════════════════ -->
+    <div class="mode-container active" id="performance-mode">
+        <div class="video-container">
+            <video class="crowd-video" src="assets/crowd.mp4" loop muted playsinline></video>
+            <div class="video-overlay"></div>
+            <div class="video-glow"></div>
+            <div class="sfx-flash"></div>
+            <div class="energy-band"></div>
+        </div>
+
+        <div class="room-ui">
+            <div class="subtitle-area">
+                <div class="subtitle"></div>
+            </div>
+
+            <div class="bottom-bar">
+                <button class="record-btn" id="perf-record-btn">
+                    <div class="record-dot"></div>
+                    <span class="record-text">Off Air</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════ COMPARE MODE ═══════════════════ -->
+    <div class="mode-container" id="compare-mode">
+        <div class="compare-layout">
+            <!-- Room: Comedy Nerd -->
+            <div class="compare-room" data-persona="comedy-nerd">
+                <div class="room-label">
+                    <span class="room-icon">🎯</span>
+                    <span class="room-name">Comedy Nerd</span>
+                </div>
+                <div class="video-container">
+                    <video class="crowd-video" src="assets/crowd.mp4" loop muted playsinline></video>
+                    <div class="video-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Room: Casual Fan -->
+            <div class="compare-room" data-persona="casual-fan">
+                <div class="room-label">
+                    <span class="room-icon">🍻</span>
+                    <span class="room-name">Casual Fan</span>
+                </div>
+                <div class="video-container">
+                    <video class="crowd-video" src="assets/crowd.mp4" loop muted playsinline></video>
+                    <div class="video-overlay"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <button class="record-btn" id="compare-record-btn">
+                <div class="record-dot"></div>
+                <span class="record-text">Off Air</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══════════════════ ANALYSIS MODE ═══════════════════ -->
+    <div class="mode-container" id="analysis-mode">
+        <div class="analysis-content"></div>
+        <div class="bottom-bar">
+            <button class="record-btn" id="analysis-record-btn">
+                <div class="record-dot"></div>
+                <span class="record-text">Off Air</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
