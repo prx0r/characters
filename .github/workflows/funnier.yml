@@ -23,11 +23,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Build site and recount votes
+      - name: Build site, sync funnygraph, recount votes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cp -r funnier/site/. pub/
           cp funnier/clips.json pub/clips.json
           sed -i "s/app.js\"/app.js?v=${GITHUB_SHA::7}\"/; s/style.css\"/style.css?v=${GITHUB_SHA::7}\"/" pub/index.html
+          # live funnygraph boards + roster -> pub/data/funnygraph/, merged pub/comics.json (fails soft: keeps the last good copy)
+          node funnier/tools/sync-funnygraph.mjs funnier pub
           node funnier/tally/tally.mjs funnier/clips.json pub
       - name: Publish
         run: |
