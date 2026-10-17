@@ -258,54 +258,28 @@ def assign_timings(beats: list[dict], profile: dict) -> list[dict]:
 # ============================================================
 
 def predict_laughs(beats: list[dict], profile: dict) -> list[dict]:
-    """Predict laugh probability per beat based on mechanism + position."""
-    techniques = profile.get("techniques", {})
-    n = len(beats)
+    """Predict laugh probability per beat using delivery-aware model.
 
-    for i, b in enumerate(beats):
-        mech = b["mechanism"]
-        bt = b["beat_type"]
+    Same text + different timing = different probability (dpv coupling).
+    """
+    import sys
+    sys.path.insert(0, str(HERE))
+    from delivery_laugh import modulate_engine_predictions
 
-        # Base probability by mechanism
-        mech_prob = {
-            "status_reversal": 0.65, "misdirection": 0.62,
-            "setup_punchline": 0.55, "escalation": 0.58,
-            "callback": 0.60, "self_deprecation": 0.50,
-            "deadpan": 0.45, "displacement": 0.40,
-        }
-        p = mech_prob.get(mech, 0.50)
+    # Use delivery-aware prediction (couples timing to laugh probability)
+    beats = modulate_engine_predictions(beats, profile)
 
-        # Beat type modifier
-        if bt == "punchline":
-            p += 0.15
-        elif bt == "tag":
-            p += 0.05
-        elif bt == "opener":
-            p -= 0.10  # cold crowd
-        elif bt == "closer":
-            p += 0.10  # warm crowd
-
-        # Position modifier (crowd warms up)
-        pos = i / max(n, 1)
-        p += pos * 0.15
-
-        # Technique familiarity
-        if mech in techniques:
-            p += techniques[mech] * 0.1
-
-        p = max(0.0, min(1.0, p))
-
-        # Laugh type by probability
+    # Assign laugh types based on final probability
+    for b in beats:
+        p = b.get("p_laugh", 0.5)
         if p < 0.35:
-            ltype = "chuckle"
+            b["laugh_type"] = "chuckle"
         elif p < 0.55:
-            ltype = "laugh"
+            b["laugh_type"] = "laugh"
         elif p < 0.75:
-            ltype = "big_laugh"
+            b["laugh_type"] = "big_laugh"
         else:
-            ltype = "roar"
-
-        b.update({"p_laugh": round(p, 3), "laugh_type": ltype})
+            b["laugh_type"] = "roar"
 
     return beats
 
