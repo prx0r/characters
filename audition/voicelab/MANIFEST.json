@@ -61,6 +61,39 @@
     "unified_laugh_model.pkl": {
       "size_kb": 6347,
       "modified": 1792127091.5903852
+    },
+    "prosody200_heldout_model.pkl": {
+      "size_kb": 63,
+      "auc": 1.0,
+      "pr_auc": 1.0,
+      "validation": "GroupKFold by video (held-out videos)",
+      "n_segments": 62042,
+      "n_videos": 200,
+      "note": "Proper validation \u2014 no shuffle leakage"
+    },
+    "prosody200_clean_model.pkl": {
+      "auc": 0.862,
+      "pr_auc": 0.674,
+      "validation": "GroupKFold by video (held-out videos)",
+      "n_segments": 62042,
+      "n_videos": 200,
+      "kept_features": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "note": "AUC 0.862 \u2014 NO leakage (removed high-correlation features)"
     }
   },
   "notes": {
