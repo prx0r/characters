@@ -1,0 +1,694 @@
+{
+ "generated": "2026-10-17 18:07 UTC",
+ "source": "r2:comedy-specials/comedians",
+ "comedians": [
+  {
+   "comedian_id": "alasdair-beckett-king",
+   "name": "Alasdair Beckett-King",
+   "clips": 3,
+   "total_views": 487000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "nAuFGPa0qEE",
+     "title": "He said what he said 🙃 (Alasdair Beckett-King: Nevermore)",
+     "channel": "NextUp Comedy",
+     "views": 446000,
+     "duration_s": 58.5,
+     "r2_clip": "comedians/alasdair-beckett-king/clips/alasdair-beckett-king-naufgpa0qee.json",
+     "source_group": "nextup"
+    },
+    {
+     "videoId": "ADqS37tRGJA",
+     "title": "Wonder what the soundtrack would be? 🦈",
+     "channel": "NextUp Comedy",
+     "views": 31000,
+     "duration_s": 60.6,
+     "r2_clip": "comedians/alasdair-beckett-king/clips/alasdair-beckett-king-adqs37trgja.json",
+     "source_group": "nextup"
+    },
+    {
+     "videoId": "lD7iq3sEKS0",
+     "title": "“Hitler - a famously picky man” 😅",
+     "channel": "NextUp Comedy",
+     "views": 10000,
+     "duration_s": 64.6,
+     "r2_clip": "comedians/alasdair-beckett-king/clips/alasdair-beckett-king-ld7iq3seks0.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "angela-barnes",
+   "name": "Angela Barnes",
+   "clips": 1,
+   "total_views": 22000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "Vsfz2cVemc8",
+     "title": "Sending all you 40-somethings our condolences 💐",
+     "channel": "NextUp Comedy",
+     "views": 22000,
+     "duration_s": 56.6,
+     "r2_clip": "comedians/angela-barnes/clips/angela-barnes-vsfz2cvemc8.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "ayoade-bamgboye",
+   "name": "Ayoade Bamgboye",
+   "clips": 1,
+   "total_views": 177000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "694YH_YLELA",
+     "title": "Send this to your twin to thank them 👯 (Ayoade Bamgboye: Swings and Roundabouts)",
+     "channel": "NextUp Comedy",
+     "views": 177000,
+     "duration_s": 77.2,
+     "r2_clip": "comedians/ayoade-bamgboye/clips/ayoade-bamgboye-694yh-ylela.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "bill-hicks",
+   "name": "Bill Hicks",
+   "clips": 1,
+   "total_views": 0,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "NivJKUfa7Sw",
+     "title": "Weirdest Question",
+     "channel": "NextUp Comedy",
+     "views": 0,
+     "duration_s": 118.9,
+     "r2_clip": "comedians/bill-hicks/clips/bill-hicks-nivjkufa7sw.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "chris-rock",
+   "name": "Chris Rock",
+   "clips": 1,
+   "total_views": 39444519,
+   "sources": [
+    "youtube"
+   ],
+   "rows": [
+    {
+     "videoId": "hlXlMQc_22o",
+     "title": "A Different Angle That We Didnt See Will Smith And Chris Rock At The Oscars",
+     "channel": "BOSSnUP Records",
+     "views": 39444519,
+     "duration_s": 38.5,
+     "r2_clip": "comedians/chris-rock/clips/chris-rock-hlxlmqc-22o.json",
+     "source_group": "youtube"
+    }
+   ]
+  },
+  {
+   "comedian_id": "clinton-baptiste",
+   "name": "Clinton Baptiste",
+   "clips": 4,
+   "total_views": 310000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "SClEB8jmjqM",
+     "title": "Clinton Baptiste Séance",
+     "channel": "NextUp Comedy",
+     "views": 83000,
+     "duration_s": 192.0,
+     "r2_clip": "comedians/clinton-baptiste/clips/clinton-baptiste-scleb8jmjqm.json",
+     "source_group": "nextup"
+    },
+    {
+     "videoId": "b23kvFhUlW4",
+     "title": "The spirits have spoken 🔮🙂‍↕️",
+     "channel": "NextUp Comedy",
+     "views": 63000,
+     "duration_s": 92.9,
+     "r2_clip": "comedians/clinton-baptiste/clips/clinton-baptiste-b23kvfhulw4.json",
+     "source_group": "nextup"
+    },
+    {
+     "videoId": "t509MOUFtWM",
+     "title": "Watch Clinton Baptiste on NextUp Comedy #standupcomedy #standup #comedy #comedyshows",
+     "channel": "NextUp Comedy",
+     "views": 152000,
+     "duration_s": 27.4,
+     "r2_clip": "comedians/clinton-baptiste/clips/clinton-baptiste-t509mouftwm.json",
+     "source_group": "nextup"
+    },
+    {
+     "videoId": "pxjTpUYmlEk",
+     "title": "Wonder how that last conversation would go down 🥸",
+     "channel": "NextUp Comedy",
+     "views": 12000,
+     "duration_s": 74.3,
+     "r2_clip": "comedians/clinton-baptiste/clips/clinton-baptiste-pxjtpuymlek.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "dave-landau",
+   "name": "Dave Landau",
+   "clips": 1,
+   "total_views": 17000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "1DEfFHzjNN8",
+     "title": "Dave Landau is A Prison 10. Watch now on NextUp Comedy! #standupcomedy #comedy #davelandau #standup",
+     "channel": "NextUp Comedy",
+     "views": 17000,
+     "duration_s": 35.7,
+     "r2_clip": "comedians/dave-landau/clips/dave-landau-1deffhzjnn8.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "emmanuel-sonubi",
+   "name": "Emmanuel Sonubi",
+   "clips": 1,
+   "total_views": 19000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "wcpqqf331mc",
+     "title": "Wait for it…😭",
+     "channel": "NextUp Comedy",
+     "views": 19000,
+     "duration_s": 99.0,
+     "r2_clip": "comedians/emmanuel-sonubi/clips/emmanuel-sonubi-wcpqqf331mc.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "geoff-norcott",
+   "name": "Geoff Norcott",
+   "clips": 2,
+   "total_views": 97000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "8Ma4az_kJT4",
+     "title": "Watch Geoff Norcott’s full comedy special, Basic Bloke, by hitting that ‘JOIN’ button. 🎥😎",
+     "channel": "NextUp Comedy",
+     "views": 43000,
+     "duration_s": 50.0,
+     "r2_clip": "comedians/geoff-norcott/clips/geoff-norcott-8ma4az-kjt4.json",
+     "source_group": "nextup"
+    },
+    {
+     "videoId": "vkqZFITFLag",
+     "title": "Well that didn’t go as planned 🫣",
+     "channel": "NextUp Comedy",
+     "views": 54000,
+     "duration_s": 70.0,
+     "r2_clip": "comedians/geoff-norcott/clips/geoff-norcott-vkqzfitflag.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "hal-cruttenden",
+   "name": "Hal Cruttenden",
+   "clips": 1,
+   "total_views": 71000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "a8USi1yzZu0",
+     "title": "Hal Cruttenden Northern Irish",
+     "channel": "NextUp Comedy",
+     "views": 71000,
+     "duration_s": 162.5,
+     "r2_clip": "comedians/hal-cruttenden/clips/hal-cruttenden-a8usi1yzzu0.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "harriet-dyer",
+   "name": "Harriet Dyer",
+   "clips": 1,
+   "total_views": 0,
+   "sources": [
+    "bbc-radio"
+   ],
+   "rows": [
+    {
+     "videoId": "",
+     "title": "Harriet Dyer and Mark Simmons",
+     "channel": "",
+     "views": 0,
+     "duration_s": 1651.1,
+     "r2_clip": "comedians/harriet-dyer/clips/bbc-fringe-harriet-dyer-and-mark-simmons.json",
+     "source_group": "bbc-radio"
+    }
+   ]
+  },
+  {
+   "comedian_id": "jason-bryne",
+   "name": "Jason Bryne",
+   "clips": 1,
+   "total_views": 21000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "G-6dW-JAw1A",
+     "title": "Sounds like an episode of Derry Girls 😆",
+     "channel": "NextUp Comedy",
+     "views": 21000,
+     "duration_s": 120.1,
+     "r2_clip": "comedians/jason-bryne/clips/jason-bryne-g-6dw-jaw1a.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "jen-brister",
+   "name": "Jen Brister",
+   "clips": 1,
+   "total_views": 38000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "DEFgNGLgAns",
+     "title": "Watch Jen Brister ‘Meaningless’ on NextUp Comedy!",
+     "channel": "NextUp Comedy",
+     "views": 38000,
+     "duration_s": 40.9,
+     "r2_clip": "comedians/jen-brister/clips/jen-brister-defgnglgans.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "jeremiah-watkins",
+   "name": "Jeremiah Watkins",
+   "clips": 5,
+   "total_views": 26866019,
+   "sources": [
+    "youtube"
+   ],
+   "rows": [
+    {
+     "videoId": "gPtJ_gOzc-0",
+     "title": "Joe Gatto gets a little gay on Dr. Phil LIVE | With Adam Ray, Joe Gatto & Jeremiah Watkins",
+     "channel": "Jeremiah Watkins",
+     "views": 865294,
+     "duration_s": 22.6,
+     "r2_clip": "comedians/jeremiah-watkins/clips/jeremiah-watkins-gptj-gozc-0.json",
+     "source_group": "youtube"
+    },
+    {
+     "videoId": "npw0k082ItE",
+     "title": "Misgendered da homie. My bad 😬 SHANKS: Misgendered out now on YT! #foryou #explore #standupcomedy",
+     "channel": "Jeremiah Watkins",
+     "views": 3629840,
+     "duration_s": 46.7,
+     "r2_clip": "comedians/jeremiah-watkins/clips/jeremiah-watkins-npw0k082ite.json",
+     "source_group": "youtube"
+    },
+    {
+     "videoId": "oGZrVR8lRZk",
+     "title": "N-Word Button?!😅 Would you use it? @NateJackson on @standupots #foryou #explore #standupcomedy",
+     "channel": "Jeremiah Watkins",
+     "views": 4246942,
+     "duration_s": 30.4,
+     "r2_clip": "comedians/jeremiah-watkins/clips/jeremiah-watkins-ogzrvr8lrzk.json",
+     "source_group": "youtube"
+    },
+    {
+     "videoId": "QvtFp4f4xvU",
+     "title": "Rapper Criteria w/ Finesse Mitchell 😱 #jeremiahwatkins #adamray #drphil #shanks #finessemitchell",
+     "channel": "Jeremiah Watkins",
+     "views": 3631278,
+     "duration_s": 24.3,
+     "r2_clip": "comedians/jeremiah-watkins/clips/jeremiah-watkins-qvtfp4f4xvu.json",
+     "source_group": "youtube"
+    },
+    {
+     "videoId": "kSTwR0Cok78",
+     "title": "Too Many Harlands 👬 #harlandwilliams #drphil #adamray #jeremiahwatkins #killtony",
+     "channel": "Jeremiah Watkins",
+     "views": 14492665,
+     "duration_s": 25.3,
+     "r2_clip": "comedians/jeremiah-watkins/clips/jeremiah-watkins-kstwr0cok78.json",
+     "source_group": "youtube"
+    }
+   ]
+  },
+  {
+   "comedian_id": "josh-jones",
+   "name": "Josh Jones",
+   "clips": 1,
+   "total_views": 27000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "f7gzpOZmtYo",
+     "title": "Oh Gran 😆",
+     "channel": "NextUp Comedy",
+     "views": 27000,
+     "duration_s": 35.4,
+     "r2_clip": "comedians/josh-jones/clips/josh-jones-f7gzpozmtyo.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "joshua-bethania",
+   "name": "Joshua Bethania",
+   "clips": 1,
+   "total_views": 0,
+   "sources": [
+    "bbc-radio"
+   ],
+   "rows": [
+    {
+     "videoId": "",
+     "title": "Joshua Bethania and Michelle Shaughnessy",
+     "channel": "",
+     "views": 0,
+     "duration_s": 1737.2,
+     "r2_clip": "comedians/joshua-bethania/clips/bbc-fringe-joshua-bethania-and-michelle-shaughnessy.json",
+     "source_group": "bbc-radio"
+    }
+   ]
+  },
+  {
+   "comedian_id": "loni-love",
+   "name": "Loni Love",
+   "clips": 1,
+   "total_views": 17000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "lgcVYuWe5y4",
+     "title": "Watch the full special from Loni Love on NextUp Comedy! #lonilove #nextupcomedy #standupcomedy",
+     "channel": "NextUp Comedy",
+     "views": 17000,
+     "duration_s": 30.8,
+     "r2_clip": "comedians/loni-love/clips/loni-love-lgcvyuwe5y4.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "lou-taylor",
+   "name": "Lou Taylor",
+   "clips": 1,
+   "total_views": 12000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "8Ls-pH3dzr0",
+     "title": "Catch Lou Taylor at Angel Comedy live from The Bill Murray at 8pm tonight! #standupcomedy #ukcomedy",
+     "channel": "NextUp Comedy",
+     "views": 12000,
+     "duration_s": 35.3,
+     "r2_clip": "comedians/lou-taylor/clips/lou-taylor-8ls-ph3dzr0.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "marcus-brigstock",
+   "name": "Marcus Brigstock",
+   "clips": 1,
+   "total_views": 155000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "FeDCBRaXzvI",
+     "title": "Marcus Brigstock Trump Circus",
+     "channel": "NextUp Comedy",
+     "views": 155000,
+     "duration_s": 273.1,
+     "r2_clip": "comedians/marcus-brigstock/clips/marcus-brigstock-fedcbraxzvi.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "mark-simmons",
+   "name": "Mark Simmons",
+   "clips": 1,
+   "total_views": 0,
+   "sources": [
+    "bbc-radio"
+   ],
+   "rows": [
+    {
+     "videoId": "",
+     "title": "Harriet Dyer and Mark Simmons",
+     "channel": "",
+     "views": 0,
+     "duration_s": 1651.1,
+     "r2_clip": "comedians/mark-simmons/clips/bbc-fringe-harriet-dyer-and-mark-simmons.json",
+     "source_group": "bbc-radio"
+    }
+   ]
+  },
+  {
+   "comedian_id": "michelle-shaughnessy",
+   "name": "Michelle Shaughnessy",
+   "clips": 1,
+   "total_views": 0,
+   "sources": [
+    "bbc-radio"
+   ],
+   "rows": [
+    {
+     "videoId": "",
+     "title": "Joshua Bethania and Michelle Shaughnessy",
+     "channel": "",
+     "views": 0,
+     "duration_s": 1737.2,
+     "r2_clip": "comedians/michelle-shaughnessy/clips/bbc-fringe-joshua-bethania-and-michelle-shaughnessy.json",
+     "source_group": "bbc-radio"
+    }
+   ]
+  },
+  {
+   "comedian_id": "miles-jupp",
+   "name": "Miles Jupp",
+   "clips": 1,
+   "total_views": 0,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "e04gCbvPBa4",
+     "title": "Miles Jupp White Guy",
+     "channel": "NextUp Comedy",
+     "views": 0,
+     "duration_s": 209.0,
+     "r2_clip": "comedians/miles-jupp/clips/miles-jupp-e04gcbvpba4.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "rachel-parris",
+   "name": "Rachel Parris",
+   "clips": 1,
+   "total_views": 13000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "mqacqF6v3HQ",
+     "title": "And that’s modern feminism for ya 💅🏼",
+     "channel": "NextUp Comedy",
+     "views": 13000,
+     "duration_s": 34.3,
+     "r2_clip": "comedians/rachel-parris/clips/rachel-parris-mqacqf6v3hq.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "sukh-kaur-ojla",
+   "name": "Sukh Kaur Ojla",
+   "clips": 1,
+   "total_views": 33000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "dwZESMKwU_0",
+     "title": "Legend has it he’s still waiting for that roti 😔 (Sukh Kaur Ojla: The Aunty Years)",
+     "channel": "NextUp Comedy",
+     "views": 33000,
+     "duration_s": 81.4,
+     "r2_clip": "comedians/sukh-kaur-ojla/clips/sukh-kaur-ojla-dwzesmkwu-0.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "susie-mccabe",
+   "name": "Susie McCabe",
+   "clips": 1,
+   "total_views": 21000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "QrO7s4zlKy8",
+     "title": "In menopausal Scottish women we trust 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+     "channel": "NextUp Comedy",
+     "views": 21000,
+     "duration_s": 68.6,
+     "r2_clip": "comedians/susie-mccabe/clips/susie-mccabe-qro7s4zlky8.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "ted-hill",
+   "name": "Ted Hill",
+   "clips": 1,
+   "total_views": 13000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "s8M7xP1uI_I",
+     "title": "Watch Ted Hill ‘All The Presidents Man’ on NextUp Comedy now! #standuplive #standupcomedy",
+     "channel": "NextUp Comedy",
+     "views": 13000,
+     "duration_s": 25.6,
+     "r2_clip": "comedians/ted-hill/clips/ted-hill-s8m7xp1ui-i.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "tom-ward",
+   "name": "Tom Ward",
+   "clips": 3,
+   "total_views": 1370000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "pnaZ767UuCQ",
+     "title": "Another football bit for you lot, because you enjoyed the first one so much ⚽️",
+     "channel": "NextUp Comedy",
+     "views": 43000,
+     "duration_s": 42.4,
+     "r2_clip": "comedians/tom-ward/clips/tom-ward-pnaz767uucq.json",
+     "source_group": "nextup"
+    },
+    {
+     "videoId": "8PiuSRDYEXI",
+     "title": "Football rivalries, need we say more...⚽️🙃",
+     "channel": "NextUp Comedy",
+     "views": 1300000,
+     "duration_s": 58.2,
+     "r2_clip": "comedians/tom-ward/clips/tom-ward-8piusrdyexi.json",
+     "source_group": "nextup"
+    },
+    {
+     "videoId": "MhbyH_IibZg",
+     "title": "“Back in my day, Johnny” 🚬",
+     "channel": "NextUp Comedy",
+     "views": 27000,
+     "duration_s": 85.8,
+     "r2_clip": "comedians/tom-ward/clips/tom-ward-mhbyh-iibzg.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "tommy-tiernan",
+   "name": "Tommy Tiernan",
+   "clips": 1,
+   "total_views": 189000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "XpDMJbcsUps",
+     "title": "Tommy Tiernan Drunk Driving",
+     "channel": "NextUp Comedy",
+     "views": 189000,
+     "duration_s": 115.8,
+     "r2_clip": "comedians/tommy-tiernan/clips/tommy-tiernan-xpdmjbcsups.json",
+     "source_group": "nextup"
+    }
+   ]
+  },
+  {
+   "comedian_id": "zoe-lyons",
+   "name": "Zoe Lyons",
+   "clips": 1,
+   "total_views": 21000,
+   "sources": [
+    "nextup"
+   ],
+   "rows": [
+    {
+     "videoId": "RWDCqzBQY5w",
+     "title": "Never looking at a flannel the same way again…👀",
+     "channel": "NextUp Comedy",
+     "views": 21000,
+     "duration_s": 69.4,
+     "r2_clip": "comedians/zoe-lyons/clips/zoe-lyons-rwdcqzbqy5w.json",
+     "source_group": "nextup"
+    }
+   ]
+  }
+ ]
+}

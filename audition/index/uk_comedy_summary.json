@@ -1,0 +1,299 @@
+{
+ "generated": "2026-10-17 18:07 UTC",
+ "source": "r2:comedy-specials/comedians",
+ "comedians": 29,
+ "clips": 41,
+ "total_words": 33275,
+ "per_comedian": {
+  "alasdair-beckett-king": {
+   "name": "Alasdair Beckett-King",
+   "clips": 3,
+   "words": 471,
+   "views": 487000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 3
+  },
+  "angela-barnes": {
+   "name": "Angela Barnes",
+   "clips": 1,
+   "words": 150,
+   "views": 22000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "ayoade-bamgboye": {
+   "name": "Ayoade Bamgboye",
+   "clips": 1,
+   "words": 223,
+   "views": 177000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "bill-hicks": {
+   "name": "Bill Hicks",
+   "clips": 1,
+   "words": 253,
+   "views": 0,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "chris-rock": {
+   "name": "Chris Rock",
+   "clips": 1,
+   "words": 511,
+   "views": 39444519,
+   "sources": [
+    "youtube"
+   ],
+   "has_audio": 1
+  },
+  "clinton-baptiste": {
+   "name": "Clinton Baptiste",
+   "clips": 4,
+   "words": 1207,
+   "views": 310000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 4
+  },
+  "dave-landau": {
+   "name": "Dave Landau",
+   "clips": 1,
+   "words": 75,
+   "views": 17000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "emmanuel-sonubi": {
+   "name": "Emmanuel Sonubi",
+   "clips": 1,
+   "words": 410,
+   "views": 19000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "geoff-norcott": {
+   "name": "Geoff Norcott",
+   "clips": 2,
+   "words": 615,
+   "views": 97000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 2
+  },
+  "hal-cruttenden": {
+   "name": "Hal Cruttenden",
+   "clips": 1,
+   "words": 597,
+   "views": 71000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "harriet-dyer": {
+   "name": "Harriet Dyer",
+   "clips": 1,
+   "words": 5544,
+   "views": 0,
+   "sources": [
+    "bbc-radio"
+   ],
+   "has_audio": 1
+  },
+  "jason-bryne": {
+   "name": "Jason Bryne",
+   "clips": 1,
+   "words": 550,
+   "views": 21000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "jen-brister": {
+   "name": "Jen Brister",
+   "clips": 1,
+   "words": 310,
+   "views": 38000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "jeremiah-watkins": {
+   "name": "Jeremiah Watkins",
+   "clips": 5,
+   "words": 300,
+   "views": 26866019,
+   "sources": [
+    "youtube"
+   ],
+   "has_audio": 5
+  },
+  "josh-jones": {
+   "name": "Josh Jones",
+   "clips": 1,
+   "words": 124,
+   "views": 27000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "joshua-bethania": {
+   "name": "Joshua Bethania",
+   "clips": 1,
+   "words": 5779,
+   "views": 0,
+   "sources": [
+    "bbc-radio"
+   ],
+   "has_audio": 1
+  },
+  "loni-love": {
+   "name": "Loni Love",
+   "clips": 1,
+   "words": 242,
+   "views": 17000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "lou-taylor": {
+   "name": "Lou Taylor",
+   "clips": 1,
+   "words": 163,
+   "views": 12000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "marcus-brigstock": {
+   "name": "Marcus Brigstock",
+   "clips": 1,
+   "words": 1072,
+   "views": 155000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 0
+  },
+  "mark-simmons": {
+   "name": "Mark Simmons",
+   "clips": 1,
+   "words": 5544,
+   "views": 0,
+   "sources": [
+    "bbc-radio"
+   ],
+   "has_audio": 1
+  },
+  "michelle-shaughnessy": {
+   "name": "Michelle Shaughnessy",
+   "clips": 1,
+   "words": 5779,
+   "views": 0,
+   "sources": [
+    "bbc-radio"
+   ],
+   "has_audio": 1
+  },
+  "miles-jupp": {
+   "name": "Miles Jupp",
+   "clips": 1,
+   "words": 1336,
+   "views": 0,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "rachel-parris": {
+   "name": "Rachel Parris",
+   "clips": 1,
+   "words": 253,
+   "views": 13000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "sukh-kaur-ojla": {
+   "name": "Sukh Kaur Ojla",
+   "clips": 1,
+   "words": 394,
+   "views": 33000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "susie-mccabe": {
+   "name": "Susie McCabe",
+   "clips": 1,
+   "words": 223,
+   "views": 21000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "ted-hill": {
+   "name": "Ted Hill",
+   "clips": 1,
+   "words": 78,
+   "views": 13000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "tom-ward": {
+   "name": "Tom Ward",
+   "clips": 3,
+   "words": 494,
+   "views": 1370000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 3
+  },
+  "tommy-tiernan": {
+   "name": "Tommy Tiernan",
+   "clips": 1,
+   "words": 309,
+   "views": 189000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  },
+  "zoe-lyons": {
+   "name": "Zoe Lyons",
+   "clips": 1,
+   "words": 269,
+   "views": 21000,
+   "sources": [
+    "nextup"
+   ],
+   "has_audio": 1
+  }
+ }
+}
