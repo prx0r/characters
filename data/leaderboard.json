@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T21:25:54.838Z",
+ "updated": "2026-10-17T22:09:57.685Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 1,
@@ -35,14 +35,6 @@
     },
     {
      "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Casey Rocket",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -138,23 +130,7 @@
      "bouts": 0
     },
     {
-     "comic": "Kevin Hart",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Ali Wong",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Michael Che",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -195,14 +171,6 @@
     },
     {
      "comic": "Jim Jefferies",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -506,14 +474,6 @@
      "bouts": 0
     },
     {
-     "comic": "Uncle Lazer",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Jimmy Carr",
      "elo": 1500,
      "lo": 1500,
@@ -595,14 +555,6 @@
     },
     {
      "comic": "Victoria Wood",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Jerry Sadowitz",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -858,6 +810,14 @@
      "bouts": 0
     },
     {
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
      "comic": "Ken Dodd",
      "elo": 1500,
      "lo": 1500,
@@ -867,14 +827,6 @@
     },
     {
      "comic": "Phill Jupitus",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Rhona Cameron",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -947,22 +899,6 @@
     },
     {
      "comic": "Freddie Starr",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Tommy Trinder",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -1202,14 +1138,6 @@
      "bouts": 0
     },
     {
-     "comic": "Barry Humphries",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Urzila Carlson",
      "elo": 1500,
      "lo": 1500,
@@ -1283,14 +1211,6 @@
     },
     {
      "comic": "Aunty Donna",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "AY Makun",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -1610,14 +1530,6 @@
      "bouts": 0
     },
     {
-     "comic": "Whindersson Nunes",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Theo Von",
      "elo": 1500,
      "lo": 1500,
@@ -1643,6 +1555,14 @@
     },
     {
      "comic": "Ron White",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kevin Hart",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -1715,6 +1635,14 @@
     },
     {
      "comic": "Marlon Wayans",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Michael Che",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -2058,14 +1986,6 @@
      "bouts": 0
     },
     {
-     "comic": "Brendan Schaub",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Josh Wolf",
      "elo": 1500,
      "lo": 1500,
@@ -2146,7 +2066,7 @@
      "bouts": 0
     },
     {
-     "comic": "Wheeler Walker",
+     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -3114,14 +3034,6 @@
      "bouts": 0
     },
     {
-     "comic": "Hollie Harper",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Ismael Loutfi",
      "elo": 1500,
      "lo": 1500,
@@ -3426,7 +3338,7 @@
      "bouts": 0
     },
     {
-     "comic": "Willie Hunter",
+     "comic": "Paul O'Grady",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -3434,7 +3346,39 @@
      "bouts": 0
     },
     {
-     "comic": "Paul O'Grady",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerry Sadowitz",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Rhona Cameron",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -3488,24 +3432,6 @@
      "bouts": 0
     },
     {
-     "id": "-skA4GhVX7k",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hoYUX3gqZs4",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "M7rm47VIxtw",
      "comic": "Norm Macdonald",
      "elo": 1673.6,
@@ -3542,24 +3468,6 @@
      "bouts": 0
     },
     {
-     "id": "MEYbL1-62Zk",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "s9zTJ763IO0",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Oseqh7SMIvo",
      "comic": "Norm Macdonald",
      "elo": 1673.6,
@@ -3570,24 +3478,6 @@
     },
     {
      "id": "Fv67QgVSqkk",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "OtpJzZJ-BNM",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Pt9F1ADNfsg",
      "comic": "Norm Macdonald",
      "elo": 1673.6,
      "lo": 1673.6,
@@ -3922,258 +3812,6 @@
     {
      "id": "NhnS0dUacJs",
      "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7f0ZFu0iMqs",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ayP1_wWvcvk",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "O6-E2tvLpyc",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zNjYfz-qk9k",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "gCPlwd9ePhE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "udLWVzmk5sI",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "nXavCUcL7NY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hmqXxzemRis",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "UkRAI4eWFhQ",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "QBr30J_vuEg",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "j7OE-p8QfDo",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "9fDdyzt_CFY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yzFmHUXDL9Y",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "723xrxG12GE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Jh1GwzuYkek",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DpcBAJ3eMK8",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "FVVQXj6Ymso",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DcLeSQECCLQ",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "nQDBwPTZvDw",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bNpggSlk6S0",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7qde2ieLXIk",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bfkVV22QqKw",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "4dve41SHnKE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sd2Qc_--UOA",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "0nXq7ptrQ4Q",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "2RE4mGM5RuY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "9we8zFqR17o",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "oS9I8LBqM6c",
-     "comic": "Casey Rocket",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -4541,15 +4179,6 @@
      "bouts": 0
     },
     {
-     "id": "uYi77GN1px8",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "BYslql7xwmA",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -4685,15 +4314,6 @@
      "bouts": 0
     },
     {
-     "id": "Zv9NWSzLG0c",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "AN64Murli44",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -4776,15 +4396,6 @@
     },
     {
      "id": "cLChc2C6bqc",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "G4UMa-0YUYY",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -5027,15 +4638,6 @@
      "bouts": 0
     },
     {
-     "id": "3mfp-om_zWM",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RxMPpvSRirM",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -5091,15 +4693,6 @@
     },
     {
      "id": "K797TOcBBv4",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "3ttcCK32clg",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -5387,15 +4980,6 @@
      "bouts": 0
     },
     {
-     "id": "2dxPgkZhQQA",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "VovyHBwcctU",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -5496,15 +5080,6 @@
     },
     {
      "id": "gbh7bSsFE7Y",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-6qISjhJCaE",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -6368,15 +5943,6 @@
      "bouts": 0
     },
     {
-     "id": "H7ddfcz-1Lg",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "LM4kzfiJdu4",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -6431,25 +5997,7 @@
      "bouts": 0
     },
     {
-     "id": "f-f6WgO7ons",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "i2z4_AVyfyA",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sWbdnZeBDnA",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -6476,25 +6024,7 @@
      "bouts": 0
     },
     {
-     "id": "EyX3IEIfVIE",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "v-_owN6O678",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "_GOebANEiDU",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -6539,25 +6069,7 @@
      "bouts": 0
     },
     {
-     "id": "T7TPvupWuk4",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "lzTiz2YCE_0",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EfAU2H2I4Xs",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -6603,15 +6115,6 @@
     },
     {
      "id": "_hYkjHm05As",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "f3PJF0YE-x4",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -6684,15 +6187,6 @@
     },
     {
      "id": "Od_s2CMeWWE",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ciiszhKOqO0",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -6827,15 +6321,6 @@
      "bouts": 0
     },
     {
-     "id": "IESe2fkzxaA",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "5B63AENfC14",
      "comic": "Chris Rock",
      "elo": 1500,
@@ -6855,15 +6340,6 @@
     },
     {
      "id": "caObUaz7oOc",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "koSiuJRoOmg",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -6908,25 +6384,7 @@
      "bouts": 0
     },
     {
-     "id": "bGc1sJeENNI",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RIJavth0a9c",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "PTzC0twXZnU",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -7026,15 +6484,6 @@
     },
     {
      "id": "dapocWEfczQ",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "1OnMgpkNk58",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -7304,15 +6753,6 @@
      "bouts": 0
     },
     {
-     "id": "xXkuP_Rx8M0",
-     "comic": "Kevin Hart",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "XY9h-0x1Oao",
      "comic": "Ali Wong",
      "elo": 1500,
@@ -7342,24 +6782,6 @@
     {
      "id": "wka-o2V71CM",
      "comic": "Ali Wong",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "r7drK5-sMns",
-     "comic": "Michael Che",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "HPH0HgotIE4",
-     "comic": "Michael Che",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -7486,15 +6908,6 @@
     {
      "id": "1oyKVAjISmI",
      "comic": "Jim Jefferies",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "KX5Z-HpHH9g",
-     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -8663,15 +8076,6 @@
      "bouts": 0
     },
     {
-     "id": "RUe9am-s6Oc",
-     "comic": "Sarah Tiana",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "3DC8ZqGLFzw",
      "comic": "Sarah Tiana",
      "elo": 1500,
@@ -8764,15 +8168,6 @@
     {
      "id": "Zp6H4Ajn8Rs",
      "comic": "Tommy Tiernan",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "NN3xASDMwO8",
-     "comic": "Uncle Lazer",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -9149,15 +8544,6 @@
      "bouts": 0
     },
     {
-     "id": "4N35gC6RW64",
-     "comic": "Jerry Sadowitz",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "PX2uJcCP6_4",
      "comic": "Jack Dee",
      "elo": 1500,
@@ -9331,15 +8717,6 @@
     {
      "id": "llnxrhokIsM",
      "comic": "Les Dawson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ABTYH5RIjWU",
-     "comic": "Jo Brand",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -9581,24 +8958,6 @@
      "bouts": 0
     },
     {
-     "id": "NTnB4ohig-c",
-     "comic": "Mark Thomas",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zOV2M42e85o",
-     "comic": "Mark Thomas",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "2gvGW97qhjM",
      "comic": "Mark Thomas",
      "elo": 1500,
@@ -9716,15 +9075,6 @@
      "bouts": 0
     },
     {
-     "id": "V6D7JHhiZcw",
-     "comic": "Lee Mack",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Mpw6_IMW_p4",
      "comic": "Lee Mack",
      "elo": 1500,
@@ -9736,15 +9086,6 @@
     {
      "id": "X0RUMUD6fVA",
      "comic": "Lee Mack",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Bl9LEbussr8",
-     "comic": "Jerry Sadowitz",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -9797,15 +9138,6 @@
      "bouts": 0
     },
     {
-     "id": "K2nzSLhYfxI",
-     "comic": "David Baddiel",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "5iPB5msJ0K0",
      "comic": "David Baddiel",
      "elo": 1500,
@@ -9844,24 +9176,6 @@
     {
      "id": "cCxgag-Ho10",
      "comic": "Johnny Vegas",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-1E9PZQKklQ",
-     "comic": "Rob Newman",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "O8WhP49UCfc",
-     "comic": "Rob Newman",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -10031,34 +9345,7 @@
      "bouts": 0
     },
     {
-     "id": "5KEUDiMTx3I",
-     "comic": "Julian Clary",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "da7TEq-JUuk",
-     "comic": "Dave Spikey",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "nt-2R1fKM_g",
-     "comic": "Dave Spikey",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "8woKRDKHHKw",
      "comic": "Dave Spikey",
      "elo": 1500,
      "lo": 1500,
@@ -10132,15 +9419,6 @@
     {
      "id": "BJSK3t0gSRY",
      "comic": "Alan Davies",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "dCRjgQjT2CQ",
-     "comic": "Lee Hurst",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -10427,15 +9705,6 @@
      "bouts": 0
     },
     {
-     "id": "jarGczTCm_c",
-     "comic": "Rhona Cameron",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "q1LG6MeGxfQ",
      "comic": "Chris Addison",
      "elo": 1500,
@@ -10499,35 +9768,8 @@
      "bouts": 0
     },
     {
-     "id": "kZWcaxYNKIM",
-     "comic": "Mike Reid",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "nN7gtMGB_9s",
      "comic": "Jethro",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hg8pkF0l7AA",
-     "comic": "John Thomson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "cpr_RfcM3AY",
-     "comic": "John Thomson",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -10582,33 +9824,6 @@
     {
      "id": "GE1qkHovN7I",
      "comic": "Ed Byrne",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7l1Xy4FJ_vY",
-     "comic": "Arthur Smith",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jwEFDog9kzk",
-     "comic": "Arthur Smith",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ZQGWr8bdFC4",
-     "comic": "Arthur Smith",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -10697,15 +9912,6 @@
      "bouts": 0
     },
     {
-     "id": "UKeOLOJ6xxw",
-     "comic": "Frank Carson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "IiqdjdifcZ0",
      "comic": "Frank Carson",
      "elo": 1500,
@@ -10735,69 +9941,6 @@
     {
      "id": "DJrnXxXyVFE",
      "comic": "Freddie Starr",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "LS37SNYjg8w",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "IRfluaMKoOY",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ULeDlxa3gyc",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jY4tD2Hbg_A",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EbWLlqCCl9s",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "haDeQpbk3l0",
-     "comic": "Tommy Trinder",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7swCXcYGWTc",
-     "comic": "Tommy Trinder",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -10859,15 +10002,6 @@
      "bouts": 0
     },
     {
-     "id": "2L8iIjcISDM",
-     "comic": "Joe Pasquale",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xObSF2oMHas",
      "comic": "Joe Pasquale",
      "elo": 1500,
@@ -10879,15 +10013,6 @@
     {
      "id": "WoUYhR1WD74",
      "comic": "Joe Pasquale",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Rkm5qLCcBEY",
-     "comic": "Paul Merton",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -11228,15 +10353,6 @@
      "bouts": 0
     },
     {
-     "id": "N1vOEWAN-xg",
-     "comic": "Helen Bauer",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "JawkXT_CNcw",
      "comic": "Helen Bauer",
      "elo": 1500,
@@ -11392,15 +10508,6 @@
     {
      "id": "7FweG226aiw",
      "comic": "Dave Allen",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hXRqjw98tHs",
-     "comic": "Sara Pascoe",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -11813,15 +10920,6 @@
      "bouts": 0
     },
     {
-     "id": "uESxzK_kuRg",
-     "comic": "Barry Humphries",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Y7HMKT4OXMA",
      "comic": "Urzila Carlson",
      "elo": 1500,
@@ -12173,15 +11271,6 @@
      "bouts": 0
     },
     {
-     "id": "1LaOl_PKmbg",
-     "comic": "AY Makun",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ZisL_Db8iuk",
      "comic": "Cal Wilson",
      "elo": 1500,
@@ -12488,15 +11577,6 @@
      "bouts": 0
     },
     {
-     "id": "nr0RPVvKWDI",
-     "comic": "Fary",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "zC7ff6w7x-Y",
      "comic": "Fary",
      "elo": 1500,
@@ -12571,15 +11651,6 @@
     {
      "id": "kal9aFfyWOs",
      "comic": "Gad Elmaleh",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DX61IsYItRw",
-     "comic": "He Guangzhi",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -12803,15 +11874,6 @@
      "bouts": 0
     },
     {
-     "id": "mAvo5yZfkpo",
-     "comic": "Li Xueqin",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "M_CIImLiZmg",
      "comic": "Lucas Lauriente",
      "elo": 1500,
@@ -12875,15 +11937,6 @@
      "bouts": 0
     },
     {
-     "id": "tg-4sLzqv6M",
-     "comic": "Malena Pichot",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "42hGhCNGRlY",
      "comic": "Malena Pichot",
      "elo": 1500,
@@ -12894,15 +11947,6 @@
     },
     {
      "id": "ZthMxN1xv18",
-     "comic": "Malena Pichot",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "McVkOw3Y8IM",
      "comic": "Malena Pichot",
      "elo": 1500,
      "lo": 1500,
@@ -13289,15 +12333,6 @@
      "bouts": 0
     },
     {
-     "id": "ogBft2PZgcc",
-     "comic": "Seyi Law",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "_AtmjTAxJCw",
      "comic": "Seyi Law",
      "elo": 1500,
@@ -13568,15 +12603,6 @@
      "bouts": 0
     },
     {
-     "id": "CVOJLbkmOC4",
-     "comic": "Whindersson Nunes",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "bDvaVYJaXII",
      "comic": "Theo Von",
      "elo": 1500,
@@ -13793,15 +12819,6 @@
      "bouts": 0
     },
     {
-     "id": "w8n5sTGjQcg",
-     "comic": "Cristela Alonzo",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "TBORj28AtCE",
      "comic": "Cristela Alonzo",
      "elo": 1500,
@@ -13982,15 +12999,6 @@
      "bouts": 0
     },
     {
-     "id": "tnX6jwLFEJ8",
-     "comic": "Marlon Wayans",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RWsCeChz6co",
      "comic": "Marlon Wayans",
      "elo": 1500,
@@ -14163,15 +13171,6 @@
     },
     {
      "id": "HHJbPLdyVE4",
-     "comic": "Reggie Watts",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-synDIbJdz8",
      "comic": "Reggie Watts",
      "elo": 1500,
      "lo": 1500,
@@ -14423,24 +13422,6 @@
      "bouts": 0
     },
     {
-     "id": "0q08N63z-N8",
-     "comic": "Mort Sahl",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7Xybtb4Aasc",
-     "comic": "Mort Sahl",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "mWWyY5rYS2s",
      "comic": "Don Rickles",
      "elo": 1500,
@@ -14576,15 +13557,6 @@
      "bouts": 0
     },
     {
-     "id": "fW4lZyMPs0g",
-     "comic": "Roseanne Barr",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "poCX-SSDXio",
      "comic": "Roseanne Barr",
      "elo": 1500,
@@ -14675,15 +13647,6 @@
      "bouts": 0
     },
     {
-     "id": "PDBHM9LCPEw",
-     "comic": "Woody Allen",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Qdm0lm9_p7U",
      "comic": "Woody Allen",
      "elo": 1500,
@@ -14730,15 +13693,6 @@
     },
     {
      "id": "1kAxWFju4EY",
-     "comic": "George Burns",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bmRQ4lHrpRw",
      "comic": "George Burns",
      "elo": 1500,
      "lo": 1500,
@@ -14802,15 +13756,6 @@
     },
     {
      "id": "NV7dzPBt2_o",
-     "comic": "Lily Tomlin",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "0RrHyClw9e0",
      "comic": "Lily Tomlin",
      "elo": 1500,
      "lo": 1500,
@@ -15323,15 +14268,6 @@
      "bouts": 0
     },
     {
-     "id": "NMKfM6lN3Q0",
-     "comic": "Eleanor Kerrigan",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "aZ_4ZSvm2JY",
      "comic": "Eleanor Kerrigan",
      "elo": 1500,
@@ -15494,15 +14430,6 @@
      "bouts": 0
     },
     {
-     "id": "TtC7-bdSYBo",
-     "comic": "Jak Knight",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xV2pckragwM",
      "comic": "Jak Knight",
      "elo": 1500,
@@ -15523,24 +14450,6 @@
     {
      "id": "MMTUZNEBbOI",
      "comic": "Jak Knight",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "lPCWcyRLt2A",
-     "comic": "Brendan Schaub",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "txrACt6gBwY",
-     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -15612,15 +14521,6 @@
     },
     {
      "id": "zU9T0x01m6s",
-     "comic": "Jeff Garlin",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "16pyTCKKNLY",
      "comic": "Jeff Garlin",
      "elo": 1500,
      "lo": 1500,
@@ -15738,15 +14638,6 @@
     },
     {
      "id": "Qt_0gQ3ZhCQ",
-     "comic": "Natasha Leggero",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "GSi0bHhwlXI",
      "comic": "Natasha Leggero",
      "elo": 1500,
      "lo": 1500,
@@ -15892,24 +14783,6 @@
     {
      "id": "yC8cvTQtgdQ",
      "comic": "Adam Sandler",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "pcwlsVBPe-M",
-     "comic": "Wheeler Walker",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "osLTSjP7gw8",
-     "comic": "Wheeler Walker",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -16304,15 +15177,6 @@
      "bouts": 0
     },
     {
-     "id": "V7FPMk6tiQ4",
-     "comic": "Drew Michael",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "7phVM5xtl2A",
      "comic": "Drew Michael",
      "elo": 1500,
@@ -16466,15 +15330,6 @@
      "bouts": 0
     },
     {
-     "id": "RYH3_SS_4LA",
-     "comic": "Moses Storm",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "sF1shxHm2h0",
      "comic": "Moses Storm",
      "elo": 1500,
@@ -16565,15 +15420,6 @@
      "bouts": 0
     },
     {
-     "id": "i4xCTFxLNh0",
-     "comic": "Chelsea Peretti",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "XqYuhZAPQu4",
      "comic": "Chelsea Peretti",
      "elo": 1500,
@@ -16584,15 +15430,6 @@
     },
     {
      "id": "kMuwR1XcVV8",
-     "comic": "Chelsea Peretti",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "xF5-VGxDh1E",
      "comic": "Chelsea Peretti",
      "elo": 1500,
      "lo": 1500,
@@ -16674,15 +15511,6 @@
     },
     {
      "id": "i2zq1EDgDfs",
-     "comic": "Dave Attell",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hYVuc9YnXwI",
      "comic": "Dave Attell",
      "elo": 1500,
      "lo": 1500,
@@ -16953,15 +15781,6 @@
     },
     {
      "id": "qHkelMSSCgA",
-     "comic": "Adam Devine",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "shgU5Yh8Srs",
      "comic": "Adam Devine",
      "elo": 1500,
      "lo": 1500,
@@ -17393,15 +16212,6 @@
      "bouts": 0
     },
     {
-     "id": "eN79YjRLh40",
-     "comic": "Nick Offerman",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ib4lwCU9D60",
      "comic": "Nick Offerman",
      "elo": 1500,
@@ -17672,15 +16482,6 @@
      "bouts": 0
     },
     {
-     "id": "OwF1JJror0Y",
-     "comic": "Kevin James",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "vFJtYV3aOas",
      "comic": "Kevin James",
      "elo": 1500,
@@ -17718,15 +16519,6 @@
     },
     {
      "id": "Tq7slEHsNQg",
-     "comic": "Fred Armisen",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "f4TdKezuIm0",
      "comic": "Fred Armisen",
      "elo": 1500,
      "lo": 1500,
@@ -18014,15 +16806,6 @@
      "bouts": 0
     },
     {
-     "id": "baDJ-ZIvYy0",
-     "comic": "Anjelah Johnson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "QRu-QUeqoMs",
      "comic": "Sarah Cooper",
      "elo": 1500,
@@ -18204,15 +16987,6 @@
     },
     {
      "id": "bSqm0pgba8w",
-     "comic": "Kate Berlant",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Ra8yAg6T3-s",
      "comic": "Kate Berlant",
      "elo": 1500,
      "lo": 1500,
@@ -18428,15 +17202,6 @@
      "bouts": 0
     },
     {
-     "id": "Qn9Nfofi9Ug",
-     "comic": "Rob Schneider",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xp34S7VHtoE",
      "comic": "Rob Schneider",
      "elo": 1500,
@@ -18510,15 +17275,6 @@
     },
     {
      "id": "BSf8EL-xoXg",
-     "comic": "Arsenio Hall",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Q9jqoBL5KPU",
      "comic": "Arsenio Hall",
      "elo": 1500,
      "lo": 1500,
@@ -19733,15 +18489,6 @@
      "bouts": 0
     },
     {
-     "id": "x2QXyvS7egU",
-     "comic": "Andy Hendrickson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "zzt_Q8QUG3I",
      "comic": "Andy Hendrickson",
      "elo": 1500,
@@ -19760,25 +18507,7 @@
      "bouts": 0
     },
     {
-     "id": "CcKYEAWD1yc",
-     "comic": "Ania Magliano",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "SLv01vBMvFo",
-     "comic": "Ania Magliano",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "C4u_CQWuHHM",
      "comic": "Ania Magliano",
      "elo": 1500,
      "lo": 1500,
@@ -20318,15 +19047,6 @@
      "bouts": 0
     },
     {
-     "id": "nHNhkeQDBBs",
-     "comic": "Eric Tartaglione",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "IcvYGqrV42E",
      "comic": "Eric Tartaglione",
      "elo": 1500,
@@ -20453,26 +19173,8 @@
      "bouts": 0
     },
     {
-     "id": "xuuPvFd3YpI",
-     "comic": "George Perez",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Sc-20wkUko4",
      "comic": "George Perez",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "T4FX2rGAAaM",
-     "comic": "Hollie Harper",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -20562,15 +19264,6 @@
     },
     {
      "id": "qFcE53pbmVI",
-     "comic": "Jayson Thibault",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yQu-0oVTtWE",
      "comic": "Jayson Thibault",
      "elo": 1500,
      "lo": 1500,
@@ -20696,24 +19389,6 @@
      "bouts": 0
     },
     {
-     "id": "j3dWH0KDKRM",
-     "comic": "Kam Patterson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "L50W0393rOc",
-     "comic": "Kam Patterson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "KIbC8c1hNhU",
      "comic": "Kam Patterson",
      "elo": 1500,
@@ -20779,15 +19454,6 @@
     {
      "id": "hiTs0OnZabg",
      "comic": "Laura Peek",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "B-HRwYpicmo",
-     "comic": "Liv Taylor",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -20930,15 +19596,6 @@
      "bouts": 0
     },
     {
-     "id": "d2MDwxTAIL8",
-     "comic": "Megan Gailey",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Qc8XQQmnPb0",
      "comic": "Megan Gailey",
      "elo": 1500,
@@ -21049,24 +19706,6 @@
     {
      "id": "QJ6tmMFp0Rs",
      "comic": "Molly Mcguinness",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "VWAhbaQFzRw",
-     "comic": "Marcello Hernandez",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "dw0ifECyfPI",
-     "comic": "Marcello Hernandez",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -21632,15 +20271,6 @@
      "bouts": 0
     },
     {
-     "id": "AjtCNUGcnr8",
-     "comic": "Willie Hunter",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "VSVQL-UEARo",
      "comic": "Paul O'Grady",
      "elo": 1500,
@@ -21650,8 +20280,305 @@
      "bouts": 0
     },
     {
-     "id": "xDwV2dqj70A",
-     "comic": "Paul O'Grady",
+     "id": "Sm66rJFD5UI",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mlV83B9824I",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qQJxTYMAf-k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0rf6xl29oTQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HYodsw0tYJA",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8mcHozva-5k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Wca_-tS_e2w",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Tzh2zesO4hk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jzDIYZT4lzw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Er7I-Tru21k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wjrsRzGWItk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RqnGahoZhho",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "odthjTvKL1o",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3VJOujtwd-4",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FOUcNxXDsm8",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PGuqnE35cCg",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JjeIcLZmO9U",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "a9WowBxdhTQ",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GoxIrm95E4Q",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "a1V23rDW7cw",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FBKWxJehH7Q",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "V4UHiMSPnr0",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IYYJrPlp4s8",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3a6nJMdZLNM",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CvfnFh1o5EQ",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GkwacXXDuvs",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TEXuqQlH-N8",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Tr9iE4zN3_w",
+     "comic": "Jerry Sadowitz",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SKhHqy08arQ",
+     "comic": "Rhona Cameron",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bJtFHzDl3Tc",
+     "comic": "Russell Brand",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "A79NGUlZPvM",
+     "comic": "Russell Brand",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sMaz9HJXJmI",
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3D3yzE2H9Tg",
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rAGB9_63fY8",
+     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -21704,15 +20631,6 @@
      "bouts": 0
     },
     {
-     "id": "HXtHOjH4xMU",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "mxmCFcpA7ls",
      "comic": "Louis C.K.",
      "elo": 1326.4,
@@ -21740,15 +20658,6 @@
      "bouts": 0
     },
     {
-     "id": "9AqeGogHetw",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "C--4udLexFI",
      "comic": "Louis C.K.",
      "elo": 1326.4,
@@ -21759,15 +20668,6 @@
     },
     {
      "id": "0eUbnkVFQuE",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-LlydlYTcsI",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -21803,25 +20703,7 @@
      "bouts": 0
     },
     {
-     "id": "vGs8e9MZWNk",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "1aXt8qmhsZM",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "6ZD17i3N42k",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -21849,15 +20731,6 @@
     },
     {
      "id": "XLGzFQg_1xc",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "i3TBNkbftGQ",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -21947,15 +20820,6 @@
      "bouts": 0
     },
     {
-     "id": "O1eKLltGLt0",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "wADkhFfqZZE",
      "comic": "Louis C.K.",
      "elo": 1326.4,
@@ -22028,34 +20892,7 @@
      "bouts": 0
     },
     {
-     "id": "xq_QqC2Nkqo",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "6Amxd6UVWQI",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "roRtGd4HMpg",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zuLrBLxbLxw",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -22074,15 +20911,6 @@
     },
     {
      "id": "RTrCBcrFMCI",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "3l09rmSs9p0",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -22155,33 +20983,6 @@
     },
     {
      "id": "xrJh2hO5dMM",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "0720ucDf9JY",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "vbLf9Ixf7Z8",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sePS8-J0zaM",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -22255,14 +21056,6 @@
      "bouts": 0
     },
     {
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "George Carlin",
      "elo": 1500,
      "lo": 1500,
@@ -22351,23 +21144,7 @@
      "bouts": 0
     },
     {
-     "comic": "Kevin Hart",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Ali Wong",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Michael Che",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -22408,14 +21185,6 @@
     },
     {
      "comic": "Jim Jefferies",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -22719,14 +21488,6 @@
      "bouts": 0
     },
     {
-     "comic": "Uncle Lazer",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Jimmy Carr",
      "elo": 1500,
      "lo": 1500,
@@ -22808,14 +21569,6 @@
     },
     {
      "comic": "Victoria Wood",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Jerry Sadowitz",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -23071,6 +21824,14 @@
      "bouts": 0
     },
     {
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
      "comic": "Ken Dodd",
      "elo": 1500,
      "lo": 1500,
@@ -23080,14 +21841,6 @@
     },
     {
      "comic": "Phill Jupitus",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Rhona Cameron",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -23160,22 +21913,6 @@
     },
     {
      "comic": "Freddie Starr",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Tommy Trinder",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -23415,14 +22152,6 @@
      "bouts": 0
     },
     {
-     "comic": "Barry Humphries",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Urzila Carlson",
      "elo": 1500,
      "lo": 1500,
@@ -23496,14 +22225,6 @@
     },
     {
      "comic": "Aunty Donna",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "AY Makun",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -23823,14 +22544,6 @@
      "bouts": 0
     },
     {
-     "comic": "Whindersson Nunes",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Theo Von",
      "elo": 1500,
      "lo": 1500,
@@ -23856,6 +22569,14 @@
     },
     {
      "comic": "Ron White",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kevin Hart",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -23928,6 +22649,14 @@
     },
     {
      "comic": "Marlon Wayans",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Michael Che",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -24271,14 +23000,6 @@
      "bouts": 0
     },
     {
-     "comic": "Brendan Schaub",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Josh Wolf",
      "elo": 1500,
      "lo": 1500,
@@ -24359,7 +23080,7 @@
      "bouts": 0
     },
     {
-     "comic": "Wheeler Walker",
+     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -25327,14 +24048,6 @@
      "bouts": 0
     },
     {
-     "comic": "Hollie Harper",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Ismael Loutfi",
      "elo": 1500,
      "lo": 1500,
@@ -25639,7 +24352,7 @@
      "bouts": 0
     },
     {
-     "comic": "Willie Hunter",
+     "comic": "Paul O'Grady",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -25647,7 +24360,39 @@
      "bouts": 0
     },
     {
-     "comic": "Paul O'Grady",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerry Sadowitz",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Rhona Cameron",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -25701,24 +24446,6 @@
      "bouts": 0
     },
     {
-     "id": "-skA4GhVX7k",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hoYUX3gqZs4",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "M7rm47VIxtw",
      "comic": "Norm Macdonald",
      "elo": 1673.6,
@@ -25755,24 +24482,6 @@
      "bouts": 0
     },
     {
-     "id": "MEYbL1-62Zk",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "s9zTJ763IO0",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Oseqh7SMIvo",
      "comic": "Norm Macdonald",
      "elo": 1673.6,
@@ -25783,24 +24492,6 @@
     },
     {
      "id": "Fv67QgVSqkk",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "OtpJzZJ-BNM",
-     "comic": "Norm Macdonald",
-     "elo": 1673.6,
-     "lo": 1673.6,
-     "hi": 1673.6,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Pt9F1ADNfsg",
      "comic": "Norm Macdonald",
      "elo": 1673.6,
      "lo": 1673.6,
@@ -26135,258 +24826,6 @@
     {
      "id": "NhnS0dUacJs",
      "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7f0ZFu0iMqs",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ayP1_wWvcvk",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "O6-E2tvLpyc",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zNjYfz-qk9k",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "gCPlwd9ePhE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "udLWVzmk5sI",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "nXavCUcL7NY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hmqXxzemRis",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "UkRAI4eWFhQ",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "QBr30J_vuEg",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "j7OE-p8QfDo",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "9fDdyzt_CFY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yzFmHUXDL9Y",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "723xrxG12GE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Jh1GwzuYkek",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DpcBAJ3eMK8",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "FVVQXj6Ymso",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DcLeSQECCLQ",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "nQDBwPTZvDw",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bNpggSlk6S0",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7qde2ieLXIk",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bfkVV22QqKw",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "4dve41SHnKE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sd2Qc_--UOA",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "0nXq7ptrQ4Q",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "2RE4mGM5RuY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "9we8zFqR17o",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "oS9I8LBqM6c",
-     "comic": "Casey Rocket",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -26754,15 +25193,6 @@
      "bouts": 0
     },
     {
-     "id": "uYi77GN1px8",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "BYslql7xwmA",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -26898,15 +25328,6 @@
      "bouts": 0
     },
     {
-     "id": "Zv9NWSzLG0c",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "AN64Murli44",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -26989,15 +25410,6 @@
     },
     {
      "id": "cLChc2C6bqc",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "G4UMa-0YUYY",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -27240,15 +25652,6 @@
      "bouts": 0
     },
     {
-     "id": "3mfp-om_zWM",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RxMPpvSRirM",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -27304,15 +25707,6 @@
     },
     {
      "id": "K797TOcBBv4",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "3ttcCK32clg",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -27600,15 +25994,6 @@
      "bouts": 0
     },
     {
-     "id": "2dxPgkZhQQA",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "VovyHBwcctU",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -27709,15 +26094,6 @@
     },
     {
      "id": "gbh7bSsFE7Y",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-6qISjhJCaE",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -28581,15 +26957,6 @@
      "bouts": 0
     },
     {
-     "id": "H7ddfcz-1Lg",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "LM4kzfiJdu4",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -28644,25 +27011,7 @@
      "bouts": 0
     },
     {
-     "id": "f-f6WgO7ons",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "i2z4_AVyfyA",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sWbdnZeBDnA",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -28689,25 +27038,7 @@
      "bouts": 0
     },
     {
-     "id": "EyX3IEIfVIE",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "v-_owN6O678",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "_GOebANEiDU",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -28752,25 +27083,7 @@
      "bouts": 0
     },
     {
-     "id": "T7TPvupWuk4",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "lzTiz2YCE_0",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EfAU2H2I4Xs",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": 1500,
@@ -28816,15 +27129,6 @@
     },
     {
      "id": "_hYkjHm05As",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "f3PJF0YE-x4",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -28897,15 +27201,6 @@
     },
     {
      "id": "Od_s2CMeWWE",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ciiszhKOqO0",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -29040,15 +27335,6 @@
      "bouts": 0
     },
     {
-     "id": "IESe2fkzxaA",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "5B63AENfC14",
      "comic": "Chris Rock",
      "elo": 1500,
@@ -29068,15 +27354,6 @@
     },
     {
      "id": "caObUaz7oOc",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "koSiuJRoOmg",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -29121,25 +27398,7 @@
      "bouts": 0
     },
     {
-     "id": "bGc1sJeENNI",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RIJavth0a9c",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "PTzC0twXZnU",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -29239,15 +27498,6 @@
     },
     {
      "id": "dapocWEfczQ",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "1OnMgpkNk58",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": 1500,
@@ -29517,15 +27767,6 @@
      "bouts": 0
     },
     {
-     "id": "xXkuP_Rx8M0",
-     "comic": "Kevin Hart",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "XY9h-0x1Oao",
      "comic": "Ali Wong",
      "elo": 1500,
@@ -29555,24 +27796,6 @@
     {
      "id": "wka-o2V71CM",
      "comic": "Ali Wong",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "r7drK5-sMns",
-     "comic": "Michael Che",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "HPH0HgotIE4",
-     "comic": "Michael Che",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -29699,15 +27922,6 @@
     {
      "id": "1oyKVAjISmI",
      "comic": "Jim Jefferies",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "KX5Z-HpHH9g",
-     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -30876,15 +29090,6 @@
      "bouts": 0
     },
     {
-     "id": "RUe9am-s6Oc",
-     "comic": "Sarah Tiana",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "3DC8ZqGLFzw",
      "comic": "Sarah Tiana",
      "elo": 1500,
@@ -30977,15 +29182,6 @@
     {
      "id": "Zp6H4Ajn8Rs",
      "comic": "Tommy Tiernan",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "NN3xASDMwO8",
-     "comic": "Uncle Lazer",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -31362,15 +29558,6 @@
      "bouts": 0
     },
     {
-     "id": "4N35gC6RW64",
-     "comic": "Jerry Sadowitz",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "PX2uJcCP6_4",
      "comic": "Jack Dee",
      "elo": 1500,
@@ -31544,15 +29731,6 @@
     {
      "id": "llnxrhokIsM",
      "comic": "Les Dawson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ABTYH5RIjWU",
-     "comic": "Jo Brand",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -31794,24 +29972,6 @@
      "bouts": 0
     },
     {
-     "id": "NTnB4ohig-c",
-     "comic": "Mark Thomas",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zOV2M42e85o",
-     "comic": "Mark Thomas",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "2gvGW97qhjM",
      "comic": "Mark Thomas",
      "elo": 1500,
@@ -31929,15 +30089,6 @@
      "bouts": 0
     },
     {
-     "id": "V6D7JHhiZcw",
-     "comic": "Lee Mack",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Mpw6_IMW_p4",
      "comic": "Lee Mack",
      "elo": 1500,
@@ -31949,15 +30100,6 @@
     {
      "id": "X0RUMUD6fVA",
      "comic": "Lee Mack",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Bl9LEbussr8",
-     "comic": "Jerry Sadowitz",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -32010,15 +30152,6 @@
      "bouts": 0
     },
     {
-     "id": "K2nzSLhYfxI",
-     "comic": "David Baddiel",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "5iPB5msJ0K0",
      "comic": "David Baddiel",
      "elo": 1500,
@@ -32057,24 +30190,6 @@
     {
      "id": "cCxgag-Ho10",
      "comic": "Johnny Vegas",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-1E9PZQKklQ",
-     "comic": "Rob Newman",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "O8WhP49UCfc",
-     "comic": "Rob Newman",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -32244,34 +30359,7 @@
      "bouts": 0
     },
     {
-     "id": "5KEUDiMTx3I",
-     "comic": "Julian Clary",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "da7TEq-JUuk",
-     "comic": "Dave Spikey",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "nt-2R1fKM_g",
-     "comic": "Dave Spikey",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "8woKRDKHHKw",
      "comic": "Dave Spikey",
      "elo": 1500,
      "lo": 1500,
@@ -32345,15 +30433,6 @@
     {
      "id": "BJSK3t0gSRY",
      "comic": "Alan Davies",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "dCRjgQjT2CQ",
-     "comic": "Lee Hurst",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -32640,15 +30719,6 @@
      "bouts": 0
     },
     {
-     "id": "jarGczTCm_c",
-     "comic": "Rhona Cameron",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "q1LG6MeGxfQ",
      "comic": "Chris Addison",
      "elo": 1500,
@@ -32712,35 +30782,8 @@
      "bouts": 0
     },
     {
-     "id": "kZWcaxYNKIM",
-     "comic": "Mike Reid",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "nN7gtMGB_9s",
      "comic": "Jethro",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hg8pkF0l7AA",
-     "comic": "John Thomson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "cpr_RfcM3AY",
-     "comic": "John Thomson",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -32795,33 +30838,6 @@
     {
      "id": "GE1qkHovN7I",
      "comic": "Ed Byrne",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7l1Xy4FJ_vY",
-     "comic": "Arthur Smith",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jwEFDog9kzk",
-     "comic": "Arthur Smith",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ZQGWr8bdFC4",
-     "comic": "Arthur Smith",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -32910,15 +30926,6 @@
      "bouts": 0
     },
     {
-     "id": "UKeOLOJ6xxw",
-     "comic": "Frank Carson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "IiqdjdifcZ0",
      "comic": "Frank Carson",
      "elo": 1500,
@@ -32948,69 +30955,6 @@
     {
      "id": "DJrnXxXyVFE",
      "comic": "Freddie Starr",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "LS37SNYjg8w",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "IRfluaMKoOY",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ULeDlxa3gyc",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jY4tD2Hbg_A",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EbWLlqCCl9s",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "haDeQpbk3l0",
-     "comic": "Tommy Trinder",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7swCXcYGWTc",
-     "comic": "Tommy Trinder",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -33072,15 +31016,6 @@
      "bouts": 0
     },
     {
-     "id": "2L8iIjcISDM",
-     "comic": "Joe Pasquale",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xObSF2oMHas",
      "comic": "Joe Pasquale",
      "elo": 1500,
@@ -33092,15 +31027,6 @@
     {
      "id": "WoUYhR1WD74",
      "comic": "Joe Pasquale",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Rkm5qLCcBEY",
-     "comic": "Paul Merton",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -33441,15 +31367,6 @@
      "bouts": 0
     },
     {
-     "id": "N1vOEWAN-xg",
-     "comic": "Helen Bauer",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "JawkXT_CNcw",
      "comic": "Helen Bauer",
      "elo": 1500,
@@ -33605,15 +31522,6 @@
     {
      "id": "7FweG226aiw",
      "comic": "Dave Allen",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hXRqjw98tHs",
-     "comic": "Sara Pascoe",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -34026,15 +31934,6 @@
      "bouts": 0
     },
     {
-     "id": "uESxzK_kuRg",
-     "comic": "Barry Humphries",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Y7HMKT4OXMA",
      "comic": "Urzila Carlson",
      "elo": 1500,
@@ -34386,15 +32285,6 @@
      "bouts": 0
     },
     {
-     "id": "1LaOl_PKmbg",
-     "comic": "AY Makun",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ZisL_Db8iuk",
      "comic": "Cal Wilson",
      "elo": 1500,
@@ -34701,15 +32591,6 @@
      "bouts": 0
     },
     {
-     "id": "nr0RPVvKWDI",
-     "comic": "Fary",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "zC7ff6w7x-Y",
      "comic": "Fary",
      "elo": 1500,
@@ -34784,15 +32665,6 @@
     {
      "id": "kal9aFfyWOs",
      "comic": "Gad Elmaleh",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DX61IsYItRw",
-     "comic": "He Guangzhi",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -35016,15 +32888,6 @@
      "bouts": 0
     },
     {
-     "id": "mAvo5yZfkpo",
-     "comic": "Li Xueqin",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "M_CIImLiZmg",
      "comic": "Lucas Lauriente",
      "elo": 1500,
@@ -35088,15 +32951,6 @@
      "bouts": 0
     },
     {
-     "id": "tg-4sLzqv6M",
-     "comic": "Malena Pichot",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "42hGhCNGRlY",
      "comic": "Malena Pichot",
      "elo": 1500,
@@ -35107,15 +32961,6 @@
     },
     {
      "id": "ZthMxN1xv18",
-     "comic": "Malena Pichot",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "McVkOw3Y8IM",
      "comic": "Malena Pichot",
      "elo": 1500,
      "lo": 1500,
@@ -35502,15 +33347,6 @@
      "bouts": 0
     },
     {
-     "id": "ogBft2PZgcc",
-     "comic": "Seyi Law",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "_AtmjTAxJCw",
      "comic": "Seyi Law",
      "elo": 1500,
@@ -35781,15 +33617,6 @@
      "bouts": 0
     },
     {
-     "id": "CVOJLbkmOC4",
-     "comic": "Whindersson Nunes",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "bDvaVYJaXII",
      "comic": "Theo Von",
      "elo": 1500,
@@ -36006,15 +33833,6 @@
      "bouts": 0
     },
     {
-     "id": "w8n5sTGjQcg",
-     "comic": "Cristela Alonzo",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "TBORj28AtCE",
      "comic": "Cristela Alonzo",
      "elo": 1500,
@@ -36195,15 +34013,6 @@
      "bouts": 0
     },
     {
-     "id": "tnX6jwLFEJ8",
-     "comic": "Marlon Wayans",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RWsCeChz6co",
      "comic": "Marlon Wayans",
      "elo": 1500,
@@ -36376,15 +34185,6 @@
     },
     {
      "id": "HHJbPLdyVE4",
-     "comic": "Reggie Watts",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-synDIbJdz8",
      "comic": "Reggie Watts",
      "elo": 1500,
      "lo": 1500,
@@ -36636,24 +34436,6 @@
      "bouts": 0
     },
     {
-     "id": "0q08N63z-N8",
-     "comic": "Mort Sahl",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7Xybtb4Aasc",
-     "comic": "Mort Sahl",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "mWWyY5rYS2s",
      "comic": "Don Rickles",
      "elo": 1500,
@@ -36789,15 +34571,6 @@
      "bouts": 0
     },
     {
-     "id": "fW4lZyMPs0g",
-     "comic": "Roseanne Barr",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "poCX-SSDXio",
      "comic": "Roseanne Barr",
      "elo": 1500,
@@ -36888,15 +34661,6 @@
      "bouts": 0
     },
     {
-     "id": "PDBHM9LCPEw",
-     "comic": "Woody Allen",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Qdm0lm9_p7U",
      "comic": "Woody Allen",
      "elo": 1500,
@@ -36943,15 +34707,6 @@
     },
     {
      "id": "1kAxWFju4EY",
-     "comic": "George Burns",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bmRQ4lHrpRw",
      "comic": "George Burns",
      "elo": 1500,
      "lo": 1500,
@@ -37015,15 +34770,6 @@
     },
     {
      "id": "NV7dzPBt2_o",
-     "comic": "Lily Tomlin",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "0RrHyClw9e0",
      "comic": "Lily Tomlin",
      "elo": 1500,
      "lo": 1500,
@@ -37536,15 +35282,6 @@
      "bouts": 0
     },
     {
-     "id": "NMKfM6lN3Q0",
-     "comic": "Eleanor Kerrigan",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "aZ_4ZSvm2JY",
      "comic": "Eleanor Kerrigan",
      "elo": 1500,
@@ -37707,15 +35444,6 @@
      "bouts": 0
     },
     {
-     "id": "TtC7-bdSYBo",
-     "comic": "Jak Knight",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xV2pckragwM",
      "comic": "Jak Knight",
      "elo": 1500,
@@ -37736,24 +35464,6 @@
     {
      "id": "MMTUZNEBbOI",
      "comic": "Jak Knight",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "lPCWcyRLt2A",
-     "comic": "Brendan Schaub",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "txrACt6gBwY",
-     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -37825,15 +35535,6 @@
     },
     {
      "id": "zU9T0x01m6s",
-     "comic": "Jeff Garlin",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "16pyTCKKNLY",
      "comic": "Jeff Garlin",
      "elo": 1500,
      "lo": 1500,
@@ -37951,15 +35652,6 @@
     },
     {
      "id": "Qt_0gQ3ZhCQ",
-     "comic": "Natasha Leggero",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "GSi0bHhwlXI",
      "comic": "Natasha Leggero",
      "elo": 1500,
      "lo": 1500,
@@ -38105,24 +35797,6 @@
     {
      "id": "yC8cvTQtgdQ",
      "comic": "Adam Sandler",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "pcwlsVBPe-M",
-     "comic": "Wheeler Walker",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "osLTSjP7gw8",
-     "comic": "Wheeler Walker",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -38517,15 +36191,6 @@
      "bouts": 0
     },
     {
-     "id": "V7FPMk6tiQ4",
-     "comic": "Drew Michael",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "7phVM5xtl2A",
      "comic": "Drew Michael",
      "elo": 1500,
@@ -38679,15 +36344,6 @@
      "bouts": 0
     },
     {
-     "id": "RYH3_SS_4LA",
-     "comic": "Moses Storm",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "sF1shxHm2h0",
      "comic": "Moses Storm",
      "elo": 1500,
@@ -38778,15 +36434,6 @@
      "bouts": 0
     },
     {
-     "id": "i4xCTFxLNh0",
-     "comic": "Chelsea Peretti",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "XqYuhZAPQu4",
      "comic": "Chelsea Peretti",
      "elo": 1500,
@@ -38797,15 +36444,6 @@
     },
     {
      "id": "kMuwR1XcVV8",
-     "comic": "Chelsea Peretti",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "xF5-VGxDh1E",
      "comic": "Chelsea Peretti",
      "elo": 1500,
      "lo": 1500,
@@ -38887,15 +36525,6 @@
     },
     {
      "id": "i2zq1EDgDfs",
-     "comic": "Dave Attell",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hYVuc9YnXwI",
      "comic": "Dave Attell",
      "elo": 1500,
      "lo": 1500,
@@ -39166,15 +36795,6 @@
     },
     {
      "id": "qHkelMSSCgA",
-     "comic": "Adam Devine",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "shgU5Yh8Srs",
      "comic": "Adam Devine",
      "elo": 1500,
      "lo": 1500,
@@ -39606,15 +37226,6 @@
      "bouts": 0
     },
     {
-     "id": "eN79YjRLh40",
-     "comic": "Nick Offerman",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ib4lwCU9D60",
      "comic": "Nick Offerman",
      "elo": 1500,
@@ -39885,15 +37496,6 @@
      "bouts": 0
     },
     {
-     "id": "OwF1JJror0Y",
-     "comic": "Kevin James",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "vFJtYV3aOas",
      "comic": "Kevin James",
      "elo": 1500,
@@ -39931,15 +37533,6 @@
     },
     {
      "id": "Tq7slEHsNQg",
-     "comic": "Fred Armisen",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "f4TdKezuIm0",
      "comic": "Fred Armisen",
      "elo": 1500,
      "lo": 1500,
@@ -40227,15 +37820,6 @@
      "bouts": 0
     },
     {
-     "id": "baDJ-ZIvYy0",
-     "comic": "Anjelah Johnson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "QRu-QUeqoMs",
      "comic": "Sarah Cooper",
      "elo": 1500,
@@ -40417,15 +38001,6 @@
     },
     {
      "id": "bSqm0pgba8w",
-     "comic": "Kate Berlant",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Ra8yAg6T3-s",
      "comic": "Kate Berlant",
      "elo": 1500,
      "lo": 1500,
@@ -40641,15 +38216,6 @@
      "bouts": 0
     },
     {
-     "id": "Qn9Nfofi9Ug",
-     "comic": "Rob Schneider",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xp34S7VHtoE",
      "comic": "Rob Schneider",
      "elo": 1500,
@@ -40723,15 +38289,6 @@
     },
     {
      "id": "BSf8EL-xoXg",
-     "comic": "Arsenio Hall",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Q9jqoBL5KPU",
      "comic": "Arsenio Hall",
      "elo": 1500,
      "lo": 1500,
@@ -41946,15 +39503,6 @@
      "bouts": 0
     },
     {
-     "id": "x2QXyvS7egU",
-     "comic": "Andy Hendrickson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "zzt_Q8QUG3I",
      "comic": "Andy Hendrickson",
      "elo": 1500,
@@ -41973,25 +39521,7 @@
      "bouts": 0
     },
     {
-     "id": "CcKYEAWD1yc",
-     "comic": "Ania Magliano",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "SLv01vBMvFo",
-     "comic": "Ania Magliano",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "C4u_CQWuHHM",
      "comic": "Ania Magliano",
      "elo": 1500,
      "lo": 1500,
@@ -42531,15 +40061,6 @@
      "bouts": 0
     },
     {
-     "id": "nHNhkeQDBBs",
-     "comic": "Eric Tartaglione",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "IcvYGqrV42E",
      "comic": "Eric Tartaglione",
      "elo": 1500,
@@ -42666,26 +40187,8 @@
      "bouts": 0
     },
     {
-     "id": "xuuPvFd3YpI",
-     "comic": "George Perez",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Sc-20wkUko4",
      "comic": "George Perez",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "T4FX2rGAAaM",
-     "comic": "Hollie Harper",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -42775,15 +40278,6 @@
     },
     {
      "id": "qFcE53pbmVI",
-     "comic": "Jayson Thibault",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yQu-0oVTtWE",
      "comic": "Jayson Thibault",
      "elo": 1500,
      "lo": 1500,
@@ -42909,24 +40403,6 @@
      "bouts": 0
     },
     {
-     "id": "j3dWH0KDKRM",
-     "comic": "Kam Patterson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "L50W0393rOc",
-     "comic": "Kam Patterson",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "KIbC8c1hNhU",
      "comic": "Kam Patterson",
      "elo": 1500,
@@ -42992,15 +40468,6 @@
     {
      "id": "hiTs0OnZabg",
      "comic": "Laura Peek",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "B-HRwYpicmo",
-     "comic": "Liv Taylor",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -43143,15 +40610,6 @@
      "bouts": 0
     },
     {
-     "id": "d2MDwxTAIL8",
-     "comic": "Megan Gailey",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Qc8XQQmnPb0",
      "comic": "Megan Gailey",
      "elo": 1500,
@@ -43262,24 +40720,6 @@
     {
      "id": "QJ6tmMFp0Rs",
      "comic": "Molly Mcguinness",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "VWAhbaQFzRw",
-     "comic": "Marcello Hernandez",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "dw0ifECyfPI",
-     "comic": "Marcello Hernandez",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -43845,15 +41285,6 @@
      "bouts": 0
     },
     {
-     "id": "AjtCNUGcnr8",
-     "comic": "Willie Hunter",
-     "elo": 1500,
-     "lo": 1500,
-     "hi": 1500,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "VSVQL-UEARo",
      "comic": "Paul O'Grady",
      "elo": 1500,
@@ -43863,8 +41294,305 @@
      "bouts": 0
     },
     {
-     "id": "xDwV2dqj70A",
-     "comic": "Paul O'Grady",
+     "id": "Sm66rJFD5UI",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mlV83B9824I",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qQJxTYMAf-k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0rf6xl29oTQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HYodsw0tYJA",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8mcHozva-5k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Wca_-tS_e2w",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Tzh2zesO4hk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jzDIYZT4lzw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Er7I-Tru21k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wjrsRzGWItk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RqnGahoZhho",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "odthjTvKL1o",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3VJOujtwd-4",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FOUcNxXDsm8",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PGuqnE35cCg",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JjeIcLZmO9U",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "a9WowBxdhTQ",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GoxIrm95E4Q",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "a1V23rDW7cw",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FBKWxJehH7Q",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "V4UHiMSPnr0",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IYYJrPlp4s8",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3a6nJMdZLNM",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CvfnFh1o5EQ",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GkwacXXDuvs",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TEXuqQlH-N8",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Tr9iE4zN3_w",
+     "comic": "Jerry Sadowitz",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SKhHqy08arQ",
+     "comic": "Rhona Cameron",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bJtFHzDl3Tc",
+     "comic": "Russell Brand",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "A79NGUlZPvM",
+     "comic": "Russell Brand",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sMaz9HJXJmI",
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3D3yzE2H9Tg",
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": 1500,
+     "hi": 1500,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rAGB9_63fY8",
+     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": 1500,
      "hi": 1500,
@@ -43917,15 +41645,6 @@
      "bouts": 0
     },
     {
-     "id": "HXtHOjH4xMU",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "mxmCFcpA7ls",
      "comic": "Louis C.K.",
      "elo": 1326.4,
@@ -43953,15 +41672,6 @@
      "bouts": 0
     },
     {
-     "id": "9AqeGogHetw",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "C--4udLexFI",
      "comic": "Louis C.K.",
      "elo": 1326.4,
@@ -43972,15 +41682,6 @@
     },
     {
      "id": "0eUbnkVFQuE",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-LlydlYTcsI",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -44016,25 +41717,7 @@
      "bouts": 0
     },
     {
-     "id": "vGs8e9MZWNk",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "1aXt8qmhsZM",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "6ZD17i3N42k",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -44062,15 +41745,6 @@
     },
     {
      "id": "XLGzFQg_1xc",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "i3TBNkbftGQ",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -44160,15 +41834,6 @@
      "bouts": 0
     },
     {
-     "id": "O1eKLltGLt0",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "wADkhFfqZZE",
      "comic": "Louis C.K.",
      "elo": 1326.4,
@@ -44241,34 +41906,7 @@
      "bouts": 0
     },
     {
-     "id": "xq_QqC2Nkqo",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "6Amxd6UVWQI",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "roRtGd4HMpg",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zuLrBLxbLxw",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -44287,15 +41925,6 @@
     },
     {
      "id": "RTrCBcrFMCI",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "3l09rmSs9p0",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -44368,33 +41997,6 @@
     },
     {
      "id": "xrJh2hO5dMM",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "0720ucDf9JY",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "vbLf9Ixf7Z8",
-     "comic": "Louis C.K.",
-     "elo": 1326.4,
-     "lo": 1326.4,
-     "hi": 1326.4,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sePS8-J0zaM",
      "comic": "Louis C.K.",
      "elo": 1326.4,
      "lo": 1326.4,
@@ -44476,14 +42078,6 @@
      "bouts": 0
     },
     {
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "George Carlin",
      "elo": 1500,
      "lo": null,
@@ -44572,23 +42166,7 @@
      "bouts": 0
     },
     {
-     "comic": "Kevin Hart",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Ali Wong",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Michael Che",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -44629,14 +42207,6 @@
     },
     {
      "comic": "Jim Jefferies",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -44940,14 +42510,6 @@
      "bouts": 0
     },
     {
-     "comic": "Uncle Lazer",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Jimmy Carr",
      "elo": 1500,
      "lo": null,
@@ -45029,14 +42591,6 @@
     },
     {
      "comic": "Victoria Wood",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Jerry Sadowitz",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -45292,6 +42846,14 @@
      "bouts": 0
     },
     {
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
      "comic": "Ken Dodd",
      "elo": 1500,
      "lo": null,
@@ -45301,14 +42863,6 @@
     },
     {
      "comic": "Phill Jupitus",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Rhona Cameron",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -45381,22 +42935,6 @@
     },
     {
      "comic": "Freddie Starr",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Tommy Trinder",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -45636,14 +43174,6 @@
      "bouts": 0
     },
     {
-     "comic": "Barry Humphries",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Urzila Carlson",
      "elo": 1500,
      "lo": null,
@@ -45717,14 +43247,6 @@
     },
     {
      "comic": "Aunty Donna",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "AY Makun",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -46044,14 +43566,6 @@
      "bouts": 0
     },
     {
-     "comic": "Whindersson Nunes",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Theo Von",
      "elo": 1500,
      "lo": null,
@@ -46077,6 +43591,14 @@
     },
     {
      "comic": "Ron White",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Kevin Hart",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -46149,6 +43671,14 @@
     },
     {
      "comic": "Marlon Wayans",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Michael Che",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -46492,14 +44022,6 @@
      "bouts": 0
     },
     {
-     "comic": "Brendan Schaub",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Josh Wolf",
      "elo": 1500,
      "lo": null,
@@ -46580,7 +44102,7 @@
      "bouts": 0
     },
     {
-     "comic": "Wheeler Walker",
+     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -47548,14 +45070,6 @@
      "bouts": 0
     },
     {
-     "comic": "Hollie Harper",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Ismael Loutfi",
      "elo": 1500,
      "lo": null,
@@ -47860,7 +45374,7 @@
      "bouts": 0
     },
     {
-     "comic": "Willie Hunter",
+     "comic": "Paul O'Grady",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -47868,7 +45382,39 @@
      "bouts": 0
     },
     {
-     "comic": "Paul O'Grady",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Jerry Sadowitz",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Rhona Cameron",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -47906,24 +45452,6 @@
     },
     {
      "id": "EF-cw9bsLKs",
-     "comic": "Norm Macdonald",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-skA4GhVX7k",
-     "comic": "Norm Macdonald",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hoYUX3gqZs4",
      "comic": "Norm Macdonald",
      "elo": 1500,
      "lo": null,
@@ -48231,267 +45759,6 @@
     {
      "id": "NhnS0dUacJs",
      "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7f0ZFu0iMqs",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ayP1_wWvcvk",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "O6-E2tvLpyc",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zNjYfz-qk9k",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "gCPlwd9ePhE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "udLWVzmk5sI",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "nXavCUcL7NY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hmqXxzemRis",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "UkRAI4eWFhQ",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "QBr30J_vuEg",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "j7OE-p8QfDo",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "9fDdyzt_CFY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yzFmHUXDL9Y",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "723xrxG12GE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Jh1GwzuYkek",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DpcBAJ3eMK8",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "FVVQXj6Ymso",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DcLeSQECCLQ",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "nQDBwPTZvDw",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bNpggSlk6S0",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7qde2ieLXIk",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bfkVV22QqKw",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "4dve41SHnKE",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sd2Qc_--UOA",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "0nXq7ptrQ4Q",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "2RE4mGM5RuY",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "9we8zFqR17o",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "oS9I8LBqM6c",
-     "comic": "Casey Rocket",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "HXtHOjH4xMU",
-     "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -48886,15 +46153,6 @@
      "bouts": 0
     },
     {
-     "id": "uYi77GN1px8",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "BYslql7xwmA",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -49030,15 +46288,6 @@
      "bouts": 0
     },
     {
-     "id": "Zv9NWSzLG0c",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "AN64Murli44",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -49121,15 +46370,6 @@
     },
     {
      "id": "cLChc2C6bqc",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "G4UMa-0YUYY",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -49372,15 +46612,6 @@
      "bouts": 0
     },
     {
-     "id": "3mfp-om_zWM",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RxMPpvSRirM",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -49436,15 +46667,6 @@
     },
     {
      "id": "K797TOcBBv4",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "3ttcCK32clg",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -49732,15 +46954,6 @@
      "bouts": 0
     },
     {
-     "id": "2dxPgkZhQQA",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "VovyHBwcctU",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -49841,15 +47054,6 @@
     },
     {
      "id": "gbh7bSsFE7Y",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-6qISjhJCaE",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -50713,15 +47917,6 @@
      "bouts": 0
     },
     {
-     "id": "H7ddfcz-1Lg",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "LM4kzfiJdu4",
      "comic": "Mark Normand",
      "elo": 1500,
@@ -50776,25 +47971,7 @@
      "bouts": 0
     },
     {
-     "id": "f-f6WgO7ons",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "i2z4_AVyfyA",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sWbdnZeBDnA",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -50821,25 +47998,7 @@
      "bouts": 0
     },
     {
-     "id": "EyX3IEIfVIE",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "v-_owN6O678",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "_GOebANEiDU",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -50884,25 +48043,7 @@
      "bouts": 0
     },
     {
-     "id": "T7TPvupWuk4",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "lzTiz2YCE_0",
-     "comic": "Mark Normand",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EfAU2H2I4Xs",
      "comic": "Mark Normand",
      "elo": 1500,
      "lo": null,
@@ -50948,15 +48089,6 @@
     },
     {
      "id": "_hYkjHm05As",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "f3PJF0YE-x4",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": null,
@@ -51029,15 +48161,6 @@
     },
     {
      "id": "Od_s2CMeWWE",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ciiszhKOqO0",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": null,
@@ -51172,15 +48295,6 @@
      "bouts": 0
     },
     {
-     "id": "IESe2fkzxaA",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "5B63AENfC14",
      "comic": "Chris Rock",
      "elo": 1500,
@@ -51200,15 +48314,6 @@
     },
     {
      "id": "caObUaz7oOc",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "koSiuJRoOmg",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": null,
@@ -51253,25 +48358,7 @@
      "bouts": 0
     },
     {
-     "id": "bGc1sJeENNI",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RIJavth0a9c",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "PTzC0twXZnU",
      "comic": "Chris Rock",
      "elo": 1500,
      "lo": null,
@@ -51379,15 +48466,6 @@
      "bouts": 0
     },
     {
-     "id": "1OnMgpkNk58",
-     "comic": "Chris Rock",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xp7AyEP1jtQ",
      "comic": "Chris Rock",
      "elo": 1500,
@@ -51469,15 +48547,6 @@
      "bouts": 0
     },
     {
-     "id": "9AqeGogHetw",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "C--4udLexFI",
      "comic": "Louis C.K.",
      "elo": 1500,
@@ -51488,15 +48557,6 @@
     },
     {
      "id": "0eUbnkVFQuE",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-LlydlYTcsI",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
@@ -51532,25 +48592,7 @@
      "bouts": 0
     },
     {
-     "id": "vGs8e9MZWNk",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "1aXt8qmhsZM",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "6ZD17i3N42k",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
@@ -51578,15 +48620,6 @@
     },
     {
      "id": "XLGzFQg_1xc",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "i3TBNkbftGQ",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
@@ -51676,15 +48709,6 @@
      "bouts": 0
     },
     {
-     "id": "O1eKLltGLt0",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "wADkhFfqZZE",
      "comic": "Louis C.K.",
      "elo": 1500,
@@ -51757,34 +48781,7 @@
      "bouts": 0
     },
     {
-     "id": "xq_QqC2Nkqo",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "6Amxd6UVWQI",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "roRtGd4HMpg",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zuLrBLxbLxw",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
@@ -51803,15 +48800,6 @@
     },
     {
      "id": "RTrCBcrFMCI",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "3l09rmSs9p0",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
@@ -51892,33 +48880,6 @@
      "bouts": 0
     },
     {
-     "id": "0720ucDf9JY",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "vbLf9Ixf7Z8",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "sePS8-J0zaM",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Z96K-OvdPI4",
      "comic": "Louis C.K.",
      "elo": 1500,
@@ -51973,24 +48934,6 @@
      "bouts": 0
     },
     {
-     "id": "MEYbL1-62Zk",
-     "comic": "Norm Macdonald",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "s9zTJ763IO0",
-     "comic": "Norm Macdonald",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Oseqh7SMIvo",
      "comic": "Norm Macdonald",
      "elo": 1500,
@@ -52001,24 +48944,6 @@
     },
     {
      "id": "Fv67QgVSqkk",
-     "comic": "Norm Macdonald",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "OtpJzZJ-BNM",
-     "comic": "Norm Macdonald",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Pt9F1ADNfsg",
      "comic": "Norm Macdonald",
      "elo": 1500,
      "lo": null,
@@ -52288,15 +49213,6 @@
      "bouts": 0
     },
     {
-     "id": "xXkuP_Rx8M0",
-     "comic": "Kevin Hart",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "XY9h-0x1Oao",
      "comic": "Ali Wong",
      "elo": 1500,
@@ -52326,24 +49242,6 @@
     {
      "id": "wka-o2V71CM",
      "comic": "Ali Wong",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "r7drK5-sMns",
-     "comic": "Michael Che",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "HPH0HgotIE4",
-     "comic": "Michael Che",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -52470,15 +49368,6 @@
     {
      "id": "1oyKVAjISmI",
      "comic": "Jim Jefferies",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "KX5Z-HpHH9g",
-     "comic": "Adam Sandler",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -53647,15 +50536,6 @@
      "bouts": 0
     },
     {
-     "id": "RUe9am-s6Oc",
-     "comic": "Sarah Tiana",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "3DC8ZqGLFzw",
      "comic": "Sarah Tiana",
      "elo": 1500,
@@ -53748,15 +50628,6 @@
     {
      "id": "Zp6H4Ajn8Rs",
      "comic": "Tommy Tiernan",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "NN3xASDMwO8",
-     "comic": "Uncle Lazer",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -54133,15 +51004,6 @@
      "bouts": 0
     },
     {
-     "id": "4N35gC6RW64",
-     "comic": "Jerry Sadowitz",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "PX2uJcCP6_4",
      "comic": "Jack Dee",
      "elo": 1500,
@@ -54315,15 +51177,6 @@
     {
      "id": "llnxrhokIsM",
      "comic": "Les Dawson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ABTYH5RIjWU",
-     "comic": "Jo Brand",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -54565,24 +51418,6 @@
      "bouts": 0
     },
     {
-     "id": "NTnB4ohig-c",
-     "comic": "Mark Thomas",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "zOV2M42e85o",
-     "comic": "Mark Thomas",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "2gvGW97qhjM",
      "comic": "Mark Thomas",
      "elo": 1500,
@@ -54700,15 +51535,6 @@
      "bouts": 0
     },
     {
-     "id": "V6D7JHhiZcw",
-     "comic": "Lee Mack",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Mpw6_IMW_p4",
      "comic": "Lee Mack",
      "elo": 1500,
@@ -54720,15 +51546,6 @@
     {
      "id": "X0RUMUD6fVA",
      "comic": "Lee Mack",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Bl9LEbussr8",
-     "comic": "Jerry Sadowitz",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -54781,15 +51598,6 @@
      "bouts": 0
     },
     {
-     "id": "K2nzSLhYfxI",
-     "comic": "David Baddiel",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "5iPB5msJ0K0",
      "comic": "David Baddiel",
      "elo": 1500,
@@ -54828,24 +51636,6 @@
     {
      "id": "cCxgag-Ho10",
      "comic": "Johnny Vegas",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-1E9PZQKklQ",
-     "comic": "Rob Newman",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "O8WhP49UCfc",
-     "comic": "Rob Newman",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -55015,34 +51805,7 @@
      "bouts": 0
     },
     {
-     "id": "5KEUDiMTx3I",
-     "comic": "Julian Clary",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "da7TEq-JUuk",
-     "comic": "Dave Spikey",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "nt-2R1fKM_g",
-     "comic": "Dave Spikey",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "8woKRDKHHKw",
      "comic": "Dave Spikey",
      "elo": 1500,
      "lo": null,
@@ -55116,15 +51879,6 @@
     {
      "id": "BJSK3t0gSRY",
      "comic": "Alan Davies",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "dCRjgQjT2CQ",
-     "comic": "Lee Hurst",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -55411,15 +52165,6 @@
      "bouts": 0
     },
     {
-     "id": "jarGczTCm_c",
-     "comic": "Rhona Cameron",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "q1LG6MeGxfQ",
      "comic": "Chris Addison",
      "elo": 1500,
@@ -55483,35 +52228,8 @@
      "bouts": 0
     },
     {
-     "id": "kZWcaxYNKIM",
-     "comic": "Mike Reid",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "nN7gtMGB_9s",
      "comic": "Jethro",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hg8pkF0l7AA",
-     "comic": "John Thomson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "cpr_RfcM3AY",
-     "comic": "John Thomson",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -55566,33 +52284,6 @@
     {
      "id": "GE1qkHovN7I",
      "comic": "Ed Byrne",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7l1Xy4FJ_vY",
-     "comic": "Arthur Smith",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jwEFDog9kzk",
-     "comic": "Arthur Smith",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ZQGWr8bdFC4",
-     "comic": "Arthur Smith",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -55681,15 +52372,6 @@
      "bouts": 0
     },
     {
-     "id": "UKeOLOJ6xxw",
-     "comic": "Frank Carson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "IiqdjdifcZ0",
      "comic": "Frank Carson",
      "elo": 1500,
@@ -55719,69 +52401,6 @@
     {
      "id": "DJrnXxXyVFE",
      "comic": "Freddie Starr",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "LS37SNYjg8w",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "IRfluaMKoOY",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "ULeDlxa3gyc",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jY4tD2Hbg_A",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EbWLlqCCl9s",
-     "comic": "Harry Enfield",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "haDeQpbk3l0",
-     "comic": "Tommy Trinder",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7swCXcYGWTc",
-     "comic": "Tommy Trinder",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -55843,15 +52462,6 @@
      "bouts": 0
     },
     {
-     "id": "2L8iIjcISDM",
-     "comic": "Joe Pasquale",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xObSF2oMHas",
      "comic": "Joe Pasquale",
      "elo": 1500,
@@ -55863,15 +52473,6 @@
     {
      "id": "WoUYhR1WD74",
      "comic": "Joe Pasquale",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Rkm5qLCcBEY",
-     "comic": "Paul Merton",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -56212,15 +52813,6 @@
      "bouts": 0
     },
     {
-     "id": "N1vOEWAN-xg",
-     "comic": "Helen Bauer",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "JawkXT_CNcw",
      "comic": "Helen Bauer",
      "elo": 1500,
@@ -56376,15 +52968,6 @@
     {
      "id": "7FweG226aiw",
      "comic": "Dave Allen",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hXRqjw98tHs",
-     "comic": "Sara Pascoe",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -56797,15 +53380,6 @@
      "bouts": 0
     },
     {
-     "id": "uESxzK_kuRg",
-     "comic": "Barry Humphries",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Y7HMKT4OXMA",
      "comic": "Urzila Carlson",
      "elo": 1500,
@@ -57157,15 +53731,6 @@
      "bouts": 0
     },
     {
-     "id": "1LaOl_PKmbg",
-     "comic": "AY Makun",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ZisL_Db8iuk",
      "comic": "Cal Wilson",
      "elo": 1500,
@@ -57472,15 +54037,6 @@
      "bouts": 0
     },
     {
-     "id": "nr0RPVvKWDI",
-     "comic": "Fary",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "zC7ff6w7x-Y",
      "comic": "Fary",
      "elo": 1500,
@@ -57555,15 +54111,6 @@
     {
      "id": "kal9aFfyWOs",
      "comic": "Gad Elmaleh",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "DX61IsYItRw",
-     "comic": "He Guangzhi",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -57787,15 +54334,6 @@
      "bouts": 0
     },
     {
-     "id": "mAvo5yZfkpo",
-     "comic": "Li Xueqin",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "M_CIImLiZmg",
      "comic": "Lucas Lauriente",
      "elo": 1500,
@@ -57859,15 +54397,6 @@
      "bouts": 0
     },
     {
-     "id": "tg-4sLzqv6M",
-     "comic": "Malena Pichot",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "42hGhCNGRlY",
      "comic": "Malena Pichot",
      "elo": 1500,
@@ -57878,15 +54407,6 @@
     },
     {
      "id": "ZthMxN1xv18",
-     "comic": "Malena Pichot",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "McVkOw3Y8IM",
      "comic": "Malena Pichot",
      "elo": 1500,
      "lo": null,
@@ -58273,15 +54793,6 @@
      "bouts": 0
     },
     {
-     "id": "ogBft2PZgcc",
-     "comic": "Seyi Law",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "_AtmjTAxJCw",
      "comic": "Seyi Law",
      "elo": 1500,
@@ -58552,15 +55063,6 @@
      "bouts": 0
     },
     {
-     "id": "CVOJLbkmOC4",
-     "comic": "Whindersson Nunes",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "bDvaVYJaXII",
      "comic": "Theo Von",
      "elo": 1500,
@@ -58777,15 +55279,6 @@
      "bouts": 0
     },
     {
-     "id": "w8n5sTGjQcg",
-     "comic": "Cristela Alonzo",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "TBORj28AtCE",
      "comic": "Cristela Alonzo",
      "elo": 1500,
@@ -58966,15 +55459,6 @@
      "bouts": 0
     },
     {
-     "id": "tnX6jwLFEJ8",
-     "comic": "Marlon Wayans",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "RWsCeChz6co",
      "comic": "Marlon Wayans",
      "elo": 1500,
@@ -59147,15 +55631,6 @@
     },
     {
      "id": "HHJbPLdyVE4",
-     "comic": "Reggie Watts",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "-synDIbJdz8",
      "comic": "Reggie Watts",
      "elo": 1500,
      "lo": null,
@@ -59407,24 +55882,6 @@
      "bouts": 0
     },
     {
-     "id": "0q08N63z-N8",
-     "comic": "Mort Sahl",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "7Xybtb4Aasc",
-     "comic": "Mort Sahl",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "mWWyY5rYS2s",
      "comic": "Don Rickles",
      "elo": 1500,
@@ -59560,15 +56017,6 @@
      "bouts": 0
     },
     {
-     "id": "fW4lZyMPs0g",
-     "comic": "Roseanne Barr",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "poCX-SSDXio",
      "comic": "Roseanne Barr",
      "elo": 1500,
@@ -59659,15 +56107,6 @@
      "bouts": 0
     },
     {
-     "id": "PDBHM9LCPEw",
-     "comic": "Woody Allen",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Qdm0lm9_p7U",
      "comic": "Woody Allen",
      "elo": 1500,
@@ -59714,15 +56153,6 @@
     },
     {
      "id": "1kAxWFju4EY",
-     "comic": "George Burns",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "bmRQ4lHrpRw",
      "comic": "George Burns",
      "elo": 1500,
      "lo": null,
@@ -59786,15 +56216,6 @@
     },
     {
      "id": "NV7dzPBt2_o",
-     "comic": "Lily Tomlin",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "0RrHyClw9e0",
      "comic": "Lily Tomlin",
      "elo": 1500,
      "lo": null,
@@ -60307,15 +56728,6 @@
      "bouts": 0
     },
     {
-     "id": "NMKfM6lN3Q0",
-     "comic": "Eleanor Kerrigan",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "aZ_4ZSvm2JY",
      "comic": "Eleanor Kerrigan",
      "elo": 1500,
@@ -60478,15 +56890,6 @@
      "bouts": 0
     },
     {
-     "id": "TtC7-bdSYBo",
-     "comic": "Jak Knight",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xV2pckragwM",
      "comic": "Jak Knight",
      "elo": 1500,
@@ -60507,24 +56910,6 @@
     {
      "id": "MMTUZNEBbOI",
      "comic": "Jak Knight",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "lPCWcyRLt2A",
-     "comic": "Brendan Schaub",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "txrACt6gBwY",
-     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -60596,15 +56981,6 @@
     },
     {
      "id": "zU9T0x01m6s",
-     "comic": "Jeff Garlin",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "16pyTCKKNLY",
      "comic": "Jeff Garlin",
      "elo": 1500,
      "lo": null,
@@ -60722,15 +57098,6 @@
     },
     {
      "id": "Qt_0gQ3ZhCQ",
-     "comic": "Natasha Leggero",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "GSi0bHhwlXI",
      "comic": "Natasha Leggero",
      "elo": 1500,
      "lo": null,
@@ -60876,24 +57243,6 @@
     {
      "id": "yC8cvTQtgdQ",
      "comic": "Adam Sandler",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "pcwlsVBPe-M",
-     "comic": "Wheeler Walker",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "osLTSjP7gw8",
-     "comic": "Wheeler Walker",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -61288,15 +57637,6 @@
      "bouts": 0
     },
     {
-     "id": "V7FPMk6tiQ4",
-     "comic": "Drew Michael",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "7phVM5xtl2A",
      "comic": "Drew Michael",
      "elo": 1500,
@@ -61450,15 +57790,6 @@
      "bouts": 0
     },
     {
-     "id": "RYH3_SS_4LA",
-     "comic": "Moses Storm",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "sF1shxHm2h0",
      "comic": "Moses Storm",
      "elo": 1500,
@@ -61549,15 +57880,6 @@
      "bouts": 0
     },
     {
-     "id": "i4xCTFxLNh0",
-     "comic": "Chelsea Peretti",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "XqYuhZAPQu4",
      "comic": "Chelsea Peretti",
      "elo": 1500,
@@ -61568,15 +57890,6 @@
     },
     {
      "id": "kMuwR1XcVV8",
-     "comic": "Chelsea Peretti",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "xF5-VGxDh1E",
      "comic": "Chelsea Peretti",
      "elo": 1500,
      "lo": null,
@@ -61658,15 +57971,6 @@
     },
     {
      "id": "i2zq1EDgDfs",
-     "comic": "Dave Attell",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "hYVuc9YnXwI",
      "comic": "Dave Attell",
      "elo": 1500,
      "lo": null,
@@ -61937,15 +58241,6 @@
     },
     {
      "id": "qHkelMSSCgA",
-     "comic": "Adam Devine",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "shgU5Yh8Srs",
      "comic": "Adam Devine",
      "elo": 1500,
      "lo": null,
@@ -62377,15 +58672,6 @@
      "bouts": 0
     },
     {
-     "id": "eN79YjRLh40",
-     "comic": "Nick Offerman",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "ib4lwCU9D60",
      "comic": "Nick Offerman",
      "elo": 1500,
@@ -62656,15 +58942,6 @@
      "bouts": 0
     },
     {
-     "id": "OwF1JJror0Y",
-     "comic": "Kevin James",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "vFJtYV3aOas",
      "comic": "Kevin James",
      "elo": 1500,
@@ -62702,15 +58979,6 @@
     },
     {
      "id": "Tq7slEHsNQg",
-     "comic": "Fred Armisen",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "f4TdKezuIm0",
      "comic": "Fred Armisen",
      "elo": 1500,
      "lo": null,
@@ -62998,15 +59266,6 @@
      "bouts": 0
     },
     {
-     "id": "baDJ-ZIvYy0",
-     "comic": "Anjelah Johnson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "QRu-QUeqoMs",
      "comic": "Sarah Cooper",
      "elo": 1500,
@@ -63188,15 +59447,6 @@
     },
     {
      "id": "bSqm0pgba8w",
-     "comic": "Kate Berlant",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Ra8yAg6T3-s",
      "comic": "Kate Berlant",
      "elo": 1500,
      "lo": null,
@@ -63412,15 +59662,6 @@
      "bouts": 0
     },
     {
-     "id": "Qn9Nfofi9Ug",
-     "comic": "Rob Schneider",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "xp34S7VHtoE",
      "comic": "Rob Schneider",
      "elo": 1500,
@@ -63494,15 +59735,6 @@
     },
     {
      "id": "BSf8EL-xoXg",
-     "comic": "Arsenio Hall",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "Q9jqoBL5KPU",
      "comic": "Arsenio Hall",
      "elo": 1500,
      "lo": null,
@@ -64717,15 +60949,6 @@
      "bouts": 0
     },
     {
-     "id": "x2QXyvS7egU",
-     "comic": "Andy Hendrickson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "zzt_Q8QUG3I",
      "comic": "Andy Hendrickson",
      "elo": 1500,
@@ -64744,25 +60967,7 @@
      "bouts": 0
     },
     {
-     "id": "CcKYEAWD1yc",
-     "comic": "Ania Magliano",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "SLv01vBMvFo",
-     "comic": "Ania Magliano",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "C4u_CQWuHHM",
      "comic": "Ania Magliano",
      "elo": 1500,
      "lo": null,
@@ -65302,15 +61507,6 @@
      "bouts": 0
     },
     {
-     "id": "nHNhkeQDBBs",
-     "comic": "Eric Tartaglione",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "IcvYGqrV42E",
      "comic": "Eric Tartaglione",
      "elo": 1500,
@@ -65437,26 +61633,8 @@
      "bouts": 0
     },
     {
-     "id": "xuuPvFd3YpI",
-     "comic": "George Perez",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Sc-20wkUko4",
      "comic": "George Perez",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "T4FX2rGAAaM",
-     "comic": "Hollie Harper",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -65546,15 +61724,6 @@
     },
     {
      "id": "qFcE53pbmVI",
-     "comic": "Jayson Thibault",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yQu-0oVTtWE",
      "comic": "Jayson Thibault",
      "elo": 1500,
      "lo": null,
@@ -65680,24 +61849,6 @@
      "bouts": 0
     },
     {
-     "id": "j3dWH0KDKRM",
-     "comic": "Kam Patterson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "L50W0393rOc",
-     "comic": "Kam Patterson",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "KIbC8c1hNhU",
      "comic": "Kam Patterson",
      "elo": 1500,
@@ -65763,15 +61914,6 @@
     {
      "id": "hiTs0OnZabg",
      "comic": "Laura Peek",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "B-HRwYpicmo",
-     "comic": "Liv Taylor",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -65914,15 +62056,6 @@
      "bouts": 0
     },
     {
-     "id": "d2MDwxTAIL8",
-     "comic": "Megan Gailey",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Qc8XQQmnPb0",
      "comic": "Megan Gailey",
      "elo": 1500,
@@ -66033,24 +62166,6 @@
     {
      "id": "QJ6tmMFp0Rs",
      "comic": "Molly Mcguinness",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "VWAhbaQFzRw",
-     "comic": "Marcello Hernandez",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "dw0ifECyfPI",
-     "comic": "Marcello Hernandez",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -66616,15 +62731,6 @@
      "bouts": 0
     },
     {
-     "id": "AjtCNUGcnr8",
-     "comic": "Willie Hunter",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "VSVQL-UEARo",
      "comic": "Paul O'Grady",
      "elo": 1500,
@@ -66634,8 +62740,305 @@
      "bouts": 0
     },
     {
-     "id": "xDwV2dqj70A",
-     "comic": "Paul O'Grady",
+     "id": "Sm66rJFD5UI",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "mlV83B9824I",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "qQJxTYMAf-k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "0rf6xl29oTQ",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "HYodsw0tYJA",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "8mcHozva-5k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Wca_-tS_e2w",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Tzh2zesO4hk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "jzDIYZT4lzw",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Er7I-Tru21k",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "wjrsRzGWItk",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "RqnGahoZhho",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "odthjTvKL1o",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3VJOujtwd-4",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FOUcNxXDsm8",
+     "comic": "Casey Rocket",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "PGuqnE35cCg",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "JjeIcLZmO9U",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "a9WowBxdhTQ",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GoxIrm95E4Q",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "a1V23rDW7cw",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "FBKWxJehH7Q",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "V4UHiMSPnr0",
+     "comic": "Bill Burr",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "IYYJrPlp4s8",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3a6nJMdZLNM",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "CvfnFh1o5EQ",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "GkwacXXDuvs",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "TEXuqQlH-N8",
+     "comic": "Uncle Lazer",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "Tr9iE4zN3_w",
+     "comic": "Jerry Sadowitz",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "SKhHqy08arQ",
+     "comic": "Rhona Cameron",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "bJtFHzDl3Tc",
+     "comic": "Russell Brand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "A79NGUlZPvM",
+     "comic": "Russell Brand",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "sMaz9HJXJmI",
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "3D3yzE2H9Tg",
+     "comic": "Whindersson Nunes",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "rAGB9_63fY8",
+     "comic": "Brendan Schaub",
      "elo": 1500,
      "lo": null,
      "hi": null,
