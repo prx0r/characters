@@ -82,6 +82,11 @@ def main():
                     d = json.loads(line)
                     roster.setdefault(d["comedian"], set()).add(tag)
 
+    prio = HERE / "index" / "priority_names.json"
+    if prio.exists():
+        for n in json.loads(prio.read_text()):
+            roster.setdefault(n, set()).add("priority-2026")
+
     out = [{"name": n, "sources": sorted(s)} for n, s in sorted(roster.items())]
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, indent=1, ensure_ascii=False))

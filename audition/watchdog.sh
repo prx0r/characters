@@ -31,9 +31,9 @@ while true; do
     ensure big_names "big_names_harvest.py" \
         "cd /root/patala-audition && exec python3 big_names_harvest.py"
   fi
-  if ! grep -q "=== overnight done" /tmp/opencode/overnight.log 2>/dev/null; then
-    ensure overnight "overnight.sh" \
-        "cd /root/patala-audition && exec bash overnight.sh"
+  if [ ! -f /root/patala-audition/index/.finalized ]; then
+    ensure finalize "finalize.sh" \
+        "cd /root/patala-audition && exec bash finalize.sh"
   fi
 
   if ! docker inspect -f '{{.State.Running}}' bgutil-provider 2>/dev/null \

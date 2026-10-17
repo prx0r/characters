@@ -1,11 +1,11 @@
-"""Find UK comedians with NO long-form material and harvest their shorts.
+"""Harvest shorts for every UK roster comedian (longform presence irrelevant).
 
-For each roster name: yt-dlp search; if no result >= min-long seconds exists,
-their shorts (<=185s) with captions get harvested to R2 under their own slug.
+For each roster name: yt-dlp search (normal + Shorts filter); results <=185s
+with captions get harvested to R2 under the comedian's own slug.
 Resumable state: audition/index/shorts_discovery_state.json
 
 Usage:
-  python3 uk_shorts_discovery.py --max-names 300
+  python3 uk_shorts_discovery.py --max-names 1200
 """
 from __future__ import annotations
 import argparse, json, os, re, shlex, subprocess, sys, tempfile, time
@@ -18,6 +18,7 @@ import yt_captions
 
 HERE = Path(__file__).parent
 ROSTER = HERE / "index" / "uk_roster.json"
+PRIORITY = HERE / "index" / "priority_names.json"
 STATE = HERE / "index" / "shorts_discovery_state.json"
 INDEX = HERE / "index" / "uk_comedy_index.jsonl"
 COOKIES = str(HERE / ".env.cookies") if (HERE / ".env.cookies").exists() else \
@@ -118,12 +119,11 @@ def harvest(name: str, shorts: list[dict], state: dict) -> int:
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--max-names", type=int, default=300)
-    p.add_argument("--min-long", type=int, default=240,
-                   help="seconds; any result >= this counts as long-form material")
+    p.add_argument("--max-names", type=int, default=1200)
     args = p.parse_args()
 
     roster = json.loads(ROSTER.read_text())
+    priority = json.loads(PRIORITY.read_text()) if PRIORITY.exists() else []
     state = json.loads(STATE.read_text()) if STATE.exists() else {}
     have = set()
     if INDEX.exists():
@@ -131,28 +131,48 @@ def main():
             if line.strip():
                 have.add(json.loads(line)["comedian"].lower())
 
+    by_low = {e["name"].lower(): e for e in roster}
+    entries, seen_names = [], set()
+    for n in priority:
+        low = n.lower()
+        if low in seen_names:
+            continue
+        seen_names.add(low)
+        entries.append(by_low.get(low, {"name": n, "sources": ["priority-2026"]}))
+    for e in roster:
+        low = e["name"].lower()
+        if low in seen_names:
+            continue
+        seen_names.add(low)
+        entries.append(e)
+
     done = 0
-    for entry in roster:
+    for entry in entries:
         if done >= args.max_names:
             break
         name = entry["name"]
         if name.lower() in state or name.lower() in have:
             continue
 
-        results = yt_search(f"{name} stand up", 7)
-        longform = [r for r in results if (r.get("duration") or 0) >= args.min_long]
-        if longform:
-            state[name] = {"status": "has-longform", "checked": time.strftime("%F"),
-                           "example": longform[0]["id"]}
-        else:
-            shorts = [r for r in results if 0 < (r.get("duration") or 0) <= 185]
-            extra = yt_search(f"{name} stand up shorts", 8)
-            seen = {s["id"] for s in shorts}
-            shorts += [r for r in extra
-                       if 0 < (r.get("duration") or 0) <= 185 and r["id"] not in seen]
-            n = harvest(name, shorts[:12], state) if shorts else 0
-            state[name] = {"status": "shorts-only" if shorts else "no-material-found",
-                           "checked": time.strftime("%F"), "harvested": n}
+        shorts, seen = [], set()
+        for r in yt_search(f"{name} stand up", 10):
+            if r["id"] in seen:
+                continue
+            seen.add(r["id"])
+            d = r.get("duration")
+            if 0 < (d or 0) <= 185 and "apollo" not in (r["title"] or "").lower():
+                shorts.append(r)
+        for r in yt_search_shorts(f"{name} stand up", 15):
+            if r["id"] in seen:
+                continue
+            seen.add(r["id"])
+            d = r.get("duration")
+            t = (r["title"] or "").lower()
+            if (d is None or 0 < d <= 185) and "apollo" not in t and "24/7" not in t:
+                shorts.append(r)
+        n = harvest(name, shorts[:12], state) if shorts else 0
+        state[name] = {"status": "harvested" if n else "no-material-found",
+                       "checked": time.strftime("%F"), "harvested": n}
         done += 1
         if done % 5 == 0:
             STATE.write_text(json.dumps(state, indent=0, ensure_ascii=False))
