@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import boto3
 import cf_asr
+import yt_captions
 
 R2_ENDPOINT = "https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com"
 R2_KEY = "36c9d71d3defa6b43f53536bdc6f65f3"
@@ -56,6 +57,7 @@ def build_roster(rows: list[dict]) -> list[str]:
         "Andy Parsons", "Kiri Pritchard-McLean", "Ian Smith", "Sukh Kaur Ojla",
         "Angela Barnes", "Lucy Porter", "Milton Jones", "Felicity Ward",
         "Chris Forbes", "Sarah Roberts", "Andrew White", "Hal Cruttenden",
+        "Ayoade Bamgboye", "Dave Landau", "Loni Love",
     ]
     return sorted(names | set(extra), key=len, reverse=True)
 
@@ -72,19 +74,28 @@ def resolve_comedian(row: dict, roster: list[str]) -> str:
     return "nextup-comedy"
 
 
-def process(vid: str, comedian: str, title: str, views: int = 0, channel: str = "NextUp Comedy") -> dict:
+def process(vid: str, comedian: str, title: str, views: int = 0,
+            channel: str = "NextUp Comedy", force: bool = False) -> dict:
     cslug = slugify(comedian)
     slug = slugify(f"{comedian}-{vid}")
     r2_key = f"comedians/{cslug}/clips/{slug}.json"
     audio_key = f"comedians/{cslug}/audio/{slug}.m4a"
 
-    try:
-        s3.head_object(Bucket=R2_BUCKET, Key=r2_key)
-        return {"status": "exists", "key": r2_key}
-    except Exception:
-        pass
+    if not force:
+        try:
+            s3.head_object(Bucket=R2_BUCKET, Key=r2_key)
+            return {"status": "exists", "key": r2_key}
+        except Exception:
+            pass
 
     with tempfile.TemporaryDirectory() as tmpdir:
+        # 1. transcript: YouTube captions first (free, word-level, no limits)
+        try:
+            cap = yt_captions.fetch_captions(vid, tmpdir)
+        except Exception:
+            cap = None
+
+        # 2. audio for storage (and ASR fallback)
         audio = os.path.join(tmpdir, "audio.m4a")
         cmd = ["yt-dlp", "-x", "--audio-format", "m4a", "-o", audio,
                f"https://youtube.com/watch?v={vid}", "--no-playlist",
@@ -93,21 +104,28 @@ def process(vid: str, comedian: str, title: str, views: int = 0, channel: str = 
             cmd += ["--cookies", COOKIES]
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
         files = list(Path(tmpdir).glob("*.m4a"))
-        if r.returncode != 0 or not files:
-            return {"status": "download_failed", "error": r.stderr[-200:]}
 
-        try:
-            asr = cf_asr.transcribe(str(files[0]))
-        except Exception as e:
-            return {"status": "transcribe_failed", "error": str(e)[:200]}
+        if cap:
+            words, transcript, method = cap["words"], cap["transcript"], cap["method"]
+        else:
+            if r.returncode != 0 or not files:
+                return {"status": "download_failed", "error": r.stderr[-200:]}
+            try:
+                asr = cf_asr.transcribe(str(files[0]))
+            except Exception as e:
+                return {"status": "transcribe_failed", "error": str(e)[:200]}
+            words, transcript, method = asr["words"], \
+                " ".join(w["text"] for w in asr["words"]), "cf-whisper"
 
-        transcript = " ".join(w["text"] for w in asr["words"])
         data = {"id": vid, "title": title, "comedian": comedian, "channel": channel,
-                "views": views, "transcript": transcript, "words": asr["words"]}
+                "views": views, "transcript": transcript, "words": words,
+                "transcript_method": method}
         s3.put_object(Bucket=R2_BUCKET, Key=r2_key,
                       Body=json.dumps(data).encode(), ContentType="application/json")
-        s3.upload_file(str(files[0]), R2_BUCKET, audio_key)
-        return {"status": "done", "key": r2_key, "n_words": len(asr["words"])}
+        if files:
+            s3.upload_file(str(files[0]), R2_BUCKET, audio_key)
+        return {"status": "done", "key": r2_key, "n_words": len(words),
+                "method": method}
 
 
 def main():
@@ -116,6 +134,8 @@ def main():
     p.add_argument("--min-views", type=int, default=10000)
     p.add_argument("--delay", type=float, default=1.5)
     p.add_argument("--no-manual", action="store_true")
+    p.add_argument("--force", action="store_true", help="Overwrite existing R2 clips")
+    p.add_argument("--ids", help="Comma-separated video ids (subset of the queue)")
     args = p.parse_args()
 
     rows = json.loads(Path(args.shorts_json).read_text())
@@ -138,16 +158,19 @@ def main():
             seen.add(q["id"])
             deduped.append(q)
     queue = deduped
+    if args.ids:
+        wanted = {i.strip() for i in args.ids.split(",") if i.strip()}
+        queue = [q for q in queue if q["id"] in wanted]
 
     print(f"Queue: {len(queue)} videos", flush=True)
     stats = {"done": 0, "exists": 0, "failed": 0}
     for i, q in enumerate(queue):
         print(f"[{i+1}/{len(queue)}] {q['comedian']}: {q['title'][:45]}...", end=" ", flush=True)
         try:
-            res = process(q["id"], q["comedian"], q["title"], q["views"])
+            res = process(q["id"], q["comedian"], q["title"], q["views"], force=args.force)
         except Exception as e:
             res = {"status": "failed", "error": str(e)[:200]}
-        print(res["status"], flush=True)
+        print(res["status"], res.get("method", ""), flush=True)
         stats["done" if res["status"] == "done" else
               "exists" if res["status"] == "exists" else "failed"] += 1
         if res["status"] not in ("done", "exists"):

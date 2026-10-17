@@ -61,16 +61,17 @@ def comedians_from_title(title: str) -> list[str]:
     return out or ["fringe-showcase"]
 
 
-def process(ep: dict) -> dict:
+def process(ep: dict, force: bool = False) -> dict:
     names = comedians_from_title(ep["title"])
     slug = slugify(f"bbc-fringe-{ep['title']}")
     first = slugify(names[0])
     check_key = f"comedians/{first}/clips/{slug}.json"
-    try:
-        s3.head_object(Bucket=R2_BUCKET, Key=check_key)
-        return {"status": "exists", "key": check_key}
-    except Exception:
-        pass
+    if not force:
+        try:
+            s3.head_object(Bucket=R2_BUCKET, Key=check_key)
+            return {"status": "exists", "key": check_key}
+        except Exception:
+            pass
 
     with tempfile.TemporaryDirectory() as tmpdir:
         mp3 = os.path.join(tmpdir, "ep.mp3")
@@ -104,14 +105,22 @@ def process(ep: dict) -> dict:
 
 
 def main():
-    url = sys.argv[1] if len(sys.argv) > 1 else "https://podcasts.files.bbci.co.uk/p0jl6yys.rss"
+    argv = [a for a in sys.argv[1:] if not a.startswith("-")]
+    force = "--force" in sys.argv
+    ids = None
+    for a in sys.argv[1:]:
+        if a.startswith("--ids="):
+            ids = [s.strip().lower() for s in a.split("=", 1)[1].split(",") if s.strip()]
+    url = argv[0] if argv else "https://podcasts.files.bbci.co.uk/p0jl6yys.rss"
     eps = parse_feed(url)
-    print(f"Feed: {len(eps)} episodes (>=5min)", flush=True)
+    if ids:
+        eps = [e for e in eps if any(k in e["title"].lower() for k in ids)]
+    print(f"Feed: {len(eps)} episodes (>=5min){' [filtered]' if ids else ''}", flush=True)
     stats = {"done": 0, "exists": 0, "failed": 0}
     for i, ep in enumerate(eps):
         print(f"[{i+1}/{len(eps)}] {ep['title'][:50]} ({ep['duration']}s)...", end=" ", flush=True)
         try:
-            res = process(ep)
+            res = process(ep, force=force)
         except Exception as e:
             res = {"status": "failed", "error": str(e)[:200]}
         print(res["status"], res.get("n_words", ""), flush=True)
