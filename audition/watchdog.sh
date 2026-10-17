@@ -31,6 +31,10 @@ while true; do
     ensure big_names "big_names_harvest.py" \
         "cd /root/patala-audition && exec python3 big_names_harvest.py"
   fi
+  if [ ! -f /root/patala-audition/index/.shorts_done ]; then
+    ensure longtail "uk_shorts_discovery.py" \
+        "cd /root/patala-audition && export YTDLP_EXTRA='--remote-components ejs:github' && exec python3 uk_shorts_discovery.py --max-names 1200"
+  fi
   if [ ! -f /root/patala-audition/index/.finalized ]; then
     ensure finalize "finalize.sh" \
         "cd /root/patala-audition && exec bash finalize.sh"

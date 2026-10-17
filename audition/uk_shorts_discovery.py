@@ -185,6 +185,7 @@ def main():
     for v in state.values():
         by[v["status"]] = by.get(v["status"], 0) + 1
     print(f"discovery done: {json.dumps(by)}", flush=True)
+    (HERE / "index" / ".shorts_done").touch()
 
 
 if __name__ == "__main__":
