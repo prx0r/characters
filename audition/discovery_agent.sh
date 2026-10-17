@@ -3,7 +3,7 @@
 # channels and appends them to sources_queue.json. Watcher harvests them.
 cd /root/patala-audition
 LOG=/tmp/opencode/agent.log
-for i in 1 2 3 4 5 6; do
+for i in 1 2 3 4 5 6 7 8 9 10 11 12; do
   before=$(wc -l < sources_queue.json 2>/dev/null || echo 0)
   timeout 900 /root/.opencode/bin/opencode run \
     --model opencode/deepseek-v4.1-flash-free "$(cat agent_prompt.md)" \

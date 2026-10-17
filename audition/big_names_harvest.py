@@ -36,6 +36,27 @@ BIG_NAMES = [
     "Noel Fielding", "Rob Brydon", "Lee Nelson", "Simon Brodkin",
     "Seán Burke", "Kiri Pritchard-McLean", "Ellie Taylor", "Neil Delamere",
     "Des Bishop", "Andrew Maxwell", "Jason Byrne",
+    # round 2 additions
+    "Ricky Gervais", "Rowan Atkinson", "John Cleese", "Eric Idle",
+    "Spike Milligan", "Dave Allen", "Tommy Cooper", "Les Dawson",
+    "Ken Dodd", "Frank Skinner", "David Baddiel", "Vic Reeves",
+    "Bob Mortimer", "Richard Herring", "Jethro", "Jim Davidson",
+    "Roy Chubby Brown", "Catherine Tate", "Miranda Hart", "David Walliams",
+    "Matt Lucas", "Paul Chowdhry", "Darren Harriott", "Desiree Burch",
+    "Sindhu Vee", "Ahir Shah", "Sukh Ojla", "Rosie Holt", "Michael Odewale",
+    "Fatiha El-Ghorri", "Josh Pugh", "Rhys James", "Fin Taylor",
+    "Jack Skipper", "Dan Tiernan", "Ania Magliano", "Sikisa", "Helen Bauer",
+    "Janine Harouni", "Laura Lexx", "Adam Rowe", "Dan Nightingale",
+    "Paul Smith", "Russell Hicks", "Nabil Abdulrashid", "Axel Blake",
+    "Kane Brown", "Tom Stade", "Deirdre O'Kane", "Maeve Higgins",
+    "Eleanor Tiernan", "David McSavage", "Karl Spain", "Joanne McNally",
+    "Emma Doran", "Colin Murphy", "Mario Rosenstock", "Janey Godley",
+    "Craig Hill", "Susie McCabe", "Gary Little", "Raymond Mearns",
+    "Fred MacAulay", "Elaine C. Smith", "Christopher Macarthur-Boyd",
+    "Elis James", "Steve Williams", "Tom Houghton", "Micky P Kerr",
+    "Jamali Maddix", "Stephen K Amos",
+    "Omid Djalili", "Shappi Khorsandi", "Andi Osho", "Gina Yashere",
+    "Doc Brown", "Ben Bailey Smith",
 ]
 
 

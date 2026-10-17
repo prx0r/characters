@@ -18,15 +18,30 @@ CATEGORIES = [
     "Welsh stand-up comedians",
     "Northern Irish stand-up comedians",
     "British women comedians",
+    "Irish stand-up comedians",
+    "Comedians from Northern Ireland",
+    "English comedians",
+    "Scottish comedians",
+    "Welsh comedians",
+    "Comedians from London",
 ]
 API = "https://en.wikipedia.org/w/api.php"
 
 
 def api(params: dict) -> dict:
     q = urllib.parse.urlencode(params)
-    req = urllib.request.Request(f"{API}?{q}",
-                                 headers={"User-Agent": "patala-research/1.0"})
-    return json.load(urllib.request.urlopen(req, timeout=30))
+    req = urllib.request.Request(
+        f"{API}?{q}",
+        headers={"User-Agent": "patala-research/1.0 (comedy-research; contact: box@localhost)"})
+    for wait in (0, 10, 30, 60):
+        if wait:
+            time.sleep(wait)
+        try:
+            return json.load(urllib.request.urlopen(req, timeout=30))
+        except urllib.error.HTTPError as e:
+            if e.code != 429:
+                raise
+    raise RuntimeError("wikipedia api: still 429 after retries")
 
 
 def category_members(cat: str) -> list[str]:
