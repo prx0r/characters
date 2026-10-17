@@ -10,6 +10,8 @@ Three-stage flywheel, each stage feeding the next:
   45 episodes in: 569 sets, 408 comedians)
 - killtonywiki (4,604 comedians), Scraps-from-the-Loft (599 full
   specials), StandUp4AI (3,617 videos, laughter-labeled), Kaggle sets
+  (see docs/DATA-PROVENANCE.md — "Comedy Scraps Corpus" description is
+  fabricated; use the HF scrape)
 - OUR LAYER: kgraphs + delivery states + voice cards + stencils for
   the performers we've calibrated (ari/casey/pickles/kam/louis/norm/will)
 
