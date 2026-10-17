@@ -8,7 +8,7 @@ If any other doc disagrees with this file, this file wins.
 | Model | File | AUC | Train Set | Validated On | Status |
 |-------|------|-----|-----------|--------------|--------|
 | **Prosody200 clean** | `audition/voicelab/prosody200_clean_model.pkl` | **0.862** | 62K segments, 200 videos | GroupKFold by video (held-out) | ✅ **BEST HONEST** — no leakage |
-| **SMILE text** | `audition/voicelab/unified_laugh_model.pkl` | 0.979 | 3.8K SMILE examples | SMILE test split | ⚠️ Same-distribution only |
+| **SMILE text** | `audition/voicelab/unified_laugh_model.pkl` | 0.832 | 3.8K SMILE examples | SMILE test split | ⚠️ Same-distribution, real AUC 0.832 |
 | **Delivery (KT)** | `audition/voicelab/delivery_aware_model.pkl` | 0.654 | 168 beats, 12 KT stems | Leave-one-comedian-out | ✅ Working — audio energy |
 | **Delivery (AM)** | `audition/voicelab/am_delivery_model.pkl` | 0.564 | 5674 windows, 5 specials | GroupKFold by comedian | ✅ Working — cross-comedian |
 | **Combined (ASR)** | `audition/voicelab/combined_beats_model.pkl` | 0.548 | 2998 beats, 5 AM specials | 5-fold CV | ⚠️ Weak — text features don't help |
