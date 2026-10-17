@@ -258,28 +258,45 @@ def assign_timings(beats: list[dict], profile: dict) -> list[dict]:
 # ============================================================
 
 def predict_laughs(beats: list[dict], profile: dict) -> list[dict]:
-    """Predict laugh probability per beat using delivery-aware model.
+    """Predict laugh probability per beat using delivery-aware model + crowd state.
 
-    Same text + different timing = different probability (dpv coupling).
+    Crowd state (heat/momentum) modulates predictions:
+    - Hot crowd (killed) = easier laughs
+    - Cold crowd = harder laughs
+    - Momentum builds during streaks
     """
     import sys
     sys.path.insert(0, str(HERE))
-    from delivery_laugh import modulate_engine_predictions
+    from delivery_laugh import predict_with_delivery
+    from crowd_state import CrowdStateMachine
 
-    # Use delivery-aware prediction (couples timing to laugh probability)
-    beats = modulate_engine_predictions(beats, profile)
+    crowd = CrowdStateMachine()
 
-    # Assign laugh types based on final probability
-    for b in beats:
-        p = b.get("p_laugh", 0.5)
-        if p < 0.35:
-            b["laugh_type"] = "chuckle"
-        elif p < 0.55:
-            b["laugh_type"] = "laugh"
-        elif p < 0.75:
-            b["laugh_type"] = "big_laugh"
-        else:
-            b["laugh_type"] = "roar"
+    for i, b in enumerate(beats):
+        # Predict with delivery features
+        pred = predict_with_delivery(
+            text=b["text"],
+            mechanism=b["mechanism"],
+            beat_type=b["beat_type"],
+            pause_s=b.get("pause_before", 1.0),
+            wps=b.get("target_wps", 2.7),
+            pos=i / max(len(beats), 1),
+        )
+
+        # Crowd state modulates the prediction
+        p_modulated = crowd.predict_next(pred["p_laugh"])
+        b["p_laugh"] = round(p_modulated, 3)
+        b["p_base"] = pred["p_laugh"]
+        b["crowd_heat"] = round(crowd.state.heat, 3)
+        b["crowd_momentum"] = crowd.state.momentum
+
+        # Update crowd state based on prediction
+        # (in production, this would be actual laughs; here it's predicted)
+        will_laugh = p_modulated > 0.45  # lower threshold to match base rates
+        laugh_type = "big_laugh" if p_modulated > 0.65 else "laugh"
+        crowd.beat(laughed=will_laugh, intensity=p_modulated, laugh_type=laugh_type)
+
+        b["laugh_type"] = crowd.get_laugh_type() if will_laugh else "chuckle"
 
     return beats
 
