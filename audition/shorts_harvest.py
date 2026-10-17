@@ -71,15 +71,19 @@ def parse_name(title: str) -> str | None:
     if len(segs) >= 2:
         for cand in (segs[1], segs[0]):
             cand = _LIVE_AT_RE.sub("", cand).strip()
+            if _CLUB_NAME_RE.search(cand):
+                continue
             c = _ok_name(cand)
             if c:
                 return c
         return None
     for sep in (" – ", " - "):
         if sep in t:
-            cand = _ok_name(t.split(sep)[0])
-            if cand:
-                return cand
+            cand = t.split(sep)[0]
+            if not _CLUB_NAME_RE.search(cand):
+                c = _ok_name(cand)
+                if c:
+                    return c
     return None
 
 
