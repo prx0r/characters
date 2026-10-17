@@ -1,0 +1,37 @@
+{
+  "n_events": 5702,
+  "predictors": {
+    "A_audio_only": {
+      "name": "A: Audio only",
+      "auc": 0.509,
+      "pr_auc": 0.248,
+      "brier": 0.197,
+      "calibration_gap": 0.023,
+      "n": 5702,
+      "n_groups": 5,
+      "laugh_rate": 0.237
+    },
+    "B_audio_semantic": {
+      "name": "B: Audio + semantic",
+      "auc": 0.508,
+      "pr_auc": 0.247,
+      "brier": 0.197,
+      "calibration_gap": 0.023,
+      "n": 5702,
+      "n_groups": 5,
+      "laugh_rate": 0.237
+    },
+    "C_full": {
+      "name": "C: Full pipeline",
+      "auc": 0.507,
+      "pr_auc": 0.247,
+      "brier": 0.196,
+      "calibration_gap": 0.028,
+      "n": 5702,
+      "n_groups": 5,
+      "laugh_rate": 0.237
+    }
+  },
+  "best": "A: Audio only",
+  "best_auc": 0.509
+}
