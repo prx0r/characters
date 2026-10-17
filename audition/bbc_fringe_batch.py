@@ -88,7 +88,7 @@ def process(ep: dict, force: bool = False) -> dict:
         transcript = " ".join(w["text"] for w in asr["words"])
         data = {"title": ep["title"], "comedians": names,
                 "source": "BBC Radio Ulster The Fringe Comedy Showcase",
-                "duration_s": ep["duration"],
+                "source_url": ep["mp3"], "duration_s": ep["duration"],
                 "transcript": transcript, "words": asr["words"]}
 
         for name in names:

@@ -3,6 +3,7 @@
 # Restarts any dead component; logs every action. Safe: all components are
 # idempotent (exists-checks + markers), so restarts never double-write.
 cd /root/patala-audition
+export YTDLP_EXTRA="--remote-components ejs:github"
 LOG=/tmp/opencode/watchdog.log
 say() { echo "$(date -Is) $*" >> "$LOG"; }
 
@@ -24,6 +25,11 @@ while true; do
   if ! grep -q "all rounds done" /tmp/opencode/agent.log 2>/dev/null; then
     ensure agent "discovery_agent.sh" \
         "cd /root/patala-audition && exec bash discovery_agent.sh"
+  fi
+  if ! grep -q '"__complete__": true' \
+      /root/patala-audition/index/big_names_state.json 2>/dev/null; then
+    ensure big_names "big_names_harvest.py" \
+        "cd /root/patala-audition && exec python3 big_names_harvest.py"
   fi
   if ! grep -q "=== overnight done" /tmp/opencode/overnight.log 2>/dev/null; then
     ensure overnight "overnight.sh" \

@@ -119,7 +119,8 @@ def process(vid: str, comedian: str, title: str, views: int = 0,
             words, transcript, method = asr["words"], \
                 " ".join(w["text"] for w in asr["words"]), "cf-whisper"
 
-        data = {"id": vid, "title": title, "comedian": comedian, "channel": channel,
+        data = {"id": vid, "url": f"https://www.youtube.com/watch?v={vid}",
+                "title": title, "comedian": comedian, "channel": channel,
                 "views": views, "transcript": transcript, "words": words,
                 "transcript_method": method}
         s3.put_object(Bucket=R2_BUCKET, Key=r2_key,

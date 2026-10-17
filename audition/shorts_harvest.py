@@ -119,7 +119,8 @@ def main():
             stats["nocap"] += 1
             continue
 
-        data = {"id": vid, "title": s["title"], "comedian": name,
+        data = {"id": vid, "url": f"https://www.youtube.com/watch?v={vid}",
+                "title": s["title"], "comedian": name,
                 "channel": s["channel"], "views": s["views"],
                 "duration_s": dur, "source_group": args.source_group,
                 "transcript": cap["transcript"], "words": cap["words"],

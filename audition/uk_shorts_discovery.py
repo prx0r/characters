@@ -9,6 +9,7 @@ Usage:
 """
 from __future__ import annotations
 import argparse, json, os, re, shlex, subprocess, sys, tempfile, time
+import urllib.parse
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -57,6 +58,30 @@ def yt_search(query: str, n: int) -> list[dict]:
     return out
 
 
+def yt_search_shorts(query: str, n: int) -> list[dict]:
+    """YouTube search restricted to Shorts (sp=EgIYAQ). Durations may be None."""
+    url = ("https://www.youtube.com/results?search_query="
+           + urllib.parse.quote_plus(query) + "&sp=EgIYAQ%253D%253D")
+    cmd = ["yt-dlp", "--flat-playlist", "--dump-json", "--playlist-end", str(n), url]
+    if Path(COOKIES).exists():
+        cmd += ["--cookies", COOKIES]
+    cmd += shlex.split(os.environ.get("YTDLP_EXTRA", ""))
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+    except subprocess.TimeoutExpired:
+        return []
+    out = []
+    for line in r.stdout.splitlines():
+        try:
+            d = json.loads(line)
+        except Exception:
+            continue
+        out.append({"id": d.get("id"), "title": d.get("title") or "",
+                    "duration": d.get("duration"), "views": d.get("view_count") or 0,
+                    "channel": d.get("channel") or d.get("uploader") or ""})
+    return out
+
+
 def harvest(name: str, shorts: list[dict], state: dict) -> int:
     cslug = slugify(name)
     n = 0
@@ -77,7 +102,8 @@ def harvest(name: str, shorts: list[dict], state: dict) -> int:
                 cap = None
         if not cap:
             continue
-        data = {"id": s["id"], "title": s["title"], "comedian": name,
+        data = {"id": s["id"], "url": f"https://www.youtube.com/watch?v={s['id']}",
+                "title": s["title"], "comedian": name,
                 "channel": s["channel"], "views": s["views"],
                 "duration_s": s.get("duration"),
                 "source_group": "shorts-discovery",
