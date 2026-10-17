@@ -4,6 +4,7 @@
 cd "$(dirname "$(readlink -f "$0")")"
 LOG=/tmp/opencode/harvest_web.log
 while true; do
+  python3 sync_sources_queue.py >> "$LOG" 2>&1
   if [ -f sources_queue.json ]; then
     while IFS= read -r line; do
       h=$(printf '%s' "$line" | python3 -c \
