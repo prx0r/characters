@@ -22,6 +22,7 @@ import boto3  # noqa: E402
 HERE = Path(__file__).parent
 WORKER = os.environ.get("WORKER_NAME") or "local"
 PEER = "local" if WORKER == "debz" else "debz"
+SKIP = {s.strip() for s in os.environ.get("SKIP_TASKS", "").split(",") if s.strip()}
 KEY = "_coord/rotation.json"
 PROBE_VID = "nAuFGPa0qEE"
 LOG = Path("/tmp/opencode/rotation.log")
@@ -91,6 +92,8 @@ def running(pat: str) -> bool:
 
 
 def task_done(t: dict) -> bool:
+    if t["name"] in SKIP:
+        return True
     if t["name"] == "bignames":
         try:
             s = json.loads((HERE / "index" / "big_names_state.json").read_text())
@@ -116,7 +119,7 @@ def write_done_marker():
 
 def ensure_workers():
     for t in TASKS:
-        if task_done(t):
+        if t["name"] in SKIP or task_done(t):
             continue
         if not running(t["pat"]):
             say(f"starting {t['name']}")
@@ -129,6 +132,8 @@ def ensure_workers():
 
 def stop_workers():
     for t in TASKS:
+        if t["name"] in SKIP:
+            continue
         if running(t["pat"]):
             say(f"stopping {t['name']}")
             subprocess.run(["pkill", "-f", t["pat"]], capture_output=True)

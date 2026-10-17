@@ -41,22 +41,38 @@ def _ok_name(s: str) -> str | None:
     return s
 
 
+_LIVE_AT_RE = re.compile(r"\s+\b(?:LIVE|Live|live)\b\s+(?:at|from)\b.*$")
+_BAD_CH_RE = re.compile(r"\b(club|comedy|stand|live|tv|channel|presents|shows?|official)\b",
+                        re.I)
+
+
+def _channel_fallback(ch: str) -> str | None:
+    """Channel display name as comedian (solo channels), rejecting clubs."""
+    c = (ch or "").strip()
+    if not c or c.startswith("@") or _BAD_CH_RE.search(c):
+        return None
+    return _ok_name(c)
+
+
 def parse_name(title: str) -> str | None:
     t = re.sub(r"#\S+", "", title).strip()
     if " @ " in t:
         left = t.split(" @ ")[0]
         return _ok_name(left.split("|")[-1])
-    for sep in (" | ", " – ", " - "):
+    segs = [s.strip() for s in t.split("|")]
+    if len(segs) >= 2:
+        for cand in (segs[1], segs[0]):
+            cand = _LIVE_AT_RE.sub("", cand).strip()
+            c = _ok_name(cand)
+            if c:
+                return c
+        return None
+    for sep in (" – ", " - "):
         if sep in t:
             cand = _ok_name(t.split(sep)[0])
             if cand:
                 return cand
-    m = re.split(r"[?!]+\s+", t)
-    if len(m) > 1:
-        cand = _ok_name(m[-1])
-        if cand:
-            return cand
-    return _ok_name(t)
+    return None
 
 
 def list_shorts(channel: str, cap: int) -> list[dict]:
@@ -96,7 +112,8 @@ def main():
         if dur and dur > 185:
             stats["small"] += 1
             continue
-        name = parse_name(s["title"]) or args.fallback_name
+        name = parse_name(s["title"]) or args.fallback_name or \
+            _channel_fallback(s.get("channel") or "")
         if not name:
             stats["noname"] += 1
             continue

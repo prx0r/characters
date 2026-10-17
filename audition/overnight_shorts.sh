@@ -18,4 +18,7 @@ else
   export YTDLP_EXTRA="--sleep-requests 1 --min-sleep-interval 3 --max-sleep-interval 8"
 fi
 
+# Tonight: indie UK focus = club channels + roster long-tail; big names paused.
+export SKIP_TASKS="${SKIP_TASKS:-bignames}"
+
 exec python3 runner_agent.py

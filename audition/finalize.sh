@@ -42,8 +42,12 @@ while true; do
   sleep 600
 done
 
+say "running fix_attribution"
+python3 fix_attribution.py >> "$LOG" 2>&1
 say "running r2_cleanup"
 python3 r2_cleanup.py >> "$LOG" 2>&1
+say "running discovery_top"
+python3 discovery_top.py >> "$LOG" 2>&1
 say "running r2_index"
 python3 r2_index.py >> "$LOG" 2>&1
 say "running funnygraph_sync --push"
