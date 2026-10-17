@@ -7,13 +7,15 @@ If any other doc disagrees with this file, this file wins.
 
 | Model | File | AUC | Train Set | Validated On | Status |
 |-------|------|-----|-----------|--------------|--------|
-| **SMILE text** | `audition/voicelab/unified_laugh_model.pkl` | **0.979** | 3.8K SMILE examples | SMILE test split | ✅ Working — text-only, SMILE distribution |
-| **Delivery (KT)** | `audition/voicelab/delivery_aware_model.pkl` | **0.654** | 168 beats, 12 KT stems | Leave-one-comedian-out | ✅ Working — audio energy features |
-| **Delivery (AM)** | `audition/voicelab/am_delivery_model.pkl` | **0.564** | 5674 windows, 5 specials | GroupKFold by comedian | ✅ Working — cross-comedian |
-| **Combined (ASR)** | `audition/voicelab/combined_beats_model.pkl` | **0.548** | 2998 beats, 5 AM specials | 5-fold CV | ⚠️ Weak — text features don't help |
-| **Prosody** | `audition/voicelab/prosody_laugh_model.pkl` | ~~1.000~~ | 20K segments | — | ❌ **LEAKED — do not use** |
-| **Legacy v3** | `audition/voicelab/laugh_model_v3.pkl` | 0.664 | Unknown | LOO CV | ⚠️ Legacy — superseded by unified |
-| **Legacy v5** | `audition/voicelab/laugh_model_v5.pkl` | 0.788 | Unknown | Unknown | ⚠️ Legacy — superseded by unified |
+| **Prosody200 clean** | `audition/voicelab/prosody200_clean_model.pkl` | **0.862** | 62K segments, 200 videos | GroupKFold by video (held-out) | ✅ **BEST HONEST** — no leakage |
+| **SMILE text** | `audition/voicelab/unified_laugh_model.pkl` | 0.979 | 3.8K SMILE examples | SMILE test split | ⚠️ Same-distribution only |
+| **Delivery (KT)** | `audition/voicelab/delivery_aware_model.pkl` | 0.654 | 168 beats, 12 KT stems | Leave-one-comedian-out | ✅ Working — audio energy |
+| **Delivery (AM)** | `audition/voicelab/am_delivery_model.pkl` | 0.564 | 5674 windows, 5 specials | GroupKFold by comedian | ✅ Working — cross-comedian |
+| **Combined (ASR)** | `audition/voicelab/combined_beats_model.pkl` | 0.548 | 2998 beats, 5 AM specials | 5-fold CV | ⚠️ Weak — text features don't help |
+| ~~Prosody (old)~~ | ~~prosody_laugh_model.pkl~~ | ~~1.000~~ | 20K segments | — | ❌ **LEAKED — do not use** |
+| ~~Prosody200 (leaked)~~ | ~~prosody200_heldout_model.pkl~~ | ~~1.000~~ | 62K segments | — | ❌ **LEAKED — f08 had 0.68 corr** |
+| **Legacy v3** | `laugh_model_v3.pkl` | 0.664 | Unknown | LOO CV | ⚠️ Legacy |
+| **Legacy v5** | `laugh_model_v5.pkl` | 0.788 | Unknown | Unknown | ⚠️ Legacy |
 
 ## Crowd Physics
 
@@ -55,9 +57,14 @@ If any other doc disagrees with this file, this file wins.
 
 ## Key Finding (2026-10-17)
 
+**Prosody200 clean model: AUROC 0.862 with held-out videos.**
+- 62K segments, 200 videos, 14 clean features (removed f08 leakage)
+- GroupKFold by video — no shuffle leakage
+- This is the best honest number we have
+
 **Audio energy features beat text features for laugh prediction.**
 - Text-only (ASR words): AUC 0.548
 - Delivery (audio energy): AUC 0.654
-- Delta: +0.106
+- Prosody200 (clean): AUC 0.862
 
 The laugh engine needs **audio energy**, not just text.
