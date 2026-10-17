@@ -1,0 +1,93 @@
+{
+ "note": "Not stand-up: removed from clips.json by tools/talkshow-lane.mjs; discovery treats these ids as known.",
+ "removed": [
+  {
+   "id": "WepSp0jYxBQ",
+   "comic": "Mark Normand",
+   "title": "Skating before a show on the road - mark normand #comedy #skating",
+   "channel": "mark normand",
+   "why": "Mark Normand skating before a show (vlog)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "EwtBIr3-L-Q",
+   "comic": "Mark Normand",
+   "title": "Rimshot - A Mark Normand Comedy Sketch",
+   "channel": "mark normand",
+   "why": "Rimshot - A Mark Normand Comedy Sketch (sketch)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "vdP-WWLdoTw",
+   "comic": "Mark Normand",
+   "title": "\"Brightside\" - An Artsy Fartsy Comedy Sketch",
+   "channel": "mark normand",
+   "why": "\"Brightside\" - An Artsy Fartsy Comedy Sketch (sketch)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "hxBzR6iZ0hE",
+   "comic": "Ron White",
+   "title": "“NO PANTS PARTY”?! 🤣😂 | First Date ft. Ron White",
+   "channel": "Comedy Clips Central",
+   "why": "First Date ft. Ron White (TV show scene)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "EuPDb9r4Gqw",
+   "comic": "Ron White",
+   "title": "Your Fav TV Show Is WHAT?!?!🤣😂 | First Date fr. Ron White",
+   "channel": "Comedy Clips Central",
+   "why": "First Date ft. Ron White (TV show scene)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "ABml9AvVXQ4",
+   "comic": "Les Dawson",
+   "title": "Les Dawson - Cissie & Ada - Chatting on the Doorstep",
+   "channel": "gorlestonguy",
+   "why": "Les Dawson: Cissie & Ada (sketch)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "JA0BXcIeN0w",
+   "comic": "Lee Hurst",
+   "title": "Lee Hurst Stand Up Special Advert - Live At Her Majesty's Theatre London | 1997",
+   "channel": "80s, 90s, 00s TV from VHS",
+   "why": "Lee Hurst Stand Up Special Advert (VHS advert)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "XpTmjt3Sd9c",
+   "comic": "Byron Trimble",
+   "title": "THE GUY BEHIND TITANIC DISASTER - This Day in History - Hindsight Humor",
+   "channel": "Byron Trimble",
+   "why": "Byron Trimble: Titanic disaster / Hindsight Humor (history explainer)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "klps41AX9a8",
+   "comic": "Byron Trimble",
+   "title": "10/13/1792- White House Construction Begins - Hindsight Humor",
+   "channel": "Byron Trimble",
+   "why": "Byron Trimble: White House construction / Hindsight Humor (history explainer)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "fVmIEgZMz6c",
+   "comic": "Chic Murray",
+   "title": "Chic Murray's Funnyosities - TV Ad",
+   "channel": "Birlinn",
+   "why": "Chic Murray's Funnyosities - TV Ad (book advert)",
+   "at": "2026-10-17"
+  },
+  {
+   "id": "6ul1Fgg2jmw",
+   "comic": "Nick Offerman",
+   "title": "The Son of Notorious Arsonist Johnny Cool Tells His Story (feat. Nick Offerman) - Drunk History",
+   "channel": "Comedy Central",
+   "why": "Drunk History feat. Nick Offerman (scripted sketch show)",
+   "at": "2026-10-17"
+  }
+ ]
+}
