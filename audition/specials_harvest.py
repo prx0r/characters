@@ -36,7 +36,7 @@ def meta(vid: str) -> dict:
     cmd = ["yt-dlp", "--skip-download", "--no-warnings",
            "--print", "%(title)s|||%(duration)s|||%(view_count)s|||%(channel)s",
            f"https://www.youtube.com/watch?v={vid}"]
-    if Path(yt_captions.COOKIES).exists():
+    if yt_captions.COOKIES and Path(yt_captions.COOKIES).exists():
         cmd += ["--cookies", yt_captions.COOKIES]
     cmd += shlex.split(os.environ.get("YTDLP_EXTRA", ""))
     try:
@@ -67,7 +67,8 @@ def main():
             pass
         with tempfile.TemporaryDirectory() as td:
             try:
-                cap = yt_captions.fetch_captions(vid, td)
+                cap = yt_captions.fetch_captions(
+                    vid, td, prefer_auto=bool(os.environ.get("YTDLP_PREFER_AUTO")))
             except Exception as e:
                 cap = None
                 print(f"  captions error {vid}: {e}", flush=True)

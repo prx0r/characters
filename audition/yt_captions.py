@@ -13,6 +13,8 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 COOKIES = (os.path.join(_HERE, ".env.cookies")
            if os.path.exists(os.path.join(_HERE, ".env.cookies"))
            else "/home/box/Downloads/cookies.txt")
+if os.environ.get("YTDLP_NO_COOKIES"):
+    COOKIES = ""
 
 
 def _run(cmd: list[str], timeout: int = 90) -> subprocess.CompletedProcess:
@@ -62,11 +64,18 @@ def parse_json3(path: str) -> dict:
     return {"words": words, "transcript": transcript}
 
 
-def fetch_captions(video_id: str, tmpdir: str) -> dict | None:
+def fetch_captions(video_id: str, tmpdir: str, prefer_auto: bool = False) -> dict | None:
     """Return {'words', 'transcript', 'method'} or None if no captions exist."""
-    manual_files = _ytdlp_subs(video_id, tmpdir, manual=True)
-    f = _pick(manual_files, video_id)
-    method = "youtube-manual-captions"
+    if prefer_auto:
+        auto_files = _ytdlp_subs(video_id, tmpdir, manual=False)
+        f = _pick(auto_files, video_id)
+        method = "youtube-auto-captions"
+    else:
+        f = None
+    if not f:
+        manual_files = _ytdlp_subs(video_id, tmpdir, manual=True)
+        f = _pick(manual_files, video_id)
+        method = "youtube-manual-captions"
     if not f:
         auto_files = _ytdlp_subs(video_id, tmpdir, manual=False)
         f = _pick(auto_files, video_id)

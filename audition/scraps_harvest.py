@@ -7,7 +7,7 @@ Stores comedians/<slug>/specials/<special>.json with full text + word list
 Usage: python3 scraps_harvest.py [--only comedian-substr]
 """
 from __future__ import annotations
-import argparse, html, json, os, re, sys, urllib.request
+import argparse, html, json, os, re, sys, time, urllib.request
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
