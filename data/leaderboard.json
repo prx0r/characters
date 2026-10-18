@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T21:59:01.116Z",
+ "updated": "2026-10-18T21:59:54.711Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -3827,14 +3827,6 @@
     },
     {
      "comic": "Geoff Norcott",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "comic": "Sarah Millican",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -23171,15 +23163,6 @@
      "bouts": 0
     },
     {
-     "id": "N-2_VxKvWws",
-     "comic": "Abandoman",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "c4Twf7jIN_g",
      "comic": "Sarah Lewis",
      "elo": 1500,
@@ -23200,15 +23183,6 @@
     {
      "id": "uUCvjDsvvts",
      "comic": "Russell Howard",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "AQqbh1GqDXw",
-     "comic": "Sarah Millican",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -24053,15 +24027,6 @@
      "bouts": 0
     },
     {
-     "id": "o_UaSL_AWWo",
-     "comic": "Alfie Moore",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "g5571junGxQ",
      "comic": "Alfie Moore",
      "elo": 1500,
@@ -24091,15 +24056,6 @@
     {
      "id": "zDq73XmP0Gg",
      "comic": "Farah Sharp",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "fPKrkAyQ9jI",
-     "comic": "Alun Cochrane",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -27113,15 +27069,6 @@
      "bouts": 0
     },
     {
-     "id": "7nWS2QX0wvE",
-     "comic": "Aurie Styla",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "hL_p0oJSKPY",
      "comic": "Brian Gallagher",
      "elo": 1500,
@@ -29355,15 +29302,6 @@
     },
     {
      "id": "hUY7IJ2-KYA",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "IVqdSoTHD5s",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
@@ -34651,14 +34589,6 @@
      "bouts": 0
     },
     {
-     "comic": "Sarah Millican",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Matt Rouse",
      "elo": 1500,
      "lo": null,
@@ -53988,15 +53918,6 @@
      "bouts": 0
     },
     {
-     "id": "N-2_VxKvWws",
-     "comic": "Abandoman",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "c4Twf7jIN_g",
      "comic": "Sarah Lewis",
      "elo": 1500,
@@ -54017,15 +53938,6 @@
     {
      "id": "uUCvjDsvvts",
      "comic": "Russell Howard",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "AQqbh1GqDXw",
-     "comic": "Sarah Millican",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -54870,15 +54782,6 @@
      "bouts": 0
     },
     {
-     "id": "o_UaSL_AWWo",
-     "comic": "Alfie Moore",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "g5571junGxQ",
      "comic": "Alfie Moore",
      "elo": 1500,
@@ -54908,15 +54811,6 @@
     {
      "id": "zDq73XmP0Gg",
      "comic": "Farah Sharp",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "fPKrkAyQ9jI",
-     "comic": "Alun Cochrane",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -57930,15 +57824,6 @@
      "bouts": 0
     },
     {
-     "id": "7nWS2QX0wvE",
-     "comic": "Aurie Styla",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "hL_p0oJSKPY",
      "comic": "Brian Gallagher",
      "elo": 1500,
@@ -60172,15 +60057,6 @@
     },
     {
      "id": "hUY7IJ2-KYA",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "IVqdSoTHD5s",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
@@ -65468,14 +65344,6 @@
      "bouts": 0
     },
     {
-     "comic": "Sarah Millican",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "comic": "Matt Rouse",
      "elo": 1500,
      "lo": null,
@@ -84805,15 +84673,6 @@
      "bouts": 0
     },
     {
-     "id": "N-2_VxKvWws",
-     "comic": "Abandoman",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "c4Twf7jIN_g",
      "comic": "Sarah Lewis",
      "elo": 1500,
@@ -84834,15 +84693,6 @@
     {
      "id": "uUCvjDsvvts",
      "comic": "Russell Howard",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "AQqbh1GqDXw",
-     "comic": "Sarah Millican",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -85687,15 +85537,6 @@
      "bouts": 0
     },
     {
-     "id": "o_UaSL_AWWo",
-     "comic": "Alfie Moore",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "g5571junGxQ",
      "comic": "Alfie Moore",
      "elo": 1500,
@@ -85725,15 +85566,6 @@
     {
      "id": "zDq73XmP0Gg",
      "comic": "Farah Sharp",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "fPKrkAyQ9jI",
-     "comic": "Alun Cochrane",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -88747,15 +88579,6 @@
      "bouts": 0
     },
     {
-     "id": "7nWS2QX0wvE",
-     "comic": "Aurie Styla",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "hL_p0oJSKPY",
      "comic": "Brian Gallagher",
      "elo": 1500,
@@ -90989,15 +90812,6 @@
     },
     {
      "id": "hUY7IJ2-KYA",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "IVqdSoTHD5s",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
