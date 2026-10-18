@@ -151,6 +151,7 @@ def main():
     roster = json.loads(ROSTER.read_text())
     priority = json.loads(PRIORITY.read_text()) if PRIORITY.exists() else []
     state = json.loads(STATE.read_text()) if STATE.exists() else {}
+    state = {k.lower(): v for k, v in state.items()}
     have = set()
     if INDEX.exists():
         for line in INDEX.read_text().splitlines():
@@ -205,12 +206,12 @@ def main():
             if (d is None or 0 < d <= 185) and "apollo" not in t and "24/7" not in t:
                 shorts.append(r)
         n = harvest(name, shorts[:12], state) if shorts else 0
-        state[name] = {"status": "harvested" if n else "no-material-found",
-                       "checked": time.strftime("%F"), "harvested": n}
+        state[name.lower()] = {"status": "harvested" if n else "no-material-found",
+                               "checked": time.strftime("%F"), "harvested": n}
         done += 1
         if done % 5 == 0:
             STATE.write_text(json.dumps(state, indent=0, ensure_ascii=False))
-            print(f"  [{done}/{args.max_names}] last: {name} -> {state[name]['status']}",
+            print(f"  [{done}/{args.max_names}] last: {name} -> {state[name.lower()]["status"]}",
                   flush=True)
         time.sleep(1.2)
 
