@@ -165,6 +165,14 @@ def main():
             continue
         seen_names.add(low)
         entries.append(by_low.get(low, {"name": n, "sources": ["priority-2026"]}))
+    ANZCA = HERE / "index" / "anzca_roster.json"
+    if ANZCA.exists():
+        for e in json.loads(ANZCA.read_text()):
+            low = e["name"].lower()
+            if low in seen_names:
+                continue
+            seen_names.add(low)
+            entries.append(e)
     for e in roster:
         low = e["name"].lower()
         if low in seen_names:
