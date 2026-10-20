@@ -1,5 +1,56 @@
 {
- "updated": "2026-10-20T20:45:10.914Z",
+ "updated": "2026-10-20T23:25:49.540Z",
  "note": "clips that failed to play in the site player (YouTube onError 2/5/100/101/150/153 or a stalled start); re-check with oEmbed before pruning",
- "clips": []
+ "clips": [
+  {
+   "clip": "_rabQNrVE_g",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:32.771Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "wka-o2V71CM",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:34.218Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "NK-aET97cJA",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:35.765Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "WiVCRXnW8vQ",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:36.799Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "Mx6Yc550RKM",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:37.998Z",
+   "inCatalog": true
+  }
+ ]
 }
