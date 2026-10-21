@@ -21,8 +21,16 @@ actually reach the Fish call, [emphasis] on punch/closer except flat styles
 (volume ≤ −2 = deadpan: unstressed words, manner-max flout). Buddha render
 verified: holds 1.51–1.64s in audio, post windows 1.0–1.19s, word match
 0.981. gcomedy graph nodes (KR-NS/prosody/timing/release) now map to the
-SDK (gcomedy 367bc80). Next: archetype pooling beyond norm, face/avatar
-mapping via freaktown setAdapter.
+SDK (gcomedy 367bc80). **Avatar mapping (same day):** `audition/seal_set.py`
+(+ delivery_engine `--seal DIR`) exports sealed-set.v1 for freaktown
+`loadSealedSet` — timeline with exact ms, energy-envelope mouth cues,
+set_plan with character profile + per-beat performance (character actions
+win: koan_hold → deadpan + hold → locomotion.freeze). `freaks/mesh-map.json`
+= slug → their cast GLB families (zero name overlap; anansi→spider
+confident, cryptids→monster/kappa→nature plausible, rest todo/appearance
+fallback). Verified: their adaptSealedSet 5/5 (fixture on branch
+freaktown `sdk-sealed-export`). Next: archetype pooling beyond norm,
+human/deity mesh families, live POG loop, MCP wrapper.
 
 
 ## Hard rules (absolute, violations happened)
