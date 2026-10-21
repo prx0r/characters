@@ -1,5 +1,8 @@
 # SPEC-FREAK-SDK v0.1 — voice.tags + delivery.style
 
+**How to use / extend:** `docs/SDK-USAGE.md`. Freaktown consumption notes:
+`freaktown/docs/DELIVERY-SDK.md`.
+
 **Status:** pilot (Buddha). One method: measure a real comic, wear their
 delivery. AI won't invent good delivery; it can copy delivery we've measured.
 
