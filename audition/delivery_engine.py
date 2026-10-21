@@ -119,11 +119,18 @@ def load_style_profile(character_slug: str) -> dict | None:
     hold_ms = overrides.get("punchline_hold_ms")
     if hold_ms:
         ladder[1] = max(ladder[1], hold_ms / 1000.0)
+    # resolution window: harvested laugh latency or ladder[2]; override floor
+    post = recipe.get("post_punch_s") or ladder[2]
+    post_ms = overrides.get("post_punch_ms")
+    if post_ms:
+        post = max(post, post_ms / 1000.0)
     return {
         "wpm": recipe.get("wpm", 180),
         "pause_ladder": ladder,
         "pause_jitter": recipe.get("pause_jitter", 0.25),
         "coupling_ratio": recipe.get("coupling_ratio", 1.35),
+        "post_punch_s": round(post, 2),
+        "punch_hold_floor_s": (hold_ms / 1000.0) if hold_ms else 0.6,
         "temperature": overrides.get("temperature", recipe.get("temperature", 0.6)),
         "speed_scale": recipe.get("speed_scale", 1.0),
         "emotion_cues": recipe.get("emotion_cues", ["[neutral]"]),
@@ -248,12 +255,28 @@ def tag_mechanism(text: str, beat_type: str, prior_beats: list[str]) -> str:
 # TIMING ASSIGNMENT
 # ============================================================
 
+# beat type -> speed factor (Norrick contrast: punch snaps faster than setup;
+# escalation/list mechanisms run hot into the verdict, then stop dead)
+BEAT_SPEED = {"opener": 1.0, "setup": 1.0, "punchline": 1.08, "tag": 1.05,
+              "closer": 0.95}
+MECH_SPEED = {"escalation": 1.15, "callback": 1.05}
+
+
 def assign_timings(beats: list[dict], profile: dict) -> list[dict]:
-    """Assign pause durations and speeds based on theory + profile."""
+    """Assign pause durations and speeds based on theory + profile.
+
+    Attardo ch10 (theory/attardo-timing-map.md):
+      T1 pre-punch hold: ladder[1] x coupling, 0.6s floor
+      T2 resolution window: pause_after on punch/closer (post_punch_s)
+      T3 Norrick contrast: BEAT_SPEED x MECH_SPEED factors (outside the
+        0.92-1.08 clean zone fish_tts decomposes via tempo_via_prompt)
+    """
     ladder = profile.get("pause_ladder", [0.5, 1.3, 0.9])
     jitter = profile.get("pause_jitter", 0.25)
     coupling = profile.get("coupling_ratio", 1.35)
     base_wps = profile.get("wpm", 180) / 60.0  # words per second
+    post_punch = profile.get("post_punch_s") or ladder[2]
+    hold_floor = profile.get("punch_hold_floor_s") or 0.6  # T1 Attardo floor
 
     import random
     random.seed(42)  # reproducible
@@ -265,8 +288,9 @@ def assign_timings(beats: list[dict], profile: dict) -> list[dict]:
         if bt == "opener":
             pause = 0.2
         elif bt == "punchline":
-            # dpv coupling: extend pause before surprise
-            pause = ladder[1] * coupling * (1 + random.uniform(-jitter, jitter))
+            # T1: dpv coupling: extend pause before surprise; hard floor
+            # (Attardo 0.6s, or character override e.g. Buddha 1.5s)
+            pause = max(hold_floor, ladder[1] * coupling * (1 + random.uniform(-jitter, jitter)))
         elif bt == "tag":
             pause = ladder[2] * (1 + random.uniform(-jitter, jitter))
         elif bt == "closer":
@@ -274,26 +298,35 @@ def assign_timings(beats: list[dict], profile: dict) -> list[dict]:
         else:  # setup
             pause = ladder[0] * (1 + random.uniform(-jitter, jitter))
 
-        # Speed: slower for setup, normal for punchline
-        if bt == "setup":
-            speed = 0.9
-        elif bt == "punchline":
-            speed = 1.0
-        elif bt == "tag":
-            speed = 1.05
-        else:
-            speed = 1.0
+        # T2: resolution window AFTER punch/closer (merged with next beat's
+        # pre-pause at assemble time via max — one silence between beats)
+        pause_after = post_punch if bt in ("punchline", "closer") else 0.0
 
-        # Target duration based on wps
-        target_wps = base_wps * speed
+        # T3: Norrick contrast — factor multiplies profile speed in directions
+        speed = BEAT_SPEED.get(bt, 1.0) * MECH_SPEED.get(b["mechanism"], 1.0)
+
+        target_wps = base_wps * min(speed, 1.2)
         target_duration = b["n_words"] / max(target_wps, 0.1)
 
         b.update({
             "pause_before": round(pause, 2),
+            "pause_after": round(pause_after, 2),
+            "speed": round(speed, 3),
             "target_wps": round(target_wps, 2),
             "target_duration": round(target_duration, 2),
         })
 
+    return beats
+
+
+def scale_resolution_windows(beats: list[dict]) -> list[dict]:
+    """T4 audience loop: predicted laugh stretches the resolution window
+    (don't step on the laugh); cold beats re-enter sooner."""
+    for b in beats:
+        base = b.get("pause_after", 0.0)
+        if base > 0:
+            scale = 0.6 + 0.8 * min(max(b.get("p_laugh", 0.5), 0.0), 1.0)
+            b["pause_after"] = round(base * scale, 2)
     return beats
 
 
@@ -390,8 +423,11 @@ def generate_direction(beat: dict, profile: dict) -> dict:
     if profile.get("temperature") is not None:
         temp = profile["temperature"]
 
-    # Tone marker (never outside clean zone)
-    speed = speed_to_fish(profile.get("speed_scale", 1.0), beat.get("speed", 1.0))
+    # T3: desired speed = profile x beat factor. NOT clamped to the clean
+    # zone here — fish_tts.tempo_via_prompt decomposes out-of-zone targets
+    # into direction language; the API knob never leaves 0.92-1.08.
+    desired = profile.get("speed_scale", 1.0) * beat.get("speed", 1.0)
+    speed = round(max(0.6, min(1.4, desired)), 3)
 
     # Build direction string
     parts = []
@@ -413,19 +449,31 @@ def generate_direction(beat: dict, profile: dict) -> dict:
 # ============================================================
 
 def render_beat(beat: dict, profile: dict, clone_id: str | None = None) -> dict:
-    """Render one beat with Fish TTS."""
+    """Render one beat with Fish TTS (style volume/temperature/emphasis).
+
+    T5: [emphasis] wraps punch/closer last word — but FLAT styles
+    (volume_db <= -2, deadpan) keep important words unstressed: the
+    violation lives in the voice, not in stress (manner-max flout).
+    T6: fish prosody.volume = style volume floor + beat-type nudge
+    (nudges halved on flat styles so the envelope stays flat).
+    """
     import sys
     sys.path.insert(0, str(HERE))
-    from fish_tts import synthesize_fish
+    from fish_tts import synthesize_fish, emphasize_last, TYPE_VOLUME_DB
 
     direction = beat.get("_direction", {})
     text = beat["text"]
     cue = direction.get("emotion_cue", "")
     speed = direction.get("speed", 1.0)
     temp = direction.get("temperature", 0.60)
+    bt = beat["beat_type"]
 
-    # Build directed text
-    directed = f"{cue} {text}".strip() if cue else text
+    flat = (profile.get("volume_db") or 0) <= -2
+    if not flat and bt in ("punchline", "closer"):
+        text = emphasize_last(text)
+
+    nudge = TYPE_VOLUME_DB.get(bt, 0.0) * (0.5 if flat else 1.0)
+    volume = round((profile.get("volume_db") or 0.0) + nudge, 1)
 
     # Render
     audition_id = f"delivery-{hashlib.md5(text.encode()).hexdigest()[:8]}"
@@ -434,7 +482,8 @@ def render_beat(beat: dict, profile: dict, clone_id: str | None = None) -> dict:
         audition_id,
         text,
         modulator="neutral" if not cue else cue.strip("[]"),
-        prosody={"speed": speed, "temperature": temp},
+        temperature=temp,
+        prosody={"speed": speed, "volume": volume},
         voice=clone_id or profile.get("voice_fish_id"),
     )
 
@@ -476,6 +525,9 @@ def render_minute(
     # 4. Predict laughs
     beats = predict_laughs(beats, profile)
 
+    # 4b. T4: audience loop — predicted laughs stretch resolution windows
+    beats = scale_resolution_windows(beats)
+
     # 5. Generate directions
     for b in beats:
         b["_direction"] = generate_direction(b, profile)
@@ -515,7 +567,13 @@ def render_minute(
 
 
 def assemble_audio(beats: list[dict], output_path: Path) -> dict:
-    """Assemble rendered beats into one audio file with pauses."""
+    """Assemble rendered beats: [gap][audio][gap][audio]...[trailing].
+
+    Gap between beats = max(this beat's pause_before, previous beat's
+    pause_after) — the pre-punch hold (T1) and the resolution window (T2)
+    are the SAME silence when they stack; nothing doubles up.
+    Trailing silence = last beat's pause_after (laugh-out window).
+    """
     import numpy as np
 
     rendered_beats = [b for b in beats if b.get("_rendered")]
@@ -524,20 +582,22 @@ def assemble_audio(beats: list[dict], output_path: Path) -> dict:
 
     # Decode each beat
     segments = []
+    prev_after = 0.0
     for b in rendered_beats:
+        gap_s = max(b.get("pause_before", 0.5), prev_after)
+        if gap_s > 0.01:
+            segments.append(np.zeros(int(gap_s * 44100), dtype=np.float32))
         path = b["_rendered"]["path"]
-        # Decode to numpy
         result = subprocess.run(
             ["ffmpeg", "-i", path, "-f", "s16le", "-ac", "1", "-ar", "44100", "-"],
             capture_output=True, timeout=30
         )
         audio = np.frombuffer(result.stdout, dtype=np.int16).astype(np.float32) / 32768.0
         segments.append(audio)
+        prev_after = b.get("pause_after", 0.0)
 
-        # Add pause after beat
-        pause_s = b.get("pause_before", 0.5)
-        pause = np.zeros(int(pause_s * 44100), dtype=np.float32)
-        segments.append(pause)
+    if prev_after > 0.01:
+        segments.append(np.zeros(int(prev_after * 44100), dtype=np.float32))
 
     # Concatenate
     full_audio = np.concatenate(segments) if segments else np.array([], dtype=np.float32)
@@ -563,13 +623,14 @@ def assemble_audio(beats: list[dict], output_path: Path) -> dict:
 
 
 def build_timeline(beats: list[dict]) -> list[dict]:
-    """Build a timeline of beats with timings and predictions."""
+    """Build a timeline of beats with timings and predictions (matches audio)."""
     timeline = []
     t = 0.0
+    prev_after = 0.0
     for b in beats:
-        pause = b.get("pause_before", 0.5)
+        gap = max(b.get("pause_before", 0.5), prev_after)
         dur = b.get("target_duration", 2.0)
-        t += pause
+        t += gap
 
         timeline.append({
             "time_s": round(t, 2),
@@ -578,12 +639,14 @@ def build_timeline(beats: list[dict]) -> list[dict]:
             "mechanism": b["mechanism"],
             "p_laugh": b.get("p_laugh", 0),
             "laugh_type": b.get("laugh_type", ""),
-            "pause_before": pause,
+            "gap_before": round(gap, 2),
+            "pause_after": b.get("pause_after", 0),
             "target_duration": dur,
             "text_preview": b["text"][:60],
         })
 
         t += dur
+        prev_after = b.get("pause_after", 0.0)
 
     return timeline
 
@@ -592,7 +655,8 @@ def compute_stats(beats: list[dict], profile: dict, comedian: str = "default") -
     """Compute delivery stats."""
     n = len(beats)
     laugh_beats = [b for b in beats if b.get("p_laugh", 0) > 0.65]  # higher threshold
-    total_pause = sum(b.get("pause_before", 0) for b in beats)
+    total_pause = sum(b.get("pause_before", 0) + b.get("pause_after", 0)
+                      for b in beats)
     total_duration = sum(b.get("target_duration", 0) for b in beats)
     avg_wps = sum(b.get("target_wps", 0) for b in beats) / max(n, 1)
 
@@ -644,6 +708,7 @@ if __name__ == "__main__":
         beats = segment_beats(text)
         beats = assign_timings(beats, profile)
         beats = predict_laughs(beats, profile)
+        beats = scale_resolution_windows(beats)
         for b in beats:
             b["_direction"] = generate_direction(b, profile)
 

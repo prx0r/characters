@@ -2,7 +2,7 @@
  "schema": "delivery_style.v1",
  "slug": "norm_macdonald",
  "archetype": "deadpan",
- "generated_at": "2026-10-21T18:58:52Z",
+ "generated_at": "2026-10-21T19:38:07Z",
  "measured": {
   "n_clips": 1,
   "wpm": {
@@ -47,6 +47,7 @@
   ],
   "pause_jitter": 0.25,
   "coupling_ratio": 1.08,
+  "post_punch_s": null,
   "volume_db": -3.3,
   "dynamics_db": 13.3,
   "pitch_std_st": 10.13,

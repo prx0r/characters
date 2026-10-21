@@ -83,6 +83,7 @@
     "archetype": "suspension_deadpan",
     "overrides": {
       "punchline_hold_ms": 1500,
+      "post_punch_ms": 1000,
       "temperature": 0.5
     }
   },

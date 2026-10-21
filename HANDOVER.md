@@ -10,8 +10,20 @@ Character profiles carry `voice.tags` + `delivery.style` (SPEC-FREAK-SDK.md).
 (Louis self-test PASS); `delivery_engine.load_profile` reads freaks→styles
 (first: buddha-ultimate-deadpan → norm_macdonald recipe + cast Fish voice
 "Calm Monotone Narrator" 2821f84c…, all $0). Styles in `voicelab/styles/`.
-Not yet: archetype pooling beyond norm, more deadpan exemplar clips
-(Hedberg/Wright), MCP wrapper.
+
+**Attardo timing layer (same day):** `theory/attardo-timing-map.md` = the
+ch10/GTVH claim → knob contract (T1-T12). Engine now: pre-punch hold BEFORE
+punch audio (0.6s floor / character override), post_punch_s resolution
+window merged via max() at assemble, p_laugh scales the window (audience
+loop), Norrick speed contrast via BEAT_SPEED×MECH_SPEED decomposed by
+tempo_via_prompt (clean-zone rule kept), style volume_db + temperature
+actually reach the Fish call, [emphasis] on punch/closer except flat styles
+(volume ≤ −2 = deadpan: unstressed words, manner-max flout). Buddha render
+verified: holds 1.51–1.64s in audio, post windows 1.0–1.19s, word match
+0.981. gcomedy graph nodes (KR-NS/prosody/timing/release) now map to the
+SDK (gcomedy 367bc80). Next: archetype pooling beyond norm, face/avatar
+mapping via freaktown setAdapter.
+
 
 ## Hard rules (absolute, violations happened)
 1. Synthesis = `s2.1-pro-free` ONLY ($0), ALWAYS. MCP TTS forbidden

@@ -2,7 +2,7 @@
 
 **Goal:** Take a comedian's profile (style, voice, delivery patterns) + their minute text → render Fish TTS audio that sounds like them performing it.
 
-**Status:** Partially working. Louis formula-level. Ari/casey/pickles/kam converged at knob level. Norm/seinfeld not calibrated. **Freak-SDK pilot live (2026-10-21):** style_harvest.py harvests delivery_style.v1 from scribes; Louis self-test PASS (wpm 170/163, speed 0.84/0.85, ladder within 0.45s). Buddha wears Norm's harvested deadpan + Fish "Calm Monotone Narrator" cast voice: word fidelity 1.0, pitch_std 9.53 (Norm 10.13), dyn 15.2 (Norm 13.3). See docs/SPEC-FREAK-SDK.md.
+**Status:** Partially working. Louis formula-level. Ari/casey/pickles/kam converged at knob level. Norm/seinfeld not calibrated. **Freak-SDK pilot live (2026-10-21):** style_harvest.py harvests delivery_style.v1 from scribes; Louis self-test PASS (wpm 170/163, speed 0.84/0.85, ladder within 0.45s). Buddha wears Norm's harvested deadpan + Fish "Calm Monotone Narrator" cast voice: word fidelity 0.98–1.0, pitch_std 9.53 (Norm 10.13), dyn 15.2 (Norm 13.3). **Attardo timing layer:** theory/attardo-timing-map.md (ch10 claim→knob T1–T12) wired into delivery_engine — pre-punch hold before punch audio, post_punch_s resolution window, p_laugh-scaled re-entry, Norrick speed contrast via tempo prompt, style volume/temperature to Fish, flat-style no-emphasis rule; Buddha render measured: holds 1.51–1.64s, windows 1.0–1.19s. See docs/SPEC-FREAK-SDK.md.
 
 ---
 

@@ -2,7 +2,7 @@
  "schema": "delivery_style.v1",
  "slug": "louis",
  "archetype": null,
- "generated_at": "2026-10-21T18:58:52Z",
+ "generated_at": "2026-10-21T19:38:07Z",
  "measured": {
   "n_clips": 12,
   "wpm": {
@@ -41,6 +41,7 @@
   ],
   "pause_jitter": 0.25,
   "coupling_ratio": 2.0,
+  "post_punch_s": null,
   "volume_db": 0.0,
   "dynamics_db": null,
   "pitch_std_st": null,

@@ -166,6 +166,11 @@ def engine_recipe(agg: dict, archetype: str | None) -> dict:
     dyn = ac.get("dyn_db")
     volume = round((dyn - 25.0) * 0.28, 1) if dyn else 0.0
 
+    # T2/T4 resolution window: median laugh-reaction latency when the scribe
+    # has laugh anchors; engine falls back to ladder[2] when null.
+    hold = agg.get("hold") or {}
+    post = hold.get("react_median_s")
+
     cues = ARCHETYPE_CUES.get(archetype or "", {"allowed": ["[neutral]", "[calm]"],
                                                 "forbidden": []})
     return {
@@ -176,6 +181,7 @@ def engine_recipe(agg: dict, archetype: str | None) -> dict:
         "pause_ladder": [setup, pre_punch, tag],
         "pause_jitter": 0.25,
         "coupling_ratio": coupling,
+        "post_punch_s": post,
         "volume_db": volume,
         "dynamics_db": dyn,
         "pitch_std_st": ac.get("pitch_std"),

@@ -3,6 +3,11 @@
 **Status:** pilot (Buddha). One method: measure a real comic, wear their
 delivery. AI won't invent good delivery; it can copy delivery we've measured.
 
+**Theory contract:** `theory/attardo-timing-map.md` — every timing rule maps
+from Attardo ch10/GTVH (KR-NS = the NS knowledge resource = delivery).
+Knobs T1–T12: pre-punch hold floor, resolution window, Norrick contrast,
+laugh-scaled re-entry, flat-frame protection.
+
 ## The contract (new fields in `freaks/<slug>/character.json`)
 
 ```json
