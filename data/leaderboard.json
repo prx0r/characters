@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T23:18:58.812Z",
+ "updated": "2026-10-21T23:22:20.284Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -4875,6 +4875,22 @@
     },
     {
      "comic": "Shane Todd",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Reptilian Ralph",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Buddha (Deadpan)",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -30752,6 +30768,24 @@
     {
      "id": "9Ot9kuoHpqI",
      "comic": "Shane Todd",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ftai-ralph-bloodline",
+     "comic": "Reptilian Ralph",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ftai-buddha-dishes",
+     "comic": "Buddha (Deadpan)",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -35635,6 +35669,22 @@
      "hi": null,
      "wins": 0,
      "bouts": 0
+    },
+    {
+     "comic": "Reptilian Ralph",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Buddha (Deadpan)",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
     }
    ],
    "clips": [
@@ -61507,6 +61557,24 @@
     {
      "id": "9Ot9kuoHpqI",
      "comic": "Shane Todd",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ftai-ralph-bloodline",
+     "comic": "Reptilian Ralph",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ftai-buddha-dishes",
+     "comic": "Buddha (Deadpan)",
      "elo": 1500,
      "lo": null,
      "hi": null,
@@ -66390,6 +66458,22 @@
      "hi": null,
      "wins": 0,
      "bouts": 0
+    },
+    {
+     "comic": "Reptilian Ralph",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "comic": "Buddha (Deadpan)",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
     }
    ],
    "clips": [
@@ -92262,6 +92346,24 @@
     {
      "id": "9Ot9kuoHpqI",
      "comic": "Shane Todd",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ftai-ralph-bloodline",
+     "comic": "Reptilian Ralph",
+     "elo": 1500,
+     "lo": null,
+     "hi": null,
+     "wins": 0,
+     "bouts": 0
+    },
+    {
+     "id": "ftai-buddha-dishes",
+     "comic": "Buddha (Deadpan)",
      "elo": 1500,
      "lo": null,
      "hi": null,
