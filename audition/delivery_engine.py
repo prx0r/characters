@@ -20,7 +20,7 @@ Usage:
   result.stats       # what worked, what didn't
 """
 from __future__ import annotations
-import json, re, time, subprocess, hashlib
+import json, os, re, time, subprocess, hashlib
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from typing import Any
@@ -534,16 +534,33 @@ def render_minute(
     for b in beats:
         b["_direction"] = generate_direction(b, profile)
 
-    # 6. Render each beat
-    rendered = []
-    for b in beats:
+    # 6. Render each beat — concurrent (network-bound Fish calls; order of
+    # beats is preserved regardless of completion order). DELIVERY_THREADS=0
+    # forces sequential (debugging).
+    from concurrent.futures import ThreadPoolExecutor
+    workers = int(os.environ.get("DELIVERY_THREADS", "3"))
+
+    def _one(b):
         try:
-            r = render_beat(b, profile, clone_id)
+            return b, render_beat(b, profile, clone_id), None
+        except Exception as e:
+            return b, None, e
+
+    jobs = []
+    if workers > 1 and len(beats) > 2:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            jobs = list(pool.map(_one, beats))
+    else:
+        jobs = [_one(b) for b in beats]
+
+    rendered = []
+    for b, r, err in jobs:
+        if err is not None:
+            print(f"  Beat {b['index']} render failed: {err}")
+            b["_rendered"] = None
+        else:
             b["_rendered"] = r
             rendered.append(r)
-        except Exception as e:
-            print(f"  Beat {b['index']} render failed: {e}")
-            b["_rendered"] = None
 
     # 7. Assemble audio
     if output_name is None:
