@@ -499,14 +499,16 @@ def render_minute(
     comedian: str = "default",
     clone_id: str | None = None,
     output_name: str | None = None,
+    seal_dir: str | Path | None = None,
 ) -> RenderResult:
     """Full pipeline: text → directed audio with timings.
 
     Args:
         text: the comedian's minute
-        comedian: profile name (louis, kam, default, etc.)
+        comedian: profile name (louis, kam, default, etc.) or freak slug
         clone_id: Fish voice clone ID (None = default voice)
         output_name: output file name (auto-generated if None)
+        seal_dir: also write freaktown sealed-set.v1 bundle (seal_set.py)
 
     Returns:
         RenderResult with audio path, timeline, and stats
@@ -555,6 +557,15 @@ def render_minute(
 
     # 9. Stats
     stats = compute_stats(beats, profile, comedian)
+
+    # 10. Optional sealed-set export (needs post-render beats for durations)
+    if seal_dir:
+        import seal_set
+        char_path = FREAKS / comedian / "character.json"
+        character = json.loads(char_path.read_text()) if char_path.exists() else {}
+        sealed = seal_set.seal(beats, profile, character, comedian,
+                               audio_path, Path(seal_dir))
+        stats["sealed"] = sealed
 
     return RenderResult(
         audio_path=str(audio_path),
@@ -698,6 +709,7 @@ if __name__ == "__main__":
     p.add_argument("--comedian", default="default", help="Comedian profile")
     p.add_argument("--clone", help="Fish voice clone ID")
     p.add_argument("--out", help="Output name")
+    p.add_argument("--seal", help="Also write sealed-set.v1 bundle to DIR (freaktown)")
     p.add_argument("--dry-run", action="store_true", help="Show plan without rendering")
     args = p.parse_args()
 
@@ -722,7 +734,8 @@ if __name__ == "__main__":
                   f"pause={b['pause_before']:.2f}s speed={d['speed']:.2f} "
                   f"cue={d['emotion_cue']:15s} | {b['text'][:40]}...")
     else:
-        result = render_minute(text, args.comedian, args.clone, args.out)
+        result = render_minute(text, args.comedian, args.clone, args.out,
+                               seal_dir=args.seal)
         print(f"\nRendered: {result.audio_path}")
         print(f"Duration: {result.duration_ms/1000:.1f}s")
         print(f"Beats: {result.stats['n_beats']}")
