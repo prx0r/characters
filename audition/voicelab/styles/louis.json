@@ -1,0 +1,321 @@
+{
+ "schema": "delivery_style.v1",
+ "slug": "louis",
+ "archetype": null,
+ "generated_at": "2026-10-21T18:58:52Z",
+ "measured": {
+  "n_clips": 12,
+  "wpm": {
+   "median": 169.6,
+   "iqr": [
+    113.8,
+    226.6
+   ]
+  },
+  "syll_per_s": {
+   "median": 3.88,
+   "iqr": [
+    2.57,
+    5.14
+   ]
+  },
+  "pause_s": {
+   "p25": 0.85,
+   "median": 1.25,
+   "p75": 1.73,
+   "p90": 2.15,
+   "mean": 1.3
+  },
+  "hold": null,
+  "acoustics": null
+ },
+ "engine_recipe": {
+  "wpm": 170,
+  "syll_per_s": 3.88,
+  "speed_scale": 0.84,
+  "temperature": 0.55,
+  "pause_ladder": [
+   0.85,
+   1.73,
+   1.25
+  ],
+  "pause_jitter": 0.25,
+  "coupling_ratio": 2.0,
+  "volume_db": 0.0,
+  "dynamics_db": null,
+  "pitch_std_st": null,
+  "f0_median_hz": null,
+  "centroid_hz": null,
+  "emotion_cues": [
+   "[neutral]",
+   "[calm]"
+  ],
+  "emotion_forbidden": []
+ },
+ "technique_mix": {
+  "setup_punchline": 0.326,
+  "callback": 0.326,
+  "status_reversal": 0.186,
+  "escalation": 0.07,
+  "self_deprecation": 0.047,
+  "misdirection": 0.023,
+  "deadpan": 0.023
+ },
+ "clips": [
+  "louis_c01",
+  "louis_c02",
+  "louis_c03",
+  "louis_c04",
+  "louis_c05",
+  "louis_c06",
+  "louis_c07",
+  "louis_c08",
+  "louis_c09",
+  "louis_c10",
+  "louis_c11",
+  "louis_roadrage"
+ ],
+ "method": "style_harvest.py (word-timing scribes; acoustics from dataset delivery blocks when present)",
+ "per_clip": [
+  {
+   "n_words": 322,
+   "duration_s": 150.6,
+   "wpm": 128.3,
+   "speech_wpm": 163.3,
+   "syll_per_s": 3.74,
+   "pause_s": {
+    "p25": 0.89,
+    "median": 5.56,
+    "p75": 5.56,
+    "p90": 5.57,
+    "mean": 3.23,
+    "n_holds": 10,
+    "n_gaps": 3,
+    "total_s": 32.3
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c01"
+  },
+  {
+   "n_words": 221,
+   "duration_s": 151.44,
+   "wpm": 87.6,
+   "speech_wpm": 113.8,
+   "syll_per_s": 2.57,
+   "pause_s": {
+    "p25": 1.26,
+    "median": 1.46,
+    "p75": 5.34,
+    "p90": 5.35,
+    "mean": 2.5,
+    "n_holds": 14,
+    "n_gaps": 3,
+    "total_s": 35.0
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c02"
+  },
+  {
+   "n_words": 408,
+   "duration_s": 150.13,
+   "wpm": 163.1,
+   "speech_wpm": 194.4,
+   "syll_per_s": 4.6,
+   "pause_s": {
+    "p25": 0.82,
+    "median": 1.65,
+    "p75": 2.38,
+    "p90": 2.38,
+    "mean": 1.62,
+    "n_holds": 15,
+    "n_gaps": 2,
+    "total_s": 24.2
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c03"
+  },
+  {
+   "n_words": 311,
+   "duration_s": 150.26,
+   "wpm": 124.2,
+   "speech_wpm": 174.9,
+   "syll_per_s": 3.94,
+   "pause_s": {
+    "p25": 0.8,
+    "median": 1.18,
+    "p75": 1.46,
+    "p90": 1.48,
+    "mean": 1.09,
+    "n_holds": 40,
+    "n_gaps": 2,
+    "total_s": 43.5
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c04"
+  },
+  {
+   "n_words": 297,
+   "duration_s": 150.28,
+   "wpm": 118.6,
+   "speech_wpm": 164.5,
+   "syll_per_s": 3.9,
+   "pause_s": {
+    "p25": 0.92,
+    "median": 1.31,
+    "p75": 6.16,
+    "p90": 6.16,
+    "mean": 2.8,
+    "n_holds": 15,
+    "n_gaps": 3,
+    "total_s": 41.9
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c05"
+  },
+  {
+   "n_words": 459,
+   "duration_s": 150.26,
+   "wpm": 183.3,
+   "speech_wpm": 193.2,
+   "syll_per_s": 4.25,
+   "pause_s": {
+    "p25": 0.8,
+    "median": 0.9,
+    "p75": 0.9,
+    "p90": 0.9,
+    "mean": 0.86,
+    "n_holds": 9,
+    "n_gaps": 6,
+    "total_s": 7.7
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c06"
+  },
+  {
+   "n_words": 406,
+   "duration_s": 150.09,
+   "wpm": 162.3,
+   "speech_wpm": 226.6,
+   "syll_per_s": 5.14,
+   "pause_s": {
+    "p25": 0.73,
+    "median": 1.04,
+    "p75": 1.31,
+    "p90": 2.73,
+    "mean": 1.22,
+    "n_holds": 35,
+    "n_gaps": 2,
+    "total_s": 42.6
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c07"
+  },
+  {
+   "n_words": 364,
+   "duration_s": 150.58,
+   "wpm": 145.0,
+   "speech_wpm": 166.5,
+   "syll_per_s": 3.79,
+   "pause_s": {
+    "p25": 1.08,
+    "median": 1.1,
+    "p75": 1.92,
+    "p90": 1.92,
+    "mean": 1.39,
+    "n_holds": 14,
+    "n_gaps": 4,
+    "total_s": 19.4
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c08"
+  },
+  {
+   "n_words": 248,
+   "duration_s": 150.35,
+   "wpm": 99.0,
+   "speech_wpm": 127.1,
+   "syll_per_s": 3.01,
+   "pause_s": {
+    "p25": 0.99,
+    "median": 1.33,
+    "p75": 2.57,
+    "p90": 2.87,
+    "mean": 1.59,
+    "n_holds": 21,
+    "n_gaps": 1,
+    "total_s": 33.3
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c09"
+  },
+  {
+   "n_words": 338,
+   "duration_s": 150.35,
+   "wpm": 134.9,
+   "speech_wpm": 177.9,
+   "syll_per_s": 4.12,
+   "pause_s": {
+    "p25": 0.92,
+    "median": 1.48,
+    "p75": 1.53,
+    "p90": 1.61,
+    "mean": 1.21,
+    "n_holds": 30,
+    "n_gaps": 4,
+    "total_s": 36.4
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c10"
+  },
+  {
+   "n_words": 313,
+   "duration_s": 150.06,
+   "wpm": 125.1,
+   "speech_wpm": 167.9,
+   "syll_per_s": 3.87,
+   "pause_s": {
+    "p25": 0.82,
+    "median": 0.92,
+    "p75": 1.3,
+    "p90": 1.9,
+    "mean": 1.09,
+    "n_holds": 35,
+    "n_gaps": 1,
+    "total_s": 38.2
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_c11"
+  },
+  {
+   "n_words": 321,
+   "duration_s": 117.98,
+   "wpm": 163.2,
+   "speech_wpm": 171.2,
+   "syll_per_s": 3.77,
+   "pause_s": {
+    "p25": 0.82,
+    "median": 1.12,
+    "p75": 1.32,
+    "p90": 1.48,
+    "mean": 1.09,
+    "n_holds": 5,
+    "n_gaps": 38,
+    "total_s": 5.5
+   },
+   "hold": null,
+   "acoustics": null,
+   "clip": "louis_roadrage"
+  }
+ ]
+}

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import time
@@ -24,7 +25,10 @@ _model = None
 
 
 def asr(audio_path: Path) -> str:
-    """CF whisper primary (fast on short clean renders, ~4s), local tiny fallback."""
+    """Bark 3.0 opt-in (VERIFY_ASR=bark); CF whisper primary; local tiny fallback."""
+    if os.getenv("VERIFY_ASR", "").lower() == "bark":
+        import bark_asr
+        return bark_asr.transcribe(audio_path)["text"]
     try:
         import cf_asr
         d = cf_asr.transcribe(audio_path)

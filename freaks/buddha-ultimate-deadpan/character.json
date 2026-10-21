@@ -59,7 +59,32 @@
   "vibe": "deadpan",
   "voice": {
     "provider": "edge-tts",
-    "voice_id": "en-US-GuyNeural"
+    "voice_id": "en-US-GuyNeural",
+    "tags": {
+      "tone": ["detached", "unhurried", "warm-under-flat"],
+      "register": "mid-low male",
+      "texture": "slightly dark, unhurried storyteller",
+      "casting_query": "calm dry male narrator deadpan storytelling low warm",
+      "f0_target_hz": 127,
+      "reference_text": "Twenty-five centuries awake and still doing club spots. It's fine. Nothing is fine. That's the teaching."
+    },
+    "fish": {
+      "reference_id": "2821f84c62ae4c9291d6480fcaadd9ea",
+      "title": "Calm Monotone Narrator",
+      "method": "library_search",
+      "matched_tags": ["male", "low", "calm", "monotone", "measured", "storytelling"],
+      "measured": {"f0_hz": 114, "pitch_std_st": 9.84, "dyn_db": 22.0, "centroid_hz": 1415},
+      "picked_at": "2026-10-21T19:20:00Z",
+      "note": "A/B vs Synthetic Monotone (f0 163 too high); pitch_std 9.84 ~ Norm target 10.13"
+    }
+  },
+  "delivery": {
+    "style": "norm_macdonald",
+    "archetype": "suspension_deadpan",
+    "overrides": {
+      "punchline_hold_ms": 1500,
+      "temperature": 0.5
+    }
   },
   "dramatic_core": {
     "want": "nothing (this is the problem)",

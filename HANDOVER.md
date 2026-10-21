@@ -4,6 +4,15 @@ Read in order: `docs/THE-VISION.md` (owner, verbatim) → `AGENTS.md`
 (hard rules + how every pipeline works) → `docs/ENGINE-MAP.md` (deep
 file map) → this file (live state).
 
+## Freak SDK pilot (2026-10-21, on box clone)
+Character profiles carry `voice.tags` + `delivery.style` (SPEC-FREAK-SDK.md).
+`audition/style_harvest.py` turns scribe clips into delivery_style.v1
+(Louis self-test PASS); `delivery_engine.load_profile` reads freaks→styles
+(first: buddha-ultimate-deadpan → norm_macdonald recipe + cast Fish voice
+"Calm Monotone Narrator" 2821f84c…, all $0). Styles in `voicelab/styles/`.
+Not yet: archetype pooling beyond norm, more deadpan exemplar clips
+(Hedberg/Wright), MCP wrapper.
+
 ## Hard rules (absolute, violations happened)
 1. Synthesis = `s2.1-pro-free` ONLY ($0), ALWAYS. MCP TTS forbidden
    for renders (plan credits). MCP free = clones, search, balance.

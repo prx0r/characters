@@ -1,0 +1,102 @@
+{
+ "schema": "delivery_style.v1",
+ "slug": "norm_macdonald",
+ "archetype": "deadpan",
+ "generated_at": "2026-10-21T18:58:52Z",
+ "measured": {
+  "n_clips": 1,
+  "wpm": {
+   "median": 183.6,
+   "iqr": [
+    183.6,
+    183.6
+   ]
+  },
+  "syll_per_s": {
+   "median": 3.72,
+   "iqr": [
+    3.72,
+    3.72
+   ]
+  },
+  "pause_s": {
+   "p25": 0.91,
+   "median": 0.98,
+   "p75": 0.98,
+   "p90": 0.99,
+   "mean": 0.95
+  },
+  "hold": null,
+  "acoustics": {
+   "wpm": 192.0,
+   "pitch_std": 10.13,
+   "median_hz": 127.0,
+   "dyn_db": 13.3,
+   "centroid": 1783.0
+  }
+ },
+ "engine_recipe": {
+  "wpm": 184,
+  "syll_per_s": 3.72,
+  "speed_scale": 0.8,
+  "temperature": 0.55,
+  "pause_ladder": [
+   0.91,
+   0.98,
+   0.98
+  ],
+  "pause_jitter": 0.25,
+  "coupling_ratio": 1.08,
+  "volume_db": -3.3,
+  "dynamics_db": 13.3,
+  "pitch_std_st": 10.13,
+  "f0_median_hz": 127.0,
+  "centroid_hz": 1783.0,
+  "emotion_cues": [
+   "[indifferent]",
+   "[calm]",
+   "[serious]"
+  ],
+  "emotion_forbidden": [
+   "[excited]",
+   "[happy]",
+   "[manic]",
+   "[energetic]"
+  ]
+ },
+ "technique_mix": {
+  "status_reversal": 1.0
+ },
+ "clips": [
+  "norm_moth"
+ ],
+ "method": "style_harvest.py (word-timing scribes; acoustics from dataset delivery blocks when present)",
+ "per_clip": [
+  {
+   "n_words": 338,
+   "duration_s": 119.98,
+   "wpm": 169.0,
+   "speech_wpm": 183.6,
+   "syll_per_s": 3.72,
+   "pause_s": {
+    "p25": 0.91,
+    "median": 0.98,
+    "p75": 0.98,
+    "p90": 0.99,
+    "mean": 0.95,
+    "n_holds": 10,
+    "n_gaps": 5,
+    "total_s": 9.5
+   },
+   "hold": null,
+   "acoustics": {
+    "wpm": 192.0,
+    "pitch_std": 10.13,
+    "median_hz": 127.0,
+    "dyn_db": 13.3,
+    "centroid": 1783.0
+   },
+   "clip": "norm_moth"
+  }
+ ]
+}

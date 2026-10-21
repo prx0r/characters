@@ -27,6 +27,8 @@ from typing import Any
 
 HERE = Path(__file__).parent
 LAB = HERE / "voicelab"
+STYLES = LAB / "styles"
+FREAKS = HERE.parent / "freaks"
 AUDIO_DIR = HERE / "audio"
 AUDIO_DIR.mkdir(exist_ok=True)
 
@@ -97,8 +99,50 @@ PROFILES = {
 }
 
 
+def load_style_profile(character_slug: str) -> dict | None:
+    """freaks/<slug>/character.json delivery.style → engine profile (SPEC-FREAK-SDK)."""
+    cpath = FREAKS / character_slug / "character.json"
+    if not cpath.exists():
+        return None
+    char = json.loads(cpath.read_text())
+    delivery = char.get("delivery") or {}
+    style_key = delivery.get("style")
+    if not style_key:
+        return None
+    spath = STYLES / f"{style_key}.json"
+    if not spath.exists():
+        return None
+    style = json.loads(spath.read_text())
+    recipe = style.get("engine_recipe", {})
+    overrides = delivery.get("overrides") or {}
+    ladder = list(recipe.get("pause_ladder", [0.5, 1.3, 0.9]))
+    hold_ms = overrides.get("punchline_hold_ms")
+    if hold_ms:
+        ladder[1] = max(ladder[1], hold_ms / 1000.0)
+    return {
+        "wpm": recipe.get("wpm", 180),
+        "pause_ladder": ladder,
+        "pause_jitter": recipe.get("pause_jitter", 0.25),
+        "coupling_ratio": recipe.get("coupling_ratio", 1.35),
+        "temperature": overrides.get("temperature", recipe.get("temperature", 0.6)),
+        "speed_scale": recipe.get("speed_scale", 1.0),
+        "emotion_cues": recipe.get("emotion_cues", ["[neutral]"]),
+        "emotion_forbidden": recipe.get("emotion_forbidden", []),
+        "dynamics_db": recipe.get("dynamics_db"),
+        "pitch_std_st": recipe.get("pitch_std_st"),
+        "volume_db": recipe.get("volume_db", 0.0),
+        "techniques": style.get("technique_mix", {}),
+        "style_slug": style_key,
+        "source": f"voicelab/styles/{style_key}.json",
+        "voice_fish_id": (char.get("voice") or {}).get("fish", {}).get("reference_id"),
+    }
+
+
 def load_profile(comedian: str) -> dict:
-    """Load character profile from voice_engine.json or fallback."""
+    """Character slug (delivery.style) → voice_engine.json → fallback."""
+    styled = load_style_profile(comedian)
+    if styled:
+        return styled
     ve_path = LAB / "voice_engine.json"
     if ve_path.exists():
         engine = json.loads(ve_path.read_text())
@@ -325,7 +369,7 @@ def speed_to_fish(base_speed: float, beat_speed: float) -> float:
 
 
 def generate_direction(beat: dict, profile: dict) -> dict:
-    """Generate Fish TTS direction for a beat."""
+    """Generate Fish TTS direction for a beat (style-aware)."""
     mech = beat["mechanism"]
     bt = beat["beat_type"]
 
@@ -337,6 +381,14 @@ def generate_direction(beat: dict, profile: dict) -> dict:
         cue = "[confident]"
     elif bt == "closer":
         cue = "[warm]"
+
+    # Style vocabulary: forbidden cues fall back to the style's first allowed
+    forbidden = set(profile.get("emotion_forbidden") or [])
+    allowed = profile.get("emotion_cues") or []
+    if cue in forbidden:
+        cue = allowed[0] if allowed else "[neutral]"
+    if profile.get("temperature") is not None:
+        temp = profile["temperature"]
 
     # Tone marker (never outside clean zone)
     speed = speed_to_fish(profile.get("speed_scale", 1.0), beat.get("speed", 1.0))
@@ -383,7 +435,7 @@ def render_beat(beat: dict, profile: dict, clone_id: str | None = None) -> dict:
         text,
         modulator="neutral" if not cue else cue.strip("[]"),
         prosody={"speed": speed, "temperature": temp},
-        voice=clone_id,
+        voice=clone_id or profile.get("voice_fish_id"),
     )
 
     return {
