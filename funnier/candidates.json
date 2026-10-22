@@ -629,5 +629,29 @@
   "published": "2026-10-19",
   "found": "2026-10-20",
   "status": "pending"
+ },
+ {
+  "id": "23QuHqz4sZw",
+  "comic": "Chris Rock",
+  "title": "Janelle James reflects on her mentorship from Chris Rock #ShutUpEvan #JanelleJames",
+  "channel": "Netflix Is A Joke",
+  "kind": "human",
+  "media": "youtube",
+  "format": "vertical",
+  "published": "2026-10-21",
+  "found": "2026-10-22",
+  "status": "pending"
+ },
+ {
+  "id": "569hMXUA1Tg",
+  "comic": "Mark Normand",
+  "title": "Mark Normand Almost Makes Matan Break !!!! #shorts",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "vertical",
+  "published": "2026-10-21",
+  "found": "2026-10-22",
+  "status": "pending"
  }
 ]
