@@ -24,7 +24,7 @@ const WHY_MAX = 40
 // watch signals (lexicon #signals): whole seconds, all optional; anything else is dropped
 const SIG_INT = { leftWatchedSec: 36000, rightWatchedSec: 36000, rightPct: 100, replays: 1000, leftSkippedAt: 36000, rightSkippedAt: 36000 }
 const SIG_ARR = ['leftSeekTargets', 'leftSeekFrom', 'rightSeekTargets', 'rightSeekFrom']
-const SIG_BOOL = ['skippedAhead', 'leftSkipped', 'rightSkipped', 'timedOut'] // timedOut: a pass because the 10 s ballot ran out (events only)
+const SIG_BOOL = ['skippedAhead', 'leftSkipped', 'rightSkipped', 'timedOut', 'lowWatch'] // timedOut: a pass because the 10 s ballot ran out (events only); lowWatch: picked before both clips were watched enough (half weight in the tally)
 export function cleanSignals(x) {
   if (!x || typeof x !== 'object' || Array.isArray(x)) return null
   const o = {}
@@ -184,8 +184,49 @@ app.delete('/me', auth, async (c) => {
 })
 
 // ---------- votes ----------
-app.post('/votes', auth, async (c) => {
-  const u = c.get('user'), b = await body(c), list = Array.isArray(b?.votes) ? b.votes : Array.isArray(b) ? b : b && b.a ? [b] : []
+// With a session: the user's votes. Without one: a signed-out pick with the browser's random device id (body.device or the
+// x-funnier-device header) lands in anon_votes, rate-limited per device and per IP; the tally counts it at reduced weight.
+const ANON_BATCH = 100, ANON_DEVICE_HOUR = 120, ANON_IP_HOUR = 600
+async function ipKey(c) {
+  const ip = c.req.header('cf-connecting-ip') || c.req.header('x-real-ip') || 'local'
+  const h = new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode((c.env.SESSION_SECRET || '') + '|ip|' + ip)))
+  return [...h.slice(0, 8)].map((x) => x.toString(16).padStart(2, '0')).join('')
+}
+async function anonVotes(c, b) {
+  const device = String(b?.device ?? c.req.header('x-funnier-device') ?? '')
+  if (!DEVICE.test(device)) return c.json({ error: 'unauthorized' }, 401)
+  const list = Array.isArray(b?.votes) ? b.votes : b && b.a ? [b] : []
+  if (!list.length) return c.json({ error: 'no_votes' }, 400)
+  if (list.length > ANON_BATCH) return c.json({ error: 'too_many', max: ANON_BATCH }, 400)
+  const DB = c.env.DB, ip = await ipKey(c), t0 = Date.now(), hour = t0 - 3600e3
+  const [d, i] = await DB.batch([DB.prepare('SELECT COUNT(*) AS n FROM anon_votes WHERE device = ? AND received_at > ?').bind(device, hour),
+    DB.prepare('SELECT COUNT(*) AS n FROM anon_votes WHERE ip = ? AND received_at > ?').bind(ip, hour)])
+  const room = Math.min(ANON_DEVICE_HOUR - (d.results?.[0]?.n || 0), ANON_IP_HOUR - (i.results?.[0]?.n || 0))
+  if (room <= 0) { console.log('429 anon votes', device.slice(0, 6)); return c.json({ error: 'rate_limited', retry_sec: 600 }, 429) }
+  const take = list.slice(0, room), stmts = []
+  let skipped = 0
+  for (const v of take) {
+    if (!v || !CLIP.test(v.a || '') || !CLIP.test(v.b || '') || v.a === v.b || (v.winner !== v.a && v.winner !== v.b)) { skipped++; continue }
+    const [a, bb] = sorted(v.a, v.b)
+    const t = typeof v.createdAt === 'string' && !isNaN(Date.parse(v.createdAt)) ? new Date(Math.min(Date.parse(v.createdAt), t0)).toISOString() : now()
+    const ms = Number.isInteger(v.ms) && v.ms >= 0 && v.ms < 3600e3 ? v.ms : null
+    const daily = typeof v.daily === 'string' && DAY.test(v.daily) ? v.daily : null
+    const sg = cleanSignals(v.signals), sig = sg ? JSON.stringify({ shown: [v.a, v.b], ...JSON.parse(sg) }) : null
+    // one row per device per pair: the latest pick wins (same rule as signed-in votes and the public tally)
+    stmts.push(DB.prepare(`INSERT INTO anon_votes (device, ip, a, b, winner, ms, daily, signals, created_at, received_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      ON CONFLICT (device, a, b) DO UPDATE SET winner = excluded.winner, ms = excluded.ms, daily = excluded.daily, signals = COALESCE(excluded.signals, anon_votes.signals),
+        ip = excluded.ip, created_at = excluded.created_at, received_at = excluded.received_at
+      WHERE excluded.created_at >= anon_votes.created_at`).bind(device, ip, a, bb, v.winner, ms, daily, sig, t, t0))
+  }
+  if (stmts.length) await DB.batch(stmts)
+  // n: how many leading rows of the list were processed (the rest hit the hourly limit and can be re-sent later)
+  return c.json({ ok: true, anon: true, saved: take.length - skipped, skipped, n: take.length, limited: list.length - take.length })
+}
+app.post('/votes', async (c) => {
+  const su = await currentUser(c)
+  if (!su) return anonVotes(c, await body(c))
+  c.set('user', su)
+  const u = su, b = await body(c), list = Array.isArray(b?.votes) ? b.votes : Array.isArray(b) ? b : b && b.a ? [b] : []
   if (!list.length) return c.json({ error: 'no_votes' }, 400)
   if (list.length > 500) return c.json({ error: 'too_many', max: 500 }, 400)
   const DB = c.env.DB, stmts = [], pairs = [], seen = new Set()
@@ -337,10 +378,10 @@ app.get('/stats/trending', async (c) => {
 // voter = 'd1:' + first 16 hex of HMAC-SHA256(EXPORT_SALT, user_id). No email, name, username, country or user id.
 // Paginated by (created_at, rowid): ?since=<ISO> (inclusive lower bound) &cursor=<next from the last page> &limit=1..1000.
 let saltKey = null, saltFor = null
-async function voterHash(env, uid) {
+async function voterHash(env, uid, prefix = 'd1:') {
   if (!saltKey || saltFor !== env.EXPORT_SALT) { saltKey = await crypto.subtle.importKey('raw', new TextEncoder().encode(env.EXPORT_SALT), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']); saltFor = env.EXPORT_SALT }
   const sig = new Uint8Array(await crypto.subtle.sign('HMAC', saltKey, new TextEncoder().encode('funnier-voter:' + uid)))
-  return 'd1:' + [...sig.slice(0, 8)].map((x) => x.toString(16).padStart(2, '0')).join('')
+  return prefix + [...sig.slice(0, 8)].map((x) => x.toString(16).padStart(2, '0')).join('')
 }
 const EXPORT_MAX_AGE = 300
 async function exportPage(c, kind) {
@@ -352,16 +393,18 @@ async function exportPage(c, kind) {
   const s0 = since && !isNaN(Date.parse(since)) ? new Date(Date.parse(since)).toISOString() : '1970-01-01T00:00:00.000Z'
   const m = cur.match(/^(\d{4}-\d\d-\d\dT[\d:.]+Z)~(\d{1,15})$/)
   const [ct, cr] = m ? [m[1], Number(m[2])] : [s0, -1]
-  const table = kind === 'votes' ? 'votes' : 'watch_events'
-  const cols = kind === 'votes' ? 'rowid AS rid, user_id, a, b, winner, ms, daily, signals, created_at' : 'rowid AS rid, user_id, kind, a, b, stage, clip, watched_sec, ms, daily, signals, created_at'
+  const table = kind === 'votes' ? 'votes' : kind === 'anon' ? 'anon_votes' : 'watch_events'
+  const cols = kind === 'votes' ? 'rowid AS rid, user_id, a, b, winner, ms, daily, signals, created_at'
+    : kind === 'anon' ? 'rowid AS rid, device AS user_id, a, b, winner, ms, daily, signals, created_at'
+    : 'rowid AS rid, user_id, kind, a, b, stage, clip, watched_sec, ms, daily, signals, created_at'
   const r = await c.env.DB.prepare(`SELECT ${cols} FROM ${table} WHERE created_at >= ? AND (created_at > ? OR (created_at = ? AND rowid > ?)) ORDER BY created_at, rowid LIMIT ?`).bind(s0, ct, ct, cr, limit + 1).all()
   const rows = r.results || [], more = rows.length > limit, page = rows.slice(0, limit)
   const out = []
   for (const x of page) {
     const sg = jparse(x.signals, null), signals = sg && typeof sg === 'object' ? sg : undefined
-    const base = { a: x.a, b: x.b, createdAt: x.created_at, voter: await voterHash(c.env, x.user_id), ...(Number.isInteger(x.ms) ? { ms: x.ms } : {}), ...(x.daily ? { daily: x.daily } : {}),
+    const base = { a: x.a, b: x.b, createdAt: x.created_at, voter: kind === 'anon' ? await voterHash(c.env, 'device:' + x.user_id, 'dv:') : await voterHash(c.env, x.user_id), ...(Number.isInteger(x.ms) ? { ms: x.ms } : {}), ...(x.daily ? { daily: x.daily } : {}),
       ...(signals ? { signals } : {}), ...(signals?.policy ? { policy: signals.policy } : {}) }
-    out.push(kind === 'votes' ? { ...base, winner: x.winner, basis: 'watched', source: 'd1' }
+    out.push(kind === 'votes' || kind === 'anon' ? { ...base, winner: x.winner, basis: signals?.lowWatch ? 'partial' : 'watched', source: kind === 'anon' ? 'anon' : 'd1' }
       : { ...base, kind: x.kind, ...(x.stage ? { stage: x.stage } : {}), ...(x.clip ? { clip: x.clip } : {}), ...(Number.isInteger(x.watched_sec) ? { watchedSec: x.watched_sec } : {}), source: 'd1' })
   }
   const last = page[page.length - 1]
@@ -372,6 +415,8 @@ async function exportPage(c, kind) {
 }
 app.get('/export/votes', (c) => exportPage(c, 'votes'))
 app.get('/export/events', (c) => exportPage(c, 'events'))
+// signed-out (device-id) votes: voter = 'dv:' + first 16 hex of HMAC-SHA256(EXPORT_SALT, 'device:' + device id); no IP
+app.get('/export/anon', (c) => exportPage(c, 'anon'))
 
 // the interpretable humour profile, fitted offline from bit theory features (tools/humour.mjs); null until there is enough data
 app.get('/me/humour', auth, async (c) => {

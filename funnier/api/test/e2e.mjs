@@ -57,7 +57,8 @@ execSync('npx wrangler d1 execute funnier --local --file migrations/0008_charact
 execSync('npx wrangler d1 execute funnier --local --file migrations/0009_watches.sql', { stdio: 'ignore' }) // idempotent
 try { execSync('npx wrangler d1 execute funnier --local --file migrations/0010_feeds_categories.sql', { stdio: 'ignore' }) } catch {} // already applied -> duplicate column
 execSync('npx wrangler d1 execute funnier --local --file migrations/0011_unplayable_events.sql', { stdio: 'ignore' }) // idempotent (table rebuild)
-execSync(`npx wrangler d1 execute funnier --local --command "DELETE FROM votes; DELETE FROM friends; DELETE FROM invites; DELETE FROM invite_opens; DELETE FROM users; DELETE FROM laughs; DELETE FROM clip_durations; DELETE FROM clip_audio; DELETE FROM watch_events; DELETE FROM humour_profiles; DELETE FROM profiles; DELETE FROM specials_log; DELETE FROM sets; DELETE FROM characters; DELETE FROM model_versions; DELETE FROM watches; DELETE FROM categories; DELETE FROM category_follows;"`, { stdio: 'ignore' })
+execSync('npx wrangler d1 execute funnier --local --file migrations/0012_anon_votes.sql', { stdio: 'ignore' }) // idempotent
+execSync(`npx wrangler d1 execute funnier --local --command "DELETE FROM votes; DELETE FROM friends; DELETE FROM invites; DELETE FROM invite_opens; DELETE FROM users; DELETE FROM laughs; DELETE FROM clip_durations; DELETE FROM clip_audio; DELETE FROM watch_events; DELETE FROM humour_profiles; DELETE FROM profiles; DELETE FROM specials_log; DELETE FROM sets; DELETE FROM characters; DELETE FROM model_versions; DELETE FROM watches; DELETE FROM categories; DELETE FROM category_follows; DELETE FROM anon_votes;"`, { stdio: 'ignore' })
 const PORT = 8797, BASE = `http://127.0.0.1:${PORT}`
 const dev = spawn('npx', ['wrangler', 'dev', '--local', '--port', String(PORT), '--ip', '127.0.0.1',
   '--var', `GOOGLE_CLIENT_ID:${CID}`, '--var', 'ALLOW_TEST_JWKS:1', '--var', 'TEST_JWKS_URL:http://127.0.0.1:8798/jwks', '--var', 'SESSION_SECRET:local-test-secret-not-for-prod', '--var', 'EXPORT_SALT:local-export-salt-not-for-prod'], { stdio: ['ignore', 'pipe', 'pipe'], detached: true })
@@ -66,7 +67,10 @@ const stop = () => { try { process.kill(-dev.pid) } catch {} jwksSrv.close() }
 try {
   for (let i = 0; i < 60; i++) { try { const r = await fetch(BASE + '/'); if (r.ok) break } catch {} await sleep(500) }
   await smoke(BASE)
-  const J = async (method, p, tok, b) => { const r = await fetch(BASE + p, { method, headers: { origin: ORIGIN, 'content-type': 'application/json', ...(tok ? { authorization: 'Bearer ' + tok } : {}) }, body: b ? JSON.stringify(b) : undefined }); let j = null; try { j = await r.json() } catch {} return { s: r.status, j, h: r.headers } }
+  // wrangler dev's local runtime is occasionally restarted under us after a `wrangler d1 execute --local` (the request then
+  // dies with "other side closed"): wait for it to answer again and retry once
+  const fetch0 = fetch, refetch = async (u, o) => { try { return await fetch0(u, o) } catch (e) { for (let i = 0; i < 40; i++) { await sleep(500); try { if ((await fetch0(BASE + '/')).ok) break } catch {} } console.log('(retried after a dev restart)', o?.method || 'GET', u.replace(BASE, '')); return fetch0(u, o) } }
+  const J = async (method, p, tok, b) => { const r = await refetch(BASE + p, { method, headers: { origin: ORIGIN, 'content-type': 'application/json', ...(tok ? { authorization: 'Bearer ' + tok } : {}) }, body: b ? JSON.stringify(b) : undefined }); let j = null; try { j = await r.json() } catch {} return { s: r.status, j, h: r.headers } }
 
   let r = await J('POST', '/auth/google', null, { credential: await idToken('g1', {}, 'someone-else') })
   ok(r.s === 401, 'ID token with the wrong audience -> 401')
@@ -344,6 +348,40 @@ try {
     const me2 = await J('GET', '/me', t2); ok(!JSON.stringify(ex2).includes(me2.j.user.id), 'the hash is not the user id')
     const ev = await (await fetch(BASE + '/export/events?since=2026-10-10T00:00:00Z')).json()
     ok(ev.events?.some((e) => e.kind === 'pass' && e.b === 'expclipDDDD' && e.signals?.timedOut === true && e.policy?.m === 'explore' && e.voter === v0.voter), 'GET /export/events: passes with signals + policy, same voter hash')
+  }
+  { // signed-out votes: device id, no session; rate-limited per device and per IP; deduped per device per pair
+    const sqlA = (q) => JSON.parse(execSync(`npx wrangler d1 execute funnier --local --json --command "${q}"`, { encoding: 'utf8' }))[0].results
+    const AA = 'anonclipAAA', AB = 'anonclipBBB', t0 = Date.now()
+    r = await J('POST', '/votes', null, { votes: [{ a: AA, b: AB, winner: AA, createdAt: new Date(t0 - 60e3).toISOString() }] })
+    ok(r.s === 401, `POST /votes without a session or device id -> 401 (${r.s})`)
+    r = await J('POST', '/votes', null, { device: 'bad id!', votes: [{ a: AA, b: AB, winner: AA }] }); ok(r.s === 401, 'a malformed device id -> 401')
+    r = await J('POST', '/votes', null, { device: 'devAnonVote01', votes: [{ a: AB, b: AA, winner: AA, ms: 2500, createdAt: new Date(t0 - 60e3).toISOString(), signals: { lowWatch: true, leftWatchedSec: 8, policy: { m: 'training', v: 'screen-1' } } }, { a: AA, b: AA, winner: AA }] })
+    ok(r.s === 200 && r.j.anon === true && r.j.saved === 1 && r.j.skipped === 1, `signed-out vote with a device id saves (${JSON.stringify(r.j)})`)
+    let rows = sqlA(`SELECT device, a, b, winner, ip, signals FROM anon_votes WHERE device = 'devAnonVote01'`)
+    ok(rows.length === 1 && rows[0].a === AA && rows[0].b === AB && rows[0].winner === AA && /^[0-9a-f]{16}$/.test(rows[0].ip || '') && JSON.parse(rows[0].signals).lowWatch === true, `stored sorted, hashed ip, lowWatch kept (${JSON.stringify(rows[0])})`)
+    ok(sqlA(`SELECT COUNT(*) AS n FROM votes WHERE a = '${AA}'`)[0].n === 0, 'signed-out picks never land in the signed-in votes table')
+    r = await J('POST', '/votes', null, { device: 'devAnonVote01', votes: [{ a: AA, b: AB, winner: AB, createdAt: new Date(t0 - 120e3).toISOString() }] })
+    rows = sqlA(`SELECT winner FROM anon_votes WHERE device = 'devAnonVote01'`); ok(rows.length === 1 && rows[0].winner === AA, 'an older re-send does not overwrite or duplicate (dedupe per device per pair)')
+    r = await J('POST', '/votes', null, { device: 'devAnonVote01', votes: [{ a: AA, b: AB, winner: AB, createdAt: new Date(t0 - 30e3).toISOString() }] })
+    rows = sqlA(`SELECT winner FROM anon_votes WHERE device = 'devAnonVote01'`); ok(rows.length === 1 && rows[0].winner === AB, 'a newer pick on the same pair replaces it')
+    { const x = await fetch(BASE + '/votes', { method: 'POST', headers: { origin: ORIGIN, 'content-type': 'application/json', 'x-funnier-device': 'devAnonHeader1' }, body: JSON.stringify({ votes: [{ a: AA, b: AB, winner: AA }] }) }); const j = await x.json()
+      ok(x.status === 200 && j.saved === 1, 'the device id may come in the x-funnier-device header') }
+    const ex = await (await fetch(BASE + '/export/anon?limit=1000&since=' + encodeURIComponent(new Date(t0 - 3600e3).toISOString()))).json(), raw = JSON.stringify(ex)
+    const ev = (ex.anon || []).find((v) => v.a === AA && v.winner === AB)
+    ok(ev && /^dv:[0-9a-f]{16}$/.test(ev.voter) && ev.source === 'anon' && ev.basis === 'partial' && !raw.includes('devAnonVote01') && !raw.includes(rows[0]?.ip || 'zz') && !/"ip"/.test(raw), `GET /export/anon: hashed device voter, lowWatch -> basis partial, no device id or ip (${raw.slice(0, 200)})`)
+    const ex1 = await (await fetch(BASE + '/export/anon?limit=1000&since=' + encodeURIComponent(new Date(t0 - 7200e3).toISOString()))).json()
+    ok(ex1.anon.length === 2 && new Set(ex1.anon.map((v) => v.voter)).size === 2, 'export: one row per device per pair')
+    // per-device hourly limit (120): 100 + 30 -> 20 saved and 10 limited, then 429
+    const many = (n, k, dev) => Array.from({ length: n }, (_, i) => ({ a: `rl${dev}${k}${String(i).padStart(3, '0')}a`, b: `rl${dev}${k}${String(i).padStart(3, '0')}b`, winner: `rl${dev}${k}${String(i).padStart(3, '0')}a`, createdAt: new Date(t0 - 1000 + i).toISOString() }))
+    r = await J('POST', '/votes', null, { device: 'devAnonRate01', votes: many(101, 'x', 'r') }); ok(r.s === 400 && r.j.error === 'too_many', 'signed-out batch capped at 100')
+    r = await J('POST', '/votes', null, { device: 'devAnonRate01', votes: many(100, 'p', 'r') }); ok(r.s === 200 && r.j.saved === 100, 'first 100 accepted')
+    r = await J('POST', '/votes', null, { device: 'devAnonRate01', votes: many(30, 'q', 'r') }); ok(r.s === 200 && r.j.saved === 20 && r.j.n === 20 && r.j.limited === 10, `device limit: only what fits this hour is taken (${JSON.stringify(r.j)})`)
+    r = await J('POST', '/votes', null, { device: 'devAnonRate01', votes: many(1, 'z', 'r') }); ok(r.s === 429 && r.j.error === 'rate_limited', `device over its hourly limit -> 429 (${r.s})`)
+    r = await J('POST', '/votes', null, { device: 'devAnonRate02', votes: many(1, 'z', 's') }); ok(r.s === 200, 'another device on the same IP still votes')
+    // per-IP hourly limit (600): fill from more devices on the same (local) IP
+    for (let d = 3; d <= 7; d++) await J('POST', '/votes', null, { device: 'devAnonRate0' + d, votes: many(100, 'p', 'd' + d) })
+    r = await J('POST', '/votes', null, { device: 'devAnonFresh1', votes: many(1, 'f', 'f') }); ok(r.s === 429, `IP over its hourly limit -> 429 even for a fresh device (${r.s} ${JSON.stringify(r.j)})`)
+    r = await J('POST', '/votes', t1, { votes: [{ a: AA, b: AB, winner: AA }] }); ok(r.s === 200 && r.j.saved === 1 && !r.j.anon, 'signed-in votes are not affected by the anonymous limits')
   }
   r = await J('POST', '/auth/logout', t1); ok(r.s === 200 && /funnier_session=;/.test(r.h.get('set-cookie') || ''), 'logout clears the cookie')
 } catch (e) { fails.push(String(e)); console.log('ERROR', e, log.slice(-2000)) } finally { stop() }

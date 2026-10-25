@@ -1096,7 +1096,7 @@ function signals() {
 // the watch signals as sent to the API and the AT Protocol record (lexicon `signals`): whole seconds, all optional
 const SIG_INT = ['leftWatchedSec', 'rightWatchedSec', 'replays', 'leftSkippedAt', 'rightSkippedAt']
 const SIG_ARR = ['leftSeekTargets', 'leftSeekFrom', 'rightSeekTargets', 'rightSeekFrom']
-const SIG_BOOL = ['skippedAhead', 'leftSkipped', 'rightSkipped', 'timedOut'] // timedOut: only on passes (the 10 s ballot ran out)
+const SIG_BOOL = ['skippedAhead', 'leftSkipped', 'rightSkipped', 'timedOut', 'lowWatch'] // timedOut: only on passes (the 10 s ballot ran out); lowWatch: picked before both clips were watched enough (half weight)
 function sigPayload(v) {
   if (!v || typeof v !== 'object') return undefined
   const o = {}
@@ -1498,6 +1498,7 @@ async function vote(side) {
   }
   // latest pick per pair counts (same rule as the public tally), so a rewatch replaces the old pick
   LS.set('votes', [...LS.get('votes', []).filter((x) => !x || pairKey(x.a, x.b) !== pairKey(a.id, b.id)), v])
+  if (!signedIn()) queueAnon()
   const preds = LS.get('preds', []); preds.push({ p: prediction.p, hit: prediction.side === side, m: prediction.model }); LS.set('preds', preds.slice(-200))
   engineLearn({ kind: 'vote', a: a.id, b: b.id, winner: v.winner, p: Math.round(1000 * (side === 'L' ? prediction.p : 1 - prediction.p)) / 1000, hit: prediction.side === side,
     rewound: (side === 'L' ? v.leftSeekTargets : v.rightSeekTargets)?.length ? v.winner : null })
@@ -3080,6 +3081,28 @@ function syncEvents() {
   return syncingEv
 }
 function queueEvents() { if (!signedIn()) return; clearTimeout(evT); evT = setTimeout(() => syncEvents(), 1500) }
+// signed-out picks count too: POST /votes with the random device id and no account (the tally weighs them lower and folds
+// them into the account if this device signs in later). Oldest first, at most the last 200, 50 per request; a rate-limited
+// reply keeps the rest for the next pick.
+let syncingAnon = null, anonT = null
+function syncAnon() {
+  if (signedIn() || !CFG.apiBase || LS.get('session', null)) return Promise.resolve()
+  if (syncingAnon) return syncingAnon
+  syncingAnon = (async () => {
+    const dev = deviceId(), key = 'd:' + dev, since = LS.get('anonSyncedDev', '') === key ? LS.get('anonSyncedAt', '') : ''
+    const all = LS.get('votes', []).filter((v) => v && v.a && v.b && v.winner && !v.as && String(v.createdAt) > since)
+      .sort((x, y) => (String(x.createdAt) < String(y.createdAt) ? -1 : 1)).slice(-200)
+    for (let i = 0; i < all.length; i += 50) {
+      const chunk = all.slice(i, i + 50), r = await api('/votes', { method: 'POST', body: { device: dev, votes: chunk.map(apiVote) } })
+      if (!r.ok) return
+      const n = Number.isInteger(r.j?.n) ? Math.min(r.j.n, chunk.length) : chunk.length
+      if (n > 0) { LS.set('anonSyncedAt', String(chunk[n - 1].createdAt)); LS.set('anonSyncedDev', key) }
+      if (n < chunk.length) return
+    }
+  })().catch(() => {}).finally(() => (syncingAnon = null))
+  return syncingAnon
+}
+function queueAnon(ms = 1200) { if (signedIn() || !CFG.apiBase) return; clearTimeout(anonT); anonT = setTimeout(() => syncAnon(), ms) }
 let syncing = null
 function syncVotes() {
   if (!signedIn()) return Promise.resolve()
@@ -3096,7 +3119,7 @@ function syncVotes() {
   return syncing
 }
 async function initAccount() {
-  if (!CFG.apiBase || !LS.get('session', null)) { paintUser(); return }
+  if (!CFG.apiBase || !LS.get('session', null)) { paintUser(); queueAnon(4000); return }
   try { const r = await api('/me'); if (r.ok) { USER = r.j.user; afterSignIn(r.j.needsProfile, false) } } catch {}
   paintUser()
 }

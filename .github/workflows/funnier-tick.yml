@@ -1,0 +1,29 @@
+# Keeps the Funnier recount (funnier.yml) on a real ~15 min beat. GitHub treats `schedule` as best effort and ran
+# funnier.yml's */15 cron only every 2-5 hours, so new votes waited hours to reach the boards. This job waits ~14 min,
+# dispatches funnier.yml, then dispatches itself (workflow_dispatch is the one event GITHUB_TOKEN may trigger).
+# The hourly cron only re-seeds the chain if it ever breaks; the concurrency group keeps at most one tick running and one
+# queued, so extra seeds collapse into the chain. Public repo: standard runners cost nothing.
+name: funnier-tick
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 * * * *'
+permissions:
+  actions: write
+  contents: read
+concurrency:
+  group: funnier-tick
+  cancel-in-progress: false
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Wait, recount, re-arm
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          sleep 840
+          gh workflow run funnier.yml --ref master
+          gh workflow run funnier-tick.yml --ref master

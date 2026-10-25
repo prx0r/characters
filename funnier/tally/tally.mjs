@@ -7,7 +7,7 @@ import { structSim } from '../src/structsim.js'
 import { cleanPolicy } from '../src/policy.js'
 import { resolveParams } from '../src/screening.js'
 import { buildSessions, trainScreening } from './train-screening.mjs'
-import { fetchExport, mergeVotes, eventsForTraining } from './sources.mjs'
+import { fetchExport, mergeVotes, eventsForTraining, ANON_W, LOW_WATCH_W } from './sources.mjs'
 import { fgResolver, arenaPairs, arenaDoc } from './arena.mjs'
 import { trendingDoc, categoryBoard, CURATED, SLUG as CAT_SLUG, comicFacts, isChat } from '../src/feeds.js'
 import { fitPosterior, priorMean } from '../src/rank.js'
@@ -182,7 +182,7 @@ if (process.env.SYNTH) { // test: true strengths Norm>Louis>Rock>Seinfeld
 // ---------- D1 (Google sign-in) votes + passes/skips: the Worker's public anonymised export ----------
 // FUNNIER_API (default https://api.funnier.si; 'off' disables). SYNTH runs make synthetic export rows instead,
 // including copies of some AT votes (the same person signed in to both) that must collapse into one voter.
-let d1Votes = [], d1Events = []
+let d1Votes = [], d1Events = [], anonVotes = []
 if (process.env.SYNTH) {
   const n = Math.round(0.25 * +process.env.SYNTH), tr = { 'Norm Macdonald': 0.8, 'Louis C.K.': 0.4, 'Chris Rock': 0, 'Jerry Seinfeld': -0.4 }
   for (let i = 0; i < n; i++) {
@@ -194,16 +194,33 @@ if (process.env.SYNTH) {
     if (i % 3 === 0) d1Events.push({ voter, kind: 'pass', a: b.id, b: a.id, createdAt: at, signals: { timedOut: true, policy: { m: 'explore', pm: 200, v: SCREEN.version } } })
   }
   for (const v of votes.slice(0, 5)) d1Votes.push({ voter: 'd1:00000000000dd0' + votes.indexOf(v).toString(16).padStart(2, '0'), a: v.a, b: v.b, winner: v.winner, createdAt: v.createdAt })
+  // signed-out device votes (~25% of SYNTH over 13 devices, every 4th under-watched), plus two devices that later signed in:
+  // their copies of D1 picks (same pair, winner, createdAt) must fold into that D1 voter
+  for (let i = 0; i < n; i++) {
+    const a = clips[Math.floor(Math.random() * clips.length)], b = clips[Math.floor(Math.random() * clips.length)]
+    if (a.id === b.id) continue
+    const p = 1 / (1 + Math.exp(-((tr[a.comic] || 0) - (tr[b.comic] || 0))))
+    anonVotes.push({ voter: 'dv:' + (0xdef000 + (i % 13)).toString(16).padStart(16, '0'), a: a.id, b: b.id, winner: Math.random() < p ? a.id : b.id, createdAt: new Date(Date.now() - i * 1700).toISOString(),
+      ms: 2500, basis: i % 4 === 0 ? 'partial' : 'watched', ...(i % 4 === 0 ? { signals: { lowWatch: true } } : {}) })
+  }
+  for (const [j, x] of d1Votes.slice(0, 2).entries()) anonVotes.push({ voter: 'dv:00000000000ee0' + j.toString(16).padStart(2, '0'), a: x.a, b: x.b, winner: x.winner, createdAt: x.createdAt })
 } else if ((process.env.FUNNIER_API || '') !== 'off') {
   const base = process.env.FUNNIER_API || 'https://api.funnier.si'
   try { d1Votes = await fetchExport(base, 'votes'); d1Events = await fetchExport(base, 'events'); console.log('d1 export', d1Votes.length, 'votes', d1Events.length, 'events') }
   catch (e) { console.warn('d1 export skipped:', e?.message || e) }
+  // signed-out (device id) votes: their own export, so an older API without it costs only these
+  try { anonVotes = await fetchExport(base, 'anon'); console.log('anon export', anonVotes.length, 'signed-out votes') }
+  catch (e) { console.warn('anon export skipped:', e?.message || e) }
 }
 {
-  const m = mergeVotes(votes, d1Votes, byId)
+  const m = mergeVotes(votes, d1Votes, byId, { anonVotes })
   votes.length = 0; votes.push(...m.votes)
   for (const [did, n] of Object.entries(m.d1Voters)) voters.push({ did, handle: null, kind: 'human', votes: n, source: 'd1' })
-  for (const vt of voters) if (vt.source !== 'd1') vt.votes = votes.filter((v) => v.did === vt.did).length || vt.votes
+  for (const [did, n] of Object.entries(m.anonVoters)) voters.push({ did, handle: null, kind: 'human', votes: n, source: 'anon' })
+  for (const vt of voters) if (vt.source !== 'd1' && vt.source !== 'anon') vt.votes = votes.filter((v) => v.did === vt.did).length || vt.votes
+  const wsum = votes.reduce((t, v) => t + (v.w ?? 1), 0)
+  console.log('weights:', Object.keys(m.anonVoters).length, 'signed-out devices,', votes.filter((v) => String(v.did).startsWith('dv:')).length, 'signed-out votes at x' + ANON_W + ';',
+    votes.filter((v) => (v.w ?? 1) < 1 && !String(v.did).startsWith('dv:')).length, 'under-watched signed-in at x' + LOW_WATCH_W + '; effective', Math.round(wsum * 10) / 10, 'of', votes.length)
   unplayableDoc(d1Events)
   d1Events = eventsForTraining(d1Events, m.alias)
   console.log('sources: merged', votes.length, 'votes;', Object.keys(m.d1Voters).length, 'D1 voters;', Object.keys(m.alias).length, 'aliased to a DID;', d1Events.length, 'D1 passes/skips')
@@ -241,7 +258,7 @@ function fit(vs, init, iters = 400) {
     for (const v of vs) {
       const w = kIdx[v.winner], l = kIdx[v.winner === v.a ? v.b : v.a]
       const d = u[clipComic[w]] + o[w] - u[clipComic[l]] - o[l]
-      const g = 1 / (1 + Math.exp(d)) // d/dd log sigmoid(d)
+      const g = (v.w ?? 1) / (1 + Math.exp(d)) // w x d/dd log sigmoid(d); w: signed-out x0.5, under-watched x0.5 (tally/sources.mjs voteWeight)
       go[w] += g; go[l] -= g; gu[clipComic[w]] += g; gu[clipComic[l]] -= g
     }
     for (let i = 0; i < u.length; i++) u[i] += lr * gu[i]
@@ -348,6 +365,7 @@ const gComic = Object.fromEntries(allBoard.comics.map((c) => [c.comic, (c.elo - 
 const PRIOR = 2
 const tasteIndex = []
 for (const vt of voters) {
+  if (vt.source === 'anon') continue // no taste file per signed-out device (their votes still shape the boards above)
   const mine = votes.filter((v) => v.did === vt.did)
   const r = { ...gComic }
   for (let t = 0; t < 300; t++) {
@@ -375,7 +393,7 @@ try {
   const E = await import('../src/engine.js')
   const hv = votes.filter((v) => v.voter === 'human' && byId[v.a] && byId[v.b]).slice(-5000)
   const en = E.createEngine({ clips, theory: THEORY })
-  const prior = E.basePrior(), fitR = en.fit(en.samples({ votes: hv.map((v) => ({ a: v.a, b: v.b, winner: v.winner, w: 1 })) }), prior, null, { iters: 8 })
+  const prior = E.basePrior(), fitR = en.fit(en.samples({ votes: hv.map((v) => ({ a: v.a, b: v.b, winner: v.winner, w: v.w ?? 1 })) }), prior, null, { iters: 8 })
   const r3 = (x) => Math.round(x * 1000) / 1000
   // half-strength: the crowd's lean is a hint, not a verdict about a new person
   const weights = Object.fromEntries(E.FK.map((k, i) => [k, r3(0.5 * fitR.theta[i])])), sd = Object.fromEntries(E.FK.map((k, i) => [k, r3(fitR.sd[i])]))
@@ -432,7 +450,8 @@ fs.writeFileSync(path.join(DATA, 'votes.json'), JSON.stringify({ updated: board.
 // funnygraph arena ballot (ARENA_BALLOT.md): per comedian-pair counts from the merged votes, for funnygraph to pull
 {
   let fgSha7 = null; try { fgSha7 = JSON.parse(fs.readFileSync(path.join(DATA, 'funnygraph', 'meta.json'), 'utf8')).sha?.slice(0, 7) || null } catch {}
-  const ar = arenaPairs(votes, byId, fgResolver({ outDir: OUT, srcDir: path.dirname(CLIPS_PATH) }))
+  // counts for funnygraph are one vote per known voter, so unlinked signed-out devices (counted at x0.5 above) stay out
+  const ar = arenaPairs(votes.filter((v) => !String(v.did).startsWith('dv:')), byId, fgResolver({ outDir: OUT, srcDir: path.dirname(CLIPS_PATH) }))
   fs.writeFileSync(path.join(DATA, 'arena.json'), JSON.stringify(arenaDoc(ar, { updated: board.updated, synthetic: !!process.env.SYNTH, fgSha7 }), null, 1))
   console.log('arena', ar.pairs.length, 'comic pairs from', ar.votes, 'human votes', ar.unmapped.length ? '(unmapped: ' + ar.unmapped.join(', ') + ')' : '')
 }
