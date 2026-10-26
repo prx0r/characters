@@ -1,7 +1,7 @@
 {
  "schema": "funnygraph.arena/v1",
  "note": "Blind A/B clip votes from Funnier (www.funnier.si), aggregated per comedian pair. a < b alphabetically; ids are funnygraph comedian_id. Humans only (agent votes excluded); one vote per voter per clip pair (latest wins); a clash is always two different comics. No voter identifiers. Apply your own n threshold (ARENA_BALLOT.md: n >= 30).",
- "updated": "2026-10-26T04:07:53.845Z",
+ "updated": "2026-10-26T04:22:06.232Z",
  "source": "https://www.funnier.si/data/arena.json",
  "roster": "prx0r/funnygraph@c59d8bd",
  "votes": 0,
