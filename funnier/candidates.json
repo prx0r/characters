@@ -689,5 +689,29 @@
   "published": "2026-10-25",
   "found": "2026-10-26",
   "status": "pending"
+ },
+ {
+  "id": "G0NA5B21L-Y",
+  "comic": "Mark Normand",
+  "title": "Conan O'Brien Got VERY MAD at Mark Normand's Joke | We Might Be Drunk w/ Matteo Lane & Nick Smith",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "horizontal",
+  "published": "2026-10-26",
+  "found": "2026-10-27",
+  "status": "pending"
+ },
+ {
+  "id": "bUwTvxcQw4I",
+  "comic": "Mark Normand",
+  "title": "Marriage is the military! - mark normand #shorts #wife #marriage",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "vertical",
+  "published": "2026-10-26",
+  "found": "2026-10-27",
+  "status": "pending"
  }
 ]
