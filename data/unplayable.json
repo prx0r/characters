@@ -1,5 +1,246 @@
 {
- "updated": "2026-10-28T16:04:03.110Z",
+ "updated": "2026-10-28T16:18:03.049Z",
  "note": "clips that failed to play in the site player (YouTube onError 2/5/100/101/150/153 or a stalled start); re-check with oEmbed before pruning",
- "clips": []
+ "clips": [
+  {
+   "clip": "_rabQNrVE_g",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:32.771Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "wka-o2V71CM",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:34.218Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "NK-aET97cJA",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:35.765Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "WiVCRXnW8vQ",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:36.799Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "Mx6Yc550RKM",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-20T23:06:37.998Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "dUzaSm0aAKw",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:18.949Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "y9pAv-z2ens",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:19.593Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "Ek0mP-FCcik",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:20.169Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "Ltd3eHXh-eM",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:20.808Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "jVZMTiefONQ",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:21.389Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "IT-sBagXbT0",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:21.965Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "hYmMaDUI45c",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:22.534Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "i839ECZxvpk",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:23.091Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "Ux2z8CFVEMg",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:23.645Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "1m5ZTUxNLMk",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:24.128Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "owrVmQqPTa0",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:24.676Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "bDvaVYJaXII",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:25.256Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "9vfPLqwIsnE",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:25.879Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "b0n5AQqT8HA",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:26.494Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "AyPSorRmNg4",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:27.164Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "yDFgXV-OkqM",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:27.695Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "OyDpS-GftCk",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:28.239Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "RlQT77eSy2M",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:28.866Z",
+   "inCatalog": true
+  },
+  {
+   "clip": "XhIpMHhNpIE",
+   "reports": 1,
+   "reporters": 1,
+   "codes": {
+    "err-150": 1
+   },
+   "last": "2026-10-26T08:41:29.517Z",
+   "inCatalog": true
+  }
+ ]
 }
