@@ -725,5 +725,17 @@
   "published": "2026-10-28",
   "found": "2026-10-29",
   "status": "pending"
+ },
+ {
+  "id": "5OcpyhumwLE",
+  "comic": "Norm Macdonald",
+  "title": "Norm Macdonald's Shaggy Dog Story Of Country Life | CONAN on TBS",
+  "channel": "Team Coco",
+  "kind": "human",
+  "media": "youtube",
+  "format": "horizontal",
+  "published": "2026-10-29",
+  "found": "2026-10-30",
+  "status": "pending"
  }
 ]
