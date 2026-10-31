@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T09:38:01.216Z",
+ "updated": "2026-10-31T09:52:04.814Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -9859,15 +9859,6 @@
      "bouts": 0
     },
     {
-     "id": "j_AOsPS2KUQ",
-     "comic": "Sam Biru",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "2PVro5vmDck",
      "comic": "Sam Biru",
      "elo": 1500,
@@ -9878,15 +9869,6 @@
     },
     {
      "id": "knkYHcvpk5k",
-     "comic": "Sam Biru",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yxFvT0zTWb4",
      "comic": "Sam Biru",
      "elo": 1500,
      "lo": null,
@@ -40648,15 +40630,6 @@
      "bouts": 0
     },
     {
-     "id": "j_AOsPS2KUQ",
-     "comic": "Sam Biru",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "2PVro5vmDck",
      "comic": "Sam Biru",
      "elo": 1500,
@@ -40667,15 +40640,6 @@
     },
     {
      "id": "knkYHcvpk5k",
-     "comic": "Sam Biru",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yxFvT0zTWb4",
      "comic": "Sam Biru",
      "elo": 1500,
      "lo": null,
@@ -71437,15 +71401,6 @@
      "bouts": 0
     },
     {
-     "id": "j_AOsPS2KUQ",
-     "comic": "Sam Biru",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "2PVro5vmDck",
      "comic": "Sam Biru",
      "elo": 1500,
@@ -71456,15 +71411,6 @@
     },
     {
      "id": "knkYHcvpk5k",
-     "comic": "Sam Biru",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "yxFvT0zTWb4",
      "comic": "Sam Biru",
      "elo": 1500,
      "lo": null,
