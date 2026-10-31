@@ -737,5 +737,29 @@
   "published": "2026-10-29",
   "found": "2026-10-30",
   "status": "pending"
+ },
+ {
+  "id": "wwVlgTRsBS8",
+  "comic": "Louis C.K.",
+  "title": "Louie - Poker/Divorce (Season 1, Episode 2)",
+  "channel": "Louis C.K.",
+  "kind": "human",
+  "media": "youtube",
+  "format": "horizontal",
+  "published": "2026-10-30",
+  "found": "2026-10-31",
+  "status": "pending"
+ },
+ {
+  "id": "L-bKoxLfKk8",
+  "comic": "Mark Normand",
+  "title": "Who Does William H. Macy Rally HATE ??? | We Might Be Drunk w/ Normand & Morril #shorts",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "vertical",
+  "published": "2026-10-30",
+  "found": "2026-10-31",
+  "status": "pending"
  }
 ]
