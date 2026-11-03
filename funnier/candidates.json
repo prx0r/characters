@@ -785,5 +785,29 @@
   "published": "2026-11-01",
   "found": "2026-11-02",
   "status": "pending"
+ },
+ {
+  "id": "e-ACRXEKE00",
+  "comic": "Mark Normand",
+  "title": "Could Mark Normand Land a Plane in an Emergency ?? | The Legion of Skanks w/ Brendan Sagalow",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "horizontal",
+  "published": "2026-11-02",
+  "found": "2026-11-03",
+  "status": "pending"
+ },
+ {
+  "id": "bHvRll7x9U4",
+  "comic": "Mark Normand",
+  "title": "Shane Gillis Controversy! - mark Normand #shorts #comedy #funny",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "vertical",
+  "published": "2026-11-02",
+  "found": "2026-11-03",
+  "status": "pending"
  }
 ]
