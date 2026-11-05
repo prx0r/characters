@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T10:54:46.036Z",
+ "updated": "2026-11-05T11:08:52.609Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -15611,15 +15611,6 @@
     },
     {
      "id": "rwnQ83ctoV8",
-     "comic": "Dave Smith",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "TY3VVhx__qo",
      "comic": "Dave Smith",
      "elo": 1500,
      "lo": null,
@@ -46390,15 +46381,6 @@
      "bouts": 0
     },
     {
-     "id": "TY3VVhx__qo",
-     "comic": "Dave Smith",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "tVkfnTJSA68",
      "comic": "Dave Smith",
      "elo": 1500,
@@ -77153,15 +77135,6 @@
     },
     {
      "id": "rwnQ83ctoV8",
-     "comic": "Dave Smith",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "TY3VVhx__qo",
      "comic": "Dave Smith",
      "elo": 1500,
      "lo": null,
