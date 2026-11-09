@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T11:41:44.908Z",
+ "updated": "2026-11-09T11:56:01.862Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -12731,15 +12731,6 @@
     },
     {
      "id": "uy2QqCVylvM",
-     "comic": "Jimmy O Yang",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "GXqHPTosO40",
      "comic": "Jimmy O Yang",
      "elo": 1500,
      "lo": null,
@@ -43501,15 +43492,6 @@
      "bouts": 0
     },
     {
-     "id": "GXqHPTosO40",
-     "comic": "Jimmy O Yang",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "SBMBoymcwM4",
      "comic": "Russell Peters",
      "elo": 1500,
@@ -74255,15 +74237,6 @@
     },
     {
      "id": "uy2QqCVylvM",
-     "comic": "Jimmy O Yang",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "GXqHPTosO40",
      "comic": "Jimmy O Yang",
      "elo": 1500,
      "lo": null,
