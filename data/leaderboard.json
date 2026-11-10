@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T11:06:54.334Z",
+ "updated": "2026-11-10T11:21:04.637Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -15116,15 +15116,6 @@
     },
     {
      "id": "uUkIYuTVj-E",
-     "comic": "Phyllis Diller",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EVoS2baHP90",
      "comic": "Phyllis Diller",
      "elo": 1500,
      "lo": null,
@@ -45877,15 +45868,6 @@
      "bouts": 0
     },
     {
-     "id": "EVoS2baHP90",
-     "comic": "Phyllis Diller",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "Zl3fRnmEKgM",
      "comic": "Phyllis Diller",
      "elo": 1500,
@@ -76622,15 +76604,6 @@
     },
     {
      "id": "uUkIYuTVj-E",
-     "comic": "Phyllis Diller",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "EVoS2baHP90",
      "comic": "Phyllis Diller",
      "elo": 1500,
      "lo": null,
