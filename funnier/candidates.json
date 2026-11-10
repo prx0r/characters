@@ -845,5 +845,29 @@
   "published": "2026-11-06",
   "found": "2026-11-07",
   "status": "pending"
+ },
+ {
+  "id": "kOY5n0llL-E",
+  "comic": "Mark Normand",
+  "title": "27 Year Old Mark Normand! at the Chicago Improv | Throwback Set (2010)",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "horizontal",
+  "published": "2026-11-09",
+  "found": "2026-11-10",
+  "status": "pending"
+ },
+ {
+  "id": "jpuSSv59jzQ",
+  "comic": "Mark Normand",
+  "title": "Riffing on politics, Dolly Parton, Clancy - mark normand #shorts #comedy",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "vertical",
+  "published": "2026-11-09",
+  "found": "2026-11-10",
+  "status": "pending"
  }
 ]
