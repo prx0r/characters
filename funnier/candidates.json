@@ -905,5 +905,29 @@
   "published": "2026-11-13",
   "found": "2026-11-14",
   "status": "pending"
+ },
+ {
+  "id": "S1zUnWbRidE",
+  "comic": "Mark Normand",
+  "title": "\"Broad Cast\" | Mark Normand #shorts",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "vertical",
+  "published": "2026-11-15",
+  "found": "2026-11-16",
+  "status": "pending"
+ },
+ {
+  "id": "XXkUHwVJl7Q",
+  "comic": "Mark Normand",
+  "title": "Mark Normand Goes on a Date!!! w/ Tata Sherise! | 50 Worst Dates",
+  "channel": "mark normand",
+  "kind": "human",
+  "media": "youtube",
+  "format": "horizontal",
+  "published": "2026-11-15",
+  "found": "2026-11-16",
+  "status": "pending"
  }
 ]
