@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T12:27:07.281Z",
+ "updated": "2026-11-27T12:41:12.166Z",
  "method": "hierarchical Bradley-Terry (MAP), 95% bootstrap CI",
  "collection": "io.github.prx0r.funnier.vote",
  "votes": 0,
@@ -8159,15 +8159,6 @@
     },
     {
      "id": "RTrCBcrFMCI",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "IzF2w0-8UNA",
      "comic": "Louis C.K.",
      "elo": 1500,
      "lo": null,
@@ -22685,15 +22676,6 @@
     },
     {
      "id": "zQjSsxnv0AI",
-     "comic": "Russell Howard",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jVZMTiefONQ",
      "comic": "Russell Howard",
      "elo": 1500,
      "lo": null,
@@ -38911,15 +38893,6 @@
      "bouts": 0
     },
     {
-     "id": "IzF2w0-8UNA",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "IN9Knn7_5JA",
      "comic": "Louis C.K.",
      "elo": 1500,
@@ -53429,15 +53402,6 @@
     },
     {
      "id": "zQjSsxnv0AI",
-     "comic": "Russell Howard",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jVZMTiefONQ",
      "comic": "Russell Howard",
      "elo": 1500,
      "lo": null,
@@ -69655,15 +69619,6 @@
      "bouts": 0
     },
     {
-     "id": "IzF2w0-8UNA",
-     "comic": "Louis C.K.",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
      "id": "IN9Knn7_5JA",
      "comic": "Louis C.K.",
      "elo": 1500,
@@ -84173,15 +84128,6 @@
     },
     {
      "id": "zQjSsxnv0AI",
-     "comic": "Russell Howard",
-     "elo": 1500,
-     "lo": null,
-     "hi": null,
-     "wins": 0,
-     "bouts": 0
-    },
-    {
-     "id": "jVZMTiefONQ",
      "comic": "Russell Howard",
      "elo": 1500,
      "lo": null,
